@@ -1,4 +1,4 @@
-# Vue 3 + TypeScript + Vite
+# Mauritius Tax Calculator
 
 This is an unofficial alternative to the [MRA's current tax calculator](https://eservices.mra.mu/taxcalculator/viewCalculate).
 
