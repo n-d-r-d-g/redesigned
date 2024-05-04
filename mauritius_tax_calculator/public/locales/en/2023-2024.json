@@ -1,0 +1,162 @@
+{
+  "month": {
+    "description": "Please fill the fields below based on the values displayed on your payslip (only values paid by you, not your employer).",
+    "form": {
+      "baseSalary": {
+        "label": "Base salary"
+      },
+      "travelingAllowance": {
+        "label": "Traveling allowance"
+      },
+      "internetAllowance": {
+        "label": "Internet allowance"
+      },
+      "performanceBonus": {
+        "label": "Performance bonus"
+      },
+      "otherTaxableIncome": {
+        "label": "Other taxable income"
+      }
+    },
+    "output": {
+      "chargeableIncome": {
+        "subtitle": "Chargeable income (amount on which your PAYE tax is calculated)",
+        "table": {
+          "title": "Monthly chargeable income calculation",
+          "headers": {
+            "incomeDescription": "Income Description",
+            "subAmount": "Sub amount (Rs)",
+            "amount": "Amount (Rs)"
+          },
+          "incomeDescription": {
+            "baseSalary": "Base salary",
+            "travelingAllowance": "Traveling allowance (amount your employer pays you)",
+            "maxNonTaxableTravelingAllowance": "Maximum non-taxable traveling allowance = 25% x Base salary (up to {{maxAllowance}})",
+            "taxableTravelingAllowance": "Taxable traveling allowance (applicable if the traveling allowance exceeds the maximum non-taxable traveling allowance)",
+            "internetAllowance": "Internet allowance",
+            "performanceBonus": "Performance bonus",
+            "otherTaxableIncome": "Other taxable income",
+            "chargeableIncome": "Chargeable income"
+          }
+        }
+      },
+      "taxCharged": {
+        "subtitle": "PAYE tax (rounded off value) charged by the MRA (displayed on payslip)",
+        "calculationDescription": "The PAYE tax is calculated as follows. On each row,",
+        "calculationSteps": "<ul><li>if the remaining chargeable income is less than the taxable limit, the remaining chargeable income is used as the taxable amount</li><li>otherwise, the taxable limit is used as the taxable amount and the taxable limit is subtracted from the remaining chargeable income for the next calculation</li></ul>",
+        "table": {
+          "title": "Monthly PAYE calculation",
+          "headers": {
+            "taxableLimit": "Taxable limit (Rs)",
+            "taxableAmount": "Taxable amount (Rs)",
+            "taxRate": "Tax rate (%)",
+            "taxCharged": "Tax charged (Rs)"
+          },
+          "taxableLimits": {
+            "remainder": "Remainder",
+            "taxCharged": "PAYE tax"
+          }
+        }
+      }
+    }
+  },
+  "year": {
+    "description": "<p>Please fill the fields below based on the values paid by you, not your employer, for the financial year. Check out MRA's website (<MRAExemptIncomeLink>exempt income</MRAExemptIncomeLink> and <MRADeductionsLink>reliefs, deductions & allowances</MRADeductionsLink>) for more information.</p>",
+    "form": {
+      "baseSalary": {
+        "label": "Base salary (12 months)",
+        "description": "Calculate the total base salary for the financial year."
+      },
+      "eoyBonus": {
+        "label": "EOY Bonus",
+        "description": "This is known as the 13th month bonus."
+      },
+      "travelingAllowance": {
+        "label": "Traveling allowance",
+        "description": "Calculate the total traveling allowance for the financial year."
+      },
+      "internetAllowance": {
+        "label": "Internet allowance",
+        "description": "Calculate the total internet allowance for the financial year."
+      },
+      "performanceBonus": {
+        "label": "Performance bonus",
+        "description": "Calculate the total performance bonus for the financial year."
+      },
+      "otherTaxableIncome": {
+        "label": "Other taxable income",
+        "description": "Calculate the total of other taxable income for the financial year."
+      },
+      "numOfDependents": {
+        "label": "No. of dependents",
+        "items": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4 or more"
+        }
+      },
+      "medicalInsurance": {
+        "label": "Medical insurance fee",
+        "description": "Calculate the total medical insurance fee for the financial year."
+      },
+      "housingLoanInterest": {
+        "label": "Housing loan interest",
+        "description": "Calculate the total housing loan interest for the financial year."
+      },
+      "otherTaxDeductions": {
+        "label": "Other tax deductions",
+        "description": "Calculate the total of other tax deductions for the financial year."
+      }
+    },
+    "output": {
+      "chargeableIncome": {
+        "subtitle": "Chargeable income (amount on which your income tax is calculated)",
+        "table": {
+          "title": "Yearly chargeable income calculation",
+          "headers": {
+            "description": "Description",
+            "subAmount": "Sub amount (Rs)",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "baseSalary": "Base salary",
+            "eoyBonus": "EOY bonus",
+            "travelingAllowance": "Traveling allowance (amount your employer pays you)",
+            "maxNonTaxableTravelingAllowance": "Maximum non-taxable traveling allowance = 25% x Base salary (up to {{maxAllowance}})",
+            "taxableTravelingAllowance": "Taxable traveling allowance (applicable if the traveling allowance exceeds the maximum non-taxable traveling allowance)",
+            "internetAllowance": "Internet allowance",
+            "performanceBonus": "Performance bonus",
+            "otherTaxableIncome": "Other taxable income",
+            "totalIncome": "Total income",
+            "ietDeductions": "Deduction for dependents",
+            "medicalInsurance": "Medical insurance",
+            "housingLoanInterest": "Housing loan interest",
+            "otherTaxDeductions": "Other tax deductions",
+            "totalDeductions": "Total deductions",
+            "chargeableIncome": "Chargeable income (Total income - Total deductions)"
+          }
+        }
+      },
+      "taxCharged": {
+        "subtitle": "Income tax (PAYE) charged by the MRA (rounded off value)",
+        "calculationDescription": "The PAYE tax is calculated as follows. On each row,",
+        "calculationSteps": "<ul><li>if the remaining chargeable income is less than the taxable limit, the remaining chargeable income is used as the taxable amount</li><li>otherwise, the taxable limit is used as the taxable amount and the taxable limit is subtracted from the remaining chargeable income for the next calculation</li></ul>",
+        "table": {
+          "title": "Monthly PAYE calculation",
+          "headers": {
+            "taxableLimit": "Taxable limit (Rs)",
+            "taxableAmount": "Taxable amount (Rs)",
+            "taxRate": "Tax rate (%)",
+            "taxCharged": "Tax charged (Rs)"
+          },
+          "taxableLimits": {
+            "remainder": "Remainder",
+            "taxCharged": "Income tax (PAYE)"
+          }
+        }
+      }
+    }
+  }
+}

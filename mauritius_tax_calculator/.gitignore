@@ -19,6 +19,7 @@
 .DS_Store
 *.pem
 /public/misc
+*.ods
 
 # debug
 npm-debug.log*

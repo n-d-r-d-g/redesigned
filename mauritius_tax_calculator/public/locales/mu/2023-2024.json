@@ -1,0 +1,162 @@
+{
+  "month": {
+    "description": "Ranpli formiler anba la baze lor bann valer ki afise lor ou peyslip (zis bann valer ki paye par ou, pa ou anplwayer).",
+    "form": {
+      "baseSalary": {
+        "label": "Saler debaz"
+      },
+      "travelingAllowance": {
+        "label": "Konpansasion transpor"
+      },
+      "internetAllowance": {
+        "label": "Konpansasion internet"
+      },
+      "performanceBonus": {
+        "label": "Bonis performans"
+      },
+      "otherTaxableIncome": {
+        "label": "Lezot konpansasion taksab"
+      }
+    },
+    "output": {
+      "chargeableIncome": {
+        "subtitle": "Reveni taksab (montan ki servi pou kalkil ou taks PAYE)",
+        "table": {
+          "title": "Kalkil reveni taksab mansyel",
+          "headers": {
+            "incomeDescription": "Deskripsion reveni",
+            "subAmount": "Sou-montan (Rs)",
+            "amount": "Montan (Rs)"
+          },
+          "incomeDescription": {
+            "baseSalary": "Saler debaz",
+            "travelingAllowance": "Konpansasion transpor (montan ki ou anplwayer pey ou)",
+            "maxNonTaxableTravelingAllowance": "Konpansasion transpor maximal non taksab = 25% x Saler debaz (ziska {{maxAllowance}})",
+            "taxableTravelingAllowance": "Konpansasion transpor taksab (aplikab si konpansasion transpor depas konpansasion transpor maximal non taksab)",
+            "internetAllowance": "Konpansasion Internet",
+            "performanceBonus": "Bonis performans",
+            "otherTaxableIncome": "Lezot konpansasion taksab",
+            "chargeableIncome": "Reveni taksab"
+          }
+        }
+      },
+      "taxCharged": {
+        "subtitle": "Taks PAYE (sif arondi) faktire par MRA (afise lor peyslip)",
+        "calculationDescription": "Kalkil taks PAYE: Lor sak ranze,",
+        "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou prosin kalkil</li></ul>",
+        "table": {
+          "title": "Kalkil taks PAYE mansyel",
+          "headers": {
+            "taxableLimit": "Limit taksab (Rs)",
+            "taxableAmount": "Montan taksab (Rs)",
+            "taxRate": "Poursantaz taks (%)",
+            "taxCharged": "Taks faktire (Rs)"
+          },
+          "taxableLimits": {
+            "remainder": "Leres",
+            "taxCharged": "Taks PAYE"
+          }
+        }
+      }
+    }
+  },
+  "year": {
+    "description": "<p>Ranpli formiler anba la baze lor bann valer ki paye par ou, pa ou anplwayer, pou lane fiskal. Vizit sit web MRA (<MRAExemptIncomeLink>reveni non taksab</MRAExemptIncomeLink> ek <MRADeductionsLink>soulazman, dediksion & alokasion</MRADeductionsLink>) pou plis informasion.</p>",
+    "form": {
+      "baseSalary": {
+        "label": "Saler debaz (12 mwa)",
+        "description": "Kalkil montan total saler debaz pou lane fiskal."
+      },
+      "eoyBonus": {
+        "label": "Bonis EOY",
+        "description": "Nou osi apel sa bonis treziem mwa."
+      },
+      "travelingAllowance": {
+        "label": "Konpansasion transpor",
+        "description": "Kalkil montan total konpansasion transpor pou lane fiskal."
+      },
+      "internetAllowance": {
+        "label": "Konpansasion internet",
+        "description": "Kalkil montan total konpansasion internet pou lane fiskal."
+      },
+      "performanceBonus": {
+        "label": "Bonis performans",
+        "description": "Kalkil montan total bonis performans pou lane fiskal."
+      },
+      "otherTaxableIncome": {
+        "label": "Lezot konpansasion taksab",
+        "description": "Kalkil montan total bann lezot konpansasion taksab pou lane fiskal."
+      },
+      "numOfDependents": {
+        "label": "Nomb depandan",
+        "items": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4 ou plis"
+        }
+      },
+      "medicalInsurance": {
+        "label": "Lasirans medikal",
+        "description": "Kalkil montan total lasirans medikal pou lane fiskal."
+      },
+      "housingLoanInterest": {
+        "label": "Lintere lor lonn imobilie",
+        "description": "Kalkil montan total lintere lor lonn imobilie pou lane fiskal."
+      },
+      "otherTaxDeductions": {
+        "label": "Lezot dediksion taks",
+        "description": "Kalkil montan total bann lezot dediksion taks pou lane fiskal."
+      }
+    },
+    "output": {
+      "chargeableIncome": {
+        "subtitle": "Reveni taksab (montan ki servi pou kalkil ou innkom taks PAYE)",
+        "table": {
+          "title": "Kalkil reveni taksab aniel",
+          "headers": {
+            "description": "Deskripsion",
+            "subAmount": "Sou-montan (Rs)",
+            "amount": "Montan (Rs)"
+          },
+          "description": {
+            "baseSalary": "Saler debaz",
+            "eoyBonus": "Bonis EOY",
+            "travelingAllowance": "Konpansasion transpor (montan ki ou anplwayer pey ou)",
+            "maxNonTaxableTravelingAllowance": "Konpansasion transpor maximal non taksab = 25% x Saler debaz (ziska {{maxAllowance}})",
+            "taxableTravelingAllowance": "Konpansasion transpor taksab (aplikab si konpansasion transpor depas konpansasion transpor maximal non taksab)",
+            "internetAllowance": "Konpansasion internet",
+            "performanceBonus": "Bonis performans",
+            "otherTaxableIncome": "Lezot konpansasion taksab",
+            "totalIncome": "Reveni total",
+            "ietDeductions": "Dediksion pou depandan",
+            "medicalInsurance": "Lasirans medikal",
+            "housingLoanInterest": "Lintere lor lonn imobilie",
+            "otherTaxDeductions": "Lezot dediksion taks",
+            "totalDeductions": "Dediksion total",
+            "chargeableIncome": "Reveni taksab (Reveni total - Dediksion total)"
+          }
+        }
+      },
+      "taxCharged": {
+        "subtitle": "Innkom taks (PAYE) faktire par MRA (sif arondi)",
+        "calculationDescription": "Kalkil taks PAYE: Lor sak ranze,",
+        "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou prosin kalkil</li></ul>",
+        "table": {
+          "title": "Kalkil taks PAYE aniel",
+          "headers": {
+            "taxableLimit": "Limit taksab (Rs)",
+            "taxableAmount": "Montan taksab (Rs)",
+            "taxRate": "Poursantaz taks (%)",
+            "taxCharged": "Taks faktire (Rs)"
+          },
+          "taxableLimits": {
+            "remainder": "Leres",
+            "taxCharged": "Innkom taks PAYE"
+          }
+        }
+      }
+    }
+  }
+}

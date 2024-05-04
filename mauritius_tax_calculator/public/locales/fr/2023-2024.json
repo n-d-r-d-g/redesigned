@@ -1,0 +1,162 @@
+{
+  "month": {
+    "description": "Veuillez remplir les champs ci-dessous en fonction des valeurs affichées sur votre fiche de paie (uniquement les valeurs payées par vous, et non par votre employeur).",
+    "form": {
+      "baseSalary": {
+        "label": "Salaire de base"
+      },
+      "travelingAllowance": {
+        "label": "Allocation de déplacement"
+      },
+      "internetAllowance": {
+        "label": "Allocation Internet"
+      },
+      "performanceBonus": {
+        "label": "Prime de performance"
+      },
+      "otherTaxableIncome": {
+        "label": "Autres revenus imposables"
+      }
+    },
+    "output": {
+      "chargeableIncome": {
+        "subtitle": "Revenu imposable (montant sur lequel vos impôts PAYE sont calculés)",
+        "table": {
+          "title": "Calcul du revenu imposable mensuel",
+          "headers": {
+            "incomeDescription": "Description du revenu",
+            "subAmount": "Sous-montant (Rs)",
+            "amount": "Montant (Rs)"
+          },
+          "incomeDescription": {
+            "baseSalary": "Salaire de base",
+            "travelingAllowance": "Allocation de déplacement (montant que votre employeur vous verse)",
+            "maxNonTaxableTravelingAllowance": "Allocation maximale de déplacement non imposable = 25% x Salaire de base (jusqu'à {{maxAllowance}})",
+            "taxableTravelingAllowance": "Allocation de déplacement imposable (applicable si l'allocation de déplacement dépasse l'allocation maximale de déplacement non imposable')",
+            "internetAllowance": "Allocation Internet",
+            "performanceBonus": "Prime de performance",
+            "otherTaxableIncome": "Autres revenus imposables",
+            "chargeableIncome": "Revenu imposable"
+          }
+        }
+      },
+      "taxCharged": {
+        "subtitle": "Taxe PAYE (chiffre arrondi) facturée par la MRA (affichée sur la fiche de paie)",
+        "calculationDescription": "La taxe PAYE est calculée comme suit. Sur chaque rangée,",
+        "calculationSteps": "<ul><li>Si le revenu imposable restant est inférieur à la limite imposable, le revenu imposable restant est utilisé comme montant imposable</li><li>dans le cas contraire, la limite imposable est utilisée comme le montant imposable et la limite imposable est soustraite du revenu imposable restant pour le prochain calcul</li></ul>",
+        "table": {
+          "title": "Calcul de la taxe PAYE mensuel",
+          "headers": {
+            "taxableLimit": "Limite imposable (Rs)",
+            "taxableAmount": "Montant imposable (Rs)",
+            "taxRate": "Taux d'imposition (%)",
+            "taxCharged": "Taxe facturée (Rs)"
+          },
+          "taxableLimits": {
+            "remainder": "Le reste",
+            "taxCharged": "Taxe PAYE"
+          }
+        }
+      }
+    }
+  },
+  "year": {
+    "description": "<p>Veuillez remplir les champs ci-dessous en fonction des valeurs payées par vous, et non par votre employeur, pour l'année fiscale. Consultez le site web de la MRA (<MRAExemptIncomeLink>revenu non imposable</MRAExemptIncomeLink> et <MRADeductionsLink>allégements, déductions & allocations</MRADeductionsLink>) pour plus d'infos.</p>",
+    "form": {
+      "baseSalary": {
+        "label": "Salaire de base (12 mois)",
+        "description": "Calculez le montant total du salaire de base pour l'année fiscale."
+      },
+      "eoyBonus": {
+        "label": "Prime EOY",
+        "description": "Aussi connu comme la prime du 13e mois."
+      },
+      "travelingAllowance": {
+        "label": "Allocation de déplacement",
+        "description": "Calculez le montant total de l'allocation de déplacement pour l'année fiscale."
+      },
+      "internetAllowance": {
+        "label": "Allocation Internet",
+        "description": "Calculez le montant total de l'allocation Internet pour l'année fiscale."
+      },
+      "performanceBonus": {
+        "label": "Prime de performance",
+        "description": "Calculez le montant total de la prime de performance pour l'année fiscale."
+      },
+      "otherTaxableIncome": {
+        "label": "Autres revenus imposables",
+        "description": "Calculez le montant total des autres revenus imposables pour l'année fiscale."
+      },
+      "numOfDependents": {
+        "label": "Nombre de personnes à charge",
+        "items": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4 ou plus"
+        }
+      },
+      "medicalInsurance": {
+        "label": "Frais d'assurance médicale",
+        "description": "Calculez le montant total des frais d'assurance médicale pour l'année fiscale."
+      },
+      "housingLoanInterest": {
+        "label": "Intérêts sur les prêts immobiliers",
+        "description": "Calculez le montant total des intérêts sur les prêts immobiliers pour l'année fiscale."
+      },
+      "otherTaxDeductions": {
+        "label": "Autres déductions fiscales",
+        "description": "Calculez le montant total des autres déductions fiscales pour l'année fiscale."
+      }
+    },
+    "output": {
+      "chargeableIncome": {
+        "subtitle": "Revenu imposable (montant sur lequel vos impôts sont calculés)",
+        "table": {
+          "title": "Calcul du revenu imposable annuel",
+          "headers": {
+            "description": "Description",
+            "subAmount": "Sous-montant (Rs)",
+            "amount": "Montant (Rs)"
+          },
+          "description": {
+            "baseSalary": "Salaire de base",
+            "eoyBonus": "Prime EOY",
+            "travelingAllowance": "Allocation de déplacement (montant que votre employeur vous verse)",
+            "maxNonTaxableTravelingAllowance": "Allocation maximale de déplacement non imposable = 25% x Salaire de base (jusqu'à {{maxAllowance}})",
+            "taxableTravelingAllowance": "Allocation de déplacement imposable (applicable si l'allocation de déplacement dépasse l'allocation maximale de déplacement non imposable')",
+            "internetAllowance": "Allocation Internet",
+            "performanceBonus": "Prime de performance",
+            "otherTaxableIncome": "Autres revenus imposables",
+            "totalIncome": "Revenu total",
+            "ietDeductions": "Déduction pour personnes à charge",
+            "medicalInsurance": "Assurance médicale",
+            "housingLoanInterest": "Intérêts sur les prêts immobiliers",
+            "otherTaxDeductions": "Autres déductions fiscales",
+            "totalDeductions": "Total des déductions",
+            "chargeableIncome": "Revenu imposable (Revenu total - Total des déductions)"
+          }
+        }
+      },
+      "taxCharged": {
+        "subtitle": "Impôt sur le revenu (PAYE) facturé par la MRA (chiffre arrondi)",
+        "calculationDescription": "La taxe PAYE est calculée comme suit. Sur chaque rangée,",
+        "calculationSteps": "<ul><li>Si le revenu imposable restant est inférieur à la limite imposable, le revenu imposable restant est utilisé comme montant imposable</li><li>dans le cas contraire, la limite imposable est utilisée comme le montant imposable et la limite imposable est soustraite du revenu imposable restant pour le prochain calcul</li></ul>",
+        "table": {
+          "title": "Calcul de la taxe PAYE annuel",
+          "headers": {
+            "taxableLimit": "Limite imposable (Rs)",
+            "taxableAmount": "Montant imposable (Rs)",
+            "taxRate": "Taux d'imposition (%)",
+            "taxCharged": "Taxe facturée (Rs)"
+          },
+          "taxableLimits": {
+            "remainder": "Le reste",
+            "taxCharged": "Impôt sur le revenu (PAYE)"
+          }
+        }
+      }
+    }
+  }
+}

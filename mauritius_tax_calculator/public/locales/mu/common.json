@@ -1,0 +1,35 @@
+{
+  "websiteTitle": "Kalkilater Tax Moris",
+  "websiteDescription": "Sa aplikasion la enn zouti non ofisiel pou bann anploye dan moris, ki ena lobzektif rann tax PAYE ki faktire par MRA pli fasil pou kalkile ek konpran.",
+  "websiteBuiltBy": "<span>Fabrike avek <HeartTitle>💖</HeartTitle> par <GithubLink>n-d-r-d-g</GithubLink></span>",
+  "websiteBuiltByTitle": "lamur, laswer & larm",
+  "reload": "Re inisyalize",
+  "cancel": "Anile",
+  "reset": "Reaktialize",
+  "changeLanguage": "Sanz langaz",
+  "languageSwitch": {
+    "confirmation": {
+      "title": "Re inisyalizasyon paz",
+      "disclaimer": "Modifikasyon langaz nesesit enn re inisyalizasyon sa paz la. Ou pu perdi tou ou bann modifikasyon.",
+      "question": "Ou sir ou le re inisyaliz sa paz la?"
+    }
+  },
+  "calculationPeriodLabel": "Peryod kalkil",
+  "calculationPeriods": {
+    "month": "Enn mwa",
+    "year": "Lane antie"
+  },
+  "errors": {
+    "required": "Erer: Ou bizin ranpli sa informasyon la.",
+    "stringMin_one": "Erer: Ou bizin met omwin enn karakter.",
+    "stringMin_other": "Erer: Ou bizin met omwin {{count}} karakter.",
+    "stringMax_one": "Erer: Ou pa kapav met plis ki enn karakter.",
+    "stringMax_other": "Erer: Ou kapav met ziska {{count}} karakter.",
+    "numberGTE": "Erer: Ou bizin met 1 sif ki pli gran swa egal a {{count}}.",
+    "numberGT": "Erer: Ou bizin met 1 sif ki pli gran ki {{count}}.",
+    "numberLTE": "Erer: Ou bizin met 1 sif ki pli tipti swa egal a {{count}}.",
+    "numberLT": "Erer: Ou bizin met 1 sif ki pli tipti ki {{count}}.",
+    "numberInvalid": "Erer: Ou bizin met 1 sif valid.",
+    "formContainsErrors": "Ou bizin koriz bann erer dan formiler la."
+  }
+}

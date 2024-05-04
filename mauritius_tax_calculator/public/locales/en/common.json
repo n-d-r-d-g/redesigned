@@ -1,0 +1,35 @@
+{
+  "websiteTitle": "Mauritius Tax Calculator",
+  "websiteDescription": "This app is an unofficial tool for employees in Mauritius that aims to make the PAYE tax charged by the MRA easier to calculate and understand.",
+  "websiteBuiltBy": "<span>Made with <HeartTitle>💖</HeartTitle> by <GithubLink>n-d-r-d-g</GithubLink></span>",
+  "websiteBuiltByTitle": "love, sweat & tears",
+  "reload": "Reload",
+  "cancel": "Cancel",
+  "reset": "Reset",
+  "changeLanguage": "Change language",
+  "languageSwitch": {
+    "confirmation": {
+      "title": "Page Reload",
+      "disclaimer": "Changing the language requires a page reload. You will lose all your changes.",
+      "question": "Are you sure you want to reload this page?"
+    }
+  },
+  "calculationPeriodLabel": "Calculation Period",
+  "calculationPeriods": {
+    "month": "One month",
+    "year": "Whole year"
+  },
+  "errors": {
+    "required": "Error: Please fill in this field.",
+    "stringMin_one": "Error: Please enter at least {{count}} character.",
+    "stringMin_other": "Error: Please enter at least {{count}} characters.",
+    "stringMax_one": "Error: Please enter at most {{count}} characters.",
+    "stringMax_other": "Error: Please enter at most {{count}} characters.",
+    "numberGTE": "Error: Please enter a number greater than or equal to {{count}}.",
+    "numberGT": "Error: Please enter a number greater than {{count}}.",
+    "numberLTE": "Error: Please enter a number less than or equal to {{count}}.",
+    "numberLT": "Error: Please enter a number less than {{count}}.",
+    "numberInvalid": "Error: Please enter a valid number.",
+    "formContainsErrors": "Please fix the errors in the form."
+  }
+}

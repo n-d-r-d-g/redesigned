@@ -1,0 +1,35 @@
+{
+  "websiteTitle": "Calculateur d'impôt à l'île Maurice",
+  "websiteDescription": "Cette application est un outil non officiel pour les employés à l'île Maurice, qui vise à rendre la taxe PAYE facturée par la MRA plus facile à calculer et à comprendre.",
+  "websiteBuiltBy": "<span>Conçu avec <HeartTitle>💖<HeartTitle> par <GithubLink>n-d-r-d-g</GithubLink></span>",
+  "websiteBuiltByTitle": "amour, sueur & larmes",
+  "reload": "Recharger",
+  "cancel": "Annuler",
+  "reset": "Réinitialiser",
+  "changeLanguage": "Changer de langue",
+  "languageSwitch": {
+    "confirmation": {
+      "title": "Rechargement de page",
+      "disclaimer": "Le changement de langue nécessite un rechargement de la page. Vous perdrez toutes vos modifications.",
+      "question": "Êtes-vous sûr de vouloir recharger cette page?"
+    }
+  },
+  "calculationPeriodLabel": "Période de calcul",
+  "calculationPeriods": {
+    "month": "Un mois",
+    "year": "L'année entière"
+  },
+  "errors": {
+    "required": "Erreur: Veuillez renseigner ce champ.",
+    "stringMin_one": "Erreur: Veuillez saisir au moins un caractère.",
+    "stringMin_other": "Erreur: Veuillez saisir au moins {{count}} caractères.",
+    "stringMax_one": "Erreur: Ce champ doit contenir au moins un caractère.",
+    "stringMax_other": "Erreur: Ce champ doit contenir au moins {{count}} caractères.",
+    "numberGTE": "Erreur: Veuillez saisir un chiffre supérieur ou égal à {{count}}.",
+    "numberGT": "Erreur: Veuillez saisir un chiffre supérieur à {{count}}.",
+    "numberLTE": "Erreur: Veuillez saisir un chiffre inférieur ou égal à {{count}}.",
+    "numberLT": "Erreur: Veuillez saisir un chiffre inférieur à {{count}}.",
+    "numberInvalid": "Erreur: Veuillez saisir un chiffre valide.",
+    "formContainsErrors": "Veuillez corriger les erreurs dans le formulaire."
+  }
+}
