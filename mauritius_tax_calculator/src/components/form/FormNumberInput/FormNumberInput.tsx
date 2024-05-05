@@ -1,5 +1,6 @@
 import { useField } from "formik";
 import { Input, InputProps } from "@nextui-org/react";
+import { FocusEvent, useCallback } from "react";
 
 type CurrencyContentProps = {
   currency: string;
@@ -28,6 +29,12 @@ export default function FormNumberInput({
     ? { startContent: <CurrencyContent currency={currency} /> }
     : {};
 
+  const handleFocus = useCallback(
+    (e: FocusEvent<Element, Element>) =>
+      (e.target as HTMLInputElement)?.select(),
+    []
+  );
+
   return (
     <Input
       type="number"
@@ -43,6 +50,7 @@ export default function FormNumberInput({
         description: "text-default-600",
         errorMessage: meta.error && "text-danger-700",
       }}
+      onFocus={handleFocus}
       {...startContentProp}
       {...props}
       {...field}
