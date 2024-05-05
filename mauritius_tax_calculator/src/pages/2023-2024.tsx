@@ -23,6 +23,7 @@ import {
   Tabs,
   getKeyValue,
 } from "@nextui-org/react";
+import { MdOutlineRefresh as MdOutlineRefreshIcon } from "react-icons/md";
 import FormNumberInput from "@/components/form/FormNumberInput/FormNumberInput";
 import FormSelect from "@/components/form/FormSelect/FormSelect";
 import { joiFormikAdapter } from "@/utils/adapters/joi-formik-adapter";
@@ -194,11 +195,12 @@ function ResetButton() {
   return (
     <Button
       type="button"
-      variant="faded"
+      variant="bordered"
       color="danger"
-      size="lg"
+      size="md"
       radius="sm"
-      className="border-0 text-danger-700"
+      className="self-end px-4 border-1"
+      startContent={<MdOutlineRefreshIcon size={18} />}
       onPress={handleResetForm}
     >
       {tCommon("reset")}
@@ -1120,8 +1122,9 @@ export default function FinancialYear2023To2024() {
                   className="lg:basis-1/3 lg:shrink-0"
                 >
                   <CardBody>
-                    <form className="flex flex-col gap-y-5">
+                    <form className="flex flex-col gap-y-5 pb-1">
                       <p>{t2023To2024("month.description")}</p>
+                      <ResetButton />
                       <FormNumberInput
                         name="baseSalary"
                         label={t2023To2024("month.form.baseSalary.label")}
@@ -1163,7 +1166,6 @@ export default function FinancialYear2023To2024() {
                         currency="Rs"
                         min={0}
                       />
-                      <ResetButton />
                     </form>
                   </CardBody>
                 </Card>
@@ -1195,7 +1197,7 @@ export default function FinancialYear2023To2024() {
                   className="lg:basis-1/3 lg:shrink-0"
                 >
                   <CardBody>
-                    <form className="flex flex-col gap-y-4">
+                    <form className="flex flex-col gap-y-4 pb-1">
                       <Trans
                         t={t2023To2024}
                         i18nKey="year.description"
@@ -1216,6 +1218,7 @@ export default function FinancialYear2023To2024() {
                           ),
                         }}
                       />
+                      <ResetButton />
                       <FormNumberInput
                         name="baseSalary"
                         label={t2023To2024("year.form.baseSalary.label")}
@@ -1335,7 +1338,6 @@ export default function FinancialYear2023To2024() {
                         currency="Rs"
                         min={0}
                       />
-                      <ResetButton />
                     </form>
                   </CardBody>
                 </Card>
