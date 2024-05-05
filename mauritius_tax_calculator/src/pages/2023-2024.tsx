@@ -469,7 +469,7 @@ function MonthlyCalculations() {
       </AccordionItem>
       <AccordionItem
         key="taxCharged"
-        aria-label={`Rs ${decimalToString(taxCharged, 2)}`}
+        aria-label={`Rs ${decimalToString(taxCharged)}`}
         title={`Rs ${decimalToString(taxCharged)}`}
         subtitle={t2023To2024("month.output.taxCharged.subtitle")}
         classNames={{
@@ -928,8 +928,8 @@ function YearlyCalculations() {
       </AccordionItem>
       <AccordionItem
         key="taxCharged"
-        aria-label={`Rs ${decimalToString(taxCharged, 2)}`}
-        title={`Rs ${decimalToString(taxCharged, 2)}`}
+        aria-label={`Rs ${decimalToString(taxCharged)}`}
+        title={`Rs ${decimalToString(taxCharged)}`}
         subtitle={t2023To2024("year.output.taxCharged.subtitle")}
         classNames={{
           heading: "m-0",
