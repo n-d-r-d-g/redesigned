@@ -14,10 +14,6 @@
     "watch:locales": "konsole -e onchange 'public/locales/**/*' -- npm run gen:types"
   },
   "dependencies": {
-    "@tippyjs/react": "^4.2.6",
-    "@types/node": "20.4.1",
-    "@types/react": "18.2.14",
-    "@types/react-dom": "18.2.6",
     "accept-language": "^3.0.18",
     "autoprefixer": "10.4.14",
     "eslint": "8.57.0",
@@ -30,11 +26,11 @@
     "i18next-browser-languagedetector": "^7.1.0",
     "i18next-resources-to-backend": "^1.1.4",
     "lodash": "^4.17.21",
-    "next": "13.4.9",
+    "next": "^14.2.3",
     "next-i18next": "^14.0.0",
-    "postcss": "8.4.25",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
+    "postcss": "^8.4.38",
+    "react": "^18",
+    "react-dom": "^18",
     "react-i18next": "^13.1.2",
     "react-sortablejs": "^6.1.4",
     "sortablejs": "^1.15.0",
@@ -45,7 +41,11 @@
     "zod-formik-adapter": "^1.2.0"
   },
   "devDependencies": {
+    "@tippyjs/react": "^4.2.6",
     "@types/lodash": "^4.14.202",
+    "@types/node": "20.4.1",
+    "@types/react": "^18.3.1",
+    "@types/react-dom": "^18.3.0",
     "@types/sortablejs": "^1.15.1",
     "@types/uuid": "^9.0.2",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
