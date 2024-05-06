@@ -1,0 +1,64 @@
+{
+  "documentTitle": "Lavant uswa asa enn veikil segonnme",
+  "pageTitle": "Lavant uswa asa enn veikil segonnme",
+  "description": "<p>Pandan lavant uswa asa enn veikil segonnme lokal (pa recon) dan moris, ou bizin respekte bann letap inportan.</p>",
+  "form": {
+    "description": "<p>Reponn bann kestyon swivan pou nu kapav furni ou bann linformasyon adapte a ou sityasyon.</p>",
+    "identity": {
+      "label": "Kisannla ou ete?"
+    },
+    "transactionModel": {
+      "label": "Kisannla p vand ar kisannla?"
+    }
+  },
+  "notes": {
+    "label": "Anote:",
+    "commonItems": {
+      "goToNLTAEarly": "<li>Bann dimunn kumans fer lake boner kot <NLTAAbbr />. Akoz sa, mem si biro la uver 09:00, al sirplas ver 07:30 - 08:00.</li>",
+      "endOfFinancialYearNLTAClosed": "<li>Bann brans <NLTAAbbr /> ferme le 29 ek 30 zin akoz lafin lane finansye.</li>",
+      "exactAmountAtNTLA": "<li>Avan ki ou al <NLTAAbbr />, asir ou ki ou ena montan ekzak ki bizin an likid (ena bann not kot <NLTAAbbr /> ki presiz sa).</li>"
+    },
+    "vendorItems": {
+      "item1": "<li>Prevwar 1 zur konze parski ou pou bizin atann inpe letan kot <NLTAAbbr />.</li>",
+      "item2": "$t(notes.commonItems.goToNLTAEarly)",
+      "item3": "$t(notes.commonItems.endOfFinancialYearNLTAClosed)",
+      "item4": "$t(notes.commonItems.exactAmountAtNTLA)"
+    },
+    "purchaserItems": {
+      "item1": "<li>Avan ki ou aste enn veikil, demann enn mekanisyin uswa kikenn ki konpran bann veikil byin pou verifye ki veikil la an bon eta (uswa si ena reparasyon pou fer). Sa pou fer ou evit bann depans inprevi lor reparasyon plitar.</li>",
+      "item2": {
+        "label": "Verifie egalman ki veikil la ekipe avek bann item swivan (sertin item pa neseser pou sertin tip veikil):",
+        "checklist": {
+          "item1": "<label><EmergencyTriangle /></label>",
+          "item2": "<label><IndelibleChalk /></label>",
+          "item3": "<label>Extinkter (Fode pa ki so dat expirasion inn fini depase)</label>",
+          "item4": "<label>Larou de sekour</label>",
+          "item5": "<label><Jack /></label>",
+          "item6": "<label><LugWrench /></label>",
+          "item7": "<label><AgreedStatementOfFacts /></label>",
+          "item8": "<label>Dokiman valid vizib lor veikil:<ul><li><InsuranceVignette /></li><li><FitnessCertificate /></li><li><MVL /></li></ul></label>"
+        }
+      },
+      "item3": "<li>Enn fwa ki mekanisyin la inn donn ou so lakor, kontakte plizir konpagni lasirans pou ki ou gayn diferan devi pou mem kuvertir lor veikil ki ou p pans aste. Verifye bann fre anrezistreman ki ou pou bizin paye lor <GovtRegFeeLink>websayt ofisyel guvernman moris</GovtRegFeeLink> (mycar.mu ofer enn <MyCarMuRegFeeCalculatorLink>kalkilater intwitif</MyCarMuRegFeeCalculatorLink> pou kalkil bann fre anrezistreman).",
+      "item4": "<li>Prevwar 2 zur konze akoz bann deplasman ou pou bizin fer ek letan ou pou bizin atann kot <NLTAAbbr />, lasirans ek Registrar.</li>",
+      "item5": "$t(notes.commonItems.goToNLTAEarly)",
+      "item6": "$t(notes.commonItems.endOfFinancialYearNLTAClosed)",
+      "item7": "$t(notes.commonItems.exactAmountAtNTLA)",
+      "item8": "<li>Registrar aksepte peyman an likid, par kart kredi uswa par sek. Si ou pey an likid, asir ou ki ou ena montan ezak ki bizin (ena bann not kot Registrar ki presiz sa) ek inpe biye Rs100 ek Rs200 anplis, parski ou pou bizin pey bann fre taks.</li>"
+    }
+  },
+  "registration": {
+    "diagram": {
+      "labels": {
+        "door": "Laport",
+        "ticketOfficer": "Ticket officer",
+        "taxingSection": "Seksion taxing",
+        "financeSection": "Seksion finans",
+        "deliverySection": "Seksion delivery",
+        "taxingWaitingArea": "Saldatant seksion taxing",
+        "financeWaitingArea": "Saldatant seksion finans",
+        "deliveryWaitingArea": "Saldatant seksion delivery"
+      }
+    }
+  }
+}

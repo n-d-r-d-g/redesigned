@@ -1,0 +1,64 @@
+{
+  "documentTitle": "Vente ou achat d'un véhicule d'occasion",
+  "pageTitle": "Vente ou achat d'un véhicule d'occasion",
+  "description": "<p>Lors de la vente ou de l'achat ou d'un véhicule d'occasion local (ne provenant pas d'un concessionnaire) à Maurice, il convient de respecter scrupuleusement un certain nombre d'étapes.</p>",
+  "form": {
+    "description": "<p>Veuillez répondre aux questions suivantes afin que nous puissions vous fournir les informations les mieux adaptées à votre situation.</p>",
+    "identity": {
+      "label": "Qui êtes-vous?"
+    },
+    "transactionModel": {
+      "label": "Qui vend à qui?"
+    }
+  },
+  "notes": {
+    "label": "À noter:",
+    "commonItems": {
+      "goToNLTAEarly": "<li>Les gens commencent à faire la queue très tôt à la <NLTAAbbr />. Ainsi, même si le bureau ouvre à 9h00, soyez sur place vers 07h30 - 08h00.</li>",
+      "endOfFinancialYearNLTAClosed": "<li>Les branches de la <NLTAAbbr /> sont fermées le 29 et 30 juin en raison de la fin de l'année financière.</li>",
+      "exactAmountAtNTLA": "<li>Avant de vous présenter à la <NLTAAbbr />, assurez-vous d'avoir le montant exact requis en liquide (il y a des notes à la <NLTAAbbr /> qui le précisent).</li>"
+    },
+    "vendorItems": {
+      "item1": "<li>Prévoyez 1 jour de congé car cela prendra du temps au <NLTAAbbr />.</li>",
+      "item2": "$t(notes.commonItems.goToNLTAEarly)",
+      "item3": "$t(notes.commonItems.endOfFinancialYearNLTAClosed)",
+      "item4": "$t(notes.commonItems.exactAmountAtNTLA)"
+    },
+    "purchaserItems": {
+      "item1": "<li>Avant de procéder à l'achat d'un véhicule, demandez à un mécanicien ou à une personne connaissant bien les véhicules de vérifier si le véhicule est en bon état (ou si des réparations doivent être effectuées). Cela vous évitera des dépenses pour des réparations imprévues plus tard.</li>",
+      "item2": {
+        "label": "Vérifiez également que le véhicule est équipé des éléments suivants (certains éléments ne sont pas requis pour certains types de véhicules):",
+        "checklist": {
+          "item1": "<label><EmergencyTriangle /></label>",
+          "item2": "<label><IndelibleChalk /></label>",
+          "item3": "<label>Extincteur (La date d'expiration ne doit pas avoir été dépassée)</label>",
+          "item4": "<label>Roue de secours</label>",
+          "item5": "<label><Jack /></label>",
+          "item6": "<label><LugWrench /></label>",
+          "item7": "<label><AgreedStatementOfFacts /></label>",
+          "item8": "<label>Documents valides visibles sur le véhicule:<ul><li><InsuranceVignette /></li><li><FitnessCertificate /></li><li><MVL /></li></ul></label>"
+        }
+      },
+      "item3": "<li>Une fois que le mécanicien a donné son accord, contactez plusieurs compagnies d'assurance afin d'obtenir différents devis pour la même couverture sur le véhicule que vous envisagez d'acheter. Vérifiez les frais d'enregistrement que vous devrez payer sur le <GovtRegFeeLink>site officiel du gouvernement mauricien</GovtRegFeeLink> (mycar.mu propose un <MyCarMuRegFeeCalculatorLink>calculateur intuitif</MyCarMuRegFeeCalculatorLink> pour calculer les frais d'enregistrement).",
+      "item4": "<li>Prévoyez 2 jours de congé en raison de tous les déplacements et de l'attente à la <NLTAAbbr />, à la compagnie d'assurance et au bureau d'enregistrement (Registrar).</li>",
+      "item5": "$t(notes.commonItems.goToNLTAEarly)",
+      "item6": "$t(notes.commonItems.endOfFinancialYearNLTAClosed)",
+      "item7": "$t(notes.commonItems.exactAmountAtNTLA)",
+      "item8": "<li>Le paiement peut être effectué en espèces, par carte de crédit ou par chèque au bureau d'enregistrement (Registrar). Si vous payez en espèces, assurez-vous d'avoir le montant exact (il y a des notes au bureau d'enregistrement qui le précisent) et quelques billets supplémentaires de Rs100 et Rs200, car vous serez probablement soumis à des frais de taxe.</li>"
+    }
+  },
+  "registration": {
+    "diagram": {
+      "labels": {
+        "door": "La porte",
+        "ticketOfficer": "Billeterie",
+        "taxingSection": "Section taxing",
+        "financeSection": "Section finance",
+        "deliverySection": "Section delivery",
+        "taxingWaitingArea": "Salle d'attente section taxing",
+        "financeWaitingArea": "Salle d'attente section finance",
+        "deliveryWaitingArea": "Salle d'attente section delivery"
+      }
+    }
+  }
+}

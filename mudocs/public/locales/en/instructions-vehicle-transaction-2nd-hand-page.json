@@ -1,0 +1,152 @@
+{
+  "documentTitle": "Sale or purchase of a second hand vehicle",
+  "pageTitle": "Sale or purchase of a second hand vehicle",
+  "description": "<p>Whenever you're selling/purchasing a local second hand vehicle (not from a dealership) in Mauritius, a couple of steps need to be strictly followed.</p>",
+  "form": {
+    "description": "<p>Please answer the following questions to allow us to provide you the best information for your situation.</p>",
+    "identity": {
+      "label": "Who are you?"
+    },
+    "transactionModel": {
+      "label": "Who is selling to whom?"
+    }
+  },
+  "notes": {
+    "label": "Keep the following in mind:",
+    "commonItems": {
+      "goToNLTAEarly": "<li>People start to queue up early at the <NLTAAbbr />. So, even if the office opens at 09:00, make sure to get there at around 07:30 - 08:00.</li>",
+      "endOfFinancialYearNLTAClosed": "<li><NLTAAbbr /> sub branches are closed on the 29th and 30th of June due to the end of the financial year.</li>",
+      "exactAmountAtNTLA": "<li>Before showing up at the <NLTAAbbr />, make sure you have the exact amount in cash (there are notes at the <NLTAAbbr /> specifying this).</li>"
+    },
+    "vendorItems": {
+      "item1": "<li>Already plan 1 day off as it will be time-consuming at the <NLTAAbbr />.</li>",
+      "item2": "$t(notes.commonItems.goToNLTAEarly)",
+      "item3": "$t(notes.commonItems.endOfFinancialYearNLTAClosed)",
+      "item4": "$t(notes.commonItems.exactAmountAtNTLA)"
+    },
+    "purchaserItems": {
+      "item1": "<li>Before agreeing to purchase a vehicle, have either a mechanic or someone who knows their way around vehicles, verify that the vehicle is in good shape (or repairs that need to be made). This will prevent you from spending on unplanned repairs later.</li>",
+      "item2": {
+        "label": "Also verify that the vehicle is equipped with the following (some items are not required for some vehicle types):",
+        "checklist": {
+          "item1": "<label><EmergencyTriangle /></label>",
+          "item2": "<label><IndelibleChalk /></label>",
+          "item3": "<label>Fire extinguisher (The expiry date needs to be in the future)</label>",
+          "item4": "<label>Spare wheel</label>",
+          "item5": "<label><Jack /></label>",
+          "item6": "<label><LugWrench /></label>",
+          "item7": "<label><AgreedStatementOfFacts /></label>",
+          "item8": "<label>Visible valid documents on vehicle:<ul><li><InsuranceVignette /></li><li><FitnessCertificate /></li><li><MVL /></li></ul></label>"
+        }
+      },
+      "item3": "<li>Once the mechanic gives their approval, contact a few insurance companies to obtain different quotes of the same cover (either <ComprehensiveCover /> or <ThirdPartyCover />) on the vehicle you're planning to purchase. Check the registration fee you'll have to pay on the <GovtRegFeeLink>official Mauritian government's website</GovtRegFeeLink> (mycar.mu offers an <MyCarMuRegFeeCalculatorLink>intuitive calculator</MyCarMuRegFeeCalculatorLink> to calculate registration fees).",
+      "item4": "<li>Already plan 2 days off due to all the travelling and waiting involved at the <NLTAAbbr />, insurance company and Registrar.</li>",
+      "item5": "$t(notes.commonItems.goToNLTAEarly)",
+      "item6": "$t(notes.commonItems.endOfFinancialYearNLTAClosed)",
+      "item7": "$t(notes.commonItems.exactAmountAtNTLA)",
+      "item8": "<li>Payment may be made either in cash, by credit card or check at the Registrar. If you're paying in cash, make sure you have the exact amount (there are notes at the Registrar specifying this) and a few additional Rs 100 and Rs 200 bills as you will probably be charged for tax fees.</li>"
+    }
+  },
+  "registration": {
+    "title": "<h2>Register the vehicle</h2>",
+    "description": "<p>Once you have the <NonAttachmentCertificate />, the next step is to register the vehicle at the <RegistrarLink>Registrar</RegistrarLink>. You have <em>15 days</em> as from the date of sale on the <DeedOfSale /> for registration, after which you will have to pay a fine of 50% of the tax payable. You can delegate this step to anyone provided they are 18 years old or above. We will assume the person reading this section to be the one going to the Registrar.</p>",
+    "note": "<p><em>Note: the current insurance cover on the vehicle is automatically cancelled once registration is done. This means that the vehicle is not allowed to be on public roads. So, just in case you're not able to get insurance on the day of registration, avoid driving the vehicle to the Registrar as you won't be able to drive it back legally.</em></p>",
+    "instructions": {
+      "description": "<p>Before going to the Registrar, make sure to bring the following:</p>",
+      "requirement1": "<label>2 stamped <DeedsOfSale /></label>",
+      "requirement2": "<label>Your <ProofOfIdentity /></label>",
+      "requirement3": "<label>The <VehicleRegistrationBook /></label>",
+      "requirement4": "<label>The <NonAttachmentCertificate /></label>",
+      "requirement5": "<label>The registration fee (Check the registration fee you'll have to pay on the <GovtRegFeeLink>official Mauritian government's website</GovtRegFeeLink> or <MyCarMuRegFeeCalculatorLink>mycar.mu's calculator</MyCarMuRegFeeCalculatorLink>)</label>"
+    },
+    "diagram": {
+      "description": "<p>The following diagram illustrates the Registrar's layout:</p>",
+      "labels": {
+        "door": "Door",
+        "ticketOfficer": "Ticket officer",
+        "taxingSection": "Taxing section",
+        "financeSection": "Finance section",
+        "deliverySection": "Delivery section",
+        "taxingWaitingArea": "Taxing section's waiting area",
+        "financeWaitingArea": "Finance section's waiting area",
+        "deliveryWaitingArea": "Delivery section's waiting area"
+      },
+      "legend": {
+        "step1": "<li>Upon arrival at the Registrar, the ticket officer will ask you for the <VehicleRegistrationBook /> before handing you a ticket.</li>",
+        "step2": "<li>You'll need to wait for your turn in the taxing section's waiting area.</li>",
+        "step3": "<li>The taxing section's officer will ask you for a few documents mentioned above before handing you a payment notice.</li>",
+        "step4": "<li>You'll need to issue another ticket for the finance section. Show the ticket officer your payment notice.</li>",
+        "step5": "<li>You'll need to wait for your turn in the finance section's waiting area.</li>",
+        "step6": "<li>Here, you need to effect payment then the finance section's officer will hand you a payment receipt.</li>",
+        "step7": "<li>You'll need to issue a third and last ticket for the delivery section. Show the ticket officer your payment receipt.</li>",
+        "step8": "<li>You'll need to wait for your turn in the delivery section's waiting area.</li>",
+        "step9": "<li>The delivery section's officer will ask you for a few documents, including but not limited to the payment notice and payment receipt. Then, you'll be handed the registered <DeedOfSale />; a barcode will be added on the recto side of the <DeedOfSale /> and, the payment notice and payment receipt will be stapled to it. <em>Leave them stapled.</em></li>",
+        "step10": "<li>At this point, registration is completed.</li>"
+      }
+    }
+  },
+  "insurance": {
+    "title": "<h2>Get insurance</h2>",
+    "description": "<p>Adding an insurance cover on the vehicle is compulsory for it to be used on public roads. You can opt either for a <ComprehensiveInsuranceCover /> or a <ThirdPartyInsuranceCover />. Before going to the insurance company's office to get the vehicle insured, ask them which documents you need to bring with you. <em>The insurance cover needs to be added under the name that appears on the registered <DeedOfSale /></em>.</p>",
+    "conditionalRequirements": {
+      "description": "<p>Usually, the following are required (different insurance companies might have different requirements):</p>",
+      "individualRequirements": {
+        "proofOfAddress_singlePurchaser": "<label>Your <ProofOfAddress /></label>",
+        "proofOfAddress_multiplePurchasers": "<label>Each purchaser's <ProofOfAddress /></label>",
+        "requirement1": "<label>The registered <DeedOfSale /> along with the payment notice and payment receipt from the Registrar, stapled together</label>",
+        "requirement2": "<label>Your <ProofOfIdentity /></label>",
+        "requirement3": "$t(insurance.conditionalRequirements.individualRequirements.proofOfAddress_{{numOfPurchasers}})",
+        "requirement4": "<label>Your <ProofOfEmployment /></label>",
+        "requirement5": "<label>Your driving permit</label>",
+        "requirement6": "<label>The <VehicleRegistrationBook /></label>",
+        "requirement7": "<label>The insurance fee</label>"
+      },
+      "companyRequirements": {
+        "requirement1": "<label>The registered <DeedOfSale /> along with the payment notice and payment receipt from the Registrar, stapled together</label>",
+        "requirement2": "<label>Your <ProofOfIdentity /></label>",
+        "requirement3": "<label>The company's Business Registration Card</label>",
+        "requirement4": "<label>The company's <ProofOfAddress /></label>",
+        "requirement5": "<label>The <VehicleRegistrationBook /></label>",
+        "requirement6": "<label>The insurance fee</label>"
+      }
+    },
+    "itemsReceived": {
+      "description": "<p>The insurance officer will hand you the following:</p>",
+      "item1": "<li>An insurance certificate</li>",
+      "item2": "<li>An <InsuranceVignette /></li>",
+      "item3": "<li>An insurance policy</li>",
+      "item4": "<li>A receipt for the insurance's payment</li>",
+      "item5": "<li>An <AgreedStatementOfFacts /></li>",
+      "item6": "<li>An optional road assistance sticker</li>",
+      "item7": "<li>An optional windshield pouch</li>"
+    },
+    "note1": "<p><em>Note: You can politely ask the insurance officer to provide you a photocopy of the registered <DeedOfSale />. If this is not possible, make sure to have one made elsewhere, as you'll need it at the <NLTA /> for the next step, i.e. the transfer of ownership.</em></p>",
+    "note2": "<p><em>Note: Make sure to replace the previous insurance vignette on the vehicle with the new one as soon as possible.</em></p>",
+    "note3": "<p><em>Note: The vehicle can now be driven on public roads, however, it's advised not to before the transfer of ownership is completed at the <NLTA />.</em></p>"
+  },
+  "transfer": {
+    "title": "<h2>Transfer ownership</h2>",
+    "description": "$t(transfer.description_{{purchaserType}}_{{numOfPurchasers}})",
+    "description_individual_singlePurchaser": "<p>The final step is to transfer the vehicle's ownership to your name at the <NLTAContactLink><NLTA />'s headquarters or sub offices</NLTAContactLink>. You can delegate this step to anyone.</p>",
+    "description_individual_multiplePurchasers": "<p>The final step is to transfer the vehicle's ownership to the purchasers' names at the <NLTAContactLink><NLTA />'s headquarters or sub offices</NLTAContactLink>. You can delegate this step to anyone.</p>",
+    "description_company_singlePurchaser": "<p>The final step is to transfer the vehicle's ownership to your company's name at the <NLTAContactLink><NLTA />'s headquarters or sub offices</NLTAContactLink>. You can delegate this step to anyone.</p>",
+    "requirements": {
+      "description": "<p>The following documents are required:</p>",
+      "proofOfAddress_individual_singlePurchaser": "<label>Your <ProofOfAddress /></label>",
+      "proofOfAddress_individual_multiplePurchasers": "<label>Each purchaser's <ProofOfAddress /></label>",
+      "proofOfAddress_company_singlePurchaser": "<label>Your company's <ProofOfAddress /></label>",
+      "requirement1": "<label>The registered <DeedOfSale /> along with the payment notice and payment receipt from the Registrar, stapled together</label",
+      "requirement2": "<label>A photocopy of the registered <DeedOfSale />",
+      "requirement3": "<label>The original insurance certificate",
+      "requirement4": "$t(transfer.requirements.proofOfAddress_{{purchaserType}}_{{numOfPurchasers}})",
+      "requirement5": "<label>The <VehicleRegistrationBook /></label>",
+      "requirement6": "<label>The transfer fee:<dl><dt>Autocycle</dt><dd>Rs 100</dd><dt>Motorcycle</dt><dd>Rs 200</dd><dt>Other vehicles</dt><dd>Rs 300</dd></dl></label>"
+    },
+    "itemsReceived": {
+      "description": "<p>The <NLTA /> officer will hand you the following:</p>",
+      "item1": "<li>A new <VehicleRegistrationBook /></li>",
+      "item2": "<li>A receipt for the transfer of ownership's payment</li>"
+    },
+    "note": "<p><em>Note: Before leaving the <NLTA />, verify that all the details on the new <VehicleRegistrationBook /> are correct against the registered <DeedOfSale /> and notify the officer in case there is any error. Otherwise, you'll have to come back later to have it modified.</em></p>"
+  }
+}

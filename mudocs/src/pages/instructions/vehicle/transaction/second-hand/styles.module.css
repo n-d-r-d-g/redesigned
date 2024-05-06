@@ -1,0 +1,18 @@
+h1.h1 {
+  @apply text-center;
+
+  counter-reset: heading-2;
+}
+
+h2.h2::before {
+  counter-increment: heading-2;
+  content: counter(heading-2) ". ";
+}
+
+input.checkbox[type="checkbox"]:not(:checked) + label {
+  @apply hover:text-teal-900 motion-safe:transition motion-safe:duration-100 hover:dark:text-amber-100;
+}
+
+input.checkbox[type="checkbox"]:checked + label {
+  @apply text-gray-500 line-through dark:text-gray-400;
+}

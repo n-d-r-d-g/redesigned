@@ -1,0 +1,21 @@
+{
+  "welcome": "Welcome to MUDOCS",
+  "description": "A community-driven solution to public processes in Mauritius.",
+  "instructions": {
+    "title": "Instructions",
+    "description": "Official documentation can sometimes feel overwhelming and confusing. Here's our attempt to make it a little simpler.",
+    "vehicles": {
+      "title": "Vehicle-related instructions",
+      "secondHandSaleOrPurchase": "Sale/purchase of a second hand vehicle"
+    }
+  },
+  "documentGenerators": {
+    "title": "Document Generators",
+    "description": "Who loves filling forms by pen? Not us. We figured we're not the only ones. So, we built document generators to help out.",
+    "vehicles": {
+      "title": "Vehicle-related document generators",
+      "nonAttachmentCertificateAuthorizationLetter": "Authorization Letter - Certificate of non-attachment",
+      "deedOfSale": "Deed of sale"
+    }
+  }
+}

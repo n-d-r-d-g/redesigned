@@ -1,0 +1,355 @@
+{
+  "requiredInfoLegend": "*: Informasyon obligatwar - asir ou ki ou ranpli enn valer partu kot ena enn asterisk (*)",
+  "fillInfoToViewPagePreview": "Ranpli bann informasyon valid dan form lao pou gayn enn apersi dokiman ki ou pou inprime.",
+  "printPreview": "Apersi avan inprime",
+  "date": "Dat",
+  "saleDate": "Dat lavant",
+  "vehicleFirstRegDate": "Premye dat anrezistreman veikil",
+  "dearSirOrMadam": "Ser misye/madam,",
+  "to": "Pou",
+  "theOfficerInCharge": "Ofisye responsab",
+  "thankingInAnticipation": "Mersi davans.",
+  "yoursTruly": "Sinserman,",
+  "vendor": "vander",
+  "purchaser": "lakerer",
+  "authorizer": "Otorizater",
+  "authorized": "Otorize",
+  "authorizationMode": "Kisannla pe otoriz kisannla?",
+  "authorizationModes": {
+    "i1ToI2": {
+      "short": "I1 a I2",
+      "long": "Individyel a Individyel"
+    },
+    "i1ToD2": {
+      "short": "I1 a D2",
+      "long": "Individyel a Direkter konpagni"
+    },
+    "i1ToR2": {
+      "short": "I1 a R2",
+      "long": "Individyel a Reprezantan konpagni"
+    },
+    "c1ToD1": {
+      "short": "K1 a D1",
+      "long": "Konpagni a so Direkter"
+    },
+    "c1ToR1": {
+      "short": "K1 a R1",
+      "long": "Konpagni a so Reprezantan"
+    },
+    "c1ToI2": {
+      "short": "K1 a I2",
+      "long": "Konpagni a Individyel"
+    },
+    "c1ToD2": {
+      "short": "K1 a D2",
+      "long": "Konpagni a Direkter enn lot konpagni"
+    },
+    "c1ToR2": {
+      "short": "K1 a R2",
+      "long": "Konpagni a Reprezantan enn lot konpagni"
+    }
+  },
+  "authorizationModeAcronyms": {
+    "individual": {
+      "acronym": "I",
+      "meaning": "Individyel"
+    },
+    "company": {
+      "acronym": "K",
+      "meaning": "Konpagni"
+    },
+    "director": {
+      "acronym": "D",
+      "meaning": "Direkter konpagni"
+    },
+    "representative": {
+      "acronym": "R",
+      "meaning": "Reprezantan konpagni"
+    },
+    "vendor": {
+      "acronym": "1",
+      "meaning": "Vander"
+    },
+    "purchaser": {
+      "acronym": "2",
+      "meaning": "Lakerer"
+    }
+  },
+  "transactionMode": "Kisannla pe vand ar kisannla?",
+  "transactionModes": {
+    "iToI": {
+      "short": "I a I",
+      "long": "Individyel a Individyel"
+    },
+    "iToC": {
+      "short": "I a K",
+      "long": "Individyel a Konpagni"
+    },
+    "cToI": {
+      "short": "K a I",
+      "long": "Konpagni a Individyel"
+    },
+    "cToC": {
+      "short": "K a K",
+      "long": "Konpagni a Konpagni"
+    }
+  },
+  "transactionModeAcronyms": {
+    "individual": {
+      "acronym": "I",
+      "meaning": "Individyel"
+    },
+    "company": {
+      "acronym": "K",
+      "meaning": "Konpagni"
+    }
+  },
+  "traderTypes": {
+    "person": "Individyel",
+    "company": "Konpagni"
+  },
+  "titles": {
+    "mr": "Mr.",
+    "mrs": "Mrs.",
+    "miss": "Miss"
+  },
+  "nationalities": {
+    "mauritian": "Morisyin",
+    "nonMauritian": "Non morisyin"
+  },
+  "none": "Okenn",
+  "add": "Azute",
+  "reload": "Re inisyalize",
+  "remove": "Siprime",
+  "dragToMove": "Klik ek tini pou deplase",
+  "cancel": "Anile",
+  "commonAddress": "Bann individyel/konpagni anba partaz mem ladres",
+  "isDirectorRepresentingCompany": "Reprezantan konpagni",
+  "idNo": "Nim. ID",
+  "passportNo": "Nim. paspor",
+  "residingAt": "rezidan",
+  "locatedAt": "sitye a",
+  "vehicleMake": "Mark veikil",
+  "vehicleMakePlaceholder": "Ex. TOYOTA",
+  "vehicleModel": "Model veikil",
+  "vehicleModelPlaceholder": "Ex. COROLLA",
+  "vehicleRegNum": "Nim. anrezistreman veikil",
+  "vehicleRegNumPlaceholder": "Ex. 1234JN12",
+  "vehicleEngineDisplacement": "Pwisans moter veikil (cc)",
+  "vehicleEngineDisplacementPlaceholder": "Ex. 998",
+  "vehicleEngineNum": "Nim. moter veikil",
+  "vehicleEngineNumPlaceholder": "Ex. ABCDEF123456",
+  "vehicleChassisNum": "Nim. sasi veikil",
+  "vehicleChassisNumPlaceholder": "Ex. ABCDE123AB1234567",
+  "vehiclePrice": "Pri de vant veikil (Rs)",
+  "vehiclePricePlaceholder": "Ex. 500000",
+  "vendorOrVendors": "Vander",
+  "purchaserOrPurchasers": "Lakerer",
+  "traderType": "Tip (Individyel/Konpagni)",
+  "title": "Tit",
+  "nationality": "Nasyonalite",
+  "name": "Non",
+  "address": "Ladres",
+  "representative": "Reprezantan",
+  "directors": "Direkter",
+  "namePlaceholder": "Ex. WATSON EMMA",
+  "companyNamePlaceholder": "Ex. XYZ LTD",
+  "nidOrPassportNum": "Nim. ID / Paspor",
+  "nidOrPassportNumPlaceholder": "Nim. ID / Paspor",
+  "brn": "BRN",
+  "brnPlaceholder": "Nim. Anrezistreman Biznes",
+  "role": "Rol/Tit",
+  "rolePlaceholder": "Ex. Manager",
+  "street": "Lari",
+  "streetPlaceholder": "Ex. 123, PARK LANE",
+  "locality": "Vilaz/Lavil",
+  "localityPlaceholder": "E.g. PORT-LOUIS",
+  "printingNotSupported": "Ou navigater pena siport pou inprime.",
+  "saveOrPrint": "Anrezistre / Inprime",
+  "nltaFull": "National Land Transport Authority",
+  "roadTransportDivision": "Road Transport Division",
+  "nltaTown": "Port-Louis",
+  "handwrittenSignature": "Sign isi lor papie kan fini inprime",
+  "companyStamp": "Stamp isi lor papie kan fini inprime",
+  "yes": "Wi",
+  "no": "Non",
+  "responsibilities": {
+    "purchaser": "Lakerer",
+    "vendor": "Vander",
+    "purchaserOrDelegate": "Lakerer uswa so delege",
+    "vendorOrDelegate": "Vander uswa so delege"
+  },
+  "transactionModels": {
+    "i2i": "Individyel a Individyel",
+    "i2c": "Individyel a Konpagni",
+    "c2i": "Konpagni a Individyel",
+    "c2c": "Konpagni a Konpagni"
+  },
+  "signatureByResponsibility": {
+    "purchaser": "Signatir lakerer",
+    "vendor": "Signatir vander",
+    "director": "Signatir direkter",
+    "representative": "Signatir reprezantan"
+  },
+  "documentsPreparers": {
+    "vendor": "Vander",
+    "vendor_other": "Vander",
+    "purchaser": "Lakerer",
+    "purchaser_other": "Lakerer",
+    "company": "Reprezantan",
+    "company_other": "Direkter"
+  },
+  "nonAttachmentCertificateIssuers": {
+    "vendor": "Vander",
+    "vendor_other": "Vander",
+    "purchaser": "Lakerer",
+    "purchaser_other": "Lakerer",
+    "company": "Reprezantan",
+    "company_other": "Direkter",
+    "vendorAndPurchaser": "$t(nonAttachmentCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
+    "vendorAndPurchaser_singleVendor_singlePurchaser": "Vander ek Lakerer",
+    "vendorAndPurchaser_singleVendor_multiplePurchasers": "Vander ek Lakerer",
+    "vendorAndPurchaser_multipleVendors_singlePurchaser": "Vander ek Lakerer",
+    "vendorAndPurchaser_multipleVendors_multiplePurchasers": "Vander ek Lakerer",
+    "vendorDelegate": "Vander so delege",
+    "vendorDelegate_other": "Vander so delege",
+    "purchaserDelegate": "Lakerer so delege",
+    "purchaserDelegate_other": "Lakerer so delege",
+    "vendorAndCompany": "$t(nonAttachmentCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
+    "vendorAndCompany_singleVendor_singleDirector": "Vander ek Reprezantan",
+    "vendorAndCompany_singleVendor_multipleDirectors": "Vander ek Direkter",
+    "vendorAndCompany_multipleVendors_singleDirector": "Vander ek Reprezantan",
+    "vendorAndCompany_multipleVendors_multipleDirectors": "Vander ek Direkter",
+    "companyAndPurchaser": "$t(nonAttachmentCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
+    "companyAndPurchaser_singleDirector_singlePurchaser": "Reprezantan ek Lakerer",
+    "companyAndPurchaser_singleDirector_multiplePurchasers": "Reprezantan ek Lakerer",
+    "companyAndPurchaser_multipleDirectors_singlePurchaser": "Direkter ek Lakerer",
+    "companyAndPurchaser_multipleDirectors_multiplePurchasers": "Direkter ek Lakerer"
+  },
+  "paymentMethods": {
+    "cash": "Likid",
+    "check": "Sek",
+    "creditCard": "Kart kredi",
+    "bankTransfer": "Transfer banker",
+    "other": "Lot",
+    "notCash": "Pa likid"
+  },
+  "numOfPeople": {
+    "single": "Enn sel",
+    "multiple": "Plizir"
+  },
+  "changeLanguage": "Sanz langaz",
+  "languageSwitch": {
+    "confirmation": {
+      "title": "Re inisyalizasyon paz",
+      "disclaimer": "Modifikasyon langaz nesesit enn re inisyalizasyon sa paz la. Ou pou perdi tou ou bann modifikasyon.",
+      "question": "Ou sir ou le re inisyaliz sa paz la?"
+    }
+  },
+  "viewInstructions": "Lir linstriksyon",
+  "headingStepID": "etap-{{count}}",
+  "websiteBuiltBy": "<span>Fabrike avek <HeartTitle>💖</HeartTitle> par <GithubLink>n-d-r-d-g</GithubLink></span>",
+  "websiteBuiltByTitle": "lamur, laswer & larm",
+  "errors": {
+    "required": "Erer: Ou bizin ranpli sa informasyon la.",
+    "arrayMin_one": "Erer: Ou bizin met omwin enn eleman.",
+    "arrayMin_other": "Erer: Ou bizin met omwin {{count}} eleman.",
+    "arrayMax_one": "Erer: Ou pa kapav met plis ki enn eleman.",
+    "arrayMax_other": "Erer: Ou kapav met ziska {{count}} eleman.",
+    "stringMin_one": "Erer: Ou bizin met omwin enn karakter.",
+    "stringMin_other": "Erer: Ou bizin met omwin {{count}} karakter.",
+    "stringMax_one": "Erer: Ou pa kapav met plis ki enn karakter.",
+    "stringMax_other": "Erer: Ou kapav met ziska {{count}} karakter.",
+    "numberGTE": "Erer: Ou bizin met 1 sif ki pli gran swa egal a {{count}}.",
+    "numberGT": "Erer: Ou bizin met 1 sif ki pli gran ki {{count}}.",
+    "numberLTE": "Erer: Ou bizin met 1 sif ki pli tipti swa egal a {{count}}.",
+    "numberLT": "Erer: Ou bizin met 1 sif ki pli tipti ki {{count}}.",
+    "fieldSetContainsErrors": "Sa blok lao la kontenir bann erer."
+  },
+  "abbreviations": {
+    "brn": {
+      "label": "BRN",
+      "title": "<EN>Business Registration Number</EN>"
+    },
+    "pdf": {
+      "label": "PDF",
+      "title": "<EN>Portable Document Format</EN>"
+    },
+    "mvl": {
+      "label": "MVL",
+      "title": "<EN>Motor Vehicle License</EN> (osi apel sa deklarasion)"
+    },
+    "nlta": {
+      "label": "NLTA",
+      "title": "<EN>National Land and Transport Authority</EN>"
+    }
+  },
+  "technicalTerms": {
+    "agreedStatementOfFacts": {
+      "label": "konsta alamiab",
+      "title": ""
+    },
+    "comprehensiveInsuranceCover": {
+      "label": "lasirans tou risk",
+      "title": ""
+    },
+    "deedOfSale": {
+      "label": "papie de vant",
+      "label_other": "papie de vant",
+      "title": "",
+      "title_other": ""
+    },
+    "emergencyTriangle": {
+      "label": "triang signalizasion",
+      "title": "enn lekipman sekirite ki ogmant vizibilite bann veikil arete lor bor larout"
+    },
+    "fitnessCertificate": {
+      "label": "sertifika fitnes",
+      "title": "enn dokiman vizib lor enn veikil ki prouve ki li fit pou servi larout"
+    },
+    "indelibleChalk": {
+      "label": "lakre zonn",
+      "title": "enn lakre ki servi apre enn aksidan pou marke lor larout"
+    },
+    "insuranceVignette": {
+      "label": "viniet lasirans",
+      "title": "enn dokiman vizib lor enn veikil ki prouve ki li asire"
+    },
+    "jack": {
+      "label": "verin",
+      "title": "enn zouti ki servi pou soulev enn veikil"
+    },
+    "lugWrench": {
+      "label": "lakle a molet",
+      "title": "enn zouti ki servi pou ser/larg boulon larou enn veikil"
+    },
+    "nonAttachmentCertificate": {
+      "label": "sertifika gaz",
+      "title": "osi apel sa papie gaz"
+    },
+    "powerOfAttorney": {
+      "label": "power of attorney",
+      "title": "enn otorizasyon legal ki donn kikenn puvwar azir onon enn lot dimunn"
+    },
+    "proofOfAddress": {
+      "label": "prev ladres",
+      "title": "faktir elektrisite pa pli vie ki 3 mwa"
+    },
+    "proofOfEmployment": {
+      "label": "prev danplwa",
+      "title": "peyslip pa pli vie ki 3 mwa"
+    },
+    "proofOfIdentity": {
+      "label": "pies idantite",
+      "title": "kart idantite pou morisien ek paspor valid pou etranze"
+    },
+    "thirdPartyInsuranceCover": {
+      "label": "lasirans tiers",
+      "title": ""
+    },
+    "vehicleRegistrationBook": {
+      "label": "orspawer",
+      "title": "osi apel sa <EN>horsepower</EN>"
+    }
+  }
+}

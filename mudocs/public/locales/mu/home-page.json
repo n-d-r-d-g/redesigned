@@ -1,0 +1,21 @@
+{
+  "welcome": "Bienveni lor MUDOCS",
+  "description": "Enn solisyon kominoter pou bann prosesis piblik dan moris.",
+  "instructions": {
+    "title": "Linstriksyon",
+    "description": "Bann dokimantasyon ofisyel suvan paret ankonbran ek derutan. Nu finn esay sinplifye zot.",
+    "vehicles": {
+      "title": "Linstriksyon pou veikil",
+      "secondHandSaleOrPurchase": "Lavant/asa enn veikil segonnme"
+    }
+  },
+  "documentGenerators": {
+    "title": "Zenerater dokiman",
+    "description": "Kisannla kontan ranpli bann formiler lor papye? Pa nu. Nu panse ki nu pa tusel. Donk nu finn kree sa bann zenerater dokiman la.",
+    "vehicles": {
+      "title": "Zenerater dokiman pou veikil",
+      "nonAttachmentCertificateAuthorizationLetter": "Let otorizasyon - papye gaz",
+      "deedOfSale": "Papye de vant"
+    }
+  }
+}

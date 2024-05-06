@@ -1,0 +1,21 @@
+{
+  "welcome": "Bienvenue sur MUDOCS",
+  "description": "Une solution communautaire pour les processus publics à l'île maurice.",
+  "instructions": {
+    "title": "Instructions",
+    "description": "La documentation officielle peut parfois sembler encombrante et déroutante. Voici notre tentative pour la simplifier.",
+    "vehicles": {
+      "title": "Instructions pour véhicules",
+      "secondHandSaleOrPurchase": "Vente/achat d'un véhicule d'occasion"
+    }
+  },
+  "documentGenerators": {
+    "title": "Générateurs de documents",
+    "description": "Qui aime remplir des formulaires au stylo? Pas nous. Nous pensons que nous ne sommes pas les seuls. Nous avons donc créé les générateurs de documents ci-dessous.",
+    "vehicles": {
+      "title": "Générateurs de documents pour véhicules",
+      "nonAttachmentCertificateAuthorizationLetter": "Lettre d'autorisation - Certificat de non gage",
+      "deedOfSale": "Acte de vente"
+    }
+  }
+}

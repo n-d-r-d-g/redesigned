@@ -1,0 +1,145 @@
+# I2I PURCHASE - STEP 3A: NON-ATTACHMENT CERTIFICATE (BEFORE NLTA)
+
+Advised issuer(s): vendor & purchaser
+
+Advised preparer: vendor
+
+<table>
+  <tr>
+    <th>ISSUER</th>
+    <th>PREPARER</th>
+    <th>STEPS</th>
+  </tr>
+
+  <tr>
+    <!-- ISSUER: vendor -->
+    <!-- PREPARER: vendor -->
+    <td rowspan="2">vendor</td>
+    <td>vendor</td>
+    <td rowspan="2" style="color: darkgray;">
+      N/A
+    </td>
+  </tr>
+  <tr>
+    <!-- ISSUER: vendor -->
+    <!-- PREPARER: purchaser -->
+    <td>purchaser</td>
+  </tr>
+
+  <tr>
+    <!-- ISSUER: purchaser -->
+    <!-- PREPARER: vendor -->
+    <td rowspan="2">purchaser</td>
+    <td>vendor</td>
+    <td style="color: lightsalmon;">
+      <ol style="padding: 0; list-style-position: inside;">
+        <li>make sure to bring 2 signed deeds of sale</li>
+        <li>make sure to bring authorization letter (i1ToI2)</li>
+        <li>make sure to bring vendor's proof of identity</li>
+        <li>make sure to bring your proof of identity</li>
+        <li>make sure to bring vehicle's registration book</li>
+        <li>make sure to bring Rs50</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <!-- ISSUER: purchaser -->
+    <!-- PREPARER: purchaser -->
+    <td>purchaser</td>
+    <td style="color: lightsalmon;">
+      <ol style="padding: 0; list-style-position: inside;">
+        <li>make sure to bring 2 signed deeds of sale</li>
+        <li>make sure to bring authorization letter (i1ToI2)</li>
+        <li>make sure to bring vendor's proof of identity</li>
+        <li>make sure to bring your proof of identity</li>
+        <li>make sure to bring vehicle's registration book</li>
+        <li>make sure to bring Rs50</li>
+      </ol>
+    </td>
+  </tr>
+
+  <tr>
+    <!-- ISSUER: vendor & purchaser -->
+    <!-- PREPARER: vendor -->
+    <td rowspan="2">vendor & purchaser</td>
+    <td>vendor</td>
+    <td style="color: lightskyblue;">
+      <ol style="padding: 0; list-style-position: inside;">
+        <li>ask vendor to make sure to bring 2 signed deeds of sale</li>
+        <li>if vendor's name is different from the one on the vehicle's registration book, ask vendor to make sure to bring either their duly registered proof of identity or the deed of sale when they purchased the vehicle, else, ask vendor to make sure to bring their proof of identity</li>
+        <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask the vendor to make sure to bring Rs50</li>
+        <li>make sure to bring your proof of identity</li>
+        <li>make sure to bring your signed deed of sale</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <!-- ISSUER: vendor & purchaser -->
+    <!-- PREPARER: purchaser -->
+    <td>purchaser</td>
+    <td style="color: lightskyblue;">
+      <ol style="padding: 0; list-style-position: inside;">
+        <li>ask vendor to make sure to bring 2 signed deeds of sale</li>
+        <li>if vendor's name is different from the one on the vehicle's registration book, ask vendor to make sure to bring either their duly registered proof of identity or the deed of sale when they purchased the vehicle, else, ask vendor to make sure to bring their proof of identity</li>
+        <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask the vendor to make sure to bring Rs50</li>
+        <li>make sure to bring your proof of identity</li>
+        <li>make sure to bring your signed deed of sale</li>
+      </ol>
+    </td>
+  </tr>
+
+  <tr>
+    <!-- ISSUER: vendor's delegate -->
+    <!-- PREPARER: vendor -->
+    <td rowspan="2">vendor's delegate</td>
+    <td>vendor</td>
+    <td rowspan="2" style="color: darkgray;">
+      N/A
+    </td>
+  </tr>
+  <tr>
+    <!-- ISSUER: vendor's delegate -->
+    <!-- PREPARER: purchaser -->
+    <td>purchaser</td>
+  </tr>
+
+  <tr>
+    <!-- ISSUER: purchaser's delegate -->
+    <!-- PREPARER: vendor -->
+    <td rowspan="2">purchaser's delegate</td>
+    <td>vendor</td>
+    <td style="color: gold;">
+      <ol style="padding: 0; list-style-position: inside;">
+        <li>make sure to hand 2 signed deeds of sale to delegate</li>
+        <li>make sure to hand authorization letter (i1ToI2 ~> purchaser's delegate as the authorized person) to delegate</li>
+        <li>make sure to hand vendor's proof of identity to delegate</li>
+        <li>make sure to hand your proof of identity to delegate</li>
+        <li>make sure to hand vehicle's registration book to delegate</li>
+        <li>make sure to hand Rs50 to delegate</li>
+        <li>make sure to hand original power of attorney to delegate</li>
+        <li>make sure to hand photocopy of original power of attorney to delegate</li>
+        <li>ask delegate to make sure to bring their proof of identity</li>
+      </ol>
+    </td>
+  </tr>
+  <tr>
+    <!-- ISSUER: purchaser's delegate -->
+    <!-- PREPARER: purchaser -->
+    <td>purchaser</td>
+    <td style="color: gold;">
+      <ol style="padding: 0; list-style-position: inside;">
+        <li>make sure to hand 2 signed deeds of sale to delegate</li>
+        <li>make sure to hand authorization letter (i1ToI2 ~> purchaser's delegate as the authorized person) to delegate</li>
+        <li>make sure to hand vendor's proof of identity to delegate</li>
+        <li>make sure to hand your proof of identity to delegate</li>
+        <li>make sure to hand vehicle's registration book to delegate</li>
+        <li>make sure to hand Rs50 to delegate</li>
+        <li>make sure to hand original power of attorney to delegate</li>
+        <li>make sure to hand photocopy of original power of attorney to delegate</li>
+        <li>ask delegate to make sure to bring their proof of identity</li>
+      </ol>
+    </td>
+  </tr>
+</table>

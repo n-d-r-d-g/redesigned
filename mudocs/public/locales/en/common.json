@@ -1,0 +1,355 @@
+{
+  "requiredInfoLegend": "*: Required information - make sure to enter a value in each field marked with an asterisk (*)",
+  "fillInfoToViewPagePreview": "Please fill in the above form with valid information to see the page preview.",
+  "printPreview": "Print preview",
+  "date": "Date",
+  "saleDate": "Date of sale",
+  "vehicleFirstRegDate": "Vehicle's first registration date",
+  "dearSirOrMadam": "Dear Sir/Madam,",
+  "to": "To",
+  "theOfficerInCharge": "The Officer-in-Charge",
+  "thankingInAnticipation": "Thanking you in anticipation.",
+  "yoursTruly": "Yours truly,",
+  "vendor": "vendor",
+  "purchaser": "purchaser",
+  "authorizer": "Authorizer(s)",
+  "authorized": "Authorized",
+  "authorizationMode": "Who's authorizing whom?",
+  "authorizationModes": {
+    "i1ToI2": {
+      "short": "I1 to I2",
+      "long": "Individual(s) to Individual"
+    },
+    "i1ToD2": {
+      "short": "I1 to D2",
+      "long": "Individual(s) to Company Director"
+    },
+    "i1ToR2": {
+      "short": "I1 to R2",
+      "long": "Individual(s) to Company Representative"
+    },
+    "c1ToD1": {
+      "short": "C1 to D1",
+      "long": "Company to its own Director"
+    },
+    "c1ToR1": {
+      "short": "C1 to R1",
+      "long": "Company to its own Representative"
+    },
+    "c1ToI2": {
+      "short": "C1 to I2",
+      "long": "Company to Individual"
+    },
+    "c1ToD2": {
+      "short": "C1 to D2",
+      "long": "Company to another Company's Director"
+    },
+    "c1ToR2": {
+      "short": "C1 to R2",
+      "long": "Company to another Company's Representative"
+    }
+  },
+  "authorizationModeAcronyms": {
+    "individual": {
+      "acronym": "I",
+      "meaning": "Individual(s)"
+    },
+    "company": {
+      "acronym": "C",
+      "meaning": "Company"
+    },
+    "director": {
+      "acronym": "D",
+      "meaning": "Company Director"
+    },
+    "representative": {
+      "acronym": "R",
+      "meaning": "Company Representative"
+    },
+    "vendor": {
+      "acronym": "1",
+      "meaning": "Vendor"
+    },
+    "purchaser": {
+      "acronym": "2",
+      "meaning": "Purchaser"
+    }
+  },
+  "transactionMode": "Who's selling to whom?",
+  "transactionModes": {
+    "iToI": {
+      "short": "I to I",
+      "long": "Individual(s) to Individual(s)"
+    },
+    "iToC": {
+      "short": "I to C",
+      "long": "Individual(s) to Company"
+    },
+    "cToI": {
+      "short": "C to I",
+      "long": "Company to Individual(s)"
+    },
+    "cToC": {
+      "short": "C to C",
+      "long": "Company to Company"
+    }
+  },
+  "transactionModeAcronyms": {
+    "individual": {
+      "acronym": "I",
+      "meaning": "Individual(s)"
+    },
+    "company": {
+      "acronym": "C",
+      "meaning": "Company"
+    }
+  },
+  "traderTypes": {
+    "person": "Person",
+    "company": "Company"
+  },
+  "titles": {
+    "mr": "Mr.",
+    "mrs": "Mrs.",
+    "miss": "Miss"
+  },
+  "nationalities": {
+    "mauritian": "Mauritian",
+    "nonMauritian": "Non Mauritian"
+  },
+  "none": "None",
+  "add": "Add",
+  "remove": "Remove",
+  "dragToMove": "Drag to move",
+  "reload": "Reload",
+  "cancel": "Cancel",
+  "commonAddress": "All entities below share a common address",
+  "isDirectorRepresentingCompany": "Is representing the company",
+  "idNo": "I.D No.",
+  "passportNo": "Passport No.",
+  "residingAt": "residing at",
+  "locatedAt": "located at",
+  "vehicleMake": "Vehicle's make",
+  "vehicleMakePlaceholder": "E.g. TOYOTA",
+  "vehicleModel": "Vehicle's model",
+  "vehicleModelPlaceholder": "E.g. COROLLA",
+  "vehicleRegNum": "Vehicle's registration No.",
+  "vehicleRegNumPlaceholder": "E.g. 1234JN12",
+  "vehicleEngineDisplacement": "Vehicle's engine rating (cc)",
+  "vehicleEngineDisplacementPlaceholder": "E.g. 998",
+  "vehicleEngineNum": "Vehicle's engine No.",
+  "vehicleEngineNumPlaceholder": "E.g. ABCDEF123456",
+  "vehicleChassisNum": "Vehicle's chassis No.",
+  "vehicleChassisNumPlaceholder": "E.g. ABCDE123AB1234567",
+  "vehiclePrice": "Price paid for vehicle (Rs)",
+  "vehiclePricePlaceholder": "E.g. 500000",
+  "vendorOrVendors": "Vendor(s)",
+  "purchaserOrPurchasers": "Purchaser(s)",
+  "traderType": "Type (Person/Company)",
+  "title": "Title",
+  "nationality": "Nationality",
+  "name": "Name",
+  "address": "Address",
+  "representative": "Representative",
+  "directors": "Director(s)",
+  "namePlaceholder": "E.g. WATSON EMMA",
+  "companyNamePlaceholder": "E.g. XYZ LTD",
+  "nidOrPassportNum": "NID / Passport number",
+  "nidOrPassportNumPlaceholder": "NID / Passport number",
+  "brn": "BRN",
+  "brnPlaceholder": "Business Registration No.",
+  "role": "Role/Function",
+  "rolePlaceholder": "E.g. Manager",
+  "street": "Street",
+  "streetPlaceholder": "E.g. 123, PARK LANE",
+  "locality": "Village/Town",
+  "localityPlaceholder": "E.g. PORT-LOUIS",
+  "printingNotSupported": "Your browser doesn't support printing.",
+  "saveOrPrint": "Save / Print",
+  "nltaFull": "National Land Transport Authority",
+  "roadTransportDivision": "Road Transport Division",
+  "nltaTown": "Port-Louis",
+  "handwrittenSignature": "Handwritten signature goes here on printed page",
+  "companyStamp": "Company stamp goes here",
+  "yes": "Yes",
+  "no": "No",
+  "responsibilities": {
+    "purchaser": "Purchaser",
+    "vendor": "Vendor",
+    "purchaserOrDelegate": "Purchaser or their delegate",
+    "vendorOrDelegate": "Vendor or their delegate"
+  },
+  "transactionModels": {
+    "i2i": "Individual to Individual",
+    "i2c": "Individual to Company",
+    "c2i": "Company to Individual",
+    "c2c": "Company to Company"
+  },
+  "signatureByResponsibility": {
+    "purchaser": "Purchaser's Signature",
+    "vendor": "Vendor's Signature",
+    "director": "Director's Signature",
+    "representative": "Representative's Signature"
+  },
+  "documentsPreparers": {
+    "vendor": "Vendor",
+    "vendor_other": "Vendors",
+    "purchaser": "Purchaser",
+    "purchaser_other": "Purchasers",
+    "company": "Representative",
+    "company_other": "Director"
+  },
+  "nonAttachmentCertificateIssuers": {
+    "vendor": "Vendor",
+    "vendor_other": "Vendors",
+    "purchaser": "Purchaser",
+    "purchaser_other": "Purchasers",
+    "company": "Representative",
+    "company_other": "Director",
+    "vendorAndPurchaser": "$t(nonAttachmentCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
+    "vendorAndPurchaser_singleVendor_singlePurchaser": "Vendor and Purchaser",
+    "vendorAndPurchaser_singleVendor_multiplePurchasers": "Vendor and Purchasers",
+    "vendorAndPurchaser_multipleVendors_singlePurchaser": "Vendors and Purchaser",
+    "vendorAndPurchaser_multipleVendors_multiplePurchasers": "Vendors and Purchasers",
+    "vendorDelegate": "Vendor's delegate",
+    "vendorDelegate_other": "Vendors' delegate",
+    "purchaserDelegate": "Purchaser's delegate",
+    "purchaserDelegate_other": "Purchasers' delegate",
+    "vendorAndCompany": "$t(nonAttachmentCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
+    "vendorAndCompany_singleVendor_singleDirector": "Vendor and Representative",
+    "vendorAndCompany_singleVendor_multipleDirectors": "Vendor and Directors",
+    "vendorAndCompany_multipleVendors_singleDirector": "Vendors and Representative",
+    "vendorAndCompany_multipleVendors_multipleDirectors": "Vendors and Directors",
+    "companyAndPurchaser": "$t(nonAttachmentCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
+    "companyAndPurchaser_singleDirector_singlePurchaser": "Representative and Purchaser",
+    "companyAndPurchaser_singleDirector_multiplePurchasers": "Representative and Purchasers",
+    "companyAndPurchaser_multipleDirectors_singlePurchaser": "Director and Purchaser",
+    "companyAndPurchaser_multipleDirectors_multiplePurchasers": "Director and Purchasers"
+  },
+  "paymentMethods": {
+    "cash": "Cash",
+    "check": "Check",
+    "creditCard": "Credit Card",
+    "bankTransfer": "Bank Transfer",
+    "other": "Other",
+    "notCash": "Not Cash"
+  },
+  "numOfPeople": {
+    "single": "Single",
+    "multiple": "Multiple"
+  },
+  "changeLanguage": "Change language",
+  "languageSwitch": {
+    "confirmation": {
+      "title": "Page Reload",
+      "disclaimer": "Changing the language requires a page reload. You will lose all your changes.",
+      "question": "Are you sure you want to reload this page?"
+    }
+  },
+  "viewInstructions": "View instructions",
+  "headingStepID": "step-{{count}}",
+  "websiteBuiltBy": "<span>Made with <HeartTitle>💖</HeartTitle> by <GithubLink>n-d-r-d-g</GithubLink></span>",
+  "websiteBuiltByTitle": "love, sweat & tears",
+  "errors": {
+    "required": "Error: Please fill in this field.",
+    "arrayMin_one": "Error: This field should contain at least {{count}} item.",
+    "arrayMin_other": "Error: This field should contain at least {{count}} items.",
+    "arrayMax_one": "Error: This field can contain at most {{count}} item.",
+    "arrayMax_other": "Error: This field can contain at most {{count}} items.",
+    "stringMin_one": "Error: Please enter at least {{count}} character.",
+    "stringMin_other": "Error: Please enter at least {{count}} characters.",
+    "stringMax_one": "Error: Please enter at most {{count}} characters.",
+    "stringMax_other": "Error: Please enter at most {{count}} characters.",
+    "numberGTE": "Error: Please enter a number greater than or equal to {{count}}.",
+    "numberGT": "Error: Please enter a number greater than {{count}}.",
+    "numberLTE": "Error: Please enter a number less than or equal to {{count}}.",
+    "numberLT": "Error: Please enter a number less than {{count}}.",
+    "fieldSetContainsErrors": "The above block contains errors."
+  },
+  "abbreviations": {
+    "brn": {
+      "label": "BRN",
+      "title": "Business Registration Number"
+    },
+    "pdf": {
+      "label": "PDF",
+      "title": "Portable Document Format"
+    },
+    "mvl": {
+      "label": "MVL",
+      "title": "Motor Vehicle License (commonly known as <FR>déclaration</FR>)"
+    },
+    "nlta": {
+      "label": "NLTA",
+      "title": "National Land and Transport Authority"
+    }
+  },
+  "technicalTerms": {
+    "agreedStatementOfFacts": {
+      "label": "agreed statement of facts",
+      "title": "commonly known as <FR>constat à l'amiable</FR>"
+    },
+    "comprehensiveInsuranceCover": {
+      "label": "comprehensive insurance cover",
+      "title": "commonly known as <FR>assurance tous risques</FR>"
+    },
+    "deedOfSale": {
+      "label": "deed of sale",
+      "label_other": "deeds of sale",
+      "title": "commonly known as <FR>papier de vente</FR>",
+      "title_other": "commonly known as <FR>papiers de vente</FR>"
+    },
+    "emergencyTriangle": {
+      "label": "emergency triangle",
+      "title": "a triangular sign that increases the visibility of vehicles stopped on the road side"
+    },
+    "fitnessCertificate": {
+      "label": "fitness certificate",
+      "title": "a visible document on a vehicle proving it has been deemed fit for the road"
+    },
+    "indelibleChalk": {
+      "label": "indelible chalk",
+      "title": "a yellow chalk used after accidents for marking on the road (commonly known as <MU>lakre zonn</MU>)"
+    },
+    "insuranceVignette": {
+      "label": "insurance vignette",
+      "title": "a visible document on a vehicle proving it is insured"
+    },
+    "jack": {
+      "label": "jack",
+      "title": "a tool used to lift a vehicle (commonly known as <MU>verin</MU>)"
+    },
+    "lugWrench": {
+      "label": "lug wrench",
+      "title": "a tool used to tighten/loosen a vehicle's wheel lug nuts (commonly known as <MU>lakle a molet</MU>)"
+    },
+    "nonAttachmentCertificate": {
+      "label": "certificate of non-attachment",
+      "title": "commonly known as <FR>papier gage</FR>"
+    },
+    "powerOfAttorney": {
+      "label": "power of attorney",
+      "title": "a legal authorization that gives a designated person the power to act on behalf of someone else"
+    },
+    "proofOfAddress": {
+      "label": "proof of address",
+      "title": "utility bill that is at most 3 months old"
+    },
+    "proofOfEmployment": {
+      "label": "proof of employment",
+      "title": "payslip that is at most 3 months old"
+    },
+    "proofOfIdentity": {
+      "label": "proof of identity",
+      "title": "I.D card for Mauritians & valid passport for non-Mauritians"
+    },
+    "thirdPartyInsuranceCover": {
+      "label": "third party insurance cover",
+      "title": "commonly known as <FR>assurance tiers</FR>"
+    },
+    "vehicleRegistrationBook": {
+      "label": "vehicle's registration book",
+      "title": "commonly known as horsepower"
+    }
+  }
+}

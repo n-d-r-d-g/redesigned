@@ -1,0 +1,141 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --print-preview-fg: black;
+  --print-preview-backdrop-bg: lightgray;
+  --print-preview-bg: white;
+  --print-preview-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  --print-preview-font-size: 12pt;
+
+  scroll-padding-block-start: 5rem;
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --print-preview-backdrop-bg: rgb(2 6 23);
+    --print-preview-shadow: none;
+  }
+}
+
+@media print {
+  .hide-on-print {
+    display: none;
+  }
+
+  .root-container {
+    /* Avoids an extra page being added when printing */
+    padding: 0;
+  }
+}
+
+@layer components {
+  .a4-page {
+    min-inline-size: 210mm;
+    inline-size: 210mm;
+    max-inline-size: 100%;
+    min-block-size: 297mm;
+    padding: 25.4mm;
+    color: var(--print-preview-fg);
+    background-color: var(--print-preview-bg);
+    box-shadow: var(--print-preview-shadow);
+  }
+
+  .a4-page .with-colon::after {
+    content: ":";
+    margin-inline-end: 3pt;
+  }
+
+  .input-base {
+    @apply block w-full max-w-full rounded-lg border bg-gray-50 p-2.5 font-[monospace] dark:bg-slate-800;
+  }
+
+  .input-valid {
+    @apply border-slate-200 text-gray-900 placeholder-gray-500 focus:border-blue-500 focus:ring-blue-500 dark:border-slate-700 dark:text-white dark:placeholder-gray-400 dark:focus:border-blue-500 dark:focus:ring-blue-500;
+  }
+
+  .input-error {
+    @apply border-red-700 text-red-700 placeholder-red-700 focus:border-red-700 focus:ring-red-700 dark:border-red-400 dark:text-red-400 dark:placeholder-red-400 dark:focus:border-red-400 dark:focus:ring-red-400;
+  }
+
+  .input-icon-base {
+    @apply pointer-events-none h-4 w-4;
+  }
+
+  .input-icon-valid {
+    @apply text-gray-400 dark:text-gray-500;
+  }
+
+  .input-icon-error {
+    @apply text-red-500 dark:text-red-400;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply text-blue-900 dark:text-blue-200;
+  }
+
+  h1 {
+    @apply mb-[0.25em] mt-[2em] text-center text-[1.9rem] font-semibold leading-snug md:text-4xl;
+  }
+
+  h2 {
+    @apply mb-[0.25em] mt-[1.5em] text-[1.5rem] font-semibold leading-relaxed md:text-[1.7rem];
+  }
+
+  h3 {
+    @apply mb-[0.25em] mt-[1em] text-[1.2rem] font-semibold leading-relaxed md:text-xl;
+  }
+
+  a:hover,
+  a:focus-visible {
+    @apply underline;
+  }
+
+  p,
+  ul,
+  label,
+  em {
+    @apply leading-8;
+  }
+
+  ul {
+    @apply list-disc;
+  }
+
+  ul > li {
+    @apply ms-[1.75rem];
+  }
+
+  .one-col-text {
+    @apply mx-auto w-[65ch] max-w-full;
+  }
+
+  [data-testid="flowbite-tooltip-target"] {
+    display: inline;
+  }
+
+  .abbr-tooltip,
+  .technical-term-tooltip {
+    @apply max-w-[calc(100vw-0.75rem)] text-pretty;
+  }
+}
+
+.sortable-chosen.sortable-ghost {
+  opacity: 0;
+}
+
+.sortable-fallback {
+  opacity: 1 !important;
+}

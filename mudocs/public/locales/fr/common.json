@@ -1,0 +1,355 @@
+{
+  "requiredInfoLegend": "*: Informations requises - assurez-vous d'entrer une valeur dans chaque champ marquée d'un astérisque (*)",
+  "fillInfoToViewPagePreview": "Veuillez remplir le formulaire ci-dessus avec des informations valides pour avoir un aperçu du document à imprimer.",
+  "printPreview": "Aperçu avant impression",
+  "date": "Date",
+  "saleDate": "Date de vente",
+  "vehicleFirstRegDate": "Première date d'enregistrement du véhicle",
+  "dearSirOrMadam": "Cher Monsieur, Chère Madame,",
+  "to": "À",
+  "theOfficerInCharge": "L'officier responsable",
+  "thankingInAnticipation": "En vous remerciant d'avance.",
+  "yoursTruly": "Sincèrement,",
+  "vendor": "vendeur",
+  "purchaser": "acheteur",
+  "authorizer": "Autorisateur(s)",
+  "authorized": "Particulier autorisée",
+  "authorizationMode": "Qui autorise qui?",
+  "authorizationModes": {
+    "i1ToI2": {
+      "short": "P1 à P2",
+      "long": "Particulier(s) à Particulier"
+    },
+    "i1ToD2": {
+      "short": "P1 à D2",
+      "long": "Particulier(s) à Directeur d'entreprise"
+    },
+    "i1ToR2": {
+      "short": "P1 à R2",
+      "long": "Particulier(s) à Représentant d'entreprise"
+    },
+    "c1ToD1": {
+      "short": "E1 à D1",
+      "long": "Entreprise à son Directeur"
+    },
+    "c1ToR1": {
+      "short": "E1 à R1",
+      "long": "Entreprise à son Représentant"
+    },
+    "c1ToI2": {
+      "short": "E1 à P2",
+      "long": "Entreprise à Particulier"
+    },
+    "c1ToD2": {
+      "short": "E1 à D2",
+      "long": "Entreprise à Directeur d'entreprise"
+    },
+    "c1ToR2": {
+      "short": "E1 à R2",
+      "long": "Entreprise à Représentant d'entreprise"
+    }
+  },
+  "authorizationModeAcronyms": {
+    "individual": {
+      "acronym": "P",
+      "meaning": "Particulier(s)"
+    },
+    "company": {
+      "acronym": "E",
+      "meaning": "Entreprise"
+    },
+    "director": {
+      "acronym": "D",
+      "meaning": "Directeur d'entreprise"
+    },
+    "representative": {
+      "acronym": "R",
+      "meaning": "Représentant d'entreprise"
+    },
+    "vendor": {
+      "acronym": "1",
+      "meaning": "Vendeur"
+    },
+    "purchaser": {
+      "acronym": "2",
+      "meaning": "Acheteur"
+    }
+  },
+  "transactionMode": "Qui vend à qui?",
+  "transactionModes": {
+    "iToI": {
+      "short": "P à P",
+      "long": "Particulier(s) à Particulier(s)"
+    },
+    "iToC": {
+      "short": "P à E",
+      "long": "Particulier(s) à Entreprise"
+    },
+    "cToI": {
+      "short": "E à P",
+      "long": "Entreprise à Particulier(s)"
+    },
+    "cToC": {
+      "short": "E à E",
+      "long": "Entreprise à Entreprise"
+    }
+  },
+  "transactionModeAcronyms": {
+    "individual": {
+      "acronym": "P",
+      "meaning": "Particulier(s)"
+    },
+    "company": {
+      "acronym": "E",
+      "meaning": "Entreprise"
+    }
+  },
+  "traderTypes": {
+    "person": "Particulier",
+    "company": "Entreprise"
+  },
+  "titles": {
+    "mr": "M.",
+    "mrs": "Mme",
+    "miss": "Mlle"
+  },
+  "nationalities": {
+    "mauritian": "Mauricien",
+    "nonMauritian": "Non mauricien"
+  },
+  "none": "Aucun",
+  "add": "Rajouter",
+  "remove": "Supprimer",
+  "dragToMove": "Déplacer par glisser-déposer",
+  "reload": "Recharger",
+  "cancel": "Annuler",
+  "commonAddress": "Les entités ci-dessous partage une adresse commune",
+  "isDirectorRepresentingCompany": "Représentant de l'entreprise",
+  "idNo": "Nº CNI",
+  "passportNo": "Nº de passport",
+  "residingAt": "domicilié",
+  "locatedAt": "situé à",
+  "vehicleMake": "Marque du véhicle",
+  "vehicleMakePlaceholder": "Ex. TOYOTA",
+  "vehicleModel": "Modèle du véhicule",
+  "vehicleModelPlaceholder": "Ex. COROLLA",
+  "vehicleRegNum": "Nº d'enregistrement du véhicule",
+  "vehicleRegNumPlaceholder": "Ex. 1234JN12",
+  "vehicleEngineDisplacement": "Puissance du moteur du véhicule (cc)",
+  "vehicleEngineDisplacementPlaceholder": "Ex. 998",
+  "vehicleEngineNum": "Nº de moteur du véhicule",
+  "vehicleEngineNumPlaceholder": "Ex. ABCDEF123456",
+  "vehicleChassisNum": "Nº de châssis du véhicule",
+  "vehicleChassisNumPlaceholder": "Ex. ABCDE123AB1234567",
+  "vehiclePrice": "Prix de vente du véhicule (Rs)",
+  "vehiclePricePlaceholder": "Ex. 500000",
+  "vendorOrVendors": "Vendeur(s)",
+  "purchaserOrPurchasers": "Acheteur(s)",
+  "traderType": "Type (Individuel/Entreprise)",
+  "title": "Titre",
+  "nationality": "Nationalité",
+  "name": "Nom",
+  "address": "Adresse",
+  "representative": "Représentant",
+  "directors": "Directeur(s)",
+  "namePlaceholder": "Ex. WATSON EMMA",
+  "companyNamePlaceholder": "Ex. XYZ LTD",
+  "nidOrPassportNum": "Nº de CNI / Passport",
+  "nidOrPassportNumPlaceholder": "Nº de CNI / Passport",
+  "brn": "BRN",
+  "brnPlaceholder": "Nº d'enregistrement de l'entreprise",
+  "role": "Rôle/Titre",
+  "rolePlaceholder": "Ex. Manager",
+  "street": "Rue",
+  "streetPlaceholder": "Ex. 123, PARK LANE",
+  "locality": "Village/Ville",
+  "localityPlaceholder": "E.g. PORT-LOUIS",
+  "printingNotSupported": "Your browser doesn't support printing.",
+  "saveOrPrint": "Sauvegarder / Imprimer",
+  "nltaFull": "National Land Transport Authority",
+  "roadTransportDivision": "Road Transport Division",
+  "nltaTown": "Port-Louis",
+  "handwrittenSignature": "La signature doit être apposée ici sur la page imprimée",
+  "companyStamp": "Le cachet de l'entreprise doit être apposé ici",
+  "yes": "Oui",
+  "no": "Non",
+  "responsibilities": {
+    "purchaser": "Acheteur",
+    "vendor": "Vendeur",
+    "purchaserOrDelegate": "Acheteur ou son délégué",
+    "vendorOrDelegate": "Vendeur ou son délégué"
+  },
+  "transactionModels": {
+    "i2i": "Particulier à Particulier",
+    "i2c": "Particulier à Entreprise",
+    "c2i": "Entreprise à Particulier",
+    "c2c": "Entreprise à Entreprise"
+  },
+  "signatureByResponsibility": {
+    "purchaser": "Signature de l'acheteur",
+    "vendor": "Signature du vendeur",
+    "director": "Signature du directeur",
+    "representative": "Signature du représentant"
+  },
+  "documentsPreparers": {
+    "vendor": "Vendeur",
+    "vendor_other": "Vendeurs",
+    "purchaser": "Acheteur",
+    "purchaser_other": "Acheteurs",
+    "company": "Représentant",
+    "company_other": "Directeur"
+  },
+  "nonAttachmentCertificateIssuers": {
+    "vendor": "Vendeur",
+    "vendor_other": "Vendeurs",
+    "purchaser": "Acheteur",
+    "purchaser_other": "Acheteurs",
+    "company": "Représentant",
+    "company_other": "Directeur",
+    "vendorAndPurchaser": "$t(nonAttachmentCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
+    "vendorAndPurchaser_singleVendor_singlePurchaser": "Vendeur et Acheteur",
+    "vendorAndPurchaser_singleVendor_multiplePurchasers": "Vendeur et Acheteurs",
+    "vendorAndPurchaser_multipleVendors_singlePurchaser": "Vendeurs et Acheteur",
+    "vendorAndPurchaser_multipleVendors_multiplePurchasers": "Vendeurs et Acheteurs",
+    "vendorDelegate": "Délégué du vendeur",
+    "vendorDelegate_other": "Délégué des vendeurs",
+    "purchaserDelegate": "Délégué de l'acheteur",
+    "purchaserDelegate_other": "Délégué des acheteurs",
+    "vendorAndCompany": "$t(nonAttachmentCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
+    "vendorAndCompany_singleVendor_singleDirector": "Vendeur et Représentant",
+    "vendorAndCompany_singleVendor_multipleDirectors": "Vendeur et Directeur",
+    "vendorAndCompany_multipleVendors_singleDirector": "Vendeurs et Représentant",
+    "vendorAndCompany_multipleVendors_multipleDirectors": "Vendeurs et Directeur",
+    "companyAndPurchaser": "$t(nonAttachmentCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
+    "companyAndPurchaser_singleDirector_singlePurchaser": "Représentant et Acheteur",
+    "companyAndPurchaser_singleDirector_multiplePurchasers": "Représentant et Acheteurs",
+    "companyAndPurchaser_multipleDirectors_singlePurchaser": "Directeur et Acheteur",
+    "companyAndPurchaser_multipleDirectors_multiplePurchasers": "Directeur et Acheteurs"
+  },
+  "paymentMethods": {
+    "cash": "Espèces",
+    "check": "Chèque",
+    "creditCard": "Carte de crédit",
+    "bankTransfer": "Virement bancaire",
+    "other": "Autre",
+    "notCash": "Pas en espèces"
+  },
+  "numOfPeople": {
+    "single": "Un seul",
+    "multiple": "Plusieurs"
+  },
+  "changeLanguage": "Changer de langue",
+  "languageSwitch": {
+    "confirmation": {
+      "title": "Rechargement de page",
+      "disclaimer": "Le changement de langue nécessite un rechargement de la page. Vous perdrez toutes vos modifications.",
+      "question": "Êtes-vous sûr de vouloir recharger cette page?"
+    }
+  },
+  "viewInstructions": "Lire les instructions",
+  "headingStepID": "etape-{{count}}",
+  "websiteBuiltBy": "<span>Conçu avec <HeartTitle>💖<HeartTitle> par <GithubLink>n-d-r-d-g</GithubLink></span>",
+  "websiteBuiltByTitle": "amour, sueur & larmes",
+  "errors": {
+    "required": "Erreur: Veuillez renseigner ce champ.",
+    "arrayMin_one": "Erreur: Ce champ doit contenir au moins {{count}} élément.",
+    "arrayMin_other": "Erreur: Ce champ doit contenir au moins {{count}} éléments.",
+    "arrayMax_one": "Erreur: Ce champ ne peut pas contenir plus d'un élément.",
+    "arrayMax_other": "Erreur: Ce champ ne peut pas contenir plus de {{count}} éléments.",
+    "stringMin_one": "Erreur: Veuillez saisir au moins un caractère.",
+    "stringMin_other": "Erreur: Veuillez saisir au moins {{count}} caractères.",
+    "stringMax_one": "Erreur: Ce champ doit contenir au moins un caractère.",
+    "stringMax_other": "Erreur: Ce champ doit contenir au moins {{count}} caractères.",
+    "numberGTE": "Erreur: Veuillez saisir un chiffre supérieur ou égal à {{count}}.",
+    "numberGT": "Erreur: Veuillez saisir un chiffre supérieur à {{count}}.",
+    "numberLTE": "Erreur: Veuillez saisir un chiffre inférieur ou égal à {{count}}.",
+    "numberLT": "Erreur: Veuillez saisir un chiffre inférieur à {{count}}.",
+    "fieldSetContainsErrors": "Le bloc ci-dessus contient des erreurs."
+  },
+  "abbreviations": {
+    "brn": {
+      "label": "BRN",
+      "title": "<EN>Business Registration Number</EN>"
+    },
+    "pdf": {
+      "label": "PDF",
+      "title": "<EN>Portable Document Format</EN>"
+    },
+    "mvl": {
+      "label": "MVL",
+      "title": "<EN>Motor Vehicle License</EN> (communément appelé déclaration)"
+    },
+    "nlta": {
+      "label": "NLTA",
+      "title": "<EN>National Land and Transport Authority</EN>"
+    }
+  },
+  "technicalTerms": {
+    "agreedStatementOfFacts": {
+      "label": "constat à l'amiable",
+      "title": ""
+    },
+    "comprehensiveInsuranceCover": {
+      "label": "assurance tous risques",
+      "title": ""
+    },
+    "deedOfSale": {
+      "label": "papier de vente",
+      "label_other": "papiers de vente",
+      "title": "",
+      "title_other": ""
+    },
+    "emergencyTriangle": {
+      "label": "triangle de pré-signalisation",
+      "title": "un équipement de sécurité qui augmente la visibilité des véhicules arrêtés sur le bord de la route"
+    },
+    "fitnessCertificate": {
+      "label": "vignette du contrôle technique",
+      "title": "un document visible sur un véhicule prouvant qu'il a été jugé apte à la circulation (communément appelé <MU>sertifika fitnes</MU>)"
+    },
+    "indelibleChalk": {
+      "label": "craie indélébile",
+      "title": "une craie jaune utilisé après un accident pour le marquage de la route (communément appelé <MU>lakre zonn</MU>)"
+    },
+    "insuranceVignette": {
+      "label": "vignette d'assurance",
+      "title": "un document visible sur un véhicule prouvant qu'il est assuré"
+    },
+    "jack": {
+      "label": "cric",
+      "title": "un outil utilisé pour soulever un véhicule (communément appelé <MU>verin</MU>)"
+    },
+    "lugWrench": {
+      "label": "clé à molette",
+      "title": "un outil utilisé pour serrer/desserrer les écrous de roue d'un véhicule"
+    },
+    "nonAttachmentCertificate": {
+      "label": "certificat de gage sans déplacement",
+      "title": "communément appelé papier gage"
+    },
+    "powerOfAttorney": {
+      "label": "procuration enregistrée",
+      "title": "une autorisation légale qui donne à un particulier désignée le pouvoir d'agir au nom de quelqu'un d'autre"
+    },
+    "proofOfAddress": {
+      "label": "preuve d'adresse",
+      "title": "facture d'électricité datant un maximum de 3 mois"
+    },
+    "proofOfEmployment": {
+      "label": "attestion d'emploi",
+      "title": "fiche de paie datant un maximum de 3 mois"
+    },
+    "proofOfIdentity": {
+      "label": "pièce d'identité",
+      "title": "carte d'identité pour les mauriciens et passeport valide pour non-mauriciens"
+    },
+    "thirdPartyInsuranceCover": {
+      "label": "assurance tiers",
+      "title": ""
+    },
+    "vehicleRegistrationBook": {
+      "label": "certificat d'immatriculation",
+      "title": "communément appelé carte grise ou <EN>horsepower</EN>"
+    }
+  }
+}
