@@ -1,4 +1,3 @@
-import { GetServerSideProps } from "next";
 import { useEffect, useState } from "react";
 import { Trans, useTranslation } from "next-i18next";
 import { useFormikContext } from "formik";
@@ -14,15 +13,13 @@ import {
   TableRow,
   getKeyValue,
 } from "@nextui-org/react";
-import { decimalToString, retrieveLocalePath } from "@/utils/functions";
+import { decimalToString } from "@/utils/functions";
 import {
   IET_DEPENDENT_DEDUCTIONS,
   INITIAL_YEARLY_TAXABLE_BRACKETS,
   MRA_YEARLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
 } from "../reusables";
-import { DEFAULT_I18N_LOCALE } from "../../../../constants";
 import { TaxCalcRow, YearlyFormValues } from "../types";
-import { I18nLocale } from "@/types";
 
 export default function YearlyCalculations() {
   const { t: tCommon } = useTranslation("common");
@@ -481,15 +478,3 @@ export default function YearlyCalculations() {
     </Accordion>
   );
 }
-
-export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
-  return {
-    redirect: {
-      destination: retrieveLocalePath(
-        `/404`,
-        (locale as undefined | I18nLocale) ?? DEFAULT_I18N_LOCALE
-      ),
-      statusCode: 301,
-    },
-  };
-};

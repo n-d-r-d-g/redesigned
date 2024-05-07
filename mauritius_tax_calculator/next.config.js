@@ -5,6 +5,7 @@ const path = require("path");
 const nextConfig = {
   reactStrictMode: true,
   i18n,
+  pageExtensions: ["page.tsx", "page.ts", "page.jsx", "page.js"],
   experimental: {
     // this includes files from the monorepo base one directory up
     // https://nextjs.org/docs/pages/api-reference/next-config-js/output#caveats
