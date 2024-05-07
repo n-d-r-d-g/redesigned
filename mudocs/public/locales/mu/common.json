@@ -250,6 +250,7 @@
   "headingStepID": "etap-{{count}}",
   "websiteBuiltBy": "<span>Fabrike avek <HeartTitle>💖</HeartTitle> par <GithubLink>n-d-r-d-g</GithubLink></span>",
   "websiteBuiltByTitle": "lamur, laswer & larm",
+  "githubLink": "Lien Github",
   "errors": {
     "required": "Erer: Ou bizin ranpli sa informasyon la.",
     "arrayMin_one": "Erer: Ou bizin met omwin enn eleman.",

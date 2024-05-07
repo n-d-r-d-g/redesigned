@@ -10,6 +10,7 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import { Button, Modal } from "flowbite-react";
+import { FaGithub as FaGithubIcon } from "react-icons/fa";
 import Select from "../Select/Select";
 import TypedTrans from "../TypedTrans/TypedTrans";
 import { DEFAULT_I18N_NAMESPACE, I18N_LOCALES } from "../../../constants";
@@ -119,7 +120,20 @@ export default function Layout({ children }: PropsWithChildren) {
           </span>{" "}
           MUDOCS
         </Link>
-        <LanguageSwitch />
+        <aside className="flex flex-row items-center gap-1">
+          <Link
+            href="https://github.com/n-d-r-d-g/redesigned/tree/main/mudocs"
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+            title={tCommon("githubLink")}
+            aria-label={tCommon("githubLink")}
+            className="inline-flex items-center rounded-full p-2 text-center text-sm font-medium text-black hover:bg-slate-200 focus:ring-0 focus:ring-offset-0  focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white dark:text-white dark:hover:bg-slate-700 dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900"
+            passHref
+          >
+            <FaGithubIcon size={16} />
+          </Link>
+          <LanguageSwitch />
+        </aside>
       </nav>
       <main className="root-container min-h-0 grow p-3">{children}</main>
       <footer className="hide-on-print grid place-content-center py-2">

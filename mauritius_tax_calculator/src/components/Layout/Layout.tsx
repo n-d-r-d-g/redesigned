@@ -14,6 +14,7 @@ import {
   SelectItem,
   useDisclosure,
 } from "@nextui-org/react";
+import { FaGithub as FaGithubIcon } from "react-icons/fa";
 import { DEFAULT_I18N_NAMESPACE, I18N_LOCALES } from "../../../constants";
 
 function LanguageSwitch() {
@@ -133,7 +134,25 @@ export default function Layout({ children }: PropsWithChildren) {
           </span>{" "}
           {tCommon("websiteTitle")}
         </Link>
-        <LanguageSwitch />
+        <aside className="flex flex-row items-center gap-2">
+          <Button
+            type="button"
+            size="md"
+            radius="full"
+            variant="light"
+            as={Link}
+            href="https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator"
+            target="_blank"
+            rel="noreferrer noopener nofollow"
+            title={tCommon("githubLink")}
+            aria-label={tCommon("githubLink")}
+            passHref
+            isIconOnly
+          >
+            <FaGithubIcon size={16} />
+          </Button>
+          <LanguageSwitch />
+        </aside>
       </nav>
       <main className="root-container min-h-0 grow flex flex-col p-3">
         {children}

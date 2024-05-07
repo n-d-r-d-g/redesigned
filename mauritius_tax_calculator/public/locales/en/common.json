@@ -3,6 +3,7 @@
   "websiteDescription": "This app is an unofficial tool for employees in Mauritius that aims to make the PAYE tax charged by the MRA easier to calculate and understand.",
   "websiteBuiltBy": "<span>Made with <HeartTitle>💖</HeartTitle> by <GithubLink>n-d-r-d-g</GithubLink></span>",
   "websiteBuiltByTitle": "love, sweat & tears",
+  "githubLink": "Github link",
   "reload": "Reload",
   "cancel": "Cancel",
   "reset": "Reset",

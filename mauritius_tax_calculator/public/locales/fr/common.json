@@ -3,6 +3,7 @@
   "websiteDescription": "Cette application est un outil non officiel pour les employés à l'île Maurice, qui vise à rendre la taxe PAYE facturée par la MRA plus facile à calculer et à comprendre.",
   "websiteBuiltBy": "<span>Conçu avec <HeartTitle>💖<HeartTitle> par <GithubLink>n-d-r-d-g</GithubLink></span>",
   "websiteBuiltByTitle": "amour, sueur & larmes",
+  "githubLink": "Lien Github",
   "reload": "Recharger",
   "cancel": "Annuler",
   "reset": "Réinitialiser",

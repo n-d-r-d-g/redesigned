@@ -250,6 +250,7 @@
   "headingStepID": "step-{{count}}",
   "websiteBuiltBy": "<span>Made with <HeartTitle>💖</HeartTitle> by <GithubLink>n-d-r-d-g</GithubLink></span>",
   "websiteBuiltByTitle": "love, sweat & tears",
+  "githubLink": "Github link",
   "errors": {
     "required": "Error: Please fill in this field.",
     "arrayMin_one": "Error: This field should contain at least {{count}} item.",

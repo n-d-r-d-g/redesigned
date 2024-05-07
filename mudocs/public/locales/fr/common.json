@@ -250,6 +250,7 @@
   "headingStepID": "etape-{{count}}",
   "websiteBuiltBy": "<span>Conçu avec <HeartTitle>💖<HeartTitle> par <GithubLink>n-d-r-d-g</GithubLink></span>",
   "websiteBuiltByTitle": "amour, sueur & larmes",
+  "githubLink": "Lien Github",
   "errors": {
     "required": "Erreur: Veuillez renseigner ce champ.",
     "arrayMin_one": "Erreur: Ce champ doit contenir au moins {{count}} élément.",
