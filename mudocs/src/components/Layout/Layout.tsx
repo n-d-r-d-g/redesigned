@@ -135,7 +135,9 @@ export default function Layout({ children }: PropsWithChildren) {
           <LanguageSwitch />
         </aside>
       </nav>
-      <main className="root-container min-h-0 grow p-3">{children}</main>
+      <main className="root-container flex min-h-0 grow flex-col p-3">
+        {children}
+      </main>
       <footer className="hide-on-print grid place-content-center py-2">
         <TypedTrans
           ns="common"
