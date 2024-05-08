@@ -163,7 +163,7 @@ export default function FormTrader({
   }, [directorsField.value, directorsHelpers, props, showAddress]);
 
   const removeDirector = useCallback(
-    (directorIndex: number) => () => {
+    (directorIndex: number) => {
       const directorsCopy = [...directorsField.value];
       directorsCopy.splice(directorIndex, 1);
       directorsHelpers.setValue(directorsCopy);
