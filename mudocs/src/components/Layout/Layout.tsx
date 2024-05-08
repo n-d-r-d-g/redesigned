@@ -149,6 +149,7 @@ export default function Layout({ children }: PropsWithChildren) {
             HeartTitle: (
               <span
                 title={tCommon("websiteBuiltByTitle")}
+                aria-label={tCommon("websiteBuiltByTitle")}
                 className="cursor-help"
               />
             ),

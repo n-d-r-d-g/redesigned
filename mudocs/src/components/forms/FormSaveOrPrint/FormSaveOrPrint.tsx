@@ -12,6 +12,7 @@ export default function FormSaveOrPrint() {
       type="submit"
       disabled={isDisabled}
       title={tCommon("saveOrPrint")}
+      aria-label={tCommon("saveOrPrint")}
       className="hide-on-print fixed bottom-4 right-4 inline-flex items-center rounded-full bg-gradient-to-r from-green-400 via-green-500 to-green-600 p-2.5 text-center text-sm font-medium text-white shadow-lg shadow-green-500/50 outline-none hover:bg-gradient-to-br focus-visible:ring-4 focus-visible:ring-green-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white disabled:from-slate-500 disabled:to-slate-500 disabled:shadow-none dark:shadow-lg dark:shadow-green-800/80 dark:focus-visible:ring-green-400 dark:focus-visible:ring-offset-slate-900"
     >
       <svg

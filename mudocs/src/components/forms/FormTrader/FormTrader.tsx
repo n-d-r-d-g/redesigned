@@ -1,7 +1,14 @@
-import { ChangeEvent, useCallback } from "react";
+import {
+  ChangeEvent,
+  FocusEvent,
+  MouseEvent,
+  useCallback,
+  useState,
+} from "react";
 import { useTranslation } from "next-i18next";
 import { useField } from "formik";
 import { v4 as uuidv4 } from "uuid";
+import Tippy from "@tippyjs/react";
 import FormSelect from "../FormSelect/FormSelect";
 import FormTextInput from "../FormTextInput/FormTextInput";
 import FormFieldSet from "../FormFieldSet/FormFieldSet";
@@ -10,6 +17,7 @@ import { clx } from "@/utils/functions";
 import { DEFAULT_I18N_NAMESPACE } from "../../../../constants";
 import FormRadio from "../FormRadio/FormRadio";
 import { Company } from "@/types";
+import "tippy.js/dist/tippy.css";
 
 type CommonProps = { name: string; index: number };
 
@@ -60,16 +68,77 @@ export default function FormTrader({
   );
   const { t: tCommon } = useTranslation(DEFAULT_I18N_NAMESPACE);
   const { clearAllErrors } = useFormValidity();
+  const [isDragToMoveTooltipVisible, setIsDragToMoveTooltipVisible] =
+    useState(false);
+  const [isRemoveTooltipVisible, setIsRemoveTooltipVisible] = useState(false);
+  const [
+    visibleRemoveDirectorTooltipIndex,
+    setVisibleRemoveDirectorTooltipIndex,
+  ] = useState(-1);
   const isFirstTrader = index === 0;
   const isPerson = field.value?.[index]?.traderType === "person";
   const isCompany = field.value?.[index]?.traderType === "company";
   const isAddressDisabled = index > 0 && disableAddress;
 
-  const removeTrader = useCallback(() => {
-    const tradersCopy = [...field.value];
-    tradersCopy.splice(index, 1);
-    helpers.setValue(tradersCopy);
-  }, [field.value, helpers, index]);
+  const showDragToMoveTooltip = useCallback((e: FocusEvent | MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragToMoveTooltipVisible(true);
+  }, []);
+
+  const hideDragToMoveTooltip = useCallback((e: FocusEvent | MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragToMoveTooltipVisible(false);
+  }, []);
+
+  const toggleDragToMoveTooltip = useCallback((e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsDragToMoveTooltipVisible((prevIsVisible) => !prevIsVisible);
+  }, []);
+
+  const onOutsideDragToMoveTooltipClick = useCallback(
+    (_i: unknown, e: Event) => {
+      hideDragToMoveTooltip(e as unknown as MouseEvent);
+    },
+    [hideDragToMoveTooltip],
+  );
+
+  const showRemoveTooltip = useCallback((e: FocusEvent | MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsRemoveTooltipVisible(true);
+  }, []);
+
+  const hideRemoveTooltip = useCallback((e: FocusEvent | MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsRemoveTooltipVisible(false);
+  }, []);
+
+  const toggleRemoveTooltip = useCallback((e: MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setIsRemoveTooltipVisible((prevIsVisible) => !prevIsVisible);
+  }, []);
+
+  const onOutsideRemoveTooltipClick = useCallback(
+    (_i: unknown, e: Event) => {
+      hideRemoveTooltip(e as unknown as MouseEvent);
+    },
+    [hideRemoveTooltip],
+  );
+
+  const removeTrader = useCallback(
+    (e: MouseEvent) => {
+      toggleRemoveTooltip(e);
+      const tradersCopy = [...field.value];
+      tradersCopy.splice(index, 1);
+      helpers.setValue(tradersCopy);
+    },
+    [field.value, helpers, index, toggleRemoveTooltip],
+  );
 
   const addDirector = useCallback(() => {
     const newDirector = {
@@ -105,30 +174,49 @@ export default function FormTrader({
   const renderHeaderMoveButton = useCallback(
     () =>
       showListItemHeader && (
-        <button
-          type="button"
-          title={tCommon("dragToMove")}
-          className="handle col-start-1 col-end-2 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] min-w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-blue-700 hover:text-blue-700 focus:outline-none focus-visible:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-700 dark:border-slate-700 dark:text-white dark:hover:border-blue-400 dark:hover:text-blue-400 dark:focus-visible:text-blue-400 dark:focus-visible:ring-blue-400"
+        <Tippy
+          content={tCommon("dragToMove")}
+          visible={isDragToMoveTooltipVisible}
+          onClickOutside={onOutsideDragToMoveTooltipClick}
         >
-          <svg
-            className="h-5 w-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
+          <button
+            type="button"
+            aria-label={tCommon("dragToMove")}
+            onClick={toggleDragToMoveTooltip}
+            onMouseEnter={showDragToMoveTooltip}
+            onMouseLeave={hideDragToMoveTooltip}
+            onFocus={showDragToMoveTooltip}
+            onBlur={hideDragToMoveTooltip}
+            className="handle col-start-1 col-end-2 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] min-w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-blue-700 hover:text-blue-700 focus:outline-none focus-visible:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-700 dark:border-slate-700 dark:text-white dark:hover:border-blue-400 dark:hover:text-blue-400 dark:focus-visible:text-blue-400 dark:focus-visible:ring-blue-400"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
-            />
-          </svg>
-          <span className="sr-only">{tCommon("dragToMove")}</span>
-        </button>
+            <svg
+              className="h-5 w-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M3 7.5L7.5 3m0 0L12 7.5M7.5 3v13.5m13.5 0L16.5 21m0 0L12 16.5m4.5 4.5V7.5"
+              />
+            </svg>
+            <span className="sr-only">{tCommon("dragToMove")}</span>
+          </button>
+        </Tippy>
       ),
-    [showListItemHeader, tCommon],
+    [
+      hideDragToMoveTooltip,
+      isDragToMoveTooltipVisible,
+      onOutsideDragToMoveTooltipClick,
+      showDragToMoveTooltip,
+      showListItemHeader,
+      tCommon,
+      toggleDragToMoveTooltip,
+    ],
   );
 
   const renderHeaderText = useCallback(
@@ -144,31 +232,49 @@ export default function FormTrader({
   const renderHeaderRemoveButton = useCallback(
     () =>
       showListItemHeader && (
-        <button
-          type="button"
-          onClick={removeTrader}
-          title={tCommon("remove")}
-          className="col-start-3 col-end-4 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-red-700 hover:text-red-700 focus:outline-none focus-visible:text-red-700 focus-visible:ring-2 focus-visible:ring-red-700 dark:border-slate-700 dark:text-white dark:hover:border-red-400 dark:hover:text-red-400 dark:focus-visible:text-red-400 dark:focus-visible:ring-red-400"
+        <Tippy
+          content={tCommon("remove")}
+          visible={isRemoveTooltipVisible}
+          onClickOutside={onOutsideRemoveTooltipClick}
         >
-          <svg
-            className="h-5 w-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
+          <button
+            type="button"
+            aria-label={tCommon("remove")}
+            onClick={removeTrader}
+            onMouseEnter={showRemoveTooltip}
+            onMouseLeave={hideRemoveTooltip}
+            onFocus={showRemoveTooltip}
+            onBlur={hideRemoveTooltip}
+            className="col-start-3 col-end-4 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-red-700 hover:text-red-700 focus:outline-none focus-visible:text-red-700 focus-visible:ring-2 focus-visible:ring-red-700 dark:border-slate-700 dark:text-white dark:hover:border-red-400 dark:hover:text-red-400 dark:focus-visible:text-red-400 dark:focus-visible:ring-red-400"
           >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M6 18L18 6M6 6l12 12"
-            />
-          </svg>
-          <span className="sr-only">{`${tCommon("remove")} *`}</span>
-        </button>
+            <svg
+              className="h-5 w-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+            <span className="sr-only">{`${tCommon("remove")} *`}</span>
+          </button>
+        </Tippy>
       ),
-    [removeTrader, showListItemHeader, tCommon],
+    [
+      hideRemoveTooltip,
+      isRemoveTooltipVisible,
+      onOutsideRemoveTooltipClick,
+      removeTrader,
+      showRemoveTooltip,
+      showListItemHeader,
+      tCommon,
+    ],
   );
 
   const renderType = useCallback(
@@ -339,6 +445,42 @@ export default function FormTrader({
             (director, directorIndex: number) => {
               const isFirstDirector = directorIndex === 0;
 
+              const showRemoveDirectorTooltip = (
+                e: FocusEvent | MouseEvent,
+              ) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setVisibleRemoveDirectorTooltipIndex(directorIndex);
+              };
+
+              const hideRemoveDirectorTooltip = (
+                e: FocusEvent | MouseEvent,
+              ) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setVisibleRemoveDirectorTooltipIndex(-1);
+              };
+
+              const toggleRemoveDirectorTooltip = (e: MouseEvent) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setVisibleRemoveDirectorTooltipIndex((prevIndex) =>
+                  prevIndex === -1 ? directorIndex : -1,
+                );
+              };
+
+              const onOutsideRemoveDirectorTooltipClick = (
+                _i: unknown,
+                e: Event,
+              ) => {
+                hideRemoveDirectorTooltip(e as unknown as MouseEvent);
+              };
+
+              const handleRemoveDirector = (e: MouseEvent) => {
+                toggleRemoveDirectorTooltip(e);
+                removeDirector(directorIndex);
+              };
+
               return (
                 <div key={director.uuid} className="flex w-full flex-col">
                   {!isFirstDirector && (
@@ -405,29 +547,41 @@ export default function FormTrader({
                         />
                       )}
                     </div>
-                    <button
-                      type="button"
-                      onClick={removeDirector(directorIndex)}
-                      title={tCommon("remove")}
-                      className="col-start-3 col-end-4 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-red-700 hover:text-red-700 focus:outline-none focus-visible:text-red-700 focus-visible:ring-2 focus-visible:ring-red-700 dark:border-slate-700 dark:text-white dark:hover:border-red-400 dark:hover:text-red-400 dark:focus-visible:text-red-400 dark:focus-visible:ring-red-400"
+                    <Tippy
+                      content={tCommon("remove")}
+                      visible={
+                        visibleRemoveDirectorTooltipIndex === directorIndex
+                      }
+                      onClickOutside={onOutsideRemoveDirectorTooltipClick}
                     >
-                      <svg
-                        className="h-5 w-5"
-                        aria-hidden="true"
-                        xmlns="http://www.w3.org/2000/svg"
-                        fill="none"
-                        viewBox="0 0 24 24"
+                      <button
+                        type="button"
+                        aria-label={tCommon("remove")}
+                        onClick={handleRemoveDirector}
+                        onMouseEnter={showRemoveDirectorTooltip}
+                        onMouseLeave={hideRemoveDirectorTooltip}
+                        onFocus={showRemoveDirectorTooltip}
+                        onBlur={hideRemoveDirectorTooltip}
+                        className="col-start-3 col-end-4 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-red-700 hover:text-red-700 focus:outline-none focus-visible:text-red-700 focus-visible:ring-2 focus-visible:ring-red-700 dark:border-slate-700 dark:text-white dark:hover:border-red-400 dark:hover:text-red-400 dark:focus-visible:text-red-400 dark:focus-visible:ring-red-400"
                       >
-                        <path
-                          stroke="currentColor"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M6 18L18 6M6 6l12 12"
-                        />
-                      </svg>
-                      <span className="sr-only">{`${tCommon("remove")} *`}</span>
-                    </button>
+                        <svg
+                          className="h-5 w-5"
+                          aria-hidden="true"
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke="currentColor"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                            strokeWidth="2"
+                            d="M6 18L18 6M6 6l12 12"
+                          />
+                        </svg>
+                        <span className="sr-only">{`${tCommon("remove")} *`}</span>
+                      </button>
+                    </Tippy>
                   </div>
                 </div>
               );
@@ -467,6 +621,7 @@ export default function FormTrader({
       showDirectors,
       showRepresentingDirector,
       tCommon,
+      visibleRemoveDirectorTooltipIndex,
     ],
   );
 
