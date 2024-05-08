@@ -5,7 +5,7 @@ export type InitialValues = {
   purchaserHasOriginalID: "yes" | "no";
   vendorAndPurchaserAreRelated: "yes" | "no";
   vendorNameMatches: "yes" | "no";
-  nonAttachmentIssuer:
+  administrativeStatusCertificateIssuer:
     | "vendor"
     | "purchaser"
     | "vendorAndPurchaser"

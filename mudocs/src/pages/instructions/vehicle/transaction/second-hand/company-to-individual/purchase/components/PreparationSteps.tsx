@@ -16,18 +16,18 @@ import {
 import { InitialValues } from "../../types";
 import styles from "../../../styles.module.css";
 
-function NonAttachmentIssuerFormSelect() {
+function AdministrativeStatusCertificateIssuerFormSelect() {
   const { t: tCommon } = useTranslation(DEFAULT_I18N_NAMESPACE);
   const { values } = useFormikContext<InitialValues>();
   const directorIsRequired = isDirectorRequired(values);
 
   return (
     <FormSelect
-      name="nonAttachmentIssuer"
+      name="administrativeStatusCertificateIssuer"
       label={
         <TypedTrans
           ns="instructions-vehicle-transaction-2nd-hand-c2i-purchase-page"
-          i18nKey={"form.nonAttachmentIssuer.label"}
+          i18nKey={"form.administrativeStatusCertificateIssuer.label"}
           components={{
             NLTAAbbr: <Abbr name="nlta" />,
           }}
@@ -37,15 +37,15 @@ function NonAttachmentIssuerFormSelect() {
       containerClassName="col-start-2 mt-2 leading-4"
     >
       <option value="company">
-        {tCommon("nonAttachmentCertificateIssuers.company")}
+        {tCommon("administrativeStatusCertificateIssuers.company")}
       </option>
       {!directorIsRequired && (
         <option value="purchaser">
-          {tCommon("nonAttachmentCertificateIssuers.purchaser")}
+          {tCommon("administrativeStatusCertificateIssuers.purchaser")}
         </option>
       )}
       <option value="companyAndPurchaser">
-        {tCommon("nonAttachmentCertificateIssuers.companyAndPurchaser", {
+        {tCommon("administrativeStatusCertificateIssuers.companyAndPurchaser", {
           numOfDirectors: "singleDirector",
           numOfPurchasers: values.numOfPurchasers,
         })}
@@ -69,8 +69,8 @@ function RequiredDirectorNote() {
         p: <p className="col-start-2" />,
         em: <em className="font-bold text-green-800 dark:text-amber-400" />,
         NLTAAbbr: <Abbr name="nlta" />,
-        nonAttachmentCertificate: (
-          <TechnicalTerm name="nonAttachmentCertificate" />
+        AdministrativeStatusCertificate: (
+          <TechnicalTerm name="administrativeStatusCertificate" />
         ),
       }}
     />
@@ -79,10 +79,12 @@ function RequiredDirectorNote() {
 
 function ConditionalInstructions() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByCompany = values.nonAttachmentIssuer === "company";
-  const isIssuedByPurchaser = values.nonAttachmentIssuer === "purchaser";
+  const isIssuedByCompany =
+    values.administrativeStatusCertificateIssuer === "company";
+  const isIssuedByPurchaser =
+    values.administrativeStatusCertificateIssuer === "purchaser";
   const isIssuedByCompanyAndPurchaser =
-    values.nonAttachmentIssuer === "companyAndPurchaser";
+    values.administrativeStatusCertificateIssuer === "companyAndPurchaser";
   const isPreparedByCompany = values.documentsPreparer === "company";
   const isPreparedByPurchaser = values.documentsPreparer === "purchaser";
   const whetherDirectorIsRequired = retrieveDirectorRequiredI18nText(values);
@@ -590,7 +592,7 @@ function ConditionalInstructions() {
               NLTAAbbr: <Abbr name="nlta" />,
               AuthorizationLetterImportantLink: (
                 <ImportantLink
-                  href="/doc-gen/vehicle/non-attachment-certificate-authorization-letter/c1ToI2"
+                  href="/doc-gen/vehicle/administrative-status-certificate-authorization-letter/c1ToI2"
                   target="_blank"
                   rel="noreferrer noopener"
                 />
@@ -972,10 +974,11 @@ export function PreparationSteps() {
         .currentTarget.value as never;
 
       if (
-        values.nonAttachmentIssuer === "purchaser" &&
+        values.administrativeStatusCertificateIssuer === "purchaser" &&
         isDirectorRequired(newFormValues)
       ) {
-        newFormValues.nonAttachmentIssuer = "companyAndPurchaser";
+        newFormValues.administrativeStatusCertificateIssuer =
+          "companyAndPurchaser";
       }
 
       setValues(newFormValues, true);
@@ -1056,8 +1059,8 @@ export function PreparationSteps() {
               />
             ),
             DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
-            NonAttachmentCertificate: (
-              <TechnicalTerm name="nonAttachmentCertificate" />
+            AdministrativeStatusCertificate: (
+              <TechnicalTerm name="administrativeStatusCertificate" />
             ),
           }}
         />
@@ -1098,8 +1101,8 @@ export function PreparationSteps() {
               />
             ),
             NLTAAbbr: <Abbr name="nlta" />,
-            NonAttachmentCertificate: (
-              <TechnicalTerm name="nonAttachmentCertificate" />
+            AdministrativeStatusCertificate: (
+              <TechnicalTerm name="administrativeStatusCertificate" />
             ),
           }}
         />
@@ -1133,7 +1136,7 @@ export function PreparationSteps() {
           <option value="yes">{tCommon("yes")}</option>
           <option value="no">{tCommon("no")}</option>
         </FormSelect>
-        <NonAttachmentIssuerFormSelect />
+        <AdministrativeStatusCertificateIssuerFormSelect />
         <RequiredDirectorNote />
       </div>
       <ConditionalInstructions />

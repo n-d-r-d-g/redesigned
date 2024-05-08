@@ -4,6 +4,9 @@ export type InitialValues = {
   documentsPreparer: "company" | "purchaser";
   vendorHasStamp: "yes" | "no";
   isVehicleRegistrationBookValid: "yes" | "no";
-  nonAttachmentIssuer: "company" | "purchaser" | "companyAndPurchaser";
+  administrativeStatusCertificateIssuer:
+    | "company"
+    | "purchaser"
+    | "companyAndPurchaser";
   paymentMethod: "cash" | "notCash";
 };

@@ -199,14 +199,14 @@
     "company": "Reprezantan",
     "company_other": "Direkter"
   },
-  "nonAttachmentCertificateIssuers": {
+  "administrativeStatusCertificateIssuers": {
     "vendor": "Vander",
     "vendor_other": "Vander",
     "purchaser": "Lakerer",
     "purchaser_other": "Lakerer",
     "company": "Reprezantan",
     "company_other": "Direkter",
-    "vendorAndPurchaser": "$t(nonAttachmentCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
+    "vendorAndPurchaser": "$t(administrativeStatusCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
     "vendorAndPurchaser_singleVendor_singlePurchaser": "Vander ek Lakerer",
     "vendorAndPurchaser_singleVendor_multiplePurchasers": "Vander ek Lakerer",
     "vendorAndPurchaser_multipleVendors_singlePurchaser": "Vander ek Lakerer",
@@ -215,12 +215,12 @@
     "vendorDelegate_other": "Vander so delege",
     "purchaserDelegate": "Lakerer so delege",
     "purchaserDelegate_other": "Lakerer so delege",
-    "vendorAndCompany": "$t(nonAttachmentCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
+    "vendorAndCompany": "$t(administrativeStatusCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
     "vendorAndCompany_singleVendor_singleDirector": "Vander ek Reprezantan",
     "vendorAndCompany_singleVendor_multipleDirectors": "Vander ek Direkter",
     "vendorAndCompany_multipleVendors_singleDirector": "Vander ek Reprezantan",
     "vendorAndCompany_multipleVendors_multipleDirectors": "Vander ek Direkter",
-    "companyAndPurchaser": "$t(nonAttachmentCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
+    "companyAndPurchaser": "$t(administrativeStatusCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
     "companyAndPurchaser_singleDirector_singlePurchaser": "Reprezantan ek Lakerer",
     "companyAndPurchaser_singleDirector_multiplePurchasers": "Reprezantan ek Lakerer",
     "companyAndPurchaser_multipleDirectors_singlePurchaser": "Direkter ek Lakerer",
@@ -324,7 +324,7 @@
       "label": "lakle a molet",
       "title": "enn zouti ki servi pou ser/larg boulon larou enn veikil"
     },
-    "nonAttachmentCertificate": {
+    "administrativeStatusCertificate": {
       "label": "sertifika gaz",
       "title": "osi apel sa papie gaz"
     },

@@ -49,14 +49,14 @@
   },
   "registration": {
     "title": "<h2>Register the vehicle</h2>",
-    "description": "<p>Once you have the <NonAttachmentCertificate />, the next step is to register the vehicle at the <RegistrarLink>Registrar</RegistrarLink>. You have <em>15 days</em> as from the date of sale on the <DeedOfSale /> for registration, after which you will have to pay a fine of 50% of the tax payable. You can delegate this step to anyone provided they are 18 years old or above. We will assume the person reading this section to be the one going to the Registrar.</p>",
+    "description": "<p>Once you have the <AdministrativeStatusCertificate />, the next step is to register the vehicle at the <RegistrarLink>Registrar</RegistrarLink>. You have <em>15 days</em> as from the date of sale on the <DeedOfSale /> for registration, after which you will have to pay a fine of 50% of the tax payable. You can delegate this step to anyone provided they are 18 years old or above. We will assume the person reading this section to be the one going to the Registrar.</p>",
     "note": "<p><em>Note: the current insurance cover on the vehicle is automatically cancelled once registration is done. This means that the vehicle is not allowed to be on public roads. So, just in case you're not able to get insurance on the day of registration, avoid driving the vehicle to the Registrar as you won't be able to drive it back legally.</em></p>",
     "instructions": {
       "description": "<p>Before going to the Registrar, make sure to bring the following:</p>",
       "requirement1": "<label>2 stamped <DeedsOfSale /></label>",
       "requirement2": "<label>Your <ProofOfIdentity /></label>",
       "requirement3": "<label>The <VehicleRegistrationBook /></label>",
-      "requirement4": "<label>The <NonAttachmentCertificate /></label>",
+      "requirement4": "<label>The <AdministrativeStatusCertificate /></label>",
       "requirement5": "<label>The registration fee (Check the registration fee you'll have to pay on the <GovtRegFeeLink>official Mauritian government's website</GovtRegFeeLink> or <MyCarMuRegFeeCalculatorLink>mycar.mu's calculator</MyCarMuRegFeeCalculatorLink>)</label>"
     },
     "diagram": {

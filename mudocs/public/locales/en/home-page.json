@@ -14,7 +14,7 @@
     "description": "Who loves filling forms by pen? Not us. We figured we're not the only ones. So, we built document generators to help out.",
     "vehicles": {
       "title": "Vehicle-related document generators",
-      "nonAttachmentCertificateAuthorizationLetter": "Authorization Letter - Certificate of non-attachment",
+      "administrativeStatusCertificateAuthorizationLetter": "Authorization Letter - Certificate of administrative status",
       "deedOfSale": "Deed of sale"
     }
   }

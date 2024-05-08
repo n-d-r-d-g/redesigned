@@ -21,7 +21,7 @@ Advised preparer (deeds of sale): vendor
         <li>2 stamped deeds of sale</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
         <li>registration fee</li>
       </ol>
     </td>
@@ -35,7 +35,7 @@ Advised preparer (deeds of sale): vendor
         <li>2 stamped deeds of sale</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
         <li>registration fee</li>
       </ol>
     </td>
@@ -51,7 +51,7 @@ Advised preparer (deeds of sale): vendor
         <li>2 stamped deeds of sale</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
         <li>registration fee</li>
       </ol>
     </td>
@@ -65,7 +65,7 @@ Advised preparer (deeds of sale): vendor
         <li>2 stamped deeds of sale</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
         <li>registration fee</li>
       </ol>
     </td>

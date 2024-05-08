@@ -18,8 +18,8 @@
     "step5": "<label>En accord avec l'acheteur, décidez qui se rendra à la <NLTAAbbr /> pour obtenir le certificat de non gage. Nous conseillons à l'acheteur et au vendeur de se procurer ce document ensemble, mais cela n'est pas toujours possible en raison d'indisponibilité. Si l'acheteur a accepté de se rendre à la <NLTAAbbr /> sans vous, vous devez:<br /><ul><li>vérifiez que votre signature sur les actes de vente correspond exactement à celle figurant sur votre carte d'identité ou votre passeport, </li><li>laisser votre carte d'identité ou votre passeport à l'acheteur, car ils lui seront demandés et </li><li>remettre à l'acheteur une lettre d'autorisation que vous pouvez générer via notre <AuthorizationLetterImportantLink>générateur de documents</AuthorizationLetterImportantLink>.</li></ul></label>",
     "leaveWithVehicle": "<p>À ce stade, l'acheteur peut partir avec le véhicule.</p>"
   },
-  "nonAttachment": {
-    "title": "<h2>Obtenir un <NonAttachmentCertificate /></h2>",
+  "administrativeStatusCertificate": {
+    "title": "<h2>Obtenir un <AdministrativeStatusCertificate /></h2>",
     "description": "<p>Ce document certifie que le véhicule vendu n'est lié à aucune contrainte empêchant sa vente (vol, prêt, opposition à la vente, etc.).</p>",
     "issue": "<p>Ce document peut être obtenu au <NLTAContactLink>QG ou dans les bureaux subsidiaires de la <NLTAAbbr /></NLTAContactLink>.</p>",
     "vendorRequiredSituations": {

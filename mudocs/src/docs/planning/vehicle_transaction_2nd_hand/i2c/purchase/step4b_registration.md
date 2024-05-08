@@ -22,7 +22,7 @@ Advised preparer: company representative
         <li>1 stamped & barcoded deed of sale, registration payment notice & receipt stapled</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
       </ol>
     </td>
   </tr>
@@ -36,7 +36,7 @@ Advised preparer: company representative
         <li>1 stamped & barcoded deed of sale, registration payment notice & receipt stapled</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
       </ol>
     </td>
   </tr>
@@ -52,7 +52,7 @@ Advised preparer: company representative
         <li>1 stamped & barcoded deed of sale, registration payment notice & receipt stapled</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
       </ol>
     </td>
   </tr>
@@ -66,7 +66,7 @@ Advised preparer: company representative
         <li>1 stamped & barcoded deed of sale, registration payment notice & receipt stapled</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
       </ol>
     </td>
   </tr>
@@ -82,7 +82,7 @@ Advised preparer: company representative
         <li>1 stamped & barcoded deed of sale, registration payment notice & receipt stapled</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
       </ol>
     </td>
   </tr>
@@ -96,7 +96,7 @@ Advised preparer: company representative
         <li>1 stamped & barcoded deed of sale, registration payment notice & receipt stapled</li>
         <li>proof of identity of person showing up</li>
         <li>vehicle's registration book</li>
-        <li>non-attachment certificate</li>
+        <li>administrative status certificate</li>
       </ol>
     </td>
   </tr>

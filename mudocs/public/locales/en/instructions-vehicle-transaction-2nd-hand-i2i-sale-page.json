@@ -27,7 +27,7 @@
       "label": "Does your name displayed on the <VehicleRegistrationBook /> match the one on your <ProofOfIdentity />?",
       "label_other": "Does every vendor's name displayed on the <VehicleRegistrationBook /> match the one on their <ProofOfIdentity />?"
     },
-    "nonAttachmentIssuer": {
+    "administrativeStatusCertificateIssuer": {
       "label": "<span>Who will go to the <NLTAAbbr />?</span>"
     },
     "paymentMethod": {
@@ -64,11 +64,11 @@
     },
     "step1": "<label>How many vendors and purchasers are there? If there are multiple purchasers, the latter need to make sure to <NLTAPhone>call the <NLTAAbbr /></NLTAPhone> to check whether it is possible to have multiple purchasers in their case.</label>",
     "step2": "$t(preparation.step2_{{numOfPurchasers}})",
-    "step2_singlePurchaser": "<label>Decide with the purchaser about who will prepare the <DeedsOfSale /> and/or the authorization letter (to issue the <NonAttachmentCertificate />).</label>",
-    "step2_multiplePurchasers": "<label>Decide with the purchasers about who will prepare the <DeedsOfSale /> and/or the authorization letter (to issue the <NonAttachmentCertificate />).</label>",
+    "step2_singlePurchaser": "<label>Decide with the purchaser about who will prepare the <DeedsOfSale /> and/or the authorization letter (to issue the <AdministrativeStatusCertificate />).</label>",
+    "step2_multiplePurchasers": "<label>Decide with the purchasers about who will prepare the <DeedsOfSale /> and/or the authorization letter (to issue the <AdministrativeStatusCertificate />).</label>",
     "step3": "$t(preparation.step3_{{numOfPurchasers}})",
-    "step3_singlePurchaser": "<label>Decide with the purchaser about who will go to the <NLTAAbbr /> to issue the <NonAttachmentCertificate />. It's advised (not compulsory) that both the purchaser and you go to the <NLTAAbbr /> to issue this document as it doesn't require an authorization letter, nobody has to trust any stranger with their <ProofOfIdentity /> and you can exchange <DeedsOfSale /> on the spot.</label>",
-    "step3_multiplePurchasers": "<label>Decide with the purchasers about who will go to the <NLTAAbbr /> to issue the <NonAttachmentCertificate />. It's advised (not compulsory) that all purchasers and you go to the <NLTAAbbr /> to issue this document as it doesn't require an authorization letter, nobody has to trust any stranger with their <ProofOfIdentity /> and you can exchange <DeedsOfSale /> on the spot.</label>",
+    "step3_singlePurchaser": "<label>Decide with the purchaser about who will go to the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. It's advised (not compulsory) that both the purchaser and you go to the <NLTAAbbr /> to issue this document as it doesn't require an authorization letter, nobody has to trust any stranger with their <ProofOfIdentity /> and you can exchange <DeedsOfSale /> on the spot.</label>",
+    "step3_multiplePurchasers": "<label>Decide with the purchasers about who will go to the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. It's advised (not compulsory) that all purchasers and you go to the <NLTAAbbr /> to issue this document as it doesn't require an authorization letter, nobody has to trust any stranger with their <ProofOfIdentity /> and you can exchange <DeedsOfSale /> on the spot.</label>",
     "conditionalInstructions": {
       "issuedByVendor": {
         "preparedByVendor": {
@@ -447,8 +447,8 @@
     "leaveWithVehicle_singlePurchaser": "<p>At this point, the purchaser can leave with the vehicle.</p>",
     "leaveWithVehicle_multiplePurchasers": "<p>At this point, the purchasers can leave with the vehicle.</p>"
   },
-  "nonAttachment": {
-    "title": "<h2>Issue a <NonAttachmentCertificate /></h2>",
+  "administrativeStatusCertificate": {
+    "title": "<h2>Issue a <AdministrativeStatusCertificate /></h2>",
     "description": "<p>The purpose of this document is to certify that the vehicle being sold is not legally tied to anything that prevents its sale, e.g. theft, loan, opposition of sale, etc. This document can be issued at <NLTAContactLink><NLTAAbbr />'s headquarters or sub offices</NLTAContactLink>.</p>",
     "commonSteps": {
       "bring2DeedsOfSale": "<label>Make sure to bring 2 signed <DeedsOfSale />.</label>",
@@ -475,8 +475,8 @@
       "givePurchaserTheirProofOfIdentity_multiplePurchasers": "<label>Make sure to hand each purchaser their original <ProofOfIdentity />.</label>",
       "givePurchaserVehicleRegistrationBook_singlePurchaser": "<label>Make sure to hand the original <VehicleRegistrationBook /> to the purchaser.</label>",
       "givePurchaserVehicleRegistrationBook_multiplePurchasers": "<label>Make sure to hand the original <VehicleRegistrationBook /> to the purchasers.</label>",
-      "givePurchaserNonAttachmentCertificate_singlePurchaser": "<label>Make sure to hand the <NonAttachmentCertificate /> to the purchaser.</label>",
-      "givePurchaserNonAttachmentCertificate_multiplePurchasers": "<label>Make sure to hand the <NonAttachmentCertificate /> to the purchasers.</label>",
+      "givePurchaserAdministrativeStatusCertificate_singlePurchaser": "<label>Make sure to hand the <AdministrativeStatusCertificate /> to the purchaser.</label>",
+      "givePurchaserAdministrativeStatusCertificate_multiplePurchasers": "<label>Make sure to hand the <AdministrativeStatusCertificate /> to the purchasers.</label>",
       "giveDelegate2DeedsOfSale": "<label>Make sure to hand 2 signed <DeedsOfSale /> to the delegate.</label>",
       "giveDelegatePurchaserProofOfIdentity_singlePurchaser": "<label>Make sure to hand the purchaser's original <ProofOfIdentity /> to the delegate.</label>",
       "giveDelegatePurchaserProofOfIdentity_multiplePurchasers": "<label>Make sure to hand each purchaser's original <ProofOfIdentity /> to the delegate.</label>",
@@ -491,7 +491,7 @@
       "keepVendorProofOfIdentity_singleVendor_vendorNameProofNotRequired": "<label>Keep your original <ProofOfIdentity />.</label>",
       "keepVendorProofOfIdentity_multipleVendors_vendorNameProofRequired": "<label>Keep each vendor's original <ProofOfIdentity /> or registered proof of identity issued by an attorney and/or the original deed of sale at the time you purchased the vehicle.</label>",
       "keepVendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired": "<label>Keep each vendor's original <ProofOfIdentity /> so you can hand them back later.</label>",
-      "keepReceipt": "<label>Keep the <NonAttachmentCertificate />'s payment receipt.</label>",
+      "keepReceipt": "<label>Keep the <AdministrativeStatusCertificate />'s payment receipt.</label>",
       "takeProofOfIdentityBack_singleVendor_singlePurchaser": "<p>Make sure you have your original <ProofOfIdentity /> back from the purchaser.</p>",
       "takeProofOfIdentityBack_singleVendor_multiplePurchasers": "<p>Make sure you have your original <ProofOfIdentity /> back from the purchasers.</p>",
       "takeProofOfIdentityBack_multipleVendors_singlePurchaser": "<p>Make sure you have each vendor's original <ProofOfIdentity /> back from the purchaser.</p>",
@@ -506,100 +506,100 @@
       "proofOfIdentity_multipleVendors_vendorNameProofRequired": "<li>Each vendor's original <ProofOfIdentity /> or registered proof of identity issued by an attorney and/or the original deed of sale at the time you purchased the vehicle..</li>",
       "proofOfIdentity_multipleVendors_vendorNameProofNotRequired": "<li>Each vendor's original <ProofOfIdentity />.</li>",
       "vehicleRegistrationBook": "<li>The original <VehicleRegistrationBook />.</li>",
-      "nonAttachmentCertificate": "<li>A <NonAttachmentCertificate />.</li>",
-      "nonAttachmentCertificateReceipt": "<li>A receipt for the <NonAttachmentCertificate />'s payment.</li>"
+      "administrativeStatusCertificate": "<li>A <AdministrativeStatusCertificate />.</li>",
+      "administrativeStatusCertificateReceipt": "<li>A receipt for the <AdministrativeStatusCertificate />'s payment.</li>"
     },
     "conditionalInstructions1": {
       "issuedByVendor": {
         "description": "<p>Before going to the <NLTAAbbr />, ensure the following:</p>",
-        "requirement1": "$t(nonAttachment.commonSteps.bring2DeedsOfSale)",
-        "requirement2": "$t(nonAttachment.commonSteps.bringPurchaserProofOfIdentity_{{numOfPurchasers}})",
-        "requirement3": "$t(nonAttachment.commonSteps.bringProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
-        "requirement4": "$t(nonAttachment.commonSteps.bringVehicleRegistrationBook)",
-        "requirement5": "$t(nonAttachment.commonSteps.bringRs50)"
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.bring2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.bringPurchaserProofOfIdentity_{{numOfPurchasers}})",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.bringProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook)",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.bringRs50)"
       },
       "issuedByVendorAndPurchaser": {
         "description": "<p>Before going to the <NLTAAbbr /> ensure the following:</p>",
-        "requirement1": "$t(nonAttachment.commonSteps.bring2DeedsOfSale)",
-        "requirement2": "$t(nonAttachment.commonSteps.bringProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
-        "requirement3": "$t(nonAttachment.commonSteps.bringVehicleRegistrationBook)",
-        "requirement4": "$t(nonAttachment.commonSteps.bringRs50)",
-        "requirement5": "$t(nonAttachment.commonSteps.askPurchaserToBringProofOfIdentity_{{numOfPurchasers}})",
-        "requirement6": "$t(nonAttachment.commonSteps.askPurchaserToBring1DeedOfSale_{{numOfPurchasers}})"
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.bring2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.bringProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook)",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.bringRs50)",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.askPurchaserToBringProofOfIdentity_{{numOfPurchasers}})",
+        "requirement6": "$t(administrativeStatusCertificate.commonSteps.askPurchaserToBring1DeedOfSale_{{numOfPurchasers}})"
       },
       "issuedByVendorDelegate": {
-        "description": "<p>You will need to have a <PowerOfAttorney /> made, along with a photocopy of it, to legally allow your delegate to issue the <NonAttachmentCertificate /> on your behalf. Before your delegate goes to the <NLTAAbbr /> ensure the following:</p>",
-        "requirement1": "$t(nonAttachment.commonSteps.giveDelegate2DeedsOfSale)",
-        "requirement2": "$t(nonAttachment.commonSteps.giveDelegatePurchaserProofOfIdentity_{{numOfPurchasers}})",
-        "requirement3": "$t(nonAttachment.commonSteps.giveDelegateProofOfIdentity_{{numOfVendors}})",
-        "requirement4": "$t(nonAttachment.commonSteps.giveDelegateVehicleRegistrationBook)",
-        "requirement5": "$t(nonAttachment.commonSteps.giveDelegateRs50)",
-        "requirement6": "$t(nonAttachment.commonSteps.giveDelegatePowerOfAttorney)",
-        "requirement7": "$t(nonAttachment.commonSteps.giveDelegatePowerOfAttorneyCopy)",
-        "requirement8": "$t(nonAttachment.commonSteps.delegateBringsProofOfIdentity)"
+        "description": "<p>You will need to have a <PowerOfAttorney /> made, along with a photocopy of it, to legally allow your delegate to issue the <AdministrativeStatusCertificate /> on your behalf. Before your delegate goes to the <NLTAAbbr /> ensure the following:</p>",
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.giveDelegate2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.giveDelegatePurchaserProofOfIdentity_{{numOfPurchasers}})",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_{{numOfVendors}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.giveDelegateVehicleRegistrationBook)",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.giveDelegateRs50)",
+        "requirement6": "$t(administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorney)",
+        "requirement7": "$t(administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorneyCopy)",
+        "requirement8": "$t(administrativeStatusCertificate.commonSteps.delegateBringsProofOfIdentity)"
       }
     },
     "conditionalInstructions2": {
       "description": "<p>The <NLTAAbbr /> officer will hand you the following:</p>",
       "issuedByVendor": {
-        "item1": "$t(nonAttachment.commonItems.stampedDeedsOfSale)",
-        "item2": "$t(nonAttachment.commonItems.purchaserProofOfIdentity_{{numOfPurchasers}})",
-        "item3": "$t(nonAttachment.commonItems.proofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
-        "item4": "$t(nonAttachment.commonItems.vehicleRegistrationBook)",
-        "item5": "$t(nonAttachment.commonItems.nonAttachmentCertificate)",
-        "item6": "$t(nonAttachment.commonItems.nonAttachmentCertificateReceipt)"
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.purchaserProofOfIdentity_{{numOfPurchasers}})",
+        "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)"
       },
       "issuedByVendorAndPurchaser": {
-        "item1": "$t(nonAttachment.commonItems.stampedDeedsOfSale)",
-        "item2": "$t(nonAttachment.commonItems.purchaserProofOfIdentity_{{numOfPurchasers}})",
-        "item3": "$t(nonAttachment.commonItems.proofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
-        "item4": "$t(nonAttachment.commonItems.vehicleRegistrationBook)",
-        "item5": "$t(nonAttachment.commonItems.nonAttachmentCertificate)",
-        "item6": "$t(nonAttachment.commonItems.nonAttachmentCertificateReceipt)"
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.purchaserProofOfIdentity_{{numOfPurchasers}})",
+        "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)"
       }
     },
     "conditionalInstructions3": {
       "issuedByVendor": {
-        "description": "$t(nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_{{numOfPurchasers}})",
-        "step1": "$t(nonAttachment.commonSteps.askPurchaserDeedOfSale_{{numOfPurchasers}})",
-        "step2": "$t(nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_{{numOfPurchasers}})",
-        "step3": "$t(nonAttachment.commonSteps.givePurchaserTheirProofOfIdentity_{{numOfPurchasers}})",
-        "step4": "$t(nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
-        "step5": "$t(nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_{{numOfPurchasers}})",
-        "step6": "$t(nonAttachment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
-        "step7": "$t(nonAttachment.commonSteps.keepReceipt)"
+        "description": "$t(administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_{{numOfPurchasers}})",
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_{{numOfPurchasers}})",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_{{numOfPurchasers}})",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.givePurchaserTheirProofOfIdentity_{{numOfPurchasers}})",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_{{numOfPurchasers}})",
+        "step6": "$t(administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "step7": "$t(administrativeStatusCertificate.commonSteps.keepReceipt)"
       },
       "issuedByPurchaser": {
-        "step1": "$t(nonAttachment.commonSteps.takeProofOfIdentityBack_{{numOfVendors}}_{{numOfPurchasers}})"
+        "step1": "$t(administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_{{numOfVendors}}_{{numOfPurchasers}})"
       },
       "issuedByVendorAndPurchaser": {
-        "step1": "$t(nonAttachment.commonSteps.askPurchaserDeedOfSale_{{numOfPurchasers}})",
-        "step2": "$t(nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_{{numOfPurchasers}})",
-        "step3": "$t(nonAttachment.commonSteps.givePurchaserTheirProofOfIdentity_{{numOfPurchasers}})",
-        "step4": "$t(nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
-        "step5": "$t(nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_{{numOfPurchasers}})",
-        "step6": "$t(nonAttachment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
-        "step7": "$t(nonAttachment.commonSteps.keepReceipt)"
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_{{numOfPurchasers}})",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_{{numOfPurchasers}})",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.givePurchaserTheirProofOfIdentity_{{numOfPurchasers}})",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_{{numOfPurchasers}})",
+        "step6": "$t(administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "step7": "$t(administrativeStatusCertificate.commonSteps.keepReceipt)"
       },
       "issuedByVendorDelegate": {
-        "description1": "<p>After the <NonAttachmentCertificate /> is issued, make sure that your delegate hands you the following:</p>",
-        "item1": "$t(nonAttachment.commonItems.stampedDeedsOfSale)",
-        "item2": "$t(nonAttachment.commonItems.purchaserProofOfIdentity_{{numOfPurchasers}})",
-        "item3": "$t(nonAttachment.commonItems.proofOfIdentity_{{numOfVendors}}_vendorNameProofNotRequired)",
-        "item4": "$t(nonAttachment.commonItems.vehicleRegistrationBook)",
-        "item5": "$t(nonAttachment.commonItems.nonAttachmentCertificate)",
-        "item6": "$t(nonAttachment.commonItems.nonAttachmentCertificateReceipt)",
-        "description2": "$t(nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_{{numOfPurchasers}})",
-        "step1": "$t(nonAttachment.commonSteps.askPurchaserDeedOfSale_{{numOfPurchasers}})",
-        "step2": "$t(nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_{{numOfPurchasers}})",
-        "step3": "$t(nonAttachment.commonSteps.givePurchaserTheirProofOfIdentity_{{numOfPurchasers}})",
-        "step4": "$t(nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
-        "step5": "$t(nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_{{numOfPurchasers}})",
-        "step6": "$t(nonAttachment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}}_vendorNameProofNotRequired)",
-        "step7": "$t(nonAttachment.commonSteps.keepReceipt)"
+        "description1": "<p>After the <AdministrativeStatusCertificate /> is issued, make sure that your delegate hands you the following:</p>",
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.purchaserProofOfIdentity_{{numOfPurchasers}})",
+        "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfVendors}}_vendorNameProofNotRequired)",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)",
+        "description2": "$t(administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_{{numOfPurchasers}})",
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_{{numOfPurchasers}})",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_{{numOfPurchasers}})",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.givePurchaserTheirProofOfIdentity_{{numOfPurchasers}})",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_{{numOfPurchasers}})",
+        "step6": "$t(administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}}_vendorNameProofNotRequired)",
+        "step7": "$t(administrativeStatusCertificate.commonSteps.keepReceipt)"
       },
       "issuedByPurchaserDelegate": {
-        "step1": "$t(nonAttachment.commonSteps.takeProofOfIdentityBack_{{numOfVendors}}_{{numOfPurchasers}})"
+        "step1": "$t(administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_{{numOfVendors}}_{{numOfPurchasers}})"
       }
     }
   },

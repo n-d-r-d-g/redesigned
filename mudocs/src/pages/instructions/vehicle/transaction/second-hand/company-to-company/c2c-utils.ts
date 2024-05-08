@@ -6,7 +6,7 @@ export const initialValues: InitialValues = {
   documentsPreparer: "company1",
   vendorHasStamp: "yes",
   isVehicleRegistrationBookValid: "yes",
-  nonAttachmentIssuer: "company1AndCompany2",
+  administrativeStatusCertificateIssuer: "company1AndCompany2",
   paymentMethod: "cash",
 };
 

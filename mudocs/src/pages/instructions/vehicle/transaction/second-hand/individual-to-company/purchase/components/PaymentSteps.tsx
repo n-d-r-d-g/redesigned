@@ -8,10 +8,12 @@ import TechnicalTerm from "@/components/TechnicalTerm/TechnicalTerm";
 
 function ConditionalInstructions1() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByVendor = values.nonAttachmentIssuer === "vendor";
-  const isIssuedByCompany = values.nonAttachmentIssuer === "company";
+  const isIssuedByVendor =
+    values.administrativeStatusCertificateIssuer === "vendor";
+  const isIssuedByCompany =
+    values.administrativeStatusCertificateIssuer === "company";
   const isIssuedByVendorAndCompany =
-    values.nonAttachmentIssuer === "vendorAndCompany";
+    values.administrativeStatusCertificateIssuer === "vendorAndCompany";
   const isPreparedByVendor = values.documentsPreparer === "vendor";
   const isPreparedByCompany = values.documentsPreparer === "company";
 
@@ -1026,10 +1028,12 @@ function ConditionalInstructions1() {
 
 function ConditionalInstructions2() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByVendor = values.nonAttachmentIssuer === "vendor";
-  const isIssuedByCompany = values.nonAttachmentIssuer === "company";
+  const isIssuedByVendor =
+    values.administrativeStatusCertificateIssuer === "vendor";
+  const isIssuedByCompany =
+    values.administrativeStatusCertificateIssuer === "company";
   const isIssuedByVendorAndCompany =
-    values.nonAttachmentIssuer === "vendorAndCompany";
+    values.administrativeStatusCertificateIssuer === "vendorAndCompany";
 
   const CommonCashInstructions = useCallback(
     () => (
@@ -1277,10 +1281,12 @@ function ConditionalInstructions2() {
 
 function ConditionalInstructions3() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByVendor = values.nonAttachmentIssuer === "vendor";
-  const isIssuedByCompany = values.nonAttachmentIssuer === "company";
+  const isIssuedByVendor =
+    values.administrativeStatusCertificateIssuer === "vendor";
+  const isIssuedByCompany =
+    values.administrativeStatusCertificateIssuer === "company";
   const isIssuedByVendorAndCompany =
-    values.nonAttachmentIssuer === "vendorAndCompany";
+    values.administrativeStatusCertificateIssuer === "vendorAndCompany";
   const isPreparedByVendor = values.documentsPreparer === "vendor";
   const isPreparedByCompany = values.documentsPreparer === "company";
 

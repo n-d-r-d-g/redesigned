@@ -7,7 +7,7 @@ export const initialValues: InitialValues = {
   purchaserHasOriginalID: "yes",
   vendorAndPurchaserAreRelated: "no",
   vendorNameMatches: "yes",
-  nonAttachmentIssuer: "vendorAndPurchaser",
+  administrativeStatusCertificateIssuer: "vendorAndPurchaser",
   paymentMethod: "cash",
 };
 

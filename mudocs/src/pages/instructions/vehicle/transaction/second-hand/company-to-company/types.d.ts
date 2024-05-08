@@ -8,6 +8,6 @@ export type InitialValues = {
   documentsPreparer: "company1" | "company2";
   vendorHasStamp: "yes" | "no";
   isVehicleRegistrationBookValid: "yes" | "no";
-  nonAttachmentIssuer: "company1" | "company1AndCompany2";
+  administrativeStatusCertificateIssuer: "company1" | "company1AndCompany2";
   paymentMethod: "cash" | "notCash";
 };

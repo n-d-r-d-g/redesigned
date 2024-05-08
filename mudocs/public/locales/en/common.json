@@ -199,14 +199,14 @@
     "company": "Representative",
     "company_other": "Director"
   },
-  "nonAttachmentCertificateIssuers": {
+  "administrativeStatusCertificateIssuers": {
     "vendor": "Vendor",
     "vendor_other": "Vendors",
     "purchaser": "Purchaser",
     "purchaser_other": "Purchasers",
     "company": "Representative",
     "company_other": "Director",
-    "vendorAndPurchaser": "$t(nonAttachmentCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
+    "vendorAndPurchaser": "$t(administrativeStatusCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
     "vendorAndPurchaser_singleVendor_singlePurchaser": "Vendor and Purchaser",
     "vendorAndPurchaser_singleVendor_multiplePurchasers": "Vendor and Purchasers",
     "vendorAndPurchaser_multipleVendors_singlePurchaser": "Vendors and Purchaser",
@@ -215,12 +215,12 @@
     "vendorDelegate_other": "Vendors' delegate",
     "purchaserDelegate": "Purchaser's delegate",
     "purchaserDelegate_other": "Purchasers' delegate",
-    "vendorAndCompany": "$t(nonAttachmentCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
+    "vendorAndCompany": "$t(administrativeStatusCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
     "vendorAndCompany_singleVendor_singleDirector": "Vendor and Representative",
     "vendorAndCompany_singleVendor_multipleDirectors": "Vendor and Directors",
     "vendorAndCompany_multipleVendors_singleDirector": "Vendors and Representative",
     "vendorAndCompany_multipleVendors_multipleDirectors": "Vendors and Directors",
-    "companyAndPurchaser": "$t(nonAttachmentCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
+    "companyAndPurchaser": "$t(administrativeStatusCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
     "companyAndPurchaser_singleDirector_singlePurchaser": "Representative and Purchaser",
     "companyAndPurchaser_singleDirector_multiplePurchasers": "Representative and Purchasers",
     "companyAndPurchaser_multipleDirectors_singlePurchaser": "Director and Purchaser",
@@ -324,8 +324,8 @@
       "label": "lug wrench",
       "title": "a tool used to tighten/loosen a vehicle's wheel lug nuts (commonly known as <MU>lakle a molet</MU>)"
     },
-    "nonAttachmentCertificate": {
-      "label": "certificate of non-attachment",
+    "administrativeStatusCertificate": {
+      "label": "certificate of administrative status",
       "title": "commonly known as <FR>papier gage</FR>"
     },
     "powerOfAttorney": {

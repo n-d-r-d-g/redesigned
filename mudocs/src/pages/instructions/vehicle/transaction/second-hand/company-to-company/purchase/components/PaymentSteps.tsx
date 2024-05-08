@@ -9,9 +9,10 @@ import styles from "../../../styles.module.css";
 
 function ConditionalInstructions1() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByCompany1 = values.nonAttachmentIssuer === "company1";
+  const isIssuedByCompany1 =
+    values.administrativeStatusCertificateIssuer === "company1";
   const isIssuedByCompany1AndCompany2 =
-    values.nonAttachmentIssuer === "company1AndCompany2";
+    values.administrativeStatusCertificateIssuer === "company1AndCompany2";
   const isPreparedByCompany1 = values.documentsPreparer === "company1";
   const isPreparedByCompany2 = values.documentsPreparer === "company2";
   const whetherDirectorIsRequired = retrieveDirectorRequiredI18nText(values);
@@ -717,9 +718,10 @@ function ConditionalInstructions1() {
 
 function ConditionalInstructions2() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByCompany1 = values.nonAttachmentIssuer === "company1";
+  const isIssuedByCompany1 =
+    values.administrativeStatusCertificateIssuer === "company1";
   const isIssuedByCompany1AndCompany2 =
-    values.nonAttachmentIssuer === "company1AndCompany2";
+    values.administrativeStatusCertificateIssuer === "company1AndCompany2";
   const whetherDirectorIsRequired = retrieveDirectorRequiredI18nText(values);
 
   const CommonCashInstructions = useCallback(
@@ -883,9 +885,10 @@ function ConditionalInstructions2() {
 
 function ConditionalInstructions3() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByCompany1 = values.nonAttachmentIssuer === "company1";
+  const isIssuedByCompany1 =
+    values.administrativeStatusCertificateIssuer === "company1";
   const isIssuedByCompany1AndCompany2 =
-    values.nonAttachmentIssuer === "company1AndCompany2";
+    values.administrativeStatusCertificateIssuer === "company1AndCompany2";
   const isPreparedByCompany1 = values.documentsPreparer === "company1";
   const isPreparedByCompany2 = values.documentsPreparer === "company2";
   const whetherDirectorIsRequired = retrieveDirectorRequiredI18nText(values);

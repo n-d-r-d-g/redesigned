@@ -36,11 +36,11 @@ export default function Home() {
         <ul>
           <li>
             <Link
-              href="/doc-gen/vehicle/non-attachment-certificate-authorization-letter"
+              href="/doc-gen/vehicle/administrative-status-certificate-authorization-letter"
               className="rounded font-bold focus:ring-0 focus:ring-offset-0 focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900"
             >
               {tHomePage(
-                "documentGenerators.vehicles.nonAttachmentCertificateAuthorizationLetter",
+                "documentGenerators.vehicles.administrativeStatusCertificateAuthorizationLetter",
               )}
             </Link>
           </li>

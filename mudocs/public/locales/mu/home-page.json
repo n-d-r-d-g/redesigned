@@ -14,7 +14,7 @@
     "description": "Kisannla kontan ranpli bann formiler lor papye? Pa nu. Nu panse ki nu pa tusel. Donk nu finn kree sa bann zenerater dokiman la.",
     "vehicles": {
       "title": "Zenerater dokiman pou veikil",
-      "nonAttachmentCertificateAuthorizationLetter": "Let otorizasyon - papye gaz",
+      "administrativeStatusCertificateAuthorizationLetter": "Let otorizasyon - papye gaz",
       "deedOfSale": "Papye de vant"
     }
   }

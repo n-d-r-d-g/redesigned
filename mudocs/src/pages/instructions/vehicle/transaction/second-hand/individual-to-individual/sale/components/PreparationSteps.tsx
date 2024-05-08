@@ -13,18 +13,18 @@ import { isVendorRequired } from "../../i2i-utils";
 import { InitialValues } from "../../types";
 import styles from "../../../styles.module.css";
 
-function NonAttachmentIssuerFormSelect() {
+function AdministrativeStatusCertificateIssuerFormSelect() {
   const { t: tCommon } = useTranslation(DEFAULT_I18N_NAMESPACE);
   const { values } = useFormikContext<InitialValues>();
   const vendorIsRequired = isVendorRequired(values);
 
   return (
     <FormSelect
-      name="nonAttachmentIssuer"
+      name="administrativeStatusCertificateIssuer"
       label={
         <TypedTrans
           ns="instructions-vehicle-transaction-2nd-hand-i2i-sale-page"
-          i18nKey={"form.nonAttachmentIssuer.label"}
+          i18nKey={"form.administrativeStatusCertificateIssuer.label"}
           components={{
             NLTAAbbr: <Abbr name="nlta" />,
           }}
@@ -34,33 +34,33 @@ function NonAttachmentIssuerFormSelect() {
       containerClassName="col-start-2 mt-2 leading-4"
     >
       <option value="vendor">
-        {tCommon("nonAttachmentCertificateIssuers.vendor", {
+        {tCommon("administrativeStatusCertificateIssuers.vendor", {
           count: values.numOfVendors === "singleVendor" ? 1 : 2,
         })}
       </option>
       {!vendorIsRequired && (
         <option value="purchaser">
-          {tCommon("nonAttachmentCertificateIssuers.purchaser", {
+          {tCommon("administrativeStatusCertificateIssuers.purchaser", {
             count: values.numOfPurchasers === "singlePurchaser" ? 1 : 2,
           })}
         </option>
       )}
       <option value="vendorAndPurchaser">
-        {tCommon("nonAttachmentCertificateIssuers.vendorAndPurchaser", {
+        {tCommon("administrativeStatusCertificateIssuers.vendorAndPurchaser", {
           numOfVendors: values.numOfVendors,
           numOfPurchasers: values.numOfPurchasers,
         })}
       </option>
       {!vendorIsRequired && (
         <option value="vendorDelegate">
-          {tCommon("nonAttachmentCertificateIssuers.vendorDelegate", {
+          {tCommon("administrativeStatusCertificateIssuers.vendorDelegate", {
             count: values.numOfVendors === "singleVendor" ? 1 : 2,
           })}
         </option>
       )}
       {!vendorIsRequired && (
         <option value="purchaserDelegate">
-          {tCommon("nonAttachmentCertificateIssuers.purchaserDelegate", {
+          {tCommon("administrativeStatusCertificateIssuers.purchaserDelegate", {
             count: values.numOfPurchasers === "singlePurchaser" ? 1 : 2,
           })}
         </option>
@@ -71,14 +71,16 @@ function NonAttachmentIssuerFormSelect() {
 
 function ConditionalInstructions() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByVendor = values.nonAttachmentIssuer === "vendor";
-  const isIssuedByPurchaser = values.nonAttachmentIssuer === "purchaser";
+  const isIssuedByVendor =
+    values.administrativeStatusCertificateIssuer === "vendor";
+  const isIssuedByPurchaser =
+    values.administrativeStatusCertificateIssuer === "purchaser";
   const isIssuedByVendorAndPurchaser =
-    values.nonAttachmentIssuer === "vendorAndPurchaser";
+    values.administrativeStatusCertificateIssuer === "vendorAndPurchaser";
   const isIssuedByVendorDelegate =
-    values.nonAttachmentIssuer === "vendorDelegate";
+    values.administrativeStatusCertificateIssuer === "vendorDelegate";
   const isIssuedByPurchaserDelegate =
-    values.nonAttachmentIssuer === "purchaserDelegate";
+    values.administrativeStatusCertificateIssuer === "purchaserDelegate";
   const isPreparedByVendor = values.documentsPreparer === "vendor";
   const isPreparedByPurchaser = values.documentsPreparer === "purchaser";
 
@@ -438,7 +440,7 @@ function ConditionalInstructions() {
               NLTAAbbr: <Abbr name="nlta" />,
               AuthorizationLetterImportantLink: (
                 <ImportantLink
-                  href="/doc-gen/vehicle/non-attachment-certificate-authorization-letter/i1ToI2"
+                  href="/doc-gen/vehicle/administrative-status-certificate-authorization-letter/i1ToI2"
                   target="_blank"
                   rel="noreferrer noopener"
                 />
@@ -1330,7 +1332,7 @@ function ConditionalInstructions() {
               NLTAAbbr: <Abbr name="nlta" />,
               AuthorizationLetterImportantLink: (
                 <ImportantLink
-                  href="/doc-gen/vehicle/non-attachment-certificate-authorization-letter/i1ToI2"
+                  href="/doc-gen/vehicle/administrative-status-certificate-authorization-letter/i1ToI2"
                   target="_blank"
                   rel="noreferrer noopener"
                 />
@@ -1635,11 +1637,12 @@ export function PreparationSteps() {
 
       if (
         ["purchaser", "vendorDelegate", "purchaserDelegate"].includes(
-          values.nonAttachmentIssuer,
+          values.administrativeStatusCertificateIssuer,
         ) &&
         isVendorRequired(newFormValues)
       ) {
-        newFormValues.nonAttachmentIssuer = "vendorAndPurchaser";
+        newFormValues.administrativeStatusCertificateIssuer =
+          "vendorAndPurchaser";
       }
 
       setValues(newFormValues, true);
@@ -1729,8 +1732,8 @@ export function PreparationSteps() {
               />
             ),
             DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
-            NonAttachmentCertificate: (
-              <TechnicalTerm name="nonAttachmentCertificate" />
+            AdministrativeStatusCertificate: (
+              <TechnicalTerm name="administrativeStatusCertificate" />
             ),
           }}
         />
@@ -1777,8 +1780,8 @@ export function PreparationSteps() {
             ),
             NLTAAbbr: <Abbr name="nlta" />,
             DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
-            NonAttachmentCertificate: (
-              <TechnicalTerm name="nonAttachmentCertificate" />
+            AdministrativeStatusCertificate: (
+              <TechnicalTerm name="administrativeStatusCertificate" />
             ),
             ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             // DeedOfSaleImportantLink: (
@@ -1868,7 +1871,7 @@ export function PreparationSteps() {
           <option value="yes">{tCommon("yes")}</option>
           <option value="no">{tCommon("no")}</option>
         </FormSelect>
-        <NonAttachmentIssuerFormSelect />
+        <AdministrativeStatusCertificateIssuerFormSelect />
       </div>
       <ConditionalInstructions />
       <div className="grid grid-cols-[auto_1fr] grid-rows-[auto_auto] gap-2">

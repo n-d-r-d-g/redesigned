@@ -7,7 +7,7 @@ import { Formik, useFormikContext } from "formik";
 import { noop } from "lodash";
 import { PreparationSteps } from "./components/PreparationSteps";
 import { PaymentSteps } from "./components/PaymentSteps";
-import { NonAttachmentCertificateSteps } from "./components/NonAttachmentCertificateSteps";
+import { AdministrativeStatusCertificateSteps } from "./components/AdministrativeStatusCertificateSteps";
 import { RegistrationSteps } from "../../components/RegistrationSteps";
 import { InsuranceSteps } from "../../components/InsuranceSteps";
 import { TransferSteps } from "../../components/TransferSteps";
@@ -119,7 +119,7 @@ export default function C2IPurchaseInstructions() {
 
             <TypedTrans
               ns="instructions-vehicle-transaction-2nd-hand-c2i-purchase-page"
-              i18nKey="nonAttachment.title"
+              i18nKey="administrativeStatusCertificate.title"
               components={{
                 h2: (
                   <h2
@@ -127,14 +127,14 @@ export default function C2IPurchaseInstructions() {
                     className={styles.h2}
                   />
                 ),
-                NonAttachmentCertificate: (
-                  <TechnicalTerm name="nonAttachmentCertificate" />
+                AdministrativeStatusCertificate: (
+                  <TechnicalTerm name="administrativeStatusCertificate" />
                 ),
               }}
             />
             <TypedTrans
               ns="instructions-vehicle-transaction-2nd-hand-c2i-purchase-page"
-              i18nKey="nonAttachment.description"
+              i18nKey="administrativeStatusCertificate.description"
               components={{
                 NLTAAbbr: <Abbr name="nlta" />,
                 NLTAContactLink: (
@@ -147,7 +147,7 @@ export default function C2IPurchaseInstructions() {
                 ),
               }}
             />
-            <NonAttachmentCertificateSteps />
+            <AdministrativeStatusCertificateSteps />
 
             <TypedTrans
               ns="instructions-vehicle-transaction-2nd-hand-page"
@@ -175,8 +175,8 @@ export default function C2IPurchaseInstructions() {
                   />
                 ),
                 DeedOfSale: <TechnicalTerm name="deedOfSale" count={1} />,
-                NonAttachmentCertificate: (
-                  <TechnicalTerm name="nonAttachmentCertificate" />
+                AdministrativeStatusCertificate: (
+                  <TechnicalTerm name="administrativeStatusCertificate" />
                 ),
               }}
             />

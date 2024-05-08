@@ -199,14 +199,14 @@
     "company": "Représentant",
     "company_other": "Directeur"
   },
-  "nonAttachmentCertificateIssuers": {
+  "administrativeStatusCertificateIssuers": {
     "vendor": "Vendeur",
     "vendor_other": "Vendeurs",
     "purchaser": "Acheteur",
     "purchaser_other": "Acheteurs",
     "company": "Représentant",
     "company_other": "Directeur",
-    "vendorAndPurchaser": "$t(nonAttachmentCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
+    "vendorAndPurchaser": "$t(administrativeStatusCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
     "vendorAndPurchaser_singleVendor_singlePurchaser": "Vendeur et Acheteur",
     "vendorAndPurchaser_singleVendor_multiplePurchasers": "Vendeur et Acheteurs",
     "vendorAndPurchaser_multipleVendors_singlePurchaser": "Vendeurs et Acheteur",
@@ -215,12 +215,12 @@
     "vendorDelegate_other": "Délégué des vendeurs",
     "purchaserDelegate": "Délégué de l'acheteur",
     "purchaserDelegate_other": "Délégué des acheteurs",
-    "vendorAndCompany": "$t(nonAttachmentCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
+    "vendorAndCompany": "$t(administrativeStatusCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
     "vendorAndCompany_singleVendor_singleDirector": "Vendeur et Représentant",
     "vendorAndCompany_singleVendor_multipleDirectors": "Vendeur et Directeur",
     "vendorAndCompany_multipleVendors_singleDirector": "Vendeurs et Représentant",
     "vendorAndCompany_multipleVendors_multipleDirectors": "Vendeurs et Directeur",
-    "companyAndPurchaser": "$t(nonAttachmentCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
+    "companyAndPurchaser": "$t(administrativeStatusCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
     "companyAndPurchaser_singleDirector_singlePurchaser": "Représentant et Acheteur",
     "companyAndPurchaser_singleDirector_multiplePurchasers": "Représentant et Acheteurs",
     "companyAndPurchaser_multipleDirectors_singlePurchaser": "Directeur et Acheteur",
@@ -324,7 +324,7 @@
       "label": "clé à molette",
       "title": "un outil utilisé pour serrer/desserrer les écrous de roue d'un véhicule"
     },
-    "nonAttachmentCertificate": {
+    "administrativeStatusCertificate": {
       "label": "certificat de gage sans déplacement",
       "title": "communément appelé papier gage"
     },

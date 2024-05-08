@@ -1,7 +1,7 @@
 {
-  "nonAttachmentCertificateAuthorizationLetter": {
+  "administrativeStatusCertificateAuthorizationLetter": {
     "title": "Let otorizasyon - papye gaz",
-    "pagePreviewBody": "$t(nonAttachmentCertificateAuthorizationLetter.vendorsWithId, {\"count\": {{vendorCount}}, \"namesWithId\": \"{{vendorNamesWithId}}\"}) veikil nimero {{vehicleRegNum}} mark {{vehicleMake}} otoriz {{purchaserNamesWithId}}, pou prosed avek tu bann dokiman konsernan veikil an kestyon kuma papye gaz.",
+    "pagePreviewBody": "$t(administrativeStatusCertificateAuthorizationLetter.vendorsWithId, {\"count\": {{vendorCount}}, \"namesWithId\": \"{{vendorNamesWithId}}\"}) veikil nimero {{vehicleRegNum}} mark {{vehicleMake}} otoriz {{purchaserNamesWithId}}, pou prosed avek tu bann dokiman konsernan veikil an kestyon kuma papye gaz.",
     "vendorsWithId": "Mo, {{namesWithId}}, proprieter",
     "vendorsWithId_other": "Nu, {{namesWithId}}, proprieter"
   },

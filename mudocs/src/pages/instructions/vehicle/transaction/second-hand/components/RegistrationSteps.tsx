@@ -445,8 +445,8 @@ export function RegistrationSteps() {
                   className="hover:cursor-pointer"
                 />
               ),
-              NonAttachmentCertificate: (
-                <TechnicalTerm name="nonAttachmentCertificate" />
+              AdministrativeStatusCertificate: (
+                <TechnicalTerm name="administrativeStatusCertificate" />
               ),
             }}
           />

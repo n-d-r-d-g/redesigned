@@ -4,6 +4,9 @@ export type InitialValues = {
   documentsPreparer: "vendor" | "company";
   directorHasOriginalID: "yes" | "no";
   vendorNameMatches: "yes" | "no";
-  nonAttachmentIssuer: "vendor" | "company" | "vendorAndCompany";
+  administrativeStatusCertificateIssuer:
+    | "vendor"
+    | "company"
+    | "vendorAndCompany";
   paymentMethod: "cash" | "notCash";
 };

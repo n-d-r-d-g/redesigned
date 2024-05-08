@@ -11,7 +11,7 @@ import TypedTrans from "@/components/TypedTrans/TypedTrans";
 import { Conclusion } from "./components/Conclusion";
 import { PreparationSteps } from "./components/PreparationSteps";
 import { PaymentSteps } from "./components/PaymentSteps";
-import { NonAttachmentCertificateSteps } from "./components/NonAttachmentCertificateSteps";
+import { AdministrativeStatusCertificateSteps } from "./components/AdministrativeStatusCertificateSteps";
 import { generateDocumentTitle } from "@/utils/functions";
 import {
   DEFAULT_I18N_LOCALE,
@@ -74,7 +74,7 @@ export default function I2ISaleInstructions() {
 
             <TypedTrans
               ns="instructions-vehicle-transaction-2nd-hand-i2i-sale-page"
-              i18nKey="nonAttachment.title"
+              i18nKey="administrativeStatusCertificate.title"
               components={{
                 h2: (
                   <h2
@@ -82,14 +82,14 @@ export default function I2ISaleInstructions() {
                     className={styles.h2}
                   />
                 ),
-                NonAttachmentCertificate: (
-                  <TechnicalTerm name="nonAttachmentCertificate" />
+                AdministrativeStatusCertificate: (
+                  <TechnicalTerm name="administrativeStatusCertificate" />
                 ),
               }}
             />
             <TypedTrans
               ns="instructions-vehicle-transaction-2nd-hand-i2i-sale-page"
-              i18nKey="nonAttachment.description"
+              i18nKey="administrativeStatusCertificate.description"
               components={{
                 NLTAAbbr: <Abbr name="nlta" />,
                 NLTAContactLink: (
@@ -102,7 +102,7 @@ export default function I2ISaleInstructions() {
                 ),
               }}
             />
-            <NonAttachmentCertificateSteps />
+            <AdministrativeStatusCertificateSteps />
 
             <Conclusion />
           </form>

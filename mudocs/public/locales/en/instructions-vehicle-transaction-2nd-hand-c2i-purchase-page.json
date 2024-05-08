@@ -19,7 +19,7 @@
     "isVehicleRegistrationBookValid": {
       "label": "Is all the information on the vehicle's registration book up to date?"
     },
-    "nonAttachmentIssuer": {
+    "administrativeStatusCertificateIssuer": {
       "label": "<span>Who will go to the <NLTAAbbr />?</span>"
     },
     "paymentMethod": {
@@ -48,11 +48,11 @@
       "sendAuthorizationLetterPhotoOrPDFToCompany": "<label>Send the company's representative a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. This verification is also important to avoid unnecessary back and forth.</label>"
     },
     "requiredDirectorNote": "$t(preparation.requiredDirectorNote_{{numOfDirectors}})",
-    "requiredDirectorNote_singleDirector": "<p>Based on your scenario, the company's director is required at the <NLTAAbbr /> to issue the <nonAttachmentCertificate />. <em>Hence, the rest of this page assumes the company's representative is also the company's director.</em></p>",
-    "requiredDirectorNote_multipleDirectors": "<p>Based on your scenario, one of the company's directors is required at the <NLTAAbbr /> to issue the <nonAttachmentCertificate />. <em>Hence, the rest of this page assumes the company's representative is also one of the company's directors.</em></p>",
+    "requiredDirectorNote_singleDirector": "<p>Based on your scenario, the company's director is required at the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. <em>Hence, the rest of this page assumes the company's representative is also the company's director.</em></p>",
+    "requiredDirectorNote_multipleDirectors": "<p>Based on your scenario, one of the company's directors is required at the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. <em>Hence, the rest of this page assumes the company's representative is also one of the company's directors.</em></p>",
     "step1": "<label>How many company directors and purchasers are there?</label>",
-    "step2": "<label>Decide with the company's representative about who will prepare the <DeedsOfSale /> and/or the authorization letter (to issue the <NonAttachmentCertificate />).</label>",
-    "step3": "<label>Decide with the company's representative about who will go to the <NLTAAbbr /> to issue the <NonAttachmentCertificate />. It's advised (not compulsory) that the purchaser goes to the <NLTAAbbr /> to issue this document as you don't need to do anything once payment is effected.</label>",
+    "step2": "<label>Decide with the company's representative about who will prepare the <DeedsOfSale /> and/or the authorization letter (to issue the <AdministrativeStatusCertificate />).</label>",
+    "step3": "<label>Decide with the company's representative about who will go to the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. It's advised (not compulsory) that the purchaser goes to the <NLTAAbbr /> to issue this document as you don't need to do anything once payment is effected.</label>",
     "conditionalInstructions": {
       "issuedByCompany": {
         "preparedByCompany": {
@@ -306,8 +306,8 @@
     },
     "leaveWithVehicle": "<p>At this point, you can leave with the vehicle. Make sure you have the following before driving the vehicle:</p><ul><li>the vehicle's spare key</li><li>your driver's permit (if anyone else will be driving the vehicle back, they need to have their driving permit)</li></ul>"
   },
-  "nonAttachment": {
-    "title": "<h2>Issue a <NonAttachmentCertificate /></h2>",
+  "administrativeStatusCertificate": {
+    "title": "<h2>Issue a <AdministrativeStatusCertificate /></h2>",
     "description": "<p>The purpose of this document is to certify that the vehicle being sold is not legally tied to anything that prevents its sale, e.g. theft, loan, opposition of sale, etc. This document can be issued at <NLTAContactLink><NLTAAbbr />'s headquarters or sub offices</NLTAContactLink>.</p>",
     "commonSteps": {
       "bring1DeedOfSale": "<label>Make sure to bring your signed <DeedOfSale />.</label>",
@@ -329,11 +329,11 @@
       "askCompanyToBringDirectorProof_multipleDirectors_directorNotRequired": "<label>Ask the company's representative to bring the original certified document that mentions the company's directors as the directors.</label>",
       "askCompany2StampedDeedsOfSale": "<label>Ask the company's representative for the 2 stamped <DeedsOfSale />.</label>",
       "askCompanyVehicleRegistrationBook": "<label>Ask the company's representative for the <VehicleRegistrationBook />.</label>",
-      "askCompanyNonAttachmentCertificate": "<label>Ask the company's representative for the <NonAttachmentCertificate />.</label>",
+      "askCompanyAdministrativeStatusCertificate": "<label>Ask the company's representative for the <AdministrativeStatusCertificate />.</label>",
       "giveCompanyDeedOfSale": "<label>Make sure to hand your signed <DeedOfSale /> to the company's representative.</label>",
       "companyKeepsTheirProofOfIdentity_singleDirector": "<label>The company's representative needs to keep their original <ProofOfIdentity />.</label>",
       "companyKeepsTheirProofOfIdentity_multipleDirectors": "<label>The company's representative needs to keep their and each company's director's original <ProofOfIdentity />.</label>",
-      "companyKeepsReceipt": "<label>The company's representative needs to keep the <NonAttachmentCertificate />'s payment receipt.</label>",
+      "companyKeepsReceipt": "<label>The company's representative needs to keep the <AdministrativeStatusCertificate />'s payment receipt.</label>",
       "companyKeepsDirectorProof_singleDirector_directorRequired": "<label>The company's representative needs to keep the original certified document that mentions them as the director.</label>",
       "companyKeepsDirectorProof_singleDirector_directorNotRequired": "<label>The company's representative needs to keep the original certified document that mentions the company's director as the director.</label>",
       "companyKeepsDirectorProof_multipleDirectors_directorRequired": "<label>The company's representative needs to keep the original certified document that mentions the company's directors as the directors.</label>",
@@ -350,8 +350,8 @@
       "proofOfIdentity_singlePurchaser": "<li>Your original <ProofOfIdentity />.</li>",
       "proofOfIdentity_multiplePurchasers": "<li>Each purchaser's original <ProofOfIdentity />.</li>",
       "vehicleRegistrationBook": "<li>The original <VehicleRegistrationBook />.</li>",
-      "nonAttachmentCertificate": "<li>A <NonAttachmentCertificate />.</li>",
-      "nonAttachmentCertificateReceipt": "<li>A receipt for the <NonAttachmentCertificate />'s payment.</li>",
+      "administrativeStatusCertificate": "<li>A <AdministrativeStatusCertificate />.</li>",
+      "administrativeStatusCertificateReceipt": "<li>A receipt for the <AdministrativeStatusCertificate />'s payment.</li>",
       "directorProof_singleDirector_directorRequired": "<li>The original certified document that mentions the company's representative as the director.</li>",
       "directorProof_singleDirector_directorNotRequired": "<li>The original certified document that mentions the company's director as the director.</li>",
       "directorProof_multipleDirectors_directorRequired": "<li>The original certified document that mentions the company's directors as the directors.</li>",
@@ -360,58 +360,58 @@
     "conditionalInstructions1": {
       "description": "<p>Before going to the <NLTAAbbr />, ensure the following:</p>",
       "issuedByPurchaser": {
-        "requirement1": "$t(nonAttachment.commonSteps.bring2DeedsOfSale)",
-        "requirement2": "$t(nonAttachment.commonSteps.bringAuthorizationLetter)",
-        "requirement3": "$t(nonAttachment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
-        "requirement4": "$t(nonAttachment.commonSteps.bringVehicleRegistrationBook)",
-        "requirement5": "$t(nonAttachment.commonSteps.bringRs50)"
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.bring2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.bringAuthorizationLetter)",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook)",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.bringRs50)"
       },
       "issuedByCompanyAndPurchaser": {
-        "requirement1": "$t(nonAttachment.commonSteps.askCompanyToBring2DeedsOfSale)",
-        "requirement2": "$t(nonAttachment.commonSteps.askCompanyToBringAuthorizationLetter)",
-        "requirement3": "$t(nonAttachment.commonSteps.askCompanyToBringProofOfIdentity_{{numOfDirectors}})",
-        "requirement4": "$t(nonAttachment.commonSteps.askCompanyToBringVehicleRegistrationBook)",
-        "requirement5": "$t(nonAttachment.commonSteps.askCompanyToBringRs50)",
-        "directorProofRequirement": "$t(nonAttachment.commonSteps.askCompanyToBringDirectorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
-        "requirement6": "$t(nonAttachment.commonSteps.bring1DeedOfSale)"
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.askCompanyToBring2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.askCompanyToBringAuthorizationLetter)",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.askCompanyToBringProofOfIdentity_{{numOfDirectors}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.askCompanyToBringVehicleRegistrationBook)",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.askCompanyToBringRs50)",
+        "directorProofRequirement": "$t(administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+        "requirement6": "$t(administrativeStatusCertificate.commonSteps.bring1DeedOfSale)"
       }
     },
     "conditionalInstructions2": {
       "description": "<p>The <NLTAAbbr /> officer will hand you the following:</p>",
       "issuedByPurchaser": {
-        "item1": "$t(nonAttachment.commonItems.stampedDeedsOfSale)",
-        "item2": "$t(nonAttachment.commonItems.authorizationLetter)",
-        "item3": "$t(nonAttachment.commonItems.proofOfIdentity_{{numOfPurchasers}})",
-        "item4": "$t(nonAttachment.commonItems.vehicleRegistrationBook)",
-        "item5": "$t(nonAttachment.commonItems.nonAttachmentCertificate)",
-        "item6": "$t(nonAttachment.commonItems.nonAttachmentCertificateReceipt)"
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.authorizationLetter)",
+        "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfPurchasers}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)"
       },
       "issuedByCompanyAndPurchaser": {
-        "item1": "$t(nonAttachment.commonItems.stampedDeedsOfSale)",
-        "item2": "$t(nonAttachment.commonItems.authorizationLetter)",
-        "item3": "$t(nonAttachment.commonItems.companyProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
-        "item4": "$t(nonAttachment.commonItems.vehicleRegistrationBook)",
-        "item5": "$t(nonAttachment.commonItems.nonAttachmentCertificate)",
-        "item6": "$t(nonAttachment.commonItems.nonAttachmentCertificateReceipt)",
-        "directorProofItem": "$t(nonAttachment.commonItems.directorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.authorizationLetter)",
+        "item3": "$t(administrativeStatusCertificate.commonItems.companyProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)",
+        "directorProofItem": "$t(administrativeStatusCertificate.commonItems.directorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
       }
     },
     "conditionalInstructions3": {
       "issuedByCompany": {
-        "description": "$t(nonAttachment.commonSteps.bringDeedOfSaleToMeeting)",
-        "step1": "$t(nonAttachment.commonSteps.askCompany2StampedDeedsOfSale)",
-        "step2": "$t(nonAttachment.commonSteps.giveCompanyDeedOfSale)",
-        "step3": "$t(nonAttachment.commonSteps.askCompanyVehicleRegistrationBook)",
-        "step4": "$t(nonAttachment.commonSteps.askCompanyNonAttachmentCertificate)"
+        "description": "$t(administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting)",
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askCompany2StampedDeedsOfSale)",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.giveCompanyDeedOfSale)",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.askCompanyVehicleRegistrationBook)",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.askCompanyAdministrativeStatusCertificate)"
       },
       "issuedByCompanyAndPurchaser": {
-        "step1": "$t(nonAttachment.commonSteps.askCompany2StampedDeedsOfSale)",
-        "step2": "$t(nonAttachment.commonSteps.giveCompanyDeedOfSale)",
-        "step3": "$t(nonAttachment.commonSteps.askCompanyVehicleRegistrationBook)",
-        "step4": "$t(nonAttachment.commonSteps.askCompanyNonAttachmentCertificate)",
-        "step5": "$t(nonAttachment.commonSteps.companyKeepsTheirProofOfIdentity_{{numOfDirectors}})",
-        "step6": "$t(nonAttachment.commonSteps.companyKeepsReceipt)",
-        "directorProofStep": "$t(nonAttachment.commonSteps.companyKeepsDirectorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askCompany2StampedDeedsOfSale)",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.giveCompanyDeedOfSale)",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.askCompanyVehicleRegistrationBook)",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.askCompanyAdministrativeStatusCertificate)",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.companyKeepsTheirProofOfIdentity_{{numOfDirectors}})",
+        "step6": "$t(administrativeStatusCertificate.commonSteps.companyKeepsReceipt)",
+        "directorProofStep": "$t(administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
       }
     }
   },

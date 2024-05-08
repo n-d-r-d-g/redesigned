@@ -31,8 +31,8 @@ function RequiredDirectorNote() {
         p: <p className="col-start-2" />,
         em: <em className="font-bold text-green-800 dark:text-amber-400" />,
         NLTAAbbr: <Abbr name="nlta" />,
-        nonAttachmentCertificate: (
-          <TechnicalTerm name="nonAttachmentCertificate" />
+        AdministrativeStatusCertificate: (
+          <TechnicalTerm name="administrativeStatusCertificate" />
         ),
       }}
     />
@@ -41,9 +41,10 @@ function RequiredDirectorNote() {
 
 function ConditionalInstructions() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByCompany1 = values.nonAttachmentIssuer === "company1";
+  const isIssuedByCompany1 =
+    values.administrativeStatusCertificateIssuer === "company1";
   const isIssuedByCompany1AndCompany2 =
-    values.nonAttachmentIssuer === "company1AndCompany2";
+    values.administrativeStatusCertificateIssuer === "company1AndCompany2";
   const isPreparedByCompany1 = values.documentsPreparer === "company1";
   const isPreparedByCompany2 = values.documentsPreparer === "company2";
   const whetherDirectorIsRequired = retrieveDirectorRequiredI18nText(values);
@@ -788,8 +789,8 @@ export function PreparationSteps() {
               />
             ),
             NLTAAbbr: <Abbr name="nlta" />,
-            NonAttachmentCertificate: (
-              <TechnicalTerm name="nonAttachmentCertificate" />
+            AdministrativeStatusCertificate: (
+              <TechnicalTerm name="administrativeStatusCertificate" />
             ),
             DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
           }}
@@ -823,11 +824,11 @@ export function PreparationSteps() {
           <option value="no">{tCommon("no")}</option>
         </FormSelect>
         <FormSelect
-          name="nonAttachmentIssuer"
+          name="administrativeStatusCertificateIssuer"
           label={
             <TypedTrans
               ns="instructions-vehicle-transaction-2nd-hand-c2c-purchase-page"
-              i18nKey={"form.nonAttachmentIssuer.label"}
+              i18nKey={"form.administrativeStatusCertificateIssuer.label"}
               components={{
                 NLTAAbbr: <Abbr name="nlta" />,
               }}
@@ -837,13 +838,16 @@ export function PreparationSteps() {
           containerClassName="col-start-2 mt-2 leading-4"
         >
           <option value="company1">
-            {tCommon("nonAttachmentCertificateIssuers.vendor")}
+            {tCommon("administrativeStatusCertificateIssuers.vendor")}
           </option>
           <option value="company1AndCompany2">
-            {tCommon("nonAttachmentCertificateIssuers.vendorAndPurchaser", {
-              numOfVendors: "singleVendor",
-              numOfPurchasers: "singlePurchaser",
-            })}
+            {tCommon(
+              "administrativeStatusCertificateIssuers.vendorAndPurchaser",
+              {
+                numOfVendors: "singleVendor",
+                numOfPurchasers: "singlePurchaser",
+              },
+            )}
           </option>
         </FormSelect>
         <RequiredDirectorNote />

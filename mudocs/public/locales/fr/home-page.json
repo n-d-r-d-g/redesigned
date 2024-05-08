@@ -14,7 +14,7 @@
     "description": "Qui aime remplir des formulaires au stylo? Pas nous. Nous pensons que nous ne sommes pas les seuls. Nous avons donc créé les générateurs de documents ci-dessous.",
     "vehicles": {
       "title": "Générateurs de documents pour véhicules",
-      "nonAttachmentCertificateAuthorizationLetter": "Lettre d'autorisation - Certificat de non gage",
+      "administrativeStatusCertificateAuthorizationLetter": "Lettre d'autorisation - Certificat de non gage",
       "deedOfSale": "Acte de vente"
     }
   }

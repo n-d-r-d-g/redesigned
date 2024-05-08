@@ -18,8 +18,8 @@
     "step5": "<label>Deside ar lakerer kisanla pou al <NLTAAbbr /> pou tir papye gaz. Nu konseye ki lakerer ek vander al ansam, me li pa tultan posib akoz enn kapav pa lib. Si aster la inn aksepte al <NLTAAbbr /> tusel, ou bizin:<br /><ul><li>verifie ki ou siynatir lor bann papye de vant koresponn ekzakteman ar seki lor ou kart idantite uswa ou paspor, </li><li>kit ou kart idantite uswa ou paspor ar aster la, parski <NLTAAbbr /> pou bizin sa ek </li><li>remet aster la enn let otorizasyon ki ou kapav zenere atraver nu <AuthorizationLetterImportantLink>zenerater dokiman</AuthorizationLetterImportantLink>.</li></ul></label>",
     "leaveWithVehicle": "<p>Aprezan, lakerer kapav pran veikil la ale.</p>"
   },
-  "nonAttachment": {
-    "title": "<h2>Tir <NonAttachmentCertificate /></h2>",
+  "administrativeStatusCertificate": {
+    "title": "<h2>Tir <AdministrativeStatusCertificate /></h2>",
     "description": "<p>Sa dokiman la sertifye ki veikil kinn vande pa asosye ar okenn kontrint ki anpes so lavant (vol, pre, lopozisyon lavant, etc.).</p>",
     "issue": "<p>U kapav akerir sa dokiman la kot <NLTAContactLink>kartye zeneral uswa bann brans <NLTAAbbr /></NLTAContactLink>.</p>",
     "vendorRequiredSituations": {

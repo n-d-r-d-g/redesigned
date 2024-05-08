@@ -145,40 +145,42 @@ type TypedTransParams = {
     "documentsPreparers.purchaser_other"?: never;
     "documentsPreparers.company": { count: number };
     "documentsPreparers.company_other"?: never;
-    "nonAttachmentCertificateIssuers.vendor": { count: number };
-    "nonAttachmentCertificateIssuers.vendor_other"?: never;
-    "nonAttachmentCertificateIssuers.purchaser": { count: number };
-    "nonAttachmentCertificateIssuers.purchaser_other"?: never;
-    "nonAttachmentCertificateIssuers.company": { count: number };
-    "nonAttachmentCertificateIssuers.company_other"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser": {
+    "administrativeStatusCertificateIssuers.vendor": { count: number };
+    "administrativeStatusCertificateIssuers.vendor_other"?: never;
+    "administrativeStatusCertificateIssuers.purchaser": { count: number };
+    "administrativeStatusCertificateIssuers.purchaser_other"?: never;
+    "administrativeStatusCertificateIssuers.company": { count: number };
+    "administrativeStatusCertificateIssuers.company_other"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser": {
       numOfVendors: any;
       numOfPurchasers: any;
     };
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser_singleVendor_singlePurchaser"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser_singleVendor_multiplePurchasers"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser_multipleVendors_singlePurchaser"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser_multipleVendors_multiplePurchasers"?: never;
-    "nonAttachmentCertificateIssuers.vendorDelegate": { count: number };
-    "nonAttachmentCertificateIssuers.vendorDelegate_other"?: never;
-    "nonAttachmentCertificateIssuers.purchaserDelegate": { count: number };
-    "nonAttachmentCertificateIssuers.purchaserDelegate_other"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany": {
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser_singleVendor_singlePurchaser"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser_singleVendor_multiplePurchasers"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser_multipleVendors_singlePurchaser"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser_multipleVendors_multiplePurchasers"?: never;
+    "administrativeStatusCertificateIssuers.vendorDelegate": { count: number };
+    "administrativeStatusCertificateIssuers.vendorDelegate_other"?: never;
+    "administrativeStatusCertificateIssuers.purchaserDelegate": {
+      count: number;
+    };
+    "administrativeStatusCertificateIssuers.purchaserDelegate_other"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany": {
       numOfVendors: any;
       numOfDirectors: any;
     };
-    "nonAttachmentCertificateIssuers.vendorAndCompany_singleVendor_singleDirector"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany_singleVendor_multipleDirectors"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany_multipleVendors_singleDirector"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany_multipleVendors_multipleDirectors"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser": {
+    "administrativeStatusCertificateIssuers.vendorAndCompany_singleVendor_singleDirector"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany_singleVendor_multipleDirectors"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany_multipleVendors_singleDirector"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany_multipleVendors_multipleDirectors"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser": {
       numOfDirectors: any;
       numOfPurchasers: any;
     };
-    "nonAttachmentCertificateIssuers.companyAndPurchaser_singleDirector_singlePurchaser"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser_singleDirector_multiplePurchasers"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser_multipleDirectors_singlePurchaser"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser_multipleDirectors_multiplePurchasers"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser_singleDirector_singlePurchaser"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser_singleDirector_multiplePurchasers"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser_multipleDirectors_singlePurchaser"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser_multipleDirectors_multiplePurchasers"?: never;
     "paymentMethods.cash"?: never;
     "paymentMethods.check"?: never;
     "paymentMethods.creditCard"?: never;
@@ -195,6 +197,7 @@ type TypedTransParams = {
     headingStepID: { count: number };
     websiteBuiltBy?: never;
     websiteBuiltByTitle?: never;
+    githubLink?: never;
     "errors.required"?: never;
     "errors.arrayMin_one": { count: number };
     "errors.arrayMin": { count: number };
@@ -241,8 +244,8 @@ type TypedTransParams = {
     "technicalTerms.jack.title"?: never;
     "technicalTerms.lugWrench.label"?: never;
     "technicalTerms.lugWrench.title"?: never;
-    "technicalTerms.nonAttachmentCertificate.label"?: never;
-    "technicalTerms.nonAttachmentCertificate.title"?: never;
+    "technicalTerms.administrativeStatusCertificate.label"?: never;
+    "technicalTerms.administrativeStatusCertificate.title"?: never;
     "technicalTerms.powerOfAttorney.label"?: never;
     "technicalTerms.powerOfAttorney.title"?: never;
     "technicalTerms.proofOfAddress.label"?: never;
@@ -257,15 +260,15 @@ type TypedTransParams = {
     "technicalTerms.vehicleRegistrationBook.title"?: never;
   };
   "doc-gen-vehicle-page": {
-    "nonAttachmentCertificateAuthorizationLetter.title"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.i1ToI2": {
+    "administrativeStatusCertificateAuthorizationLetter.title"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToI2": {
       ownerCount: any;
       ownerNamesWithId: any;
       vehicleRegNum: any;
       vehicleMake: any;
       purchaserNamesWithId: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.i1ToD2": {
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToD2": {
       ownerCount: any;
       ownerNamesWithId: any;
       vehicleRegNum: any;
@@ -274,7 +277,7 @@ type TypedTransParams = {
       companyName: any;
       companyBRN: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.i1ToR2": {
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToR2": {
       ownerCount: any;
       ownerNamesWithId: any;
       vehicleRegNum: any;
@@ -284,14 +287,14 @@ type TypedTransParams = {
       companyName: any;
       companyBRN: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Single": {
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Single": {
       directorNameWithId: any;
       companyName: any;
       companyBRN: any;
       vehicleRegNum: any;
       vehicleMake: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Multiple": {
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Multiple": {
       nonRepresentingDirectorCount: any;
       nonRepresentingDirectorNamesWithId: any;
       companyName: any;
@@ -300,7 +303,7 @@ type TypedTransParams = {
       vehicleRegNum: any;
       vehicleMake: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToR1": {
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToR1": {
       directorCount: any;
       directorNamesWithId: any;
       companyName: any;
@@ -310,7 +313,7 @@ type TypedTransParams = {
       vehicleRegNum: any;
       vehicleMake: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToI2": {
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToI2": {
       directorCount: any;
       directorNamesWithId: any;
       companyName: any;
@@ -319,7 +322,7 @@ type TypedTransParams = {
       vehicleRegNum: any;
       vehicleMake: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToD2": {
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToD2": {
       vendorCompanyDirectorCount: any;
       vendorCompanyDirectorNamesWithId: any;
       vendorCompanyName: any;
@@ -330,7 +333,7 @@ type TypedTransParams = {
       vehicleRegNum: any;
       vehicleMake: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToR2": {
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToR2": {
       vendorCompanyDirectorCount: any;
       vendorCompanyDirectorNamesWithId: any;
       vendorCompanyName: any;
@@ -342,18 +345,18 @@ type TypedTransParams = {
       vehicleRegNum: any;
       vehicleMake: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.ownersWithId": {
+    "administrativeStatusCertificateAuthorizationLetter.ownersWithId": {
       namesWithId: any;
       count: number;
     };
-    "nonAttachmentCertificateAuthorizationLetter.ownersWithId_other": {
+    "administrativeStatusCertificateAuthorizationLetter.ownersWithId_other": {
       namesWithId: any;
     };
-    "nonAttachmentCertificateAuthorizationLetter.directorsWithId": {
+    "administrativeStatusCertificateAuthorizationLetter.directorsWithId": {
       namesWithId: any;
       count: number;
     };
-    "nonAttachmentCertificateAuthorizationLetter.directorsWithId_other": {
+    "administrativeStatusCertificateAuthorizationLetter.directorsWithId_other": {
       namesWithId: any;
     };
     "deedOfSale.title"?: never;
@@ -393,7 +396,7 @@ type TypedTransParams = {
     "documentGenerators.title"?: never;
     "documentGenerators.description"?: never;
     "documentGenerators.vehicles.title"?: never;
-    "documentGenerators.vehicles.nonAttachmentCertificateAuthorizationLetter"?: never;
+    "documentGenerators.vehicles.administrativeStatusCertificateAuthorizationLetter"?: never;
     "documentGenerators.vehicles.deedOfSale"?: never;
   };
   "instructions-vehicle-transaction-2nd-hand-c2c-purchase-page": {
@@ -406,7 +409,7 @@ type TypedTransParams = {
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
     "form.isVehicleRegistrationBookValid.label"?: never;
-    "form.nonAttachmentIssuer.label"?: never;
+    "form.administrativeStatusCertificateIssuer.label"?: never;
     "form.paymentMethod.label"?: never;
     "preparation.title"?: never;
     "preparation.commonSteps.askCompany1InfoPhotos_singleCompany1Director_directorRequired"?: never;
@@ -622,82 +625,82 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: never;
     "payment.leaveWithVehicle"?: never;
-    "nonAttachment.title"?: never;
-    "nonAttachment.description"?: never;
-    "nonAttachment.commonSteps.bring1DeedOfSale"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringAuthorizationLetter"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringProofOfIdentity_singleCompany1Director"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringProofOfIdentity_multipleCompany1Directors"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringRs50"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringDirectorProof_singleCompany1Director_directorRequired"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringDirectorProof_singleCompany1Director_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringDirectorProof_multipleCompany1Directors_directorRequired"?: never;
-    "nonAttachment.commonSteps.askCompany1ToBringDirectorProof_multipleCompany1Directors_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.askCompany12StampedDeedsOfSale"?: never;
-    "nonAttachment.commonSteps.askCompany1VehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.askCompany1NonAttachmentCertificate"?: never;
-    "nonAttachment.commonSteps.giveCompany1DeedOfSale"?: never;
-    "nonAttachment.commonSteps.company1KeepsTheirProofOfIdentity_singleCompany1Director"?: never;
-    "nonAttachment.commonSteps.company1KeepsTheirProofOfIdentity_multipleCompany1Directors"?: never;
-    "nonAttachment.commonSteps.company1KeepsReceipt"?: never;
-    "nonAttachment.commonSteps.company1KeepsDirectorProof_singleCompany1Director_directorRequired"?: never;
-    "nonAttachment.commonSteps.company1KeepsDirectorProof_singleCompany1Director_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.company1KeepsDirectorProof_multipleCompany1Directors_directorRequired"?: never;
-    "nonAttachment.commonSteps.company1KeepsDirectorProof_multipleCompany1Directors_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting"?: never;
-    "nonAttachment.commonItems.stampedDeedsOfSale"?: never;
-    "nonAttachment.commonItems.authorizationLetter"?: never;
-    "nonAttachment.commonItems.company1ProofOfIdentity_singleCompany1Director"?: never;
-    "nonAttachment.commonItems.company1ProofOfIdentity_multipleCompany1Directors"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificate"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt"?: never;
-    "nonAttachment.commonItems.directorProof_singleCompany1Director_directorRequired"?: never;
-    "nonAttachment.commonItems.directorProof_singleCompany1Director_directorNotRequired"?: never;
-    "nonAttachment.commonItems.directorProof_multipleCompany1Directors_directorRequired"?: never;
-    "nonAttachment.commonItems.directorProof_multipleCompany1Directors_directorNotRequired"?: never;
-    "nonAttachment.conditionalInstructions1.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement3": {
+    "administrativeStatusCertificate.title"?: never;
+    "administrativeStatusCertificate.description"?: never;
+    "administrativeStatusCertificate.commonSteps.bring1DeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringAuthorizationLetter"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringProofOfIdentity_singleCompany1Director"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringProofOfIdentity_multipleCompany1Directors"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringDirectorProof_singleCompany1Director_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringDirectorProof_singleCompany1Director_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringDirectorProof_multipleCompany1Directors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringDirectorProof_multipleCompany1Directors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany12StampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1VehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany1AdministrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonSteps.giveCompany1DeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.company1KeepsTheirProofOfIdentity_singleCompany1Director"?: never;
+    "administrativeStatusCertificate.commonSteps.company1KeepsTheirProofOfIdentity_multipleCompany1Directors"?: never;
+    "administrativeStatusCertificate.commonSteps.company1KeepsReceipt"?: never;
+    "administrativeStatusCertificate.commonSteps.company1KeepsDirectorProof_singleCompany1Director_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.company1KeepsDirectorProof_singleCompany1Director_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.company1KeepsDirectorProof_multipleCompany1Directors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.company1KeepsDirectorProof_multipleCompany1Directors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting"?: never;
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: never;
+    "administrativeStatusCertificate.commonItems.company1ProofOfIdentity_singleCompany1Director"?: never;
+    "administrativeStatusCertificate.commonItems.company1ProofOfIdentity_multipleCompany1Directors"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_singleCompany1Director_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_singleCompany1Director_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleCompany1Directors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleCompany1Directors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement3": {
       numOfCompany1Directors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.directorProofRequirement": {
-      numOfCompany1Directors: any;
-      whetherDirectorIsRequired: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement6"?: never;
-    "nonAttachment.conditionalInstructions2.description"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item3": {
-      numOfCompany1Directors: any;
-    };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.directorProofItem": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.directorProofRequirement": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.description"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step2"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step3"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step2"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step3"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step5": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item3": {
       numOfCompany1Directors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.directorProofStep": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.directorProofItem": {
+      numOfCompany1Directors: any;
+      whetherDirectorIsRequired: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step5": {
+      numOfCompany1Directors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.directorProofStep": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
@@ -713,7 +716,7 @@ type TypedTransParams = {
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
     "form.isVehicleRegistrationBookValid.label"?: never;
-    "form.nonAttachmentIssuer.label"?: never;
+    "form.administrativeStatusCertificateIssuer.label"?: never;
     "form.paymentMethod.label"?: never;
     "preparation.title"?: never;
     "preparation.commonSteps.askCompany2InfoPhotos_singleCompany2Director"?: never;
@@ -948,113 +951,113 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step6"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: never;
     "payment.leaveWithVehicle"?: never;
-    "nonAttachment.title"?: never;
-    "nonAttachment.description"?: never;
-    "nonAttachment.commonSteps.bring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleCompany1Director"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleCompany1Directors"?: never;
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.bringRs50"?: never;
-    "nonAttachment.commonSteps.bringDirectorProof_singleCompany1Director_directorRequired"?: never;
-    "nonAttachment.commonSteps.bringDirectorProof_singleCompany1Director_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.bringDirectorProof_multipleCompany1Directors_directorRequired"?: never;
-    "nonAttachment.commonSteps.bringDirectorProof_multipleCompany1Directors_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.askCompany2ToBringDeedOfSale"?: never;
-    "nonAttachment.commonSteps.askCompany2DeedOfSale"?: never;
-    "nonAttachment.commonSteps.giveCompany22StampedDeedsOfSale"?: never;
-    "nonAttachment.commonSteps.giveCompany2VehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.giveCompany2NonAttachmentCertificate"?: never;
-    "nonAttachment.commonSteps.keepProofOfIdentity_singleCompany1Director"?: never;
-    "nonAttachment.commonSteps.keepProofOfIdentity_multipleCompany1Directors"?: never;
-    "nonAttachment.commonSteps.keepReceipt"?: never;
-    "nonAttachment.commonSteps.keepDirectorProof_singleCompany1Director_directorRequired"?: never;
-    "nonAttachment.commonSteps.keepDirectorProof_multipleCompany1Directors_directorRequired"?: never;
-    "nonAttachment.commonSteps.keepDirectorProof_singleCompany1Director_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.keepDirectorProof_multipleCompany1Directors_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.askCompany2ToBringDeedOfSaleToMeeting"?: never;
-    "nonAttachment.commonItems.stampedDeedsOfSale"?: never;
-    "nonAttachment.commonItems.authorizationLetter"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singleCompany1Director"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multipleCompany1Directors"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificate"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt"?: never;
-    "nonAttachment.commonItems.directorProof_singleCompany1Director_directorRequired"?: never;
-    "nonAttachment.commonItems.directorProof_multipleCompany1Directors_directorRequired"?: never;
-    "nonAttachment.commonItems.directorProof_singleCompany1Director_directorNotRequired"?: never;
-    "nonAttachment.commonItems.directorProof_multipleCompany1Directors_directorNotRequired"?: never;
-    "nonAttachment.conditionalInstructions1.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement3": {
+    "administrativeStatusCertificate.title"?: never;
+    "administrativeStatusCertificate.description"?: never;
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleCompany1Director"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleCompany1Directors"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_singleCompany1Director_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_singleCompany1Director_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_multipleCompany1Directors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_multipleCompany1Directors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany2ToBringDeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany2DeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.giveCompany22StampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.giveCompany2VehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.giveCompany2AdministrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_singleCompany1Director"?: never;
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_multipleCompany1Directors"?: never;
+    "administrativeStatusCertificate.commonSteps.keepReceipt"?: never;
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_singleCompany1Director_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_multipleCompany1Directors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_singleCompany1Director_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_multipleCompany1Directors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany2ToBringDeedOfSaleToMeeting"?: never;
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleCompany1Director"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleCompany1Directors"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_singleCompany1Director_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleCompany1Directors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_singleCompany1Director_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleCompany1Directors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement3": {
       numOfCompany1Directors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.directorProofRequirement": {
-      numOfCompany1Directors: any;
-      whetherDirectorIsRequired: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement3": {
-      numOfCompany1Directors: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.directorProofRequirement": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.directorProofRequirement": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement6"?: never;
-    "nonAttachment.conditionalInstructions2.description"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement3": {
       numOfCompany1Directors: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.directorProofItem": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.directorProofRequirement": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item3": {
       numOfCompany1Directors: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.directorProofItem": {
-      numOfCompany1Directors: any;
-      whetherDirectorIsRequired: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.description"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step2"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step3"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step5"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step6": {
-      numOfCompany1Directors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.directorProofStep": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.directorProofItem": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step2"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step3"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step5"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item3": {
       numOfCompany1Directors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.directorProofStep": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.directorProofItem": {
+      numOfCompany1Directors: any;
+      whetherDirectorIsRequired: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step6": {
+      numOfCompany1Directors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.directorProofStep": {
+      numOfCompany1Directors: any;
+      whetherDirectorIsRequired: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step6": {
+      numOfCompany1Directors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.directorProofStep": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
@@ -1071,7 +1074,7 @@ type TypedTransParams = {
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
     "form.isVehicleRegistrationBookValid.label"?: never;
-    "form.nonAttachmentIssuer.label"?: never;
+    "form.administrativeStatusCertificateIssuer.label"?: never;
     "form.paymentMethod.label"?: never;
     "preparation.title"?: never;
     "preparation.commonSteps.askCompanyInfoPhotos_singleDirector_directorRequired"?: never;
@@ -1359,108 +1362,108 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.leaveWithVehicle"?: never;
-    "nonAttachment.title"?: never;
-    "nonAttachment.description"?: never;
-    "nonAttachment.commonSteps.bring1DeedOfSale"?: never;
-    "nonAttachment.commonSteps.bring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.bringRs50"?: never;
-    "nonAttachment.commonSteps.askCompanyToBring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringAuthorizationLetter"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringProofOfIdentity_singleDirector"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringProofOfIdentity_multipleDirectors"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringRs50"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringDirectorProof_singleDirector_directorRequired"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringDirectorProof_singleDirector_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringDirectorProof_multipleDirectors_directorRequired"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringDirectorProof_multipleDirectors_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.askCompany2StampedDeedsOfSale"?: never;
-    "nonAttachment.commonSteps.askCompanyVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.askCompanyNonAttachmentCertificate"?: never;
-    "nonAttachment.commonSteps.giveCompanyDeedOfSale"?: never;
-    "nonAttachment.commonSteps.companyKeepsTheirProofOfIdentity_singleDirector"?: never;
-    "nonAttachment.commonSteps.companyKeepsTheirProofOfIdentity_multipleDirectors"?: never;
-    "nonAttachment.commonSteps.companyKeepsReceipt"?: never;
-    "nonAttachment.commonSteps.companyKeepsDirectorProof_singleDirector_directorRequired"?: never;
-    "nonAttachment.commonSteps.companyKeepsDirectorProof_singleDirector_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.companyKeepsDirectorProof_multipleDirectors_directorRequired"?: never;
-    "nonAttachment.commonSteps.companyKeepsDirectorProof_multipleDirectors_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting"?: never;
-    "nonAttachment.commonItems.stampedDeedsOfSale"?: never;
-    "nonAttachment.commonItems.authorizationLetter"?: never;
-    "nonAttachment.commonItems.companyProofOfIdentity_singleDirector_directorRequired"?: never;
-    "nonAttachment.commonItems.companyProofOfIdentity_singleDirector_directorNotRequired"?: never;
-    "nonAttachment.commonItems.companyProofOfIdentity_multipleDirectors_directorRequired"?: never;
-    "nonAttachment.commonItems.companyProofOfIdentity_multipleDirectors_directorNotRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificate"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt"?: never;
-    "nonAttachment.commonItems.directorProof_singleDirector_directorRequired"?: never;
-    "nonAttachment.commonItems.directorProof_singleDirector_directorNotRequired"?: never;
-    "nonAttachment.commonItems.directorProof_multipleDirectors_directorRequired"?: never;
-    "nonAttachment.commonItems.directorProof_multipleDirectors_directorNotRequired"?: never;
-    "nonAttachment.conditionalInstructions1.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement3": {
+    "administrativeStatusCertificate.title"?: never;
+    "administrativeStatusCertificate.description"?: never;
+    "administrativeStatusCertificate.commonSteps.bring1DeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringAuthorizationLetter"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringProofOfIdentity_singleDirector"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringProofOfIdentity_multipleDirectors"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_singleDirector_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_singleDirector_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_multipleDirectors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_multipleDirectors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompany2StampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyAdministrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonSteps.giveCompanyDeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.companyKeepsTheirProofOfIdentity_singleDirector"?: never;
+    "administrativeStatusCertificate.commonSteps.companyKeepsTheirProofOfIdentity_multipleDirectors"?: never;
+    "administrativeStatusCertificate.commonSteps.companyKeepsReceipt"?: never;
+    "administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_singleDirector_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_singleDirector_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_multipleDirectors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_multipleDirectors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting"?: never;
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: never;
+    "administrativeStatusCertificate.commonItems.companyProofOfIdentity_singleDirector_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.companyProofOfIdentity_singleDirector_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.companyProofOfIdentity_multipleDirectors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.companyProofOfIdentity_multipleDirectors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_singleDirector_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_singleDirector_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleDirectors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleDirectors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement3": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement3": {
       numOfDirectors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.directorProofRequirement": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.directorProofRequirement": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement6"?: never;
-    "nonAttachment.conditionalInstructions2.description"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item3": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item3": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.directorProofItem": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.directorProofItem": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.description"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step2"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step3"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step2"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step3"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step5": {
       numOfDirectors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.directorProofStep": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.directorProofStep": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
@@ -1476,7 +1479,7 @@ type TypedTransParams = {
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
     "form.isVehicleRegistrationBookValid.label"?: never;
-    "form.nonAttachmentIssuer.label"?: never;
+    "form.administrativeStatusCertificateIssuer.label"?: never;
     "form.paymentMethod.label"?: never;
     "preparation.title"?: never;
     "preparation.commonSteps.askPurchaserInfoPhotos_singlePurchaser"?: never;
@@ -1872,143 +1875,143 @@ type TypedTransParams = {
     "payment.leaveWithVehicle": { numOfPurchasers: any };
     "payment.leaveWithVehicle_singlePurchaser"?: never;
     "payment.leaveWithVehicle__multiplePurchasers"?: never;
-    "nonAttachment.title"?: never;
-    "nonAttachment.description"?: never;
-    "nonAttachment.commonSteps.bring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleDirector"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleDirectors"?: never;
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.bringRs50"?: never;
-    "nonAttachment.commonSteps.bringDirectorProof_singleDirector_directorRequired"?: never;
-    "nonAttachment.commonSteps.bringDirectorProof_singleDirector_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.bringDirectorProof_multipleDirectors_directorRequired"?: never;
-    "nonAttachment.commonSteps.bringDirectorProof_multipleDirectors_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSale_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSale_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.askPurchaserDeedOfSale_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askPurchaserDeedOfSale_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.keepProofOfIdentity_singleDirector"?: never;
-    "nonAttachment.commonSteps.keepProofOfIdentity_multipleDirectors"?: never;
-    "nonAttachment.commonSteps.keepReceipt"?: never;
-    "nonAttachment.commonSteps.keepDirectorProof_singleDirector_directorRequired"?: never;
-    "nonAttachment.commonSteps.keepDirectorProof_multipleDirectors_directorRequired"?: never;
-    "nonAttachment.commonSteps.keepDirectorProof_singleDirector_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.keepDirectorProof_multipleDirectors_directorNotRequired"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers"?: never;
-    "nonAttachment.commonItems.stampedDeedsOfSale"?: never;
-    "nonAttachment.commonItems.authorizationLetter"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singleDirector_directorRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singleDirector_directorNotRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multipleDirectors_directorRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multipleDirectors_directorNotRequired"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificate"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt"?: never;
-    "nonAttachment.commonItems.directorProof_singleDirector_directorRequired"?: never;
-    "nonAttachment.commonItems.directorProof_singleDirector_directorNotRequired"?: never;
-    "nonAttachment.commonItems.directorProof_multipleDirectors_directorRequired"?: never;
-    "nonAttachment.commonItems.directorProof_multipleDirectors_directorNotRequired"?: never;
-    "nonAttachment.conditionalInstructions1.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement3": {
+    "administrativeStatusCertificate.title"?: never;
+    "administrativeStatusCertificate.description"?: never;
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleDirector"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleDirectors"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_singleDirector_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_singleDirector_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_multipleDirectors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_multipleDirectors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSale_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSale_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_singleDirector"?: never;
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_multipleDirectors"?: never;
+    "administrativeStatusCertificate.commonSteps.keepReceipt"?: never;
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_singleDirector_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_multipleDirectors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_singleDirector_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_multipleDirectors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleDirector_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleDirector_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleDirectors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleDirectors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_singleDirector_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_singleDirector_directorNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleDirectors_directorRequired"?: never;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleDirectors_directorNotRequired"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement3": {
       numOfDirectors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.directorProofRequirement": {
-      numOfDirectors: any;
-      whetherDirectorIsRequired: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement3": {
-      numOfDirectors: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.directorProofRequirement": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.directorProofRequirement": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement6": {
-      numOfPurchasers: any;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement3": {
+      numOfDirectors: any;
     };
-    "nonAttachment.conditionalInstructions2.description"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.directorProofRequirement": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.directorProofItem": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement6": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item3": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.directorProofItem": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.directorProofItem": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item3": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.description": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step1": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step2": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step3": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step4": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step5": {
-      numOfDirectors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany.directorProofStep": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.directorProofItem": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.description": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step1": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step2": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step3": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step4": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step5": {
       numOfDirectors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.directorProofStep": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.directorProofStep": {
+      numOfDirectors: any;
+      whetherDirectorIsRequired: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step1": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step2": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step3": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step4": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step5": {
+      numOfDirectors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.directorProofStep": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
@@ -2029,7 +2032,7 @@ type TypedTransParams = {
     "form.directorHasOriginalID.label_other"?: never;
     "form.vendorNameMatches.label": { count: number };
     "form.vendorNameMatches.label_other"?: never;
-    "form.nonAttachmentIssuer.label"?: never;
+    "form.administrativeStatusCertificateIssuer.label"?: never;
     "form.paymentMethod.label"?: never;
     "preparation.title"?: never;
     "preparation.commonSteps.askVendorProofOfIdentity_singleVendor"?: never;
@@ -2434,141 +2437,141 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7"?: never;
     "payment.leaveWithVehicle"?: never;
-    "nonAttachment.title"?: never;
-    "nonAttachment.description"?: never;
-    "nonAttachment.commonSteps.bring1DeedOfSale"?: never;
-    "nonAttachment.commonSteps.bring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: never;
-    "nonAttachment.commonSteps.bringVendorProofOfIdentity_singleVendor"?: never;
-    "nonAttachment.commonSteps.bringVendorProofOfIdentity_multipleVendors"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity"?: never;
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.bringRs50"?: never;
-    "nonAttachment.commonSteps.askVendorToBring2DeedsOfSale_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorToBring2DeedsOfSale_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.askVendorToBringVehicleRegistrationBook_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorToBringVehicleRegistrationBook_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorToBringBRNPhotocopy_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorToBringBRNPhotocopy_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorToBringRs50_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorToBringRs50_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendor2StampedDeedsOfSale_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendor2StampedDeedsOfSale_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorVehicleRegistrationBook_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorNonAttachmentCertificate_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorNonAttachmentCertificate_multipleVendors"?: never;
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting_singleVendor"?: never;
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting_multipleVendors"?: never;
-    "nonAttachment.commonSteps.giveVendorDeedOfSale_singleVendor"?: never;
-    "nonAttachment.commonSteps.giveVendorDeedOfSale_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorVehicleRegistrationBook_singleVendor"?: never;
-    "nonAttachment.commonSteps.giveVendorTheirProofOfIdentityBack_singleVendor"?: never;
-    "nonAttachment.commonSteps.giveVendorTheirProofOfIdentityBack_multipleVendors"?: never;
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.vendorKeepsReceipt_singleVendor"?: never;
-    "nonAttachment.commonSteps.vendorKeepsReceipt_multipleVendors"?: never;
-    "nonAttachment.commonItems.stampedDeedsOfSale"?: never;
-    "nonAttachment.commonItems.authorizationLetter"?: never;
-    "nonAttachment.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificate"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt"?: never;
-    "nonAttachment.conditionalInstructions1.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement3": {
+    "administrativeStatusCertificate.title"?: never;
+    "administrativeStatusCertificate.description"?: never;
+    "administrativeStatusCertificate.commonSteps.bring1DeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringBRNPhotocopy_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringBRNPhotocopy_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringRs50_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringRs50_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: never;
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement3": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement6"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement1": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement2": {
-      numOfVendors: any;
-      whetherVendorNameProofIsRequired: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement3": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement4": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement5": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.description"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement2": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item7"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement3": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.description_singleVendor"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.description_multipleVendors"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item2": {
-      numOfVendors: any;
-      whetherVendorNameProofIsRequired: any;
-    };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item3"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item5"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement4": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement5": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step2": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step3": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step4": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step1": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step1": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step2": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step3": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step4": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step5": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item3": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item7"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.description": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.description_singleVendor"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.description_multipleVendors"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item2": {
+      numOfVendors: any;
+      whetherVendorNameProofIsRequired: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.description": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step1": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step2": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step3": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step4": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step1": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step1": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step2": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step3": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step4": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step5": {
+      numOfVendors: any;
+      whetherVendorNameProofIsRequired: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step6": {
       numOfVendors: any;
     };
     endingNote?: never;
@@ -2585,7 +2588,7 @@ type TypedTransParams = {
     "form.directorHasOriginalID.label_other"?: never;
     "form.vendorNameMatches.label": { count: number };
     "form.vendorNameMatches.label_other"?: never;
-    "form.nonAttachmentIssuer.label"?: never;
+    "form.administrativeStatusCertificateIssuer.label"?: never;
     "form.paymentMethod.label"?: never;
     "preparation.title"?: never;
     "preparation.commonSteps.askCompanyRepresentativeProofOfIdentityPhoto"?: never;
@@ -2886,95 +2889,95 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7"?: never;
     "payment.leaveWithVehicle"?: never;
-    "nonAttachment.title"?: never;
-    "nonAttachment.description"?: never;
-    "nonAttachment.commonSteps.bring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.bringCompanyBRNPhotocopy"?: never;
-    "nonAttachment.commonSteps.bringRs50"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringDeedOfSale"?: never;
-    "nonAttachment.commonSteps.askCompanyDeedOfSale"?: never;
-    "nonAttachment.commonSteps.giveCompany2StampedDeedsOfSale"?: never;
-    "nonAttachment.commonSteps.giveCompanyVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.giveCompanyNonAttachmentCertificate"?: never;
-    "nonAttachment.commonSteps.keepProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.keepProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.keepProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.keepProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.keepReceipt"?: never;
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_singleVendor"?: never;
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askCompanyToBringDeedOfSaleToMeeting"?: never;
-    "nonAttachment.commonItems.stampedDeedsOfSale"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificate"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement2": {
+    "administrativeStatusCertificate.title"?: never;
+    "administrativeStatusCertificate.description"?: never;
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.bringCompanyBRNPhotocopy"?: never;
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyDeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.giveCompany2StampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.giveCompanyVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.giveCompanyAdministrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepReceipt"?: never;
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDeedOfSaleToMeeting"?: never;
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement2": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement3"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement2": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement3"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement6"?: never;
-    "nonAttachment.conditionalInstructions2.description"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item2": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item3"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item2": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item2": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item3"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item5"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.description"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step2"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step3"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step5": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step1": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step2"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step3"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step5": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step6"?: never;
     informInsurance?: never;
     endingNote?: never;
   };
@@ -2997,7 +3000,7 @@ type TypedTransParams = {
     "form.vendorAndPurchaserAreRelated.label_multipleVendors_multiplePurchasers"?: never;
     "form.vendorNameMatches.label": { count: number };
     "form.vendorNameMatches.label_other"?: never;
-    "form.nonAttachmentIssuer.label"?: never;
+    "form.administrativeStatusCertificateIssuer.label"?: never;
     "form.paymentMethod.label"?: never;
     "preparation.title"?: never;
     "preparation.commonSteps.askPurchaserDelegateProofOfIdentity"?: never;
@@ -3568,216 +3571,216 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step6"?: never;
     "payment.leaveWithVehicle"?: never;
-    "nonAttachment.title"?: never;
-    "nonAttachment.description"?: never;
-    "nonAttachment.commonSteps.bring1DeedOfSale"?: never;
-    "nonAttachment.commonSteps.bring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting_singleVendor"?: never;
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting_multipleVendors"?: never;
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.bringVendorProofOfIdentity_singleVendor"?: never;
-    "nonAttachment.commonSteps.bringVendorProofOfIdentity_multipleVendors"?: never;
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.bringRs50"?: never;
-    "nonAttachment.commonSteps.askVendorToBring2DeedsOfSale_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorToBring2DeedsOfSale_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.askVendorToBringVehicleRegistrationBook_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorToBringVehicleRegistrationBook_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorToBringRs50_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorToBringRs50_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendor2StampedDeedsOfSale_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendor2StampedDeedsOfSale_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorPurchaserProofOfIdentity_singleVendor_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askVendorPurchaserProofOfIdentity_singleVendor_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.askVendorPurchaserProofOfIdentity_multipleVendors_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askVendorPurchaserProofOfIdentity_multipleVendors_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.askVendorVehicleRegistrationBook_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorVehicleRegistrationBook_multipleVendors"?: never;
-    "nonAttachment.commonSteps.askVendorNonAttachmentCertificate_singleVendor"?: never;
-    "nonAttachment.commonSteps.askVendorNonAttachmentCertificate_multipleVendors"?: never;
-    "nonAttachment.commonSteps.giveDelegate2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.giveDelegateAuthorizationLetter"?: never;
-    "nonAttachment.commonSteps.giveDelegateVendorProofOfIdentity_singleVendor"?: never;
-    "nonAttachment.commonSteps.giveDelegateVendorProofOfIdentity_multipleVendors"?: never;
-    "nonAttachment.commonSteps.giveDelegateProofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.giveDelegateProofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.giveDelegateVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.giveDelegateRs50"?: never;
-    "nonAttachment.commonSteps.giveDelegatePowerOfAttorney"?: never;
-    "nonAttachment.commonSteps.giveDelegatePowerOfAttorneyCopy"?: never;
-    "nonAttachment.commonSteps.delegateBringsProofOfIdentity"?: never;
-    "nonAttachment.commonSteps.giveVendorDeedOfSale_singleVendor"?: never;
-    "nonAttachment.commonSteps.giveVendorDeedOfSale_multipleVendors"?: never;
-    "nonAttachment.commonSteps.giveVendorTheirProofOfIdentityBack_singleVendor"?: never;
-    "nonAttachment.commonSteps.giveVendorTheirProofOfIdentityBack_multipleVendors"?: never;
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.vendorKeepsReceipt_singleVendor"?: never;
-    "nonAttachment.commonSteps.vendorKeepsReceipt_multipleVendors"?: never;
-    "nonAttachment.commonItems.stampedDeedsOfSale"?: never;
-    "nonAttachment.commonItems.authorizationLetter"?: never;
-    "nonAttachment.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificate"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement3": {
+    "administrativeStatusCertificate.title"?: never;
+    "administrativeStatusCertificate.description"?: never;
+    "administrativeStatusCertificate.commonSteps.bring1DeedOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringRs50_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorToBringRs50_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_singleVendor_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_singleVendor_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_multipleVendors_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_multipleVendors_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegate2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateAuthorizationLetter"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateVendorProofOfIdentity_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateVendorProofOfIdentity_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorney"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorneyCopy"?: never;
+    "administrativeStatusCertificate.commonSteps.delegateBringsProofOfIdentity"?: never;
+    "administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: never;
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement3": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement4": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement4": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement6"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement1": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement2": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement3": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement4": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement4": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement5": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement5": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement6"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement2"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement3": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement4": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement4": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement6"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement7"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement8"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement9"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.description"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item2"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement7"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement8"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement9"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item2"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item3": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item4": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item7"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.description": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item7"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.description": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.description_singleVendor"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.description_multipleVendors"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item2": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.description_singleVendor"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.description_multipleVendors"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item2": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item3": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.description": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step1": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step2": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step3": {
-      numOfVendors: any;
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step4": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step5": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaser.step1": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step1": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step2": {
-      numOfVendors: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step3": {
       numOfVendors: any;
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step4": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step5": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaser.step1": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step1": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step2": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step3": {
+      numOfVendors: any;
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step4": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step5": {
+      numOfVendors: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step6": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step7": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step7": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step1": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step2": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step3": {
       numOfVendors: any;
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step4": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step5": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.description"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item2": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item3": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item5"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.step1": {
       numOfVendors: any;
     };
     endingNote?: never;
@@ -3801,7 +3804,7 @@ type TypedTransParams = {
     "form.vendorAndPurchaserAreRelated.label_multipleVendors_multiplePurchasers"?: never;
     "form.vendorNameMatches.label": { count: number };
     "form.vendorNameMatches.label_other"?: never;
-    "form.nonAttachmentIssuer.label"?: never;
+    "form.administrativeStatusCertificateIssuer.label"?: never;
     "form.paymentMethod.label"?: never;
     "preparation.title"?: never;
     "preparation.commonSteps.askPurchaserInfoPhotos_singlePurchaser"?: never;
@@ -4353,205 +4356,205 @@ type TypedTransParams = {
     "payment.leaveWithVehicle": { numOfPurchasers: any };
     "payment.leaveWithVehicle_singlePurchaser"?: never;
     "payment.leaveWithVehicle_multiplePurchasers"?: never;
-    "nonAttachment.title"?: never;
-    "nonAttachment.description"?: never;
-    "nonAttachment.commonSteps.bring2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.bringPurchaserProofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.bringPurchaserProofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.bringDelegateProofOfIdentity"?: never;
-    "nonAttachment.commonSteps.bringRs50"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBringProofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBringProofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBring1DeedOfSale_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBring1DeedOfSale_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.askPurchaserDeedOfSale_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askPurchaserDeedOfSale_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.givePurchaserTheirProofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.givePurchaserTheirProofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.giveDelegate2DeedsOfSale"?: never;
-    "nonAttachment.commonSteps.giveDelegatePurchaserProofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.giveDelegatePurchaserProofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.giveDelegateProofOfIdentity_singleVendor"?: never;
-    "nonAttachment.commonSteps.giveDelegateProofOfIdentity_multipleVendors"?: never;
-    "nonAttachment.commonSteps.giveDelegateVehicleRegistrationBook"?: never;
-    "nonAttachment.commonSteps.giveDelegateRs50"?: never;
-    "nonAttachment.commonSteps.giveDelegatePowerOfAttorney"?: never;
-    "nonAttachment.commonSteps.giveDelegatePowerOfAttorneyCopy"?: never;
-    "nonAttachment.commonSteps.delegateBringsProofOfIdentity"?: never;
-    "nonAttachment.commonSteps.keepVendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.keepVendorProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.keepVendorProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonSteps.keepVendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonSteps.keepReceipt"?: never;
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_singleVendor_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_singleVendor_multiplePurchasers"?: never;
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_multipleVendors_singlePurchaser"?: never;
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_multipleVendors_multiplePurchasers"?: never;
-    "nonAttachment.commonItems.stampedDeedsOfSale"?: never;
-    "nonAttachment.commonItems.purchaserProofOfIdentity_singlePurchaser"?: never;
-    "nonAttachment.commonItems.purchaserProofOfIdentity_multiplePurchasers"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
-    "nonAttachment.commonItems.proofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificate"?: never;
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement2": {
+    "administrativeStatusCertificate.title"?: never;
+    "administrativeStatusCertificate.description"?: never;
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.bringPurchaserProofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.bringPurchaserProofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.bringDelegateProofOfIdentity"?: never;
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringProofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringProofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBring1DeedOfSale_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBring1DeedOfSale_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserTheirProofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserTheirProofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegate2DeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegatePurchaserProofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegatePurchaserProofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_singleVendor"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_multipleVendors"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateVehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegateRs50"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorney"?: never;
+    "administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorneyCopy"?: never;
+    "administrativeStatusCertificate.commonSteps.delegateBringsProofOfIdentity"?: never;
+    "administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonSteps.keepReceipt"?: never;
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_singleVendor_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_singleVendor_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_multipleVendors_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_multipleVendors_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale"?: never;
+    "administrativeStatusCertificate.commonItems.purchaserProofOfIdentity_singlePurchaser"?: never;
+    "administrativeStatusCertificate.commonItems.purchaserProofOfIdentity_multiplePurchasers"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleVendor_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleVendor_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleVendors_vendorNameProofRequired"?: never;
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleVendors_vendorNameProofNotRequired"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate"?: never;
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement2": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement3": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement2": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement3"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement5": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement3"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement5": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement6": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement6": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.description"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement1"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement2": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement3": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement4"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement5"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement6"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement7"?: never;
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement8"?: never;
-    "nonAttachment.conditionalInstructions2.description"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement7"?: never;
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement8"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.description"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item2": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item3": {
-      numOfVendors: any;
-      whetherVendorNameProofIsRequired: any;
-    };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item6"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item1"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item2": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item3": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item4"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item5"?: never;
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item2": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step1": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step2": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step3": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step4": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step5": {
-      numOfPurchasers: any;
-    };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item3": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step7"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByPurchaser.step1": {
-      numOfVendors: any;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.description": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step1": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step2": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step3": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step4": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step5": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step6": {
       numOfVendors: any;
       whetherVendorNameProofIsRequired: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step7"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.description1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item1"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step7"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaser.step1": {
+      numOfVendors: any;
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step1": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step2": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step3": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step4": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step5": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step6": {
+      numOfVendors: any;
+      whetherVendorNameProofIsRequired: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step7"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.description1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item1"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item2": {
+      numOfPurchasers: any;
+    };
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item3": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item4"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item5"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item6"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.description2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item4"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item5"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item6"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.description2": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step1": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step2": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step3": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step4": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step5": {
       numOfPurchasers: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step6": {
       numOfVendors: any;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step7"?: never;
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step7"?: never;
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.step1": {
       numOfVendors: any;
       numOfPurchasers: any;
     };
@@ -4816,31 +4819,31 @@ type TypedTransComponents = {
     "documentsPreparers.purchaser_other"?: never;
     "documentsPreparers.company"?: never;
     "documentsPreparers.company_other"?: never;
-    "nonAttachmentCertificateIssuers.vendor"?: never;
-    "nonAttachmentCertificateIssuers.vendor_other"?: never;
-    "nonAttachmentCertificateIssuers.purchaser"?: never;
-    "nonAttachmentCertificateIssuers.purchaser_other"?: never;
-    "nonAttachmentCertificateIssuers.company"?: never;
-    "nonAttachmentCertificateIssuers.company_other"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser_singleVendor_singlePurchaser"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser_singleVendor_multiplePurchasers"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser_multipleVendors_singlePurchaser"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndPurchaser_multipleVendors_multiplePurchasers"?: never;
-    "nonAttachmentCertificateIssuers.vendorDelegate"?: never;
-    "nonAttachmentCertificateIssuers.vendorDelegate_other"?: never;
-    "nonAttachmentCertificateIssuers.purchaserDelegate"?: never;
-    "nonAttachmentCertificateIssuers.purchaserDelegate_other"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany_singleVendor_singleDirector"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany_singleVendor_multipleDirectors"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany_multipleVendors_singleDirector"?: never;
-    "nonAttachmentCertificateIssuers.vendorAndCompany_multipleVendors_multipleDirectors"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser_singleDirector_singlePurchaser"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser_singleDirector_multiplePurchasers"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser_multipleDirectors_singlePurchaser"?: never;
-    "nonAttachmentCertificateIssuers.companyAndPurchaser_multipleDirectors_multiplePurchasers"?: never;
+    "administrativeStatusCertificateIssuers.vendor"?: never;
+    "administrativeStatusCertificateIssuers.vendor_other"?: never;
+    "administrativeStatusCertificateIssuers.purchaser"?: never;
+    "administrativeStatusCertificateIssuers.purchaser_other"?: never;
+    "administrativeStatusCertificateIssuers.company"?: never;
+    "administrativeStatusCertificateIssuers.company_other"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser_singleVendor_singlePurchaser"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser_singleVendor_multiplePurchasers"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser_multipleVendors_singlePurchaser"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndPurchaser_multipleVendors_multiplePurchasers"?: never;
+    "administrativeStatusCertificateIssuers.vendorDelegate"?: never;
+    "administrativeStatusCertificateIssuers.vendorDelegate_other"?: never;
+    "administrativeStatusCertificateIssuers.purchaserDelegate"?: never;
+    "administrativeStatusCertificateIssuers.purchaserDelegate_other"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany_singleVendor_singleDirector"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany_singleVendor_multipleDirectors"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany_multipleVendors_singleDirector"?: never;
+    "administrativeStatusCertificateIssuers.vendorAndCompany_multipleVendors_multipleDirectors"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser_singleDirector_singlePurchaser"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser_singleDirector_multiplePurchasers"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser_multipleDirectors_singlePurchaser"?: never;
+    "administrativeStatusCertificateIssuers.companyAndPurchaser_multipleDirectors_multiplePurchasers"?: never;
     "paymentMethods.cash"?: never;
     "paymentMethods.check"?: never;
     "paymentMethods.creditCard"?: never;
@@ -4861,6 +4864,7 @@ type TypedTransComponents = {
       GithubLink: JSX.Element;
     };
     websiteBuiltByTitle?: never;
+    githubLink?: never;
     "errors.required"?: never;
     "errors.arrayMin_one"?: never;
     "errors.arrayMin"?: never;
@@ -4907,8 +4911,8 @@ type TypedTransComponents = {
     "technicalTerms.jack.title": { MU: JSX.Element };
     "technicalTerms.lugWrench.label"?: never;
     "technicalTerms.lugWrench.title": { MU: JSX.Element };
-    "technicalTerms.nonAttachmentCertificate.label"?: never;
-    "technicalTerms.nonAttachmentCertificate.title": { FR: JSX.Element };
+    "technicalTerms.administrativeStatusCertificate.label"?: never;
+    "technicalTerms.administrativeStatusCertificate.title": { FR: JSX.Element };
     "technicalTerms.powerOfAttorney.label"?: never;
     "technicalTerms.powerOfAttorney.title"?: never;
     "technicalTerms.proofOfAddress.label"?: never;
@@ -4923,20 +4927,20 @@ type TypedTransComponents = {
     "technicalTerms.vehicleRegistrationBook.title"?: never;
   };
   "doc-gen-vehicle-page": {
-    "nonAttachmentCertificateAuthorizationLetter.title"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.i1ToI2"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.i1ToD2"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.i1ToR2"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Single"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Multiple"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToR1"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToI2"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToD2"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.pagePreviewBody.c1ToR2"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.ownersWithId"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.ownersWithId_other"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.directorsWithId"?: never;
-    "nonAttachmentCertificateAuthorizationLetter.directorsWithId_other"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.title"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToI2"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToD2"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToR2"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Single"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Multiple"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToR1"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToI2"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToD2"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToR2"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.ownersWithId"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.ownersWithId_other"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.directorsWithId"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.directorsWithId_other"?: never;
     "deedOfSale.title"?: never;
     "deedOfSale.pagePreviewPrimaryBody"?: never;
     "deedOfSale.pagePreviewSecondaryBody"?: never;
@@ -4966,7 +4970,7 @@ type TypedTransComponents = {
     "documentGenerators.title"?: never;
     "documentGenerators.description"?: never;
     "documentGenerators.vehicles.title"?: never;
-    "documentGenerators.vehicles.nonAttachmentCertificateAuthorizationLetter"?: never;
+    "documentGenerators.vehicles.administrativeStatusCertificateAuthorizationLetter"?: never;
     "documentGenerators.vehicles.deedOfSale"?: never;
   };
   "instructions-vehicle-transaction-2nd-hand-c2c-purchase-page": {
@@ -4979,7 +4983,7 @@ type TypedTransComponents = {
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
     "form.isVehicleRegistrationBookValid.label"?: never;
-    "form.nonAttachmentIssuer.label": {
+    "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
@@ -5058,19 +5062,19 @@ type TypedTransComponents = {
     "preparation.requiredDirectorNote": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.requiredDirectorNote_singleCompany1Director": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.requiredDirectorNote_multipleCompany1Directors": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.step1"?: { label?: JSX.Element };
@@ -5078,7 +5082,7 @@ type TypedTransComponents = {
     "preparation.step3": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.conditionalInstructions.issuedByCompany1.preparedByCompany1.step1": {
@@ -5609,235 +5613,237 @@ type TypedTransComponents = {
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.title": {
+    "administrativeStatusCertificate.title": {
       h2?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.description": {
+    "administrativeStatusCertificate.description": {
       p?: JSX.Element;
       NLTAContactLink: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring1DeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring1DeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBringAuthorizationLetter"?: {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringAuthorizationLetter"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBringProofOfIdentity_singleCompany1Director": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.askCompany1ToBringProofOfIdentity_multipleCompany1Directors": {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringProofOfIdentity_singleCompany1Director": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringProofOfIdentity_multipleCompany1Directors": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBringRs50"?: {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringRs50"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBringDirectorProof_singleCompany1Director_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringDirectorProof_singleCompany1Director_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBringDirectorProof_singleCompany1Director_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringDirectorProof_singleCompany1Director_directorNotRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBringDirectorProof_multipleCompany1Directors_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringDirectorProof_multipleCompany1Directors_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1ToBringDirectorProof_multipleCompany1Directors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askCompany1ToBringDirectorProof_multipleCompany1Directors_directorNotRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany12StampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.askCompany12StampedDeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1VehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.askCompany1VehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany1NonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonSteps.askCompany1AdministrativeStatusCertificate": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveCompany1DeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.giveCompany1DeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.company1KeepsTheirProofOfIdentity_singleCompany1Director": {
+    "administrativeStatusCertificate.commonSteps.company1KeepsTheirProofOfIdentity_singleCompany1Director": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.company1KeepsTheirProofOfIdentity_multipleCompany1Directors": {
+    "administrativeStatusCertificate.commonSteps.company1KeepsTheirProofOfIdentity_multipleCompany1Directors": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.company1KeepsReceipt": {
+    "administrativeStatusCertificate.commonSteps.company1KeepsReceipt": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.company1KeepsDirectorProof_singleCompany1Director_directorRequired"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.commonSteps.company1KeepsDirectorProof_singleCompany1Director_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.company1KeepsDirectorProof_singleCompany1Director_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.company1KeepsDirectorProof_multipleCompany1Directors_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.company1KeepsDirectorProof_singleCompany1Director_directorNotRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.company1KeepsDirectorProof_multipleCompany1Directors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.company1KeepsDirectorProof_multipleCompany1Directors_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting": {
+    "administrativeStatusCertificate.commonSteps.company1KeepsDirectorProof_multipleCompany1Directors_directorNotRequired"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.stampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.authorizationLetter"?: { li?: JSX.Element };
-    "nonAttachment.commonItems.company1ProofOfIdentity_singleCompany1Director": {
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.company1ProofOfIdentity_singleCompany1Director": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.company1ProofOfIdentity_multipleCompany1Directors"?: never;
-    "nonAttachment.commonItems.vehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonItems.company1ProofOfIdentity_multipleCompany1Directors"?: never;
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_singleCompany1Director_directorRequired"?: {
-      li?: JSX.Element;
-    };
-    "nonAttachment.commonItems.directorProof_singleCompany1Director_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_singleCompany1Director_directorRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_multipleCompany1Directors_directorRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_singleCompany1Director_directorNotRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_multipleCompany1Directors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_multipleCompany1Directors_directorRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.description": {
-      p?: JSX.Element;
-      NLTAAbbr: JSX.Element;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleCompany1Directors_directorNotRequired"?: {
+      li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement2"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.directorProofRequirement"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement6": {
-      label?: JSX.Element;
-      DeedOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions2.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement2"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement3": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement4": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.directorProofRequirement"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement6": {
+      label?: JSX.Element;
+      DeedOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.description": {
+      p?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.directorProofItem"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.directorProofItem"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.description": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step6": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.directorProofStep"?: {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.directorProofStep"?: {
       label?: JSX.Element;
     };
     endingNote?: { p?: JSX.Element };
@@ -5852,7 +5858,7 @@ type TypedTransComponents = {
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
     "form.isVehicleRegistrationBookValid.label"?: never;
-    "form.nonAttachmentIssuer.label": {
+    "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
@@ -5946,19 +5952,19 @@ type TypedTransComponents = {
     "preparation.requiredDirectorNote": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.requiredDirectorNote_singleCompany1Director": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.requiredDirectorNote_multipleCompany1Directors": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.step1"?: { label?: JSX.Element };
@@ -5966,7 +5972,7 @@ type TypedTransComponents = {
     "preparation.step3": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.conditionalInstructions.issuedByCompany1.preparedByCompany1.step1": {
@@ -6537,294 +6543,298 @@ type TypedTransComponents = {
       label?: JSX.Element;
     };
     "payment.leaveWithVehicle"?: { p?: JSX.Element };
-    "nonAttachment.title": {
+    "administrativeStatusCertificate.title": {
       h2?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.description": {
+    "administrativeStatusCertificate.description": {
       p?: JSX.Element;
       NLTAContactLink: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: {
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleCompany1Director": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleCompany1Directors": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleCompany1Director": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleCompany1Directors": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.bringDirectorProof_singleCompany1Director_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDirectorProof_singleCompany1Director_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_singleCompany1Director_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDirectorProof_multipleCompany1Directors_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_singleCompany1Director_directorNotRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDirectorProof_multipleCompany1Directors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_multipleCompany1Directors_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany2ToBringDeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_multipleCompany1Directors_directorNotRequired"?: {
       label?: JSX.Element;
-      DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany2DeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.askCompany2ToBringDeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveCompany22StampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.askCompany2DeedOfSale": {
+      label?: JSX.Element;
+      DeedOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.giveCompany22StampedDeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveCompany2VehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.giveCompany2VehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveCompany2NonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonSteps.giveCompany2AdministrativeStatusCertificate": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepProofOfIdentity_singleCompany1Director": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.keepProofOfIdentity_multipleCompany1Directors": {
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_singleCompany1Director": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepReceipt": {
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_multipleCompany1Directors": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepDirectorProof_singleCompany1Director_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.keepReceipt": {
       label?: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepDirectorProof_multipleCompany1Directors_directorRequired"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.commonSteps.keepDirectorProof_singleCompany1Director_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_singleCompany1Director_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepDirectorProof_multipleCompany1Directors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_multipleCompany1Directors_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany2ToBringDeedOfSaleToMeeting": {
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_singleCompany1Director_directorNotRequired"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_multipleCompany1Directors_directorNotRequired"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askCompany2ToBringDeedOfSaleToMeeting": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.stampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.authorizationLetter"?: { li?: JSX.Element };
-    "nonAttachment.commonItems.proofOfIdentity_singleCompany1Director": {
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleCompany1Director": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_multipleCompany1Directors": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleCompany1Directors": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_singleCompany1Director_directorRequired"?: {
-      li?: JSX.Element;
-    };
-    "nonAttachment.commonItems.directorProof_multipleCompany1Directors_directorRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_singleCompany1Director_directorRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_singleCompany1Director_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_multipleCompany1Directors_directorRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_multipleCompany1Directors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_singleCompany1Director_directorNotRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.description": {
-      p?: JSX.Element;
-      NLTAAbbr: JSX.Element;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleCompany1Directors_directorNotRequired"?: {
+      li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement2"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1.directorProofRequirement"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement2"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.directorProofRequirement"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany1AndCompany2.requirement6": {
-      label?: JSX.Element;
-      DeedOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions2.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement2"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement3": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement4": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1.directorProofRequirement"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement2"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement3": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement4": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.directorProofRequirement"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany1AndCompany2.requirement6": {
+      label?: JSX.Element;
+      DeedOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.description": {
+      p?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1.directorProofItem"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1.directorProofItem"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany1AndCompany2.directorProofItem"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany1AndCompany2.directorProofItem"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.description": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step5": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1.directorProofStep"?: {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1.directorProofStep"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step5": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany1AndCompany2.directorProofStep"?: {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany1AndCompany2.directorProofStep"?: {
       label?: JSX.Element;
     };
     informInsurance?: { p?: JSX.Element };
@@ -6840,7 +6850,7 @@ type TypedTransComponents = {
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
     "form.isVehicleRegistrationBookValid.label"?: never;
-    "form.nonAttachmentIssuer.label": {
+    "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
@@ -6957,31 +6967,31 @@ type TypedTransComponents = {
     "preparation.requiredDirectorNote": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.requiredDirectorNote_singleDirector": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.requiredDirectorNote_multipleDirectors": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.step1"?: { label?: JSX.Element };
     "preparation.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step3": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.conditionalInstructions.issuedByCompany.preparedByCompany.step1": {
       label?: JSX.Element;
@@ -7690,313 +7700,319 @@ type TypedTransComponents = {
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.title": {
+    "administrativeStatusCertificate.title": {
       h2?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.description": {
+    "administrativeStatusCertificate.description": {
       p?: JSX.Element;
       NLTAContactLink: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring1DeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring1DeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: {
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_singlePurchaser": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.bringProofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multiplePurchasers": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.askCompanyToBring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askCompanyToBring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyToBringAuthorizationLetter"?: {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringAuthorizationLetter"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyToBringProofOfIdentity_singleDirector": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.askCompanyToBringProofOfIdentity_multipleDirectors": {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringProofOfIdentity_singleDirector": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyToBringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringProofOfIdentity_multipleDirectors": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyToBringRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.askCompanyToBringDirectorProof_singleDirector_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringRs50"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyToBringDirectorProof_singleDirector_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_singleDirector_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyToBringDirectorProof_multipleDirectors_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_singleDirector_directorNotRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyToBringDirectorProof_multipleDirectors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_multipleDirectors_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompany2StampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDirectorProof_multipleDirectors_directorNotRequired"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askCompany2StampedDeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.askCompanyVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyNonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonSteps.askCompanyAdministrativeStatusCertificate": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveCompanyDeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.giveCompanyDeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.companyKeepsTheirProofOfIdentity_singleDirector": {
+    "administrativeStatusCertificate.commonSteps.companyKeepsTheirProofOfIdentity_singleDirector": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.companyKeepsTheirProofOfIdentity_multipleDirectors": {
+    "administrativeStatusCertificate.commonSteps.companyKeepsTheirProofOfIdentity_multipleDirectors": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.companyKeepsReceipt": {
+    "administrativeStatusCertificate.commonSteps.companyKeepsReceipt": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.companyKeepsDirectorProof_singleDirector_directorRequired"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.commonSteps.companyKeepsDirectorProof_singleDirector_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_singleDirector_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.companyKeepsDirectorProof_multipleDirectors_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_singleDirector_directorNotRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.companyKeepsDirectorProof_multipleDirectors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_multipleDirectors_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting": {
+    "administrativeStatusCertificate.commonSteps.companyKeepsDirectorProof_multipleDirectors_directorNotRequired"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.stampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.authorizationLetter"?: { li?: JSX.Element };
-    "nonAttachment.commonItems.companyProofOfIdentity_singleDirector_directorRequired": {
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.companyProofOfIdentity_singleDirector_directorRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.companyProofOfIdentity_singleDirector_directorNotRequired": {
+    "administrativeStatusCertificate.commonItems.companyProofOfIdentity_singleDirector_directorNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.companyProofOfIdentity_multipleDirectors_directorRequired": {
+    "administrativeStatusCertificate.commonItems.companyProofOfIdentity_multipleDirectors_directorRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.companyProofOfIdentity_multipleDirectors_directorNotRequired": {
+    "administrativeStatusCertificate.commonItems.companyProofOfIdentity_multipleDirectors_directorNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_singlePurchaser": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singlePurchaser": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multiplePurchasers": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_singleDirector_directorRequired"?: {
-      li?: JSX.Element;
-    };
-    "nonAttachment.commonItems.directorProof_singleDirector_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_singleDirector_directorRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_multipleDirectors_directorRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_singleDirector_directorNotRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_multipleDirectors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_multipleDirectors_directorRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.description": {
-      p?: JSX.Element;
-      NLTAAbbr: JSX.Element;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleDirectors_directorNotRequired"?: {
+      li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement2"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement2"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.directorProofRequirement"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement6": {
-      label?: JSX.Element;
-      DeedOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions2.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement2"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement3": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement4": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement2"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement3": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement4": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.directorProofRequirement"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement6": {
+      label?: JSX.Element;
+      DeedOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.description": {
+      p?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.directorProofItem"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.directorProofItem"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.description": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step6": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.directorProofStep"?: {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.directorProofStep"?: {
       label?: JSX.Element;
     };
     endingNote?: { p?: JSX.Element };
@@ -8011,7 +8027,7 @@ type TypedTransComponents = {
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
     "form.isVehicleRegistrationBookValid.label"?: never;
-    "form.nonAttachmentIssuer.label": {
+    "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
@@ -8173,51 +8189,51 @@ type TypedTransComponents = {
     "preparation.requiredDirectorNote": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.requiredDirectorNote_singleDirector": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.requiredDirectorNote_multipleDirectors": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      nonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       em?: JSX.Element;
     };
     "preparation.step1"?: { label?: JSX.Element };
     "preparation.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step2_singlePurchaser": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step2_multiplePurchasers": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step3": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step3_singlePurchaser": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step3_multiplePurchasers": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.conditionalInstructions.issuedByCompany.preparedByCompany.step1": {
       label?: JSX.Element;
@@ -8988,326 +9004,330 @@ type TypedTransComponents = {
     "payment.leaveWithVehicle"?: { p?: JSX.Element };
     "payment.leaveWithVehicle_singlePurchaser"?: { p?: JSX.Element };
     "payment.leaveWithVehicle__multiplePurchasers"?: { p?: JSX.Element };
-    "nonAttachment.title": {
+    "administrativeStatusCertificate.title": {
       h2?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.description": {
+    "administrativeStatusCertificate.description": {
       p?: JSX.Element;
       NLTAContactLink: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: {
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleDirector": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleDirectors": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleDirector": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleDirectors": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.bringDirectorProof_singleDirector_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDirectorProof_singleDirector_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_singleDirector_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDirectorProof_multipleDirectors_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_singleDirector_directorNotRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDirectorProof_multipleDirectors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_multipleDirectors_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSale_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.bringDirectorProof_multipleDirectors_directorNotRequired"?: {
       label?: JSX.Element;
-      DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSale_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSale_singlePurchaser": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserDeedOfSale_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSale_multiplePurchasers": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserDeedOfSale_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_singlePurchaser": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_multiplePurchasers": {
+      label?: JSX.Element;
+      DeedOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_singlePurchaser": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_multiplePurchasers": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_singlePurchaser": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_multiplePurchasers": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepProofOfIdentity_singleDirector": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.keepProofOfIdentity_multipleDirectors": {
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_singleDirector": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepReceipt": {
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_multipleDirectors": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepDirectorProof_singleDirector_directorRequired"?: {
+    "administrativeStatusCertificate.commonSteps.keepReceipt": {
       label?: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepDirectorProof_multipleDirectors_directorRequired"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.commonSteps.keepDirectorProof_singleDirector_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_singleDirector_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepDirectorProof_multipleDirectors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_multipleDirectors_directorRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_singleDirector_directorNotRequired"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.keepDirectorProof_multipleDirectors_directorNotRequired"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.stampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.authorizationLetter"?: { li?: JSX.Element };
-    "nonAttachment.commonItems.proofOfIdentity_singleDirector_directorRequired": {
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleDirector_directorRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_singleDirector_directorNotRequired": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleDirector_directorNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_multipleDirectors_directorRequired": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleDirectors_directorRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_multipleDirectors_directorNotRequired": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleDirectors_directorNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_singleDirector_directorRequired"?: {
-      li?: JSX.Element;
-    };
-    "nonAttachment.commonItems.directorProof_singleDirector_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_singleDirector_directorRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_multipleDirectors_directorRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_singleDirector_directorNotRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.directorProof_multipleDirectors_directorNotRequired"?: {
+    "administrativeStatusCertificate.commonItems.directorProof_multipleDirectors_directorRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.description": {
-      p?: JSX.Element;
-      NLTAAbbr: JSX.Element;
+    "administrativeStatusCertificate.commonItems.directorProof_multipleDirectors_directorNotRequired"?: {
+      li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement2"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.directorProofRequirement"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement2"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.directorProofRequirement"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement6": {
-      label?: JSX.Element;
-      DeedOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions2.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement2"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement3": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement4": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.directorProofRequirement"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement2"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement3": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement4": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.directorProofRequirement"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompanyAndPurchaser.requirement6": {
+      label?: JSX.Element;
+      DeedOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.description": {
+      p?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.directorProofItem"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.directorProofItem"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompanyAndPurchaser.directorProofItem"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompanyAndPurchaser.directorProofItem"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.description": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step6": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.directorProofStep"?: {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.directorProofStep"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.step6": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompanyAndPurchaser.directorProofStep"?: {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompanyAndPurchaser.directorProofStep"?: {
       label?: JSX.Element;
     };
     informInsurance?: { p?: JSX.Element };
@@ -9339,7 +9359,7 @@ type TypedTransComponents = {
       VehicleRegistrationBook: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "form.nonAttachmentIssuer.label": {
+    "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
@@ -9451,36 +9471,36 @@ type TypedTransComponents = {
     "preparation.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step2_singleVendor": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step2_multipleVendors": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step3": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.step3_singleVendor": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.step3_multipleVendors": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -10266,359 +10286,363 @@ type TypedTransComponents = {
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.title": {
+    "administrativeStatusCertificate.title": {
       h2?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.description": {
+    "administrativeStatusCertificate.description": {
       p?: JSX.Element;
       NLTAContactLink: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring1DeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring1DeedOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: {
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVendorProofOfIdentity_singleVendor": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.bringVendorProofOfIdentity_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_singleVendor": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity": {
+    "administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_multipleVendors": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.askVendorToBring2DeedsOfSale_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_singleVendor": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBring2DeedsOfSale_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_multipleVendors": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringVehicleRegistrationBook_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_singleVendor": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringVehicleRegistrationBook_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_multipleVendors": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringBRNPhotocopy_singleVendor"?: {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringBRNPhotocopy_singleVendor"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringBRNPhotocopy_multipleVendors"?: {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringBRNPhotocopy_multipleVendors"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringRs50_singleVendor"?: {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringRs50_singleVendor"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringRs50_multipleVendors"?: {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringRs50_multipleVendors"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendor2StampedDeedsOfSale_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_singleVendor": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendor2StampedDeedsOfSale_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_multipleVendors": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorVehicleRegistrationBook_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_multipleVendors": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorNonAttachmentCertificate_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_singleVendor": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorNonAttachmentCertificate_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_multipleVendors": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_singleVendor": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_multipleVendors": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveVendorDeedOfSale_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_singleVendor": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveVendorDeedOfSale_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_multipleVendors": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorVehicleRegistrationBook_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_singleVendor": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveVendorTheirProofOfIdentityBack_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_singleVendor": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveVendorTheirProofOfIdentityBack_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_multipleVendors": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsReceipt_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsReceipt_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_singleVendor": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.stampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_multipleVendors": {
+      label?: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.authorizationLetter"?: { li?: JSX.Element };
-    "nonAttachment.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       li?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity": {
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity": {
+      li?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement2"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement2"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement4": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement5": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement4": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement5": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByCompany.requirement6"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByCompany.requirement6"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement2": {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement4"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement4"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement5"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement5"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement6": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.description": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item3": {
-      li?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item4": {
+      li?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item5": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByCompany.item7": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByCompany.item7": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.description": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.description_singleVendor": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.description_singleVendor": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.description_multipleVendors": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.description_multipleVendors": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item2": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item2": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item3": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item4": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.description": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step1": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step6": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     endingNote?: { p?: JSX.Element };
   };
@@ -10646,7 +10670,7 @@ type TypedTransComponents = {
       VehicleRegistrationBook: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "form.nonAttachmentIssuer.label": {
+    "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
@@ -10726,26 +10750,26 @@ type TypedTransComponents = {
     "preparation.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step3": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.step3_singleVendor": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.step3_multipleVendors": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -11510,282 +11534,284 @@ type TypedTransComponents = {
       VehicleRegistrationBook: JSX.Element;
     };
     "payment.leaveWithVehicle"?: { p?: JSX.Element };
-    "nonAttachment.title": {
+    "administrativeStatusCertificate.title": {
       h2?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.description": {
+    "administrativeStatusCertificate.description": {
       p?: JSX.Element;
       NLTAContactLink: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringCompanyBRNPhotocopy"?: {
+    "administrativeStatusCertificate.commonSteps.bringCompanyBRNPhotocopy"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.askCompanyToBringDeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: {
       label?: JSX.Element;
-      DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyDeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveCompany2StampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.askCompanyDeedOfSale": {
+      label?: JSX.Element;
+      DeedOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.giveCompany2StampedDeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveCompanyVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.giveCompanyVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveCompanyNonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonSteps.giveCompanyAdministrativeStatusCertificate": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.keepProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepReceipt": {
+    "administrativeStatusCertificate.commonSteps.keepProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.keepReceipt": {
+      label?: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_singleVendor": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_multipleVendors": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askCompanyToBringDeedOfSaleToMeeting": {
+    "administrativeStatusCertificate.commonSteps.askCompanyToBringDeedOfSaleToMeeting": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.stampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_singleVendor_vendorNameProofNotRequired": {
-      li?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonItems.proofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleVendors_vendorNameProofRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+      li?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement2": {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement4"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement4"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement5"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement5"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement2": {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement4"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement4"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement5"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement5"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndCompany.requirement6": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndCompany.requirement6": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.description": {
+    "administrativeStatusCertificate.conditionalInstructions2.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item2": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item2": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item3": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item4": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item2": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item2": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item3": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item4": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndCompany.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndCompany.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.description": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step6": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByCompany.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByCompany.step1": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndCompany.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndCompany.step6": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     informInsurance?: { p?: JSX.Element };
     endingNote?: { p?: JSX.Element };
@@ -11818,7 +11844,7 @@ type TypedTransComponents = {
       VehicleRegistrationBook: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "form.nonAttachmentIssuer.label": {
+    "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
@@ -11972,36 +11998,36 @@ type TypedTransComponents = {
     "preparation.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step2_singlePurchaser": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step2_multiplePurchasers": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step3": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.step3_singleVendor": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.step3_multipleVendors": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -13088,524 +13114,530 @@ type TypedTransComponents = {
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.title": {
+    "administrativeStatusCertificate.title": {
       h2?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.description": {
+    "administrativeStatusCertificate.description": {
       p?: JSX.Element;
       NLTAContactLink: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring1DeedOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring1DeedOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_singleVendor": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDeedOfSaleToMeeting_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_multipleVendors": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringAuthorizationLetter"?: {
+    "administrativeStatusCertificate.commonSteps.bringAuthorizationLetter"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_singlePurchaser": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.bringProofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVendorProofOfIdentity_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multiplePurchasers": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVendorProofOfIdentity_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_singleVendor": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_multipleVendors": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.askVendorToBring2DeedsOfSale_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_singleVendor": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBring2DeedsOfSale_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_multipleVendors": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringVehicleRegistrationBook_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_singleVendor": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringVehicleRegistrationBook_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_multipleVendors": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringRs50_singleVendor"?: {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringRs50_singleVendor"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorToBringRs50_multipleVendors"?: {
+    "administrativeStatusCertificate.commonSteps.askVendorToBringRs50_multipleVendors"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendor2StampedDeedsOfSale_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_singleVendor": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendor2StampedDeedsOfSale_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_multipleVendors": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorPurchaserProofOfIdentity_singleVendor_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_singleVendor_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorPurchaserProofOfIdentity_singleVendor_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_singleVendor_multiplePurchasers": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorPurchaserProofOfIdentity_multipleVendors_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_multipleVendors_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorPurchaserProofOfIdentity_multipleVendors_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_multipleVendors_multiplePurchasers": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorVehicleRegistrationBook_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_singleVendor": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorVehicleRegistrationBook_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_multipleVendors": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorNonAttachmentCertificate_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_singleVendor": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.askVendorNonAttachmentCertificate_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_multipleVendors": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegate2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.giveDelegate2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateAuthorizationLetter"?: {
+    "administrativeStatusCertificate.commonSteps.giveDelegateAuthorizationLetter"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateVendorProofOfIdentity_singleVendor": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.giveDelegateVendorProofOfIdentity_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateVendorProofOfIdentity_singleVendor": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateProofOfIdentity_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateVendorProofOfIdentity_multipleVendors": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateProofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_multiplePurchasers": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.giveDelegateVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.giveDelegatePowerOfAttorney": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateRs50"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorney": {
       label?: JSX.Element;
       PowerOfAttorney: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegatePowerOfAttorneyCopy": {
+    "administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorneyCopy": {
       label?: JSX.Element;
       PowerOfAttorney: JSX.Element;
     };
-    "nonAttachment.commonSteps.delegateBringsProofOfIdentity": {
+    "administrativeStatusCertificate.commonSteps.delegateBringsProofOfIdentity": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveVendorDeedOfSale_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_singleVendor": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveVendorDeedOfSale_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_multipleVendors": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveVendorTheirProofOfIdentityBack_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_singleVendor": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveVendorTheirProofOfIdentityBack_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_multipleVendors": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsReceipt_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.vendorKeepsReceipt_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_singleVendor": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.stampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_multipleVendors": {
+      label?: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.authorizationLetter"?: { li?: JSX.Element };
-    "nonAttachment.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonItems.authorizationLetter"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       li?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_singlePurchaser": {
+    "administrativeStatusCertificate.commonItems.vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singlePurchaser": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multiplePurchasers": {
+      li?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement2"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement2"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement4": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement5": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement4": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement5": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaser.requirement6"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaser.requirement6"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement2": {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement3": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement4"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement4"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement5": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement6": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.description": {
       p?: JSX.Element;
       PowerOfAttorney: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement2"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement2"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement4": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement5": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement4": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement5": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement6"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement6"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement7": {
-      label?: JSX.Element;
-      PowerOfAttorney: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement8": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement7": {
       label?: JSX.Element;
       PowerOfAttorney: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByPurchaserDelegate.requirement9": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement8": {
+      label?: JSX.Element;
+      PowerOfAttorney: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByPurchaserDelegate.requirement9": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.description": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item2"?: {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item2"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item3": {
-      li?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item4": {
+      li?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item5": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByPurchaser.item7": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByPurchaser.item7": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.description": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.description_singleVendor": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.description_singleVendor": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.description_multipleVendors": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.description_multipleVendors": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item2": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item2": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.description": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step4": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step5": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaser.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaser.step1": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step4": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step5": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step7": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step7": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step2": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step4": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step5": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.description": {
       p?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item2": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.item6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.step1": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
@@ -13639,7 +13671,7 @@ type TypedTransComponents = {
       VehicleRegistrationBook: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "form.nonAttachmentIssuer.label": {
+    "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
@@ -13783,36 +13815,36 @@ type TypedTransComponents = {
     "preparation.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step2_singlePurchaser": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step2_multiplePurchasers": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "preparation.step3": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.step3_singlePurchaser": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
     "preparation.step3_multiplePurchasers": {
       label?: JSX.Element;
       NLTAAbbr: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14891,501 +14923,505 @@ type TypedTransComponents = {
     "payment.leaveWithVehicle"?: { p?: JSX.Element };
     "payment.leaveWithVehicle_singlePurchaser"?: { p?: JSX.Element };
     "payment.leaveWithVehicle_multiplePurchasers"?: { p?: JSX.Element };
-    "nonAttachment.title": {
+    "administrativeStatusCertificate.title": {
       h2?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.description": {
+    "administrativeStatusCertificate.description": {
       p?: JSX.Element;
       NLTAContactLink: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.commonSteps.bring2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.bring2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.bringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringPurchaserProofOfIdentity_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.bringPurchaserProofOfIdentity_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringPurchaserProofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.bringPurchaserProofOfIdentity_multiplePurchasers": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringDelegateProofOfIdentity": {
+    "administrativeStatusCertificate.commonSteps.bringDelegateProofOfIdentity": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.bringRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.askPurchaserToBringProofOfIdentity_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.bringRs50"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringProofOfIdentity_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBringProofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringProofOfIdentity_multiplePurchasers": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBring1DeedOfSale_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBring1DeedOfSale_singlePurchaser": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBring1DeedOfSale_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBring1DeedOfSale_multiplePurchasers": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserDeedOfSale_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_singlePurchaser": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserDeedOfSale_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_multiplePurchasers": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_singlePurchaser": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaser2StampedDeedsOfSale_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_multiplePurchasers": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserTheirProofOfIdentity_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserTheirProofOfIdentity_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserTheirProofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserTheirProofOfIdentity_multiplePurchasers": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_singlePurchaser": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.givePurchaserNonAttachmentCertificate_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_multiplePurchasers": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegate2DeedsOfSale": {
+    "administrativeStatusCertificate.commonSteps.giveDelegate2DeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegatePurchaserProofOfIdentity_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.giveDelegatePurchaserProofOfIdentity_singlePurchaser": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegatePurchaserProofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.giveDelegatePurchaserProofOfIdentity_multiplePurchasers": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateProofOfIdentity_singleVendor": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_singleVendor": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateProofOfIdentity_multipleVendors": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_multipleVendors": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateVehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateVehicleRegistrationBook": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegateRs50"?: { label?: JSX.Element };
-    "nonAttachment.commonSteps.giveDelegatePowerOfAttorney": {
+    "administrativeStatusCertificate.commonSteps.giveDelegateRs50"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorney": {
       label?: JSX.Element;
       PowerOfAttorney: JSX.Element;
     };
-    "nonAttachment.commonSteps.giveDelegatePowerOfAttorneyCopy": {
+    "administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorneyCopy": {
       label?: JSX.Element;
       PowerOfAttorney: JSX.Element;
     };
-    "nonAttachment.commonSteps.delegateBringsProofOfIdentity": {
+    "administrativeStatusCertificate.commonSteps.delegateBringsProofOfIdentity": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepVendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepVendorProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonSteps.keepVendorProofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepVendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_multipleVendors_vendorNameProofRequired": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.keepReceipt": {
+    "administrativeStatusCertificate.commonSteps.keepVendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_singleVendor_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.keepReceipt": {
+      label?: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_singleVendor_singlePurchaser": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_singleVendor_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_singleVendor_multiplePurchasers": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_multipleVendors_singlePurchaser": {
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_multipleVendors_singlePurchaser": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonSteps.takeProofOfIdentityBack_multipleVendors_multiplePurchasers": {
+    "administrativeStatusCertificate.commonSteps.takeProofOfIdentityBack_multipleVendors_multiplePurchasers": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.stampedDeedsOfSale": {
+    "administrativeStatusCertificate.commonItems.stampedDeedsOfSale": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.commonItems.purchaserProofOfIdentity_singlePurchaser": {
+    "administrativeStatusCertificate.commonItems.purchaserProofOfIdentity_singlePurchaser": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.purchaserProofOfIdentity_multiplePurchasers": {
+    "administrativeStatusCertificate.commonItems.purchaserProofOfIdentity_multiplePurchasers": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_singleVendor_vendorNameProofRequired"?: {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleVendor_vendorNameProofRequired"?: {
       li?: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_singleVendor_vendorNameProofNotRequired": {
-      li?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.commonItems.proofOfIdentity_multipleVendors_vendorNameProofRequired": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_singleVendor_vendorNameProofNotRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.proofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleVendors_vendorNameProofRequired": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.commonItems.vehicleRegistrationBook": {
+    "administrativeStatusCertificate.commonItems.proofOfIdentity_multipleVendors_vendorNameProofNotRequired": {
+      li?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.commonItems.vehicleRegistrationBook": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificate": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificate": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.commonItems.nonAttachmentCertificateReceipt": {
+    "administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement2": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement3": {
-      label?: JSX.Element;
-      ul?: JSX.Element;
-      li?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendor.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.description": {
-      p?: JSX.Element;
-      NLTAAbbr: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement2": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement3": {
       label?: JSX.Element;
       ul?: JSX.Element;
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement3": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement4": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement4"?: {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendor.requirement5"?: {
       label?: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement5": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorAndPurchaser.requirement6": {
-      label?: JSX.Element;
-      DeedOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.description": {
-      p?: JSX.Element;
-      PowerOfAttorney: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
-      NLTAAbbr: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement1": {
-      label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement2": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement3": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement4": {
-      label?: JSX.Element;
-      VehicleRegistrationBook: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement6": {
-      label?: JSX.Element;
-      PowerOfAttorney: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement7": {
-      label?: JSX.Element;
-      PowerOfAttorney: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions1.issuedByVendorDelegate.requirement8": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
-    };
-    "nonAttachment.conditionalInstructions2.description": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.description": {
       p?: JSX.Element;
       NLTAAbbr: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item1": {
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement2": {
+      label?: JSX.Element;
+      ul?: JSX.Element;
+      li?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement3": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement4"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorAndPurchaser.requirement6": {
+      label?: JSX.Element;
+      DeedOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.description": {
+      p?: JSX.Element;
+      PowerOfAttorney: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement1": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement2": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement3": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement4": {
+      label?: JSX.Element;
+      VehicleRegistrationBook: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement6": {
+      label?: JSX.Element;
+      PowerOfAttorney: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement7": {
+      label?: JSX.Element;
+      PowerOfAttorney: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions1.issuedByVendorDelegate.requirement8": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.description": {
+      p?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item2": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item2": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendor.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendor.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item1": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item2": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item2": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item3": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item4": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item5": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions2.issuedByVendorAndPurchaser.item6": {
+    "administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.description": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.description": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step4": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step5": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendor.step7": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendor.step7": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaser.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaser.step1": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step4": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step5": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorAndPurchaser.step7": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorAndPurchaser.step7": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.description1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.description1": {
       p?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item1": {
       li?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item2": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item3": {
       li?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item4": {
       li?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item5": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.item6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.item6": {
       li?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.description2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.description2": {
       p?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step2": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step2": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step3": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step3": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step4": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step4": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step5": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step5": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step6": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByVendorDelegate.step7": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByVendorDelegate.step7": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
-    "nonAttachment.conditionalInstructions3.issuedByPurchaserDelegate.step1": {
+    "administrativeStatusCertificate.conditionalInstructions3.issuedByPurchaserDelegate.step1": {
       p?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
@@ -15465,7 +15501,7 @@ type TypedTransComponents = {
     "registration.title"?: { h2?: JSX.Element };
     "registration.description": {
       p?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
       RegistrarLink: JSX.Element;
       em?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -15486,7 +15522,7 @@ type TypedTransComponents = {
     };
     "registration.instructions.requirement4": {
       label?: JSX.Element;
-      NonAttachmentCertificate: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
     };
     "registration.instructions.requirement5": {
       label?: JSX.Element;

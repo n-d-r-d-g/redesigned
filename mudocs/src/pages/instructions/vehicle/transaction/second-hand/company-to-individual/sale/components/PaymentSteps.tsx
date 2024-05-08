@@ -9,10 +9,12 @@ import styles from "../../../styles.module.css";
 
 function ConditionalInstructions1() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByCompany = values.nonAttachmentIssuer === "company";
-  const isIssuedByPurchaser = values.nonAttachmentIssuer === "purchaser";
+  const isIssuedByCompany =
+    values.administrativeStatusCertificateIssuer === "company";
+  const isIssuedByPurchaser =
+    values.administrativeStatusCertificateIssuer === "purchaser";
   const isIssuedByCompanyAndPurchaser =
-    values.nonAttachmentIssuer === "companyAndPurchaser";
+    values.administrativeStatusCertificateIssuer === "companyAndPurchaser";
   const isPreparedByCompany = values.documentsPreparer === "company";
   const isPreparedByPurchaser = values.documentsPreparer === "purchaser";
   const whetherDirectorIsRequired = retrieveDirectorRequiredI18nText(values);
@@ -956,10 +958,12 @@ function ConditionalInstructions1() {
 
 function ConditionalInstructions2() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByCompany = values.nonAttachmentIssuer === "company";
-  const isIssuedByPurchaser = values.nonAttachmentIssuer === "purchaser";
+  const isIssuedByCompany =
+    values.administrativeStatusCertificateIssuer === "company";
+  const isIssuedByPurchaser =
+    values.administrativeStatusCertificateIssuer === "purchaser";
   const isIssuedByCompanyAndPurchaser =
-    values.nonAttachmentIssuer === "companyAndPurchaser";
+    values.administrativeStatusCertificateIssuer === "companyAndPurchaser";
 
   const CommonCashInstructions = useCallback(
     () => (
@@ -1183,10 +1187,12 @@ function ConditionalInstructions2() {
 
 function ConditionalInstructions3() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByCompany = values.nonAttachmentIssuer === "company";
-  const isIssuedByPurchaser = values.nonAttachmentIssuer === "purchaser";
+  const isIssuedByCompany =
+    values.administrativeStatusCertificateIssuer === "company";
+  const isIssuedByPurchaser =
+    values.administrativeStatusCertificateIssuer === "purchaser";
   const isIssuedByCompanyAndPurchaser =
-    values.nonAttachmentIssuer === "companyAndPurchaser";
+    values.administrativeStatusCertificateIssuer === "companyAndPurchaser";
   const isPreparedByCompany = values.documentsPreparer === "company";
   const isPreparedByPurchaser = values.documentsPreparer === "purchaser";
   const whetherDirectorIsRequired = retrieveDirectorRequiredI18nText(values);

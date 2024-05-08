@@ -8,14 +8,16 @@ import { useCallback } from "react";
 
 function ConditionalInstructions1() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByVendor = values.nonAttachmentIssuer === "vendor";
-  const isIssuedByPurchaser = values.nonAttachmentIssuer === "purchaser";
+  const isIssuedByVendor =
+    values.administrativeStatusCertificateIssuer === "vendor";
+  const isIssuedByPurchaser =
+    values.administrativeStatusCertificateIssuer === "purchaser";
   const isIssuedByVendorAndPurchaser =
-    values.nonAttachmentIssuer === "vendorAndPurchaser";
+    values.administrativeStatusCertificateIssuer === "vendorAndPurchaser";
   const isIssuedByVendorDelegate =
-    values.nonAttachmentIssuer === "vendorDelegate";
+    values.administrativeStatusCertificateIssuer === "vendorDelegate";
   const isIssuedByPurchaserDelegate =
-    values.nonAttachmentIssuer === "purchaserDelegate";
+    values.administrativeStatusCertificateIssuer === "purchaserDelegate";
   const isPreparedByVendor = values.documentsPreparer === "vendor";
   const isPreparedByPurchaser = values.documentsPreparer === "purchaser";
 
@@ -1391,14 +1393,16 @@ function ConditionalInstructions1() {
 
 function ConditionalInstructions2() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByVendor = values.nonAttachmentIssuer === "vendor";
-  const isIssuedByPurchaser = values.nonAttachmentIssuer === "purchaser";
+  const isIssuedByVendor =
+    values.administrativeStatusCertificateIssuer === "vendor";
+  const isIssuedByPurchaser =
+    values.administrativeStatusCertificateIssuer === "purchaser";
   const isIssuedByVendorAndPurchaser =
-    values.nonAttachmentIssuer === "vendorAndPurchaser";
+    values.administrativeStatusCertificateIssuer === "vendorAndPurchaser";
   const isIssuedByVendorDelegate =
-    values.nonAttachmentIssuer === "vendorDelegate";
+    values.administrativeStatusCertificateIssuer === "vendorDelegate";
   const isIssuedByPurchaserDelegate =
-    values.nonAttachmentIssuer === "purchaserDelegate";
+    values.administrativeStatusCertificateIssuer === "purchaserDelegate";
 
   const CommonCashInstructions = useCallback(
     () => (
@@ -1794,14 +1798,16 @@ function ConditionalInstructions2() {
 
 function ConditionalInstructions3() {
   const { values } = useFormikContext<InitialValues>();
-  const isIssuedByVendor = values.nonAttachmentIssuer === "vendor";
-  const isIssuedByPurchaser = values.nonAttachmentIssuer === "purchaser";
+  const isIssuedByVendor =
+    values.administrativeStatusCertificateIssuer === "vendor";
+  const isIssuedByPurchaser =
+    values.administrativeStatusCertificateIssuer === "purchaser";
   const isIssuedByVendorAndPurchaser =
-    values.nonAttachmentIssuer === "vendorAndPurchaser";
+    values.administrativeStatusCertificateIssuer === "vendorAndPurchaser";
   const isIssuedByVendorDelegate =
-    values.nonAttachmentIssuer === "vendorDelegate";
+    values.administrativeStatusCertificateIssuer === "vendorDelegate";
   const isIssuedByPurchaserDelegate =
-    values.nonAttachmentIssuer === "purchaserDelegate";
+    values.administrativeStatusCertificateIssuer === "purchaserDelegate";
   const isPreparedByVendor = values.documentsPreparer === "vendor";
   const isPreparedByPurchaser = values.documentsPreparer === "purchaser";
 
