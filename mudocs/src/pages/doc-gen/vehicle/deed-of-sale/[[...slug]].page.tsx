@@ -784,16 +784,10 @@ export default function DeedOfSale({ transactionMode }: Props) {
   };
   const baseTraderSchema = {
     uuid: string().uuid(),
-    name: string({ required_error: tCommon("errors.required") })
-      .trim()
-      .nonempty(tCommon("errors.required")),
+    name: string({ required_error: tCommon("errors.required") }).trim(),
     address: object({
-      street: string({ required_error: tCommon("errors.required") })
-        .trim()
-        .nonempty(tCommon("errors.required")),
-      locality: string({ required_error: tCommon("errors.required") })
-        .trim()
-        .nonempty(tCommon("errors.required")),
+      street: string({ required_error: tCommon("errors.required") }).trim(),
+      locality: string({ required_error: tCommon("errors.required") }).trim(),
     }),
   };
   const personSchema = object({
@@ -801,22 +795,16 @@ export default function DeedOfSale({ transactionMode }: Props) {
     traderType: literal("person"),
     title: string({ required_error: tCommon("errors.required") })
       .trim()
-      .regex(/mr|mrs|miss/gm)
-      .nonempty(tCommon("errors.required")),
+      .regex(/mr|mrs|miss/gm),
     nationality: string({ required_error: tCommon("errors.required") })
       .trim()
-      .regex(/mauritian|nonMauritian/gm)
-      .nonempty(tCommon("errors.required")),
-    id: string({ required_error: tCommon("errors.required") })
-      .trim()
-      .nonempty(tCommon("errors.required")),
+      .regex(/mauritian|nonMauritian/gm),
+    id: string({ required_error: tCommon("errors.required") }).trim(),
   });
   const companySchema = object({
     ...baseTraderSchema,
     traderType: literal("company"),
-    brn: string({ required_error: tCommon("errors.required") })
-      .trim()
-      .nonempty(tCommon("errors.required")),
+    brn: string({ required_error: tCommon("errors.required") }).trim(),
   });
   const schema = object({
     saleDate: z.coerce

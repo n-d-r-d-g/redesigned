@@ -127,7 +127,7 @@ export default function Layout({ children }: PropsWithChildren) {
             rel="noreferrer noopener nofollow"
             title={tCommon("githubLink")}
             aria-label={tCommon("githubLink")}
-            className="inline-flex items-center rounded-full p-2 text-center text-sm font-medium text-black hover:bg-slate-200 focus:ring-0 focus:ring-offset-0  focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white dark:text-white dark:hover:bg-slate-700 dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900"
+            className="inline-flex items-center rounded-full p-2 text-center text-sm font-medium text-black hover:bg-slate-200 focus:ring-0 focus:ring-offset-0 focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white dark:text-white dark:hover:bg-slate-700 dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900"
             passHref
           >
             <FaGithubIcon size={16} />

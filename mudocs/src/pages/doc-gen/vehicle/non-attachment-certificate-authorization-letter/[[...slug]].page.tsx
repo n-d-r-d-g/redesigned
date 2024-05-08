@@ -1148,36 +1148,26 @@ export default function NonAttachmentCertificateAuthorizationLetter({
 
   const baseTraderSchema = {
     uuid: string().uuid(),
-    name: string({ required_error: tCommon("errors.required") })
-      .trim()
-      .nonempty(tCommon("errors.required")),
+    name: string({ required_error: tCommon("errors.required") }).trim(),
   };
   const personSchema = object({
     ...baseTraderSchema,
     traderType: literal("person"),
     title: _enum(["mr", "mrs", "miss"]),
     nationality: _enum(["mauritian", "nonMauritian"]),
-    id: string({ required_error: tCommon("errors.required") })
-      .trim()
-      .nonempty(tCommon("errors.required")),
+    id: string({ required_error: tCommon("errors.required") }).trim(),
   });
   const companySchema = object({
     ...baseTraderSchema,
     traderType: literal("company"),
-    brn: string({ required_error: tCommon("errors.required") })
-      .trim()
-      .nonempty(tCommon("errors.required")),
+    brn: string({ required_error: tCommon("errors.required") }).trim(),
     representingDirectorUUID: string().optional(),
     directors: object({
       uuid: string().uuid(),
       title: _enum(["mr", "mrs", "miss"]),
-      name: string({ required_error: tCommon("errors.required") })
-        .trim()
-        .nonempty(tCommon("errors.required")),
+      name: string({ required_error: tCommon("errors.required") }).trim(),
       nationality: _enum(["mauritian", "nonMauritian"]),
-      id: string({ required_error: tCommon("errors.required") })
-        .trim()
-        .nonempty(tCommon("errors.required")),
+      id: string({ required_error: tCommon("errors.required") }).trim(),
     })
       .array()
       .min(1, tCommon("errors.arrayMin", { count: 1 }))
@@ -1185,16 +1175,10 @@ export default function NonAttachmentCertificateAuthorizationLetter({
     representative: object({
       uuid: string().uuid(),
       title: _enum(["mr", "mrs", "miss"]),
-      name: string({ required_error: tCommon("errors.required") })
-        .trim()
-        .nonempty(tCommon("errors.required")),
+      name: string({ required_error: tCommon("errors.required") }).trim(),
       nationality: _enum(["mauritian", "nonMauritian"]),
-      id: string({ required_error: tCommon("errors.required") })
-        .trim()
-        .nonempty(tCommon("errors.required")),
-      role: string({ required_error: tCommon("errors.required") })
-        .trim()
-        .nonempty(tCommon("errors.required")),
+      id: string({ required_error: tCommon("errors.required") }).trim(),
+      role: string({ required_error: tCommon("errors.required") }).trim(),
     }).optional(),
   });
 

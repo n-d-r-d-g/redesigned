@@ -108,7 +108,7 @@ export default function FormTrader({
         <button
           type="button"
           title={tCommon("dragToMove")}
-          className="handle col-start-1 col-end-2 row-start-1 row-end-2 inline-flex grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] min-w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-blue-700 hover:text-blue-700 focus:text-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-700 dark:border-slate-700 dark:text-white dark:hover:border-blue-400 dark:hover:text-blue-400 dark:focus:text-blue-400 dark:focus:ring-blue-400"
+          className="handle col-start-1 col-end-2 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] min-w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-blue-700 hover:text-blue-700 focus:outline-none focus-visible:text-blue-700 focus-visible:ring-2 focus-visible:ring-blue-700 dark:border-slate-700 dark:text-white dark:hover:border-blue-400 dark:hover:text-blue-400 dark:focus-visible:text-blue-400 dark:focus-visible:ring-blue-400"
         >
           <svg
             className="h-5 w-5"
@@ -148,7 +148,7 @@ export default function FormTrader({
           type="button"
           onClick={removeTrader}
           title={tCommon("remove")}
-          className="col-start-3 col-end-4 row-start-1 row-end-2 inline-flex grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-red-700 hover:text-red-700 focus:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-700 dark:border-slate-700 dark:text-white dark:hover:border-red-400 dark:hover:text-red-400 dark:focus:text-red-400 dark:focus:ring-red-400"
+          className="col-start-3 col-end-4 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-red-700 hover:text-red-700 focus:outline-none focus-visible:text-red-700 focus-visible:ring-2 focus-visible:ring-red-700 dark:border-slate-700 dark:text-white dark:hover:border-red-400 dark:hover:text-red-400 dark:focus-visible:text-red-400 dark:focus-visible:ring-red-400"
         >
           <svg
             className="h-5 w-5"
@@ -409,7 +409,7 @@ export default function FormTrader({
                       type="button"
                       onClick={removeDirector(directorIndex)}
                       title={tCommon("remove")}
-                      className="col-start-3 col-end-4 row-start-1 row-end-2 inline-flex grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-red-700 hover:text-red-700 focus:text-red-700 focus:outline-none focus:ring-2 focus:ring-red-700 dark:border-slate-700 dark:text-white dark:hover:border-red-400 dark:hover:text-red-400 dark:focus:text-red-400 dark:focus:ring-red-400"
+                      className="col-start-3 col-end-4 row-start-1 row-end-2 grid h-[2.5rem] max-h-[2.5rem] min-h-[2.5rem] w-[2.5rem] max-w-[2.5rem] place-items-center items-center rounded-full border border-gray-200 bg-transparent text-center text-sm font-medium text-slate-500 hover:border-red-700 hover:text-red-700 focus:outline-none focus-visible:text-red-700 focus-visible:ring-2 focus-visible:ring-red-700 dark:border-slate-700 dark:text-white dark:hover:border-red-400 dark:hover:text-red-400 dark:focus-visible:text-red-400 dark:focus-visible:ring-red-400"
                     >
                       <svg
                         className="h-5 w-5"
@@ -436,7 +436,7 @@ export default function FormTrader({
           <button
             type="button"
             onClick={addDirector}
-            className="inline-flex w-full max-w-full items-center justify-center rounded-lg border border-gray-200 px-4 py-2.5 text-center text-base font-medium text-black hover:border-blue-800 hover:bg-blue-800 hover:text-white focus:outline-none focus:ring-4 focus:ring-blue-300 dark:border-slate-700 dark:text-white dark:hover:border-blue-700 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            className="inline-flex w-full max-w-full items-center justify-center rounded-lg border border-gray-200 px-4 py-2.5 text-center text-base font-medium text-black hover:border-blue-800 hover:bg-blue-800 hover:text-white focus:outline-none focus:ring-0 focus:ring-offset-0 focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:border-slate-700 dark:text-white dark:hover:border-blue-700 dark:hover:bg-blue-700 dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900"
           >
             <svg
               className="mr-2 h-3 w-3"
