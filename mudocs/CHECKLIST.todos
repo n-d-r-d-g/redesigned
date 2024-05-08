@@ -1,28 +1,14 @@
-☐ Add corresponding initial values for issuer & preparer in vehicle instructions
 ☐ Use ScrollArea (https://www.shadcn-vue.com/docs/components/scroll-area) to avoid fullscreen spinner shift on some browsers
-☐ Add `notify the insurance company about sale of vehicle`
 ☐ Make sure to include id & query params when calling silentlyUpdateURL
 ☐ Add table of contents on instructions pages to help users get an overview of the steps & navigate to the desired section faster
 ☐ Replace tippyjs-react with recommended package on their readme - @floating-ui/react
-☐ Install tailwind prettier extension
 ☐ Install extension to manage issues + move all from this file to issues (https://github.com/microsoft/vscode-pull-request-github)
-☐ Add `Motivation` to README
-☐ Add validation rule to docgens for preventing other parties when a company is involved 
-☐ Check if we need to rename non attachment certificate to administrative status certificate (https://www.service-public.fr/particuliers/vosdroits/F1707?lang=en)
-☐ Change repo name to mudocs
-☐ Add disclaimer on repo and website - mention that it's not the official government's website and to use at their own risk
 ☐ Use smaller text size for components on sm
-☐ Switch components styling from focus to focus-visible (buttons and other components)
-☐ Indicate where to add stamp after printing
-☐ Fix docgen text for authorization letter
-☐ Add docgen to generate an authorization letter for company to its representative (look for a template online or otherwise)
-☐ Check if values & components props on Trans component can be type-safe (https://github.com/i18next/react-i18next/pull/1193#issuecomment-800270746)
 ☐ Make resources in types/i18next.d.ts dynamic
 ☐ Add rewrites for fr & mu
 ☐ Keep form data in memory and suggest user to use that data after navigating to another document's page + on language change (save in an way that can't be leaked, e.g. NOT LOCALSTORAGE)
 ☐ DB on next server to record ip and timestamp when user clicks on print button
 ☐ Add validation on max length
-☐ Make "Move" button keyboard-accessible
 ☐ Make preview editable in case users want to have more granular control before printing (contenteditable on editable parts of the preview) - Inform users that any modifications made directly to the preview will be overriden if form data is modified (maybe add an edit button; onclick: disable form & enable edit on preview)
 ☐ Allow only numbers in vehicle price + fix ugly arrow decorators in field
 ☐ Remove spaces in registration mark
@@ -30,13 +16,23 @@
 ☐ Breadcrumbs
 ☐ Allow form data export & import (think about whether to encrypt it or not)
 ☐ Implement tests
-☐ References:
-  - https://nlta.govmu.org/Pages/Procedures/Registration.aspx
-  - https://nlta.govmu.org/Pages/FAQ/Registration_faq.aspx
-  - https://registrar.govmu.org/Pages/About%20Us/Registration.aspx#Vehicle_Trailers
-  - https://ilemauriceinside.fr/acheter-une-voiture-a-lile-maurice/
-  - https://www.sicom.mu/
 
+
+✔ Make "Move" button keyboard-accessible & responsive
+✔ Check if we need to rename non-attachment certificate to administrative status certificate / non-pledge certificate (https://www.service-public.fr/particuliers/vosdroits/F1707?lang=en)
+✔ Fix docgen text for authorization letter
+✔ Add docgen to generate an authorization letter for company to its representative (look for a template online or otherwise)
+✔ Indicate where to add stamp after printing
+✔ Add disclaimer on repo and website - mention that it's not the official government's website and to use at their own risk
+✔ Switch components styling from focus to focus-visible (buttons and other components)
+✔ Check if values & components props on Trans component can be type-safe (https://github.com/i18next/react-i18next/pull/1193#issuecomment-800270746)
+✔ References:
+✔ Change repo name to mudocs
+✔ Add validation rule to docgens for preventing other parties when a company is involved 
+✔ Install tailwind prettier extension
+✔ Add `notify the insurance company about sale of vehicle`
+✔ Add `Motivation` to README
+✔ Add corresponding initial values for issuer & preparer in vehicle instructions
 ✔ Add I.D Type or Citizen/Non-citizen
 ✔ Complete deed of sale (fix text for company, e.g. residing at -> located at + fix functions.ts)
 ✔ Implement a way to indicate whether all people share the same address (1 checkbox in person list ; disable address on person components with index > 0)
