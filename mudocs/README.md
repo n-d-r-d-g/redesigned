@@ -29,3 +29,13 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 Some type definitions are missing from react-i18next & next-18next packages. We have set up a watcher that automatically generates the missing type definitions during development, i.e. when you run `npm run dev:watch`, an additional terminal window should open to watch for changes in the `public/locales` folder. **If you close the new window, the watcher won't work.**
 
 You may need to modify the [`watch:locales` script](package.json#L12) depending on your terminal. This script watches for changes in `public/locales` using [`onchange`](https://github.com/Qard/onchange) then generates type definitions as soon as a change is detected.
+
+## References
+
+The following resources have been used for research on this project:
+
+- https://nlta.govmu.org/Pages/Procedures/Registration.aspx
+- https://nlta.govmu.org/Pages/FAQ/Registration_faq.aspx
+- https://registrar.govmu.org/Pages/About%20Us/Registration.aspx#Vehicle_Trailers
+- https://ilemauriceinside.fr/acheter-une-voiture-a-lile-maurice/
+- https://www.sicom.mu/
