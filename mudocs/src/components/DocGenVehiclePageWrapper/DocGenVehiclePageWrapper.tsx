@@ -64,7 +64,7 @@ export default function DocGenVehiclePageWrapper<T extends FormikValues>({
             <hr className="col-span-1 border-gray-200 lg:col-span-3 dark:border-slate-800" />
             <Fields />
           </div>
-          <div className="relative max-w-full overflow-x-auto">
+          <div className="relative max-w-full overflow-x-auto pb-7">
             <h2 className="hide-on-print sticky left-0 top-0 mx-auto mb-2 block w-[210mm] max-w-full text-xl font-semibold">
               {tCommon("printPreview")}
             </h2>
