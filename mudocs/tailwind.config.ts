@@ -1,24 +1,41 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
+import flowbite from "flowbite-react/tailwind";
 import { nextui } from "@nextui-org/react";
 
 const config = {
-  darkMode: "class",
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
+    flowbite.content(),
     "../node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
-  prefix: "",
   theme: {
     screens: {
       ...defaultTheme.screens,
       xs: "375px",
     },
+    extend: {
+      backgroundImage: {
+        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-conic":
+          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      fontFamily: {
+        times: ["Times New Roman", "Times", "serif"],
+      },
+      screens: {
+        print: {
+          raw: "print",
+        },
+        dark: {
+          raw: "(prefers-color-scheme: dark)",
+        },
+      },
+    },
   },
+  darkMode: "class",
   plugins: [
+    flowbite.plugin(),
     nextui({
       themes: {
         light: {
