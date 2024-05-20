@@ -1,14 +1,40 @@
 {
   "administrativeStatusCertificateAuthorizationLetter": {
     "title": "Lettre d'autorisation - Certificat de non gage",
-    "pagePreviewBody": "$t(administrativeStatusCertificateAuthorizationLetter.vendorsWithId, {\"count\": {{vendorCount}}, \"namesWithId\": \"{{vendorNamesWithId}}\"}) du véhicule portant le numéro {{vehicleRegNum}} marque {{vehicleMake}} autorise {{purchaserNamesWithId}}, à procéder à l'établissement de tous les documents relatifs audit véhicule tels que le certificat de \"gage sans déplacement\".",
-    "vendorsWithId": "Je, {{namesWithId}}, propriétaire",
-    "vendorsWithId_other": "Nous, {{namesWithId}}, propriétaires"
+    "pagePreviewBody": {
+      "i1ToI2": "$t(administrativeStatusCertificateAuthorizationLetter.ownersWithId, {\"count\": {{ownerCount}}, \"namesWithId\": \"{{ownerNamesWithId}}\"}) of vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}} hereby authorize {{purchaserNamesWithId}}, to proceed with all relative documents concerning the said vehicle such as certificate of \"gage sans déplacement\".",
+      "i1ToD2": "$t(administrativeStatusCertificateAuthorizationLetter.ownersWithId, {\"count\": {{ownerCount}}, \"namesWithId\": \"{{ownerNamesWithId}}\"}) of vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}} hereby authorize {{directorNameWithId}}, director of {{companyName}}, BRN {{companyBRN}}, to proceed with all relative documents concerning the said vehicle such as certificate of \"gage sans déplacement\".",
+      "i1ToR2": "$t(administrativeStatusCertificateAuthorizationLetter.ownersWithId, {\"count\": {{ownerCount}}, \"namesWithId\": \"{{ownerNamesWithId}}\"}) of vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}} hereby authorize {{representativeNameWithId}}, {{representativeRole}} and representative of {{companyName}}, BRN {{companyBRN}}, to proceed with all relative documents concerning the said vehicle such as certificate of \"gage sans déplacement\".",
+      "c1ToD1Single": "This is to certify that {{directorNameWithId}}, director of {{companyName}}, BRN {{companyBRN}}, is hereby authorized to proceed with all relative documents concerning vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}}, such as certificate of \"gage sans déplacement\".",
+      "c1ToD1Multiple": "$t(administrativeStatusCertificateAuthorizationLetter.directorsWithId, {\"count\": {{nonRepresentingDirectorCount}}, \"namesWithId\": \"{{nonRepresentingDirectorNamesWithId}}\"}) of {{companyName}}, BRN {{companyBRN}}, hereby authorize director, {{representingDirectorNameWithId}}, to proceed with all relative documents concerning vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}}, such as certificate of \"gage sans déplacement\".",
+      "c1ToR1": "$t(administrativeStatusCertificateAuthorizationLetter.directorsWithId, {\"count\": {{directorCount}}, \"namesWithId\": \"{{directorNamesWithId}}\"}) of {{companyName}}, BRN {{companyBRN}}, hereby authorize {{representativeRole}} and representative, {{representativeNameWithId}}, to proceed with all relative documents concerning vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}}, such as certificate of \"gage sans déplacement\".",
+      "c1ToI2": "$t(administrativeStatusCertificateAuthorizationLetter.directorsWithId, {\"count\": {{directorCount}}, \"namesWithId\": \"{{directorNamesWithId}}\"}) of {{companyName}}, BRN {{companyBRN}}, hereby authorize {{purchaserNameWithId}}, to proceed with all relative documents concerning vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}}, such as certificate of \"gage sans déplacement\".",
+      "c1ToD2": "$t(administrativeStatusCertificateAuthorizationLetter.directorsWithId, {\"count\": {{vendorCompanyDirectorCount}}, \"namesWithId\": \"{{vendorCompanyDirectorNamesWithId}}\"}) of {{vendorCompanyName}}, BRN {{vendorCompanyBRN}}, hereby authorize {{purchaserCompanyDirectorNameWithId}}, director of {{purchaserCompanyName}}, BRN {{purchaserCompanyBRN}}, to proceed with all relative documents concerning vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}}, such as certificate of \"gage sans déplacement\".",
+      "c1ToR2": "$t(administrativeStatusCertificateAuthorizationLetter.directorsWithId, {\"count\": {{vendorCompanyDirectorCount}}, \"namesWithId\": \"{{vendorCompanyDirectorNamesWithId}}\"}) of {{vendorCompanyName}}, BRN {{vendorCompanyBRN}}, hereby authorize {{purchaserCompanyRepresentativeNameWithId}}, {{purchaserCompanyRepresentativeRole}} and representative of {{purchaserCompanyName}}, BRN {{purchaserCompanyBRN}}, to proceed with all relative documents concerning vehicle bearing No. {{vehicleRegNum}} Make {{vehicleMake}}, such as certificate of \"gage sans déplacement\"."
+    },
+    "ownersWithId": "I, {{namesWithId}}, owner",
+    "ownersWithId_other": "We, {{namesWithId}}, owners",
+    "directorsWithId": "I, {{namesWithId}}, director",
+    "directorsWithId_other": "We, {{namesWithId}}, directors"
   },
   "deedOfSale": {
     "title": "Acte de vente",
-    "pagePreviewBody": "$t(deedOfSale.vendorsWithId, {\"count\": {{vendorCount}}, \"namesWithId\": \"{{vendorNamesWithId}}\"}) du véhicule portant le numéro {{vehicleRegNum}} marque {{vehicleMake}} autorise {{purchaserNamesWithId}}, à procéder à l'établissement de tous les documents relatifs audit véhicule tels que le certificat de \"gage sans déplacement\".",
-    "vendorsWithId": "Je, {{namesWithId}}, propriétaire",
-    "vendorsWithId_other": "Nous, {{namesWithId}}, propriétaires"
-  }
+    "pagePreviewPrimaryBody": "$t(deedOfSale.vendorsPronoun, {\"count\": {{vendorCount}}}), {{vendorNamesWithAddress}}, hereby certify having sold our vehicle bearing number {{vehicleRegNum}} to {{purchaserNamesWithAddress}}, for the sum of {{priceInWords}} $t(deedOfSale.rupees, {\"count\": {{price}}}) only ($t(deedOfSale.rupeesAbbr, {\"count\": {{price}}}) {{priceWithCommas}}), which we acknowledge to have received in cash.",
+    "pagePreviewSecondaryBody": "We certify that this original is identical to the other original with which it has been duly collated.",
+    "vendorsPronoun": "I",
+    "vendorsPronoun_other": "We",
+    "registrationMark": "Registration Mark",
+    "make": "Make",
+    "model": "Model",
+    "rating": "Rating",
+    "engineNum": "Engine No.",
+    "chassisNum": "Chassis No.",
+    "dateOfFirstRegistration": "Date of First Registration",
+    "dateOfSale": "Date of Sale",
+    "rupeesAbbr": "R",
+    "rupeesAbbr_other": "Rs",
+    "rupees": "rupee",
+    "rupees_other": "rupees"
+  },
+  "stampPlaceholder": "CACHET"
 }

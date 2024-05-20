@@ -1,7 +1,7 @@
 {
   "documentTitle": "Vente ou achat d'un véhicule d'occasion",
   "pageTitle": "Vente ou achat d'un véhicule d'occasion",
-  "description": "<p>Lors de la vente ou de l'achat ou d'un véhicule d'occasion local (ne provenant pas d'un concessionnaire) à Maurice, il convient de respecter scrupuleusement un certain nombre d'étapes.</p>",
+  "description": "<p>Lors de la vente ou de l'achat d'un véhicule d'occasion local (ne provenant pas d'un concessionnaire) à Maurice, il convient de respecter scrupuleusement un certain nombre d'étapes.</p>",
   "form": {
     "description": "<p>Veuillez répondre aux questions suivantes afin que nous puissions vous fournir les informations les mieux adaptées à votre situation.</p>",
     "identity": {
@@ -40,15 +40,27 @@
         }
       },
       "item3": "<li>Une fois que le mécanicien a donné son accord, contactez plusieurs compagnies d'assurance afin d'obtenir différents devis pour la même couverture sur le véhicule que vous envisagez d'acheter. Vérifiez les frais d'enregistrement que vous devrez payer sur le <GovtRegFeeLink>site officiel du gouvernement mauricien</GovtRegFeeLink> (mycar.mu propose un <MyCarMuRegFeeCalculatorLink>calculateur intuitif</MyCarMuRegFeeCalculatorLink> pour calculer les frais d'enregistrement).",
-      "item4": "<li>Prévoyez 2 jours de congé en raison de tous les déplacements et de l'attente à la <NLTAAbbr />, à la compagnie d'assurance et au bureau d'enregistrement (Registrar).</li>",
+      "item4": "<li>Prévoyez 2 jours de congé en raison de tous les déplacements et de l'attente à la <NLTAAbbr />, à la compagnie d'assurance et au bureau d'enregistrement.</li>",
       "item5": "$t(notes.commonItems.goToNLTAEarly)",
       "item6": "$t(notes.commonItems.endOfFinancialYearNLTAClosed)",
       "item7": "$t(notes.commonItems.exactAmountAtNTLA)",
-      "item8": "<li>Le paiement peut être effectué en espèces, par carte de crédit ou par chèque au bureau d'enregistrement (Registrar). Si vous payez en espèces, assurez-vous d'avoir le montant exact (il y a des notes au bureau d'enregistrement qui le précisent) et quelques billets supplémentaires de Rs100 et Rs200, car vous serez probablement soumis à des frais de taxe.</li>"
+      "item8": "<li>Le paiement peut être effectué en espèces, par carte de crédit ou par chèque au bureau d'enregistrement. Si vous payez en espèces, assurez-vous d'avoir le montant exact (il y a des notes au bureau d'enregistrement qui le précisent) et quelques billets supplémentaires de Rs100 et Rs200, car vous serez probablement soumis à des frais de taxe.</li>"
     }
   },
   "registration": {
+    "title": "<h2>Enregistrer le véhicule</h2>",
+    "description": "<p>Une fois que vous avez le <AdministrativeStatusCertificate />, l'étape suivante consiste à enregistrer le véhicule auprès du <RegistrarLink>bureau d'enregistrement</RegistrarLink>. Vous disposez de <em>15 jours</em> à compter de la date de vente sur l'<DeedOfSale />, après quoi vous devrez payer une amende de 50% de la taxe due. Vous pouvez déléguer cette étape à n'importe qui, à condition que la personne ait 18 ans ou plus. Nous supposerons que la personne qui lit cet article est celle qui se présentera au bureau d'enregistrement.</p>",
+    "note": "<p><em>À noter: La couverture d'assurance actuelle du véhicule est automatiquement annulée une fois l'enregistrement effectué. Cela signifie que le véhicule n'est pas autorisé à circuler sur la voie publique. Donc, juste au cas où vous ne seriez pas en mesure d'obtenir une couverture d'assurance le jour de l'enregistrement, évitez de conduire le véhicule au bureau d'enregistrement car vous ne pourrez pas le conduire légalement au retour.</em></p>",
+    "instructions": {
+      "description": "<p>Avant de vous présenter au bureau d'enregistrement, assurez-vous d'apporter les documents suivants :</p>",
+      "requirement1": "<label>2 <DeedsOfSale /> estampillés</label>",
+      "requirement2": "<label>Votre <ProofOfIdentity /></label>",
+      "requirement3": "<label>Le <VehicleRegistrationBook /></label>",
+      "requirement4": "<label>Le <AdministrativeStatusCertificate /></label>",
+      "requirement5": "<label>Le montant à payer pour l'enregistrement (Vérifiez les frais d'enregistrement sur le <GovtRegFeeLink>site officiel du gouvernement mauricien</GovtRegFeeLink> ou le <MyCarMuRegFeeCalculatorLink>calculateur de mycar.mu</MyCarMuRegFeeCalculatorLink>)</label>"
+    },
     "diagram": {
+      "description": "<p>Le croquis suivant illustre la disposition du bureau d'enregistrement:</p>",
       "labels": {
         "door": "La porte",
         "ticketOfficer": "Billeterie",
@@ -58,7 +70,83 @@
         "taxingWaitingArea": "Salle d'attente section taxing",
         "financeWaitingArea": "Salle d'attente section finance",
         "deliveryWaitingArea": "Salle d'attente section delivery"
+      },
+      "legend": {
+        "step1": "<li>À votre arrivée au bureau d'enregistrement, l'agent de billetterie vous demandera le <VehicleRegistrationBook> avant de vous remettre un billet.</li>",
+        "step2": "<li>Vous devrez attendre votre tour dans la zone d'attente de la section taxing.</li>",
+        "step3": "<li>L'agent de la section taxing vous demandera quelques documents mentionnés ci-dessus avant de vous remettre une facture.</li>",
+        "step4": "<li>Vous devrez émettre un autre billet pour la section finance. Montrez à l'agent de billetterie votre facture.</li>",
+        "step5": "<li>Vous devrez attendre votre tour dans la zone d'attente de la section finance.</li>",
+        "step6": "<li>Ici, vous devez effectuer le paiement, puis l'agent de la section finance vous remettra un reçu de paiement.</li>",
+        "step7": "<li>Vous devrez émettre un troisième et dernier billet pour la section delivery. Présentez à l'agent de billetterie votre reçu de paiement.</li>",
+        "step8": "<li>Vous devrez attendre votre tour dans la zone d'attente de la section delivery.</li>",
+        "step9": "<li>L'agent de la section delivery vous demandera quelques documents, notamment la facture et le reçu de paiement. Ensuite, il vous remettra l'<DeedOfSale /> enregistré; un code-barres sera ajouté sur la face recto de l'<DeedOfSale /> et, la facture et le reçu de paiement y seront agrafés. <em>Laissez-les agrafés.</em></li>",
+        "step10": "<li>À ce stade, l'enregistrement est terminé.</li>"
       }
     }
+  },
+  "insurance": {
+    "title": "<h2>Obtenir une assurance</h2>",
+    "description": "<p>L'ajout d'une couverture d'assurance sur le véhicule est obligatoire pour qu'il puisse être utilisé sur les routes publiques. Vous pouvez opter pour une couverture d'<ComprehensiveInsuranceCover /> ou une couverture d'<ThirdPartyInsuranceCover />. Avant de vous rendre au bureau de la compagnie d'assurance pour faire assurer le véhicule, renseignez-vous auprès de la compagnie sur les documents que vous devez apporter. <em>La couverture d'assurance doit être ajoutée sous le nom qui apparaît sur l'<DeedOfSale /> enregistré.</em>.</p>",
+    "conditionalRequirements": {
+      "description": "<p>En général, les éléments suivants sont requis (les exigences peuvent varier d'une compagnie d'assurance à l'autre):</p>",
+      "individualRequirements": {
+        "proofOfAddress_singlePurchaser": "<label>Votre <ProofOfAddress /></label>",
+        "proofOfAddress_multiplePurchasers": "<label>La <ProofOfAddress /> de chaque acheteur</label>",
+        "requirement1": "<label>L'<DeedOfSale /> enregistré ainsi que la facture et le reçu de paiement du bureau d'enregistrement, agrafés</label>",
+        "requirement2": "<label>Votre <ProofOfIdentity /></label>",
+        "requirement3": "$t(insurance.conditionalRequirements.individualRequirements.proofOfAddress_{{numOfPurchasers}})",
+        "requirement4": "<label>Votre <ProofOfEmployment /></label>",
+        "requirement5": "<label>Votre permis de conduire</label>",
+        "requirement6": "<label>Le <VehicleRegistrationBook /></label>",
+        "requirement7": "<label>La somme à payer à la compagnie d'assurance</label>"
+      },
+      "companyRequirements": {
+        "requirement1": "<label>L'<DeedOfSale /> enregistré ainsi que la facture et le reçu de paiement du bureau d'enregistrement, agrafés</label>",
+        "requirement2": "<label>Votre <ProofOfIdentity /></label>",
+        "requirement3": "<label>La carte d'immatriculation de l'entreprise</label>",
+        "requirement4": "<label>La <ProofOfAddress /> de l'entreprise</label>",
+        "requirement5": "<label>Le <VehicleRegistrationBook /></label>",
+        "requirement6": "<label>La somme à payer à la compagnie d'assurance</label>"
+      }
+    },
+    "itemsReceived": {
+      "description": "<p>L'agent d'assurance vous remettra les documents suivants:</p>",
+      "item1": "<li>Un certificat d'assurance</li>",
+      "item2": "<li>Une <InsuranceVignette /></li>",
+      "item3": "<li>Une police d'assurance</li>",
+      "item4": "<li>Un reçu de paiement de l'assurance</li>",
+      "item5": "<li>Un <AgreedStatementOfFacts /></li>",
+      "item6": "<li>Une vignette d'assistance routière optionnelle</li>",
+      "item7": "<li>Une pochette de pare-brise optionnelle</li>"
+    },
+    "note1": "<p><em>À noter: Vous pouvez demander poliment à l'agent d'assurance de vous fournir une photocopie de l'acte de vente enregistré. Si ce n'est pas possible, veillez à en faire faire une ailleurs, car vous en aurez besoin à la <NLTA /> pour l'étape suivante, à savoir le transfert de propriété.</em></p>",
+    "note2": "<p><em>À noter: Veillez à remplacer dès que possible l'ancienne vignette d'assurance sur le véhicule par la nouvelle.</em></p>",
+    "note3": "<p><em>À noter: Le véhicule peut maintenant être conduit sur la voie publique, mais il est conseillé de ne pas le faire avant que le transfert de propriété n'ait été effectué à la <NLTA>.</em></p>"
+  },
+  "transfer": {
+    "title": "<h2>Transfert de propriété</h2>",
+    "description": "$t(transfer.description_{{purchaserType}}_{{numOfPurchasers}})",
+    "description_individual_singlePurchaser": "<p>La dernière étape consiste à transférer la propriété du véhicule à votre nom au <NLTAContactLink>siège ou bureaux secondaires de la <NLTA /></NLTAContactLink>. Vous pouvez déléguer cette étape à n'importe qui.</p>",
+    "description_individual_multiplePurchasers": "<p>La dernière étape consiste à transférer la propriété du véhicule au nom des acheteurs au <NLTAContactLink>siège ou bureaux secondaires de la <NLTA /></NLTAContactLink>. Vous pouvez déléguer cette étape à n'importe qui.</p>",
+    "description_company_singlePurchaser": "<p>La dernière étape consiste à transférer la propriété du véhicule au nom de votre entreprise au <NLTAContactLink>siège ou bureaux secondaires de la <NLTA /></NLTAContactLink>. Vous pouvez déléguer cette étape à n'importe qui.</p>",
+    "requirements": {
+      "description": "<p>Les documents suivants sont nécessaires:</p>",
+      "proofOfAddress_individual_singlePurchaser": "<label>Votre <ProofOfAddress /></label>",
+      "proofOfAddress_individual_multiplePurchasers": "<label>La <ProofOfAddress /> de chaque acheteur</label>",
+      "proofOfAddress_company_singlePurchaser": "<label>La <ProofOfAddress /> de votre entreprise</label>",
+      "requirement1": "<label>L'<DeedOfSale /> enregistré ainsi que la facture et le reçu de paiement du bureau d'enregistrement, agrafés</label",
+      "requirement2": "<label>Une photocopie de l'<DeedOfSale /> enregistré",
+      "requirement3": "<label>Le certificat d'assurance original",
+      "requirement4": "$t(transfer.requirements.proofOfAddress_{{purchaserType}}_{{numOfPurchasers}})",
+      "requirement5": "<label>Le <VehicleRegistrationBook /></label>",
+      "requirement6": "<label>La some à payer pour le transfert:<dl><dt>Autocycle</dt><dd>Rs 100</dd><dt>Motocyclette</dt><dd>Rs 200</dd><dt>Autres véhicules</dt><dd>Rs 300</dd></dl></label>"
+    },
+    "itemsReceived": {
+      "description": "<p>L'agent de la <NLTA /> vous remettra les documents suivants:</p>",
+      "item1": "<li>Un nouveau <VehicleRegistrationBook /></li>",
+      "item2": "<li>Un reçu du paiement du transfert de propriété</li>"
+    },
+    "note": "<p><em>À noter: Avant de quitter la <NLTA />, vérifiez que tous les détails figurant sur le nouveau <VehicleRegistrationBook /> sont corrects par rapport à l'<DeedOfSale /> enregistré et informez l'agent en cas d'erreur. Sinon, vous devrez revenir plus tard pour le faire modifier.</em></p>"
   }
 }
