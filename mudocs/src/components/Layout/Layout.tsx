@@ -107,6 +107,7 @@ function LanguageSwitch() {
         size="md"
         radius="sm"
         className="min-w-20"
+        isDisabled
       >
         {(locale) => <SelectItem key={locale.value}>{locale.label}</SelectItem>}
       </Select>
