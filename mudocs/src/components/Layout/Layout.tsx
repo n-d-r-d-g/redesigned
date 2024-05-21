@@ -1,40 +1,47 @@
-import {
-  ChangeEvent,
-  PropsWithChildren,
-  useCallback,
-  useRef,
-  useState,
-} from "react";
+import { ChangeEvent, PropsWithChildren, useCallback, useRef } from "react";
 import Link from "next/link";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import Image from "next/image";
-import { Button, Modal } from "flowbite-react";
+import {
+  Button,
+  Modal,
+  ModalBody,
+  ModalContent,
+  ModalFooter,
+  ModalHeader,
+  Select,
+  SelectItem,
+  useDisclosure,
+} from "@nextui-org/react";
 import { FaGithub as FaGithubIcon } from "react-icons/fa";
-import Select from "../Select/Select";
 import TypedTrans from "../TypedTrans/TypedTrans";
 import { DEFAULT_I18N_NAMESPACE, I18N_LOCALES } from "../../../constants";
 
 function LanguageSwitch() {
   const { t: tCommon, i18n } = useTranslation(DEFAULT_I18N_NAMESPACE);
   const router = useRouter();
-  const [isModalOpen, setIsModalOpen] = useState(false);
+  const {
+    isOpen: isModalOpen,
+    onOpen: openModal,
+    onClose: closeModal,
+  } = useDisclosure();
   const nextLocale = useRef<(typeof I18N_LOCALES)[number] | null>(
     i18n.language as unknown as (typeof I18N_LOCALES)[number],
   );
-
-  const openModal = () => setIsModalOpen(true);
-
-  const closeModal = () => setIsModalOpen(false);
+  const locales = I18N_LOCALES.map((l) => ({
+    value: l,
+    label: l.toUpperCase(),
+  }));
 
   const handleLanguageSelect = useCallback(
     (e: ChangeEvent<HTMLSelectElement>) => {
-      nextLocale.current = e.currentTarget
+      nextLocale.current = e.target
         .value as unknown as (typeof I18N_LOCALES)[number];
 
       openModal();
     },
-    [],
+    [openModal],
   );
 
   const handleLanguageChange = useCallback(() => {
@@ -46,54 +53,62 @@ function LanguageSwitch() {
     router.push(router.asPath, undefined, {
       locale: nextLocale.current as string,
     });
-  }, [router]);
+  }, [closeModal, router]);
 
   const handleLanguageSwitchDismiss = useCallback(() => {
     closeModal();
 
     nextLocale.current = null;
-  }, []);
+  }, [closeModal]);
 
   return (
     <div className="flex flex-row items-center gap-2">
-      <Modal show={isModalOpen} onClose={closeModal}>
-        <Modal.Header>
-          {tCommon("languageSwitch.confirmation.title")}
-        </Modal.Header>
-        <Modal.Body>
-          <div className="space-y-6">
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              {tCommon("languageSwitch.confirmation.disclaimer")}
-            </p>
-            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-              {tCommon("languageSwitch.confirmation.question")}
-            </p>
-          </div>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button color="blue" onClick={handleLanguageChange}>
-            {tCommon("reload")}
-          </Button>
-          <Button color="gray" onClick={handleLanguageSwitchDismiss}>
-            {tCommon("cancel")}
-          </Button>
-        </Modal.Footer>
+      <Modal isOpen={isModalOpen} onClose={closeModal}>
+        <ModalContent>
+          <ModalHeader>
+            {tCommon("languageSwitch.confirmation.title")}
+          </ModalHeader>
+          <ModalBody>
+            <div className="space-y-6">
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                {tCommon("languageSwitch.confirmation.disclaimer")}
+              </p>
+              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
+                {tCommon("languageSwitch.confirmation.question")}
+              </p>
+            </div>
+          </ModalBody>
+          <ModalFooter>
+            <Button
+              color="primary"
+              size="md"
+              radius="sm"
+              onPress={handleLanguageChange}
+            >
+              {tCommon("reload")}
+            </Button>
+            <Button
+              variant="flat"
+              size="md"
+              radius="sm"
+              onPress={handleLanguageSwitchDismiss}
+            >
+              {tCommon("cancel")}
+            </Button>
+          </ModalFooter>
+        </ModalContent>
       </Modal>
-      <label
-        htmlFor="language-switch"
-        aria-label={tCommon(`changeLanguage`)}
-        className="text-xl"
-      ></label>
       <Select
-        id="language-switch"
+        items={locales}
+        aria-label={tCommon("changeLanguage")}
         onChange={handleLanguageSelect}
-        value={i18n.language}
+        defaultSelectedKeys={[i18n.language]}
+        selectedKeys={[i18n.language]}
+        size="md"
+        radius="sm"
+        className="min-w-20"
       >
-        {I18N_LOCALES.map((locale) => (
-          <option key={locale} value={locale}>
-            {locale?.toUpperCase()}
-          </option>
-        ))}
+        {(locale) => <SelectItem key={locale.value}>{locale.label}</SelectItem>}
       </Select>
     </div>
   );
@@ -121,17 +136,22 @@ export default function Layout({ children }: PropsWithChildren) {
           MUDOCS
         </Link>
         <aside className="flex flex-row items-center gap-1">
-          <Link
+          <Button
+            type="button"
+            size="md"
+            radius="full"
+            variant="light"
+            as={Link}
             href="https://github.com/n-d-r-d-g/redesigned/tree/main/mudocs"
             target="_blank"
             rel="noreferrer noopener nofollow"
             title={tCommon("githubLink")}
             aria-label={tCommon("githubLink")}
-            className="inline-flex items-center rounded-full p-2 text-center text-sm font-medium text-black hover:bg-slate-200 focus:ring-0 focus:ring-offset-0 focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white dark:text-white dark:hover:bg-slate-700 dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900"
             passHref
+            isIconOnly
           >
             <FaGithubIcon size={16} />
-          </Link>
+          </Button>
           <LanguageSwitch />
         </aside>
       </nav>
