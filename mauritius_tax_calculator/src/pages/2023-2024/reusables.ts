@@ -1,12 +1,16 @@
 import Decimal from "decimal.js";
 
 export const MIN_MONETARY_AMOUNT = 0;
+
 export const MAX_MONETARY_AMOUNT = 999_999_999_999;
+
 export const MRA_MONTHLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE = new Decimal(
   20_000
 );
+
 export const MRA_YEARLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE =
   MRA_MONTHLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE.mul(12);
+
 export const INITIAL_MONTHLY_TAXABLE_BRACKETS = [
   {
     key: "1",
@@ -63,6 +67,7 @@ export const INITIAL_MONTHLY_TAXABLE_BRACKETS = [
     rate: new Decimal(0.2),
   },
 ];
+
 export const INITIAL_YEARLY_TAXABLE_BRACKETS = [
   {
     key: "1",
@@ -119,6 +124,7 @@ export const INITIAL_YEARLY_TAXABLE_BRACKETS = [
     rate: new Decimal(0.2),
   },
 ];
+
 export const IET_DEPENDENT_DEDUCTIONS = {
   0: new Decimal(0),
   1: new Decimal(110_000),
@@ -126,3 +132,24 @@ export const IET_DEPENDENT_DEDUCTIONS = {
   3: new Decimal(275_000),
   4: new Decimal(355_000),
 };
+
+export const DEFAULT_MONTHLY_INITIAL_VALUES = {
+  baseSalary: 0,
+  travelingAllowance: 0,
+  internetAllowance: 0,
+  performanceBonus: 0,
+  otherTaxableIncome: 0,
+} as const;
+
+export const DEFAULT_YEARLY_INITIAL_VALUES = {
+  baseSalary: 0,
+  eoyBonus: 0,
+  travelingAllowance: 0,
+  internetAllowance: 0,
+  performanceBonus: 0,
+  otherTaxableIncome: 0,
+  numOfDependents: "0",
+  housingLoanInterest: 0,
+  medicalInsurance: 0,
+  otherTaxDeductions: 0,
+} as const;

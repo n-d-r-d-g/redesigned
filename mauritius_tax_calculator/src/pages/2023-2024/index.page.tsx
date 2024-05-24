@@ -17,7 +17,12 @@ import {
   DEFAULT_I18N_LOCALE,
   DEFAULT_I18N_NAMESPACE,
 } from "../../../constants";
-import { MAX_MONETARY_AMOUNT, MIN_MONETARY_AMOUNT } from "./reusables";
+import {
+  DEFAULT_MONTHLY_INITIAL_VALUES,
+  DEFAULT_YEARLY_INITIAL_VALUES,
+  MAX_MONETARY_AMOUNT,
+  MIN_MONETARY_AMOUNT,
+} from "./reusables";
 import { MonthlyFormValues, TabKey, YearlyFormValues } from "./types";
 
 export default function FinancialYear2023To2024() {
@@ -95,43 +100,36 @@ export default function FinancialYear2023To2024() {
     "number.min": tCommon("errors.numberGTE", { count: MIN_MONETARY_AMOUNT }),
     "number.max": tCommon("errors.numberLTE", { count: MAX_MONETARY_AMOUNT }),
   });
-  const [monthlyFormikValues, setMonthlyFormikValues] =
-    useState<MonthlyFormValues>({
-      baseSalary: 0,
-      travelingAllowance: 0,
-      internetAllowance: 0,
-      performanceBonus: 0,
-      otherTaxableIncome: 0,
-    });
-  const [yearlyFormikValues, setYearlyFormikValues] =
-    useState<YearlyFormValues>({
-      baseSalary: 0,
-      eoyBonus: 0,
-      travelingAllowance: 0,
-      internetAllowance: 0,
-      performanceBonus: 0,
-      otherTaxableIncome: 0,
-      numOfDependents: "0",
-      housingLoanInterest: 0,
-      medicalInsurance: 0,
-      otherTaxDeductions: 0,
-    });
+  const [monthlyInitialFormikValues, setMonthlyInitialFormikValues] =
+    useState<MonthlyFormValues>(DEFAULT_MONTHLY_INITIAL_VALUES);
+  const [yearlyInitialFormikValues, setYearlyInitialFormikValues] =
+    useState<YearlyFormValues>(DEFAULT_YEARLY_INITIAL_VALUES);
   const monthlyFormikRef = useRef<FormikProps<MonthlyFormValues>>(null);
   const yearlyFormikRef = useRef<FormikProps<YearlyFormValues>>(null);
 
   const handleSelectedTabChange = useCallback((newTab: Key) => {
     if (newTab === "month") {
-      setYearlyFormikValues(
+      setYearlyInitialFormikValues(
         (prevValues) => yearlyFormikRef.current?.values ?? prevValues
       );
     } else {
-      setMonthlyFormikValues(
+      setMonthlyInitialFormikValues(
         (prevValues) => monthlyFormikRef.current?.values ?? prevValues
       );
     }
 
     setSelectedTab(newTab as TabKey);
   }, []);
+
+  const resetMonthlyInitialValues = useCallback(
+    () => setMonthlyInitialFormikValues(DEFAULT_MONTHLY_INITIAL_VALUES),
+    []
+  );
+
+  const resetYearlyInitialValues = useCallback(
+    () => setYearlyInitialFormikValues(DEFAULT_YEARLY_INITIAL_VALUES),
+    []
+  );
 
   return (
     <>
@@ -154,7 +152,7 @@ export default function FinancialYear2023To2024() {
           >
             <Formik
               innerRef={monthlyFormikRef}
-              initialValues={monthlyFormikValues}
+              initialValues={monthlyInitialFormikValues}
               onSubmit={noop}
               validationSchema={joiFormikAdapter(monthlySchema)}
               enableReinitialize
@@ -169,7 +167,9 @@ export default function FinancialYear2023To2024() {
                   <CardBody>
                     <form className="flex flex-col gap-y-5 pb-1">
                       <p>{t2023To2024("month.description")}</p>
-                      <ResetButton />
+                      <ResetButton
+                        resetInitialValues={resetMonthlyInitialValues}
+                      />
                       <FormNumberInput
                         name="baseSalary"
                         label={t2023To2024("month.form.baseSalary.label")}
@@ -229,7 +229,7 @@ export default function FinancialYear2023To2024() {
           >
             <Formik
               innerRef={yearlyFormikRef}
-              initialValues={yearlyFormikValues}
+              initialValues={yearlyInitialFormikValues}
               onSubmit={noop}
               validationSchema={joiFormikAdapter(yearlySchema)}
               enableReinitialize
@@ -263,7 +263,9 @@ export default function FinancialYear2023To2024() {
                           ),
                         }}
                       />
-                      <ResetButton />
+                      <ResetButton
+                        resetInitialValues={resetYearlyInitialValues}
+                      />
                       <FormNumberInput
                         name="baseSalary"
                         label={t2023To2024("year.form.baseSalary.label")}
