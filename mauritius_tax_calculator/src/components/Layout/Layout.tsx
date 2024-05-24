@@ -1,4 +1,5 @@
 import { ChangeEvent, PropsWithChildren, useCallback, useRef } from "react";
+import Head from "next/head";
 import Link from "next/link";
 import { Trans, useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -117,71 +118,77 @@ export default function Layout({ children }: PropsWithChildren) {
   const { t: tCommon } = useTranslation("common");
 
   return (
-    <div className="flex min-h-[100svh] flex-col">
-      <nav className="hide-on-print sticky top-0 z-10 mx-auto flex w-[120rem] max-w-full flex-row items-center justify-between border-b border-neutral-200 bg-white p-3 dark:border-neutral-700 dark:bg-neutral-950">
-        <Link
-          href={"/"}
-          className="flex flex-row items-center gap-2 rounded text-sm font-bold text-slate-700 grayscale hover:text-black hover:no-underline hover:grayscale-0 focus:ring-0 focus:ring-offset-0 focus-visible:text-black focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:grayscale-0 motion-safe:transition motion-safe:duration-300 dark:text-slate-300 dark:hover:text-white dark:focus-visible:text-white dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-neutral-950"
-        >
-          <span aria-hidden>
-            <Image
-              src="/logo.svg"
-              alt={tCommon("websiteTitle")}
-              width={16}
-              height={20}
-              priority
-            />
-          </span>{" "}
-          {tCommon("websiteTitle")}
-        </Link>
-        <aside className="flex flex-row items-center gap-2">
-          <Button
-            type="button"
-            size="md"
-            radius="full"
-            variant="light"
-            as={Link}
-            href="https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator"
-            target="_blank"
-            rel="noreferrer noopener nofollow"
-            title={tCommon("githubLink")}
-            aria-label={tCommon("githubLink")}
-            passHref
-            isIconOnly
+    <>
+      <Head>
+        <title>{tCommon("websiteTitle")}</title>
+      </Head>
+
+      <div className="flex min-h-[100svh] flex-col">
+        <nav className="hide-on-print sticky top-0 z-10 mx-auto flex w-[120rem] max-w-full flex-row items-center justify-between border-b border-neutral-200 bg-white p-3 dark:border-neutral-700 dark:bg-neutral-950">
+          <Link
+            href={"/"}
+            className="flex flex-row items-center gap-2 rounded text-sm font-bold text-slate-700 grayscale hover:text-black hover:no-underline hover:grayscale-0 focus:ring-0 focus:ring-offset-0 focus-visible:text-black focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-4 focus-visible:ring-offset-white focus-visible:grayscale-0 motion-safe:transition motion-safe:duration-300 dark:text-slate-300 dark:hover:text-white dark:focus-visible:text-white dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-neutral-950"
           >
-            <FaGithubIcon size={16} />
-          </Button>
-          <LanguageSwitch />
-        </aside>
-      </nav>
-      <main className="root-container min-h-0 grow flex flex-col p-3">
-        {children}
-      </main>
-      <footer className="hide-on-print grid place-content-center py-2">
-        <Trans
-          ns="common"
-          i18nKey="websiteBuiltBy"
-          components={{
-            span: (
-              <span className="text-center text-xs text-gray-700 dark:text-gray-400" />
-            ),
-            HeartTitle: (
-              <span
-                title={tCommon("websiteBuiltByTitle")}
-                className="cursor-help"
+            <span aria-hidden>
+              <Image
+                src="/logo.svg"
+                alt={tCommon("websiteTitle")}
+                width={16}
+                height={20}
+                priority
               />
-            ),
-            GithubLink: (
-              <Link
-                href="https://github.com/n-d-r-d-g"
-                target="_blank"
-                rel="noreferrer noopener nofollow"
-                className="rounded font-extrabold focus:ring-0 focus:ring-offset-0 focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-neutral-950"
-              />
-            ),
-          }}
-        />
-      </footer>
-    </div>
+            </span>{" "}
+            {tCommon("websiteTitle")}
+          </Link>
+          <aside className="flex flex-row items-center gap-2">
+            <Button
+              type="button"
+              size="md"
+              radius="full"
+              variant="light"
+              as={Link}
+              href="https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+              title={tCommon("githubLink")}
+              aria-label={tCommon("githubLink")}
+              passHref
+              isIconOnly
+            >
+              <FaGithubIcon size={16} />
+            </Button>
+            <LanguageSwitch />
+          </aside>
+        </nav>
+        <main className="root-container min-h-0 grow flex flex-col p-3">
+          {children}
+        </main>
+        <footer className="hide-on-print grid place-content-center py-2">
+          <Trans
+            ns="common"
+            i18nKey="websiteBuiltBy"
+            components={{
+              span: (
+                <span className="text-center text-xs text-gray-700 dark:text-gray-400" />
+              ),
+              HeartTitle: (
+                <span
+                  title={tCommon("websiteBuiltByTitle")}
+                  className="cursor-help"
+                />
+              ),
+              GithubLink: (
+                <Link
+                  href="https://github.com/n-d-r-d-g"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                  className="rounded font-extrabold focus:ring-0 focus:ring-offset-0 focus-visible:no-underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-neutral-950"
+                />
+              ),
+            }}
+          />
+        </footer>
+      </div>
+    </>
   );
 }
