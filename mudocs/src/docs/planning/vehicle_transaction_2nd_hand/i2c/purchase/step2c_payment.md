@@ -24,6 +24,7 @@ Advised preparer: company representative
         <li>vendor keeps their proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
         <li>keep your proof of identity & directors keep theirs</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company's stamp</li>
       </ol>
     </td>
@@ -40,6 +41,7 @@ Advised preparer: company representative
         <li>vendor keeps their proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
         <li>keep your proof of identity & directors keep theirs</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company's stamp</li>
       </ol>
     </td>
@@ -58,6 +60,7 @@ Advised preparer: company representative
         <li>keep vendor's proof of identity</li>
         <li>keep your proof of identity & directors keep theirs</li>
         <li>keep vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company's stamp</li>
       </ol>
     </td>
@@ -74,6 +77,7 @@ Advised preparer: company representative
         <li>keep vendor's proof of identity</li>
         <li>keep your proof of identity & directors keep theirs</li>
         <li>keep vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company's stamp</li>
       </ol>
     </td>
@@ -92,6 +96,7 @@ Advised preparer: company representative
         <li>vendor keeps their proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
         <li>keep your proof of identity & directors keep theirs</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company's stamp</li>
       </ol>
     </td>
@@ -108,6 +113,7 @@ Advised preparer: company representative
         <li>vendor keeps their proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
         <li>keep your proof of identity & directors keep theirs</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company's stamp</li>
       </ol>
     </td>

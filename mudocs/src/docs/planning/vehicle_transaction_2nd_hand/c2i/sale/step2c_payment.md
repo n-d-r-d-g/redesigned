@@ -20,6 +20,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>purchaser keeps their proof of identity</li>
         <li>keep your proof of identity (if multiple directors, keep their proof of identity, else they keep it)</li>
         <li>keep vehicle's registration book</li>
@@ -35,6 +36,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>purchaser keeps their proof of identity</li>
         <li>keep your proof of identity (if multiple directors, keep their proof of identity, else they keep it)</li>
         <li>keep vehicle's registration book</li>
@@ -56,6 +58,7 @@ Advised preparer: company representative
         <li>keep your proof of identity (if multiple directors, keep their proof of identity, else they keep it)</li>
         <li>purchaser keeps their proof of identity</li>
         <li>hand vehicle's registration book to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>keep company's stamp</li>
       </ol>
     </td>
@@ -72,6 +75,7 @@ Advised preparer: company representative
         <li>keep your proof of identity (if multiple directors, keep their proof of identity, else they keep it)</li>
         <li>purchaser keeps their proof of identity</li>
         <li>hand vehicle's registration book to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>keep company's stamp</li>
       </ol>
     </td>
@@ -86,6 +90,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>purchaser keeps their proof of identity</li>
         <li>keep your proof of identity (if multiple directors, keep their proof of identity, else they keep it)</li>
         <li>keep vehicle's registration book</li>
@@ -101,6 +106,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>purchaser keeps their proof of identity</li>
         <li>keep your proof of identity (if multiple directors, keep their proof of identity, else they keep it)</li>
         <li>keep vehicle's registration book</li>

@@ -20,6 +20,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company representative to make sure to bring their proof of identity & directors to bring theirs</li>
         <li>ask company representative to make sure to bring vehicle's registration book</li>
+        <li>ask company representative to bring fitness vignette copy</li>
         <li>ask company representative to bring stamp</li>
         <li>ask company representative to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity</li>
@@ -35,6 +36,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company representative to make sure to bring their proof of identity & directors to bring theirs</li>
         <li>ask company representative to make sure to bring vehicle's registration book</li>
+        <li>ask company representative to bring fitness vignette copy</li>
         <li>ask company representative to bring stamp</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
@@ -52,6 +54,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company representative to make sure to bring their proof of identity & directors to bring theirs</li>
         <li>ask company representative to make sure to bring vehicle's registration book</li>
+        <li>ask company representative to bring fitness vignette copy</li>
         <li>ask company representative to bring stamp</li>
         <li>ask company representative to bring all 3 filled deeds of sale</li>
         <li>ask company representative to bring filled authorization letter (c1ToI2)</li>
@@ -68,6 +71,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company representative to make sure to bring their proof of identity & directors to bring theirs</li>
         <li>ask company representative to make sure to bring vehicle's registration book</li>
+        <li>ask company representative to bring fitness vignette copy</li>
         <li>ask company representative to bring stamp</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
@@ -86,6 +90,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company representative to make sure to bring their proof of identity & directors to bring theirs</li>
         <li>ask company representative to make sure to bring vehicle's registration book</li>
+        <li>ask company representative to bring fitness vignette copy</li>
         <li>ask company representative to bring stamp</li>
         <li>ask company representative to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity</li>
@@ -101,6 +106,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company representative to make sure to bring their proof of identity & directors to bring theirs</li>
         <li>ask company representative to make sure to bring vehicle's registration book</li>
+        <li>ask company representative to bring fitness vignette copy</li>
         <li>ask company representative to bring stamp</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to bring all 3 filled deeds of sale</li>

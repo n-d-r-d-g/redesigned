@@ -20,6 +20,7 @@ Advised preparer (deeds of sale): vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company1 representative to make sure to bring their & company1 directors' proof of identity</li>
         <li>ask company1 representative make sure to bring vehicle's registration book</li>
+        <li>ask company1 representative to bring fitness vignette copy</li>
         <li>ask company1 representative to bring company1's stamp</li>
         <li>ask company1 representative to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity & ask company2 directors to bring theirs</li>
@@ -36,6 +37,7 @@ Advised preparer (deeds of sale): vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company1 representative to make sure to bring their & company1 directors' proof of identity</li>
         <li>ask company1 representative make sure to bring vehicle's registration book</li>
+        <li>ask company1 representative to bring fitness vignette copy</li>
         <li>ask company1 representative to bring company1's stamp</li>
         <li>make sure to bring your proof of identity & ask company2 directors to bring theirs</li>
         <li>make sure to bring company2's stamp</li>
@@ -54,6 +56,7 @@ Advised preparer (deeds of sale): vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company1 representative to make sure to bring their & company1 directors' proof of identity</li>
         <li>ask company1 representative make sure to bring vehicle's registration book</li>
+        <li>ask company1 representative to bring fitness vignette copy</li>
         <li>ask company1 representative to bring company1's stamp</li>
         <li>ask company1 representative to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity & ask company2 directors to bring theirs</li>
@@ -70,6 +73,7 @@ Advised preparer (deeds of sale): vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask company1 representative to make sure to bring their & company1 directors' proof of identity</li>
         <li>ask company1 representative make sure to bring vehicle's registration book</li>
+        <li>ask company1 representative to bring fitness vignette copy</li>
         <li>ask company1 representative to bring company1's stamp</li>
         <li>make sure to bring your proof of identity & ask company2 directors to bring theirs</li>
         <li>make sure to bring company2's stamp</li>

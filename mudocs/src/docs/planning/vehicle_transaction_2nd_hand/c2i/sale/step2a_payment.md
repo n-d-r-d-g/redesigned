@@ -21,6 +21,7 @@ Advised preparer: company representative
         <li>ask purchaser to make sure to bring their proof of identity</li>
         <li>make sure to bring your proof of identity & ask directors to bring theirs</li>
         <li>make sure to bring vehicle's registration book</li>
+        <li>make sure to bring fitness vignette copy</li>
         <li>make sure to bring company's stamp</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to verify deeds of sale on the spot</li>
@@ -37,6 +38,7 @@ Advised preparer: company representative
         <li>ask purchaser to make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity & ask directors to bring theirs</li>
         <li>make sure to bring vehicle's registration book</li>
+        <li>make sure to bring fitness vignette copy</li>
         <li>make sure to bring company's stamp</li>
         <li>make sure to verify deeds of sale on the spot</li>
       </ol>
@@ -53,6 +55,7 @@ Advised preparer: company representative
         <li>ask purchaser to make sure to bring their proof of identity</li>
         <li>make sure to bring your proof of identity & ask directors to bring theirs</li>
         <li>make sure to bring vehicle's registration book</li>
+        <li>make sure to bring fitness vignette copy</li>
         <li>make sure to bring company's stamp</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to bring filled authorization letter (c1ToI2)</li>
@@ -71,6 +74,7 @@ Advised preparer: company representative
         <li>ask purchaser to make sure to bring filled authorization letter (c1ToI2)</li>
         <li>make sure to bring your proof of identity & ask directors to bring theirs</li>
         <li>make sure to bring vehicle's registration book</li>
+        <li>make sure to bring fitness vignette copy</li>
         <li>make sure to bring company's stamp</li>
         <li>make sure to verify deeds of sale & authorization letter (c1ToI2) on the spot</li>
       </ol>
@@ -87,6 +91,7 @@ Advised preparer: company representative
         <li>ask purchaser to make sure to bring their proof of identity</li>
         <li>make sure to bring your proof of identity & ask directors to bring theirs</li>
         <li>make sure to bring vehicle's registration book</li>
+        <li>make sure to bring fitness vignette copy</li>
         <li>make sure to bring company's stamp</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to verify deeds of sale on the spot</li>
@@ -103,6 +108,7 @@ Advised preparer: company representative
         <li>ask purchaser to make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity & ask directors to bring theirs</li>
         <li>make sure to bring vehicle's registration book</li>
+        <li>make sure to bring fitness vignette copy</li>
         <li>make sure to bring company's stamp</li>
         <li>make sure to verify deeds of sale on the spot</li>
       </ol>

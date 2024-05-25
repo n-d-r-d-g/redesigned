@@ -23,6 +23,7 @@ Advised preparer: vendor
         <li>vendor keeps their proof of identity</li>
         <li>keep your proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -37,6 +38,7 @@ Advised preparer: vendor
         <li>vendor keeps their proof of identity</li>
         <li>keep your proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -54,6 +56,7 @@ Advised preparer: vendor
         <li>keep vendor's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -69,6 +72,7 @@ Advised preparer: vendor
         <li>keep vendor's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -85,6 +89,7 @@ Advised preparer: vendor
         <li>vendor keeps their proof of identity</li>
         <li>keep your proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -99,6 +104,7 @@ Advised preparer: vendor
         <li>vendor keeps their proof of identity</li>
         <li>keep your proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -115,6 +121,7 @@ Advised preparer: vendor
         <li>vendor keeps their proof of identity</li>
         <li>keep your proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -129,6 +136,7 @@ Advised preparer: vendor
         <li>vendor keeps their proof of identity</li>
         <li>keep your proof of identity</li>
         <li>vendor keeps vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -146,6 +154,7 @@ Advised preparer: vendor
         <li>keep vendor's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -161,6 +170,7 @@ Advised preparer: vendor
         <li>keep vendor's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>

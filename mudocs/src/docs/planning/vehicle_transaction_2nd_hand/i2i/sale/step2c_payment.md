@@ -20,6 +20,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>keep purchaser's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
@@ -34,6 +35,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>keep purchaser's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
@@ -54,6 +56,7 @@ Advised preparer: vendor
         <li>purchaser keeps their proof of identity</li>
         <li>hand your proof of identity to purchaser</li>
         <li>hand vehicle's registration book to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
       </ol>
     </td>
   </tr>
@@ -69,6 +72,7 @@ Advised preparer: vendor
         <li>purchaser keeps their proof of identity</li>
         <li>hand your proof of identity to purchaser</li>
         <li>hand vehicle's registration book to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
       </ol>
     </td>
   </tr>
@@ -82,6 +86,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>keep purchaser's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
@@ -96,6 +101,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>keep purchaser's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
@@ -112,6 +118,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>keep purchaser's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
@@ -126,6 +133,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
         <li>keep purchaser's proof of identity</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
@@ -146,6 +154,7 @@ Advised preparer: vendor
         <li>purchaser keeps their proof of identity</li>
         <li>hand your proof of identity to purchaser</li>
         <li>hand vehicle's registration book to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
       </ol>
     </td>
   </tr>
@@ -161,6 +170,7 @@ Advised preparer: vendor
         <li>purchaser keeps their proof of identity</li>
         <li>hand your proof of identity to purchaser</li>
         <li>hand vehicle's registration book to purchaser</li>
+        <li>hand fitness vignette copy to purchaser</li>
       </ol>
     </td>
   </tr>

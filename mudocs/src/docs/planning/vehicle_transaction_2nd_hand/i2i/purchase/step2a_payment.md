@@ -20,6 +20,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>ask vendor to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to verify deeds of sale on the spot</li>
@@ -34,6 +35,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to verify deeds of sale on the spot</li>
@@ -50,6 +52,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>ask vendor to bring all 3 filled deeds of sale</li>
         <li>ask vendor to bring filled authorization letter (i1ToI2)</li>
         <li>make sure to bring your proof of identity</li>
@@ -65,6 +68,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to bring filled authorization letter (i1ToI2)</li>
@@ -82,6 +86,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>ask vendor to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to verify deeds of sale on the spot</li>
@@ -96,6 +101,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to verify deeds of sale on the spot</li>
@@ -112,6 +118,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>ask vendor to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to verify deeds of sale on the spot</li>
@@ -126,6 +133,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to verify deeds of sale on the spot</li>
@@ -142,6 +150,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>ask vendor to bring all 3 filled deeds of sale</li>
         <li>ask vendor to bring filled authorization letter (i1ToI2 ~> purchaser's delegate as the authorized person)</li>
         <li>make sure to bring your proof of identity</li>
@@ -157,6 +166,7 @@ Advised preparer: vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>make sure to bring your proof of identity</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
         <li>make sure to bring filled authorization letter (i1ToI2 ~> purchaser's delegate as the authorized person)</li>

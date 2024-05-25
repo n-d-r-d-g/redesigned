@@ -24,6 +24,7 @@ Advised preparer: company representative
         <li>company representative keeps vehicle's registration book</li>
         <li>company representative keeps stamp</li>
         <li>keep your proof of identity</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -39,6 +40,7 @@ Advised preparer: company representative
         <li>company representative keeps vehicle's registration book</li>
         <li>company representative keeps stamp</li>
         <li>keep your proof of identity</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -57,6 +59,7 @@ Advised preparer: company representative
         <li>company representative keeps company's stamp</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -73,6 +76,7 @@ Advised preparer: company representative
         <li>company representative keeps company's stamp</li>
         <li>keep your proof of identity</li>
         <li>keep vehicle's registration book</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -90,6 +94,7 @@ Advised preparer: company representative
         <li>company representative keeps vehicle's registration book</li>
         <li>company representative keeps stamp</li>
         <li>keep your proof of identity</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>
@@ -105,6 +110,7 @@ Advised preparer: company representative
         <li>company representative keeps vehicle's registration book</li>
         <li>company representative keeps stamp</li>
         <li>keep your proof of identity</li>
+        <li>keep fitness vignette copy</li>
       </ol>
     </td>
   </tr>

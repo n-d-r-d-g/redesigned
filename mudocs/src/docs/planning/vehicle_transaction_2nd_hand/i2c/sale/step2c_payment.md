@@ -20,6 +20,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to company representative</li>
+        <li>hand fitness vignette copy to company representative</li>
         <li>company representative keeps their proof of identity & director keeps theirs</li>
         <li>company representative keeps company's stamp</li>
         <li>keep photocopy of company's brn</li>
@@ -36,6 +37,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to company representative</li>
+        <li>hand fitness vignette copy to company representative</li>
         <li>company representative keeps their proof of identity & director keeps theirs</li>
         <li>company representative keeps company's stamp</li>
         <li>keep photocopy of company's brn</li>
@@ -59,6 +61,7 @@ Advised preparer: company representative
         <li>company representative keeps company's stamp</li>
         <li>hand your proof of identity to company representative</li>
         <li>hand vehicle's registration book to company representative</li>
+        <li>hand fitness vignette copy to company representative</li>
       </ol>
     </td>
   </tr>
@@ -75,6 +78,7 @@ Advised preparer: company representative
         <li>company representative keeps company's stamp</li>
         <li>hand your proof of identity to company representative</li>
         <li>hand vehicle's registration book to company representative</li>
+        <li>hand fitness vignette copy to company representative</li>
       </ol>
     </td>
   </tr>
@@ -88,6 +92,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to company representative</li>
+        <li>hand fitness vignette copy to company representative</li>
         <li>company representative keeps their proof of identity & director keeps theirs</li>
         <li>company representative keeps company's stamp</li>
         <li>keep photocopy of company's brn</li>
@@ -104,6 +109,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to company representative</li>
+        <li>hand fitness vignette copy to company representative</li>
         <li>company representative keeps their proof of identity & director keeps theirs</li>
         <li>company representative keeps company's stamp</li>
         <li>keep photocopy of company's brn</li>

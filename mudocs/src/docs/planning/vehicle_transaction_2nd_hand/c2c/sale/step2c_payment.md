@@ -20,6 +20,7 @@ Advised preparer (deeds of sale): vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to company2 representative</li>
+        <li>hand fitness vignette copy to company2 representative</li>
         <li>company2 representative keeps company2 directors' proof of identity</li>
         <li>company2 representative keeps company2's stamp</li>
         <li>keep your proof of identity & company1 directors keep theirs</li>
@@ -36,6 +37,7 @@ Advised preparer (deeds of sale): vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to company2 representative</li>
+        <li>hand fitness vignette copy to company2 representative</li>
         <li>company2 representative keeps company2 directors' proof of identity</li>
         <li>company2 representative keeps company2's stamp</li>
         <li>keep your proof of identity & company1 directors keep theirs</li>
@@ -54,6 +56,7 @@ Advised preparer (deeds of sale): vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to company2 representative</li>
+        <li>hand fitness vignette copy to company2 representative</li>
         <li>company2 representative keeps company2 directors' proof of identity</li>
         <li>company2 representative keeps company2's stamp</li>
         <li>keep your proof of identity & company1 directors keep theirs</li>
@@ -70,6 +73,7 @@ Advised preparer (deeds of sale): vendor
       <ol style="padding: 0; list-style-position: inside;">
         <li>keep 2 deeds of sale</li>
         <li>hand 1 deed of sale to company2 representative</li>
+        <li>hand fitness vignette copy to company2 representative</li>
         <li>company2 representative keeps company2 directors' proof of identity</li>
         <li>company2 representative keeps company2's stamp</li>
         <li>keep your proof of identity & company1 directors keep theirs</li>

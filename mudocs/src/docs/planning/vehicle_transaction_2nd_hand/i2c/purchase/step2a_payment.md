@@ -20,6 +20,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>ask vendor to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity & ask company directors to bring theirs</li>
         <li>make sure to bring photocopy of company's brn</li>
@@ -36,6 +37,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>make sure to bring your proof of identity & ask company directors to bring theirs</li>
         <li>make sure to bring photocopy of company's brn</li>
         <li>make sure to bring company's stamp</li>
@@ -54,6 +56,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>ask vendor to bring all 3 filled deeds of sale</li>
         <li>ask vendor to bring filled authorization letter (i1ToD2 or i1ToR2)</li>
         <li>make sure to bring your proof of identity & ask company directors to bring theirs</li>
@@ -70,6 +73,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>make sure to bring your proof of identity & ask company directors to bring theirs</li>
         <li>make sure to bring company's stamp</li>
         <li>make sure to bring all 3 filled deeds of sale</li>
@@ -88,6 +92,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>ask vendor to bring all 3 filled deeds of sale</li>
         <li>make sure to bring your proof of identity & ask company directors to bring theirs</li>
         <li>make sure to bring photocopy of company's brn</li>
@@ -104,6 +109,7 @@ Advised preparer: company representative
       <ol style="padding: 0; list-style-position: inside;">
         <li>ask vendor to make sure to bring their proof of identity</li>
         <li>ask vendor to make sure to bring vehicle's registration book</li>
+        <li>ask vendor to bring fitness vignette copy</li>
         <li>make sure to bring your proof of identity & ask company directors to bring theirs</li>
         <li>make sure to bring photocopy of company's brn</li>
         <li>make sure to bring company's stamp</li>

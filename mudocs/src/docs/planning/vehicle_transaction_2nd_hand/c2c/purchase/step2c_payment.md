@@ -24,6 +24,7 @@ Advised preparer (deeds of sale): vendor
         <li>company1 representative keeps vehicle's registration book</li>
         <li>company1 representative keeps company1's stamp</li>
         <li>keep your proof of identity & company2 directors keep theirs</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company1's stamp</li>
       </ol>
     </td>
@@ -40,6 +41,7 @@ Advised preparer (deeds of sale): vendor
         <li>company1 representative keeps vehicle's registration book</li>
         <li>company1 representative keeps company1's stamp</li>
         <li>keep your proof of identity & company2 directors keep theirs</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company1's stamp</li>
       </ol>
     </td>
@@ -58,6 +60,7 @@ Advised preparer (deeds of sale): vendor
         <li>company1 representative keeps vehicle's registration book</li>
         <li>company1 representative keeps company1's stamp</li>
         <li>keep your proof of identity & company2 directors keep theirs</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company1's stamp</li>
       </ol>
     </td>
@@ -74,6 +77,7 @@ Advised preparer (deeds of sale): vendor
         <li>company1 representative keeps vehicle's registration book</li>
         <li>company1 representative keeps company1's stamp</li>
         <li>keep your proof of identity & company2 directors keep theirs</li>
+        <li>keep fitness vignette copy</li>
         <li>keep company1's stamp</li>
       </ol>
     </td>
