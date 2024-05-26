@@ -24,13 +24,21 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-## Automatically Generate Type Definitions
+## Generate Type Definitions
 
-Some type definitions are missing from react-i18next & next-18next packages. We have set up a watcher that automatically generates the missing type definitions during development, i.e. when you run `npm run dev:watch`, an additional terminal window should open to watch for changes in the `public/locales` folder. **If you close the new window, the watcher won't work.**
-
-You may need to modify the [`watch:locales` script](package.json#L12) depending on your terminal. This script watches for changes in `public/locales` using [`onchange`](https://github.com/Qard/onchange) then generates type definitions as soon as a change is detected.
+Some type definitions are missing from react-i18next & next-18next packages. There are 2 ways to generate these type definitions.
 
 **NOTE: All locales need to contain the same corresponding translation file structure, otherwise the types won't be generated properly.**
+
+### Manual
+
+Run `npm run gen:types`
+
+### Automatic
+
+We have set up a watcher that automatically generates the missing type definitions during development, i.e. when you run `npm run dev:watch`, an additional terminal window should open to watch for changes in the `public/locales` folder. **If you close the new window, the watcher won't work.**
+
+You may need to modify the [`watch:locales` script](package.json#L12) depending on your terminal. This script watches for changes in `public/locales` using [`onchange`](https://github.com/Qard/onchange) then generates type definitions as soon as a change is detected.
 
 ## References
 
