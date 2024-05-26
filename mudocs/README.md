@@ -30,6 +30,8 @@ Some type definitions are missing from react-i18next & next-18next packages. We 
 
 You may need to modify the [`watch:locales` script](package.json#L12) depending on your terminal. This script watches for changes in `public/locales` using [`onchange`](https://github.com/Qard/onchange) then generates type definitions as soon as a change is detected.
 
+**NOTE: All locales need to contain the same corresponding translation file structure, otherwise the types won't be generated properly.**
+
 ## References
 
 The following resources have been used for research on this project:
