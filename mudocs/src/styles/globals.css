@@ -122,10 +122,6 @@
     @apply mx-auto w-[65ch] max-w-full;
   }
 
-  [data-testid="flowbite-tooltip-target"] {
-    display: inline;
-  }
-
   .abbr-tooltip,
   .technical-term-tooltip {
     @apply max-w-[calc(100vw-0.75rem)] text-pretty;
