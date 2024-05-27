@@ -121,6 +121,8 @@
       "askVendorProofOfIdentity_multipleVendors": "<label>Ask the vendors to each make sure to bring their original <ProofOfIdentity />.</label>",
       "askVendorVehicleRegistrationBook_singleVendor": "<label>Ask the vendor to make sure to bring the original <VehicleRegistrationBook />.</label>",
       "askVendorVehicleRegistrationBook_multipleVendors": "<label>Ask the vendors to make sure to bring the original <VehicleRegistrationBook />.</label>",
+      "askVendorFitnessCopy_singleVendor": "<label>Ask the vendor to make sure to bring the vehicle's original fitness vignette copy (required for the next fitness test).</label>",
+      "askVendorFitnessCopy_multipleVendors": "<label>Ask the vendors to make sure to bring the vehicle's original fitness vignette copy (required for the next fitness test).</label>",
       "askVendorDeedsOfSale_singleVendor": "<label>Ask the vendor to make sure to bring the 3 filled <DeedsOfSale />.</label>",
       "askVendorDeedsOfSale_multipleVendors": "<label>Ask the vendors to make sure to bring the 3 filled <DeedsOfSale />.</label>",
       "askVendorAuthorizationLetter_singleVendor": "<label>Ask the vendor to make sure to bring the filled authorization letter.</label>",
@@ -138,6 +140,7 @@
       "keepCompanyProofOfIdentity_singleDirector": "<label>Keep your original <ProofOfIdentity /> and your company's director keeps theirs.</label>",
       "keepCompanyProofOfIdentity_multipleDirectors": "<label>Keep your original <ProofOfIdentity /> and your company's directors keep theirs.</label>",
       "keepVehicleRegistrationBook": "<label>Keep the original <VehicleRegistrationBook />.</label>",
+      "keepFitnessCopy": "<label>Keep the vehicle's original fitness vignette copy.</label>",
       "keepStamp": "<label>Keep your company's stamp.</label>",
       "keep1DeedOfSale": "<label>Keep 1 signed <DeedOfSale />.</label>",
       "keep2DeedsOfSale": "<label>Keep 2 signed <DeedsOfSale />.</label>",
@@ -184,60 +187,66 @@
         "preparedByVendor": {
           "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
           "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
-          "step3": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
-          "step4": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step5": "$t(payment.commonSteps.bringCompanyBRNPhotocopy)",
-          "step6": "$t(payment.commonSteps.bringCompanyStamp)",
-          "step7": "$t(payment.commonSteps.verifyDeedsOfSale)"
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
+          "step6": "$t(payment.commonSteps.bringCompanyBRNPhotocopy)",
+          "step7": "$t(payment.commonSteps.bringCompanyStamp)",
+          "step8": "$t(payment.commonSteps.verifyDeedsOfSale)"
         },
         "preparedByCompany": {
           "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
           "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
-          "step3": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step4": "$t(payment.commonSteps.bringCompanyBRNPhotocopy)",
-          "step5": "$t(payment.commonSteps.bringCompanyStamp)",
-          "step6": "$t(payment.commonSteps.bringDeedsOfSale)",
-          "step7": "$t(payment.commonSteps.verifyDeedsOfSale)"
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
+          "step5": "$t(payment.commonSteps.bringCompanyBRNPhotocopy)",
+          "step6": "$t(payment.commonSteps.bringCompanyStamp)",
+          "step7": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step8": "$t(payment.commonSteps.verifyDeedsOfSale)"
         }
       },
       "issuedByCompany": {
         "preparedByVendor": {
           "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
           "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
-          "step3": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
-          "step4": "$t(payment.commonSteps.askVendorAuthorizationLetter_{{numOfVendors}})",
-          "step5": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step6": "$t(payment.commonSteps.bringCompanyStamp)",
-          "step7": "$t(payment.commonSteps.verifyDeedsOfSaleAndAuthorizationLetter)"
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.askVendorAuthorizationLetter_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
+          "step7": "$t(payment.commonSteps.bringCompanyStamp)",
+          "step8": "$t(payment.commonSteps.verifyDeedsOfSaleAndAuthorizationLetter)"
         },
         "preparedByCompany": {
           "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
           "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
-          "step3": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
-          "step4": "$t(payment.commonSteps.bringCompanyStamp)",
-          "step5": "$t(payment.commonSteps.bringDeedsOfSale)",
-          "step6": "$t(payment.commonSteps.bringAuthorizationLetter)",
-          "step7": "$t(payment.commonSteps.verifyDeedsOfSaleAndAuthorizationLetter)"
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.bringCompanyStamp)",
+          "step6": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step7": "$t(payment.commonSteps.bringAuthorizationLetter)",
+          "step8": "$t(payment.commonSteps.verifyDeedsOfSaleAndAuthorizationLetter)"
         }
       },
       "issuedByVendorAndCompany": {
         "preparedByVendor": {
           "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
           "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
-          "step3": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
-          "step4": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step5": "$t(payment.commonSteps.bringCompanyBRNPhotocopy)",
-          "step6": "$t(payment.commonSteps.bringCompanyStamp)",
-          "step7": "$t(payment.commonSteps.verifyDeedsOfSale)"
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
+          "step6": "$t(payment.commonSteps.bringCompanyBRNPhotocopy)",
+          "step7": "$t(payment.commonSteps.bringCompanyStamp)",
+          "step8": "$t(payment.commonSteps.verifyDeedsOfSale)"
         },
         "preparedByCompany": {
           "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
           "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
-          "step3": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step4": "$t(payment.commonSteps.bringCompanyBRNPhotocopy)",
-          "step5": "$t(payment.commonSteps.bringCompanyStamp)",
-          "step6": "$t(payment.commonSteps.bringDeedsOfSale)",
-          "step7": "$t(payment.commonSteps.verifyDeedsOfSale)"
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.bringCompanyProofOfIdentity_{{numOfDirectors}})",
+          "step5": "$t(payment.commonSteps.bringCompanyBRNPhotocopy)",
+          "step6": "$t(payment.commonSteps.bringCompanyStamp)",
+          "step7": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step8": "$t(payment.commonSteps.verifyDeedsOfSale)"
         }
       }
     },
@@ -279,7 +288,8 @@
           "step4": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
           "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
           "step6": "$t(payment.commonSteps.keepCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step7": "$t(payment.commonSteps.keepStamp)"
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)",
+          "step8": "$t(payment.commonSteps.keepStamp)"
         },
         "preparedByCompany": {
           "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
@@ -288,7 +298,8 @@
           "step4": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
           "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
           "step6": "$t(payment.commonSteps.keepCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step7": "$t(payment.commonSteps.keepStamp)"
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)",
+          "step8": "$t(payment.commonSteps.keepStamp)"
         }
       },
       "issuedByCompany": {
@@ -299,7 +310,8 @@
           "step4": "$t(payment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}})",
           "step5": "$t(payment.commonSteps.keepCompanyProofOfIdentity_{{numOfDirectors}})",
           "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
-          "step7": "$t(payment.commonSteps.keepStamp)"
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)",
+          "step8": "$t(payment.commonSteps.keepStamp)"
         },
         "preparedByCompany": {
           "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
@@ -308,7 +320,8 @@
           "step4": "$t(payment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}})",
           "step5": "$t(payment.commonSteps.keepCompanyProofOfIdentity_{{numOfDirectors}})",
           "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
-          "step7": "$t(payment.commonSteps.keepStamp)"
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)",
+          "step8": "$t(payment.commonSteps.keepStamp)"
         }
       },
       "issuedByVendorAndCompany": {
@@ -319,7 +332,8 @@
           "step4": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
           "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
           "step6": "$t(payment.commonSteps.keepCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step7": "$t(payment.commonSteps.keepStamp)"
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)",
+          "step8": "$t(payment.commonSteps.keepStamp)"
         },
         "preparedByCompany": {
           "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
@@ -328,7 +342,8 @@
           "step4": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
           "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
           "step6": "$t(payment.commonSteps.keepCompanyProofOfIdentity_{{numOfDirectors}})",
-          "step7": "$t(payment.commonSteps.keepStamp)"
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)",
+          "step8": "$t(payment.commonSteps.keepStamp)"
         }
       }
     },

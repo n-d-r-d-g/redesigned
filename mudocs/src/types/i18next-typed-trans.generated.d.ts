@@ -385,6 +385,29 @@ type TypedTransParams = {
     "deedOfSale.rupees": { count: number };
     "deedOfSale.rupees_other"?: never;
     stampPlaceholder?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody": {
+      vendorCount: any;
+      vendorNamesWithId: any;
+      vehicleRegNum: any;
+      vehicleMake: any;
+      purchaserNamesWithId: any;
+    };
+    "administrativeStatusCertificateAuthorizationLetter.vendorsWithId": {
+      namesWithId: any;
+      count: number;
+    };
+    "administrativeStatusCertificateAuthorizationLetter.vendorsWithId_other": {
+      namesWithId: any;
+    };
+    "deedOfSale.pagePreviewBody": {
+      vendorCount: any;
+      vendorNamesWithId: any;
+      vehicleRegNum: any;
+      vehicleMake: any;
+      purchaserNamesWithId: any;
+    };
+    "deedOfSale.vendorsWithId": { namesWithId: any; count: number };
+    "deedOfSale.vendorsWithId_other": { namesWithId: any };
   };
   "home-page": {
     welcome?: never;
@@ -486,6 +509,7 @@ type TypedTransParams = {
     "payment.commonSteps.askCompany1ProofOfIdentity_multipleCompany1Directors_directorRequired"?: never;
     "payment.commonSteps.askCompany1ProofOfIdentity_multipleCompany1Directors_directorNotRequired"?: never;
     "payment.commonSteps.askCompany1VehicleRegistrationBook"?: never;
+    "payment.commonSteps.askCompany1FitnessCopy"?: never;
     "payment.commonSteps.askCompany1Stamp"?: never;
     "payment.commonSteps.askCompanyDeedsOfSale"?: never;
     "payment.commonSteps.bringCompany2ProofOfIdentity_singleCompany2Director"?: never;
@@ -495,6 +519,7 @@ type TypedTransParams = {
     "payment.commonSteps.verifyDeedsOfSale"?: never;
     "payment.commonSteps.keepCompany2ProofOfIdentity_singleCompany2Director"?: never;
     "payment.commonSteps.keepCompany2ProofOfIdentity_multipleCompany2Directors"?: never;
+    "payment.commonSteps.keepFitnessCopy"?: never;
     "payment.commonSteps.keepCompany2Stamp"?: never;
     "payment.commonSteps.keep1DeedOfSale"?: never;
     "payment.commonSteps.company1KeepsProofOfIdentity_singleCompany1Director_directorRequired"?: never;
@@ -518,23 +543,25 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step2"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step3"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step4"?: never;
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step5": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step5"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step6": {
       numOfCompany2Directors: any;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step1": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step2"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step3"?: never;
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step4": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step4"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step5": {
       numOfCompany2Directors: any;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step1": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
@@ -542,23 +569,25 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step2"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step3"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step4"?: never;
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step5": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step5"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step6": {
       numOfCompany2Directors: any;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step1": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step2"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step3"?: never;
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step4": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step4"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step5": {
       numOfCompany2Directors: any;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step8"?: never;
     "payment.conditionalInstructions2.paidInCash.cashDeposit": {
       numOfCompany1Directors: any;
       numOfCompany2Directors: any;
@@ -588,6 +617,7 @@ type TypedTransParams = {
       numOfCompany2Directors: any;
     };
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step2"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step3": {
@@ -600,6 +630,7 @@ type TypedTransParams = {
       numOfCompany2Directors: any;
     };
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step2"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step3": {
@@ -612,6 +643,7 @@ type TypedTransParams = {
       numOfCompany2Directors: any;
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step2"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step3": {
@@ -624,6 +656,7 @@ type TypedTransParams = {
       numOfCompany2Directors: any;
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step8"?: never;
     "payment.leaveWithVehicle"?: never;
     "administrativeStatusCertificate.title"?: never;
     "administrativeStatusCertificate.description"?: never;
@@ -817,6 +850,7 @@ type TypedTransParams = {
     "payment.commonSteps.bringProofOfIdentity_multipleCompany1Directors_directorNotRequired"?: never;
     "payment.commonSteps.bringDeedsOfSale"?: never;
     "payment.commonSteps.bringVehicleRegistrationBook"?: never;
+    "payment.commonSteps.bringFitnessCopy"?: never;
     "payment.commonSteps.bringCompany1Stamp"?: never;
     "payment.commonSteps.verifyDeedsOfSale"?: never;
     "payment.commonSteps.keepProofOfIdentity_singleCompany1Director_directorRequired"?: never;
@@ -830,6 +864,7 @@ type TypedTransParams = {
     "payment.commonSteps.company2KeepsProofOfIdentity_multipleCompany2Directors"?: never;
     "payment.commonSteps.company2KeepsStamp"?: never;
     "payment.commonSteps.giveCompany21DeedOfSale"?: never;
+    "payment.commonSteps.giveCompany2FitnessCopy"?: never;
     "payment.commonSteps.signatureMatch"?: never;
     "payment.commonSteps.fundsTransferredOrNot"?: never;
     "payment.commonSteps.noWorriesAboutFraud"?: never;
@@ -849,6 +884,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step1": {
       numOfCompany2Directors: any;
     };
@@ -861,6 +897,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step1": {
       numOfCompany2Directors: any;
     };
@@ -873,6 +910,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step1": {
       numOfCompany2Directors: any;
     };
@@ -885,6 +923,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step8"?: never;
     "payment.conditionalInstructions2.paidInCash.cashDeposit": {
       numOfCompany1Directors: any;
       numOfCompany2Directors: any;
@@ -904,52 +943,56 @@ type TypedTransParams = {
     "payment.conditionalInstructions2.notPaidInCash.issuedByCompany1AndCompany2.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step2"?: never;
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step3": {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step3"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step4": {
       numOfCompany2Directors: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step4"?: never;
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step5": {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step5"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step6": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step6"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step2"?: never;
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step3": {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step3"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step4": {
       numOfCompany2Directors: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step4"?: never;
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step5": {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step5"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step6": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step6"?: never;
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step2"?: never;
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step3": {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step3"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step4": {
       numOfCompany2Directors: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step4"?: never;
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step5": {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step5"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step6": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step6"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step2"?: never;
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step3": {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step3"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step4": {
       numOfCompany2Directors: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step4"?: never;
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step5": {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step5"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step6": {
       numOfCompany1Directors: any;
       whetherDirectorIsRequired: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step6"?: never;
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step8"?: never;
     "payment.leaveWithVehicle"?: never;
     "administrativeStatusCertificate.title"?: never;
     "administrativeStatusCertificate.description"?: never;
@@ -1180,6 +1223,7 @@ type TypedTransParams = {
     "payment.commonSteps.askCompanyProofOfIdentity_singleDirector"?: never;
     "payment.commonSteps.askCompanyProofOfIdentity_multipleDirectors"?: never;
     "payment.commonSteps.askCompanyVehicleRegistrationBook"?: never;
+    "payment.commonSteps.askCompanyFitnessCopy"?: never;
     "payment.commonSteps.askCompanyStamp"?: never;
     "payment.commonSteps.askCompanyDeedsOfSale"?: never;
     "payment.commonSteps.askCompanyAuthorizationLetter"?: never;
@@ -1192,6 +1236,7 @@ type TypedTransParams = {
     "payment.commonSteps.keepProofOfIdentity_singlePurchaser"?: never;
     "payment.commonSteps.keepProofOfIdentity_multiplePurchasers"?: never;
     "payment.commonSteps.keepVehicleRegistrationBook"?: never;
+    "payment.commonSteps.keepFitnessCopy"?: never;
     "payment.commonSteps.keep1DeedOfSale"?: never;
     "payment.commonSteps.keep2DeedsOfSale"?: never;
     "payment.commonSteps.keepAuthorizationLetter"?: never;
@@ -1218,20 +1263,22 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step2"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step3"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4"?: never;
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step1": {
       numOfDirectors: any;
     };
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step2"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step3"?: never;
-    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step4": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step4"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step5": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step1": {
       numOfDirectors: any;
     };
@@ -1239,41 +1286,45 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step3"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step4"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step5"?: never;
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step7": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step1": {
       numOfDirectors: any;
     };
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step2"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step3"?: never;
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step4": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step4"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step5": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step1": {
       numOfDirectors: any;
     };
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step2"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step3"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step4"?: never;
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step5": {
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step5"?: never;
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step6": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step7"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step1": {
       numOfDirectors: any;
     };
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step2"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step3"?: never;
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step4": {
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step4"?: never;
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step5": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions2.paidInCash.cashDeposit": {
       numOfDirectors: any;
       numOfPurchasers: any;
@@ -1304,6 +1355,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step6": {
       numOfPurchasers: any;
     };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step7"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step2"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step3": {
@@ -1315,6 +1367,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step6": {
       numOfPurchasers: any;
     };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step2"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step3"?: never;
@@ -1327,6 +1380,7 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step2"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step3"?: never;
@@ -1339,6 +1393,7 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step7"?: never;
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step2"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step3": {
@@ -1350,6 +1405,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step6": {
       numOfPurchasers: any;
     };
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step7"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step2"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step3": {
@@ -1361,6 +1417,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step6": {
       numOfPurchasers: any;
     };
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step7"?: never;
     "payment.leaveWithVehicle"?: never;
     "administrativeStatusCertificate.title"?: never;
     "administrativeStatusCertificate.description"?: never;
@@ -1670,6 +1727,7 @@ type TypedTransParams = {
     "payment.commonSteps.keepProofOfIdentity_multipleDirectors_directorRequired"?: never;
     "payment.commonSteps.keepProofOfIdentity_multipleDirectors_directorNotRequired"?: never;
     "payment.commonSteps.keepVehicleRegistrationBook"?: never;
+    "payment.commonSteps.bringFitnessCopy"?: never;
     "payment.commonSteps.keepStamp"?: never;
     "payment.commonSteps.keep1DeedOfSale"?: never;
     "payment.commonSteps.keep2DeedsOfSale"?: never;
@@ -1679,6 +1737,8 @@ type TypedTransParams = {
     "payment.commonSteps.purchaserKeepsAuthorizationLetter_multiplePurchasers"?: never;
     "payment.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser"?: never;
     "payment.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers"?: never;
+    "payment.commonSteps.givePurchaserFitnessCopy_singlePurchaser"?: never;
+    "payment.commonSteps.givePurchaserFitnessCopy_multiplePurchasers"?: never;
     "payment.commonSteps.givePurchaser1DeedOfSale_singlePurchaser"?: never;
     "payment.commonSteps.givePurchaser1DeedOfSale_multiplePurchasers"?: never;
     "payment.commonSteps.givePurchaser2DeedsOfSale_singlePurchaser"?: never;
@@ -1705,6 +1765,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step1": {
       numOfPurchasers: any;
     };
@@ -1718,6 +1779,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step1": {
       numOfPurchasers: any;
     };
@@ -1730,6 +1792,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step6"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step1": {
       numOfPurchasers: any;
     };
@@ -1746,6 +1809,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step1": {
       numOfPurchasers: any;
     };
@@ -1757,6 +1821,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step4"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step7"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step1": {
       numOfPurchasers: any;
     };
@@ -1770,6 +1835,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions2.paidInCash.cashDeposit": {
       numOfDirectors: any;
       numOfPurchasers: any;
@@ -1792,11 +1858,14 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step5": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step5"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step7"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step2": {
       numOfPurchasers: any;
@@ -1805,11 +1874,14 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step5": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step2": {
       numOfPurchasers: any;
@@ -1827,7 +1899,10 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step6": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step7": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step2": {
       numOfPurchasers: any;
@@ -1845,7 +1920,10 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step6": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step7"?: never;
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step7": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step2": {
       numOfPurchasers: any;
@@ -1854,11 +1932,14 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step5": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step5"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step7"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step2": {
       numOfPurchasers: any;
@@ -1867,11 +1948,14 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step5": {
       numOfDirectors: any;
       whetherDirectorIsRequired: any;
     };
-    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step7"?: never;
     "payment.leaveWithVehicle": { numOfPurchasers: any };
     "payment.leaveWithVehicle_singlePurchaser"?: never;
     "payment.leaveWithVehicle__multiplePurchasers"?: never;
@@ -2159,6 +2243,8 @@ type TypedTransParams = {
     "payment.commonSteps.askVendorProofOfIdentity_multipleVendors"?: never;
     "payment.commonSteps.askVendorVehicleRegistrationBook_singleVendor"?: never;
     "payment.commonSteps.askVendorVehicleRegistrationBook_multipleVendors"?: never;
+    "payment.commonSteps.askVendorFitnessCopy_singleVendor"?: never;
+    "payment.commonSteps.askVendorFitnessCopy_multipleVendors"?: never;
     "payment.commonSteps.askVendorDeedsOfSale_singleVendor"?: never;
     "payment.commonSteps.askVendorDeedsOfSale_multipleVendors"?: never;
     "payment.commonSteps.askVendorAuthorizationLetter_singleVendor"?: never;
@@ -2176,6 +2262,7 @@ type TypedTransParams = {
     "payment.commonSteps.keepCompanyProofOfIdentity_singleDirector"?: never;
     "payment.commonSteps.keepCompanyProofOfIdentity_multipleDirectors"?: never;
     "payment.commonSteps.keepVehicleRegistrationBook"?: never;
+    "payment.commonSteps.keepFitnessCopy"?: never;
     "payment.commonSteps.keepStamp"?: never;
     "payment.commonSteps.keep1DeedOfSale"?: never;
     "payment.commonSteps.keep2DeedsOfSale"?: never;
@@ -2226,11 +2313,14 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step4": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step1": {
       numOfVendors: any;
     };
@@ -2238,12 +2328,15 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step3": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step4": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step5"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step1": {
       numOfVendors: any;
     };
@@ -2257,10 +2350,13 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step5": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step6": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step1": {
       numOfVendors: any;
     };
@@ -2270,10 +2366,13 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step3": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4": {
+      numOfVendors: any;
+    };
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step1": {
       numOfVendors: any;
     };
@@ -2284,11 +2383,14 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step4": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step5": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step5"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step1": {
       numOfVendors: any;
     };
@@ -2296,12 +2398,15 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step3": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step4": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step5"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions2.paidInCash.cashDeposit": {
       numOfVendors: any;
       numOfDirectors: any;
@@ -2359,6 +2464,7 @@ type TypedTransParams = {
       numOfDirectors: any;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step2": {
       numOfVendors: any;
@@ -2376,6 +2482,7 @@ type TypedTransParams = {
       numOfDirectors: any;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step2": {
       numOfVendors: any;
@@ -2389,6 +2496,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step2": {
       numOfVendors: any;
@@ -2402,6 +2510,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step6"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step2": {
       numOfVendors: any;
@@ -2419,6 +2528,7 @@ type TypedTransParams = {
       numOfDirectors: any;
     };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step2": {
       numOfVendors: any;
@@ -2436,6 +2546,7 @@ type TypedTransParams = {
       numOfDirectors: any;
     };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step8"?: never;
     "payment.leaveWithVehicle"?: never;
     "administrativeStatusCertificate.title"?: never;
     "administrativeStatusCertificate.description"?: never;
@@ -2685,6 +2796,7 @@ type TypedTransParams = {
     "payment.commonSteps.bringDeedsOfSale"?: never;
     "payment.commonSteps.bringAuthorizationLetter"?: never;
     "payment.commonSteps.bringVehicleRegistrationBook"?: never;
+    "payment.commonSteps.bringFitnessCopy"?: never;
     "payment.commonSteps.verifyDeedsOfSale"?: never;
     "payment.commonSteps.verifyDeedsOfSaleAndAuthorizationLetter"?: never;
     "payment.commonSteps.keepProofOfIdentity_singleVendor"?: never;
@@ -2700,6 +2812,7 @@ type TypedTransParams = {
     "payment.commonSteps.giveCompanyProofOfIdentity_singleVendor"?: never;
     "payment.commonSteps.giveCompanyProofOfIdentity_multipleVendors"?: never;
     "payment.commonSteps.giveCompanyVehicleRegistrationBook"?: never;
+    "payment.commonSteps.giveCompanyFitnessCopy"?: never;
     "payment.commonSteps.giveCompany1DeedOfSale"?: never;
     "payment.commonSteps.giveCompany2DeedsOfSale"?: never;
     "payment.commonSteps.giveCompanyAuthorizationLetter"?: never;
@@ -2735,6 +2848,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step1": {
       numOfDirectors: any;
     };
@@ -2746,6 +2860,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step1": {
       numOfDirectors: any;
     };
@@ -2757,6 +2872,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step5"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step1": {
       numOfDirectors: any;
     };
@@ -2768,6 +2884,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6"?: never;
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step1": {
       numOfDirectors: any;
     };
@@ -2779,6 +2896,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step5"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step1": {
       numOfDirectors: any;
     };
@@ -2790,6 +2908,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions2.paidInCash.cashDeposit": {
       numOfVendors: any;
       numOfDirectors: any;
@@ -2824,26 +2943,28 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step2"?: never;
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step3": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step3"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step4": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step4"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step5"?: never;
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step7": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step2"?: never;
-    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step3": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step3"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step4": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step4"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step5"?: never;
-    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step6": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step7": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step2"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step3"?: never;
@@ -2855,6 +2976,7 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step2"?: never;
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step3"?: never;
@@ -2866,28 +2988,31 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step8"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step2"?: never;
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step3": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step3"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step4": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step4"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step5"?: never;
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step6": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step6"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step7": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step7"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step8"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step2"?: never;
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step3": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step3"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step4": {
       numOfDirectors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step4"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step5"?: never;
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step6": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step6"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step8"?: never;
     "payment.leaveWithVehicle"?: never;
     "administrativeStatusCertificate.title"?: never;
     "administrativeStatusCertificate.description"?: never;
@@ -3196,6 +3321,8 @@ type TypedTransParams = {
     "payment.commonSteps.askVendorProofOfIdentity_multipleVendors"?: never;
     "payment.commonSteps.askVendorVehicleRegistrationBook_singleVendor"?: never;
     "payment.commonSteps.askVendorVehicleRegistrationBook_multipleVendors"?: never;
+    "payment.commonSteps.askVendorFitnessCopy_singleVendor"?: never;
+    "payment.commonSteps.askVendorFitnessCopy_multipleVendors"?: never;
     "payment.commonSteps.askVendorDeedsOfSale_singleVendor"?: never;
     "payment.commonSteps.askVendorDeedsOfSale_multipleVendors"?: never;
     "payment.commonSteps.askVendorPurchaserAuthorizationLetter_singleVendor"?: never;
@@ -3215,6 +3342,7 @@ type TypedTransParams = {
     "payment.commonSteps.keepProofOfIdentity_singlePurchaser"?: never;
     "payment.commonSteps.keepProofOfIdentity_multiplePurchasers"?: never;
     "payment.commonSteps.keepVehicleRegistrationBook"?: never;
+    "payment.commonSteps.keepFitnessCopy"?: never;
     "payment.commonSteps.keep1DeedOfSale"?: never;
     "payment.commonSteps.keep2DeedsOfSale"?: never;
     "payment.commonSteps.keepAuthorizationLetter"?: never;
@@ -3270,9 +3398,12 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step4": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step1": {
       numOfVendors: any;
     };
@@ -3280,10 +3411,13 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step3": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step4": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step1": {
       numOfVendors: any;
     };
@@ -3297,9 +3431,12 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step5": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step6": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step7"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step1": {
       numOfVendors: any;
     };
@@ -3307,11 +3444,14 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step3": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step4": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step1": {
       numOfVendors: any;
     };
@@ -3322,9 +3462,12 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step4": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step5": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step1": {
       numOfVendors: any;
     };
@@ -3332,10 +3475,13 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step3": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step4": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step1": {
       numOfVendors: any;
     };
@@ -3346,9 +3492,12 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step4": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step5": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step1": {
       numOfVendors: any;
     };
@@ -3356,10 +3505,13 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step3": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step4": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step1": {
       numOfVendors: any;
     };
@@ -3373,9 +3525,12 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step5": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step6": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step7"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step1": {
       numOfVendors: any;
     };
@@ -3383,11 +3538,14 @@ type TypedTransParams = {
       numOfVendors: any;
     };
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step3": {
+      numOfVendors: any;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step4": {
       numOfPurchasers: any;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions2.paidInCash.cashDeposit": {
       numOfVendors: any;
       numOfPurchasers: any;
@@ -3457,6 +3615,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step5": {
       numOfVendors: any;
     };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step2": {
       numOfVendors: any;
@@ -3470,6 +3629,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step5": {
       numOfVendors: any;
     };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step2": {
       numOfVendors: any;
@@ -3482,6 +3642,7 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step6"?: never;
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step7"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step2": {
       numOfVendors: any;
@@ -3494,6 +3655,7 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step2": {
       numOfVendors: any;
@@ -3507,6 +3669,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step5": {
       numOfVendors: any;
     };
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step2": {
       numOfVendors: any;
@@ -3520,6 +3683,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step5": {
       numOfVendors: any;
     };
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step2": {
       numOfVendors: any;
@@ -3533,6 +3697,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step5": {
       numOfVendors: any;
     };
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step2": {
       numOfVendors: any;
@@ -3546,6 +3711,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step5": {
       numOfVendors: any;
     };
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step2": {
       numOfVendors: any;
@@ -3558,6 +3724,7 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step6"?: never;
+    "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step7"?: never;
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step2": {
       numOfVendors: any;
@@ -3570,6 +3737,7 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step7"?: never;
     "payment.leaveWithVehicle"?: never;
     "administrativeStatusCertificate.title"?: never;
     "administrativeStatusCertificate.description"?: never;
@@ -4009,6 +4177,7 @@ type TypedTransParams = {
     "payment.commonSteps.bringDeedsOfSale"?: never;
     "payment.commonSteps.bringAuthorizationLetter"?: never;
     "payment.commonSteps.bringVehicleRegistrationBook"?: never;
+    "payment.commonSteps.bringFitnessCopy"?: never;
     "payment.commonSteps.verifyDeedsOfSale"?: never;
     "payment.commonSteps.verifyDeedsOfSaleAndAuthorizationLetter"?: never;
     "payment.commonSteps.keepPurchaserProofOfIdentity_singlePurchaser"?: never;
@@ -4028,6 +4197,8 @@ type TypedTransParams = {
     "payment.commonSteps.givePurchaserProofOfIdentity_multipleVendors_multiplePurchasers"?: never;
     "payment.commonSteps.givePurchaserVehicleRegistrationBook_singlePurchaser"?: never;
     "payment.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers"?: never;
+    "payment.commonSteps.givePurchaserFitnessCopy_singlePurchaser"?: never;
+    "payment.commonSteps.givePurchaserFitnessCopy_multiplePurchasers"?: never;
     "payment.commonSteps.givePurchaser1DeedOfSale_singlePurchaser"?: never;
     "payment.commonSteps.givePurchaser1DeedOfSale_multiplePurchasers"?: never;
     "payment.commonSteps.givePurchaser2DeedsOfSale_singlePurchaser"?: never;
@@ -4072,6 +4243,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step3"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step1": {
       numOfPurchasers: any;
     };
@@ -4083,6 +4255,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step1": {
       numOfPurchasers: any;
     };
@@ -4093,6 +4266,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step4"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step7"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step1": {
       numOfPurchasers: any;
     };
@@ -4107,6 +4281,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step1": {
       numOfPurchasers: any;
     };
@@ -4116,6 +4291,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step3"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step1": {
       numOfPurchasers: any;
     };
@@ -4127,6 +4303,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step1": {
       numOfPurchasers: any;
     };
@@ -4136,6 +4313,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step3"?: never;
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step1": {
       numOfPurchasers: any;
     };
@@ -4147,6 +4325,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step4"?: never;
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step1": {
       numOfPurchasers: any;
     };
@@ -4157,6 +4336,7 @@ type TypedTransParams = {
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step4"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step7"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step1": {
       numOfPurchasers: any;
     };
@@ -4171,6 +4351,7 @@ type TypedTransParams = {
     };
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step5"?: never;
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step6"?: never;
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step7"?: never;
     "payment.conditionalInstructions2.paidInCash.cashDeposit": {
       numOfVendors: any;
       numOfPurchasers: any;
@@ -4227,9 +4408,12 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step5": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step2": {
       numOfPurchasers: any;
@@ -4238,9 +4422,12 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step5": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step2": {
       numOfPurchasers: any;
@@ -4256,6 +4443,9 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step6": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step7": {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step1"?: never;
@@ -4275,6 +4465,9 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step6": {
       numOfPurchasers: any;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step7": {
+      numOfPurchasers: any;
+    };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step2": {
       numOfPurchasers: any;
@@ -4283,9 +4476,12 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step5": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step2": {
       numOfPurchasers: any;
@@ -4294,9 +4490,12 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step5": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step2": {
       numOfPurchasers: any;
@@ -4305,9 +4504,12 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step5": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step5"?: never;
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step6"?: never;
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step2": {
       numOfPurchasers: any;
@@ -4316,9 +4518,12 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step4": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step5": {
       numOfVendors: any;
     };
-    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step5"?: never;
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step6"?: never;
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step2": {
       numOfPurchasers: any;
@@ -4336,6 +4541,9 @@ type TypedTransParams = {
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step6": {
       numOfPurchasers: any;
     };
+    "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step7": {
+      numOfPurchasers: any;
+    };
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step1"?: never;
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step2": {
       numOfPurchasers: any;
@@ -4351,6 +4559,9 @@ type TypedTransParams = {
       numOfPurchasers: any;
     };
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step6": {
+      numOfPurchasers: any;
+    };
+    "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step7": {
       numOfPurchasers: any;
     };
     "payment.leaveWithVehicle": { numOfPurchasers: any };
@@ -4562,6 +4773,57 @@ type TypedTransParams = {
     endingNote: { numOfPurchasers: any };
     endingNote_singlePurchaser?: never;
     endingNote_multiplePurchasers?: never;
+    "preparation2.title"?: never;
+    "preparation2.step1"?: never;
+    "preparation2.step2"?: never;
+    "preparation2.step3"?: never;
+    "payment2.title"?: never;
+    "payment2.description"?: never;
+    "payment2.step1"?: never;
+    "payment2.step2"?: never;
+    "payment2.step3"?: never;
+    "payment2.step4"?: never;
+    "payment2.step5"?: never;
+    "payment2.leaveWithVehicle"?: never;
+    "administrativeStatusCertificate2.title"?: never;
+    "administrativeStatusCertificate2.description"?: never;
+    "administrativeStatusCertificate2.issue"?: never;
+    "administrativeStatusCertificate2.vendorRequiredSituations.label"?: never;
+    "administrativeStatusCertificate2.vendorRequiredSituations.situation1"?: never;
+    "administrativeStatusCertificate2.vendorRequiredSituations.situation2"?: never;
+    "administrativeStatusCertificate2.vendorRequiredSituations.situation3"?: never;
+    "administrativeStatusCertificate2.vendorRequiredSituations.situation4"?: never;
+    "administrativeStatusCertificate2.checklist.label"?: never;
+    "administrativeStatusCertificate2.checklist.requirement1"?: never;
+    "administrativeStatusCertificate2.checklist.requirement2"?: never;
+    "administrativeStatusCertificate2.checklist.requirement3"?: never;
+    "administrativeStatusCertificate2.checklist.requirement4"?: never;
+    "administrativeStatusCertificate2.checklist.requirement5"?: never;
+    "administrativeStatusCertificate2.handBackRequirements.label"?: never;
+    "administrativeStatusCertificate2.handBackRequirements.requirement1"?: never;
+    "administrativeStatusCertificate2.handBackRequirements.requirement2"?: never;
+    "administrativeStatusCertificate2.handBackRequirements.requirement3"?: never;
+    endingNote2?: never;
+    "payment.step2"?: never;
+    "payment.step3"?: never;
+    "payment.step4"?: never;
+    "payment.step5"?: never;
+    "administrativeStatusCertificate.issue"?: never;
+    "administrativeStatusCertificate.vendorRequiredSituations.label"?: never;
+    "administrativeStatusCertificate.vendorRequiredSituations.situation1"?: never;
+    "administrativeStatusCertificate.vendorRequiredSituations.situation2"?: never;
+    "administrativeStatusCertificate.vendorRequiredSituations.situation3"?: never;
+    "administrativeStatusCertificate.vendorRequiredSituations.situation4"?: never;
+    "administrativeStatusCertificate.checklist.label"?: never;
+    "administrativeStatusCertificate.checklist.requirement1"?: never;
+    "administrativeStatusCertificate.checklist.requirement2"?: never;
+    "administrativeStatusCertificate.checklist.requirement3"?: never;
+    "administrativeStatusCertificate.checklist.requirement4"?: never;
+    "administrativeStatusCertificate.checklist.requirement5"?: never;
+    "administrativeStatusCertificate.handBackRequirements.label"?: never;
+    "administrativeStatusCertificate.handBackRequirements.requirement1"?: never;
+    "administrativeStatusCertificate.handBackRequirements.requirement2"?: never;
+    "administrativeStatusCertificate.handBackRequirements.requirement3"?: never;
   };
   "instructions-vehicle-transaction-2nd-hand-page": {
     documentTitle?: never;
@@ -4884,13 +5146,13 @@ type TypedTransComponents = {
     "errors.numberLT"?: never;
     "errors.fieldSetContainsErrors"?: never;
     "abbreviations.brn.label"?: never;
-    "abbreviations.brn.title"?: never;
+    "abbreviations.brn.title": { EN: JSX.Element };
     "abbreviations.pdf.label"?: never;
-    "abbreviations.pdf.title"?: never;
+    "abbreviations.pdf.title": { EN: JSX.Element };
     "abbreviations.mvl.label"?: never;
-    "abbreviations.mvl.title": { FR: JSX.Element };
+    "abbreviations.mvl.title": { FR: JSX.Element; EN: JSX.Element };
     "abbreviations.nlta.label"?: never;
-    "abbreviations.nlta.title"?: never;
+    "abbreviations.nlta.title": { EN: JSX.Element };
     "technicalTerms.agreedStatementOfFacts.label"?: never;
     "technicalTerms.agreedStatementOfFacts.title": { FR: JSX.Element };
     "technicalTerms.comprehensiveInsuranceCover.label"?: never;
@@ -4902,7 +5164,7 @@ type TypedTransComponents = {
     "technicalTerms.emergencyTriangle.label"?: never;
     "technicalTerms.emergencyTriangle.title"?: never;
     "technicalTerms.fitnessCertificate.label"?: never;
-    "technicalTerms.fitnessCertificate.title"?: never;
+    "technicalTerms.fitnessCertificate.title": { MU: JSX.Element };
     "technicalTerms.indelibleChalk.label"?: never;
     "technicalTerms.indelibleChalk.title": { MU: JSX.Element };
     "technicalTerms.insuranceVignette.label"?: never;
@@ -4924,7 +5186,7 @@ type TypedTransComponents = {
     "technicalTerms.thirdPartyInsuranceCover.label"?: never;
     "technicalTerms.thirdPartyInsuranceCover.title": { FR: JSX.Element };
     "technicalTerms.vehicleRegistrationBook.label"?: never;
-    "technicalTerms.vehicleRegistrationBook.title"?: never;
+    "technicalTerms.vehicleRegistrationBook.title": { EN: JSX.Element };
   };
   "doc-gen-vehicle-page": {
     "administrativeStatusCertificateAuthorizationLetter.title"?: never;
@@ -4959,6 +5221,12 @@ type TypedTransComponents = {
     "deedOfSale.rupees"?: never;
     "deedOfSale.rupees_other"?: never;
     stampPlaceholder?: never;
+    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.vendorsWithId"?: never;
+    "administrativeStatusCertificateAuthorizationLetter.vendorsWithId_other"?: never;
+    "deedOfSale.pagePreviewBody"?: never;
+    "deedOfSale.vendorsWithId"?: never;
+    "deedOfSale.vendorsWithId_other"?: never;
   };
   "home-page": {
     welcome?: never;
@@ -5248,6 +5516,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.askCompany1FitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.askCompany1Stamp"?: { label?: JSX.Element };
     "payment.commonSteps.askCompanyDeedsOfSale": {
       label?: JSX.Element;
@@ -5278,6 +5547,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
+    "payment.commonSteps.keepFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.keepCompany2Stamp"?: { label?: JSX.Element };
     "payment.commonSteps.keep1DeedOfSale": {
       label?: JSX.Element;
@@ -5335,18 +5605,21 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step4": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step4"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step5": {
       label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step6": {
+      label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step6"?: {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step7"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step7": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -5361,18 +5634,21 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step4": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step4"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step5"?: {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step6": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step7": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -5387,18 +5663,21 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step4": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step4"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step5": {
       label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step6": {
+      label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step6"?: {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step7"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step7": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -5413,18 +5692,21 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step4": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step4"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step5": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step5"?: {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step6": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step7": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -5530,6 +5812,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step7"?: {
       label?: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -5554,6 +5839,9 @@ type TypedTransComponents = {
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step8"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step1": {
@@ -5582,6 +5870,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step7"?: {
       label?: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -5606,6 +5897,9 @@ type TypedTransComponents = {
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step8"?: {
       label?: JSX.Element;
     };
     "payment.leaveWithVehicle"?: {
@@ -6199,6 +6493,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.bringFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.bringCompany1Stamp"?: { label?: JSX.Element };
     "payment.commonSteps.verifyDeedsOfSale": {
       label?: JSX.Element;
@@ -6242,6 +6537,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
+    "payment.commonSteps.giveCompany2FitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.signatureMatch": { ProofOfIdentity: JSX.Element };
     "payment.commonSteps.fundsTransferredOrNot"?: never;
     "payment.commonSteps.noWorriesAboutFraud"?: never;
@@ -6276,11 +6572,14 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step6": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step7": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany1.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -6306,7 +6605,10 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step7": {
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany1.preparedByCompany2.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -6328,11 +6630,14 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step6": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step7": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany1.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -6358,7 +6663,10 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step7": {
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany1AndCompany2.preparedByCompany2.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -6446,22 +6754,25 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step3": {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step4"?: {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step5"?: {
       label?: JSX.Element;
-    };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step5": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step6": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step7": {
+      label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step7"?: {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany1.step8"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step1": {
@@ -6472,22 +6783,25 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step3": {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step4"?: {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step5"?: {
       label?: JSX.Element;
-    };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step5": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step6": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step7": {
+      label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step7"?: {
+    "payment.conditionalInstructions3.issuedByCompany1.preparedByCompany2.step8"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step1": {
@@ -6498,22 +6812,25 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step3": {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step4"?: {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step5"?: {
       label?: JSX.Element;
-    };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step5": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step6": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step7": {
+      label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step7"?: {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany1.step8"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step1": {
@@ -6524,22 +6841,25 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step3": {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step4"?: {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step5"?: {
       label?: JSX.Element;
-    };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step5": {
-      label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step6": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step7": {
+      label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step7"?: {
+    "payment.conditionalInstructions3.issuedByCompany1AndCompany2.preparedByCompany2.step8"?: {
       label?: JSX.Element;
     };
     "payment.leaveWithVehicle"?: { p?: JSX.Element };
@@ -7214,6 +7534,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.askCompanyFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.askCompanyStamp"?: { label?: JSX.Element };
     "payment.commonSteps.askCompanyDeedsOfSale": {
       label?: JSX.Element;
@@ -7255,6 +7576,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.keepFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.keep1DeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -7331,15 +7653,18 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5": {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
+      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -7354,15 +7679,18 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step4": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step4"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step5": {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step6": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -7377,18 +7705,21 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step4": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step4"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step5": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step5"?: {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step7": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step7": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -7403,18 +7734,21 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step4": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step4"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step5": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6": {
+      label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6"?: {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -7429,15 +7763,18 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step4": {
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step4"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step5": {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
+      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step6": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -7452,15 +7789,18 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step4": {
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step4"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step5": {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step6": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -7574,6 +7914,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step7"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -7596,6 +7939,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step7"?: {
+      label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step1": {
       label?: JSX.Element;
@@ -7623,6 +7969,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -7649,6 +7998,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -7672,6 +8024,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step7"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -7694,6 +8049,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step7"?: {
+      label?: JSX.Element;
     };
     "payment.leaveWithVehicle"?: {
       p?: JSX.Element;
@@ -8570,6 +8928,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.bringFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.keepStamp"?: { label?: JSX.Element };
     "payment.commonSteps.keep1DeedOfSale": {
       label?: JSX.Element;
@@ -8600,6 +8959,12 @@ type TypedTransComponents = {
     "payment.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
+    };
+    "payment.commonSteps.givePurchaserFitnessCopy_singlePurchaser"?: {
+      label?: JSX.Element;
+    };
+    "payment.commonSteps.givePurchaserFitnessCopy_multiplePurchasers"?: {
+      label?: JSX.Element;
     };
     "payment.commonSteps.givePurchaser1DeedOfSale_singlePurchaser": {
       label?: JSX.Element;
@@ -8665,11 +9030,14 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -8692,7 +9060,10 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step6": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByPurchaser.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -8711,14 +9082,17 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step4"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step5": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step5"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step6"?: {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step7"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step7": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByCompany.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -8744,7 +9118,10 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -8763,11 +9140,14 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step4"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step5": {
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step5"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step6": {
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByCompany.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -8790,7 +9170,10 @@ type TypedTransComponents = {
     "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step6": {
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompanyAndPurchaser.preparedByPurchaser.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -8865,9 +9248,8 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step3": {
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step4": {
       label?: JSX.Element;
@@ -8875,9 +9257,13 @@ type TypedTransComponents = {
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step5": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step6": {
+      label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step6"?: {
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step7"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step1": {
@@ -8888,9 +9274,8 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step4": {
       label?: JSX.Element;
@@ -8898,9 +9283,13 @@ type TypedTransComponents = {
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step5": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step6": {
+      label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step6"?: {
+    "payment.conditionalInstructions3.issuedByCompany.preparedByPurchaser.step7"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step1": {
@@ -8929,6 +9318,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step7"?: {
       label?: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByCompany.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -8955,6 +9347,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step7"?: {
       label?: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -8963,9 +9358,8 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step3": {
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step4": {
       label?: JSX.Element;
@@ -8973,9 +9367,13 @@ type TypedTransComponents = {
     };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step5": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step6": {
+      label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step6"?: {
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByCompany.step7"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step1": {
@@ -8986,9 +9384,8 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step4": {
       label?: JSX.Element;
@@ -8996,9 +9393,13 @@ type TypedTransComponents = {
     };
     "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step5": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step6": {
+      label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step6"?: {
+    "payment.conditionalInstructions3.issuedByCompanyAndPurchaser.preparedByPurchaser.step7"?: {
       label?: JSX.Element;
     };
     "payment.leaveWithVehicle"?: { p?: JSX.Element };
@@ -9699,6 +10100,12 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.askVendorFitnessCopy_singleVendor"?: {
+      label?: JSX.Element;
+    };
+    "payment.commonSteps.askVendorFitnessCopy_multipleVendors"?: {
+      label?: JSX.Element;
+    };
     "payment.commonSteps.askVendorDeedsOfSale_singleVendor": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -9756,6 +10163,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.keepFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.keepStamp"?: { label?: JSX.Element };
     "payment.commonSteps.keep1DeedOfSale": {
       label?: JSX.Element;
@@ -9914,21 +10322,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step3": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step3"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step4": {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
+      DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5"?: {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step7": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -9940,21 +10351,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step3": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
-    };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step4"?: {
-      label?: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step6": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step7": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -9966,21 +10380,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step3": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step4": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step4"?: {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step5": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step6"?: {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step7"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step7": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -9992,21 +10409,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step3": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step4"?: {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step5": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step6"?: {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -10018,21 +10438,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step3": {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step3"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step4": {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
+      DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step5"?: {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step5": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step7": {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -10044,21 +10467,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step3": {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
-    };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step4"?: {
-      label?: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step6": {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step7": {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -10151,6 +10577,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step7"?: {
       label?: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -10175,6 +10604,9 @@ type TypedTransComponents = {
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step8"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step1": {
@@ -10203,6 +10635,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step7"?: {
       label?: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -10227,6 +10662,9 @@ type TypedTransComponents = {
       VehicleRegistrationBook: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step8"?: {
       label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step1": {
@@ -10255,6 +10693,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step7"?: {
       label?: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -10279,6 +10720,9 @@ type TypedTransComponents = {
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step8"?: {
       label?: JSX.Element;
     };
     "payment.leaveWithVehicle"?: {
@@ -11001,6 +11445,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.bringFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.verifyDeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -11054,6 +11499,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.giveCompanyFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.giveCompany1DeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -11176,11 +11622,14 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step7": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -11206,7 +11655,10 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step7": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -11225,14 +11677,17 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step5": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step5"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step6"?: {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step7"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step7": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -11258,7 +11713,10 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7": {
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -11280,11 +11738,14 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step6": {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step7": {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -11310,7 +11771,10 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step7": {
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step7"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step8": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -11385,21 +11849,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step3": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
-    };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step4"?: {
-      label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step7": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step7": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step8": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -11411,21 +11878,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step3": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
-    };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step4"?: {
-      label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step6": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step7": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step7": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step8": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -11455,6 +11925,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -11481,6 +11954,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step8"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -11489,21 +11965,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step3": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
-    };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step4"?: {
-      label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step6": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step7": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step7": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step8": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -11515,21 +11994,24 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step3": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
-    };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step4"?: {
-      label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step6": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7": {
+    "payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step8": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -12340,6 +12822,12 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.askVendorFitnessCopy_singleVendor"?: {
+      label?: JSX.Element;
+    };
+    "payment.commonSteps.askVendorFitnessCopy_multipleVendors"?: {
+      label?: JSX.Element;
+    };
     "payment.commonSteps.askVendorDeedsOfSale_singleVendor": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -12411,6 +12899,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.keepFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.keep1DeedOfSale": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -12606,15 +13095,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step3": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step3"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step4": {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
+      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -12626,15 +13118,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step4": {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step5": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -12646,18 +13141,21 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step3": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step4": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step4"?: {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step5": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -12669,18 +13167,21 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step4": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step5": {
+      label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step5"?: {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -12692,15 +13193,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step3": {
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step3"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step4": {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
+      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -12712,15 +13216,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step4": {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step5": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -12732,15 +13239,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step3": {
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step3"?: {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step4": {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
+      DeedsOfSale: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -12752,15 +13262,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step4": {
       label?: JSX.Element;
-      DeedsOfSale: JSX.Element;
+      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step5": {
+      label?: JSX.Element;
+      DeedsOfSale: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -12772,18 +13285,21 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step3": {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step3"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step4": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step4"?: {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step5"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step5": {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step6": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
       em?: JSX.Element;
@@ -12796,18 +13312,21 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step4": {
       label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step5": {
+      label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step5"?: {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
       em?: JSX.Element;
@@ -12917,6 +13436,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -12936,6 +13458,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step5": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step6"?: {
+      label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step1": {
       label?: JSX.Element;
@@ -12960,6 +13485,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step7"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -12983,6 +13511,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step7"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -13002,6 +13533,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step5": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step6"?: {
+      label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step1": {
       label?: JSX.Element;
@@ -13023,6 +13557,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step6"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -13043,6 +13580,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step6"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -13062,6 +13602,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step5": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step6"?: {
+      label?: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step1": {
       label?: JSX.Element;
@@ -13086,6 +13629,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step7"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -13108,6 +13654,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step6": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step7"?: {
+      label?: JSX.Element;
     };
     "payment.leaveWithVehicle"?: {
       p?: JSX.Element;
@@ -13833,6 +14382,8 @@ type TypedTransComponents = {
       AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
+      DeedOfSaleImportantLink: JSX.Element;
+      GovtDeedOfSaleLink: JSX.Element;
     };
     "preparation.step3_singlePurchaser": {
       label?: JSX.Element;
@@ -14132,7 +14683,7 @@ type TypedTransComponents = {
     "preparation.lastStep_singlePurchaser"?: { label?: JSX.Element };
     "preparation.lastStep_multiplePurchasers"?: { label?: JSX.Element };
     "payment.title"?: { h2?: JSX.Element };
-    "payment.description"?: { p?: JSX.Element };
+    "payment.description"?: { p?: JSX.Element; em?: JSX.Element };
     "payment.description_singleVendor_singlePurchaser"?: { p?: JSX.Element };
     "payment.description_singleVendor_multiplePurchasers"?: { p?: JSX.Element };
     "payment.description_multipleVendors_singlePurchaser"?: { p?: JSX.Element };
@@ -14178,6 +14729,7 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.commonSteps.bringFitnessCopy"?: { label?: JSX.Element };
     "payment.commonSteps.verifyDeedsOfSale": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -14251,6 +14803,12 @@ type TypedTransComponents = {
     "payment.commonSteps.givePurchaserVehicleRegistrationBook_multiplePurchasers": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
+    };
+    "payment.commonSteps.givePurchaserFitnessCopy_singlePurchaser"?: {
+      label?: JSX.Element;
+    };
+    "payment.commonSteps.givePurchaserFitnessCopy_multiplePurchasers"?: {
+      label?: JSX.Element;
     };
     "payment.commonSteps.givePurchaser1DeedOfSale_singlePurchaser": {
       label?: JSX.Element;
@@ -14410,7 +14968,7 @@ type TypedTransComponents = {
       DeedsOfSale: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.step1"?: { label?: JSX.Element };
+    "payment.step1"?: { label?: JSX.Element; em?: JSX.Element };
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step1": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
@@ -14423,11 +14981,14 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step4": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step4"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step5": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14447,7 +15008,10 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step5": {
+    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step5"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendor.preparedByPurchaser.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14463,14 +15027,17 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step4": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step4"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step5": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step5"?: {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByVendor.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14493,7 +15060,10 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaser.preparedByPurchaser.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14509,11 +15079,14 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step4": {
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step4"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step5": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step5": {
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByVendor.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14533,7 +15106,10 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step5": {
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step5"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorAndPurchaser.preparedByPurchaser.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14549,11 +15125,14 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step4": {
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step4"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step5": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step5": {
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByVendor.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14573,7 +15152,10 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step5": {
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step5"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByVendorDelegate.preparedByPurchaser.step6": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14589,14 +15171,17 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step4": {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step4"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step5": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step5"?: {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step6"?: {
       label?: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByVendor.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14619,7 +15204,10 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
-    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step6": {
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step6"?: {
+      label?: JSX.Element;
+    };
+    "payment.conditionalInstructions1.issuedByPurchaserDelegate.preparedByPurchaser.step7": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
     };
@@ -14716,15 +15304,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step3": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -14736,15 +15327,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendor.preparedByPurchaser.step6": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -14771,6 +15365,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByVendor.step7"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -14794,6 +15391,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaser.preparedByPurchaser.step7"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step1": {
       label?: JSX.Element;
       DeedsOfSale: JSX.Element;
@@ -14802,15 +15402,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step3": {
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByVendor.step6": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -14822,15 +15425,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorAndPurchaser.preparedByPurchaser.step6": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -14842,15 +15448,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step3": {
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByVendor.step6": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -14862,15 +15471,18 @@ type TypedTransComponents = {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
     };
-    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step3": {
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step3"?: {
       label?: JSX.Element;
-      ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step4": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
     "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step5": {
+      label?: JSX.Element;
+      ProofOfIdentity: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByVendorDelegate.preparedByPurchaser.step6": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
@@ -14897,6 +15509,9 @@ type TypedTransComponents = {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
     };
+    "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByVendor.step7"?: {
+      label?: JSX.Element;
+    };
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step1": {
       label?: JSX.Element;
       DeedOfSale: JSX.Element;
@@ -14919,6 +15534,9 @@ type TypedTransComponents = {
     "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step6": {
       label?: JSX.Element;
       VehicleRegistrationBook: JSX.Element;
+    };
+    "payment.conditionalInstructions3.issuedByPurchaserDelegate.preparedByPurchaser.step7"?: {
+      label?: JSX.Element;
     };
     "payment.leaveWithVehicle"?: { p?: JSX.Element };
     "payment.leaveWithVehicle_singlePurchaser"?: { p?: JSX.Element };
@@ -15429,6 +16047,151 @@ type TypedTransComponents = {
     endingNote?: { p?: JSX.Element };
     endingNote_singlePurchaser?: { p?: JSX.Element };
     endingNote_multiplePurchasers?: { p?: JSX.Element };
+    "preparation2.title"?: { h2?: JSX.Element };
+    "preparation2.step1": { label?: JSX.Element; FRSpan: JSX.Element };
+    "preparation2.step2"?: { label?: JSX.Element };
+    "preparation2.step3": {
+      label?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+      DeedOfSaleImportantLink: JSX.Element;
+      GovtDeedOfSaleLink: JSX.Element;
+    };
+    "payment2.title"?: { h2?: JSX.Element };
+    "payment2.description"?: { p?: JSX.Element; em?: JSX.Element };
+    "payment2.step1"?: { label?: JSX.Element; em?: JSX.Element };
+    "payment2.step2"?: { label?: JSX.Element };
+    "payment2.step3"?: { label?: JSX.Element };
+    "payment2.step4"?: { label?: JSX.Element };
+    "payment2.step5": {
+      label?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+      br?: JSX.Element;
+      ul?: JSX.Element;
+      li?: JSX.Element;
+      AuthorizationLetterImportantLink: JSX.Element;
+    };
+    "payment2.leaveWithVehicle"?: { p?: JSX.Element };
+    "administrativeStatusCertificate2.title": {
+      h2?: JSX.Element;
+      AdministrativeStatusCertificate: JSX.Element;
+    };
+    "administrativeStatusCertificate2.description"?: { p?: JSX.Element };
+    "administrativeStatusCertificate2.issue": {
+      p?: JSX.Element;
+      NLTAContactLink: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate2.vendorRequiredSituations.label": {
+      p?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate2.vendorRequiredSituations.situation1"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.vendorRequiredSituations.situation2": {
+      li?: JSX.Element;
+      MNISIDCardLayoutLink: JSX.Element;
+    };
+    "administrativeStatusCertificate2.vendorRequiredSituations.situation3"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.vendorRequiredSituations.situation4"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.checklist.label"?: { p?: JSX.Element };
+    "administrativeStatusCertificate2.checklist.requirement1"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.checklist.requirement2": {
+      label?: JSX.Element;
+      ENSpan: JSX.Element;
+    };
+    "administrativeStatusCertificate2.checklist.requirement3"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.checklist.requirement4"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.checklist.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.handBackRequirements.label"?: {
+      p?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.handBackRequirements.requirement1"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.handBackRequirements.requirement2"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate2.handBackRequirements.requirement3": {
+      li?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    endingNote2?: { p?: JSX.Element };
+    "payment.step2"?: { label?: JSX.Element };
+    "payment.step3"?: { label?: JSX.Element };
+    "payment.step4"?: { label?: JSX.Element };
+    "payment.step5": {
+      label?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+      br?: JSX.Element;
+      ul?: JSX.Element;
+      li?: JSX.Element;
+      AuthorizationLetterImportantLink: JSX.Element;
+    };
+    "administrativeStatusCertificate.issue": {
+      p?: JSX.Element;
+      NLTAContactLink: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate.vendorRequiredSituations.label": {
+      p?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
+    "administrativeStatusCertificate.vendorRequiredSituations.situation1"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.vendorRequiredSituations.situation2": {
+      li?: JSX.Element;
+      MNISIDCardLayoutLink: JSX.Element;
+    };
+    "administrativeStatusCertificate.vendorRequiredSituations.situation3"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.vendorRequiredSituations.situation4"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.checklist.label"?: { p?: JSX.Element };
+    "administrativeStatusCertificate.checklist.requirement1"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.checklist.requirement2": {
+      label?: JSX.Element;
+      ENSpan: JSX.Element;
+    };
+    "administrativeStatusCertificate.checklist.requirement3"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.checklist.requirement4"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.checklist.requirement5"?: {
+      label?: JSX.Element;
+    };
+    "administrativeStatusCertificate.handBackRequirements.label"?: {
+      p?: JSX.Element;
+    };
+    "administrativeStatusCertificate.handBackRequirements.requirement1"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.handBackRequirements.requirement2"?: {
+      li?: JSX.Element;
+    };
+    "administrativeStatusCertificate.handBackRequirements.requirement3": {
+      li?: JSX.Element;
+      NLTAAbbr: JSX.Element;
+    };
   };
   "instructions-vehicle-transaction-2nd-hand-page": {
     documentTitle?: never;

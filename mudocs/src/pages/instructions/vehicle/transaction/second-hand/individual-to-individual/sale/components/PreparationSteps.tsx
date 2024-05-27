@@ -1670,7 +1670,7 @@ export function PreparationSteps() {
                 className="hover:cursor-pointer"
               />
             ),
-            // FRSpan: <span lang="fr" />,
+            FRSpan: <span lang="fr" />,
             NLTAAbbr: <Abbr name="nlta" />,
             NLTAPhone: (
               <Link
@@ -1784,21 +1784,21 @@ export function PreparationSteps() {
               <TechnicalTerm name="administrativeStatusCertificate" />
             ),
             ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
-            // DeedOfSaleImportantLink: (
-            //   <ImportantLink
-            //     href="/doc-gen/vehicle/deed-of-sale/iToI"
-            //     target="_blank"
-            //     rel="noreferrer noopener"
-            //   />
-            // ),
-            // GovtDeedOfSaleLink: (
-            //   <Link
-            //     href="https://nlta.govmu.org/Documents/Downloads/Download%20Forms/deed-sale.pdf"
-            //     target="_blank"
-            //     rel="noreferrer noopener nofollow"
-            //     className="rounded font-bold hover:text-black focus:ring-0 focus:ring-offset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white hover:dark:text-white dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900"
-            //   />
-            // ),
+            DeedOfSaleImportantLink: (
+              <ImportantLink
+                href="/doc-gen/vehicle/deed-of-sale/iToI"
+                target="_blank"
+                rel="noreferrer noopener"
+              />
+            ),
+            GovtDeedOfSaleLink: (
+              <Link
+                href="https://nlta.govmu.org/Documents/Downloads/Download%20Forms/deed-sale.pdf"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                className="rounded font-bold hover:text-black focus:ring-0 focus:ring-offset-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white hover:dark:text-white dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900"
+              />
+            ),
           }}
         />
         <FormSelect

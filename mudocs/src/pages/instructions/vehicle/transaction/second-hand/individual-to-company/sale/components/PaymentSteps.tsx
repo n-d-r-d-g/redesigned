@@ -150,7 +150,6 @@ function ConditionalInstructions1() {
                   className="hover:cursor-pointer"
                 />
               ),
-              DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
             }}
           />
         </div>
@@ -169,6 +168,28 @@ function ConditionalInstructions1() {
               label: (
                 <label
                   htmlFor="sale-payment-conditional-1-step-7"
+                  className="hover:cursor-pointer"
+                />
+              ),
+              DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-1-step-8"
+            name="payment"
+            value="conditional-1-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-1-step-8"
                   className="hover:cursor-pointer"
                 />
               ),
@@ -336,6 +357,27 @@ function ConditionalInstructions1() {
                   className="hover:cursor-pointer"
                 />
               ),
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-1-step-8"
+            name="payment"
+            value="conditional-1-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions1.issuedByVendor.preparedByCompany.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-1-step-8"
+                  className="hover:cursor-pointer"
+                />
+              ),
               DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
             }}
           />
@@ -457,7 +499,6 @@ function ConditionalInstructions1() {
                   className="hover:cursor-pointer"
                 />
               ),
-              DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
             }}
           />
         </div>
@@ -479,6 +520,7 @@ function ConditionalInstructions1() {
                   className="hover:cursor-pointer"
                 />
               ),
+              DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
             }}
           />
         </div>
@@ -497,6 +539,27 @@ function ConditionalInstructions1() {
               label: (
                 <label
                   htmlFor="sale-payment-conditional-1-step-7"
+                  className="hover:cursor-pointer"
+                />
+              ),
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-1-step-8"
+            name="payment"
+            value="conditional-1-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions1.issuedByCompany.preparedByVendor.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-1-step-8"
                   className="hover:cursor-pointer"
                 />
               ),
@@ -664,6 +727,27 @@ function ConditionalInstructions1() {
                   className="hover:cursor-pointer"
                 />
               ),
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-1-step-8"
+            name="payment"
+            value="conditional-1-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions1.issuedByCompany.preparedByCompany.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-1-step-8"
+                  className="hover:cursor-pointer"
+                />
+              ),
               DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
             }}
           />
@@ -806,7 +890,6 @@ function ConditionalInstructions1() {
                   className="hover:cursor-pointer"
                 />
               ),
-              DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
             }}
           />
         </div>
@@ -825,6 +908,28 @@ function ConditionalInstructions1() {
               label: (
                 <label
                   htmlFor="sale-payment-conditional-1-step-7"
+                  className="hover:cursor-pointer"
+                />
+              ),
+              DeedsOfSale: <TechnicalTerm name="deedOfSale" count={3} />,
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-1-step-8"
+            name="payment"
+            value="conditional-1-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByVendor.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-1-step-8"
                   className="hover:cursor-pointer"
                 />
               ),
@@ -989,6 +1094,27 @@ function ConditionalInstructions1() {
               label: (
                 <label
                   htmlFor="sale-payment-conditional-1-step-7"
+                  className="hover:cursor-pointer"
+                />
+              ),
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-1-step-8"
+            name="payment"
+            value="conditional-1-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions1.issuedByVendorAndCompany.preparedByCompany.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-1-step-8"
                   className="hover:cursor-pointer"
                 />
               ),
@@ -1338,7 +1464,6 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step3"
-            params={{ numOfDirectors: values.numOfDirectors }}
             components={{
               label: (
                 <label
@@ -1346,7 +1471,6 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
-              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -1361,6 +1485,7 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step4"
+            params={{ numOfDirectors: values.numOfDirectors }}
             components={{
               label: (
                 <label
@@ -1368,6 +1493,7 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
+              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -1403,7 +1529,6 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step6"
-            params={{ numOfVendors: values.numOfVendors }}
             components={{
               label: (
                 <label
@@ -1411,7 +1536,6 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
-              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -1426,10 +1550,33 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step7"
+            params={{ numOfVendors: values.numOfVendors }}
             components={{
               label: (
                 <label
                   htmlFor="sale-payment-conditional-3-step-7"
+                  className="hover:cursor-pointer"
+                />
+              ),
+              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-3-step-8"
+            name="payment"
+            value="conditional-3-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByVendor.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-3-step-8"
                   className="hover:cursor-pointer"
                 />
               ),
@@ -1502,7 +1649,6 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step3"
-            params={{ numOfDirectors: values.numOfDirectors }}
             components={{
               label: (
                 <label
@@ -1510,7 +1656,6 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
-              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -1525,6 +1670,7 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step4"
+            params={{ numOfDirectors: values.numOfDirectors }}
             components={{
               label: (
                 <label
@@ -1532,6 +1678,7 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
+              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -1567,7 +1714,6 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step6"
-            params={{ numOfVendors: values.numOfVendors }}
             components={{
               label: (
                 <label
@@ -1575,7 +1721,6 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
-              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -1590,10 +1735,33 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step7"
+            params={{ numOfVendors: values.numOfVendors }}
             components={{
               label: (
                 <label
                   htmlFor="sale-payment-conditional-3-step-7"
+                  className="hover:cursor-pointer"
+                />
+              ),
+              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-3-step-8"
+            name="payment"
+            value="conditional-3-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions3.issuedByVendor.preparedByCompany.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-3-step-8"
                   className="hover:cursor-pointer"
                 />
               ),
@@ -1767,6 +1935,27 @@ function ConditionalInstructions3() {
             }}
           />
         </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-3-step-8"
+            name="payment"
+            value="conditional-3-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions3.issuedByCompany.preparedByVendor.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-3-step-8"
+                  className="hover:cursor-pointer"
+                />
+              ),
+            }}
+          />
+        </div>
       </>
     ),
     [values.numOfDirectors, values.numOfVendors],
@@ -1933,6 +2122,27 @@ function ConditionalInstructions3() {
             }}
           />
         </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-3-step-8"
+            name="payment"
+            value="conditional-3-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions3.issuedByCompany.preparedByCompany.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-3-step-8"
+                  className="hover:cursor-pointer"
+                />
+              ),
+            }}
+          />
+        </div>
       </>
     ),
     [values.numOfDirectors, values.numOfVendors],
@@ -1996,7 +2206,6 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step3"
-            params={{ numOfDirectors: values.numOfDirectors }}
             components={{
               label: (
                 <label
@@ -2004,7 +2213,6 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
-              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -2019,6 +2227,7 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step4"
+            params={{ numOfDirectors: values.numOfDirectors }}
             components={{
               label: (
                 <label
@@ -2026,6 +2235,7 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
+              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -2061,7 +2271,6 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step6"
-            params={{ numOfVendors: values.numOfVendors }}
             components={{
               label: (
                 <label
@@ -2069,7 +2278,6 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
-              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -2084,10 +2292,33 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step7"
+            params={{ numOfVendors: values.numOfVendors }}
             components={{
               label: (
                 <label
                   htmlFor="sale-payment-conditional-3-step-7"
+                  className="hover:cursor-pointer"
+                />
+              ),
+              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-3-step-8"
+            name="payment"
+            value="conditional-3-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByVendor.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-3-step-8"
                   className="hover:cursor-pointer"
                 />
               ),
@@ -2160,7 +2391,6 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step3"
-            params={{ numOfDirectors: values.numOfDirectors }}
             components={{
               label: (
                 <label
@@ -2168,7 +2398,6 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
-              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -2183,6 +2412,7 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step4"
+            params={{ numOfDirectors: values.numOfDirectors }}
             components={{
               label: (
                 <label
@@ -2190,6 +2420,7 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
+              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -2225,7 +2456,6 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step6"
-            params={{ numOfVendors: values.numOfVendors }}
             components={{
               label: (
                 <label
@@ -2233,7 +2463,6 @@ function ConditionalInstructions3() {
                   className="hover:cursor-pointer"
                 />
               ),
-              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
             }}
           />
         </div>
@@ -2248,10 +2477,33 @@ function ConditionalInstructions3() {
           <TypedTrans
             ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
             i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step7"
+            params={{ numOfVendors: values.numOfVendors }}
             components={{
               label: (
                 <label
                   htmlFor="sale-payment-conditional-3-step-7"
+                  className="hover:cursor-pointer"
+                />
+              ),
+              ProofOfIdentity: <TechnicalTerm name="proofOfIdentity" />,
+            }}
+          />
+        </div>
+        <div className="flex gap-2">
+          <Checkbox
+            id="sale-payment-conditional-3-step-8"
+            name="payment"
+            value="conditional-3-step-8"
+            validClassName="text-green-500 focus-visible:ring-green-500 dark:focus-visible:ring-green-500"
+            className={`${styles.checkbox} mt-2`}
+          />
+          <TypedTrans
+            ns="instructions-vehicle-transaction-2nd-hand-i2c-sale-page"
+            i18nKey="payment.conditionalInstructions3.issuedByVendorAndCompany.preparedByCompany.step8"
+            components={{
+              label: (
+                <label
+                  htmlFor="sale-payment-conditional-3-step-8"
                   className="hover:cursor-pointer"
                 />
               ),
