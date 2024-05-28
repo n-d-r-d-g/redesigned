@@ -1670,7 +1670,6 @@ export function PreparationSteps() {
                 className="hover:cursor-pointer"
               />
             ),
-            FRSpan: <span lang="fr" />,
             NLTAAbbr: <Abbr name="nlta" />,
             NLTAPhone: (
               <Link
