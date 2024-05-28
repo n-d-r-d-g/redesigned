@@ -76,7 +76,7 @@ export default function TechnicalTerm({
           i18nKey={titleKey}
           params={{ count }}
           components={{
-            // EN: <span lang="en" />,
+            EN: <span lang="en" />,
             FR: <span lang="fr" />,
             MU: <span lang="mfe" />,
           }}
