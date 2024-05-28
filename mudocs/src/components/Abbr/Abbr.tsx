@@ -68,7 +68,7 @@ export default function Abbr({ name, className, ...props }: Props) {
           ns="common"
           i18nKey={titleKey}
           components={{
-            EN: <span lang="en" />,
+            // EN: <span lang="en" />,
             FR: <span lang="fr" />,
             // MU: <span lang="mfe" />,
           }}

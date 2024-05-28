@@ -385,29 +385,6 @@ type TypedTransParams = {
     "deedOfSale.rupees": { count: number };
     "deedOfSale.rupees_other"?: never;
     stampPlaceholder?: never;
-    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody": {
-      vendorCount: any;
-      vendorNamesWithId: any;
-      vehicleRegNum: any;
-      vehicleMake: any;
-      purchaserNamesWithId: any;
-    };
-    "administrativeStatusCertificateAuthorizationLetter.vendorsWithId": {
-      namesWithId: any;
-      count: number;
-    };
-    "administrativeStatusCertificateAuthorizationLetter.vendorsWithId_other": {
-      namesWithId: any;
-    };
-    "deedOfSale.pagePreviewBody": {
-      vendorCount: any;
-      vendorNamesWithId: any;
-      vehicleRegNum: any;
-      vehicleMake: any;
-      purchaserNamesWithId: any;
-    };
-    "deedOfSale.vendorsWithId": { namesWithId: any; count: number };
-    "deedOfSale.vendorsWithId_other": { namesWithId: any };
   };
   "home-page": {
     welcome?: never;
@@ -4773,57 +4750,6 @@ type TypedTransParams = {
     endingNote: { numOfPurchasers: any };
     endingNote_singlePurchaser?: never;
     endingNote_multiplePurchasers?: never;
-    "preparation2.title"?: never;
-    "preparation2.step1"?: never;
-    "preparation2.step2"?: never;
-    "preparation2.step3"?: never;
-    "payment2.title"?: never;
-    "payment2.description"?: never;
-    "payment2.step1"?: never;
-    "payment2.step2"?: never;
-    "payment2.step3"?: never;
-    "payment2.step4"?: never;
-    "payment2.step5"?: never;
-    "payment2.leaveWithVehicle"?: never;
-    "administrativeStatusCertificate2.title"?: never;
-    "administrativeStatusCertificate2.description"?: never;
-    "administrativeStatusCertificate2.issue"?: never;
-    "administrativeStatusCertificate2.vendorRequiredSituations.label"?: never;
-    "administrativeStatusCertificate2.vendorRequiredSituations.situation1"?: never;
-    "administrativeStatusCertificate2.vendorRequiredSituations.situation2"?: never;
-    "administrativeStatusCertificate2.vendorRequiredSituations.situation3"?: never;
-    "administrativeStatusCertificate2.vendorRequiredSituations.situation4"?: never;
-    "administrativeStatusCertificate2.checklist.label"?: never;
-    "administrativeStatusCertificate2.checklist.requirement1"?: never;
-    "administrativeStatusCertificate2.checklist.requirement2"?: never;
-    "administrativeStatusCertificate2.checklist.requirement3"?: never;
-    "administrativeStatusCertificate2.checklist.requirement4"?: never;
-    "administrativeStatusCertificate2.checklist.requirement5"?: never;
-    "administrativeStatusCertificate2.handBackRequirements.label"?: never;
-    "administrativeStatusCertificate2.handBackRequirements.requirement1"?: never;
-    "administrativeStatusCertificate2.handBackRequirements.requirement2"?: never;
-    "administrativeStatusCertificate2.handBackRequirements.requirement3"?: never;
-    endingNote2?: never;
-    "payment.step2"?: never;
-    "payment.step3"?: never;
-    "payment.step4"?: never;
-    "payment.step5"?: never;
-    "administrativeStatusCertificate.issue"?: never;
-    "administrativeStatusCertificate.vendorRequiredSituations.label"?: never;
-    "administrativeStatusCertificate.vendorRequiredSituations.situation1"?: never;
-    "administrativeStatusCertificate.vendorRequiredSituations.situation2"?: never;
-    "administrativeStatusCertificate.vendorRequiredSituations.situation3"?: never;
-    "administrativeStatusCertificate.vendorRequiredSituations.situation4"?: never;
-    "administrativeStatusCertificate.checklist.label"?: never;
-    "administrativeStatusCertificate.checklist.requirement1"?: never;
-    "administrativeStatusCertificate.checklist.requirement2"?: never;
-    "administrativeStatusCertificate.checklist.requirement3"?: never;
-    "administrativeStatusCertificate.checklist.requirement4"?: never;
-    "administrativeStatusCertificate.checklist.requirement5"?: never;
-    "administrativeStatusCertificate.handBackRequirements.label"?: never;
-    "administrativeStatusCertificate.handBackRequirements.requirement1"?: never;
-    "administrativeStatusCertificate.handBackRequirements.requirement2"?: never;
-    "administrativeStatusCertificate.handBackRequirements.requirement3"?: never;
   };
   "instructions-vehicle-transaction-2nd-hand-page": {
     documentTitle?: never;
@@ -5146,13 +5072,13 @@ type TypedTransComponents = {
     "errors.numberLT"?: never;
     "errors.fieldSetContainsErrors"?: never;
     "abbreviations.brn.label"?: never;
-    "abbreviations.brn.title": { EN: JSX.Element };
+    "abbreviations.brn.title"?: never;
     "abbreviations.pdf.label"?: never;
-    "abbreviations.pdf.title": { EN: JSX.Element };
+    "abbreviations.pdf.title"?: never;
     "abbreviations.mvl.label"?: never;
-    "abbreviations.mvl.title": { FR: JSX.Element; EN: JSX.Element };
+    "abbreviations.mvl.title": { FR: JSX.Element };
     "abbreviations.nlta.label"?: never;
-    "abbreviations.nlta.title": { EN: JSX.Element };
+    "abbreviations.nlta.title"?: never;
     "technicalTerms.agreedStatementOfFacts.label"?: never;
     "technicalTerms.agreedStatementOfFacts.title": { FR: JSX.Element };
     "technicalTerms.comprehensiveInsuranceCover.label"?: never;
@@ -5164,7 +5090,7 @@ type TypedTransComponents = {
     "technicalTerms.emergencyTriangle.label"?: never;
     "technicalTerms.emergencyTriangle.title"?: never;
     "technicalTerms.fitnessCertificate.label"?: never;
-    "technicalTerms.fitnessCertificate.title": { MU: JSX.Element };
+    "technicalTerms.fitnessCertificate.title"?: never;
     "technicalTerms.indelibleChalk.label"?: never;
     "technicalTerms.indelibleChalk.title": { MU: JSX.Element };
     "technicalTerms.insuranceVignette.label"?: never;
@@ -5186,7 +5112,7 @@ type TypedTransComponents = {
     "technicalTerms.thirdPartyInsuranceCover.label"?: never;
     "technicalTerms.thirdPartyInsuranceCover.title": { FR: JSX.Element };
     "technicalTerms.vehicleRegistrationBook.label"?: never;
-    "technicalTerms.vehicleRegistrationBook.title": { EN: JSX.Element };
+    "technicalTerms.vehicleRegistrationBook.title"?: never;
   };
   "doc-gen-vehicle-page": {
     "administrativeStatusCertificateAuthorizationLetter.title"?: never;
@@ -5221,12 +5147,6 @@ type TypedTransComponents = {
     "deedOfSale.rupees"?: never;
     "deedOfSale.rupees_other"?: never;
     stampPlaceholder?: never;
-    "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody"?: never;
-    "administrativeStatusCertificateAuthorizationLetter.vendorsWithId"?: never;
-    "administrativeStatusCertificateAuthorizationLetter.vendorsWithId_other"?: never;
-    "deedOfSale.pagePreviewBody"?: never;
-    "deedOfSale.vendorsWithId"?: never;
-    "deedOfSale.vendorsWithId_other"?: never;
   };
   "home-page": {
     welcome?: never;
@@ -14382,8 +14302,6 @@ type TypedTransComponents = {
       AdministrativeStatusCertificate: JSX.Element;
       ProofOfIdentity: JSX.Element;
       DeedsOfSale: JSX.Element;
-      DeedOfSaleImportantLink: JSX.Element;
-      GovtDeedOfSaleLink: JSX.Element;
     };
     "preparation.step3_singlePurchaser": {
       label?: JSX.Element;
@@ -14683,7 +14601,7 @@ type TypedTransComponents = {
     "preparation.lastStep_singlePurchaser"?: { label?: JSX.Element };
     "preparation.lastStep_multiplePurchasers"?: { label?: JSX.Element };
     "payment.title"?: { h2?: JSX.Element };
-    "payment.description"?: { p?: JSX.Element; em?: JSX.Element };
+    "payment.description"?: { p?: JSX.Element };
     "payment.description_singleVendor_singlePurchaser"?: { p?: JSX.Element };
     "payment.description_singleVendor_multiplePurchasers"?: { p?: JSX.Element };
     "payment.description_multipleVendors_singlePurchaser"?: { p?: JSX.Element };
@@ -14968,7 +14886,7 @@ type TypedTransComponents = {
       DeedsOfSale: JSX.Element;
       ProofOfIdentity: JSX.Element;
     };
-    "payment.step1"?: { label?: JSX.Element; em?: JSX.Element };
+    "payment.step1"?: { label?: JSX.Element };
     "payment.conditionalInstructions1.issuedByVendor.preparedByVendor.step1": {
       label?: JSX.Element;
       ProofOfIdentity: JSX.Element;
@@ -16047,151 +15965,6 @@ type TypedTransComponents = {
     endingNote?: { p?: JSX.Element };
     endingNote_singlePurchaser?: { p?: JSX.Element };
     endingNote_multiplePurchasers?: { p?: JSX.Element };
-    "preparation2.title"?: { h2?: JSX.Element };
-    "preparation2.step1": { label?: JSX.Element; FRSpan: JSX.Element };
-    "preparation2.step2"?: { label?: JSX.Element };
-    "preparation2.step3": {
-      label?: JSX.Element;
-      NLTAAbbr: JSX.Element;
-      DeedOfSaleImportantLink: JSX.Element;
-      GovtDeedOfSaleLink: JSX.Element;
-    };
-    "payment2.title"?: { h2?: JSX.Element };
-    "payment2.description"?: { p?: JSX.Element; em?: JSX.Element };
-    "payment2.step1"?: { label?: JSX.Element; em?: JSX.Element };
-    "payment2.step2"?: { label?: JSX.Element };
-    "payment2.step3"?: { label?: JSX.Element };
-    "payment2.step4"?: { label?: JSX.Element };
-    "payment2.step5": {
-      label?: JSX.Element;
-      NLTAAbbr: JSX.Element;
-      br?: JSX.Element;
-      ul?: JSX.Element;
-      li?: JSX.Element;
-      AuthorizationLetterImportantLink: JSX.Element;
-    };
-    "payment2.leaveWithVehicle"?: { p?: JSX.Element };
-    "administrativeStatusCertificate2.title": {
-      h2?: JSX.Element;
-      AdministrativeStatusCertificate: JSX.Element;
-    };
-    "administrativeStatusCertificate2.description"?: { p?: JSX.Element };
-    "administrativeStatusCertificate2.issue": {
-      p?: JSX.Element;
-      NLTAContactLink: JSX.Element;
-      NLTAAbbr: JSX.Element;
-    };
-    "administrativeStatusCertificate2.vendorRequiredSituations.label": {
-      p?: JSX.Element;
-      NLTAAbbr: JSX.Element;
-    };
-    "administrativeStatusCertificate2.vendorRequiredSituations.situation1"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.vendorRequiredSituations.situation2": {
-      li?: JSX.Element;
-      MNISIDCardLayoutLink: JSX.Element;
-    };
-    "administrativeStatusCertificate2.vendorRequiredSituations.situation3"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.vendorRequiredSituations.situation4"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.checklist.label"?: { p?: JSX.Element };
-    "administrativeStatusCertificate2.checklist.requirement1"?: {
-      label?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.checklist.requirement2": {
-      label?: JSX.Element;
-      ENSpan: JSX.Element;
-    };
-    "administrativeStatusCertificate2.checklist.requirement3"?: {
-      label?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.checklist.requirement4"?: {
-      label?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.checklist.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.handBackRequirements.label"?: {
-      p?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.handBackRequirements.requirement1"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.handBackRequirements.requirement2"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate2.handBackRequirements.requirement3": {
-      li?: JSX.Element;
-      NLTAAbbr: JSX.Element;
-    };
-    endingNote2?: { p?: JSX.Element };
-    "payment.step2"?: { label?: JSX.Element };
-    "payment.step3"?: { label?: JSX.Element };
-    "payment.step4"?: { label?: JSX.Element };
-    "payment.step5": {
-      label?: JSX.Element;
-      NLTAAbbr: JSX.Element;
-      br?: JSX.Element;
-      ul?: JSX.Element;
-      li?: JSX.Element;
-      AuthorizationLetterImportantLink: JSX.Element;
-    };
-    "administrativeStatusCertificate.issue": {
-      p?: JSX.Element;
-      NLTAContactLink: JSX.Element;
-      NLTAAbbr: JSX.Element;
-    };
-    "administrativeStatusCertificate.vendorRequiredSituations.label": {
-      p?: JSX.Element;
-      NLTAAbbr: JSX.Element;
-    };
-    "administrativeStatusCertificate.vendorRequiredSituations.situation1"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate.vendorRequiredSituations.situation2": {
-      li?: JSX.Element;
-      MNISIDCardLayoutLink: JSX.Element;
-    };
-    "administrativeStatusCertificate.vendorRequiredSituations.situation3"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate.vendorRequiredSituations.situation4"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate.checklist.label"?: { p?: JSX.Element };
-    "administrativeStatusCertificate.checklist.requirement1"?: {
-      label?: JSX.Element;
-    };
-    "administrativeStatusCertificate.checklist.requirement2": {
-      label?: JSX.Element;
-      ENSpan: JSX.Element;
-    };
-    "administrativeStatusCertificate.checklist.requirement3"?: {
-      label?: JSX.Element;
-    };
-    "administrativeStatusCertificate.checklist.requirement4"?: {
-      label?: JSX.Element;
-    };
-    "administrativeStatusCertificate.checklist.requirement5"?: {
-      label?: JSX.Element;
-    };
-    "administrativeStatusCertificate.handBackRequirements.label"?: {
-      p?: JSX.Element;
-    };
-    "administrativeStatusCertificate.handBackRequirements.requirement1"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate.handBackRequirements.requirement2"?: {
-      li?: JSX.Element;
-    };
-    "administrativeStatusCertificate.handBackRequirements.requirement3": {
-      li?: JSX.Element;
-      NLTAAbbr: JSX.Element;
-    };
   };
   "instructions-vehicle-transaction-2nd-hand-page": {
     documentTitle?: never;
