@@ -96,7 +96,7 @@
         "requirement1": "<label>L'<DeedOfSale /> enregistré ainsi que la facture et le reçu de paiement du bureau d'enregistrement, agrafés</label>",
         "requirement2": "<label>Votre <ProofOfIdentity /></label>",
         "requirement3": "$t(insurance.conditionalRequirements.individualRequirements.proofOfAddress_{{numOfPurchasers}})",
-        "requirement4": "<label>Votre <ProofOfEmployment /></label>",
+        "requirement4": "<label>Votre <ProofOfEmployment /> (dépend de la compagnie d'assurance)</label>",
         "requirement5": "<label>Votre permis de conduire</label>",
         "requirement6": "<label>Le <VehicleRegistrationBook /></label>",
         "requirement7": "<label>La somme à payer à la compagnie d'assurance</label>"

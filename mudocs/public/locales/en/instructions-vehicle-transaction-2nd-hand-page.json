@@ -96,7 +96,7 @@
         "requirement1": "<label>The registered <DeedOfSale /> along with the payment notice and payment receipt from the Registrar, stapled together</label>",
         "requirement2": "<label>Your <ProofOfIdentity /></label>",
         "requirement3": "$t(insurance.conditionalRequirements.individualRequirements.proofOfAddress_{{numOfPurchasers}})",
-        "requirement4": "<label>Your <ProofOfEmployment /></label>",
+        "requirement4": "<label>Your <ProofOfEmployment /> (depends on insurance company)</label>",
         "requirement5": "<label>Your driving permit</label>",
         "requirement6": "<label>The <VehicleRegistrationBook /></label>",
         "requirement7": "<label>The insurance fee</label>"
