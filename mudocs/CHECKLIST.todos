@@ -1,6 +1,6 @@
 ☐ Use ScrollArea (https://www.shadcn-vue.com/docs/components/scroll-area) to avoid fullscreen spinner shift on some browsers
 ☐ Make sure to include id & query params when calling silentlyUpdateURL
-☐ Add table of contents on instructions pages to help users get an overview of the steps & navigate to the desired section faster
+☐ Add table of contents on instructions pages to help users get an overview of the steps & navigate to the desired section faster + add accordion to each section
 ☐ Replace tippyjs-react with recommended package on their readme - @floating-ui/react
 ☐ Install extension to manage issues + move all from this file to issues (https://github.com/microsoft/vscode-pull-request-github)
 ☐ Use smaller text size for components on sm
