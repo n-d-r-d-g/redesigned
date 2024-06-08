@@ -15,7 +15,8 @@ Feel free to let me know about any issue you encounter or if there's any feature
 
 1. Run `npm install` in the root directory.
 2. Change your working directory to the project you want to run locally, e.g. `cd mudocs`.
-3. Run `npm run dev` to launch the project in dev mode.
+3. You can open a specific project's folder in VSCode. You will need to switch to the `Source Control` panel and click the `Open repository` button to load the monorepo's git settings.
+4. Run `npm run dev` to launch the project in dev mode.
 
 ### Create Pull Requests
 
