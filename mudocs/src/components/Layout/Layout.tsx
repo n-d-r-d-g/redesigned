@@ -109,7 +109,9 @@ function LanguageSwitch() {
         className="min-w-20"
         isDisabled
       >
-        {(locale) => <SelectItem key={locale.value}>{locale.label}</SelectItem>}
+        {(locale: (typeof locales)[number]) => (
+          <SelectItem key={locale.value}>{locale.label}</SelectItem>
+        )}
       </Select>
     </div>
   );
