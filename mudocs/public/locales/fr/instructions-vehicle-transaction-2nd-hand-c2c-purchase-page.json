@@ -11,42 +11,42 @@
       "label": "N° de directeurs de l'acheteur"
     },
     "documentsPreparer": {
-      "label": "Qui préparera les documents ci-dessus ?"
+      "label": "Qui préparera les documents ci-dessus?"
     },
     "vendorHasStamp": {
-      "label": "Le vendeur a-t-il un estampille ?"
+      "label": "Le vendeur a-t-il un estampille?"
     },
     "isVehicleRegistrationBookValid": {
-      "label": "Is all the information on the vehicle's registration book up to date?"
+      "label": "Toutes les informations contenues dans le <VehicleRegistrationBook /> sont-elles à jour?"
     },
     "administrativeStatusCertificateIssuer": {
-      "label": "<span>Who will go to the <NLTAAbbr />?</span>"
+      "label": "<span>Qui ira au <NLTAAbbr />?</span>"
     },
     "paymentMethod": {
       "label": "Mode de paiement"
     }
   },
   "preparation": {
-    "title": "<h2>Preparation</h2>",
+    "title": "<h2>Préparation</h2>",
     "commonSteps": {
-      "askCompany1InfoPhotos_singleCompany1Director_directorRequired": "<label>Ask the vendor's representative for:<ul><li>a photo of their <ProofOfIdentity /></li><li>a photo of their company's <BRNAbbr /> on its Business Registration Card</li></ul></label>",
-      "askCompany1InfoPhotos_singleCompany1Director_directorNotRequired": "<label>Ask the vendor's representative for:<ul><li>their role/function in their company</li><li>a photo of their <ProofOfIdentity /></li><li>a photo of their company's <BRNAbbr /> on its Business Registration Card</li></ul></label>",
-      "askCompany1InfoPhotos_multipleCompany1Directors_directorRequired": "<label>Ask the vendor's representative for:<ul><li>a photo of each of their company's directors' <ProofOfIdentity />, including theirs</li><li>a photo of their company's <BRNAbbr /> on its Business Registration Card</li></ul></label>",
-      "askCompany1InfoPhotos_multipleCompany1Directors_directorNotRequired": "<label>Ask the vendor's representative for:<ul><li>their role/function in their company</li><li>a photo of their and each of their company's directors' <ProofOfIdentity /></li><li>a photo of their company's <BRNAbbr /> on its Business Registration Card</li></ul></label>",
-      "askCompany1VehicleRegistrationBookPhoto": "<label>Ask the vendor's representative for a photo of the <VehicleRegistrationBook />.</label>",
-      "askCompany1DeedOfSalePhotoOrPDF": "<label>Ask the vendor's representative for a photo or <PDFAbbr /> of one of the <DeedsOfSale /> to verify that all the details are correct. This verification is crucial. In case there is any mistake, the <NLTAAbbr /> will ask for amendments to be made to the <DeedsOfSale />, then to come back later.</label>",
-      "askCompany1AuthorizationLetterPhotoOrPDF": "<label>Ask the vendor's representative for a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. This verification is also important to avoid unnecessary back and forth.</label>",
-      "fillAndCheckDeedsOfSale": "<label>You can use our <DeedOfSaleImportantLink>document generator</DeedOfSaleImportantLink> to generate the <DeedOfSale />. Alternatively, you can find a template of the <DeedOfSale /> on <GovtDeedOfSaleLink><NLTAAbbr />'s website</GovtDeedOfSaleLink>. Make sure that all 3 <DeedsOfSale /> are correctly filled, i.e. no typos. Do not sign any of the <DeedsOfSale /> yet.</label>",
-      "sendCompany2InfoPhotosToCompany1_singleCompany2Director": "<label>Send the vendor's representative:<ul><li>a photo of your <ProofOfIdentity /></li><li>a photo of the address displayed on your company's <ProofOfAddress /></li></ul></label>",
-      "sendCompany2InfoPhotosToCompany1_multipleCompany2Directors": "<label>Send the vendor's representative:<ul><li>a photo of each of your company's directors' <ProofOfIdentity /></li><li>a photo of the address displayed on your company's <ProofOfAddress /></li></ul></label>",
-      "sendDeedOfSalePhotoOrPDFToCompany1": "<label>Send the vendor's representative a photo or <PDFAbbr /> of one of the <DeedsOfSale /> to verify that all the details are correct. This verification is crucial. In case there is any mistake, the <NLTAAbbr /> will ask for amendments to be made to the <DeedsOfSale />, then to come back later.</label>"
+      "askCompany1InfoPhotos_singleCompany1Director_directorRequired": "<label>Demandez au représentant du vendeur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo du <BRNAbbr /> de l'entreprise sur sa carte d'immatriculation</li></ul></label>",
+      "askCompany1InfoPhotos_singleCompany1Director_directorNotRequired": "<label>Demandez au représentant du vendeur:<ul><li>leur rôle/fonction au sein de leur entreprise</li><li>une photo de leur <ProofOfIdentity /></li><li>une photo du <BRNAbbr /> de l'entreprise sur sa carte d'immatriculation</li></ul></label>",
+      "askCompany1InfoPhotos_multipleCompany1Directors_directorRequired": "<label>Demandez au représentant du vendeur:<ul><li>une photo de la <ProofOfIdentity />de chacun des directeurs de l'entreprise, y compris la leur</li><li>une photo du <BRNAbbr /> de l'entreprise sur sa carte d'immatriculation</li></ul></label>",
+      "askCompany1InfoPhotos_multipleCompany1Directors_directorNotRequired": "<label>Demandez au représentant du vendeur:<ul><li>leur rôle/fonction au sein de leur entreprise</li><li>une photo de leur <ProofOfIdentity /> et de celle de chacun des directeurs de l'entreprise</li><li>une photo du <BRNAbbr /> de l'entreprise sur sa carte d'immatriculation</li></ul></label>",
+      "askCompany1VehicleRegistrationBookPhoto": "<label>Demandez au représentant du vendeur une photo du <VehicleRegistrationBook />.</label>",
+      "askCompany1DeedOfSalePhotoOrPDF": "<label>Demandez au représentant du vendeur une photo ou un document <PDFAbbr /> de l'un des <DeedsOfSale /> pour vérifier que tous les détails sont corrects. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> demandera que des modifications soient apportées à <DeedsOfSale />, puis reviendra plus tard.</label>",
+      "askCompany1AuthorizationLetterPhotoOrPDF": "<label>Demandez au représentant du vendeur une photo ou un document <PDFAbbr /> de la lettre d'autorisation pour vérifier que tous les détails sont corrects. Cette vérification est également importante pour éviter des allers-retours inutiles.</label>",
+      "fillAndCheckDeedsOfSale": "<label>Vous pouvez utiliser notre <DeedOfSaleImportantLink>générateur de documents</DeedOfSaleImportantLink> pour générer <DeedOfSale />. Vous pouvez également trouver un modèle de l'<DeedOfSale /> sur le site web de la <GovtDeedOfSaleLink><NLTAAbbr /></GovtDeedOfSaleLink>. Assurez-vous que les trois <DeedsOfSale /> sont correctement remplis, c'est-à-dire qu'il n'y a pas de fautes de frappe. Ne signez aucun des <DeedsOfSale /> pour l'instant.</label>",
+      "sendCompany2InfoPhotosToCompany1_singleCompany2Director": "<label>Envoyer le représentant du vendeur:<ul><li>une photo de votre <ProofOfIdentity /></li><li>une photo de l'adresse figurant sur la <ProofOfAddress /> de votre entreprise</li></ul></label>",
+      "sendCompany2InfoPhotosToCompany1_multipleCompany2Directors": "<label>Envoyer le représentant du vendeur:<ul><li>une photo de la <ProofOfIdentity /> de chacun des directeurs de votre entreprise</li><li>une photo de l'adresse figurant sur la <ProofOfAddress /> de votre entreprise</li></ul></label>",
+      "sendDeedOfSalePhotoOrPDFToCompany1": "<label>Envoyez au représentant du vendeur une photo ou un <PDFAbbr /> de l'un des <DeedsOfSale /> pour vérifier que tous les détails sont corrects. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> demandera que des modifications soient apportées aux <DeedsOfSale />, puis reviendra plus tard.</label>"
     },
     "requiredDirectorNote": "$t(preparation.requiredDirectorNote_{{numOfCompany1Directors}})",
-    "requiredDirectorNote_singleCompany1Director": "<p>Based on your scenario, the vendor's director is required at the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. <em>Hence, the rest of this page assumes the vendor's representative is also the vendor's director.</em></p>",
-    "requiredDirectorNote_multipleCompany1Directors": "<p>Based on your scenario, one of the vendor's directors is required at the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. <em>Hence, the rest of this page assumes the vendor's representative is also the vendor's director.</em></p>",
-    "step1": "<label>How many vendor's directors and purchaser's directors are there?</label>",
-    "step2": "<label>Decide with the vendor's representative about who will prepare the <DeedsOfSale />.</label>",
-    "step3": "<label>Decide with the vendor's representative whether you will go to the <NLTAAbbr /> along with them to issue the <AdministrativeStatusCertificate />. It's advised (not compulsory) that both of you go to the <NLTAAbbr /> to issue this document as you can exchange <DeedsOfSale /> on the spot.</label>",
+    "requiredDirectorNote_singleCompany1Director": "<p>Selon votre scénario, le directeur du vendeur doit être présent à la <NLTAAbbr /> pour délivrer le <AdministrativeStatusCertificate />. <em>Par conséquent, le reste de cette page suppose que le représentant du vendeur est également le directeur du vendeur.</em></p>",
+    "requiredDirectorNote_multipleCompany1Directors": "<p>Selon votre scénario, l'un des directeurs du vendeur doit être présent à la <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. <em>Par conséquent, le reste de cette page suppose que le représentant du vendeur est également le directeur du vendeur.</em></p>",
+    "step1": "<label>Combien de directeurs du vendeur et de directeurs de l'acheteur y a-t-il ?</label>",
+    "step2": "<label>Décidez avec le représentant du vendeur qui préparera les <DeedsOfSale />.</label>",
+    "step3": "<label>Décidez avec le représentant du vendeur si vous vous rendrez avec lui à la <NLTAAbbr /> pour obtenir le <AdministrativeStatusCertificate />. Il est conseillé (mais pas obligatoire) que vous vous rendiez tous les deux à la <NLTAAbbr /> pour obtenir ce document, car vous pouvez échanger les <DeedsOfSale /> sur place.</label>",
     "conditionalInstructions": {
       "issuedByCompany1": {
         "preparedByCompany1": {
@@ -83,24 +83,24 @@
         }
       }
     },
-    "lastStep": "<label>How will you pay for the vehicle?</label>"
+    "lastStep": "<label>Comment payerez-vous le véhicule?</label>"
   },
   "payment": {
-    "title": "<h2>Pay for the vehicle</h2>",
+    "title": "<h2>Paiement du véhicule</h2>",
     "description": "$t(payment.description_{{numOfCompany1Directors}}_{{whetherDirectorIsRequired}})",
-    "description_singleCompany1Director_directorRequired": "<p>The vendor's director and your company's director need to agree on a location to meet up so payment can be effected and documents can be signed.</p>",
-    "description_singleCompany1Director_directorNotRequired": "<p>The vendor's director and your company's directors need to agree on a location to meet up so payment can be effected and documents can be signed.</p>",
-    "description_multipleCompany1Directors_directorRequired": "<p>The vendor's directors and your company's directors need to agree on a location to meet up so payment can be effected and documents can be signed.</p>",
-    "description_multipleCompany1Directors_directorNotRequired": "<p>The vendor's directors, your company's directors and you need to agree on a location to meet up so payment can be effected and documents can be signed.</p>",
+    "description_singleCompany1Director_directorRequired": "<p>Le directeur du vendeur et le directeur de votre entreprise doivent convenir d'un lieu de rencontre pour que le paiement puisse être effectué et que les documents puissent être signés.</p>",
+    "description_singleCompany1Director_directorNotRequired": "<p>Le directeur du vendeur et les directeurs de votre entreprise doivent convenir d'un lieu de rencontre pour que le paiement puisse être effectué et que les documents puissent être signés.</p>",
+    "description_multipleCompany1Directors_directorRequired": "<p>Les directeurs du vendeur et les directeurs de votre entreprise doivent convenir d'un lieu de rencontre pour que le paiement soit effectué et que les documents soient signés.</p>",
+    "description_multipleCompany1Directors_directorNotRequired": "<p>Les directeurs du vendeur, les directeurs de votre entreprise et vous-même doivent convenir d'un lieu de rencontre pour que le paiement soit effectué et que les documents soient signés.</p>",
     "commonSteps": {
-      "askCompany1ProofOfIdentity_singleCompany1Director_directorRequired": "<label>Ask the vendor's representative to make sure to bring their <ProofOfIdentity />.</label>",
-      "askCompany1ProofOfIdentity_singleCompany1Director_directorNotRequired": "<label>Ask the vendor's representative and director to make sure to bring their <ProofOfIdentity />.</label>",
-      "askCompany1ProofOfIdentity_multipleCompany1Directors_directorRequired": "<label>Ask each vendor's director to make sure to bring their <ProofOfIdentity />.</label>",
-      "askCompany1ProofOfIdentity_multipleCompany1Directors_directorNotRequired": "<label>Ask each vendor's director to make sure to bring their <ProofOfIdentity />.</label>",
-      "askCompany1VehicleRegistrationBook": "<label>Ask the vendor's representative to make sure to bring the original <VehicleRegistrationBook />.</label>",
-      "askCompany1FitnessCopy": "<label>Ask the vendor's representative to make sure to bring the vehicle's original fitness vignette copy (required for the next fitness test).</label>",
+      "askCompany1ProofOfIdentity_singleCompany1Director_directorRequired": "<label>Demandez au représentant du vendeur de s'assurer qu'il a une <ProofOfIdentity />.</label>",
+      "askCompany1ProofOfIdentity_singleCompany1Director_directorNotRequired": "<label>Demandez au représentant et au directeur du vendeur de s'assurer qu'ils apportent leur <ProofOfIdentity />.</label>",
+      "askCompany1ProofOfIdentity_multipleCompany1Directors_directorRequired": "<label>Demandez au directeur de chaque vendeur de s'assurer qu'il apporte sa <ProofOfIdentity />.</label>",
+      "askCompany1ProofOfIdentity_multipleCompany1Directors_directorNotRequired": "<label>Demandez au directeur de chaque vendeur de s'assurer qu'il apporte sa <ProofOfIdentity />.</label>",
+      "askCompany1VehicleRegistrationBook": "<label>Demandez au représentant du vendeur de veiller à apporter l'original du <VehicleRegistrationBook />.</label>",
+      "askCompany1FitnessCopy": "<label>Demandez au représentant du vendeur de veiller à apporter la copie originale de la vignette de contrôle technique du véhicule (requise pour le prochain contrôle technique).</label>",
       "askCompany1Stamp": "<label>Ask the vendor's representative to make sure to bring their company's stamp. If the company does not have a stamp, they will need to bring along an original certified document that mentions them as the director.</label>",
-      "askCompanyDeedsOfSale": "<label>Ask the vendor's representative to make sure to bring the 3 filled <DeedsOfSale />.</label>",
+      "askCompanyDeedsOfSale": "<label>Demandez au représentant du vendeur de s'assurer qu'il apporte les 3 <DeedsOfSale /> remplis.</label>",
       "bringCompany2ProofOfIdentity_singleCompany2Director": "<label>Make sure to ask your company's director to bring their <ProofOfIdentity />.</label>",
       "bringCompany2ProofOfIdentity_multipleCompany2Directors": "<label>Make sure to ask your company's directors to bring their original <ProofOfIdentity />.</label>",
       "bringCompany2Stamp": "<label>Make sure to bring your company stamp.</label>",
