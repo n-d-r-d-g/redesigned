@@ -17,7 +17,7 @@
       "label": "Does your company have a stamp?"
     },
     "isVehicleRegistrationBookValid": {
-      "label": "Is all the information on the vehicle's registration book up to date?"
+      "label": "Is all the information on the <VehicleRegistrationBook /> up to date?"
     },
     "administrativeStatusCertificateIssuer": {
       "label": "<span>Who will go to the <NLTAAbbr />?</span>"
