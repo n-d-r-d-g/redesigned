@@ -1,0 +1,640 @@
+{
+  "documentTitle": "Purchase of a second hand vehicle (Individual to Individual)",
+  "pageTitle": "Purchase of a second hand vehicle - Individual(s) to Individuals(s)",
+  "description": "You're viewing the instructions for an individual (or multiple individuals) purchasing a second hand vehicle owned by another individual (or multiple individuals). You're either the only purchaser or one of the purchasers.",
+  "form": {
+    "numOfVendors": {
+      "label": "No. of vendors"
+    },
+    "numOfPurchasers": {
+      "label": "No. of purchasers"
+    },
+    "documentsPreparer": {
+      "label": "Who will prepare the above?"
+    },
+    "purchaserHasOriginalID": {
+      "label": "Does you have an original <ProofOfIdentity /> (Mauritians need the <MNISIDCardLayoutLink>new I.D card</MNISIDCardLayoutLink>)?",
+      "label_other": "Do all purchasers have an original <ProofOfIdentity /> (Mauritians need the <MNISIDCardLayoutLink>new I.D card</MNISIDCardLayoutLink>)?"
+    },
+    "vendorAndPurchaserAreRelated": {
+      "label": "$t(form.vendorAndPurchaserAreRelated.label_{{numOfVendors}}_{{numOfPurchasers}})",
+      "label_singleVendor_singlePurchaser": "Are you related to the vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?",
+      "label_singleVendor_multiplePurchasers": "Is any purchaser related to the vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?",
+      "label_multipleVendors_singlePurchaser": "Are you related to a vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?",
+      "label_multipleVendors_multiplePurchasers": "Is any purchaser related to a vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?"
+    },
+    "vendorNameMatches": {
+      "label": "Does the vendor's name displayed on the <VehicleRegistrationBook /> match the one on their <ProofOfIdentity />?",
+      "label_other": "Does every vendor's name displayed on the <VehicleRegistrationBook /> match the one on their <ProofOfIdentity />?"
+    },
+    "administrativeStatusCertificateIssuer": {
+      "label": "<span>Who will go to the <NLTAAbbr />?</span>"
+    },
+    "paymentMethod": {
+      "label": "Payment method"
+    }
+  },
+  "preparation": {
+    "title": "<h2>Preparation</h2>",
+    "commonSteps": {
+      "askPurchaserDelegateProofOfIdentity": "<label>Ask your delegate for a photo of their <ProofOfIdentity />.</label>",
+      "askVendorProofOfIdentity_singleVendor": "<label>Ask the vendor for a photo of their <ProofOfIdentity />.</label>",
+      "askVendorProofOfIdentity_multipleVendors": "<label>Ask each vendor for a photo of their <ProofOfIdentity />.</label>",
+      "askVendorVehicleRegistrationBookPhoto_singleVendor": "<label>Ask the vendor for a photo of the <VehicleRegistrationBook />.</label>",
+      "askVendorVehicleRegistrationBookPhoto_multipleVendors": "<label>Ask the vendors for a photo of the <VehicleRegistrationBook />.</label>",
+      "askVendorDeedOfSalePhotoOrPDF_singleVendor": "<label>Ask the vendor for a photo or <PDFAbbr /> of one of the <DeedsOfSale /> to verify that all the details are correct. This verification is crucial. In case there is any mistake, the <NLTAAbbr /> will ask for amendments to be made to the <DeedsOfSale />, then to come back later.</label>",
+      "askVendorDeedOfSalePhotoOrPDF_multipleVendors": "<label>Ask the vendors for a photo or <PDFAbbr /> of one of the <DeedsOfSale /> to verify that all the details are correct. This verification is crucial. In case there is any mistake, the <NLTAAbbr /> will ask for amendments to be made to the <DeedsOfSale />, then to come back later.</label>",
+      "askVendorAuthorizationLetterPhotoOrPDF_singleVendor": "<label>Ask the vendor for a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. This verification is also important to avoid unnecessary back and forth.</label>",
+      "askVendorAuthorizationLetterPhotoOrPDF_multipleVendors": "<label>Ask the vendors for a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. This verification is also important to avoid unnecessary back and forth.</label>",
+      "askVendorPurchaserDelegateAuthorizationLetterPhotoOrPDF_singleVendor": "<label>Ask the vendor for a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. Make sure <em> your delegate is specified as the purchaser</em>. This verification is also important to avoid unnecessary back and forth.</label>",
+      "askVendorPurchaserDelegateAuthorizationLetterPhotoOrPDF_multipleVendors": "<label>Ask the vendors for a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. Make sure <em> your delegate is specified as the purchaser</em>. This verification is also important to avoid unnecessary back and forth.</label>",
+      "fillAndCheckDeedsOfSale": "<label>You can use our <DeedOfSaleImportantLink>document generator</DeedOfSaleImportantLink> to generate the <DeedOfSale />. Alternatively, you can find a template of the <DeedOfSale /> on <GovtDeedOfSaleLink><NLTAAbbr />'s website</GovtDeedOfSaleLink>. Make sure that all 3 <DeedsOfSale /> are correctly filled, i.e. no typos. Do not sign any of the <DeedsOfSale /> yet.</label>",
+      "fillAndCheckAuthorizationLetter": "<label>You can use our <AuthorizationLetterImportantLink>document generator</AuthorizationLetterImportantLink> to generate the authorization letter. Alternatively, you can find a template of the authorization letter on <GovtAuthorizationLetterLink><NLTAAbbr />'s website</GovtAuthorizationLetterLink>. Make sure that the authorization letter is correctly filled, i.e. no typos. Do not sign the authorization letter yet.</label>",
+      "fillAndCheckPurchaserDelegateAuthorizationLetter_singlePurchaser": "<label>You can use our <AuthorizationLetterImportantLink>document generator</AuthorizationLetterImportantLink> to generate the authorization letter. Alternatively, you can find a template of the authorization letter on <GovtAuthorizationLetterLink><NLTAAbbr />'s website</GovtAuthorizationLetterLink>. Make sure that <em> your delegate is specified as the purchaser</em> and the authorization letter is correctly filled, i.e. no typos. Do not sign the authorization letter yet.</label>",
+      "fillAndCheckPurchaserDelegateAuthorizationLetter_multiplePurchasers": "<label>You can use our <AuthorizationLetterImportantLink>document generator</AuthorizationLetterImportantLink> to generate the authorization letter. Alternatively, you can find a template of the authorization letter on <GovtAuthorizationLetterLink><NLTAAbbr />'s website</GovtAuthorizationLetterLink>. Make sure that <em> your delegate is specified as the purchaser</em> and the authorization letter is correctly filled, i.e. no typos. Do not sign the authorization letter yet.</label>",
+      "sendInfoPhotosToVendor_singleVendor_singlePurchaser": "<label>Send the vendor:<ul><li>a photo of your <ProofOfIdentity /></li><li>a photo of the address displayed on your <ProofOfAddress /></li></ul></label>",
+      "sendInfoPhotosToVendor_singleVendor_multiplePurchasers": "<label>Send the vendor:<ul><li>a photo of each purchaser's <ProofOfIdentity /></li><li>a photo of the address displayed on each purchaser's <ProofOfAddress /></li></ul></label>",
+      "sendInfoPhotosToVendor_multipleVendors_singlePurchaser": "<label>Send the vendors:<ul><li>a photo of your <ProofOfIdentity /></li><li>a photo of the address displayed on your <ProofOfAddress /></li></ul></label>",
+      "sendInfoPhotosToVendor_multipleVendors_multiplePurchasers": "<label>Send the vendors:<ul><li>a photo of each purchaser's <ProofOfIdentity /></li><li>a photo of the address displayed on each purchaser's <ProofOfAddress /></li></ul></label>",
+      "sendPurchaserAndPurchaserDelegateInfoPhotosToVendor_singleVendor": "<label>Send the vendor:<ul><li>a photo of your <ProofOfIdentity /></li><li>a photo of your delegate's <ProofOfIdentity /></li><li>a photo of the address displayed on your <ProofOfAddress /></li></ul></label>",
+      "sendPurchaserAndPurchaserDelegateInfoPhotosToVendor_multipleVendors": "<label>Send the vendors:<ul><li>a photo of your <ProofOfIdentity /></li><li>a photo of your delegate's <ProofOfIdentity /></li><li>a photo of the address displayed on your <ProofOfAddress /></li></ul></label>",
+      "sendDeedOfSalePhotoOrPDFToVendor_singleVendor": "<label>Send the vendor a photo or <PDFAbbr /> of one of the <DeedsOfSale /> to verify that all the details are correct. This verification is crucial. In case there is any mistake, the <NLTAAbbr /> will ask for amendments to be made to the <DeedsOfSale />, then to come back later.</label>",
+      "sendDeedOfSalePhotoOrPDFToVendor_multipleVendors": "<label>Send the vendors a photo or <PDFAbbr /> of one of the <DeedsOfSale /> to verify that all the details are correct. This verification is crucial. In case there is any mistake, the <NLTAAbbr /> will ask for amendments to be made to the <DeedsOfSale />, then to come back later.</label>",
+      "sendAuthorizationLetterPhotoOrPDFToVendor_singleVendor": "<label>Send the vendor a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. This verification is also important to avoid unnecessary back and forth.</label>",
+      "sendAuthorizationLetterPhotoOrPDFToVendor_multipleVendors": "<label>Send the vendors a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. This verification is also important to avoid unnecessary back and forth.</label>"
+    },
+    "step1": "<label>How many vendors and purchasers are there? If there are multiple purchasers, you need to make sure to <NLTAPhone>call the <NLTAAbbr /></NLTAPhone> to check whether it is possible to have multiple purchasers in your case.</label>",
+    "step2": "$t(preparation.step2_{{numOfPurchasers}})",
+    "step2_singlePurchaser": "<label>Decide with the vendor about who will prepare the <DeedsOfSale /> and/or authorization letter (to issue the <AdministrativeStatusCertificate />).</label>",
+    "step2_multiplePurchasers": "<label>Decide with the vendors about who will prepare the <DeedsOfSale /> and/or authorization letter (to issue the <AdministrativeStatusCertificate />).</label>",
+    "step3": "$t(preparation.step3_{{numOfVendors}})",
+    "step3_singleVendor": "<label>Decide with the vendor about who will go to the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. It's advised (not compulsory) that both the vendor and you go to the <NLTAAbbr /> to issue this document as it doesn't require an authorization letter and nobody has to trust any stranger with their <ProofOfIdentity /> and you can exchange <DeedsOfSale /> on the spot.</label>",
+    "step3_multipleVendors": "<label>Decide with the vendors about who will go to the <NLTAAbbr /> to issue the <AdministrativeStatusCertificate />. It's advised (not compulsory) that all vendors and you go to the <NLTAAbbr /> to issue this document as it doesn't require an authorization letter and nobody has to trust any stranger with their <ProofOfIdentity /> and you can exchange <DeedsOfSale /> on the spot.</label>",
+    "conditionalInstructions": {
+      "issuedByVendor": {
+        "preparedByVendor": {
+          "step1": "$t(preparation.commonSteps.sendInfoPhotosToVendor_{{numOfVendors}}_{{numOfPurchasers}})",
+          "step2": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step4": "$t(preparation.commonSteps.askVendorDeedOfSalePhotoOrPDF_{{numOfVendors}})"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.fillAndCheckDeedsOfSale)",
+          "step4": "$t(preparation.commonSteps.sendInfoPhotosToVendor_{{numOfVendors}}_{{numOfPurchasers}})",
+          "step5": "$t(preparation.commonSteps.sendDeedOfSalePhotoOrPDFToVendor_{{numOfVendors}})"
+        }
+      },
+      "issuedByPurchaser": {
+        "preparedByVendor": {
+          "step1": "$t(preparation.commonSteps.sendInfoPhotosToVendor_{{numOfVendors}}_{{numOfPurchasers}})",
+          "step2": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step4": "$t(preparation.commonSteps.askVendorDeedOfSalePhotoOrPDF_{{numOfVendors}})",
+          "step5": "$t(preparation.commonSteps.askVendorAuthorizationLetterPhotoOrPDF_{{numOfVendors}})"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.fillAndCheckDeedsOfSale)",
+          "step4": "$t(preparation.commonSteps.fillAndCheckAuthorizationLetter)",
+          "step5": "$t(preparation.commonSteps.sendInfoPhotosToVendor_{{numOfVendors}}_{{numOfPurchasers}})",
+          "step6": "$t(preparation.commonSteps.sendDeedOfSalePhotoOrPDFToVendor_{{numOfVendors}})",
+          "step7": "$t(preparation.commonSteps.sendAuthorizationLetterPhotoOrPDFToVendor_{{numOfVendors}})"
+        }
+      },
+      "issuedByVendorAndPurchaser": {
+        "preparedByVendor": {
+          "step1": "$t(preparation.commonSteps.sendInfoPhotosToVendor_{{numOfVendors}}_{{numOfPurchasers}})",
+          "step2": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step4": "$t(preparation.commonSteps.askVendorDeedOfSalePhotoOrPDF_{{numOfVendors}})"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.fillAndCheckDeedsOfSale)",
+          "step4": "$t(preparation.commonSteps.sendInfoPhotosToVendor_{{numOfVendors}}_{{numOfPurchasers}})",
+          "step5": "$t(preparation.commonSteps.sendDeedOfSalePhotoOrPDFToVendor_{{numOfVendors}})"
+        }
+      },
+      "issuedByVendorDelegate": {
+        "preparedByVendor": {
+          "step1": "$t(preparation.commonSteps.sendInfoPhotosToVendor_{{numOfVendors}}_{{numOfPurchasers}})",
+          "step2": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step4": "$t(preparation.commonSteps.askVendorDeedOfSalePhotoOrPDF_{{numOfVendors}})"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.fillAndCheckDeedsOfSale)",
+          "step4": "$t(preparation.commonSteps.sendInfoPhotosToVendor_{{numOfVendors}}_{{numOfPurchasers}})",
+          "step5": "$t(preparation.commonSteps.sendDeedOfSalePhotoOrPDFToVendor_{{numOfVendors}})"
+        }
+      },
+      "issuedByPurchaserDelegate": {
+        "preparedByVendor": {
+          "step1": "$t(preparation.commonSteps.sendPurchaserAndPurchaserDelegateInfoPhotosToVendor_{{numOfVendors}})",
+          "step2": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step4": "$t(preparation.commonSteps.askVendorDeedOfSalePhotoOrPDF_{{numOfVendors}})",
+          "step5": "$t(preparation.commonSteps.askVendorPurchaserDelegateAuthorizationLetterPhotoOrPDF_{{numOfVendors}})"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(preparation.commonSteps.askPurchaserDelegateProofOfIdentity)",
+          "step2": "$t(preparation.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step3": "$t(preparation.commonSteps.askVendorVehicleRegistrationBookPhoto_{{numOfVendors}})",
+          "step4": "$t(preparation.commonSteps.fillAndCheckDeedsOfSale)",
+          "step5": "$t(preparation.commonSteps.fillAndCheckPurchaserDelegateAuthorizationLetter_{{numOfPurchasers}})",
+          "step6": "$t(preparation.commonSteps.sendPurchaserAndPurchaserDelegateInfoPhotosToVendor_{{numOfVendors}})",
+          "step7": "$t(preparation.commonSteps.sendDeedOfSalePhotoOrPDFToVendor_{{numOfVendors}})",
+          "step8": "$t(preparation.commonSteps.sendAuthorizationLetterPhotoOrPDFToVendor_{{numOfVendors}})"
+        }
+      }
+    },
+    "lastStep": "<label>How will you pay for the vehicle?</label>"
+  },
+  "payment": {
+    "title": "<h2>Pay for the vehicle</h2>",
+    "description": "$t(payment.description_{{numOfVendors}}_{{numOfPurchasers}})",
+    "description_singleVendor_singlePurchaser": "<p>The vendor and you need to agree on a location to meet up so they can pay you and sign the documents.</p>",
+    "description_singleVendor_multiplePurchasers": "<p>The vendor and purchasers need to agree on a location to meet up so they can pay you and sign the documents.</p>",
+    "description_multipleVendors_singlePurchaser": "<p>The vendors and you need to agree on a location to meet up so payment can be effected and documents signed.</p>",
+    "description_multipleVendors_multiplePurchasers": "<p>The vendors and purchasers need to agree on a location to meet up so payment can be effected and documents signed.</p>",
+    "commonSteps": {
+      "askVendorProofOfIdentity_singleVendor": "<label>Ask the vendor to make sure to bring their original <ProofOfIdentity />.</label>",
+      "askVendorProofOfIdentity_multipleVendors": "<label>Ask the vendors to each make sure to bring their original <ProofOfIdentity />.</label>",
+      "askVendorVehicleRegistrationBook_singleVendor": "<label>Ask the vendor to make sure to bring the original <VehicleRegistrationBook />.</label>",
+      "askVendorVehicleRegistrationBook_multipleVendors": "<label>Ask the vendors to make sure to bring the original <VehicleRegistrationBook />.</label>",
+      "askVendorFitnessCopy_singleVendor": "<label>Ask the vendor to make sure to bring the vehicle's original fitness vignette copy (required for the next fitness test).</label>",
+      "askVendorFitnessCopy_multipleVendors": "<label>Ask the vendors to make sure to bring the vehicle's original fitness vignette copy (required for the next fitness test).</label>",
+      "askVendorDeedsOfSale_singleVendor": "<label>Ask the vendor to make sure to bring the 3 filled <DeedsOfSale />.</label>",
+      "askVendorDeedsOfSale_multipleVendors": "<label>Ask the vendors to make sure to bring the 3 filled <DeedsOfSale />.</label>",
+      "askVendorPurchaserAuthorizationLetter_singleVendor": "<label>Ask the vendor to make sure to bring the filled authorization letter.</label>",
+      "askVendorPurchaserAuthorizationLetter_multipleVendors": "<label>Ask the vendors to make sure to bring the filled authorization letter.</label>",
+      "askVendorPurchaserDelegateAuthorizationLetter_singleVendor": "<label>Ask the vendor to make sure to bring the filled authorization letter.</label>",
+      "askVendorPurchaserDelegateAuthorizationLetter_multipleVendors": "<label>Ask the vendors to make sure to bring the filled authorization letter.</label>",
+      "bringProofOfIdentity_singlePurchaser": "<label>Make sure to bring your original <ProofOfIdentity />.</label>",
+      "bringProofOfIdentity_multiplePurchasers": "<label>Make sure that all purchasers bring their original <ProofOfIdentity />.</label>",
+      "bringDeedsOfSale": "<label>Make sure to bring the 3 filled <DeedsOfSale />.</label>",
+      "bringPurchaserAuthorizationLetter": "<label>Make sure to bring the filled authorization letter.</label>",
+      "bringPurchaserDelegateAuthorizationLetter": "<label>Make sure to bring the filled authorization letter.</label>",
+      "verifyDeedsOfSale": "<label>To avoid any unnecessary hassle later, verify all details on the <DeedsOfSale /> again as you have most documents in hand.</label>",
+      "verifyDeedsOfSaleAndPurchaserAuthorizationLetter": "<label>To avoid any unnecessary hassle later, verify all details on the <DeedsOfSale /> and authorization letter again as you have most documents in hand.</label>",
+      "verifyDeedsOfSaleAndPurchaserDelegateAuthorizationLetter": "<label>To avoid any unnecessary hassle later, verify all details on the <DeedsOfSale /> and authorization letter again as you have most documents in hand. <em>Your delegate needs to be specified as the purchaser ONLY ON THE AUTHORIZATION LETTER</em>.</label>",
+      "keepVendorProofOfIdentity_singleVendor": "<label>Keep the vendor's original <ProofOfIdentity />.</label>",
+      "keepVendorProofOfIdentity_multipleVendors": "<label>Keep each vendor's original <ProofOfIdentity />.</label>",
+      "keepProofOfIdentity_singlePurchaser": "<label>Keep your original <ProofOfIdentity />.</label>",
+      "keepProofOfIdentity_multiplePurchasers": "<label>Keep each purchaser's original <ProofOfIdentity />.</label>",
+      "keepVehicleRegistrationBook": "<label>Keep the original <VehicleRegistrationBook />.</label>",
+      "keepFitnessCopy": "<label>Keep the vehicle's original fitness vignette copy.</label>",
+      "keep1DeedOfSale": "<label>Keep 1 signed <DeedOfSale />.</label>",
+      "keep2DeedsOfSale": "<label>Keep 2 signed <DeedsOfSale />.</label>",
+      "keepAuthorizationLetter": "<label>Keep the signed authorization letter.</label>",
+      "vendorKeepsProofOfIdentity_singleVendor": "<label>The vendor needs to keep their original <ProofOfIdentity />.</label>",
+      "vendorKeepsProofOfIdentity_multipleVendors": "<label>The vendors need to keep their original <ProofOfIdentity />.</label>",
+      "vendorKeepsVehicleRegistrationBook_singleVendor": "<label>The vendor needs to keep the original <VehicleRegistrationBook />.</label>",
+      "vendorKeepsVehicleRegistrationBook_multipleVendors": "<label>The vendors need to keep the original <VehicleRegistrationBook />.</label>",
+      "giveVendor1DeedOfSale_singleVendor": "<label>Hand 1 signed <DeedOfSale /> to the vendor.</label>",
+      "giveVendor1DeedOfSale_multipleVendors": "<label>Hand 1 signed <DeedOfSale /> to the vendors.</label>",
+      "giveVendor2DeedsOfSale_singleVendor": "<label>Hand 2 signed <DeedsOfSale /> to the vendor.</label>",
+      "giveVendor2DeedsOfSale_multipleVendors": "<label>Hand 2 signed <DeedsOfSale /> to the vendors.</label>",
+      "signatureMatch": "Make sure the signatures match the ones on the respective party's <ProofOfIdentity />.",
+      "fundsTransferredOrNot_singleVendor": "The bank will then inform the vendor whether the funds have been transferred to their account.",
+      "fundsTransferredOrNot_multipleVendors": "The bank will then inform the vendors whether the funds have been transferred to their account.",
+      "noWorriesAboutFraud_singleVendor": "This way, the vendor doesn't need to worry about making sure they have been handed the exact amount, or anything like fake notes or other types of fraud.",
+      "noWorriesAboutFraud_multipleVendors": "This way, the vendors don't need to worry about making sure they have been handed the exact amount, or anything like fake notes or other types of fraud.",
+      "bankAsksDeedOfSale_singleVendor": "The bank may ask the vendor for a signed <DeedOfSale /> as proof of sale.",
+      "bankAsksDeedOfSale_multipleVendors": "The bank may ask the vendors for a signed <DeedOfSale /> as proof of sale.",
+      "cashPaymentDeedSignature_singleVendor_singlePurchaser": "<label>Once the funds have been received in the agreed bank account, the vendor and you can sign the other 2 <DeedsOfSale />. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedSignature_singleVendor_multiplePurchasers": "<label>Once the funds have been received in the agreed bank account, the vendor and purchasers can sign the other 2 <DeedsOfSale />. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedSignature_multipleVendors_singlePurchaser": "<label>Once the funds have been received in the agreed bank account, the vendors and you can sign the other 2 <DeedsOfSale />. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedSignature_multipleVendors_multiplePurchasers": "<label>Once the funds have been received in the agreed bank account, the vendors and purchasers can sign the other 2 <DeedsOfSale />. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndPurchaserLetterSignature_singleVendor_singlePurchaser": "<label>Once the funds have been received in the agreed bank account, the vendor and you can sign the other 2 <DeedsOfSale /> and the authorization letter. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndPurchaserLetterSignature_singleVendor_multiplePurchasers": "<label>Once the funds have been received in the agreed bank account, the vendor and purchasers can sign the other 2 <DeedsOfSale /> and the authorization letter. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndPurchaserLetterSignature_multipleVendors_singlePurchaser": "<label>Once the funds have been received in the agreed bank account, the vendors and you can sign the other 2 <DeedsOfSale /> and the authorization letter. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndPurchaserLetterSignature_multipleVendors_multiplePurchasers": "<label>Once the funds have been received in the agreed bank account, the vendors and purchasers can sign the other 2 <DeedsOfSale /> and the authorization letter. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndPurchaserDelegateLetterSignature_singleVendor_singlePurchaser": "<label>Once the funds have been received in the agreed bank account, the vendor and you can sign the other 2 <DeedsOfSale />. Only the vendor needs to sign the authorization letter at this moment as your delegate will need to sign it later. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndPurchaserDelegateLetterSignature_singleVendor_multiplePurchasers": "<label>Once the funds have been received in the agreed bank account, the vendor and purchasers can sign the other 2 <DeedsOfSale />. Only the vendor needs to sign the authorization letter at this moment as your delegate will need to sign it later. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndPurchaserDelegateLetterSignature_multipleVendors_singlePurchaser": "<label>Once the funds have been received in the agreed bank account, the vendors and you can sign the other 2 <DeedsOfSale />. Only vendors need to sign the authorization letter at this moment as your delegate will need to sign it later. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndPurchaserDelegateLetterSignature_multipleVendors_multiplePurchasers": "<label>Once the funds have been received in the agreed bank account, the vendors and purchasers can sign the other 2 <DeedsOfSale />. Only vendors need to sign the authorization letter at this moment as your delegate will need to sign it later. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedSignature_singleVendor_singlePurchaser": "<label>Once you have effected payment, <em>only then</em>, both of you need to sign the 3 <DeedsOfSale />. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedSignature_singleVendor_multiplePurchasers": "<label>Once you have effected payment, <em>only then</em>, the vendor and purchasers need to sign the 3 <DeedsOfSale />. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedSignature_multipleVendors_singlePurchaser": "<label>Once you have effected payment, <em>only then</em>, the vendors and you need to sign the 3 <DeedsOfSale />. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedSignature_multipleVendors_multiplePurchasers": "<label>Once you have effected payment, <em>only then</em>, the vendors and purchasers need to sign the 3 <DeedsOfSale />. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndPurchaserLetterSignature_singleVendor_singlePurchaser": "<label>Once you have effected payment, <em>only then</em>, both of you need to sign the 3 <DeedsOfSale /> and the authorization letter. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndPurchaserLetterSignature_singleVendor_multiplePurchasers": "<label>Once you have effected payment, <em>only then</em>, the vendor and purchasers need to sign the 3 <DeedsOfSale /> and the authorization letter. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndPurchaserLetterSignature_multipleVendors_singlePurchaser": "<label>Once you have effected payment, <em>only then</em>, the vendors and you need to sign the 3 <DeedsOfSale /> and the authorization letter. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndPurchaserLetterSignature_multipleVendors_multiplePurchasers": "<label>Once you have effected payment, <em>only then</em>, the vendors and purchasers need to sign the 3 <DeedsOfSale /> and the authorization letter. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndPurchaserDelegateLetterSignature_singleVendor_singlePurchaser": "<label>Once you have effected payment, <em>only then</em>, both of you need to sign the 3 <DeedsOfSale />. Only the vendor needs to sign the authorization letter at this moment as your delegate will need to sign it later. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndPurchaserDelegateLetterSignature_singleVendor_multiplePurchasers": "<label>Once you have effected payment, <em>only then</em>, the vendor and purchasers need to sign the 3 <DeedsOfSale />. Only the vendor needs to sign the authorization letter at this moment as your delegate will need to sign it later. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndPurchaserDelegateLetterSignature_multipleVendors_singlePurchaser": "<label>Once you have effected payment, <em>only then</em>, the vendors and you need to sign the 3 <DeedsOfSale />. Only vendors need to sign the authorization letter at this moment as your delegate will need to sign it later. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndPurchaserDelegateLetterSignature_multipleVendors_multiplePurchasers": "<label>Once you have effected payment, <em>only then</em>, the vendors and purchasers need to sign the 3 <DeedsOfSale />. Only vendors need to sign the authorization letter at this moment as your delegate will need to sign it later. $t(payment.commonSteps.signatureMatch)</label>"
+    },
+    "step1": "$t(payment.step1_{{numOfVendors}})",
+    "step1_singleVendor": "<label>Make sure the vendor has removed all of their personal belongings from the vehicle.</label>",
+    "step1_multipleVendors": "<label>Make sure the vendors have removed all of their personal belongings from the vehicle.</label>",
+    "conditionalInstructions1": {
+      "issuedByVendor": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step6": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        }
+      },
+      "issuedByPurchaser": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.askVendorPurchaserAuthorizationLetter_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step7": "$t(payment.commonSteps.verifyDeedsOfSaleAndPurchaserAuthorizationLetter)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step6": "$t(payment.commonSteps.bringPurchaserAuthorizationLetter)",
+          "step7": "$t(payment.commonSteps.verifyDeedsOfSaleAndPurchaserAuthorizationLetter)"
+        }
+      },
+      "issuedByVendorAndPurchaser": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step6": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        }
+      },
+      "issuedByVendorDelegate": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step6": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        }
+      },
+      "issuedByPurchaserDelegate": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.askVendorDeedsOfSale_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.askVendorPurchaserDelegateAuthorizationLetter_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step7": "$t(payment.commonSteps.verifyDeedsOfSaleAndPurchaserDelegateAuthorizationLetter)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.askVendorProofOfIdentity_{{numOfVendors}})",
+          "step2": "$t(payment.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.askVendorFitnessCopy_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step6": "$t(payment.commonSteps.bringPurchaserDelegateAuthorizationLetter)",
+          "step7": "$t(payment.commonSteps.verifyDeedsOfSaleAndPurchaserDelegateAuthorizationLetter)"
+        }
+      }
+    },
+    "conditionalInstructions2": {
+      "paidInCash": {
+        "cashDeposit": "$t(payment.conditionalInstructions2.paidInCash.cashDeposit_{{numOfVendors}}_{{numOfPurchasers}})",
+        "cashDeposit_singleVendor_singlePurchaser": "<p>Ask the vendor to meet you at the bank to deposit the money directly in the agreed bank account. $t(payment.commonSteps.noWorriesAboutFraud_{{numOfVendors}}) $t(payment.commonSteps.bankAsksDeedOfSale_{{numOfVendors}}) Both the vendor and you need to sign it at the counter, <em>not before that</em>. $t(payment.commonSteps.signatureMatch) $t(payment.commonSteps.fundsTransferredOrNot_{{numOfVendors}})</p>",
+        "cashDeposit_singleVendor_multiplePurchasers": "<p>Ask the vendor and other purchasers to meet you at the bank to deposit the money directly in the agreed bank account. $t(payment.commonSteps.noWorriesAboutFraud_{{numOfVendors}}) $t(payment.commonSteps.bankAsksDeedOfSale_{{numOfVendors}}) The vendor and purchasers need to sign it at the counter, <em>not before that</em>. $t(payment.commonSteps.signatureMatch) $t(payment.commonSteps.fundsTransferredOrNot_{{numOfVendors}})</p>",
+        "cashDeposit_multipleVendors_singlePurchaser": "<p>Ask the vendors to meet you at the bank to deposit the money directly in the agreed bank account. $t(payment.commonSteps.noWorriesAboutFraud_{{numOfVendors}}) $t(payment.commonSteps.bankAsksDeedOfSale_{{numOfVendors}}) The vendors and you need to sign it at the counter, <em>not before that</em>. $t(payment.commonSteps.signatureMatch) $t(payment.commonSteps.fundsTransferredOrNot_{{numOfVendors}})</p>",
+        "cashDeposit_multipleVendors_multiplePurchasers": "<p>Ask the vendors and the other purchasers to meet you at the bank to deposit the money directly in the agreed bank account. $t(payment.commonSteps.noWorriesAboutFraud_{{numOfVendors}}) $t(payment.commonSteps.bankAsksDeedOfSale_{{numOfVendors}}) The vendors and purchasers need to sign it at the counter, <em>not before that</em>. $t(payment.commonSteps.signatureMatch) $t(payment.commonSteps.fundsTransferredOrNot_{{numOfVendors}})</p>",
+        "issuedByVendor": {
+          "step1": "$t(payment.commonSteps.cashPaymentDeedSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        },
+        "issuedByPurchaser": {
+          "step1": "$t(payment.commonSteps.cashPaymentDeedAndPurchaserLetterSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        },
+        "issuedByVendorAndPurchaser": {
+          "step1": "$t(payment.commonSteps.cashPaymentDeedSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        },
+        "issuedByVendorDelegate": {
+          "step1": "$t(payment.commonSteps.cashPaymentDeedSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        },
+        "issuedByPurchaserDelegate": {
+          "step1": "$t(payment.commonSteps.cashPaymentDeedAndPurchaserDelegateLetterSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        }
+      },
+      "notPaidInCash": {
+        "issuedByVendor": {
+          "step1": "$t(payment.commonSteps.nonCashPaymentDeedSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        },
+        "issuedByPurchaser": {
+          "step1": "$t(payment.commonSteps.nonCashPaymentDeedAndPurchaserLetterSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        },
+        "issuedByVendorAndPurchaser": {
+          "step1": "$t(payment.commonSteps.nonCashPaymentDeedSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        },
+        "issuedByVendorDelegate": {
+          "step1": "$t(payment.commonSteps.nonCashPaymentDeedSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        },
+        "issuedByPurchaserDelegate": {
+          "step1": "$t(payment.commonSteps.nonCashPaymentDeedAndPurchaserDelegateLetterSignature_{{numOfVendors}}_{{numOfPurchasers}})"
+        }
+      }
+    },
+    "conditionalInstructions3": {
+      "issuedByVendor": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor2DeedsOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.keepFitnessCopy)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor2DeedsOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.keepFitnessCopy)"
+        }
+      },
+      "issuedByPurchaser": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor1DeedOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.keepAuthorizationLetter)",
+          "step4": "$t(payment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor1DeedOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.keepAuthorizationLetter)",
+          "step4": "$t(payment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)"
+        }
+      },
+      "issuedByVendorAndPurchaser": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor2DeedsOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.keepFitnessCopy)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor2DeedsOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.keepFitnessCopy)"
+        }
+      },
+      "issuedByVendorDelegate": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor2DeedsOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.keepFitnessCopy)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor2DeedsOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.vendorKeepsProofOfIdentity_{{numOfVendors}})",
+          "step4": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.vendorKeepsVehicleRegistrationBook_{{numOfVendors}})",
+          "step6": "$t(payment.commonSteps.keepFitnessCopy)"
+        }
+      },
+      "issuedByPurchaserDelegate": {
+        "preparedByVendor": {
+          "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor1DeedOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.keepAuthorizationLetter)",
+          "step4": "$t(payment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
+          "step2": "$t(payment.commonSteps.giveVendor1DeedOfSale_{{numOfVendors}})",
+          "step3": "$t(payment.commonSteps.keepAuthorizationLetter)",
+          "step4": "$t(payment.commonSteps.keepVendorProofOfIdentity_{{numOfVendors}})",
+          "step5": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
+          "step7": "$t(payment.commonSteps.keepFitnessCopy)"
+        }
+      }
+    },
+    "leaveWithVehicle": "<p>At this point, you can leave with the vehicle. Make sure you have the following before driving the vehicle:</p><ul><li>the vehicle's spare key</li><li>your driver's permit (if anyone else will be driving the vehicle back, they need to have their driving permit)</li></ul>"
+  },
+  "administrativeStatusCertificate": {
+    "title": "<h2>Issue a <AdministrativeStatusCertificate /></h2>",
+    "description": "<p>The purpose of this document is to certify that the vehicle being sold is not legally tied to anything that prevents its sale, e.g. theft, loan, opposition of sale, etc. This document can be issued at <NLTAContactLink><NLTAAbbr />'s headquarters or sub offices</NLTAContactLink>.</p>",
+    "commonSteps": {
+      "bring1DeedOfSale": "<label>Make sure to bring your signed <DeedsOfSale />.</label>",
+      "bring2DeedsOfSale": "<label>Make sure to bring 2 signed <DeedsOfSale />.</label>",
+      "bringDeedOfSaleToMeeting_singleVendor": "<p>Before meeting with the vendor, make sure to bring your signed <DeedOfSale />.</p>",
+      "bringDeedOfSaleToMeeting_multipleVendors": "<p>Before meeting with the vendors, make sure to bring your signed <DeedOfSale />.</p>",
+      "bringAuthorizationLetter": "<label>Make sure to bring the signed authorization letter.</label>",
+      "bringProofOfIdentity_singlePurchaser": "<label>Make sure to bring your original <ProofOfIdentity />.</label>",
+      "bringProofOfIdentity_multiplePurchasers": "<label>Make sure to bring each purchaser's original <ProofOfIdentity />.</label>",
+      "bringVendorProofOfIdentity_singleVendor": "<label>Make sure to bring the vendor's original <ProofOfIdentity />.</label>",
+      "bringVendorProofOfIdentity_multipleVendors": "<label>Make sure to bring each vendor's original <ProofOfIdentity />.</label>",
+      "bringVehicleRegistrationBook": "<label>Make sure to bring the original <VehicleRegistrationBook />.</label>",
+      "bringRs50": "<label>Make sure to bring Rs50 in cash.</label>",
+      "askVendorToBring2DeedsOfSale_singleVendor": "<label>Ask the vendor to make sure to bring 2 signed <DeedsOfSale />.</label>",
+      "askVendorToBring2DeedsOfSale_multipleVendors": "<label>Ask the vendors to make sure to bring 2 signed <DeedsOfSale />.</label>",
+      "askVendorToBringProofOfIdentity_singleVendor_vendorNameProofRequired": "<label>Ask the vendor to make sure to bring either:<ul><li>a registered proof of identity issued by an attorney, or</li><li>the original deed of sale at the time they purchased the vehicle</li></ul></label>",
+      "askVendorToBringProofOfIdentity_singleVendor_vendorNameProofNotRequired": "<label>Ask the vendor to make sure to bring their original <ProofOfIdentity />.</label>",
+      "askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofRequired": "<label>Ask the vendors to each make sure to bring their original <ProofOfIdentity />. Regarding each vendor whose name on the <VehicleRegistrationBook /> doesn't match the one on their <ProofOfIdentity />, ask the vendors to bring either:<ul><li>a registered proof of identity issued by an attorney, or</li><li>the original deed of sale at the time the vendors purchased the vehicle</li></ul></label>",
+      "askVendorToBringProofOfIdentity_multipleVendors_vendorNameProofNotRequired": "<label>Ask the vendor to each make sure to bring their original <ProofOfIdentity />.</label>",
+      "askVendorToBringVehicleRegistrationBook_singleVendor": "<label>Ask the vendor to make sure to bring the original <VehicleRegistrationBook />.</label>",
+      "askVendorToBringVehicleRegistrationBook_multipleVendors": "<label>Ask the vendors to make sure to bring the original <VehicleRegistrationBook />.</label>",
+      "askVendorToBringRs50_singleVendor": "<label>Ask the vendor to make sure to bring Rs50 in cash.</label>",
+      "askVendorToBringRs50_multipleVendors": "<label>Ask the vendors to make sure to bring Rs50 in cash.</label>",
+      "askVendor2StampedDeedsOfSale_singleVendor": "<label>Ask the vendor for the 2 stamped <DeedsOfSale />.</label>",
+      "askVendor2StampedDeedsOfSale_multipleVendors": "<label>Ask the vendors for the 2 stamped <DeedsOfSale />.</label>",
+      "askVendorPurchaserProofOfIdentity_singleVendor_singlePurchaser": "<label>Ask the vendor for your original <ProofOfIdentity />.</label>",
+      "askVendorPurchaserProofOfIdentity_singleVendor_multiplePurchasers": "<label>Ask the vendor for each purchaser's original <ProofOfIdentity />.</label>",
+      "askVendorPurchaserProofOfIdentity_multipleVendors_singlePurchaser": "<label>Ask the vendors for your original <ProofOfIdentity />.</label>",
+      "askVendorPurchaserProofOfIdentity_multipleVendors_multiplePurchasers": "<label>Ask the vendors for each purchaser's original <ProofOfIdentity />.</label>",
+      "askVendorVehicleRegistrationBook_singleVendor": "<label>Ask the vendor for the <VehicleRegistrationBook />.</label>",
+      "askVendorVehicleRegistrationBook_multipleVendors": "<label>Ask the vendor for the <VehicleRegistrationBook />.</label>",
+      "askVendorAdministrativeStatusCertificate_singleVendor": "<label>Ask the vendor for the <AdministrativeStatusCertificate />.</label>",
+      "askVendorAdministrativeStatusCertificate_multipleVendors": "<label>Ask the vendors for the <AdministrativeStatusCertificate />.</label>",
+      "giveDelegate2DeedsOfSale": "<label>Make sure to hand 2 signed <DeedsOfSale /> to the delegate.</label>",
+      "giveDelegateAuthorizationLetter": "<label>Make sure to hand the authorization letter to the delegate.</label>",
+      "giveDelegateVendorProofOfIdentity_singleVendor": "<label>Make sure to hand the vendor's original <ProofOfIdentity /> to the delegate.</label>",
+      "giveDelegateVendorProofOfIdentity_multipleVendors": "<label>Make sure to hand each vendor's original <ProofOfIdentity /> to the delegate.</label>",
+      "giveDelegateProofOfIdentity_singlePurchaser": "<label>Make sure to hand your original <ProofOfIdentity /> to the delegate.</label>",
+      "giveDelegateProofOfIdentity_multiplePurchasers": "<label>Make sure to hand each purchaser's original <ProofOfIdentity /> to the delegate.</label>",
+      "giveDelegateVehicleRegistrationBook": "<label>Make sure to hand the <VehicleRegistrationBook /> to the delegate.</label>",
+      "giveDelegateRs50": "<label>Make sure to hand Rs50 to the delegate.</label>",
+      "giveDelegatePowerOfAttorney": "<label>Make sure to hand original registered <PowerOfAttorney /> to your delegate.</label>",
+      "giveDelegatePowerOfAttorneyCopy": "<label>Make sure to hand a photocopy of the <PowerOfAttorney /> to your delegate.</label>",
+      "delegateBringsProofOfIdentity": "<label>The delegate will need to bring their original <ProofOfIdentity />.</label>",
+      "giveVendorDeedOfSale_singleVendor": "<label>Make sure to hand your signed <DeedOfSale /> to the vendor.</label>",
+      "giveVendorDeedOfSale_multipleVendors": "<label>Make sure to hand your signed <DeedOfSale /> to the vendors.</label>",
+      "giveVendorTheirProofOfIdentityBack_singleVendor": "<p>Make sure to hand the vendor their original <ProofOfIdentity />.</p>",
+      "giveVendorTheirProofOfIdentityBack_multipleVendors": "<p>Make sure to hand each vendor their original <ProofOfIdentity />.</p>",
+      "vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofRequired": "<label>The vendor needs to keep their registered proof of identity issued by an attorney or the original deed of sale at the time they purchased the vehicle.</label>",
+      "vendorKeepsTheirProofOfIdentity_singleVendor_vendorNameProofNotRequired": "<label>The vendor needs to keep their original <ProofOfIdentity />.</label>",
+      "vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofRequired": "<label>Each vendor needs to keep their original <ProofOfIdentity /> or registered proof of identity issued by an attorney and/or the original deed of sale at the time they purchased the vehicle.</label>",
+      "vendorKeepsTheirProofOfIdentity_multipleVendors_vendorNameProofNotRequired": "<label>Each vendor needs to keep their original <ProofOfIdentity />.</label>",
+      "vendorKeepsReceipt_singleVendor": "<label>The vendor needs to keep the <AdministrativeStatusCertificate />'s payment receipt.</label>",
+      "vendorKeepsReceipt_multipleVendors": "<label>The vendor needs to keep the <AdministrativeStatusCertificate />'s payment receipt.</label>"
+    },
+    "commonItems": {
+      "stampedDeedsOfSale": "<li>The 2 signed <DeedsOfSale />, stamped on the back.</li>",
+      "authorizationLetter": "<li>The authorization letter.</li>",
+      "vendorProofOfIdentity_singleVendor_vendorNameProofRequired": "<li>The vendor's registered proof of identity issued by an attorney or the original deed of sale at the time they purchased the vehicle.</li>",
+      "vendorProofOfIdentity_singleVendor_vendorNameProofNotRequired": "<li>The vendor's original <ProofOfIdentity />.</li>",
+      "vendorProofOfIdentity_multipleVendors_vendorNameProofRequired": "<li>Each vendor's original <ProofOfIdentity /> or registered proof of identity issued by an attorney and/or the original deed of sale at the time they purchased the vehicle..</li>",
+      "vendorProofOfIdentity_multipleVendors_vendorNameProofNotRequired": "<li>Each vendor's original <ProofOfIdentity />.</li>",
+      "proofOfIdentity_singlePurchaser": "<li>Your original <ProofOfIdentity />.</li>",
+      "proofOfIdentity_multiplePurchasers": "<li>Each purchaser's original <ProofOfIdentity />.</li>",
+      "vehicleRegistrationBook": "<li>The original <VehicleRegistrationBook />.</li>",
+      "administrativeStatusCertificate": "<li>A <AdministrativeStatusCertificate />.</li>",
+      "administrativeStatusCertificateReceipt": "<li>A receipt for the <AdministrativeStatusCertificate />'s payment.</li>"
+    },
+    "conditionalInstructions1": {
+      "issuedByPurchaser": {
+        "description": "<p>Before going to the <NLTAAbbr />, ensure the following:</p>",
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.bring2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.bringAuthorizationLetter)",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.bringVendorProofOfIdentity_{{numOfVendors}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook)",
+        "requirement6": "$t(administrativeStatusCertificate.commonSteps.bringRs50)"
+      },
+      "issuedByVendorAndPurchaser": {
+        "description": "<p>Before going to the <NLTAAbbr />, ensure the following:</p>",
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.askVendorToBring2DeedsOfSale_{{numOfVendors}})",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.askVendorToBringProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.askVendorToBringVehicleRegistrationBook_{{numOfVendors}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.askVendorToBringRs50_{{numOfVendors}})",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.bringProofOfIdentity_{{numOfPurchasers}})",
+        "requirement6": "$t(administrativeStatusCertificate.commonSteps.bring1DeedOfSale)"
+      },
+      "issuedByPurchaserDelegate": {
+        "description": "<p>You will need to have a <PowerOfAttorney /> made, along with a photocopy of it, to legally allow your delegate to issue the <AdministrativeStatusCertificate /> on your behalf. Before your delegate goes to the <NLTAAbbr /> ensure the following:</p>",
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.giveDelegate2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.giveDelegateAuthorizationLetter)",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.giveDelegateVendorProofOfIdentity_{{numOfVendors}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.giveDelegateProofOfIdentity_{{numOfPurchasers}})",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.giveDelegateVehicleRegistrationBook)",
+        "requirement6": "$t(administrativeStatusCertificate.commonSteps.giveDelegateRs50)",
+        "requirement7": "$t(administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorney)",
+        "requirement8": "$t(administrativeStatusCertificate.commonSteps.giveDelegatePowerOfAttorneyCopy)",
+        "requirement9": "$t(administrativeStatusCertificate.commonSteps.delegateBringsProofOfIdentity)"
+      }
+    },
+    "conditionalInstructions2": {
+      "issuedByPurchaser": {
+        "description": "<p>The <NLTAAbbr /> officer will hand you the following:</p>",
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.authorizationLetter)",
+        "item3": "$t(administrativeStatusCertificate.commonItems.vendorProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfPurchasers}})",
+        "item5": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item7": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)"
+      },
+      "issuedByVendorAndPurchaser": {
+        "description": "$t(administrativeStatusCertificate.conditionalInstructions2.issuedByVendorAndPurchaser.description_{{numOfVendors}})",
+        "description_singleVendor": "<p>The <NLTAAbbr /> officer will hand the vendor the following:</p>",
+        "description_multipleVendors": "<p>The <NLTAAbbr /> officer will hand the vendors the following:</p>",
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.vendorProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfPurchasers}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)"
+      }
+    },
+    "conditionalInstructions3": {
+      "issuedByVendor": {
+        "description": "$t(administrativeStatusCertificate.commonSteps.bringDeedOfSaleToMeeting_{{numOfVendors}})",
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_{{numOfVendors}})",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_{{numOfVendors}})",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_{{numOfVendors}}_{{numOfPurchasers}})",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_{{numOfVendors}})"
+      },
+      "issuedByPurchaser": {
+        "step1": "$t(administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_{{numOfVendors}})"
+      },
+      "issuedByVendorAndPurchaser": {
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_{{numOfVendors}})",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_{{numOfVendors}})",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_{{numOfVendors}}_{{numOfPurchasers}})",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_{{numOfVendors}})",
+        "step6": "$t(administrativeStatusCertificate.commonSteps.vendorKeepsTheirProofOfIdentity_{{numOfVendors}}_{{whetherVendorNameProofIsRequired}})",
+        "step7": "$t(administrativeStatusCertificate.commonSteps.vendorKeepsReceipt_{{numOfVendors}})"
+      },
+      "issuedByVendorDelegate": {
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askVendor2StampedDeedsOfSale_{{numOfVendors}})",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.giveVendorDeedOfSale_{{numOfVendors}})",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.askVendorPurchaserProofOfIdentity_{{numOfVendors}}_{{numOfPurchasers}})",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.askVendorVehicleRegistrationBook_{{numOfVendors}})",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.askVendorAdministrativeStatusCertificate_{{numOfVendors}})"
+      },
+      "issuedByPurchaserDelegate": {
+        "description": "<p>After the <AdministrativeStatusCertificate /> is issued, make sure that your delegate hands you the following:</p>",
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.vendorProofOfIdentity_{{numOfVendors}}_vendorNameProofNotRequired)",
+        "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfPurchasers}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)",
+        "step1": "$t(administrativeStatusCertificate.commonSteps.giveVendorTheirProofOfIdentityBack_{{numOfVendors}})"
+      }
+    }
+  },
+  "endingNote": "<p>At this point, all the required formalities are over.</p>"
+}
