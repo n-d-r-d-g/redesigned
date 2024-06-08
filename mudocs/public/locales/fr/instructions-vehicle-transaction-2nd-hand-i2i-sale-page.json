@@ -24,8 +24,8 @@
       "label_multipleVendors_multiplePurchasers": "Y a-t-il un lien de parenté entre l'un des vendeurs et l'un des acheteurs, par exemple père-fils et vice-versa, mari-femme et vice-versa, etc.?"
     },
     "vendorNameMatches": {
-      "label": "Votre nom affiché dans le <VehicleRegistrationBook> correspond-il à celui qui figure dans votre <ProofOfIdentity>?",
-      "label_other": "Le nom de chaque vendeur affiché dans le <VehicleRegistrationBook /> correspond-il à celui qui figure dans leur <ProofOfIdentity /> correspondante?"
+      "label": "Votre nom affiché sur le <VehicleRegistrationBook /> correspond-il à celui qui figure sur votre <ProofOfIdentity>?",
+      "label_other": "Le nom de chaque vendeur affiché sur le <VehicleRegistrationBook /> correspond-il à celui qui figure sur leur <ProofOfIdentity /> correspondante?"
     },
     "administrativeStatusCertificateIssuer": {
       "label": "<span>Qui se rendra à la <NLTAAbbr />?</span>"
@@ -626,51 +626,8 @@
       }
     }
   },
-  "informInsurance": "<p>Make sure to inform your insurance company about the sale of your vehicle so they can terminate its insurance contract.</p>",
+  "informInsurance": "<p>N'oubliez pas d'informer votre compagnie d'assurance de la vente de votre véhicule afin qu'elle puisse résilier son contrat d'assurance.</p>",
   "endingNote": "$t(endingNote_{{numOfPurchasers}})",
-  "endingNote_singlePurchaser": "<p>At this point, you're done with all the required formalities. The purchaser will need to proceed with registration, insurance and transfer of ownership.</p>",
-  "endingNote_multiplePurchasers": "<p>At this point, you're done with all the required formalities. The purchasers will need to proceed with registration, insurance and transfer of ownership.</p>",
-  "preparation2": {
-    "title": "<h2>Préparation</h2>",
-    "step1": "<label>Demandez à l'acheteur de vous envoyer une photo de sa carte d'identité ou de son passeport afin de renseigner ses coordonnées dans les actes de vente (communément appelés <FRSpan>papiers de vente</FRSpan>).</label>",
-    "step2": "<label>Assurez-vous que les 3 actes de vente sont bien remplis, c'est-à-dire qu'il n'y a aucune faute de frappe. Ne signez pas tout de suite les actes de vente.</label>",
-    "step3": "<label>Une fois rempli, vous pouvez envoyer une photo de l'un des actes de vente à l'acheteur pour vérifier que toutes ses données sont correctes. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> vous demandera d'apporter des modifications aux actes de vente, puis de revenir plus tard et d'attendre à nouveau votre tour. Vous pouvez utiliser notre <DeedOfSaleImportantLink>générateur de documents</DeedOfSaleImportantLink> pour générer l'acte de vente. Vous pouvez également trouver un template d'acte de vente sur <GovtDeedOfSaleLink><NLTAAbbr />'s website</GovtDeedOfSaleLink>.</label>"
-  },
-  "payment2": {
-    "title": "<h2>Accepter le paiement à la vente du véhicule</h2>",
-    "description": "<p>Si l'acheteur paie en espèces, demandez-lui de vous rejoindre à la banque pour déposer l'argent directement sur votre compte bancaire. Ainsi, vous n'aurez pas à vous soucier de faux billets ou d'autres types de fraude. Toutefois, la banque peut vous demander un acte de vente signé comme preuve de la vente. Les deux parties, soit l'acheteur et vous, doivent le signer au guichet, <em>pas avant</em>.</p>",
-    "step1": "<label>Quel que soit le mode de paiement, une fois que l'acheteur vous a payé, <em>alors seulement</em>, signez les 3 actes de vente.</label>",
-    "step2": "<label>Conservez un acte de vente comme preuve de la vente et remettez les 2 autres à l'acheteur.</label>",
-    "step3": "<label>Vérifiez à nouveau tous les détails des actes de vente afin d'éviter tout problème inutile par la suite.</label>",
-    "step4": "<label>Assurez-vous d'avoir retiré tous vos effets personnels du véhicule.</label>",
-    "step5": "<label>En accord avec l'acheteur, décidez qui se rendra à la <NLTAAbbr /> pour obtenir le certificat de non gage. Nous conseillons à l'acheteur et au vendeur de se procurer ce document ensemble, mais cela n'est pas toujours possible en raison d'indisponibilité. Si l'acheteur a accepté de se rendre à la <NLTAAbbr /> sans vous, vous devez:<br /><ul><li>vérifiez que votre signature sur les actes de vente correspond exactement à celle figurant sur votre carte d'identité ou votre passeport, </li><li>laisser votre carte d'identité ou votre passeport à l'acheteur, car ils lui seront demandés et </li><li>remettre à l'acheteur une lettre d'autorisation que vous pouvez générer via notre <AuthorizationLetterImportantLink>générateur de documents</AuthorizationLetterImportantLink>.</li></ul></label>",
-    "leaveWithVehicle": "<p>À ce stade, l'acheteur peut partir avec le véhicule.</p>"
-  },
-  "administrativeStatusCertificate2": {
-    "title": "<h2>Obtenir un <AdministrativeStatusCertificate /></h2>",
-    "description": "<p>Ce document certifie que le véhicule vendu n'est lié à aucune contrainte empêchant sa vente (vol, prêt, opposition à la vente, etc.).</p>",
-    "issue": "<p>Ce document peut être obtenu au <NLTAContactLink>QG ou dans les bureaux subsidiaires de la <NLTAAbbr /></NLTAContactLink>.</p>",
-    "vendorRequiredSituations": {
-      "label": "<p>Il est conseillé (mais pas obligatoire) que l'acheteur et vous soyez tous deux présents à la <NLTAAbbr /> pour l'obtention de ce document, car il ne nécessitera pas de lettre d'autorisation et il existe des circonstances particulières, énumérées ci-dessous, dans lesquelles le vendeur doit être présent à la <NLTAAbbr /> pour obtenir le certificat de non gage:</p>",
-      "situation1": "<li>Le vendeur et l'acheteur sont parentés, par exemple père-fils vice-versa, mari-femme vice-versa, etc.</li>",
-      "situation2": "<li>L'acheteur n'a pas de carte d'identité originale valide (<MNISIDCardLayoutLink>nouvelle carte d'identité</MNISIDCardLayoutLink>) ou de passeport valide.</li>",
-      "situation3": "<li>L'acheteur est mineur.</li>",
-      "situation4": "<li>Le nom du vendeur est différent de celui qui figure sur sa carte d'identité ou son passeport (le vendeur doit présenter les documents appropriés).</li>"
-    },
-    "checklist": {
-      "label": "<p>Liste de contrôle pour l'obtention du certificat de non gage:</p>",
-      "requirement1": "<label>2 actes de vente, remplis et signés par toutes les parties.</label>",
-      "requirement2": "<label>Le certificat d'immatriculation original du véhicule (communément appelé carte grise ou <ENSpan>horsepower</ENSpan>).</label>",
-      "requirement3": "<label>La carte d'identité originale ou le passeport valide du vendeur (s'il y a plusieurs vendeurs, leurs cartes d'identité originales ou leurs passeports doivent tous être présentés).</label>",
-      "requirement4": "<label>La carte d'identité originale ou le passeport valide de l'acheteur (s'il y a plusieurs acheteurs, leurs cartes d'identité originales ou leurs passeports doivent tous être présentés).</label>",
-      "requirement5": "<label>Rs50 en espèces.</label>"
-    },
-    "handBackRequirements": {
-      "label": "<p>Veillez à remettre les éléments suivants à l'acheteur:</p>",
-      "requirement1": "<li>La carte d'identité ou le passeport de l'acheteur</li>",
-      "requirement2": "<li>Le certificat de non gage</li>",
-      "requirement3": "<li>2 actes de vente, estampillés (au dos de la page) par la <NLTAAbbr /></li>"
-    }
-  },
-  "endingNote2": "<p>À ce stade, vous avez accompli toutes les formalités nécessaires. L'acheteur devra procéder à l'enregistrement, à l'assurance et au transfert de propriété du véhicule.</p>"
+  "endingNote_singlePurchaser": "<p>À ce stade, vous avez accompli toutes les formalités requises. L'acheteur devra procéder à I'enregistrement, à l'assurance et au transfert de propriété.</p>",
+  "endingNote_multiplePurchasers": "<p>À ce stade, vous avez accompli toutes les formalités requises. Les acheteurs devront procéder à I'enregistrement, à I'assurance et au transfert de propriété.</p>"
 }

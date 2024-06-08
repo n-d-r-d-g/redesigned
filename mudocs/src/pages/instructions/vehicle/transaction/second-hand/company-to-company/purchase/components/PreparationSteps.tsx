@@ -815,6 +815,11 @@ export function PreparationSteps() {
             <TypedTrans
               ns="instructions-vehicle-transaction-2nd-hand-c2c-purchase-page"
               i18nKey={"form.isVehicleRegistrationBookValid.label"}
+              components={{
+                VehicleRegistrationBook: (
+                  <TechnicalTerm name="vehicleRegistrationBook" />
+                ),
+              }}
             />
           }
           className="w-full xs:w-auto"
