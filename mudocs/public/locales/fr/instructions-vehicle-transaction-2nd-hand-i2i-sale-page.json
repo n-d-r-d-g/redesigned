@@ -4,10 +4,10 @@
   "description": "Vous visionnez les instructions pour un particulier (ou plusieurs particuliers) qui vend son véhicule à un autre particulier (ou plusieurs particuliers).",
   "form": {
     "numOfVendors": {
-      "label": "N° de vendeurs"
+      "label": "N.b. de vendeurs"
     },
     "numOfPurchasers": {
-      "label": "N° d'acheteurs"
+      "label": "N.b. d'acheteurs"
     },
     "documentsPreparer": {
       "label": "Qui préparera les documents ci-dessus?"
@@ -24,8 +24,8 @@
       "label_multipleVendors_multiplePurchasers": "Y a-t-il un lien de parenté entre l'un des vendeurs et l'un des acheteurs, par exemple père-fils et vice-versa, mari-femme et vice-versa, etc.?"
     },
     "vendorNameMatches": {
-      "label": "Votre nom affiché sur le <VehicleRegistrationBook /> correspond-il à celui qui figure sur votre <ProofOfIdentity>?",
-      "label_other": "Le nom de chaque vendeur affiché sur le <VehicleRegistrationBook /> correspond-il à celui qui figure sur leur <ProofOfIdentity /> correspondante?"
+      "label": "Votre nom affiché sur la <VehicleRegistrationBook /> correspond-il à celui qui figure sur votre <ProofOfIdentity />?",
+      "label_other": "Le nom de chaque vendeur affiché sur la <VehicleRegistrationBook /> correspond-il à celui qui figure sur leur <ProofOfIdentity /> respective?"
     },
     "administrativeStatusCertificateIssuer": {
       "label": "<span>Qui se rendra à la <NLTAAbbr />?</span>"
@@ -37,10 +37,10 @@
   "preparation": {
     "title": "<h2>Préparation</h2>",
     "commonSteps": {
-      "askPurchaserInfoPhotos_singlePurchaser": "<label>Demander à l'acheteur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo de l'adresse affichée sur leur <ProofOfAddress /></li></ul></label>",
-      "askPurchaserInfoPhotos_multiplePurchasers": "<label>Demander à chaque acheteur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo de l'adresse affichée sur leur <ProofOfAddress /></li></ul></label>",
-      "askPurchaserAndPurchaserDelegateInfoPhotos_singlePurchaser": "<label>Demander à l'acheteur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo de la <ProofOfIdentity /> de leur délégué</li><li>une photo de l'adresse affichée sur leur <ProofOfAddress /></li></ul></label>",
-      "askPurchaserAndPurchaserDelegateInfoPhotos_multiplePurchasers": "<label>Demander à chaque acheteur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo de la <ProofOfIdentity /> de leur délégué</li><li>une photo de l'adresse affichée sur leur <ProofOfAddress /></li></ul></label>",
+      "askPurchaserInfoPhotos_singlePurchaser": "<label>Demandez à l'acheteur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo de l'adresse affichée sur leur <ProofOfAddress /></li></ul></label>",
+      "askPurchaserInfoPhotos_multiplePurchasers": "<label>Demandez à chaque acheteur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo de l'adresse affichée sur leur <ProofOfAddress /></li></ul></label>",
+      "askPurchaserAndPurchaserDelegateInfoPhotos_singlePurchaser": "<label>Demandez à l'acheteur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo de la <ProofOfIdentity /> de leur délégué</li><li>une photo de l'adresse affichée sur leur <ProofOfAddress /></li></ul></label>",
+      "askPurchaserAndPurchaserDelegateInfoPhotos_multiplePurchasers": "<label>Demandez à chaque acheteur:<ul><li>une photo de leur <ProofOfIdentity /></li><li>une photo de la <ProofOfIdentity /> de leur délégué</li><li>une photo de l'adresse affichée sur leur <ProofOfAddress /></li></ul></label>",
       "askPurchaserDeedOfSalePhotoOrPDF_singlePurchaser": "<label>Demandez à l'acheteur une photo ou un <PDFAbbr /> de l'un des <DeedsOfSale /> pour vérifier que tous les détails sont corrects. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> demandera que des modifications soient apportées aux <DeedsOfSale />, puis de revenir plus tard.</label>",
       "askPurchaserDeedOfSalePhotoOrPDF_multiplePurchasers": "<label>Demandez aux acheteurs une photo ou un <PDFAbbr /> de l'un des <DeedsOfSale /> pour vérifier que tous les détails sont corrects. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> demandera que des modifications soient apportées aux <DeedsOfSale />, puis de revenir plus tard.</label>",
       "askPurchaserAuthorizationLetterPhotoOrPDF_singlePurchaser": "<label>Ask the purchaser for a photo or <PDFAbbr /> of the authorization letter to verify that all the details are correct. This verification is also important to avoid unnecessary back and forth.</label>",

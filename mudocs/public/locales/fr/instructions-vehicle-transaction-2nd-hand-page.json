@@ -55,7 +55,7 @@
       "description": "<p>Avant de vous présenter au bureau d'enregistrement, assurez-vous d'apporter les documents suivants :</p>",
       "requirement1": "<label>2 <DeedsOfSale /> estampillés</label>",
       "requirement2": "<label>Votre <ProofOfIdentity /></label>",
-      "requirement3": "<label>Le <VehicleRegistrationBook /></label>",
+      "requirement3": "<label>La <VehicleRegistrationBook /></label>",
       "requirement4": "<label>Le <AdministrativeStatusCertificate /></label>",
       "requirement5": "<label>Le montant à payer pour l'enregistrement (Vérifiez les frais d'enregistrement sur le <GovtRegFeeLink>site officiel du gouvernement mauricien</GovtRegFeeLink> ou le <MyCarMuRegFeeCalculatorLink>calculateur de mycar.mu</MyCarMuRegFeeCalculatorLink>)</label>"
     },
@@ -72,7 +72,7 @@
         "deliveryWaitingArea": "Salle d'attente section delivery"
       },
       "legend": {
-        "step1": "<li>À votre arrivée au bureau d'enregistrement, l'agent de billetterie vous demandera le <VehicleRegistrationBook> avant de vous remettre un billet.</li>",
+        "step1": "<li>À votre arrivée au bureau d'enregistrement, l'agent de billetterie vous demandera la <VehicleRegistrationBook> avant de vous remettre un billet.</li>",
         "step2": "<li>Vous devrez attendre votre tour dans la zone d'attente de la section taxing.</li>",
         "step3": "<li>L'agent de la section taxing vous demandera quelques documents mentionnés ci-dessus avant de vous remettre une facture.</li>",
         "step4": "<li>Vous devrez émettre un autre billet pour la section finance. Montrez à l'agent de billetterie votre facture.</li>",
@@ -98,7 +98,7 @@
         "requirement3": "$t(insurance.conditionalRequirements.individualRequirements.proofOfAddress_{{numOfPurchasers}})",
         "requirement4": "<label>Votre <ProofOfEmployment /> (dépend de la compagnie d'assurance)</label>",
         "requirement5": "<label>Votre permis de conduire</label>",
-        "requirement6": "<label>Le <VehicleRegistrationBook /></label>",
+        "requirement6": "<label>La <VehicleRegistrationBook /></label>",
         "requirement7": "<label>La somme à payer à la compagnie d'assurance</label>"
       },
       "companyRequirements": {
@@ -106,7 +106,7 @@
         "requirement2": "<label>Votre <ProofOfIdentity /></label>",
         "requirement3": "<label>La carte d'immatriculation de l'entreprise</label>",
         "requirement4": "<label>La <ProofOfAddress /> de l'entreprise</label>",
-        "requirement5": "<label>Le <VehicleRegistrationBook /></label>",
+        "requirement5": "<label>La <VehicleRegistrationBook /></label>",
         "requirement6": "<label>La somme à payer à la compagnie d'assurance</label>"
       }
     },
@@ -139,14 +139,14 @@
       "requirement2": "<label>Une photocopie de l'<DeedOfSale /> enregistré",
       "requirement3": "<label>Le certificat d'assurance original",
       "requirement4": "$t(transfer.requirements.proofOfAddress_{{purchaserType}}_{{numOfPurchasers}})",
-      "requirement5": "<label>Le <VehicleRegistrationBook /></label>",
+      "requirement5": "<label>La <VehicleRegistrationBook /></label>",
       "requirement6": "<label>La some à payer pour le transfert:<dl><dt>Autocycle</dt><dd>Rs 100</dd><dt>Motocyclette</dt><dd>Rs 200</dd><dt>Autres véhicules</dt><dd>Rs 300</dd></dl></label>"
     },
     "itemsReceived": {
       "description": "<p>L'agent de la <NLTA /> vous remettra les documents suivants:</p>",
-      "item1": "<li>Un nouveau <VehicleRegistrationBook /></li>",
+      "item1": "<li>Une nouvelle <VehicleRegistrationBook /></li>",
       "item2": "<li>Un reçu du paiement du transfert de propriété</li>"
     },
-    "note": "<p><em>À noter: Avant de quitter la <NLTA />, vérifiez que tous les détails figurant sur le nouveau <VehicleRegistrationBook /> sont corrects par rapport à l'<DeedOfSale /> enregistré et informez l'agent en cas d'erreur. Sinon, vous devrez revenir plus tard pour le faire modifier.</em></p>"
+    "note": "<p><em>À noter: Avant de quitter la <NLTA />, vérifiez que tous les détails figurant sur la nouvelle <VehicleRegistrationBook /> sont corrects par rapport à l'<DeedOfSale /> enregistré et informez l'agent en cas d'erreur. Sinon, vous devrez revenir plus tard pour le faire modifier.</em></p>"
   }
 }

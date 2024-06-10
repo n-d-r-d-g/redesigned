@@ -351,8 +351,8 @@
       "title": ""
     },
     "vehicleRegistrationBook": {
-      "label": "certificat d'immatriculation",
-      "title": "communément appelé carte grise ou <EN>horsepower</EN>"
+      "label": "carte grise",
+      "title": "communément appelée <EN>horsepower</EN>"
     }
   }
 }
