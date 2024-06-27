@@ -13,15 +13,15 @@
       "label": "Who will prepare the above?"
     },
     "purchaserHasOriginalID": {
-      "label": "Does you have an original <ProofOfIdentity /> (Mauritians need the <MNISIDCardLayoutLink>new I.D card</MNISIDCardLayoutLink>)?",
+      "label": "Do you have an original <ProofOfIdentity /> (Mauritians need the <MNISIDCardLayoutLink>new I.D card</MNISIDCardLayoutLink>)?",
       "label_other": "Do all purchasers have an original <ProofOfIdentity /> (Mauritians need the <MNISIDCardLayoutLink>new I.D card</MNISIDCardLayoutLink>)?"
     },
     "vendorAndPurchaserAreRelated": {
       "label": "$t(form.vendorAndPurchaserAreRelated.label_{{numOfVendors}}_{{numOfPurchasers}})",
       "label_singleVendor_singlePurchaser": "Are you related to the vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?",
       "label_singleVendor_multiplePurchasers": "Is any purchaser related to the vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?",
-      "label_multipleVendors_singlePurchaser": "Are you related to a vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?",
-      "label_multipleVendors_multiplePurchasers": "Is any purchaser related to a vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?"
+      "label_multipleVendors_singlePurchaser": "Are you related to any vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?",
+      "label_multipleVendors_multiplePurchasers": "Is any purchaser related to any vendor, e.g. father-son vice-versa, husband-wife vice-versa etc.?"
     },
     "vendorNameMatches": {
       "label": "Does the vendor's name displayed on the <VehicleRegistrationBook /> match the one on their <ProofOfIdentity />?",
