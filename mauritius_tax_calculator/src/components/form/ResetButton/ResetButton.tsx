@@ -4,18 +4,11 @@ import { useTranslation } from "next-i18next";
 import { Button, ButtonProps } from "@nextui-org/react";
 import { MdOutlineRefresh as MdOutlineRefreshIcon } from "react-icons/md";
 
-type Props = ButtonProps & {
-  resetInitialValues?: () => void;
-};
-
-export default function ResetButton({ children, ...props }: Props) {
+export default function ResetButton({ children, ...props }: ButtonProps) {
   const { t: tCommon } = useTranslation("common");
   const { resetForm } = useFormikContext();
 
-  const handleResetForm = useCallback(() => {
-    props?.resetInitialValues?.();
-    resetForm();
-  }, [props, resetForm]);
+  const handleResetForm = useCallback(() => resetForm(), [resetForm]);
 
   return (
     <Button

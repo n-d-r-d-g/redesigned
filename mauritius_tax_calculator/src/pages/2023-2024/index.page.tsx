@@ -1,34 +1,31 @@
-import { Key, useCallback, useRef, useState } from "react";
-import { GetStaticProps } from "next";
-import Link from "next/link";
-import { Trans, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import { Formik, FormikProps } from "formik";
-import Joi from "joi";
-import { Card, CardBody, SelectItem, Tab, Tabs } from "@nextui-org/react";
 import FormNumberInput from "@/components/form/FormNumberInput/FormNumberInput";
 import FormSelect from "@/components/form/FormSelect/FormSelect";
 import ResetButton from "@/components/form/ResetButton/ResetButton";
-import MonthlyCalculations from "./components/MonthlyCalculations";
-import YearlyCalculations from "./components/YearlyCalculations";
 import { joiFormikAdapter } from "@/utils/adapters/joi-formik-adapter";
 import { noop } from "@/utils/functions";
+import { Card, CardBody, SelectItem, Tab, Tabs } from "@nextui-org/react";
+import { Formik } from "formik";
+import Joi from "joi";
+import { GetStaticProps } from "next";
+import { Trans, useTranslation } from "next-i18next";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import Link from "next/link";
 import {
   DEFAULT_I18N_LOCALE,
   DEFAULT_I18N_NAMESPACE,
 } from "../../../constants";
+import MonthlyCalculations from "./components/MonthlyCalculations";
+import YearlyCalculations from "./components/YearlyCalculations";
 import {
   DEFAULT_MONTHLY_INITIAL_VALUES,
   DEFAULT_YEARLY_INITIAL_VALUES,
   MAX_MONETARY_AMOUNT,
   MIN_MONETARY_AMOUNT,
 } from "./reusables";
-import { MonthlyFormValues, TabKey, YearlyFormValues } from "./types";
 
 export default function FinancialYear2023To2024() {
   const { t: tCommon } = useTranslation("common");
   const { t: t2023To2024 } = useTranslation("2023-2024");
-  const [selectedTab, setSelectedTab] = useState<TabKey>("month");
   const monthlySchema = Joi.object({
     baseSalary: Joi.number()
       .required()
@@ -100,36 +97,6 @@ export default function FinancialYear2023To2024() {
     "number.min": tCommon("errors.numberGTE", { count: MIN_MONETARY_AMOUNT }),
     "number.max": tCommon("errors.numberLTE", { count: MAX_MONETARY_AMOUNT }),
   });
-  const [monthlyInitialFormikValues, setMonthlyInitialFormikValues] =
-    useState<MonthlyFormValues>(DEFAULT_MONTHLY_INITIAL_VALUES);
-  const [yearlyInitialFormikValues, setYearlyInitialFormikValues] =
-    useState<YearlyFormValues>(DEFAULT_YEARLY_INITIAL_VALUES);
-  const monthlyFormikRef = useRef<FormikProps<MonthlyFormValues>>(null);
-  const yearlyFormikRef = useRef<FormikProps<YearlyFormValues>>(null);
-
-  const handleSelectedTabChange = useCallback((newTab: Key) => {
-    if (newTab === "month") {
-      setYearlyInitialFormikValues(
-        (prevValues) => yearlyFormikRef.current?.values ?? prevValues
-      );
-    } else {
-      setMonthlyInitialFormikValues(
-        (prevValues) => monthlyFormikRef.current?.values ?? prevValues
-      );
-    }
-
-    setSelectedTab(newTab as TabKey);
-  }, []);
-
-  const resetMonthlyInitialValues = useCallback(
-    () => setMonthlyInitialFormikValues(DEFAULT_MONTHLY_INITIAL_VALUES),
-    []
-  );
-
-  const resetYearlyInitialValues = useCallback(
-    () => setYearlyInitialFormikValues(DEFAULT_YEARLY_INITIAL_VALUES),
-    []
-  );
 
   return (
     <>
@@ -141,8 +108,7 @@ export default function FinancialYear2023To2024() {
         <Tabs
           aria-label={tCommon("calculationPeriodLabel")}
           radius="sm"
-          selectedKey={selectedTab}
-          onSelectionChange={handleSelectedTabChange}
+          destroyInactiveTabPanel={false}
           className="mt-8 mb-2 mx-auto"
         >
           <Tab
@@ -151,11 +117,9 @@ export default function FinancialYear2023To2024() {
             className="w-full flex flex-col lg:flex-row lg:items-start gap-x-3 gap-y-5"
           >
             <Formik
-              innerRef={monthlyFormikRef}
-              initialValues={monthlyInitialFormikValues}
+              initialValues={DEFAULT_MONTHLY_INITIAL_VALUES}
               onSubmit={noop}
               validationSchema={joiFormikAdapter(monthlySchema)}
-              enableReinitialize
               validateOnMount
             >
               <>
@@ -165,12 +129,14 @@ export default function FinancialYear2023To2024() {
                   className="lg:basis-1/3 lg:shrink-0"
                 >
                   <CardBody>
-                    <form className="flex flex-col gap-y-5 pb-1">
+                    <form
+                      id="monthlyForm"
+                      className="flex flex-col gap-y-5 pb-1"
+                    >
                       <p>{t2023To2024("month.description")}</p>
-                      <ResetButton
-                        resetInitialValues={resetMonthlyInitialValues}
-                      />
+                      <ResetButton />
                       <FormNumberInput
+                        key="monthlyBaseSalary"
                         name="baseSalary"
                         label={t2023To2024("month.form.baseSalary.label")}
                         placeholder="0"
@@ -178,6 +144,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="monthlyTravelingAllowance"
                         name="travelingAllowance"
                         label={t2023To2024(
                           "month.form.travelingAllowance.label"
@@ -187,6 +154,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="monthlyInternetAllowance"
                         name="internetAllowance"
                         label={t2023To2024(
                           "month.form.internetAllowance.label"
@@ -196,6 +164,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="monthlyPerformanceBonus"
                         name="performanceBonus"
                         label={t2023To2024("month.form.performanceBonus.label")}
                         placeholder="0"
@@ -203,6 +172,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="monthlyOtherTaxableIncome"
                         name="otherTaxableIncome"
                         label={t2023To2024(
                           "month.form.otherTaxableIncome.label"
@@ -228,11 +198,9 @@ export default function FinancialYear2023To2024() {
             className="w-full flex flex-col lg:flex-row lg:items-start gap-x-3 gap-y-5"
           >
             <Formik
-              innerRef={yearlyFormikRef}
-              initialValues={yearlyInitialFormikValues}
+              initialValues={DEFAULT_YEARLY_INITIAL_VALUES}
               onSubmit={noop}
               validationSchema={joiFormikAdapter(yearlySchema)}
-              enableReinitialize
               validateOnMount
             >
               <>
@@ -242,7 +210,10 @@ export default function FinancialYear2023To2024() {
                   className="lg:basis-1/3 lg:shrink-0"
                 >
                   <CardBody>
-                    <form className="flex flex-col gap-y-4 pb-1">
+                    <form
+                      id="yearlyForm"
+                      className="flex flex-col gap-y-4 pb-1"
+                    >
                       <Trans
                         t={t2023To2024}
                         i18nKey="year.description"
@@ -263,10 +234,9 @@ export default function FinancialYear2023To2024() {
                           ),
                         }}
                       />
-                      <ResetButton
-                        resetInitialValues={resetYearlyInitialValues}
-                      />
+                      <ResetButton />
                       <FormNumberInput
+                        key="yearlyBaseSalary"
                         name="baseSalary"
                         label={t2023To2024("year.form.baseSalary.label")}
                         description={t2023To2024(
@@ -277,6 +247,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="yearlyEoyBonus"
                         name="eoyBonus"
                         label={t2023To2024("year.form.eoyBonus.label")}
                         description={t2023To2024(
@@ -287,6 +258,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="yearlyTravelingAllowance"
                         name="travelingAllowance"
                         label={t2023To2024(
                           "year.form.travelingAllowance.label"
@@ -299,6 +271,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="yearlyInternetAllowance"
                         name="internetAllowance"
                         label={t2023To2024("year.form.internetAllowance.label")}
                         description={t2023To2024(
@@ -309,6 +282,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="yearlyPerformanceBonus"
                         name="performanceBonus"
                         label={t2023To2024("year.form.performanceBonus.label")}
                         description={t2023To2024(
@@ -319,6 +293,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="yearlyOtherTaxableIncome"
                         name="otherTaxableIncome"
                         label={t2023To2024(
                           "year.form.otherTaxableIncome.label"
@@ -331,6 +306,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormSelect
+                        key="yearlyNumOfDependents"
                         name="numOfDependents"
                         label={t2023To2024("year.form.numOfDependents.label")}
                         placeholder="0"
@@ -352,6 +328,7 @@ export default function FinancialYear2023To2024() {
                         </SelectItem>
                       </FormSelect>
                       <FormNumberInput
+                        key="yearlyMedicalInsurance"
                         name="medicalInsurance"
                         label={t2023To2024("year.form.medicalInsurance.label")}
                         description={t2023To2024(
@@ -362,6 +339,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="yearlyHousingLoanInterest"
                         name="housingLoanInterest"
                         label={t2023To2024(
                           "year.form.housingLoanInterest.label"
@@ -374,6 +352,7 @@ export default function FinancialYear2023To2024() {
                         min={0}
                       />
                       <FormNumberInput
+                        key="yearlyOtherTaxDeductions"
                         name="otherTaxDeductions"
                         label={t2023To2024(
                           "year.form.otherTaxDeductions.label"
