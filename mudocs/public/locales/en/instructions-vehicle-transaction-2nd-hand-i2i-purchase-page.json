@@ -159,8 +159,8 @@
   "payment": {
     "title": "<h2>Pay for the vehicle</h2>",
     "description": "$t(payment.description_{{numOfVendors}}_{{numOfPurchasers}})",
-    "description_singleVendor_singlePurchaser": "<p>The vendor and you need to agree on a location to meet up so they can pay you and sign the documents.</p>",
-    "description_singleVendor_multiplePurchasers": "<p>The vendor and purchasers need to agree on a location to meet up so they can pay you and sign the documents.</p>",
+    "description_singleVendor_singlePurchaser": "<p>The vendor and you need to agree on a location to meet up so payment can be effected and documents signed.</p>",
+    "description_singleVendor_multiplePurchasers": "<p>The vendor and purchasers need to agree on a location to meet up so payment can be effected and documents signed.</p>",
     "description_multipleVendors_singlePurchaser": "<p>The vendors and you need to agree on a location to meet up so payment can be effected and documents signed.</p>",
     "description_multipleVendors_multiplePurchasers": "<p>The vendors and purchasers need to agree on a location to meet up so payment can be effected and documents signed.</p>",
     "commonSteps": {
