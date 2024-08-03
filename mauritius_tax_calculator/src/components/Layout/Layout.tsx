@@ -113,7 +113,7 @@ function LanguageSwitch() {
             radius="sm"
             className="min-w-[4.375rem] font-mono"
             classNames={{
-              innerWrapper: "mt-0.5",
+              innerWrapper: "mt-[4px]",
             }}
           >
             {(locale) => (
