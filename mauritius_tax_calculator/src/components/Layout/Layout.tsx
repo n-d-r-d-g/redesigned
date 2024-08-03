@@ -1,9 +1,3 @@
-import { ChangeEvent, PropsWithChildren, useCallback, useRef } from "react";
-import Head from "next/head";
-import Link from "next/link";
-import { Trans, useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
-import Image from "next/image";
 import {
   Button,
   Modal,
@@ -13,10 +7,19 @@ import {
   ModalHeader,
   Select,
   SelectItem,
+  Tooltip,
   useDisclosure,
 } from "@nextui-org/react";
+import { Trans, useTranslation } from "next-i18next";
+import Head from "next/head";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { ChangeEvent, PropsWithChildren, useCallback, useRef } from "react";
 import { FaGithub as FaGithubIcon } from "react-icons/fa";
 import { DEFAULT_I18N_NAMESPACE, I18N_LOCALES } from "../../../constants";
+import { ThemeSwitch } from "../ThemeSwitch/ThemeSwitch";
+import { FaHeart } from "react-icons/fa6";
 
 function LanguageSwitch() {
   const { t: tCommon, i18n } = useTranslation(DEFAULT_I18N_NAMESPACE);
@@ -98,18 +101,29 @@ function LanguageSwitch() {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      <Select
-        items={locales}
-        aria-label={tCommon("changeLanguage")}
-        onChange={handleLanguageSelect}
-        defaultSelectedKeys={[i18n.language]}
-        selectedKeys={[i18n.language]}
-        size="md"
-        radius="sm"
-        className="min-w-20"
-      >
-        {(locale) => <SelectItem key={locale.value}>{locale.label}</SelectItem>}
-      </Select>
+      <Tooltip content={tCommon("changeLanguage")}>
+        <div>
+          <Select
+            items={locales}
+            aria-label={tCommon("changeLanguage")}
+            onChange={handleLanguageSelect}
+            defaultSelectedKeys={[i18n.language]}
+            selectedKeys={[i18n.language]}
+            size="md"
+            radius="sm"
+            className="min-w-[4.375rem] font-mono"
+            classNames={{
+              innerWrapper: "mt-0.5",
+            }}
+          >
+            {(locale) => (
+              <SelectItem key={locale.value} className="font-mono">
+                {locale.label}
+              </SelectItem>
+            )}
+          </Select>
+        </div>
+      </Tooltip>
     </div>
   );
 }
@@ -138,46 +152,54 @@ export default function Layout({ children }: PropsWithChildren) {
                 priority
               />
             </span>{" "}
-            {tCommon("websiteTitle")}
+            <span className="hidden xs:inline-block">
+              {tCommon("websiteTitle")}
+            </span>
           </Link>
           <aside className="flex flex-row items-center gap-2">
-            <Button
-              type="button"
-              size="md"
-              radius="full"
-              variant="light"
-              as={Link}
-              href="https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator"
-              target="_blank"
-              rel="noreferrer noopener nofollow"
-              title={tCommon("githubLink")}
-              aria-label={tCommon("githubLink")}
-              passHref
-              isIconOnly
-            >
-              <FaGithubIcon size={16} />
-            </Button>
+            <Tooltip content={tCommon("gitHubLink")}>
+              <Button
+                type="button"
+                size="md"
+                radius="full"
+                variant="light"
+                as={Link}
+                href="https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator"
+                target="_blank"
+                rel="noreferrer noopener nofollow"
+                aria-label={tCommon("gitHubLink")}
+                passHref
+                isIconOnly
+              >
+                <FaGithubIcon size={16} />
+              </Button>
+            </Tooltip>
+            <ThemeSwitch />
             <LanguageSwitch />
           </aside>
         </nav>
         <main className="root-container min-h-0 grow flex flex-col p-3">
           {children}
         </main>
-        <footer className="hide-on-print grid place-content-center py-2">
+        <footer className="print:hidden grid place-content-center py-2 isolate">
           <Trans
             ns="common"
             i18nKey="websiteBuiltBy"
             components={{
               span: (
-                <span className="text-center text-xs text-gray-700 dark:text-gray-400" />
+                <span className="inline-flex items-center gap-[0.5ch] text-center text-xs text-gray-700 dark:text-gray-400" />
               ),
-              HeartTitle: (
-                <span
-                  title={tCommon("websiteBuiltByTitle")}
-                  className="cursor-help"
-                />
+              HeartIcon: (
+                <Tooltip content={tCommon("websiteBuiltByTitle")}>
+                  <span>
+                    <FaHeart
+                      className="inline-block text-red-800 cursor-help dark:text-red-400"
+                      aria-label={tCommon("websiteBuiltByTitle")}
+                    />
+                  </span>
+                </Tooltip>
               ),
-              GithubLink: (
+              GitHubLink: (
                 <Link
                   href="https://github.com/n-d-r-d-g"
                   target="_blank"

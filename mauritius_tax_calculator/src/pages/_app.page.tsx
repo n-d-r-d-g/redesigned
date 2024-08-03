@@ -8,7 +8,7 @@ import "@/styles/globals.css";
 
 function App({ Component, pageProps }: AppProps) {
   return (
-    <ThemeProvider attribute="class">
+    <ThemeProvider attribute="class" disableTransitionOnChange>
       <NextUIProvider>
         <Layout>
           <Component {...pageProps} />

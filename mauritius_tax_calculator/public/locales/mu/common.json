@@ -1,13 +1,21 @@
 {
   "websiteTitle": "Kalkilater Tax Moris",
   "websiteDescription": "Sa aplikasion la enn zouti non ofisiel pou bann anploye dan moris, ki ena lobzektif rann tax PAYE ki faktire par MRA pli fasil pou kalkile ek konpran.",
-  "websiteBuiltBy": "<span>Fabrike avek <HeartTitle>💖</HeartTitle> par <GithubLink>n-d-r-d-g</GithubLink></span>",
+  "websiteBuiltBy": "<span>Fabrike avek <HeartIcon /> par <GitHubLink>n-d-r-d-g</GitHubLink></span>",
   "websiteBuiltByTitle": "lamur, laswer & larm",
-  "githubLink": "Lien Github",
+  "gitHubLink": "Lien GitHub",
   "reload": "Re inisyalize",
   "cancel": "Anile",
   "reset": "Reaktialize",
+  "changeTheme": "Sanz tem",
   "changeLanguage": "Sanz langaz",
+  "themeSwitch": {
+    "themes": {
+      "system": "Sistem",
+      "light": "Kler",
+      "dark": "Som"
+    }
+  },
   "languageSwitch": {
     "confirmation": {
       "title": "Re inisyalizasyon paz",

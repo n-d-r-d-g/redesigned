@@ -106,11 +106,16 @@ function LanguageSwitch() {
         selectedKeys={[i18n.language]}
         size="md"
         radius="sm"
-        className="min-w-20"
+        className="min-w-[4.375rem] font-mono"
+        classNames={{
+          innerWrapper: "mt-0.5",
+        }}
         isDisabled
       >
         {(locale: (typeof locales)[number]) => (
-          <SelectItem key={locale.value}>{locale.label}</SelectItem>
+          <SelectItem key={locale.value} className="font-mono">
+            {locale.label}
+          </SelectItem>
         )}
       </Select>
     </div>
@@ -138,7 +143,7 @@ export default function Layout({ children }: PropsWithChildren) {
           </span>{" "}
           MUDOCS
         </Link>
-        <aside className="flex flex-row items-center gap-1">
+        <aside className="flex flex-row items-center gap-2">
           <Button
             type="button"
             size="md"

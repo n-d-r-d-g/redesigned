@@ -1,13 +1,21 @@
 {
   "websiteTitle": "Mauritius Tax Calculator",
   "websiteDescription": "This app is an unofficial tool for employees in Mauritius that aims to make the PAYE tax charged by the MRA easier to calculate and understand.",
-  "websiteBuiltBy": "<span>Made with <HeartTitle>💖</HeartTitle> by <GithubLink>n-d-r-d-g</GithubLink></span>",
+  "websiteBuiltBy": "<span>Made with <HeartIcon /> by <GitHubLink>n-d-r-d-g</GitHubLink></span>",
   "websiteBuiltByTitle": "love, sweat & tears",
-  "githubLink": "Github link",
+  "gitHubLink": "GitHub link",
   "reload": "Reload",
   "cancel": "Cancel",
   "reset": "Reset",
+  "changeTheme": "Change theme",
   "changeLanguage": "Change language",
+  "themeSwitch": {
+    "themes": {
+      "system": "System",
+      "light": "Light",
+      "dark": "Dark"
+    }
+  },
   "languageSwitch": {
     "confirmation": {
       "title": "Page Reload",
