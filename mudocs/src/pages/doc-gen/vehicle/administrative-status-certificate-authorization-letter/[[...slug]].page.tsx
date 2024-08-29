@@ -33,7 +33,7 @@ type CompanyWithRepresentingDirector = Company & {
   representingDirectorUUID: string;
 };
 
-const authorizationModes = [
+const AUTHORIZATION_MODES = [
   "i1ToI2",
   "i1ToD2",
   "i1ToR2",
@@ -43,6 +43,43 @@ const authorizationModes = [
   "c1ToD2",
   "c1ToR2",
 ] as const;
+
+const DUMMY_DATA = {
+  date: Intl.DateTimeFormat("sv-SE").format(new Date()),
+  vehicleRegNum: "1234JN12",
+  vehicleMake: "TOYOTA",
+  authorizationMode: "i1ToI2",
+  individualAuthorizers: [
+    {
+      uuid: uuidv4(),
+      traderType: "person" as const,
+      title: "mr" as const,
+      name: "ALAN SMITH",
+      nationality: "mauritian" as const,
+      id: "AS111111111111",
+    },
+    {
+      uuid: uuidv4(),
+      traderType: "person" as const,
+      title: "mrs" as const,
+      name: "ALICE SMITH",
+      nationality: "mauritian" as const,
+      id: "AS222222222222",
+    },
+  ],
+  companyAuthorizers: undefined,
+  authorizedIndividuals: [
+    {
+      uuid: uuidv4(),
+      traderType: "person" as const,
+      title: "mr" as const,
+      name: "BOB MARLEY",
+      nationality: "mauritian" as const,
+      id: "BM333333333333333",
+    },
+  ],
+  authorizedCompanies: undefined,
+};
 
 const getDefaultIndividuals = () => [
   {
@@ -95,7 +132,7 @@ const getDefaultCompanies = ({
   ];
 };
 
-type AuthorizationMode = (typeof authorizationModes)[number];
+type AuthorizationMode = (typeof AUTHORIZATION_MODES)[number];
 
 type Props = {
   authorizationMode: AuthorizationMode;
@@ -1017,133 +1054,6 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
           ).includes(authorizationMode),
         })
       : undefined,
-    // date: Intl.DateTimeFormat("sv-SE").format(new Date()), // YYYY-MM-DD
-    // vehicleRegNum: "1234JN12",
-    // vehicleMake: "TOYOTA",
-    // authorizationMode,
-    // individualAuthorizers: (
-    //   ["i1ToI2", "i1ToD2", "i1ToR2"] as Array<AuthorizationMode>
-    // ).includes(authorizationMode)
-    //   ? [
-    //       {
-    //         uuid: uuidv4(),
-    //         traderType: "person" as const,
-    //         title: "mr" as const,
-    //         name: "ALAN SMITH",
-    //         nationality: "mauritian" as const,
-    //         id: "AS111111111111",
-    //       },
-    //       {
-    //         uuid: uuidv4(),
-    //         traderType: "person" as const,
-    //         title: "mrs" as const,
-    //         name: "ALICE SMITH",
-    //         nationality: "mauritian" as const,
-    //         id: "AS222222222222",
-    //       },
-    //     ]
-    //   : undefined,
-    // companyAuthorizers: (
-    //   [
-    //     "c1ToI2",
-    //     "c1ToD1",
-    //     "c1ToR1",
-    //     "c1ToD2",
-    //     "c1ToR2",
-    //   ] as Array<AuthorizationMode>
-    // ).includes(authorizationMode)
-    //   ? [
-    //       {
-    //         uuid: uuidv4(),
-    //         name: "ABCD LTD",
-    //         traderType: "company" as const,
-    //         brn: "A88888888888888",
-    //         representingDirectorUUID: "dac57f52-efbc-4561-9a6f-4585b9acb3de",
-    //         directors: [
-    //           {
-    //             uuid: "dac57f52-efbc-4561-9a6f-4585b9acb3de",
-    //             title: "mr" as const,
-    //             name: "CARL CRUISE",
-    //             nationality: "mauritian" as const,
-    //             id: "C3333333333333",
-    //           },
-    //           {
-    //             uuid: uuidv4(),
-    //             title: "miss" as const,
-    //             name: "CHRISTY JAMES",
-    //             nationality: "mauritian" as const,
-    //             id: "C444444444444",
-    //           },
-    //         ],
-    //         representative:
-    //           authorizationMode === "c1ToR1"
-    //             ? {
-    //                 uuid: uuidv4(),
-    //                 title: "mr" as const,
-    //                 name: "DAN ROE",
-    //                 nationality: "mauritian" as const,
-    //                 id: "D55555555555",
-    //                 role: "Manager",
-    //               }
-    //             : undefined,
-    //       },
-    //     ]
-    //   : undefined,
-    // authorizedIndividuals: (
-    //   ["i1ToI2", "c1ToI2"] as Array<AuthorizationMode>
-    // ).includes(authorizationMode)
-    //   ? [
-    //       {
-    //         uuid: uuidv4(),
-    //         traderType: "person" as const,
-    //         title: "mr" as const,
-    //         name: "BOB MARLEY",
-    //         nationality: "mauritian" as const,
-    //         id: "BM333333333333333",
-    //       },
-    //     ]
-    //   : undefined,
-    // authorizedCompanies: (
-    //   ["i1ToD2", "i1ToR2", "c1ToD2", "c1ToR2"] as Array<AuthorizationMode>
-    // ).includes(authorizationMode)
-    //   ? [
-    //       {
-    //         uuid: uuidv4(),
-    //         name: "WXYZ LTD",
-    //         traderType: "company" as const,
-    //         brn: "W9999999999999",
-    //         representingDirectorUUID: "e2356334-1385-4b24-8f47-1c42d8b97809",
-    //         directors: [
-    //           {
-    //             uuid: uuidv4(),
-    //             title: "mr" as const,
-    //             name: "EARL PITT",
-    //             nationality: "mauritian" as const,
-    //             id: "E66666666666",
-    //           },
-    //           {
-    //             uuid: "e2356334-1385-4b24-8f47-1c42d8b97809",
-    //             title: "miss" as const,
-    //             name: "EMMA CHAMBERS",
-    //             nationality: "mauritian" as const,
-    //             id: "E77777777777",
-    //           },
-    //         ],
-    //         representative: (
-    //           ["i1ToR2", "c1ToR2"] as Array<AuthorizationMode>
-    //         ).includes(authorizationMode)
-    //           ? {
-    //               uuid: uuidv4(),
-    //               title: "mrs" as const,
-    //               name: "FIONA LEE",
-    //               nationality: "mauritian" as const,
-    //               id: "F888888888888",
-    //               role: "HR Manager",
-    //             }
-    //           : undefined,
-    //       },
-    //     ]
-    //   : undefined,
   };
 
   const baseTraderSchema = {
@@ -1199,7 +1109,7 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
     vehicleMake: string({
       required_error: tCommon("errors.required"),
     }).trim(),
-    authorizationMode: _enum(authorizationModes),
+    authorizationMode: _enum(AUTHORIZATION_MODES),
     individualAuthorizers: personSchema
       .array()
       .min(1, tCommon("errors.arrayMin", { count: 1 }))
@@ -1229,6 +1139,7 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
       )}
       initialValues={initialValues}
       schema={schema}
+      dummyData={DUMMY_DATA}
       Fields={Fields}
       Preview={Preview}
     />
@@ -1237,7 +1148,7 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = [
-    ...authorizationModes.map((mode) => ({
+    ...AUTHORIZATION_MODES.map((mode) => ({
       params: {
         slug: [mode],
       },
@@ -1256,7 +1167,7 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
   const modeFromSlug = params?.slug?.[0];
 
   if (modeFromSlug) {
-    const isAuthorizationModeValid = authorizationModes.includes(
+    const isAuthorizationModeValid = AUTHORIZATION_MODES.includes(
       modeFromSlug as AuthorizationMode,
     );
 
