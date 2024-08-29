@@ -1,18 +1,21 @@
-import { useCallback } from "react";
-import Head from "next/head";
-import { useTranslation } from "next-i18next";
-import { Form, Formik, FormikHelpers, FormikValues } from "formik";
 import FormSaveOrPrint from "@/components/forms/FormSaveOrPrint/FormSaveOrPrint";
+import { generateDocumentTitle } from "@/utils/functions";
+import { Form, Formik, FormikHelpers, FormikValues } from "formik";
+import { useTranslation } from "next-i18next";
+import Head from "next/head";
+import { useCallback } from "react";
 import { ZodType, ZodTypeDef } from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { DEFAULT_I18N_NAMESPACE } from "../../../constants";
+import FormClear from "../forms/FormClear/FormClear";
+import FormLoadData from "../forms/FormLoadData/FormLoadData";
 import Styles from "./Styles";
-import { generateDocumentTitle } from "@/utils/functions";
 
 type Props<T> = {
   pageTitle: string;
   initialValues: T;
   schema: ZodType<unknown, ZodTypeDef, unknown>;
+  dummyData?: unknown;
   Fields: () => JSX.Element;
   Preview: () => JSX.Element;
 };
@@ -21,6 +24,7 @@ export default function DocGenVehiclePageWrapper<T extends FormikValues>({
   pageTitle,
   initialValues,
   schema,
+  dummyData,
   Fields,
   Preview,
 }: Props<T>) {
@@ -61,6 +65,10 @@ export default function DocGenVehiclePageWrapper<T extends FormikValues>({
             <p className="col-span-1 text-sm font-bold italic lg:col-span-3">
               {tCommon("requiredInfoLegend")}
             </p>
+            <div className="flex flex-row flex-wrap items-center gap-2 xs:items-stretch">
+              <FormLoadData data={dummyData} />
+              <FormClear />
+            </div>
             <hr className="col-span-1 border-gray-200 lg:col-span-3 dark:border-slate-800" />
             <Fields />
           </div>
