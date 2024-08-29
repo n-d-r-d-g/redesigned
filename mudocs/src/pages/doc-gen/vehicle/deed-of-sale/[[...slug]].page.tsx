@@ -40,7 +40,78 @@ import {
   I18N_LOCALES,
 } from "../../../../../constants";
 
-const transactionModes = ["iToI", "iToC", "cToI", "cToC"] as const;
+const TRANSACTION_MODES = ["iToI", "iToC", "cToI", "cToC"] as const;
+
+const DUMMY_DATA = {
+  saleDate: Intl.DateTimeFormat("sv-SE").format(new Date()),
+  vehicleFirstRegDate: Intl.DateTimeFormat("sv-SE").format(
+    new Date("2010-01-10"),
+  ),
+  vehicleRegNum: "1234JN12",
+  vehicleMake: "TOYOTA",
+  vehicleModel: "COROLLA",
+  vehicleEngineDisplacement: "1498",
+  vehicleEngineNum: "AAAAAA111111",
+  vehicleChassisNum: "AAAAA111AA1111111",
+  vehiclePrice: 500_000,
+  transactionMode: "iToI",
+  individualVendors: [
+    {
+      uuid: uuidv4(),
+      traderType: "person" as const,
+      title: "mr",
+      name: "ALAN SMITH",
+      nationality: "mauritian",
+      id: "AS111111111111",
+      address: {
+        street: "321, M.M.M Avenue",
+        locality: "QUATRE BORNES",
+      },
+    },
+    {
+      uuid: uuidv4(),
+      traderType: "person" as const,
+      title: "mrs",
+      name: "ALICE SMITH",
+      nationality: "mauritian",
+      id: "AS222222222222",
+      address: {
+        street: "321, M.M.M Avenue",
+        locality: "QUATRE BORNES",
+      },
+    },
+  ],
+  companyVendors: undefined,
+  individualPurchasers: [
+    {
+      uuid: uuidv4(),
+      traderType: "person" as const,
+      title: "mr",
+      name: "BOB MARLEY",
+      nationality: "mauritian",
+      id: "B1111111111111",
+      address: {
+        street: "876, Paperort Lane, Morcellement Moor",
+        locality: "PORT LOUIS",
+      },
+    },
+    {
+      uuid: uuidv4(),
+      traderType: "person" as const,
+      title: "mrs",
+      name: "BAILEY MARLEY",
+      nationality: "mauritian",
+      id: "B222222222222",
+      address: {
+        street: "432, V.V Avenue",
+        locality: "PORT-LOUIS",
+      },
+    },
+  ],
+  companyPurchasers: undefined,
+  vendorsCommonAddress: true,
+  purchasersCommonAddress: true,
+};
 
 const getDefaultIndividuals = () => [
   {
@@ -79,7 +150,7 @@ const getDefaultCompanies = () => [
   },
 ];
 
-type TransactionMode = (typeof transactionModes)[number];
+type TransactionMode = (typeof TRANSACTION_MODES)[number];
 
 type Props = {
   transactionMode: TransactionMode;
@@ -660,127 +731,6 @@ export default function DeedOfSale({ transactionMode }: Props) {
       : undefined,
     vendorsCommonAddress: true,
     purchasersCommonAddress: true,
-    // saleDate: Intl.DateTimeFormat("sv-SE").format(new Date()), // YYYY-MM-DD
-    // vehicleFirstRegDate: Intl.DateTimeFormat("sv-SE").format(new Date()), // YYYY-MM-DD
-    // vehicleRegNum: "1234JN12",
-    // vehicleMake: "TOYOTA",
-    // vehicleModel: "COROLLA",
-    // vehicleEngineDisplacement: "1498",
-    // vehicleEngineNum: "AAAAAA111111",
-    // vehicleChassisNum: "AAAAA111AA1111111",
-    // vehiclePrice: 500_000,
-    // transactionMode,
-    // individualVendors: [
-    //   {
-    //     uuid: uuidv4(),
-    //     traderType: "person" as const,
-    //     title: "mr",
-    //     name: "AAAAA AAAAA AAAAA",
-    //     nationality: "mauritian",
-    //     id: "A9999999999999",
-    //     address: {
-    //       street: "321, M.M.M Avenue",
-    //       locality: "QUATRE BORNES",
-    //     },
-    //   },
-    //   {
-    //     uuid: uuidv4(),
-    //     traderType: "person" as const,
-    //     title: "mrs",
-    //     name: "BBBBBBBB-BBBBB BBBBB BBBBBB BBBBBBB",
-    //     nationality: "mauritian",
-    //     id: "B9999999999999",
-    //     address: {
-    //       street: "321, M.M.M Avenue",
-    //       locality: "QUATRE BORNES",
-    //     },
-    //   },
-    // ],
-    // companyVendors: [
-    //   {
-    //     uuid: uuidv4(),
-    //     name: "ABCD LTD",
-    //     traderType: "company" as const,
-    //     brn: "A1111111111111",
-    //     address: {
-    //       street: "312, Kokoloko Lane, Morcellement Koko",
-    //       locality: "PORT LOUIS",
-    //     },
-    //     directors: [
-    //       {
-    //         uuid: "dac57f52-efbc-4561-9a6f-4585b9acb3de",
-    //         title: "mr" as const,
-    //         name: "CARL CRUISE",
-    //         nationality: "mauritian" as const,
-    //         id: "C3333333333333",
-    //       },
-    //       {
-    //         uuid: uuidv4(),
-    //         title: "miss" as const,
-    //         name: "CHRISTY JAMES",
-    //         nationality: "mauritian" as const,
-    //         id: "C444444444444",
-    //       },
-    //     ],
-    //   },
-    // ],
-    // individualPurchasers: [
-    //   {
-    //     uuid: uuidv4(),
-    //     traderType: "person" as const,
-    //     title: "miss",
-    //     name: "CCCCC CCCCC CCCCC",
-    //     nationality: "mauritian",
-    //     id: "C9999999999999",
-    //     address: {
-    //       street: "876, Paperort Lane, Morcellement Moor",
-    //       locality: "PORT LOUIS",
-    //     },
-    //   },
-    //   {
-    //     uuid: uuidv4(),
-    //     traderType: "person" as const,
-    //     title: "mrs",
-    //     name: "FFFFF-FFFFF FFFF FFFFFF FFFFFF",
-    //     nationality: "mauritian",
-    //     id: "B9999999999999",
-    //     brn: "A222301",
-    //     address: {
-    //       street: "432, V.V Avenue",
-    //       locality: "PORT-LOUIS",
-    //     },
-    //   },
-    // ],
-    // companyPurchasers: [
-    //   {
-    //     uuid: uuidv4(),
-    //     name: "WXYZ LTD",
-    //     traderType: "company" as const,
-    //     brn: "W9999999999999",
-    //     address: {
-    //       street: "978, Popopo Lane, Morcellement Popo",
-    //       locality: "PORT LOUIS",
-    //     },
-    //     directors: [
-    //       {
-    //         uuid: uuidv4(),
-    //         title: "mr" as const,
-    //         name: "DAN DANIELS",
-    //         nationality: "mauritian" as const,
-    //         id: "D5555555555555",
-    //       },
-    //       {
-    //         uuid: uuidv4(),
-    //         title: "miss" as const,
-    //         name: "DORA LAWRENCE",
-    //         nationality: "mauritian" as const,
-    //         id: "D666666666666",
-    //       },
-    //     ],
-    //   },
-    // ],
-    // vendorsCommonAddress: true,
-    // purchasersCommonAddress: true,
   };
   const baseTraderSchema = {
     uuid: string().uuid(),
@@ -847,7 +797,7 @@ export default function DeedOfSale({ transactionMode }: Props) {
         9_999_999_999,
         tCommon("errors.numberLTE", { count: 9_999_999_999 }),
       ),
-    transactionMode: _enum(transactionModes),
+    transactionMode: _enum(TRANSACTION_MODES),
     individualVendors: personSchema
       .array()
       .min(1, tCommon("errors.arrayMin", { count: 1 }))
@@ -881,6 +831,7 @@ export default function DeedOfSale({ transactionMode }: Props) {
       pageTitle={tDocGenVehicle("deedOfSale.title")}
       initialValues={initialValues}
       schema={schema}
+      dummyData={DUMMY_DATA}
       Fields={Fields}
       Preview={Preview}
     />
@@ -889,7 +840,7 @@ export default function DeedOfSale({ transactionMode }: Props) {
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = [
-    ...transactionModes.map((mode) => ({
+    ...TRANSACTION_MODES.map((mode) => ({
       params: {
         slug: [mode],
       },
@@ -908,7 +859,7 @@ export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
   const modeFromSlug = params?.slug?.[0];
 
   if (modeFromSlug) {
-    const isTransactionModeValid = transactionModes.includes(
+    const isTransactionModeValid = TRANSACTION_MODES.includes(
       modeFromSlug as TransactionMode,
     );
 
