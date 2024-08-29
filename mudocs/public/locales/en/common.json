@@ -166,6 +166,8 @@
   "localityPlaceholder": "E.g. PORT-LOUIS",
   "printingNotSupported": "Your browser doesn't support printing.",
   "saveOrPrint": "Save / Print",
+  "loadDummyData": "Load dummy data",
+  "clearForm": "Clear form",
   "nltaFull": "National Land Transport Authority",
   "roadTransportDivision": "Road Transport Division",
   "nltaTown": "Port-Louis",
