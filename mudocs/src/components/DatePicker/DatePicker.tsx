@@ -3,6 +3,7 @@ import {
   DetailedHTMLProps,
   InputHTMLAttributes,
   useCallback,
+  useEffect,
   useRef,
   useState,
 } from "react";
@@ -75,6 +76,16 @@ export default function DatePicker({
     },
     [onChange],
   );
+
+  useEffect(() => {
+    if (props.defaultValue) return;
+
+    const newSelectedDate = props.value
+      ? new Date(props.value as string | number | Date)
+      : undefined;
+
+    setSelectedDate(newSelectedDate);
+  }, [props.defaultValue, props.value]);
 
   return (
     <div className="relative">

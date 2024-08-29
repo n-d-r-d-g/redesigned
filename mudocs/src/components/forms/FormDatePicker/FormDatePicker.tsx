@@ -35,7 +35,7 @@ export default function FormDatePicker({ label, id, name, ...props }: Props) {
 
   const handlePickerOpened = useCallback(
     () => helpers.setTouched(true),
-    [helpers]
+    [helpers],
   );
 
   useEffect(() => {
