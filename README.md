@@ -11,6 +11,8 @@ Feel free to let me know about any issue you encounter or if there's any feature
 
 ## Contribution
 
+Please read [CONTRIBUTING.md](https://github.com/n-d-r-d-g/redesigned/blob/main/CONTRIBUTING.md) before contributing to this project.
+
 ### Run projects locally
 
 1. Run `npm install` in the root directory.
