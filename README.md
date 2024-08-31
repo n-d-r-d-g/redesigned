@@ -15,10 +15,11 @@ Please read [CONTRIBUTING.md](https://github.com/n-d-r-d-g/redesigned/blob/main/
 
 ### Run projects locally
 
-1. Run `npm install` in the root directory.
-2. Change your working directory to the project you want to run locally, e.g. `cd mudocs`.
-3. You can open a specific project's folder in VSCode. You will need to switch to the `Source Control` panel and click the `Open repository` button to load the monorepo's git settings.
-4. Run `npm run dev` to launch the project in dev mode.
+1. Pull the `develop` branch locally.
+2. Run `npm install` in the root directory.
+3. Change your working directory to the project you want to run locally, e.g. `cd mudocs`.
+4. You can open a specific project's folder in VSCode. You will need to switch to the `Source Control` panel and click the `Open repository` button to load the monorepo's git settings.
+5. Run `npm run dev` to launch the project in dev mode.
 
 ### Create Pull Requests
 
