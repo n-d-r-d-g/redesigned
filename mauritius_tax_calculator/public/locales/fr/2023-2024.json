@@ -61,7 +61,7 @@
     }
   },
   "year": {
-    "description": "<p>Veuillez remplir les champs ci-dessous en fonction des valeurs payées par vous, et non par votre employeur, pour l'année fiscale. Consultez le site web de la MRA (<MRAExemptIncomeLink>revenu non imposable</MRAExemptIncomeLink> et <MRADeductionsLink>allégements, déductions & allocations</MRADeductionsLink>) pour plus d'infos.</p>",
+    "description": "<p>Pour toute dépense que vous avez engagée en partie ou en totalité au cours de l'année fiscale, veuillez remplir le champ correspondant ci-dessous en fonction du montant que vous avez payé, et non votre employeur. Consultez le site web de la MRA (<MRAExemptIncomeLink>revenu non imposable</MRAExemptIncomeLink> et <MRADeductionsLink>allégements, déductions & allocations</MRADeductionsLink>) pour plus d'infos.</p>",
     "form": {
       "baseSalary": {
         "label": "Salaire de base (12 mois)",

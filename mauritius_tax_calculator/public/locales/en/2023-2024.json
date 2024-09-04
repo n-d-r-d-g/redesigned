@@ -61,7 +61,7 @@
     }
   },
   "year": {
-    "description": "<p>Please fill the fields below based on the values paid by you, not your employer, for the financial year. Check out MRA's website (<MRAExemptIncomeLink>exempt income</MRAExemptIncomeLink> and <MRADeductionsLink>reliefs, deductions & allowances</MRADeductionsLink>) for more information.</p>",
+    "description": "<p>For any expense you have incurred partly or completely for the financial year, please fill in the corresponding field below based on the amount you have paid, not your employer. Check out MRA's website (<MRAExemptIncomeLink>exempt income</MRAExemptIncomeLink> and <MRADeductionsLink>reliefs, deductions & allowances</MRADeductionsLink>) for more information.</p>",
     "form": {
       "baseSalary": {
         "label": "Base salary (12 months)",

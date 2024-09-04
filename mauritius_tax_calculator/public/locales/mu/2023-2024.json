@@ -61,7 +61,7 @@
     }
   },
   "year": {
-    "description": "<p>Ranpli formiler anba la baze lor bann valer ki paye par ou, pa ou anplwayer, pou lane fiskal. Vizit sit web MRA (<MRAExemptIncomeLink>reveni non taksab</MRAExemptIncomeLink> ek <MRADeductionsLink>soulazman, dediksion & alokasion</MRADeductionsLink>) pou plis informasion.</p>",
+    "description": "<p>Pu tou depans ki ou finn fer an parti ou swa an totalite dan lane fiskal, ranpli valer ki ou finn paye, pa ou anplwayer. Vizit sit web MRA (<MRAExemptIncomeLink>reveni non taksab</MRAExemptIncomeLink> ek <MRADeductionsLink>soulazman, dediksion & alokasion</MRADeductionsLink>) pou plis informasion.</p>",
     "form": {
       "baseSalary": {
         "label": "Saler debaz (12 mwa)",
