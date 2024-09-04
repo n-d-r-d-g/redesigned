@@ -1,6 +1,6 @@
 {
   "month": {
-    "description": "Ranpli formiler anba la baze lor bann valer ki afise lor ou peyslip (zis bann valer ki paye par ou, pa ou anplwayer).",
+    "description": "Ranpli formiler anba la baze lor bann valer ki afise lor ou peyslip.",
     "form": {
       "baseSalary": {
         "label": "Saler debaz"

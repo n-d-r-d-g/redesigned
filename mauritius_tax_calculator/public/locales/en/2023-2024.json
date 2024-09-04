@@ -1,6 +1,6 @@
 {
   "month": {
-    "description": "Please fill the fields below based on the values displayed on your payslip (only values paid by you, not your employer).",
+    "description": "Please fill the fields below based on the values displayed on your payslip.",
     "form": {
       "baseSalary": {
         "label": "Base salary"

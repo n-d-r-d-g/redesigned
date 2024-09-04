@@ -1,6 +1,6 @@
 {
   "month": {
-    "description": "Veuillez remplir les champs ci-dessous en fonction des valeurs affichées sur votre fiche de paie (uniquement les valeurs payées par vous, et non par votre employeur).",
+    "description": "Veuillez remplir les champs ci-dessous en fonction des valeurs affichées sur votre fiche de paie.",
     "form": {
       "baseSalary": {
         "label": "Salaire de base"
