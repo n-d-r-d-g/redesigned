@@ -36,6 +36,7 @@ export default function MonthlyCalculations() {
   const [otherTaxableIncome, setOtherTaxableIncome] = useState(new Decimal(0));
   const [chargeableIncome, setChargeableIncome] = useState(new Decimal(0));
   const [taxCharged, setTaxCharged] = useState(new Decimal(0));
+  const [incomeAfterTaxes, setIncomeAfterTaxes] = useState(new Decimal(0));
   const [monthlyTaxChargedCalcRows, setMonthlyTaxChargedCalcRows] = useState<
     Array<TaxCalcRow>
   >([]);
@@ -60,6 +61,11 @@ export default function MonthlyCalculations() {
         const newPerformanceBonus = new Decimal(values.performanceBonus);
         const newOtherTaxableIncome = new Decimal(values.otherTaxableIncome);
         const newChargeableIncome = newBaseSalary
+          .add(newTaxableTravelingAllowance)
+          .add(newInternetAllowance)
+          .add(newPerformanceBonus)
+          .add(newOtherTaxableIncome);
+        let newIncomeAfterTaxes = newBaseSalary
           .add(newTaxableTravelingAllowance)
           .add(newInternetAllowance)
           .add(newPerformanceBonus)
@@ -110,6 +116,7 @@ export default function MonthlyCalculations() {
             taxCharged: decimalToString(newTotalTaxCharged, 2),
           },
         ];
+        newIncomeAfterTaxes = newIncomeAfterTaxes.sub(newTotalTaxCharged);
 
         setBaseSalary(newBaseSalary);
         setTravelingAllowance(newTravelingAllowance);
@@ -121,6 +128,7 @@ export default function MonthlyCalculations() {
         setChargeableIncome(newChargeableIncome);
         setTaxCharged(newTotalTaxCharged);
         setMonthlyTaxChargedCalcRows(newMonthlyTaxChargedCalcRows);
+        setIncomeAfterTaxes(newIncomeAfterTaxes);
       } catch {
         // There are scenarios where isValid hasn't changed to false yet but the values containing errors are being used for calculations
       }
@@ -367,6 +375,25 @@ export default function MonthlyCalculations() {
             )}
           </TableBody>
         </Table>
+      </AccordionItem>
+      <AccordionItem
+        key="incomeAfterTaxes"
+        aria-label={`Rs ${decimalToString(incomeAfterTaxes)}`}
+        title={`Rs ${decimalToString(incomeAfterTaxes)}`}
+        subtitle={t2023To2024("month.output.incomeAfterTaxes.subtitle")}
+        classNames={{
+          heading: "m-0 py-2",
+          content: "pb-4",
+          indicator: "text-2xl text-default-700 rotate-[-180deg]",
+        }}
+        isCompact
+      >
+        <p className="text-sm mb-1">
+          {t2023To2024("month.output.incomeAfterTaxes.description")}
+        </p>
+        <p className="text-sm">
+          = {`Rs ${decimalToString(incomeAfterTaxes, 2)}`}
+        </p>
       </AccordionItem>
     </Accordion>
   );

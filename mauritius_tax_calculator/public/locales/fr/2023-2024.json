@@ -57,6 +57,10 @@
             "taxCharged": "Taxe PAYE"
           }
         }
+      },
+      "incomeAfterTaxes": {
+        "subtitle": "Revenus obtenus après déduction de l'impôt (chiffre arrondi)",
+        "description": "= Revenu total - Taxe PAYE"
       }
     }
   },
