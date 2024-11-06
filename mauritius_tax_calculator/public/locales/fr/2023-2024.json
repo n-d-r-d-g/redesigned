@@ -59,7 +59,7 @@
         }
       },
       "incomeAfterTaxes": {
-        "subtitle": "Revenus obtenus après déduction de l'impôt (chiffre arrondi)",
+        "subtitle": "Revenu obtenu après déduction de l'impôt (chiffre arrondi)",
         "description": "= Revenu total - Taxe PAYE"
       }
     }
