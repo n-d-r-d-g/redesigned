@@ -78,7 +78,7 @@ export default function MonthlyCalculations() {
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
         let newTotalIncome = newBaseSalary
-          .add(newTaxableTravelingAllowance)
+          .add(newTravelingAllowance)
           .add(newInternetAllowance)
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
