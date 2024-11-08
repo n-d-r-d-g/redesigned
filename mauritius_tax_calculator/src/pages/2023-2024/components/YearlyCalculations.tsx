@@ -101,7 +101,7 @@ export default function YearlyCalculations() {
                 taxableLimit: bracket.limit
                   ? decimalToString(bracket.limit)
                   : t2023To2024(
-                      "month.output.taxCharged.table.taxableLimits.remainder"
+                      "month.output.paye.table.taxableLimits.remainder"
                     ),
                 taxableAmount: decimalToString(taxableAmount, 2),
                 taxRate: decimalToString(bracket.rate.mul(100)),
@@ -125,7 +125,7 @@ export default function YearlyCalculations() {
           {
             key: "aggregations",
             taxableLimit: t2023To2024(
-              "month.output.taxCharged.table.taxableLimits.taxCharged"
+              "month.output.paye.table.taxableLimits.taxCharged"
             ),
             taxableAmount: decimalToString(newChargeableIncome, 2),
             taxRate: null,
