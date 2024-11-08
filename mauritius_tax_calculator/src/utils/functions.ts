@@ -20,10 +20,13 @@ export function decimalToString(amount: Decimal, dp?: number) {
   let finalValue: string | number | Decimal = amount;
 
   if (Number.isInteger(dp)) {
-    finalValue = finalValue.toDP(dp);
+    finalValue = finalValue.toDP(dp).toNumber();
   }
 
-  finalValue = finalValue.toNumber().toLocaleString(undefined, {
+  // Get rid of negative zero
+  finalValue ||= 0;
+
+  finalValue = finalValue.toLocaleString(undefined, {
     maximumFractionDigits: dp ?? 0,
     minimumFractionDigits: dp ?? 0,
   });
