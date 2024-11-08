@@ -139,6 +139,12 @@ export const DEFAULT_MONTHLY_INITIAL_VALUES = {
   internetAllowance: 0,
   performanceBonus: 0,
   otherTaxableIncome: 0,
+  age: "18To64",
+  isCitizen: true,
+  isResident: true,
+  isPublicSector: false,
+  isPRB: false,
+  isInDomesticService: false,
 } as const;
 
 export const DEFAULT_YEARLY_INITIAL_VALUES = {
@@ -153,3 +159,11 @@ export const DEFAULT_YEARLY_INITIAL_VALUES = {
   medicalInsurance: 0,
   otherTaxDeductions: 0,
 } as const;
+
+export const CSG_BASE_SALARY_LIMIT = new Decimal(50_000);
+export const CSG_MAX_DOMESTIC_LIMIT = new Decimal(3_000);
+export const CSG_DECREASED_RATE = new Decimal(0.015);
+export const CSG_INCREASE_RATE = new Decimal(0.03);
+
+export const NSF_MAX_MONTHLY_BASIC_WAGE = new Decimal(24_315);
+export const NSF_RATE = new Decimal(0.01);

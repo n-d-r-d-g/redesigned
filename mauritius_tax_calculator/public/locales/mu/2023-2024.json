@@ -1,6 +1,6 @@
 {
   "month": {
-    "description": "Ranpli formiler anba la baze lor bann valer ki afise lor ou peyslip.",
+    "description": "Ranpli formiler anba la baze lor bann valer ki afise lor ou peyslip, otan ki posib.",
     "form": {
       "baseSalary": {
         "label": "Saler debaz"
@@ -16,6 +16,30 @@
       },
       "otherTaxableIncome": {
         "label": "Lezot konpansasion taksab"
+      },
+      "age": {
+        "label": "Laz",
+        "items": {
+          "under18": "Anba 18 an",
+          "18To64": "18 a 64 an",
+          "65To69": "65 a 69 an",
+          "70AndOver": "Lao 70 an"
+        }
+      },
+      "isCitizen": {
+        "label": "Eski ou ena nasyonalite morisyin?"
+      },
+      "isResident": {
+        "label": "Eski ou enn rezidan lil moris?"
+      },
+      "isPublicSector": {
+        "label": "Eski ou travay dan sekter piblik?"
+      },
+      "isPRB": {
+        "label": "Eski ou kouver par PRB?"
+      },
+      "isInDomesticService": {
+        "label": "Eski ou travay dan sekter domestik?"
       }
     },
     "output": {
@@ -40,12 +64,12 @@
           }
         }
       },
-      "taxCharged": {
-        "subtitle": "Taks PAYE (sif arondi) faktire par MRA (afise lor peyslip)",
-        "calculationDescription": "Kalkil taks PAYE: Lor sak ranze,",
+      "paye": {
+        "subtitle": "PAYE (sif arondi) faktire par MRA (afise lor peyslip)",
+        "calculationDescription": "Kalkil PAYE: Lor sak ranze,",
         "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou prosin kalkil</li></ul>",
         "table": {
-          "title": "Kalkil taks PAYE mansyel",
+          "title": "Kalkil PAYE mansyel",
           "headers": {
             "taxableLimit": "Limit taksab (Rs)",
             "taxableAmount": "Montan taksab (Rs)",
@@ -54,13 +78,55 @@
           },
           "taxableLimits": {
             "remainder": "Leres",
-            "taxCharged": "Taks PAYE"
+            "taxCharged": "PAYE"
+          }
+        }
+      },
+      "csg": {
+        "subtitle": "CSG (sif arondi) faktire par MRA (afise lor peyslip)",
+        "table": {
+          "title": "Kalkil CSG mansyel",
+          "headers": {
+            "description": "Deskripsion",
+            "amount": "Montan (Rs)"
+          },
+          "description": {
+            "csg": "CSG"
+          }
+        }
+      },
+      "nsf": {
+        "subtitle": "NSF (sif arondi) faktire par MRA (afise lor peyslip)",
+        "table": {
+          "title": "Kalkil CSG mansyel",
+          "headers": {
+            "description": "Deskripsion",
+            "amount": "Montan (Rs)"
+          },
+          "description": {
+            "nsf": "NSF",
+            "maxMonthlyNSFBasicWage": "Saler debaz mansyel maximal NSF"
           }
         }
       },
       "incomeAfterTaxes": {
-        "subtitle": "Reveni obtenus apre dediksion taks (sif arondi)",
-        "description": "= Reveni total - Taks PAYE"
+        "subtitle": "Reveni apre dediksion taks (sif arondi)",
+        "table": {
+          "title": "Revenu apre dediksion taks",
+          "headers": {
+            "description": "Deskripsion",
+            "subAmount": "Sou-montan (Rs)",
+            "amount": "Montan (Rs)"
+          },
+          "description": {
+            "totalIncome": "Reveni total",
+            "paye": "PAYE",
+            "csg": "CSG",
+            "nsf": "NSF",
+            "totalTaxes": "PAYE + CSG + NSF",
+            "incomeAfterTaxes": "Revenu apre dediksion taks"
+          }
+        }
       }
     }
   },
