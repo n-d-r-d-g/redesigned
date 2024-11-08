@@ -1,3 +1,4 @@
+import FormCheckbox from "@/components/form/FormCheckbox/FormCheckbox";
 import FormNumberInput from "@/components/form/FormNumberInput/FormNumberInput";
 import FormSelect from "@/components/form/FormSelect/FormSelect";
 import ResetButton from "@/components/form/ResetButton/ResetButton";
@@ -47,6 +48,12 @@ export default function FinancialYear2023To2024() {
       .required()
       .min(MIN_MONETARY_AMOUNT)
       .max(MAX_MONETARY_AMOUNT),
+    age: Joi.string().required(),
+    isCitizen: Joi.boolean().required(),
+    isResident: Joi.boolean().required(),
+    isPublicSector: Joi.boolean().required(),
+    isPRB: Joi.boolean().required(),
+    isInDomesticService: Joi.boolean().required(),
   }).messages({
     "any.required": tCommon("errors.required"),
     "number.base": tCommon("errors.numberInvalid"),
@@ -181,6 +188,39 @@ export default function FinancialYear2023To2024() {
                         currency="Rs"
                         min={0}
                       />
+                      <FormSelect
+                        key="monthlyAge"
+                        name="age"
+                        label={t2023To2024("month.form.age.label")}
+                      >
+                        <SelectItem key="under18" value="under18">
+                          {t2023To2024("month.form.age.items.under18")}
+                        </SelectItem>
+                        <SelectItem key="18To64" value="18To64">
+                          {t2023To2024("month.form.age.items.18To64")}
+                        </SelectItem>
+                        <SelectItem key="65To69" value="65To69">
+                          {t2023To2024("month.form.age.items.65To69")}
+                        </SelectItem>
+                        <SelectItem key="70AndOver" value="70AndOver">
+                          {t2023To2024("month.form.age.items.70AndOver")}
+                        </SelectItem>
+                      </FormSelect>
+                      <FormCheckbox name="isCitizen">
+                        {t2023To2024("month.form.isCitizen.label")}
+                      </FormCheckbox>
+                      <FormCheckbox name="isResident">
+                        {t2023To2024("month.form.isResident.label")}
+                      </FormCheckbox>
+                      <FormCheckbox name="isPublicSector">
+                        {t2023To2024("month.form.isPublicSector.label")}
+                      </FormCheckbox>
+                      <FormCheckbox name="isPRB">
+                        {t2023To2024("month.form.isPRB.label")}
+                      </FormCheckbox>
+                      <FormCheckbox name="isInDomesticService">
+                        {t2023To2024("month.form.isInDomesticService.label")}
+                      </FormCheckbox>
                     </form>
                   </CardBody>
                 </Card>

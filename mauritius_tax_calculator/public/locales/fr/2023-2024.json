@@ -1,6 +1,6 @@
 {
   "month": {
-    "description": "Veuillez remplir les champs ci-dessous en fonction des valeurs affichées sur votre fiche de paie.",
+    "description": "Veuillez remplir les champs ci-dessous en fonction des valeurs affichées sur votre fiche de paie, là où c'est possible.",
     "form": {
       "baseSalary": {
         "label": "Salaire de base"
@@ -16,6 +16,30 @@
       },
       "otherTaxableIncome": {
         "label": "Autres revenus imposables"
+      },
+      "age": {
+        "label": "Groupe d'âge",
+        "items": {
+          "under18": "Moins de 18 ans",
+          "18To64": "18 à 64 ans",
+          "65To69": "65 à 69 ans",
+          "70AndOver": "Plus de 70 ans"
+        }
+      },
+      "isCitizen": {
+        "label": "Avez-vous la nationalité mauricienne?"
+      },
+      "isResident": {
+        "label": "Êtes-vous résident à l'île Maurice?"
+      },
+      "isPublicSector": {
+        "label": "Travaillez-vous dans le secteur public?"
+      },
+      "isPRB": {
+        "label": "Êtes-vous couvert par le PRB?"
+      },
+      "isInDomesticService": {
+        "label": "Travaillez-vous dans le secteur des services domestiques?"
       }
     },
     "output": {
@@ -40,12 +64,12 @@
           }
         }
       },
-      "taxCharged": {
-        "subtitle": "Taxe PAYE (chiffre arrondi) facturée par la MRA (affichée sur la fiche de paie)",
-        "calculationDescription": "La taxe PAYE est calculée comme suit. Sur chaque rangée,",
+      "paye": {
+        "subtitle": "PAYE (chiffre arrondi) facturée par la MRA (affichée sur la fiche de paie)",
+        "calculationDescription": "La PAYE est calculée comme suit. Sur chaque rangée,",
         "calculationSteps": "<ul><li>Si le revenu imposable restant est inférieur à la limite imposable, le revenu imposable restant est utilisé comme montant imposable</li><li>dans le cas contraire, la limite imposable est utilisée comme le montant imposable et la limite imposable est soustraite du revenu imposable restant pour le prochain calcul</li></ul>",
         "table": {
-          "title": "Calcul de la taxe PAYE mensuel",
+          "title": "Calcul de la PAYE mensuel",
           "headers": {
             "taxableLimit": "Limite imposable (Rs)",
             "taxableAmount": "Montant imposable (Rs)",
@@ -54,13 +78,55 @@
           },
           "taxableLimits": {
             "remainder": "Le reste",
-            "taxCharged": "Taxe PAYE"
+            "taxCharged": "PAYE"
+          }
+        }
+      },
+      "csg": {
+        "subtitle": "CSG (chiffre arrondi) facturée par la MRA (affichée sur la fiche de paie)",
+        "table": {
+          "title": "Calcul de la CSG mensuel",
+          "headers": {
+            "description": "Description",
+            "amount": "Montant (Rs)"
+          },
+          "description": {
+            "csg": "CSG"
+          }
+        }
+      },
+      "nsf": {
+        "subtitle": "NSF (chiffre arrondi) facturée par la MRA (affichée sur la fiche de paie)",
+        "table": {
+          "title": "Calcul de la NSF mensuel",
+          "headers": {
+            "description": "Description",
+            "amount": "Montant (Rs)"
+          },
+          "description": {
+            "nsf": "NSF",
+            "maxMonthlyNSFBasicWage": "Salaire de base mensuel maximal NSF"
           }
         }
       },
       "incomeAfterTaxes": {
-        "subtitle": "Revenu obtenu après déduction de l'impôt (chiffre arrondi)",
-        "description": "= Revenu total - Taxe PAYE"
+        "subtitle": "Revenu obtenu après déduction des impôts (chiffre arrondi)",
+        "table": {
+          "title": "Revenu obtenu après déduction des impôts",
+          "headers": {
+            "description": "Description",
+            "subAmount": "Sous-montant (Rs)",
+            "amount": "Montant (Rs)"
+          },
+          "description": {
+            "totalIncome": "Revenu total",
+            "paye": "PAYE",
+            "csg": "CSG",
+            "nsf": "NSF",
+            "totalTaxes": "PAYE + CSG + NSF",
+            "incomeAfterTaxes": "Revenu obtenu après déduction des impôts"
+          }
+        }
       }
     }
   },

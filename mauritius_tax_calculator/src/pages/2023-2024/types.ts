@@ -4,6 +4,12 @@ export interface MonthlyFormValues {
   internetAllowance: number;
   performanceBonus: number;
   otherTaxableIncome: number;
+  age: "under18" | "18To64" | "65To69" | "70AndOver";
+  isCitizen: boolean;
+  isResident: boolean;
+  isPublicSector: boolean;
+  isPRB: boolean;
+  isInDomesticService: boolean;
 }
 
 export interface YearlyFormValues {
