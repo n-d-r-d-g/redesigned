@@ -12,9 +12,12 @@ export default function FormCheckbox({ name, ...props }: FormCheckboxProps) {
     <Checkbox
       radius="sm"
       isInvalid={!!meta.error}
+      isSelected={field.value}
+      classNames={{
+        label: "text-sm",
+      }}
       {...props}
       {...field}
-      isSelected={field.value}
     />
   );
 }
