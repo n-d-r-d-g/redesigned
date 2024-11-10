@@ -30,3 +30,55 @@ export function decimalToString(amount: Decimal, dp?: number) {
 
   return finalValue;
 }
+
+export function retrieveFinancialPeriod(
+  language: string,
+  startYear: number,
+  endYear: number
+) {
+  const startDate = 1;
+  const startMonth = 7;
+  const endDate = 30;
+  const endMonth = 6;
+
+  if (language === "mu") {
+    const muMonths = {
+      1: "Zan",
+      2: "Fev",
+      3: "Mar",
+      4: "Avr",
+      5: "Me",
+      6: "Zin",
+      7: "Ziy",
+      8: "Ut",
+      9: "Sep",
+      10: "Okt",
+      11: "Nov",
+      12: "Des",
+    };
+    const start = `${muMonths[startMonth]} ${startDate}, ${startYear}`;
+    const end = `${muMonths[endMonth]} ${endDate}, ${endYear}`;
+
+    return {
+      start,
+      end,
+    };
+  }
+
+  const dateTimeIntl = new Intl.DateTimeFormat(language, {
+    dateStyle: "medium",
+  });
+  const paddedStartDate = String(startDate).padStart(2, "0");
+  const paddedStartMonth = String(startMonth).padStart(2, "0");
+  const paddedEndDate = String(endDate).padStart(2, "0");
+  const paddedEndMonth = String(endMonth).padStart(2, "0");
+
+  return {
+    start: dateTimeIntl.format(
+      new Date(`${startYear}-${paddedStartMonth}-${paddedStartDate}`)
+    ),
+    end: dateTimeIntl.format(
+      new Date(`${endYear}-${paddedEndMonth}-${paddedEndDate}`)
+    ),
+  };
+}

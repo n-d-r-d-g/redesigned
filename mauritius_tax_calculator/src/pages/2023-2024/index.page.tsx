@@ -3,7 +3,7 @@ import FormNumberInput from "@/components/form/FormNumberInput/FormNumberInput";
 import FormSelect from "@/components/form/FormSelect/FormSelect";
 import ResetButton from "@/components/form/ResetButton/ResetButton";
 import { joiFormikAdapter } from "@/utils/adapters/joi-formik-adapter";
-import { noop } from "@/utils/functions";
+import { noop, retrieveFinancialPeriod } from "@/utils/functions";
 import { Card, CardBody, SelectItem, Tab, Tabs } from "@nextui-org/react";
 import { Formik } from "formik";
 import Joi from "joi";
@@ -11,6 +11,7 @@ import { GetStaticProps } from "next";
 import { Trans, useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import Link from "next/link";
+import { useMemo } from "react";
 import {
   DEFAULT_I18N_LOCALE,
   DEFAULT_I18N_NAMESPACE,
@@ -25,7 +26,7 @@ import {
 } from "./reusables";
 
 export default function FinancialYear2023To2024() {
-  const { t: tCommon } = useTranslation("common");
+  const { i18n, t: tCommon } = useTranslation("common");
   const { t: t2023To2024 } = useTranslation("2023-2024");
   const monthlySchema = Joi.object({
     baseSalary: Joi.number()
@@ -105,9 +106,17 @@ export default function FinancialYear2023To2024() {
     "number.max": tCommon("errors.numberLTE", { count: MAX_MONETARY_AMOUNT }),
   });
 
+  const financialPeriod = useMemo(
+    () => retrieveFinancialPeriod(i18n.language, 2023, 2024),
+    [i18n.language]
+  );
+
   return (
     <>
       <h1>{tCommon("websiteTitle")}</h1>
+      <p className="text-center text-lg font-bold one-col-text mb-4">
+        {financialPeriod.start} - {financialPeriod.end}
+      </p>
       <p className="text-center one-col-text">
         {tCommon("websiteDescription")}
       </p>
