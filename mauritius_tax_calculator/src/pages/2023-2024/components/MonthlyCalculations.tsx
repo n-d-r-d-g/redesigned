@@ -441,11 +441,14 @@ export default function MonthlyCalculations() {
           </TableHeader>
           <TableBody>
             <TableRow key="csg">
-              <TableCell className="font-bold">
-                {t2023To2024("month.output.csg.table.description.csg")} (
-                {t2023To2024("month.form.baseSalary.label")} x{" "}
-                {csgRate.mul(100).toNumber()}
-                %)
+              <TableCell>
+                <span className="font-bold">
+                  {t2023To2024("month.output.csg.table.description.csg")}
+                </span>{" "}
+                ({t2023To2024("month.form.baseSalary.label")} x{" "}
+                {csgRate.mul(100).toNumber()}% = Rs{" "}
+                {decimalToString(new Decimal(values.baseSalary), 2)} x{" "}
+                {csgRate.mul(100).toNumber()}%)
               </TableCell>
               <TableCell className="text-end font-bold border-t-1 border-b-4 border-double border-default-500">
                 {decimalToString(csg, 2)}
@@ -479,8 +482,11 @@ export default function MonthlyCalculations() {
           </TableHeader>
           <TableBody>
             <TableRow key="nsf">
-              <TableCell className="font-bold">
-                {t2023To2024("month.output.nsf.table.description.nsf")} (
+              <TableCell>
+                <span className="font-bold">
+                  {t2023To2024("month.output.nsf.table.description.nsf")}
+                </span>{" "}
+                (
                 {t2023To2024(
                   "month.output.nsf.table.description.maxMonthlyNSFBasicWage"
                 )}{" "}
