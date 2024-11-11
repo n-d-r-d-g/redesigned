@@ -19,3 +19,19 @@ This project aims at solving the following issues in the tool:
 - Technical terms used on the website may be legally correct but not user-friendly, especially for first-timers.
 - The only supported language is English.
 - No dark mode (Based on preference).
+
+## How this app might be useful
+
+### Payslip verification
+
+At the end of every month, most employees don't make sure that the values in their payslip are correct. It's time-consuming, error-prone, feels complex and most assume there won't be mistakes.
+
+Nevertheless, failure to do this verification can often lead to paying more than required and not even realizing it.
+
+Even the payroll team can make mistakes!
+
+By using this app, you can quickly cross check whether your payslip contains errors. If so, you can contact the payroll team for clarification.
+
+### Pre-negotiation
+
+Whenever you need to negotiate a package, it's important to take into account how much of it you really receive, i.e. after taxes. This way, you can make a calculated decision based on your needs.
