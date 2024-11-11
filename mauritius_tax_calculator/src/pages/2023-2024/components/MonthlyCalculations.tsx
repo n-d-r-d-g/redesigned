@@ -523,7 +523,7 @@ export default function MonthlyCalculations() {
             components={{
               Link: (
                 <a
-                  href="https://www.mra.mu/download/GuideToEmployersNPFNSF.pdf#page=10"
+                  href="https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator/mra-pdfs/2023-2024/nsf-employers-guide.pdf"
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                 />

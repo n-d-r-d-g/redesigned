@@ -108,7 +108,7 @@
             "nsfInsurableSalary": "NSF insurable salary"
           }
         },
-        "nsfInsurableSalaryExplanation": "NSF is calculated on the base salary. However, only part of the basic salary is used in the calculation, i.e. <Link>a minimum & a maximum set by the MRA</Link>."
+        "nsfInsurableSalaryExplanation": "NSF is calculated on the base salary. However, only part of the basic salary is used in the calculation, i.e. <Link>a minimum & a maximum set by the MRA</Link> (page 9)."
       },
       "incomeAfterTaxes": {
         "subtitle": "Income received after tax deduction (rounded off value)",
