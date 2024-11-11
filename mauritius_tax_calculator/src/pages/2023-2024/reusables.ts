@@ -165,5 +165,10 @@ export const CSG_MAX_DOMESTIC_LIMIT = new Decimal(3_000);
 export const CSG_DECREASED_RATE = new Decimal(0.015);
 export const CSG_INCREASE_RATE = new Decimal(0.03);
 
-export const NSF_MAX_MONTHLY_BASIC_WAGE = new Decimal(24_315);
+export const NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE =
+  new Decimal(2_375);
+export const NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE = new Decimal(
+  3_740
+);
+export const NSF_MAX_MONTHLY_INSURABLE_BASIC_WAGE = new Decimal(24_315);
 export const NSF_RATE = new Decimal(0.01);

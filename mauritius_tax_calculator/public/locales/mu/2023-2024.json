@@ -105,9 +105,10 @@
           },
           "description": {
             "nsf": "NSF",
-            "maxMonthlyNSFBasicWage": "Saler debaz mansyel maximal NSF"
+            "nsfInsurableSalary": "Saler asirab NSF"
           }
-        }
+        },
+        "nsfInsurableSalaryExplanation": "NSF kalkile lor saler debaz. Selman, zis enn parti saler debaz servi dan kalkil la, i.e. <Link>enn minimum ek enn maximum fixe par MRA</Link>."
       },
       "incomeAfterTaxes": {
         "subtitle": "Reveni apre dediksion taks (sif arondi)",

@@ -105,9 +105,10 @@
           },
           "description": {
             "nsf": "NSF",
-            "maxMonthlyNSFBasicWage": "Maximum monthly NSF basic wage"
+            "nsfInsurableSalary": "NSF insurable salary"
           }
-        }
+        },
+        "nsfInsurableSalaryExplanation": "NSF is calculated on the base salary. However, only part of the basic salary is used in the calculation, i.e. <Link>a minimum & a maximum set by the MRA</Link>."
       },
       "incomeAfterTaxes": {
         "subtitle": "Income received after tax deduction (rounded off value)",

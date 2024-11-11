@@ -21,7 +21,9 @@ import {
   CSG_MAX_DOMESTIC_LIMIT,
   INITIAL_MONTHLY_TAXABLE_BRACKETS,
   MRA_MONTHLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
-  NSF_MAX_MONTHLY_BASIC_WAGE,
+  NSF_MAX_MONTHLY_INSURABLE_BASIC_WAGE,
+  NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE,
+  NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE,
   NSF_RATE,
 } from "../reusables";
 import { MonthlyFormValues, TaxCalcRow } from "../types";
@@ -47,6 +49,7 @@ export default function MonthlyCalculations() {
   const [csgRate, setCSGRate] = useState(new Decimal(0));
   const [nsf, setNSF] = useState(new Decimal(0));
   const [nsfRate, setNSFRate] = useState(new Decimal(0));
+  const [nsfInsurableSalary, setNSFInsurableSalary] = useState(new Decimal(0));
   const [totalTaxes, setTotalTaxes] = useState(new Decimal(0));
   const [incomeAfterTaxes, setIncomeAfterTaxes] = useState(new Decimal(0));
   const [monthlyPAYECalcRows, setMonthlyPAYECalcRows] = useState<
@@ -136,6 +139,17 @@ export default function MonthlyCalculations() {
         let newCSGRate = new Decimal(0);
         const isExemptFromNSF = ["under18", "70AndOver"].includes(values.age);
         const newNSFRate = isExemptFromNSF ? new Decimal(0) : NSF_RATE;
+        const minNSFInsurableSalary = values.isInDomesticService
+          ? NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE
+          : NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE;
+        const maxNSFInsurableSalary = NSF_MAX_MONTHLY_INSURABLE_BASIC_WAGE;
+        const newNSFInsurableSalary = new Decimal(
+          newBaseSalary.lessThan(minNSFInsurableSalary)
+            ? 0
+            : newBaseSalary.greaterThan(maxNSFInsurableSalary)
+              ? maxNSFInsurableSalary
+              : newBaseSalary
+        );
 
         if (!isExemptFromCSG) {
           newCSGRate = newBaseSalary.lessThan(CSG_BASE_SALARY_LIMIT)
@@ -146,7 +160,7 @@ export default function MonthlyCalculations() {
         const newCSG = newBaseSalary.mul(newCSGRate);
         const newNSF = isExemptFromNSF
           ? new Decimal(0)
-          : NSF_MAX_MONTHLY_BASIC_WAGE.mul(newNSFRate);
+          : newNSFInsurableSalary.mul(newNSFRate);
         const newTotalTaxes = newPAYE.add(newCSG).add(newNSF);
         const newIncomeAfterTaxes = newTotalIncome.sub(newTotalTaxes);
 
@@ -163,6 +177,7 @@ export default function MonthlyCalculations() {
         setCSGRate(newCSGRate);
         setCSG(newCSG);
         setNSFRate(newNSFRate);
+        setNSFInsurableSalary(newNSFInsurableSalary);
         setNSF(newNSF);
         setTotalTaxes(newTotalTaxes);
         setMonthlyPAYECalcRows(newMonthlyPAYECalcRows);
@@ -486,12 +501,12 @@ export default function MonthlyCalculations() {
                 <span className="font-bold">
                   {t2023To2024("month.output.nsf.table.description.nsf")}
                 </span>{" "}
-                (
+                (*
                 {t2023To2024(
-                  "month.output.nsf.table.description.maxMonthlyNSFBasicWage"
+                  "month.output.nsf.table.description.nsfInsurableSalary"
                 )}{" "}
                 x {nsfRate.mul(100).toNumber()}% = Rs{" "}
-                {decimalToString(NSF_MAX_MONTHLY_BASIC_WAGE, 2)} x{" "}
+                {decimalToString(nsfInsurableSalary, 2)} x{" "}
                 {nsfRate.mul(100).toNumber()}%)
               </TableCell>
               <TableCell className="text-end font-bold border-t-1 border-b-4 border-double border-default-500">
@@ -500,6 +515,22 @@ export default function MonthlyCalculations() {
             </TableRow>
           </TableBody>
         </Table>
+        <p className="text-sm">
+          *
+          <Trans
+            ns="2023-2024"
+            i18nKey="month.output.nsf.nsfInsurableSalaryExplanation"
+            components={{
+              Link: (
+                <a
+                  href="https://www.mra.mu/download/GuideToEmployersNPFNSF.pdf#page=10"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                />
+              ),
+            }}
+          />
+        </p>
       </AccordionItem>
       <AccordionItem
         key="incomeAfterTaxes"
