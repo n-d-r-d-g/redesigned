@@ -462,7 +462,7 @@ export default function MonthlyCalculations() {
                 </span>{" "}
                 ({t2023To2024("month.form.baseSalary.label")} x{" "}
                 {csgRate.mul(100).toNumber()}% = Rs{" "}
-                {decimalToString(new Decimal(values.baseSalary), 2)} x{" "}
+                {decimalToString(new Decimal(baseSalary), 2)} x{" "}
                 {csgRate.mul(100).toNumber()}%)
               </TableCell>
               <TableCell className="text-end font-bold border-t-1 border-b-4 border-double border-default-500">
