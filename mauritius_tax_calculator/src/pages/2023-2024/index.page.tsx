@@ -62,7 +62,11 @@ export default function FinancialYear2023To2024() {
     "number.max": tCommon("errors.numberLTE", { count: MAX_MONETARY_AMOUNT }),
   });
   const yearlySchema = Joi.object({
-    baseSalary: Joi.number()
+    monthlyBaseSalary: Joi.number()
+      .required()
+      .min(MIN_MONETARY_AMOUNT)
+      .max(MAX_MONETARY_AMOUNT),
+    totalBaseSalary: Joi.number()
       .required()
       .min(MIN_MONETARY_AMOUNT)
       .max(MAX_MONETARY_AMOUNT),
@@ -87,18 +91,16 @@ export default function FinancialYear2023To2024() {
       .min(MIN_MONETARY_AMOUNT)
       .max(MAX_MONETARY_AMOUNT),
     numOfDependents: Joi.string().required(),
-    housingLoanInterest: Joi.number()
-      .required()
-      .min(MIN_MONETARY_AMOUNT)
-      .max(MAX_MONETARY_AMOUNT),
-    medicalInsurance: Joi.number()
-      .required()
-      .min(MIN_MONETARY_AMOUNT)
-      .max(MAX_MONETARY_AMOUNT),
     otherTaxDeductions: Joi.number()
       .required()
       .min(MIN_MONETARY_AMOUNT)
       .max(MAX_MONETARY_AMOUNT),
+    age: Joi.string().required(),
+    isCitizen: Joi.boolean().required(),
+    isResident: Joi.boolean().required(),
+    isPublicSector: Joi.boolean().required(),
+    isPRB: Joi.boolean().required(),
+    isInDomesticService: Joi.boolean().required(),
   }).messages({
     "any.required": tCommon("errors.required"),
     "number.base": tCommon("errors.numberInvalid"),
@@ -285,11 +287,22 @@ export default function FinancialYear2023To2024() {
                       />
                       <ResetButton />
                       <FormNumberInput
-                        key="yearlyBaseSalary"
-                        name="baseSalary"
-                        label={t2023To2024("year.form.baseSalary.label")}
+                        key="yearlyMonthlyBaseSalary"
+                        name="monthlyBaseSalary"
+                        label={t2023To2024("year.form.monthlyBaseSalary.label")}
                         description={t2023To2024(
-                          "year.form.baseSalary.description"
+                          "year.form.monthlyBaseSalary.description"
+                        )}
+                        placeholder="0"
+                        currency="Rs"
+                        min={0}
+                      />
+                      <FormNumberInput
+                        key="yearlyTotalBaseSalary"
+                        name="totalBaseSalary"
+                        label={t2023To2024("year.form.totalBaseSalary.label")}
+                        description={t2023To2024(
+                          "year.form.totalBaseSalary.description"
                         )}
                         placeholder="0"
                         currency="Rs"
@@ -377,30 +390,6 @@ export default function FinancialYear2023To2024() {
                         </SelectItem>
                       </FormSelect>
                       <FormNumberInput
-                        key="yearlyMedicalInsurance"
-                        name="medicalInsurance"
-                        label={t2023To2024("year.form.medicalInsurance.label")}
-                        description={t2023To2024(
-                          "year.form.medicalInsurance.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="yearlyHousingLoanInterest"
-                        name="housingLoanInterest"
-                        label={t2023To2024(
-                          "year.form.housingLoanInterest.label"
-                        )}
-                        description={t2023To2024(
-                          "year.form.housingLoanInterest.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
                         key="yearlyOtherTaxDeductions"
                         name="otherTaxDeductions"
                         label={t2023To2024(
@@ -413,6 +402,39 @@ export default function FinancialYear2023To2024() {
                         currency="Rs"
                         min={0}
                       />
+                      <FormSelect
+                        key="yearlyAge"
+                        name="age"
+                        label={t2023To2024("year.form.age.label")}
+                      >
+                        <SelectItem key="under18" value="under18">
+                          {t2023To2024("year.form.age.items.under18")}
+                        </SelectItem>
+                        <SelectItem key="18To64" value="18To64">
+                          {t2023To2024("year.form.age.items.18To64")}
+                        </SelectItem>
+                        <SelectItem key="65To69" value="65To69">
+                          {t2023To2024("year.form.age.items.65To69")}
+                        </SelectItem>
+                        <SelectItem key="70AndOver" value="70AndOver">
+                          {t2023To2024("year.form.age.items.70AndOver")}
+                        </SelectItem>
+                      </FormSelect>
+                      <FormCheckbox name="isCitizen">
+                        {t2023To2024("year.form.isCitizen.label")}
+                      </FormCheckbox>
+                      <FormCheckbox name="isResident">
+                        {t2023To2024("year.form.isResident.label")}
+                      </FormCheckbox>
+                      <FormCheckbox name="isPublicSector">
+                        {t2023To2024("year.form.isPublicSector.label")}
+                      </FormCheckbox>
+                      <FormCheckbox name="isPRB">
+                        {t2023To2024("year.form.isPRB.label")}
+                      </FormCheckbox>
+                      <FormCheckbox name="isInDomesticService">
+                        {t2023To2024("year.form.isInDomesticService.label")}
+                      </FormCheckbox>
                     </form>
                   </CardBody>
                 </Card>

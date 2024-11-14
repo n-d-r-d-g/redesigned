@@ -15,10 +15,10 @@ import { useFormikContext } from "formik";
 import { Trans, useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 import {
-  CSG_BASE_SALARY_LIMIT,
+  CSG_MONTHLY_BASE_SALARY_LIMIT,
   CSG_DECREASED_RATE,
-  CSG_INCREASE_RATE,
-  CSG_MAX_DOMESTIC_LIMIT,
+  CSG_INCREASED_RATE,
+  CSG_MAX_MONTHLY_DOMESTIC_LIMIT,
   INITIAL_MONTHLY_TAXABLE_BRACKETS,
   MRA_MONTHLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
   NSF_MAX_MONTHLY_INSURABLE_BASIC_WAGE,
@@ -134,7 +134,7 @@ export default function MonthlyCalculations() {
         const isExemptFromCSG =
           (!values.isCitizen && !values.isResident) ||
           (values.isInDomesticService &&
-            newBaseSalary.lessThan(CSG_MAX_DOMESTIC_LIMIT)) ||
+            newBaseSalary.lessThan(CSG_MAX_MONTHLY_DOMESTIC_LIMIT)) ||
           (values.isPublicSector && !values.isPRB);
         let newCSGRate = new Decimal(0);
         const isExemptFromNSF = ["under18", "70AndOver"].includes(values.age);
@@ -152,9 +152,11 @@ export default function MonthlyCalculations() {
         );
 
         if (!isExemptFromCSG) {
-          newCSGRate = newBaseSalary.lessThan(CSG_BASE_SALARY_LIMIT)
+          newCSGRate = newBaseSalary.lessThanOrEqualTo(
+            CSG_MONTHLY_BASE_SALARY_LIMIT
+          )
             ? CSG_DECREASED_RATE
-            : CSG_INCREASE_RATE;
+            : CSG_INCREASED_RATE;
         }
 
         const newCSG = newBaseSalary.mul(newCSGRate);
@@ -460,9 +462,12 @@ export default function MonthlyCalculations() {
                 <span className="font-bold">
                   {t2023To2024("month.output.csg.table.description.csg")}
                 </span>{" "}
-                ({t2023To2024("month.form.baseSalary.label")} x{" "}
-                {csgRate.mul(100).toNumber()}% = Rs{" "}
-                {decimalToString(new Decimal(baseSalary), 2)} x{" "}
+                ({t2023To2024("month.form.baseSalary.label")}
+                {" x "}
+                {csgRate.mul(100).toNumber()}%{" = "}
+                {"Rs "}
+                {decimalToString(baseSalary, 2)}
+                {" x "}
                 {csgRate.mul(100).toNumber()}%)
               </TableCell>
               <TableCell className="text-end font-bold border-t-1 border-b-4 border-double border-default-500">
@@ -504,9 +509,12 @@ export default function MonthlyCalculations() {
                 (*
                 {t2023To2024(
                   "month.output.nsf.table.description.nsfInsurableSalary"
-                )}{" "}
-                x {nsfRate.mul(100).toNumber()}% = Rs{" "}
-                {decimalToString(nsfInsurableSalary, 2)} x{" "}
+                )}
+                {" x "}
+                {nsfRate.mul(100).toNumber()}%{" = "}
+                {"Rs "}
+                {decimalToString(nsfInsurableSalary, 2)}
+                {" x "}
                 {nsfRate.mul(100).toNumber()}%)
               </TableCell>
               <TableCell className="text-end font-bold border-t-1 border-b-4 border-double border-default-500">

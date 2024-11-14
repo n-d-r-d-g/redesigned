@@ -134,8 +134,12 @@
   "year": {
     "description": "<p>Pu tou depans ki ou finn fer an parti ou swa an totalite dan lane fiskal, ranpli valer ki ou finn paye, pa ou anplwayer. Vizit sit web MRA (<MRAExemptIncomeLink>reveni non taksab</MRAExemptIncomeLink> ek <MRADeductionsLink>soulazman, dediksion & alokasion</MRADeductionsLink>) pou plis informasion.</p>",
     "form": {
-      "baseSalary": {
-        "label": "Saler debaz (12 mwa)",
+      "monthlyBaseSalary": {
+        "label": "Saler debaz mansyel (pou 1 mwa)",
+        "description": "Saler debaz mansyel pou enn mwa travay konplet."
+      },
+      "totalBaseSalary": {
+        "label": "Saler debaz total (12 mwa)",
         "description": "Kalkil montan total saler debaz pou lane fiskal."
       },
       "eoyBonus": {
@@ -177,8 +181,32 @@
         "description": "Kalkil montan total lintere lor lonn imobilie pou lane fiskal."
       },
       "otherTaxDeductions": {
-        "label": "Lezot dediksion taks",
-        "description": "Kalkil montan total bann lezot dediksion taks pou lane fiskal."
+        "label": "Dediksion taks",
+        "description": "Kalkil montan total bann dediksion taks pou lane fiskal."
+      },
+      "age": {
+        "label": "Laz",
+        "items": {
+          "under18": "Anba 18 an",
+          "18To64": "18 a 64 an",
+          "65To69": "65 a 69 an",
+          "70AndOver": "Lao 70 an"
+        }
+      },
+      "isCitizen": {
+        "label": "Eski ou ena nasyonalite morisyin?"
+      },
+      "isResident": {
+        "label": "Eski ou enn rezidan lil moris?"
+      },
+      "isPublicSector": {
+        "label": "Eski ou travay dan sekter piblik?"
+      },
+      "isPRB": {
+        "label": "Eski ou kouver par PRB?"
+      },
+      "isInDomesticService": {
+        "label": "Eski ou travay dan sekter domestik?"
       }
     },
     "output": {
@@ -204,14 +232,14 @@
             "ietDeductions": "Dediksion pou depandan",
             "medicalInsurance": "Lasirans medikal",
             "housingLoanInterest": "Lintere lor lonn imobilie",
-            "otherTaxDeductions": "Lezot dediksion taks",
+            "otherTaxDeductions": "Dediksion taks",
             "totalDeductions": "Dediksion total",
             "chargeableIncome": "Reveni taksab (Reveni total - Dediksion total)"
           }
         }
       },
-      "taxCharged": {
-        "subtitle": "Innkom taks (PAYE) faktire par MRA (sif arondi)",
+      "paye": {
+        "subtitle": "PAYE (Innkom taks) faktire par MRA (sif arondi)",
         "calculationDescription": "Kalkil taks PAYE: Lor sak ranze,",
         "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou prosin kalkil</li></ul>",
         "table": {
@@ -224,7 +252,58 @@
           },
           "taxableLimits": {
             "remainder": "Leres",
-            "taxCharged": "Innkom taks PAYE"
+            "taxCharged": "PAYE"
+          }
+        }
+      },
+      "csg": {
+        "subtitle": "CSG (sif arondi) faktire par MRA",
+        "table": {
+          "title": "Kalkil CSG mansyel",
+          "headers": {
+            "description": "Deskripsion",
+            "amount": "Montan (Rs)"
+          },
+          "description": {
+            "totalBaseSalary": "Saler debaz total",
+            "totalBaseSalaryCSG": "CSG pou saler debaz total",
+            "monthlyBaseSalary": "Saler debaz mansyel",
+            "eoyBonusCSG": "CSG pou bonis EOY",
+            "csg": "CSG"
+          }
+        }
+      },
+      "nsf": {
+        "subtitle": "NSF (sif arondi) faktire par MRA",
+        "table": {
+          "title": "Kalkil CSG mansyel",
+          "headers": {
+            "description": "Deskripsion",
+            "amount": "Montan (Rs)"
+          },
+          "description": {
+            "nsf": "NSF",
+            "nsfInsurableSalary": "Saler asirab NSF"
+          }
+        },
+        "nsfInsurableSalaryExplanation": "NSF kalkile lor saler debaz. Selman, zis enn parti saler debaz servi dan kalkil la, i.e. <Link>enn minimum ek enn maximum fixe par MRA</Link> (paz 9)."
+      },
+      "incomeAfterTaxes": {
+        "subtitle": "Reveni apre dediksion taks (sif arondi)",
+        "table": {
+          "title": "Revenu apre dediksion taks",
+          "headers": {
+            "description": "Deskripsion",
+            "subAmount": "Sou-montan (Rs)",
+            "amount": "Montan (Rs)"
+          },
+          "description": {
+            "totalIncome": "Reveni total",
+            "paye": "PAYE",
+            "csg": "CSG",
+            "nsf": "NSF",
+            "totalTaxes": "PAYE + CSG + NSF",
+            "incomeAfterTaxes": "Revenu apre dediksion taks"
           }
         }
       }
