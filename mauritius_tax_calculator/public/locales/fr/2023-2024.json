@@ -134,8 +134,12 @@
   "year": {
     "description": "<p>Pour toute dépense que vous avez engagée en partie ou en totalité au cours de l'année fiscale, veuillez remplir le champ correspondant ci-dessous en fonction du montant que vous avez payé, et non votre employeur. Consultez le site web de la MRA (<MRAExemptIncomeLink>revenu non imposable</MRAExemptIncomeLink> et <MRADeductionsLink>allégements, déductions & allocations</MRADeductionsLink>) pour plus d'infos.</p>",
     "form": {
-      "baseSalary": {
-        "label": "Salaire de base (12 mois)",
+      "monthlyBaseSalary": {
+        "label": "Salaire de base mensuel (pour 1 mois)",
+        "description": "Le salaire de base mensuel pour un mois complet de travail."
+      },
+      "totalBaseSalary": {
+        "label": "Salaire de base total (pour 12 mois)",
         "description": "Calculez le montant total du salaire de base pour l'année fiscale."
       },
       "eoyBonus": {
@@ -177,8 +181,32 @@
         "description": "Calculez le montant total des intérêts sur les prêts immobiliers pour l'année fiscale."
       },
       "otherTaxDeductions": {
-        "label": "Autres déductions fiscales",
-        "description": "Calculez le montant total des autres déductions fiscales pour l'année fiscale."
+        "label": "Déductions fiscales",
+        "description": "Calculez le montant total des déductions fiscales pour l'année fiscale."
+      },
+      "age": {
+        "label": "Groupe d'âge",
+        "items": {
+          "under18": "Moins de 18 ans",
+          "18To64": "18 à 64 ans",
+          "65To69": "65 à 69 ans",
+          "70AndOver": "Plus de 70 ans"
+        }
+      },
+      "isCitizen": {
+        "label": "Avez-vous la nationalité mauricienne?"
+      },
+      "isResident": {
+        "label": "Êtes-vous résident à l'île Maurice?"
+      },
+      "isPublicSector": {
+        "label": "Travaillez-vous dans le secteur public?"
+      },
+      "isPRB": {
+        "label": "Êtes-vous couvert par le PRB?"
+      },
+      "isInDomesticService": {
+        "label": "Travaillez-vous dans le secteur des services domestiques?"
       }
     },
     "output": {
@@ -204,14 +232,14 @@
             "ietDeductions": "Déduction pour personnes à charge",
             "medicalInsurance": "Assurance médicale",
             "housingLoanInterest": "Intérêts sur les prêts immobiliers",
-            "otherTaxDeductions": "Autres déductions fiscales",
+            "otherTaxDeductions": "Déductions fiscales",
             "totalDeductions": "Total des déductions",
             "chargeableIncome": "Revenu imposable (Revenu total - Total des déductions)"
           }
         }
       },
-      "taxCharged": {
-        "subtitle": "Impôt sur le revenu (PAYE) facturé par la MRA (chiffre arrondi)",
+      "paye": {
+        "subtitle": "PAYE (Impôt sur le revenu) facturé par la MRA (chiffre arrondi)",
         "calculationDescription": "La taxe PAYE est calculée comme suit. Sur chaque rangée,",
         "calculationSteps": "<ul><li>Si le revenu imposable restant est inférieur à la limite imposable, le revenu imposable restant est utilisé comme montant imposable</li><li>dans le cas contraire, la limite imposable est utilisée comme le montant imposable et la limite imposable est soustraite du revenu imposable restant pour le prochain calcul</li></ul>",
         "table": {
@@ -224,7 +252,58 @@
           },
           "taxableLimits": {
             "remainder": "Le reste",
-            "taxCharged": "Impôt sur le revenu (PAYE)"
+            "taxCharged": "PAYE"
+          }
+        }
+      },
+      "csg": {
+        "subtitle": "CSG (chiffre arrondi) facturée par la MRA",
+        "table": {
+          "title": "Calcul de la CSG mensuel",
+          "headers": {
+            "description": "Description",
+            "amount": "Montant (Rs)"
+          },
+          "description": {
+            "totalBaseSalary": "Salaire de base total",
+            "totalBaseSalaryCSG": "CSG du salaire de base total",
+            "monthlyBaseSalary": "Salaire de base mensuel",
+            "eoyBonusCSG": "CSG de la prime EOY",
+            "csg": "CSG"
+          }
+        }
+      },
+      "nsf": {
+        "subtitle": "NSF (chiffre arrondi) facturée par la MRA",
+        "table": {
+          "title": "Calcul de la NSF mensuel",
+          "headers": {
+            "description": "Description",
+            "amount": "Montant (Rs)"
+          },
+          "description": {
+            "nsf": "NSF",
+            "nsfInsurableSalary": "Salaire assurable NSF"
+          }
+        },
+        "nsfInsurableSalaryExplanation": "La NSF est calculée sur le salaire de base. Cependant, seule une partie du salaire de base est utilisée dans le calcul, i.e. <Link>un minimum et un maximum fixés par la MRA</Link> (page 9)."
+      },
+      "incomeAfterTaxes": {
+        "subtitle": "Revenu obtenu après déduction des impôts (chiffre arrondi)",
+        "table": {
+          "title": "Revenu obtenu après déduction des impôts",
+          "headers": {
+            "description": "Description",
+            "subAmount": "Sous-montant (Rs)",
+            "amount": "Montant (Rs)"
+          },
+          "description": {
+            "totalIncome": "Revenu total",
+            "paye": "PAYE",
+            "csg": "CSG",
+            "nsf": "NSF",
+            "totalTaxes": "PAYE + CSG + NSF",
+            "incomeAfterTaxes": "Revenu obtenu après déduction des impôts"
           }
         }
       }

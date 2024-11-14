@@ -134,8 +134,12 @@
   "year": {
     "description": "<p>For any expense you have incurred partly or completely for the financial year, please fill in the corresponding field below based on the amount you have paid, not your employer. Check out MRA's website (<MRAExemptIncomeLink>exempt income</MRAExemptIncomeLink> and <MRADeductionsLink>reliefs, deductions & allowances</MRADeductionsLink>) for more information.</p>",
     "form": {
-      "baseSalary": {
-        "label": "Base salary (12 months)",
+      "monthlyBaseSalary": {
+        "label": "Monthly base salary (for 1 month)",
+        "description": "The monthly base salary for a full month's work."
+      },
+      "totalBaseSalary": {
+        "label": "Total base salary (for 12 months)",
         "description": "Calculate the total base salary for the financial year."
       },
       "eoyBonus": {
@@ -177,8 +181,32 @@
         "description": "Calculate the total housing loan interest for the financial year."
       },
       "otherTaxDeductions": {
-        "label": "Other tax deductions",
-        "description": "Calculate the total of other tax deductions for the financial year."
+        "label": "Tax deductions",
+        "description": "Calculate the total of tax deductions for the financial year."
+      },
+      "age": {
+        "label": "Age group",
+        "items": {
+          "under18": "Under 18",
+          "18To64": "18 to 64",
+          "65To69": "65 to 69",
+          "70AndOver": "Over 70"
+        }
+      },
+      "isCitizen": {
+        "label": "Are you a Mauritian citizen?"
+      },
+      "isResident": {
+        "label": "Are you a resident in Mauritius?"
+      },
+      "isPublicSector": {
+        "label": "Do you work in the public sector?"
+      },
+      "isPRB": {
+        "label": "Do you fall under the PRB's scope?"
+      },
+      "isInDomesticService": {
+        "label": "Do you work in the domestic service sector?"
       }
     },
     "output": {
@@ -204,14 +232,14 @@
             "ietDeductions": "Deduction for dependents",
             "medicalInsurance": "Medical insurance",
             "housingLoanInterest": "Housing loan interest",
-            "otherTaxDeductions": "Other tax deductions",
+            "otherTaxDeductions": "Tax deductions",
             "totalDeductions": "Total deductions",
             "chargeableIncome": "Chargeable income (Total income - Total deductions)"
           }
         }
       },
-      "taxCharged": {
-        "subtitle": "Income tax (PAYE) charged by the MRA (rounded off value)",
+      "paye": {
+        "subtitle": "PAYE (Income tax) charged by the MRA (rounded off value)",
         "calculationDescription": "The PAYE tax is calculated as follows. On each row,",
         "calculationSteps": "<ul><li>if the remaining chargeable income is less than the taxable limit, the remaining chargeable income is used as the taxable amount</li><li>otherwise, the taxable limit is used as the taxable amount and the taxable limit is subtracted from the remaining chargeable income for the next calculation</li></ul>",
         "table": {
@@ -224,7 +252,58 @@
           },
           "taxableLimits": {
             "remainder": "Remainder",
-            "taxCharged": "Income tax (PAYE)"
+            "taxCharged": "PAYE"
+          }
+        }
+      },
+      "csg": {
+        "subtitle": "CSG (rounded off value) charged by the MRA",
+        "table": {
+          "title": "Monthly CSG calculation",
+          "headers": {
+            "description": "Description",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "totalBaseSalary": "Total base salary",
+            "totalBaseSalaryCSG": "Total base salary CSG",
+            "monthlyBaseSalary": "Monthly base salary",
+            "eoyBonusCSG": "EOY bonus CSG",
+            "csg": "CSG"
+          }
+        }
+      },
+      "nsf": {
+        "subtitle": "NSF (rounded off value) charged by the MRA",
+        "table": {
+          "title": "Monthly NSF calculation",
+          "headers": {
+            "description": "Description",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "nsf": "NSF",
+            "nsfInsurableSalary": "NSF insurable salary"
+          }
+        },
+        "nsfInsurableSalaryExplanation": "NSF is calculated on the base salary. However, only part of the basic salary is used in the calculation, i.e. <Link>a minimum & a maximum set by the MRA</Link> (page 9)."
+      },
+      "incomeAfterTaxes": {
+        "subtitle": "Income received after tax deduction (rounded off value)",
+        "table": {
+          "title": "Income received after tax deduction",
+          "headers": {
+            "description": "Description",
+            "subAmount": "Sub amount (Rs)",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "totalIncome": "Total income",
+            "paye": "PAYE",
+            "csg": "CSG",
+            "nsf": "NSF",
+            "totalTaxes": "PAYE + CSG + NSF",
+            "incomeAfterTaxes": "Income received after tax deduction"
           }
         }
       }

@@ -1,7 +1,4 @@
-import { useEffect, useState } from "react";
-import { Trans, useTranslation } from "next-i18next";
-import { useFormikContext } from "formik";
-import Decimal from "decimal.js";
+import { decimalToString } from "@/utils/functions";
 import {
   Accordion,
   AccordionItem,
@@ -13,11 +10,24 @@ import {
   TableRow,
   getKeyValue,
 } from "@nextui-org/react";
-import { decimalToString } from "@/utils/functions";
+import Decimal from "decimal.js";
+import { useFormikContext } from "formik";
+import { Trans, useTranslation } from "next-i18next";
+import { useEffect, useState } from "react";
 import {
+  CSG_DECREASED_RATE,
+  CSG_INCREASED_RATE,
+  CSG_MAX_MONTHLY_DOMESTIC_LIMIT,
+  CSG_MAX_YEARLY_DOMESTIC_LIMIT,
+  CSG_MONTHLY_BASE_SALARY_LIMIT,
+  CSG_YEARLY_BASE_SALARY_LIMIT,
   IET_DEPENDENT_DEDUCTIONS,
   INITIAL_YEARLY_TAXABLE_BRACKETS,
   MRA_YEARLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
+  NSF_MAX_YEARLY_INSURABLE_BASIC_WAGE,
+  NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE,
+  NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE,
+  NSF_RATE,
 } from "../reusables";
 import { TaxCalcRow, YearlyFormValues } from "../types";
 
@@ -25,7 +35,8 @@ export default function YearlyCalculations() {
   const { t: tCommon } = useTranslation("common");
   const { t: t2023To2024 } = useTranslation("2023-2024");
   const { values, isValid } = useFormikContext<YearlyFormValues>();
-  const [baseSalary, setBaseSalary] = useState(new Decimal(0));
+  const [monthlyBaseSalary, setMonthlyBaseSalary] = useState(new Decimal(0));
+  const [totalBaseSalary, setTotalBaseSalary] = useState(new Decimal(0));
   const [eoyBonus, setEOYBonus] = useState(new Decimal(0));
   const [travelingAllowance, setTravelingAllowance] = useState(new Decimal(0));
   const [maxNonTaxableTravelingAllowance, setMaxNonTaxableTravelingAllowance] =
@@ -38,14 +49,22 @@ export default function YearlyCalculations() {
   const [otherTaxableIncome, setOtherTaxableIncome] = useState(new Decimal(0));
   const [totalIncome, setTotalIncome] = useState(new Decimal(0));
   const [ietDeductions, setIETDeductions] = useState(new Decimal(0));
-  const [medicalInsurance, setMedicalInsurance] = useState(new Decimal(0));
-  const [housingLoanInterest, setHousingLoanInterest] = useState(
-    new Decimal(0)
-  );
   const [otherTaxDeductions, setOtherTaxDeductions] = useState(new Decimal(0));
   const [totalDeductions, setTotalDeductions] = useState(new Decimal(0));
   const [chargeableIncome, setChargeableIncome] = useState(new Decimal(0));
-  const [taxCharged, setTaxCharged] = useState(new Decimal(0));
+  const [paye, setPAYE] = useState(new Decimal(0));
+  const [totalBaseSalaryCSG, setTotalBaseSalaryCSG] = useState(new Decimal(0));
+  const [eoyBonusCSG, setEOYBonusCSG] = useState(new Decimal(0));
+  const [csg, setCSG] = useState(new Decimal(0));
+  const [totalBaseSalaryCSGRate, setTotalBaseSalaryCSGRate] = useState(
+    new Decimal(0)
+  );
+  const [eoyBonusCSGRate, setEOYBonusCSGRate] = useState(new Decimal(0));
+  const [nsfRate, setNSFRate] = useState(new Decimal(0));
+  const [nsfInsurableSalary, setNSFInsurableSalary] = useState(new Decimal(0));
+  const [nsf, setNSF] = useState(new Decimal(0));
+  const [totalTaxes, setTotalTaxes] = useState(new Decimal(0));
+  const [incomeAfterTaxes, setIncomeAfterTaxes] = useState(new Decimal(0));
   const [yearlyTaxChargedCalcRows, setYearlyTaxChargedCalcRows] = useState<
     Array<TaxCalcRow>
   >([]);
@@ -53,13 +72,14 @@ export default function YearlyCalculations() {
   useEffect(() => {
     if (isValid) {
       try {
-        const newBaseSalary = new Decimal(values.baseSalary);
+        const newMonthlyBaseSalary = new Decimal(values.monthlyBaseSalary);
+        const newTotalBaseSalary = new Decimal(values.totalBaseSalary);
         const newEOYBonus = new Decimal(values.eoyBonus);
         const newTravelingAllowance = new Decimal(values.travelingAllowance);
-        const baseSalaryTimes25Percent = newBaseSalary.dividedBy(4);
+        const totalBaseSalaryTimes25Percent = newTotalBaseSalary.dividedBy(4);
         const newMaxNonTaxableTravelingAllowance = Decimal.min(
           MRA_YEARLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
-          baseSalaryTimes25Percent
+          totalBaseSalaryTimes25Percent
         );
         const newTaxableTravelingAllowance =
           newTravelingAllowance.lessThanOrEqualTo(
@@ -70,30 +90,31 @@ export default function YearlyCalculations() {
         const newInternetAllowance = new Decimal(values.internetAllowance);
         const newPerformanceBonus = new Decimal(values.performanceBonus);
         const newOtherTaxableIncome = new Decimal(values.otherTaxableIncome);
-        const newTotalIncome = newBaseSalary
+        let newChargeableIncome = newTotalBaseSalary
           .add(newEOYBonus)
           .add(newTaxableTravelingAllowance)
           .add(newInternetAllowance)
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
+        let newTotalIncome = newTotalBaseSalary
+          .add(newEOYBonus)
+          .add(newTravelingAllowance)
+          .add(newInternetAllowance)
+          .add(newPerformanceBonus)
+          .add(newOtherTaxableIncome);
         const newIETDeductions =
           IET_DEPENDENT_DEDUCTIONS[values.numOfDependents];
-        const newMedicalInsurance = new Decimal(values.medicalInsurance);
-        const newHousingLoanInterest = new Decimal(values.housingLoanInterest);
         const newOtherTaxDeductions = new Decimal(values.otherTaxDeductions);
-        const newTotalDeductions = newIETDeductions
-          .add(newMedicalInsurance)
-          .add(newHousingLoanInterest)
-          .add(newOtherTaxDeductions);
-        const newChargeableIncome = newTotalIncome.sub(newTotalDeductions);
+        const newTotalDeductions = newIETDeductions.add(newOtherTaxDeductions);
+        newChargeableIncome = newChargeableIncome.sub(newTotalDeductions);
         let remainder = newChargeableIncome;
-        let newTotalTaxCharged = new Decimal(0);
-        const newYearlyTaxChargedCalcRows = [
+        let newPAYE = new Decimal(0);
+        const newYearlyPAYECalcRows = [
           ...INITIAL_YEARLY_TAXABLE_BRACKETS.map((bracket, index) => {
             if (!bracket.limit || remainder.lessThan(bracket.limit)) {
               const taxableAmount = remainder;
               const taxCharged = taxableAmount.mul(bracket.rate);
-              newTotalTaxCharged = newTotalTaxCharged.add(taxCharged);
+              newPAYE = newPAYE.add(taxCharged);
               remainder = remainder.sub(remainder);
 
               return {
@@ -111,7 +132,7 @@ export default function YearlyCalculations() {
 
             const taxableAmount = bracket.limit;
             const taxCharged = taxableAmount.mul(bracket.rate);
-            newTotalTaxCharged = newTotalTaxCharged.add(taxCharged);
+            newPAYE = newPAYE.add(taxCharged);
             remainder = remainder.sub(bracket.limit);
 
             return {
@@ -129,11 +150,65 @@ export default function YearlyCalculations() {
             ),
             taxableAmount: decimalToString(newChargeableIncome, 2),
             taxRate: null,
-            taxCharged: decimalToString(newTotalTaxCharged, 2),
+            taxCharged: decimalToString(newPAYE, 2),
           },
         ];
+        const isExemptFromCSG =
+          (!values.isCitizen && !values.isResident) ||
+          (values.isPublicSector && !values.isPRB);
+        const isExemptFromCSGOnTotalBaseSalary =
+          isExemptFromCSG ||
+          (values.isInDomesticService &&
+            newTotalBaseSalary.lessThan(CSG_MAX_YEARLY_DOMESTIC_LIMIT));
+        const isExemptFromCSGOnMonthlyBaseSalary =
+          isExemptFromCSG ||
+          (values.isInDomesticService &&
+            newMonthlyBaseSalary.lessThan(CSG_MAX_MONTHLY_DOMESTIC_LIMIT));
+        let newTotalBaseSalaryCSGRate = new Decimal(0);
+        let newEOYBonusCSGRate = new Decimal(0);
+        const isExemptFromNSF = ["under18", "70AndOver"].includes(values.age);
+        const newNSFRate = isExemptFromNSF ? new Decimal(0) : NSF_RATE;
+        const minNSFInsurableSalary = values.isInDomesticService
+          ? NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE
+          : NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE;
+        const maxNSFInsurableSalary = NSF_MAX_YEARLY_INSURABLE_BASIC_WAGE;
+        const newNSFInsurableSalary = new Decimal(
+          newTotalBaseSalary.lessThan(minNSFInsurableSalary)
+            ? 0
+            : newTotalBaseSalary.greaterThan(maxNSFInsurableSalary)
+              ? maxNSFInsurableSalary
+              : newTotalBaseSalary
+        );
 
-        setBaseSalary(newBaseSalary);
+        if (!isExemptFromCSGOnTotalBaseSalary) {
+          newTotalBaseSalaryCSGRate = newTotalBaseSalary.lessThanOrEqualTo(
+            CSG_YEARLY_BASE_SALARY_LIMIT
+          )
+            ? CSG_DECREASED_RATE
+            : CSG_INCREASED_RATE;
+        }
+
+        if (!isExemptFromCSGOnMonthlyBaseSalary) {
+          newEOYBonusCSGRate = newMonthlyBaseSalary.lessThanOrEqualTo(
+            CSG_MONTHLY_BASE_SALARY_LIMIT
+          )
+            ? CSG_DECREASED_RATE
+            : CSG_INCREASED_RATE;
+        }
+
+        const newTotalBaseSalaryCSG = newTotalBaseSalary.mul(
+          newTotalBaseSalaryCSGRate
+        );
+        const newEOYBonusCSG = newMonthlyBaseSalary.mul(newEOYBonusCSGRate);
+        const newCSG = newTotalBaseSalaryCSG.add(newEOYBonusCSG);
+        const newNSF = isExemptFromNSF
+          ? new Decimal(0)
+          : newNSFInsurableSalary.mul(newNSFRate);
+        const newTotalTaxes = newPAYE.add(newCSG).add(newNSF);
+        const newIncomeAfterTaxes = newTotalIncome.sub(newTotalTaxes);
+
+        setMonthlyBaseSalary(newMonthlyBaseSalary);
+        setTotalBaseSalary(newTotalBaseSalary);
         setEOYBonus(newEOYBonus);
         setTravelingAllowance(newTravelingAllowance);
         setMaxNonTaxableTravelingAllowance(newMaxNonTaxableTravelingAllowance);
@@ -143,13 +218,21 @@ export default function YearlyCalculations() {
         setOtherTaxableIncome(newOtherTaxableIncome);
         setTotalIncome(newTotalIncome);
         setIETDeductions(newIETDeductions);
-        setMedicalInsurance(newMedicalInsurance);
-        setHousingLoanInterest(newHousingLoanInterest);
         setOtherTaxDeductions(newOtherTaxDeductions);
         setTotalDeductions(newTotalDeductions);
         setChargeableIncome(newChargeableIncome);
-        setTaxCharged(newTotalTaxCharged);
-        setYearlyTaxChargedCalcRows(newYearlyTaxChargedCalcRows);
+        setPAYE(newPAYE);
+        setTotalBaseSalaryCSGRate(newTotalBaseSalaryCSGRate);
+        setEOYBonusCSGRate(newEOYBonusCSGRate);
+        setTotalBaseSalaryCSG(newTotalBaseSalaryCSG);
+        setEOYBonusCSG(newEOYBonusCSG);
+        setCSG(newCSG);
+        setNSFRate(newNSFRate);
+        setNSFInsurableSalary(newNSFInsurableSalary);
+        setNSF(newNSF);
+        setTotalTaxes(newTotalTaxes);
+        setYearlyTaxChargedCalcRows(newYearlyPAYECalcRows);
+        setIncomeAfterTaxes(newIncomeAfterTaxes);
       } catch {
         // There are scenarios where isValid hasn't changed to false yet but the values containing errors are being used for calculations
       }
@@ -157,15 +240,20 @@ export default function YearlyCalculations() {
   }, [
     isValid,
     t2023To2024,
-    values.baseSalary,
+    values.age,
     values.eoyBonus,
-    values.housingLoanInterest,
     values.internetAllowance,
-    values.medicalInsurance,
+    values.isCitizen,
+    values.isInDomesticService,
+    values.isPRB,
+    values.isPublicSector,
+    values.isResident,
+    values.monthlyBaseSalary,
     values.numOfDependents,
     values.otherTaxDeductions,
     values.otherTaxableIncome,
     values.performanceBonus,
+    values.totalBaseSalary,
     values.travelingAllowance,
   ]);
 
@@ -218,7 +306,7 @@ export default function YearlyCalculations() {
               </TableCell>
               <TableCell className="text-end">{null}</TableCell>
               <TableCell className="text-end">
-                {decimalToString(baseSalary, 2)}
+                {decimalToString(totalBaseSalary, 2)}
               </TableCell>
             </TableRow>
             <TableRow key="eoyBonus">
@@ -327,28 +415,6 @@ export default function YearlyCalculations() {
                 {decimalToString(ietDeductions, 2)}
               </TableCell>
             </TableRow>
-            <TableRow key="medicalInsurance">
-              <TableCell>
-                {t2023To2024(
-                  "year.output.chargeableIncome.table.description.medicalInsurance"
-                )}
-              </TableCell>
-              <TableCell className="text-end">{null}</TableCell>
-              <TableCell className="text-end">
-                {decimalToString(medicalInsurance, 2)}
-              </TableCell>
-            </TableRow>
-            <TableRow key="housingLoanInterest">
-              <TableCell>
-                {t2023To2024(
-                  "year.output.chargeableIncome.table.description.housingLoanInterest"
-                )}
-              </TableCell>
-              <TableCell className="text-end">{null}</TableCell>
-              <TableCell className="text-end">
-                {decimalToString(housingLoanInterest, 2)}
-              </TableCell>
-            </TableRow>
             <TableRow key="otherTaxDeductions">
               <TableCell>
                 {t2023To2024(
@@ -389,28 +455,28 @@ export default function YearlyCalculations() {
         </Table>
       </AccordionItem>
       <AccordionItem
-        key="taxCharged"
-        aria-label={`Rs ${decimalToString(taxCharged)}`}
-        title={`Rs ${decimalToString(taxCharged)}`}
-        subtitle={t2023To2024("year.output.taxCharged.subtitle")}
+        key="paye"
+        aria-label={`Rs ${decimalToString(paye)}`}
+        title={`Rs ${decimalToString(paye)}`}
+        subtitle={t2023To2024("year.output.paye.subtitle")}
         classNames={{
-          heading: "m-0",
-          title: "text-3xl text-success-700 dark:text-success",
+          heading: "m-0 py-2",
+          content: "pb-4",
           indicator: "text-2xl text-default-700 rotate-[-180deg]",
         }}
       >
         <p className="text-sm mb-1">
-          {t2023To2024("year.output.taxCharged.calculationDescription")}
+          {t2023To2024("year.output.paye.calculationDescription")}
         </p>
         <Trans
           t={t2023To2024}
-          i18nKey="year.output.taxCharged.calculationSteps"
+          i18nKey="year.output.paye.calculationSteps"
           components={{
             ul: <ul className="text-sm leading-6" />,
           }}
         />
         <Table
-          aria-label={t2023To2024("year.output.taxCharged.table.title")}
+          aria-label={t2023To2024("year.output.paye.table.title")}
           shadow="none"
         >
           <TableHeader>
@@ -419,30 +485,28 @@ export default function YearlyCalculations() {
               align="end"
               className="uppercase text-end"
             >
-              {t2023To2024("year.output.taxCharged.table.headers.taxableLimit")}
+              {t2023To2024("year.output.paye.table.headers.taxableLimit")}
             </TableColumn>
             <TableColumn
               key="taxableAmount"
               align="end"
               className="uppercase text-end"
             >
-              {t2023To2024(
-                "year.output.taxCharged.table.headers.taxableAmount"
-              )}
+              {t2023To2024("year.output.paye.table.headers.taxableAmount")}
             </TableColumn>
             <TableColumn
               key="taxRate"
               align="end"
               className="uppercase text-end"
             >
-              {t2023To2024("year.output.taxCharged.table.headers.taxRate")}
+              {t2023To2024("year.output.paye.table.headers.taxRate")}
             </TableColumn>
             <TableColumn
               key="taxCharged"
               align="end"
               className="uppercase text-end"
             >
-              {t2023To2024("year.output.taxCharged.table.headers.taxCharged")}
+              {t2023To2024("year.output.paye.table.headers.taxCharged")}
             </TableColumn>
           </TableHeader>
           <TableBody items={yearlyTaxChargedCalcRows}>
@@ -472,6 +536,249 @@ export default function YearlyCalculations() {
                 )}
               </TableRow>
             )}
+          </TableBody>
+        </Table>
+      </AccordionItem>
+      <AccordionItem
+        key="csg"
+        aria-label={`Rs ${decimalToString(csg)}`}
+        title={`Rs ${decimalToString(csg)}`}
+        subtitle={t2023To2024("year.output.csg.subtitle")}
+        classNames={{
+          heading: "m-0 py-2",
+          content: "pb-4",
+          indicator: "text-2xl text-default-700 rotate-[-180deg]",
+        }}
+      >
+        <Table
+          aria-label={t2023To2024("year.output.csg.table.title")}
+          shadow="none"
+        >
+          <TableHeader>
+            <TableColumn className="uppercase">
+              {t2023To2024("year.output.csg.table.headers.description")}
+            </TableColumn>
+            <TableColumn align="end" className="w-36 uppercase">
+              {t2023To2024("year.output.csg.table.headers.amount")}
+            </TableColumn>
+          </TableHeader>
+          <TableBody>
+            <TableRow key="totalBaseSalaryCSG">
+              <TableCell>
+                {t2023To2024(
+                  "year.output.csg.table.description.totalBaseSalaryCSG"
+                )}{" "}
+                (
+                {t2023To2024(
+                  "year.output.csg.table.description.totalBaseSalary"
+                )}
+                {" x "}
+                {totalBaseSalaryCSGRate.mul(100).toNumber()}%{" = "}
+                {"Rs "}
+                {decimalToString(totalBaseSalary, 2)}
+                {" x "}
+                {totalBaseSalaryCSGRate.mul(100).toNumber()}%)
+              </TableCell>
+              <TableCell className="text-end">
+                {decimalToString(totalBaseSalaryCSG, 2)}
+              </TableCell>
+            </TableRow>
+            <TableRow key="eoyBonusCSG">
+              <TableCell>
+                {t2023To2024("year.output.csg.table.description.eoyBonusCSG")} (
+                {t2023To2024(
+                  "year.output.csg.table.description.monthlyBaseSalary"
+                )}
+                {" x "}
+                {totalBaseSalaryCSGRate.mul(100).toNumber()}%{" = "}
+                {"Rs "}
+                {decimalToString(monthlyBaseSalary, 2)}
+                {" x "}
+                {eoyBonusCSGRate.mul(100).toNumber()}%)
+              </TableCell>
+              <TableCell className="text-end">
+                {decimalToString(eoyBonusCSG, 2)}
+              </TableCell>
+            </TableRow>
+            <TableRow key="csg">
+              <TableCell className="font-bold">
+                {t2023To2024("month.output.csg.table.description.csg")}
+              </TableCell>
+              <TableCell className="text-end font-bold border-t-1 border-b-4 border-double border-default-500">
+                {decimalToString(csg, 2)}
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </AccordionItem>
+      <AccordionItem
+        key="nsf"
+        aria-label={`Rs ${decimalToString(nsf)}`}
+        title={`Rs ${decimalToString(nsf)}`}
+        subtitle={t2023To2024("month.output.nsf.subtitle")}
+        classNames={{
+          heading: "m-0 py-2",
+          content: "pb-4",
+          indicator: "text-2xl text-default-700 rotate-[-180deg]",
+        }}
+      >
+        <Table
+          aria-label={t2023To2024("month.output.nsf.table.title")}
+          shadow="none"
+        >
+          <TableHeader>
+            <TableColumn className="uppercase">
+              {t2023To2024("month.output.nsf.table.headers.description")}
+            </TableColumn>
+            <TableColumn align="end" className="w-36 uppercase">
+              {t2023To2024("month.output.nsf.table.headers.amount")}
+            </TableColumn>
+          </TableHeader>
+          <TableBody>
+            <TableRow key="nsf">
+              <TableCell>
+                <span className="font-bold">
+                  {t2023To2024("month.output.nsf.table.description.nsf")}
+                </span>{" "}
+                (*
+                {t2023To2024(
+                  "month.output.nsf.table.description.nsfInsurableSalary"
+                )}
+                {" x "}
+                {nsfRate.mul(100).toNumber()}%{" = "}
+                {"Rs "}
+                {decimalToString(nsfInsurableSalary, 2)}
+                {" x "}
+                {nsfRate.mul(100).toNumber()}%)
+              </TableCell>
+              <TableCell className="text-end font-bold border-t-1 border-b-4 border-double border-default-500">
+                {decimalToString(nsf, 2)}
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+        <p className="text-sm">
+          *
+          <Trans
+            ns="2023-2024"
+            i18nKey="month.output.nsf.nsfInsurableSalaryExplanation"
+            components={{
+              Link: (
+                <a
+                  href="https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator/mra-pdfs/2023-2024/nsf-employers-guide.pdf"
+                  target="_blank"
+                  rel="noreferrer noopener nofollow"
+                />
+              ),
+            }}
+          />
+        </p>
+      </AccordionItem>
+      <AccordionItem
+        key="incomeAfterTaxes"
+        aria-label={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.lessThan(0) ? 0 : incomeAfterTaxes))}`}
+        title={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.lessThan(0) ? 0 : incomeAfterTaxes))}`}
+        subtitle={t2023To2024("month.output.incomeAfterTaxes.subtitle")}
+        classNames={{
+          heading: "m-0",
+          title: "text-3xl text-success-700 dark:text-success",
+          indicator: "text-2xl text-default-700 rotate-[-180deg]",
+        }}
+        isCompact
+      >
+        <Table
+          aria-label={t2023To2024("month.output.incomeAfterTaxes.table.title")}
+          shadow="none"
+        >
+          <TableHeader>
+            <TableColumn className="uppercase">
+              {t2023To2024(
+                "month.output.incomeAfterTaxes.table.headers.description"
+              )}
+            </TableColumn>
+            <TableColumn align="end" className="w-36 uppercase">
+              {t2023To2024(
+                "month.output.incomeAfterTaxes.table.headers.subAmount"
+              )}
+            </TableColumn>
+            <TableColumn align="end" className="w-36 uppercase">
+              {t2023To2024(
+                "month.output.incomeAfterTaxes.table.headers.amount"
+              )}
+            </TableColumn>
+          </TableHeader>
+          <TableBody>
+            <TableRow key="totalIncome">
+              <TableCell>
+                {t2023To2024(
+                  "month.output.incomeAfterTaxes.table.description.totalIncome"
+                )}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+              <TableCell className="text-end">
+                {decimalToString(totalIncome, 2)}
+              </TableCell>
+            </TableRow>
+            <TableRow key="paye">
+              <TableCell>
+                {t2023To2024(
+                  "month.output.incomeAfterTaxes.table.description.paye"
+                )}
+              </TableCell>
+              <TableCell className="text-end">
+                {decimalToString(paye, 2)}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+            </TableRow>
+            <TableRow key="csg">
+              <TableCell>
+                {t2023To2024(
+                  "month.output.incomeAfterTaxes.table.description.csg"
+                )}
+              </TableCell>
+              <TableCell className="text-end">
+                {decimalToString(csg, 2)}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+            </TableRow>
+            <TableRow key="nsf">
+              <TableCell>
+                {t2023To2024(
+                  "month.output.incomeAfterTaxes.table.description.nsf"
+                )}
+              </TableCell>
+              <TableCell className="text-end">
+                {decimalToString(nsf, 2)}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+            </TableRow>
+            <TableRow key="totalTaxes">
+              <TableCell>
+                {t2023To2024(
+                  "month.output.incomeAfterTaxes.table.description.totalTaxes"
+                )}
+              </TableCell>
+              <TableCell className="text-end border-t-1 border-default-500">
+                {decimalToString(totalTaxes, 2)}
+              </TableCell>
+              <TableCell className="text-end">
+                {decimalToString(totalTaxes.neg(), 2)}
+              </TableCell>
+            </TableRow>
+            <TableRow
+              key="incomeAfterTaxes"
+              className="border-t-1 border-default-500"
+            >
+              <TableCell className="font-bold">
+                {t2023To2024(
+                  "month.output.incomeAfterTaxes.table.description.incomeAfterTaxes"
+                )}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+              <TableCell className="text-end font-bold border-b-4 border-double border-default-500">
+                {decimalToString(incomeAfterTaxes, 2)}
+              </TableCell>
+            </TableRow>
           </TableBody>
         </Table>
       </AccordionItem>
