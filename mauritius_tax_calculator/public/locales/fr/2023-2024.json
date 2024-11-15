@@ -8,9 +8,6 @@
       "travelingAllowance": {
         "label": "Allocation de déplacement"
       },
-      "internetAllowance": {
-        "label": "Allocation Internet"
-      },
       "performanceBonus": {
         "label": "Prime de performance"
       },
@@ -57,7 +54,6 @@
             "travelingAllowance": "Allocation de déplacement (montant que votre employeur vous verse)",
             "maxNonTaxableTravelingAllowance": "Allocation maximale de déplacement non imposable = 25% x Salaire de base (jusqu'à {{maxAllowance}})",
             "taxableTravelingAllowance": "Allocation de déplacement imposable (applicable si l'allocation de déplacement dépasse l'allocation maximale de déplacement non imposable')",
-            "internetAllowance": "Allocation Internet",
             "performanceBonus": "Prime de performance",
             "otherTaxableIncome": "Autres revenus imposables",
             "chargeableIncome": "Revenu imposable"
@@ -150,10 +146,6 @@
         "label": "Allocation de déplacement",
         "description": "Calculez le montant total de l'allocation de déplacement pour l'année fiscale."
       },
-      "internetAllowance": {
-        "label": "Allocation Internet",
-        "description": "Calculez le montant total de l'allocation Internet pour l'année fiscale."
-      },
       "performanceBonus": {
         "label": "Prime de performance",
         "description": "Calculez le montant total de la prime de performance pour l'année fiscale."
@@ -225,7 +217,6 @@
             "travelingAllowance": "Allocation de déplacement (montant que votre employeur vous verse)",
             "maxNonTaxableTravelingAllowance": "Allocation maximale de déplacement non imposable = 25% x Salaire de base (jusqu'à {{maxAllowance}})",
             "taxableTravelingAllowance": "Allocation de déplacement imposable (applicable si l'allocation de déplacement dépasse l'allocation maximale de déplacement non imposable')",
-            "internetAllowance": "Allocation Internet",
             "performanceBonus": "Prime de performance",
             "otherTaxableIncome": "Autres revenus imposables",
             "totalIncome": "Revenu total",

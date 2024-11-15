@@ -8,9 +8,6 @@
       "travelingAllowance": {
         "label": "Traveling allowance"
       },
-      "internetAllowance": {
-        "label": "Internet allowance"
-      },
       "performanceBonus": {
         "label": "Performance bonus"
       },
@@ -57,7 +54,6 @@
             "travelingAllowance": "Traveling allowance (amount your employer pays you)",
             "maxNonTaxableTravelingAllowance": "Maximum non-taxable traveling allowance = 25% x Base salary (up to {{maxAllowance}})",
             "taxableTravelingAllowance": "Taxable traveling allowance (applicable if the traveling allowance exceeds the maximum non-taxable traveling allowance)",
-            "internetAllowance": "Internet allowance",
             "performanceBonus": "Performance bonus",
             "otherTaxableIncome": "Other taxable income",
             "chargeableIncome": "Chargeable income"
@@ -150,10 +146,6 @@
         "label": "Traveling allowance",
         "description": "Calculate the total traveling allowance for the financial year."
       },
-      "internetAllowance": {
-        "label": "Internet allowance",
-        "description": "Calculate the total internet allowance for the financial year."
-      },
       "performanceBonus": {
         "label": "Performance bonus",
         "description": "Calculate the total performance bonus for the financial year."
@@ -225,7 +217,6 @@
             "travelingAllowance": "Traveling allowance (amount your employer pays you)",
             "maxNonTaxableTravelingAllowance": "Maximum non-taxable traveling allowance = 25% x Base salary (up to {{maxAllowance}})",
             "taxableTravelingAllowance": "Taxable traveling allowance (applicable if the traveling allowance exceeds the maximum non-taxable traveling allowance)",
-            "internetAllowance": "Internet allowance",
             "performanceBonus": "Performance bonus",
             "otherTaxableIncome": "Other taxable income",
             "totalIncome": "Total income",

@@ -37,10 +37,6 @@ export default function FinancialYear2023To2024() {
       .required()
       .min(MIN_MONETARY_AMOUNT)
       .max(MAX_MONETARY_AMOUNT),
-    internetAllowance: Joi.number()
-      .required()
-      .min(MIN_MONETARY_AMOUNT)
-      .max(MAX_MONETARY_AMOUNT),
     performanceBonus: Joi.number()
       .required()
       .min(MIN_MONETARY_AMOUNT)
@@ -75,10 +71,6 @@ export default function FinancialYear2023To2024() {
       .min(MIN_MONETARY_AMOUNT)
       .max(MAX_MONETARY_AMOUNT),
     travelingAllowance: Joi.number()
-      .required()
-      .min(MIN_MONETARY_AMOUNT)
-      .max(MAX_MONETARY_AMOUNT),
-    internetAllowance: Joi.number()
       .required()
       .min(MIN_MONETARY_AMOUNT)
       .max(MAX_MONETARY_AMOUNT),
@@ -166,16 +158,6 @@ export default function FinancialYear2023To2024() {
                         name="travelingAllowance"
                         label={t2023To2024(
                           "month.form.travelingAllowance.label"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="monthlyInternetAllowance"
-                        name="internetAllowance"
-                        label={t2023To2024(
-                          "month.form.internetAllowance.label"
                         )}
                         placeholder="0"
                         currency="Rs"
@@ -327,17 +309,6 @@ export default function FinancialYear2023To2024() {
                         )}
                         description={t2023To2024(
                           "year.form.travelingAllowance.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="yearlyInternetAllowance"
-                        name="internetAllowance"
-                        label={t2023To2024("year.form.internetAllowance.label")}
-                        description={t2023To2024(
-                          "year.form.internetAllowance.description"
                         )}
                         placeholder="0"
                         currency="Rs"

@@ -8,9 +8,6 @@
       "travelingAllowance": {
         "label": "Konpansasion transpor"
       },
-      "internetAllowance": {
-        "label": "Konpansasion internet"
-      },
       "performanceBonus": {
         "label": "Bonis performans"
       },
@@ -57,7 +54,6 @@
             "travelingAllowance": "Konpansasion transpor (montan ki ou anplwayer pey ou)",
             "maxNonTaxableTravelingAllowance": "Konpansasion transpor maximal non taksab = 25% x Saler debaz (ziska {{maxAllowance}})",
             "taxableTravelingAllowance": "Konpansasion transpor taksab (aplikab si konpansasion transpor depas konpansasion transpor maximal non taksab)",
-            "internetAllowance": "Konpansasion Internet",
             "performanceBonus": "Bonis performans",
             "otherTaxableIncome": "Lezot konpansasion taksab",
             "chargeableIncome": "Reveni taksab"
@@ -150,10 +146,6 @@
         "label": "Konpansasion transpor",
         "description": "Kalkil montan total konpansasion transpor pou lane fiskal."
       },
-      "internetAllowance": {
-        "label": "Konpansasion internet",
-        "description": "Kalkil montan total konpansasion internet pou lane fiskal."
-      },
       "performanceBonus": {
         "label": "Bonis performans",
         "description": "Kalkil montan total bonis performans pou lane fiskal."
@@ -225,7 +217,6 @@
             "travelingAllowance": "Konpansasion transpor (montan ki ou anplwayer pey ou)",
             "maxNonTaxableTravelingAllowance": "Konpansasion transpor maximal non taksab = 25% x Saler debaz (ziska {{maxAllowance}})",
             "taxableTravelingAllowance": "Konpansasion transpor taksab (aplikab si konpansasion transpor depas konpansasion transpor maximal non taksab)",
-            "internetAllowance": "Konpansasion internet",
             "performanceBonus": "Bonis performans",
             "otherTaxableIncome": "Lezot konpansasion taksab",
             "totalIncome": "Reveni total",

@@ -21,7 +21,7 @@ import {
   CSG_MAX_YEARLY_DOMESTIC_LIMIT,
   CSG_MONTHLY_BASE_SALARY_LIMIT,
   CSG_YEARLY_BASE_SALARY_LIMIT,
-  IET_DEPENDENT_DEDUCTIONS,
+  YEARLY_IET_DEPENDENT_DEDUCTIONS,
   INITIAL_YEARLY_TAXABLE_BRACKETS,
   MRA_YEARLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
   NSF_MAX_YEARLY_INSURABLE_BASIC_WAGE,
@@ -44,7 +44,6 @@ export default function YearlyCalculations() {
   const [taxableTravelingAllowance, setTaxableTravelingAllowance] = useState(
     new Decimal(0)
   );
-  const [internetAllowance, setInternetAllowance] = useState(new Decimal(0));
   const [performanceBonus, setPerformanceBonus] = useState(new Decimal(0));
   const [otherTaxableIncome, setOtherTaxableIncome] = useState(new Decimal(0));
   const [totalIncome, setTotalIncome] = useState(new Decimal(0));
@@ -87,23 +86,20 @@ export default function YearlyCalculations() {
           )
             ? new Decimal(0)
             : newTravelingAllowance.sub(newMaxNonTaxableTravelingAllowance);
-        const newInternetAllowance = new Decimal(values.internetAllowance);
         const newPerformanceBonus = new Decimal(values.performanceBonus);
         const newOtherTaxableIncome = new Decimal(values.otherTaxableIncome);
         let newChargeableIncome = newTotalBaseSalary
           .add(newEOYBonus)
           .add(newTaxableTravelingAllowance)
-          .add(newInternetAllowance)
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
         let newTotalIncome = newTotalBaseSalary
           .add(newEOYBonus)
           .add(newTravelingAllowance)
-          .add(newInternetAllowance)
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
         const newIETDeductions =
-          IET_DEPENDENT_DEDUCTIONS[values.numOfDependents];
+          YEARLY_IET_DEPENDENT_DEDUCTIONS[values.numOfDependents];
         const newOtherTaxDeductions = new Decimal(values.otherTaxDeductions);
         const newTotalDeductions = newIETDeductions.add(newOtherTaxDeductions);
         newChargeableIncome = newChargeableIncome.sub(newTotalDeductions);
@@ -213,7 +209,6 @@ export default function YearlyCalculations() {
         setTravelingAllowance(newTravelingAllowance);
         setMaxNonTaxableTravelingAllowance(newMaxNonTaxableTravelingAllowance);
         setTaxableTravelingAllowance(newTaxableTravelingAllowance);
-        setInternetAllowance(newInternetAllowance);
         setPerformanceBonus(newPerformanceBonus);
         setOtherTaxableIncome(newOtherTaxableIncome);
         setTotalIncome(newTotalIncome);
@@ -242,7 +237,6 @@ export default function YearlyCalculations() {
     t2023To2024,
     values.age,
     values.eoyBonus,
-    values.internetAllowance,
     values.isCitizen,
     values.isInDomesticService,
     values.isPRB,
@@ -358,17 +352,6 @@ export default function YearlyCalculations() {
               </TableCell>
               <TableCell className="text-end">
                 {decimalToString(taxableTravelingAllowance, 2)}
-              </TableCell>
-            </TableRow>
-            <TableRow key="internetAllowance">
-              <TableCell>
-                {t2023To2024(
-                  "year.output.chargeableIncome.table.description.internetAllowance"
-                )}
-              </TableCell>
-              <TableCell className="text-end">{null}</TableCell>
-              <TableCell className="text-end">
-                {decimalToString(internetAllowance, 2)}
               </TableCell>
             </TableRow>
             <TableRow key="performanceBonus">

@@ -39,7 +39,6 @@ export default function MonthlyCalculations() {
   const [taxableTravelingAllowance, setTaxableTravelingAllowance] = useState(
     new Decimal(0)
   );
-  const [internetAllowance, setInternetAllowance] = useState(new Decimal(0));
   const [performanceBonus, setPerformanceBonus] = useState(new Decimal(0));
   const [otherTaxableIncome, setOtherTaxableIncome] = useState(new Decimal(0));
   const [chargeableIncome, setChargeableIncome] = useState(new Decimal(0));
@@ -72,17 +71,14 @@ export default function MonthlyCalculations() {
           )
             ? new Decimal(0)
             : newTravelingAllowance.sub(newMaxNonTaxableTravelingAllowance);
-        const newInternetAllowance = new Decimal(values.internetAllowance);
         const newPerformanceBonus = new Decimal(values.performanceBonus);
         const newOtherTaxableIncome = new Decimal(values.otherTaxableIncome);
         const newChargeableIncome = newBaseSalary
           .add(newTaxableTravelingAllowance)
-          .add(newInternetAllowance)
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
         let newTotalIncome = newBaseSalary
           .add(newTravelingAllowance)
-          .add(newInternetAllowance)
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
         let remainder = newChargeableIncome;
@@ -170,7 +166,6 @@ export default function MonthlyCalculations() {
         setTravelingAllowance(newTravelingAllowance);
         setMaxNonTaxableTravelingAllowance(newMaxNonTaxableTravelingAllowance);
         setTaxableTravelingAllowance(newTaxableTravelingAllowance);
-        setInternetAllowance(newInternetAllowance);
         setPerformanceBonus(newPerformanceBonus);
         setOtherTaxableIncome(newOtherTaxableIncome);
         setChargeableIncome(newChargeableIncome);
@@ -193,7 +188,6 @@ export default function MonthlyCalculations() {
     t2023To2024,
     values.age,
     values.baseSalary,
-    values.internetAllowance,
     values.isCitizen,
     values.isInDomesticService,
     values.isPRB,
@@ -296,17 +290,6 @@ export default function MonthlyCalculations() {
               </TableCell>
               <TableCell className="text-end">
                 {decimalToString(taxableTravelingAllowance, 2)}
-              </TableCell>
-            </TableRow>
-            <TableRow key="internetAllowance">
-              <TableCell>
-                {t2023To2024(
-                  "month.output.chargeableIncome.table.incomeDescription.internetAllowance"
-                )}
-              </TableCell>
-              <TableCell className="text-end">{null}</TableCell>
-              <TableCell className="text-end">
-                {decimalToString(internetAllowance, 2)}
               </TableCell>
             </TableRow>
             <TableRow key="performanceBonus">

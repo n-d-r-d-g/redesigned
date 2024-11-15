@@ -125,7 +125,7 @@ export const INITIAL_YEARLY_TAXABLE_BRACKETS = [
   },
 ];
 
-export const IET_DEPENDENT_DEDUCTIONS = {
+export const YEARLY_IET_DEPENDENT_DEDUCTIONS = {
   0: new Decimal(0),
   1: new Decimal(110_000),
   2: new Decimal(190_000),
@@ -136,7 +136,6 @@ export const IET_DEPENDENT_DEDUCTIONS = {
 export const DEFAULT_MONTHLY_INITIAL_VALUES = {
   baseSalary: 0,
   travelingAllowance: 0,
-  internetAllowance: 0,
   performanceBonus: 0,
   otherTaxableIncome: 0,
   age: "18To64",
@@ -152,7 +151,6 @@ export const DEFAULT_YEARLY_INITIAL_VALUES = {
   totalBaseSalary: 0,
   eoyBonus: 0,
   travelingAllowance: 0,
-  internetAllowance: 0,
   performanceBonus: 0,
   otherTaxableIncome: 0,
   numOfDependents: "0",

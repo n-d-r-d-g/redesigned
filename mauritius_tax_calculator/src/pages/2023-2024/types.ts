@@ -1,7 +1,6 @@
 export interface MonthlyFormValues {
   baseSalary: number;
   travelingAllowance: number;
-  internetAllowance: number;
   performanceBonus: number;
   otherTaxableIncome: number;
   age: "under18" | "18To64" | "65To69" | "70AndOver";
@@ -17,7 +16,6 @@ export interface YearlyFormValues {
   totalBaseSalary: number;
   eoyBonus: number;
   travelingAllowance: number;
-  internetAllowance: number;
   performanceBonus: number;
   otherTaxableIncome: number;
   numOfDependents: "0" | "1" | "2" | "3" | "4";
