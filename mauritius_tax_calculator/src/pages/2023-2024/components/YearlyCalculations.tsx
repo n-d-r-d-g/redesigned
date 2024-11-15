@@ -21,13 +21,13 @@ import {
   CSG_MAX_YEARLY_DOMESTIC_LIMIT,
   CSG_MONTHLY_BASE_SALARY_LIMIT,
   CSG_YEARLY_BASE_SALARY_LIMIT,
-  YEARLY_IET_DEPENDENT_DEDUCTIONS,
   INITIAL_YEARLY_TAXABLE_BRACKETS,
   MRA_YEARLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
   NSF_MAX_YEARLY_INSURABLE_BASIC_WAGE,
   NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE,
   NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE,
   NSF_RATE,
+  YEARLY_IET_DEPENDENT_DEDUCTIONS,
 } from "../reusables";
 import { TaxCalcRow, YearlyFormValues } from "../types";
 
@@ -659,8 +659,8 @@ export default function YearlyCalculations() {
       </AccordionItem>
       <AccordionItem
         key="incomeAfterTaxes"
-        aria-label={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.lessThan(0) ? 0 : incomeAfterTaxes))}`}
-        title={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.lessThan(0) ? 0 : incomeAfterTaxes))}`}
+        aria-label={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.isNegative() ? 0 : incomeAfterTaxes))}`}
+        title={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.isNegative() ? 0 : incomeAfterTaxes))}`}
         subtitle={t2023To2024("month.output.incomeAfterTaxes.subtitle")}
         classNames={{
           heading: "m-0",

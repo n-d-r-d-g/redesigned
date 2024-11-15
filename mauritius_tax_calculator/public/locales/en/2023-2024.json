@@ -14,6 +14,19 @@
       "otherTaxableIncome": {
         "label": "Other taxable income"
       },
+      "numOfDependents": {
+        "label": "No. of dependents",
+        "items": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4 or more"
+        }
+      },
+      "otherTaxDeductions": {
+        "label": "Tax deductions"
+      },
       "age": {
         "label": "Age group",
         "items": {
@@ -56,7 +69,11 @@
             "taxableTravelingAllowance": "Taxable traveling allowance (applicable if the traveling allowance exceeds the maximum non-taxable traveling allowance)",
             "performanceBonus": "Performance bonus",
             "otherTaxableIncome": "Other taxable income",
-            "chargeableIncome": "Chargeable income"
+            "totalIncome": "Total income",
+            "ietDeductions": "Deduction for dependents",
+            "otherTaxDeductions": "Tax deductions",
+            "totalDeductions": "Total deductions",
+            "chargeableIncome": "Chargeable income (Total income - Total deductions)"
           }
         }
       },

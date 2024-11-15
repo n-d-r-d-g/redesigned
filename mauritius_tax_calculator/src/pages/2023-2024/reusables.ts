@@ -133,11 +133,20 @@ export const YEARLY_IET_DEPENDENT_DEDUCTIONS = {
   4: new Decimal(355_000),
 };
 
+export const MONTHLY_IET_DEPENDENT_DEDUCTIONS = Object.entries(
+  YEARLY_IET_DEPENDENT_DEDUCTIONS
+).reduce(
+  (acc, [key, val]) => ({ ...acc, [key]: val.dividedBy(12).round() }),
+  {} as Record<keyof typeof YEARLY_IET_DEPENDENT_DEDUCTIONS, Decimal>
+);
+
 export const DEFAULT_MONTHLY_INITIAL_VALUES = {
   baseSalary: 0,
   travelingAllowance: 0,
   performanceBonus: 0,
   otherTaxableIncome: 0,
+  numOfDependents: "0",
+  otherTaxDeductions: 0,
   age: "18To64",
   isCitizen: true,
   isResident: true,

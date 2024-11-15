@@ -25,6 +25,7 @@ import {
   NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE,
   NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE,
   NSF_RATE,
+  MONTHLY_IET_DEPENDENT_DEDUCTIONS,
 } from "../reusables";
 import { MonthlyFormValues, TaxCalcRow } from "../types";
 
@@ -43,6 +44,9 @@ export default function MonthlyCalculations() {
   const [otherTaxableIncome, setOtherTaxableIncome] = useState(new Decimal(0));
   const [chargeableIncome, setChargeableIncome] = useState(new Decimal(0));
   const [totalIncome, setTotalIncome] = useState(new Decimal(0));
+  const [ietDeductions, setIETDeductions] = useState(new Decimal(0));
+  const [otherTaxDeductions, setOtherTaxDeductions] = useState(new Decimal(0));
+  const [totalDeductions, setTotalDeductions] = useState(new Decimal(0));
   const [paye, setPAYE] = useState(new Decimal(0));
   const [csg, setCSG] = useState(new Decimal(0));
   const [csgRate, setCSGRate] = useState(new Decimal(0));
@@ -73,7 +77,7 @@ export default function MonthlyCalculations() {
             : newTravelingAllowance.sub(newMaxNonTaxableTravelingAllowance);
         const newPerformanceBonus = new Decimal(values.performanceBonus);
         const newOtherTaxableIncome = new Decimal(values.otherTaxableIncome);
-        const newChargeableIncome = newBaseSalary
+        let newChargeableIncome = newBaseSalary
           .add(newTaxableTravelingAllowance)
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
@@ -81,6 +85,11 @@ export default function MonthlyCalculations() {
           .add(newTravelingAllowance)
           .add(newPerformanceBonus)
           .add(newOtherTaxableIncome);
+        const newIETDeductions =
+          MONTHLY_IET_DEPENDENT_DEDUCTIONS[values.numOfDependents];
+        const newOtherTaxDeductions = new Decimal(values.otherTaxDeductions);
+        const newTotalDeductions = newIETDeductions.add(newOtherTaxDeductions);
+        newChargeableIncome = newChargeableIncome.sub(newTotalDeductions);
         let remainder = newChargeableIncome;
         let newPAYE = new Decimal(0);
         const newMonthlyPAYECalcRows = [
@@ -168,8 +177,11 @@ export default function MonthlyCalculations() {
         setTaxableTravelingAllowance(newTaxableTravelingAllowance);
         setPerformanceBonus(newPerformanceBonus);
         setOtherTaxableIncome(newOtherTaxableIncome);
-        setChargeableIncome(newChargeableIncome);
         setTotalIncome(newTotalIncome);
+        setIETDeductions(newIETDeductions);
+        setOtherTaxDeductions(newOtherTaxDeductions);
+        setTotalDeductions(newTotalDeductions);
+        setChargeableIncome(newChargeableIncome);
         setPAYE(newPAYE);
         setCSGRate(newCSGRate);
         setCSG(newCSG);
@@ -193,6 +205,8 @@ export default function MonthlyCalculations() {
     values.isPRB,
     values.isPublicSector,
     values.isResident,
+    values.numOfDependents,
+    values.otherTaxDeductions,
     values.otherTaxableIncome,
     values.performanceBonus,
     values.travelingAllowance,
@@ -312,6 +326,50 @@ export default function MonthlyCalculations() {
               <TableCell className="text-end">{null}</TableCell>
               <TableCell className="text-end">
                 {decimalToString(otherTaxableIncome, 2)}
+              </TableCell>
+            </TableRow>
+            <TableRow key="totalIncome">
+              <TableCell className="font-bold italic">
+                {t2023To2024(
+                  "year.output.chargeableIncome.table.description.totalIncome"
+                )}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+              <TableCell className="text-end font-bold border-t-1 border-default-500">
+                {decimalToString(totalIncome, 2)}
+              </TableCell>
+            </TableRow>
+            <TableRow key="ietDeductions">
+              <TableCell>
+                {t2023To2024(
+                  "year.output.chargeableIncome.table.description.ietDeductions"
+                )}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+              <TableCell className="text-end">
+                {decimalToString(ietDeductions, 2)}
+              </TableCell>
+            </TableRow>
+            <TableRow key="otherTaxDeductions">
+              <TableCell>
+                {t2023To2024(
+                  "year.output.chargeableIncome.table.description.otherTaxDeductions"
+                )}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+              <TableCell className="text-end">
+                {decimalToString(otherTaxDeductions, 2)}
+              </TableCell>
+            </TableRow>
+            <TableRow key="totalDeductions">
+              <TableCell className="font-bold italic">
+                {t2023To2024(
+                  "year.output.chargeableIncome.table.description.totalDeductions"
+                )}
+              </TableCell>
+              <TableCell className="text-end">{null}</TableCell>
+              <TableCell className="text-end font-bold border-t-1 border-default-500">
+                {decimalToString(totalDeductions, 2)}
               </TableCell>
             </TableRow>
             <TableRow
@@ -525,8 +583,8 @@ export default function MonthlyCalculations() {
       </AccordionItem>
       <AccordionItem
         key="incomeAfterTaxes"
-        aria-label={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.lessThan(0) ? 0 : incomeAfterTaxes))}`}
-        title={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.lessThan(0) ? 0 : incomeAfterTaxes))}`}
+        aria-label={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.isNegative() ? 0 : incomeAfterTaxes))}`}
+        title={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.isNegative() ? 0 : incomeAfterTaxes))}`}
         subtitle={t2023To2024("month.output.incomeAfterTaxes.subtitle")}
         classNames={{
           heading: "m-0",

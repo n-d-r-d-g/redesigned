@@ -3,6 +3,8 @@ export interface MonthlyFormValues {
   travelingAllowance: number;
   performanceBonus: number;
   otherTaxableIncome: number;
+  numOfDependents: "0" | "1" | "2" | "3" | "4";
+  otherTaxDeductions: number;
   age: "under18" | "18To64" | "65To69" | "70AndOver";
   isCitizen: boolean;
   isResident: boolean;

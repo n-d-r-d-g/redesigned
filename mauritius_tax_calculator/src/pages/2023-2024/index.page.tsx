@@ -45,6 +45,11 @@ export default function FinancialYear2023To2024() {
       .required()
       .min(MIN_MONETARY_AMOUNT)
       .max(MAX_MONETARY_AMOUNT),
+    numOfDependents: Joi.string().required(),
+    otherTaxDeductions: Joi.number()
+      .required()
+      .min(MIN_MONETARY_AMOUNT)
+      .max(MAX_MONETARY_AMOUNT),
     age: Joi.string().required(),
     isCitizen: Joi.boolean().required(),
     isResident: Joi.boolean().required(),
@@ -176,6 +181,38 @@ export default function FinancialYear2023To2024() {
                         name="otherTaxableIncome"
                         label={t2023To2024(
                           "month.form.otherTaxableIncome.label"
+                        )}
+                        placeholder="0"
+                        currency="Rs"
+                        min={0}
+                      />
+                      <FormSelect
+                        key="monthlyNumOfDependents"
+                        name="numOfDependents"
+                        label={t2023To2024("month.form.numOfDependents.label")}
+                        placeholder="0"
+                      >
+                        <SelectItem key="0" value="0">
+                          {t2023To2024("month.form.numOfDependents.items.0")}
+                        </SelectItem>
+                        <SelectItem key="1" value="1">
+                          {t2023To2024("month.form.numOfDependents.items.1")}
+                        </SelectItem>
+                        <SelectItem key="2" value="2">
+                          {t2023To2024("month.form.numOfDependents.items.2")}
+                        </SelectItem>
+                        <SelectItem key="3" value="3">
+                          {t2023To2024("month.form.numOfDependents.items.3")}
+                        </SelectItem>
+                        <SelectItem key="4" value="4">
+                          {t2023To2024("month.form.numOfDependents.items.4")}
+                        </SelectItem>
+                      </FormSelect>
+                      <FormNumberInput
+                        key="monthlyOtherTaxDeductions"
+                        name="otherTaxDeductions"
+                        label={t2023To2024(
+                          "month.form.otherTaxDeductions.label"
                         )}
                         placeholder="0"
                         currency="Rs"
