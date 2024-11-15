@@ -164,14 +164,6 @@
           "4": "4 ou plus"
         }
       },
-      "medicalInsurance": {
-        "label": "Frais d'assurance médicale",
-        "description": "Calculez le montant total des frais d'assurance médicale pour l'année fiscale."
-      },
-      "housingLoanInterest": {
-        "label": "Intérêts sur les prêts immobiliers",
-        "description": "Calculez le montant total des intérêts sur les prêts immobiliers pour l'année fiscale."
-      },
       "otherTaxDeductions": {
         "label": "Déductions fiscales",
         "description": "Calculez le montant total des déductions fiscales pour l'année fiscale."
@@ -221,8 +213,6 @@
             "otherTaxableIncome": "Autres revenus imposables",
             "totalIncome": "Revenu total",
             "ietDeductions": "Déduction pour personnes à charge",
-            "medicalInsurance": "Assurance médicale",
-            "housingLoanInterest": "Intérêts sur les prêts immobiliers",
             "otherTaxDeductions": "Déductions fiscales",
             "totalDeductions": "Total des déductions",
             "chargeableIncome": "Revenu imposable (Revenu total - Total des déductions)"

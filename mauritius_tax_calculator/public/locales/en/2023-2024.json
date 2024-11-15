@@ -164,14 +164,6 @@
           "4": "4 or more"
         }
       },
-      "medicalInsurance": {
-        "label": "Medical insurance fee",
-        "description": "Calculate the total medical insurance fee for the financial year."
-      },
-      "housingLoanInterest": {
-        "label": "Housing loan interest",
-        "description": "Calculate the total housing loan interest for the financial year."
-      },
       "otherTaxDeductions": {
         "label": "Tax deductions",
         "description": "Calculate the total of tax deductions for the financial year."
@@ -221,8 +213,6 @@
             "otherTaxableIncome": "Other taxable income",
             "totalIncome": "Total income",
             "ietDeductions": "Deduction for dependents",
-            "medicalInsurance": "Medical insurance",
-            "housingLoanInterest": "Housing loan interest",
             "otherTaxDeductions": "Tax deductions",
             "totalDeductions": "Total deductions",
             "chargeableIncome": "Chargeable income (Total income - Total deductions)"

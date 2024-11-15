@@ -164,14 +164,6 @@
           "4": "4 ou plis"
         }
       },
-      "medicalInsurance": {
-        "label": "Lasirans medikal",
-        "description": "Kalkil montan total lasirans medikal pou lane fiskal."
-      },
-      "housingLoanInterest": {
-        "label": "Lintere lor lonn imobilie",
-        "description": "Kalkil montan total lintere lor lonn imobilie pou lane fiskal."
-      },
       "otherTaxDeductions": {
         "label": "Dediksion taks",
         "description": "Kalkil montan total bann dediksion taks pou lane fiskal."
@@ -221,8 +213,6 @@
             "otherTaxableIncome": "Lezot konpansasion taksab",
             "totalIncome": "Reveni total",
             "ietDeductions": "Dediksion pou depandan",
-            "medicalInsurance": "Lasirans medikal",
-            "housingLoanInterest": "Lintere lor lonn imobilie",
             "otherTaxDeductions": "Dediksion taks",
             "totalDeductions": "Dediksion total",
             "chargeableIncome": "Reveni taksab (Reveni total - Dediksion total)"
