@@ -1,8 +1,3 @@
-import { ChangeEvent, PropsWithChildren, useCallback, useRef } from "react";
-import Link from "next/link";
-import { useTranslation } from "next-i18next";
-import { useRouter } from "next/router";
-import Image from "next/image";
 import {
   Button,
   Modal,
@@ -12,11 +7,17 @@ import {
   ModalHeader,
   Select,
   SelectItem,
+  Tooltip,
   useDisclosure,
 } from "@nextui-org/react";
+import { useTranslation } from "next-i18next";
+import Image from "next/image";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { ChangeEvent, PropsWithChildren, useCallback, useRef } from "react";
 import { FaGithub as FaGithubIcon } from "react-icons/fa";
-import TypedTrans from "../TypedTrans/TypedTrans";
 import { DEFAULT_I18N_NAMESPACE, I18N_LOCALES } from "../../../constants";
+import TypedTrans from "../TypedTrans/TypedTrans";
 
 function LanguageSwitch() {
   const { t: tCommon, i18n } = useTranslation(DEFAULT_I18N_NAMESPACE);
@@ -30,7 +31,7 @@ function LanguageSwitch() {
     i18n.language as unknown as (typeof I18N_LOCALES)[number],
   );
   const locales = I18N_LOCALES.map((l) => ({
-    value: l,
+    key: l,
     label: l.toUpperCase(),
   }));
 
@@ -98,26 +99,30 @@ function LanguageSwitch() {
           </ModalFooter>
         </ModalContent>
       </Modal>
-      <Select
-        items={locales}
-        aria-label={tCommon("changeLanguage")}
-        onChange={handleLanguageSelect}
-        defaultSelectedKeys={[i18n.language]}
-        selectedKeys={[i18n.language]}
-        size="md"
-        radius="sm"
-        className="min-w-[4.375rem] font-mono"
-        classNames={{
-          innerWrapper: "mt-0.5",
-        }}
-        isDisabled
-      >
-        {(locale: (typeof locales)[number]) => (
-          <SelectItem key={locale.value} className="font-mono">
-            {locale.label}
-          </SelectItem>
-        )}
-      </Select>
+      <Tooltip content={tCommon("changeLanguage")} isDisabled>
+        <div>
+          <Select
+            items={locales}
+            aria-label={tCommon("changeLanguage")}
+            onChange={handleLanguageSelect}
+            defaultSelectedKeys={[i18n.language]} // BUG: select immediately closes - culprit
+            size="md"
+            radius="sm"
+            className="min-w-[4.375rem] font-mono"
+            classNames={{
+              innerWrapper: "mt-0.5",
+              selectorIcon: "right-3",
+            }}
+            isDisabled
+          >
+            {(locale) => (
+              <SelectItem key={locale.key} className="font-mono">
+                {locale.label}
+              </SelectItem>
+            )}
+          </Select>
+        </div>
+      </Tooltip>
     </div>
   );
 }
@@ -144,22 +149,23 @@ export default function Layout({ children }: PropsWithChildren) {
           MUDOCS
         </Link>
         <aside className="flex flex-row items-center gap-2">
-          <Button
-            type="button"
-            size="md"
-            radius="full"
-            variant="light"
-            as={Link}
-            href="https://github.com/n-d-r-d-g/redesigned/tree/main/mudocs"
-            target="_blank"
-            rel="noreferrer noopener nofollow"
-            title={tCommon("githubLink")}
-            aria-label={tCommon("githubLink")}
-            passHref
-            isIconOnly
-          >
-            <FaGithubIcon size={16} />
-          </Button>
+          <Tooltip content={tCommon("githubLink")}>
+            <Button
+              type="button"
+              size="md"
+              radius="full"
+              variant="light"
+              as={Link}
+              href="https://github.com/n-d-r-d-g/redesigned/tree/main/mudocs"
+              target="_blank"
+              rel="noreferrer noopener nofollow"
+              aria-label={tCommon("githubLink")}
+              passHref
+              isIconOnly
+            >
+              <FaGithubIcon size={16} />
+            </Button>
+          </Tooltip>
           <LanguageSwitch />
         </aside>
       </nav>
