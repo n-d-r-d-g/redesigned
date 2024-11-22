@@ -110,13 +110,13 @@ export function ThemeSwitch() {
           items={APP_THEMES}
           aria-label={tCommon("changeTheme")}
           onChange={handleSelectionChange}
-          selectedKeys={[theme ?? "system"]} // BUG CULPRIT: cannot open select when not at top of page
           startContent={<Icon />}
           size="md"
           radius="sm"
           className="min-w-[4.375rem] w-[4.375rem] font-mono"
           classNames={{
             innerWrapper: "mt-0.5",
+            selectorIcon: "right-3",
           }}
         >
           {(appTheme) => (

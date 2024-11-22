@@ -10,7 +10,7 @@
     "check:types": "tsc"
   },
   "dependencies": {
-    "@nextui-org/react": "^2.4.6",
+    "@nextui-org/react": "^2.4.8",
     "decimal.js": "^10.4.3",
     "formik": "^2.4.6",
     "framer-motion": "^11.1.7",

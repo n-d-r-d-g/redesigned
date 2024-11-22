@@ -33,7 +33,7 @@ function LanguageSwitch() {
     i18n.language as unknown as (typeof I18N_LOCALES)[number]
   );
   const locales = I18N_LOCALES.map((l) => ({
-    value: l,
+    key: l,
     label: l.toUpperCase(),
   }));
 
@@ -107,17 +107,17 @@ function LanguageSwitch() {
             items={locales}
             aria-label={tCommon("changeLanguage")}
             onChange={handleLanguageSelect}
-            defaultSelectedKeys={[i18n.language]}
-            selectedKeys={[i18n.language]}
+            selectedKeys={[i18n.language]} // BUG: select immediately closes - culprit
             size="md"
             radius="sm"
             className="min-w-[4.375rem] font-mono"
             classNames={{
               innerWrapper: "mt-[4px]",
+              selectorIcon: "right-3",
             }}
           >
             {(locale) => (
-              <SelectItem key={locale.value} className="font-mono">
+              <SelectItem key={locale.key} className="font-mono">
                 {locale.label}
               </SelectItem>
             )}
