@@ -1,0 +1,310 @@
+{
+  "month": {
+    "description": "Please fill the fields below based on the values displayed on your payslip, wherever applicable.",
+    "form": {
+      "baseSalary": {
+        "label": "Base salary"
+      },
+      "travelingAllowance": {
+        "label": "Traveling allowance"
+      },
+      "performanceBonus": {
+        "label": "Performance bonus"
+      },
+      "otherTaxableIncome": {
+        "label": "Other taxable income"
+      },
+      "numOfDependents": {
+        "label": "No. of dependents",
+        "items": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4 or more"
+        }
+      },
+      "otherTaxDeductions": {
+        "label": "Tax deductions"
+      },
+      "age": {
+        "label": "Age group",
+        "items": {
+          "under18": "Under 18",
+          "18To64": "18 to 64",
+          "65To69": "65 to 69",
+          "70AndOver": "Over 70"
+        }
+      },
+      "isCitizen": {
+        "label": "Are you a Mauritian citizen?"
+      },
+      "isResident": {
+        "label": "Are you a resident in Mauritius?"
+      },
+      "isPublicSector": {
+        "label": "Do you work in the public sector?"
+      },
+      "isPRB": {
+        "label": "Do you fall under the PRB's scope?"
+      },
+      "isInDomesticService": {
+        "label": "Do you work in the domestic service sector?"
+      }
+    },
+    "output": {
+      "chargeableIncome": {
+        "subtitle": "Chargeable income (amount on which your PAYE tax is calculated)",
+        "table": {
+          "title": "Monthly chargeable income calculation",
+          "headers": {
+            "incomeDescription": "Income Description",
+            "subAmount": "Sub amount (Rs)",
+            "amount": "Amount (Rs)"
+          },
+          "incomeDescription": {
+            "baseSalary": "Base salary",
+            "travelingAllowance": "Traveling allowance (amount your employer pays you)",
+            "maxNonTaxableTravelingAllowance": "Maximum non-taxable traveling allowance = 25% x Base salary (up to {{maxAllowance}})",
+            "taxableTravelingAllowance": "Taxable traveling allowance (applicable if the traveling allowance exceeds the maximum non-taxable traveling allowance)",
+            "performanceBonus": "Performance bonus",
+            "otherTaxableIncome": "Other taxable income",
+            "totalIncome": "Total income",
+            "ietDeductions": "Deduction for dependents",
+            "otherTaxDeductions": "Tax deductions",
+            "totalDeductions": "Total deductions",
+            "chargeableIncome": "Chargeable income (Total income - Total deductions)"
+          }
+        }
+      },
+      "paye": {
+        "subtitle": "PAYE (rounded off value) charged by the MRA (displayed on payslip)",
+        "calculationDescription": "PAYE is calculated as follows. On each row,",
+        "calculationSteps": "<ul><li>if the remaining chargeable income is less than the taxable limit, the remaining chargeable income is used as the taxable amount</li><li>otherwise, the taxable limit is used as the taxable amount and the taxable limit is subtracted from the remaining chargeable income for the next calculation</li></ul>",
+        "table": {
+          "title": "Monthly PAYE calculation",
+          "headers": {
+            "taxableLimit": "Taxable limit (Rs)",
+            "taxableAmount": "Taxable amount (Rs)",
+            "taxRate": "Tax rate (%)",
+            "taxCharged": "Tax charged (Rs)"
+          },
+          "taxableLimits": {
+            "remainder": "Remainder",
+            "taxCharged": "PAYE"
+          }
+        }
+      },
+      "csg": {
+        "subtitle": "CSG (rounded off value) charged by the MRA (displayed on payslip)",
+        "table": {
+          "title": "Monthly CSG calculation",
+          "headers": {
+            "description": "Description",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "csg": "CSG"
+          }
+        }
+      },
+      "nsf": {
+        "subtitle": "NSF (rounded off value) charged by the MRA (displayed on payslip)",
+        "table": {
+          "title": "Monthly NSF calculation",
+          "headers": {
+            "description": "Description",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "nsf": "NSF",
+            "nsfInsurableSalary": "NSF insurable salary"
+          }
+        },
+        "nsfInsurableSalaryExplanation": "NSF is calculated on the base salary. However, only part of the basic salary is used in the calculation, i.e. <Link>a minimum & a maximum set by the MRA</Link> (page 9)."
+      },
+      "incomeAfterTaxes": {
+        "subtitle": "Income received after tax deduction (rounded off value)",
+        "table": {
+          "title": "Income received after tax deduction",
+          "headers": {
+            "description": "Description",
+            "subAmount": "Sub amount (Rs)",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "totalIncome": "Total income",
+            "paye": "PAYE",
+            "csg": "CSG",
+            "nsf": "NSF",
+            "totalTaxes": "PAYE + CSG + NSF",
+            "incomeAfterTaxes": "Income received after tax deduction"
+          }
+        }
+      }
+    }
+  },
+  "year": {
+    "description": "<p>For any expense you have incurred partly or completely for the financial year, please fill in the corresponding field below based on the amount you have paid, not your employer. Check out MRA's website (<MRAExemptIncomeLink>exempt income</MRAExemptIncomeLink> and <MRADeductionsLink>reliefs, deductions & allowances</MRADeductionsLink>) for more information.</p>",
+    "form": {
+      "monthlyBaseSalary": {
+        "label": "Monthly base salary (for 1 month)",
+        "description": "The monthly base salary for a full month's work."
+      },
+      "totalBaseSalary": {
+        "label": "Total base salary (for 12 months)",
+        "description": "Calculate the total base salary for the financial year."
+      },
+      "eoyBonus": {
+        "label": "EOY Bonus",
+        "description": "This is known as the 13th month bonus."
+      },
+      "travelingAllowance": {
+        "label": "Traveling allowance",
+        "description": "Calculate the total traveling allowance for the financial year."
+      },
+      "performanceBonus": {
+        "label": "Performance bonus",
+        "description": "Calculate the total performance bonus for the financial year."
+      },
+      "otherTaxableIncome": {
+        "label": "Other taxable income",
+        "description": "Calculate the total of other taxable income for the financial year."
+      },
+      "numOfDependents": {
+        "label": "No. of dependents",
+        "items": {
+          "0": "0",
+          "1": "1",
+          "2": "2",
+          "3": "3",
+          "4": "4 or more"
+        }
+      },
+      "otherTaxDeductions": {
+        "label": "Tax deductions",
+        "description": "Calculate the total of tax deductions for the financial year."
+      },
+      "age": {
+        "label": "Age group",
+        "items": {
+          "under18": "Under 18",
+          "18To64": "18 to 64",
+          "65To69": "65 to 69",
+          "70AndOver": "Over 70"
+        }
+      },
+      "isCitizen": {
+        "label": "Are you a Mauritian citizen?"
+      },
+      "isResident": {
+        "label": "Are you a resident in Mauritius?"
+      },
+      "isPublicSector": {
+        "label": "Do you work in the public sector?"
+      },
+      "isPRB": {
+        "label": "Do you fall under the PRB's scope?"
+      },
+      "isInDomesticService": {
+        "label": "Do you work in the domestic service sector?"
+      }
+    },
+    "output": {
+      "chargeableIncome": {
+        "subtitle": "Chargeable income (amount on which your income tax is calculated)",
+        "table": {
+          "title": "Yearly chargeable income calculation",
+          "headers": {
+            "description": "Description",
+            "subAmount": "Sub amount (Rs)",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "baseSalary": "Base salary",
+            "eoyBonus": "EOY bonus",
+            "travelingAllowance": "Traveling allowance (amount your employer pays you)",
+            "maxNonTaxableTravelingAllowance": "Maximum non-taxable traveling allowance = 25% x Base salary (up to {{maxAllowance}})",
+            "taxableTravelingAllowance": "Taxable traveling allowance (applicable if the traveling allowance exceeds the maximum non-taxable traveling allowance)",
+            "performanceBonus": "Performance bonus",
+            "otherTaxableIncome": "Other taxable income",
+            "totalIncome": "Total income",
+            "ietDeductions": "Deduction for dependents",
+            "otherTaxDeductions": "Tax deductions",
+            "totalDeductions": "Total deductions",
+            "chargeableIncome": "Chargeable income (Total income - Total deductions)"
+          }
+        }
+      },
+      "paye": {
+        "subtitle": "PAYE (Income tax) charged by the MRA (rounded off value)",
+        "calculationDescription": "The PAYE tax is calculated as follows. On each row,",
+        "calculationSteps": "<ul><li>if the remaining chargeable income is less than the taxable limit, the remaining chargeable income is used as the taxable amount</li><li>otherwise, the taxable limit is used as the taxable amount and the taxable limit is subtracted from the remaining chargeable income for the next calculation</li></ul>",
+        "table": {
+          "title": "Monthly PAYE calculation",
+          "headers": {
+            "taxableLimit": "Taxable limit (Rs)",
+            "taxableAmount": "Taxable amount (Rs)",
+            "taxRate": "Tax rate (%)",
+            "taxCharged": "Tax charged (Rs)"
+          },
+          "taxableLimits": {
+            "remainder": "Remainder",
+            "taxCharged": "PAYE"
+          }
+        }
+      },
+      "csg": {
+        "subtitle": "CSG (rounded off value) charged by the MRA",
+        "table": {
+          "title": "Monthly CSG calculation",
+          "headers": {
+            "description": "Description",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "totalBaseSalary": "Total base salary",
+            "totalBaseSalaryCSG": "Total base salary CSG",
+            "monthlyBaseSalary": "Monthly base salary",
+            "eoyBonusCSG": "EOY bonus CSG",
+            "csg": "CSG"
+          }
+        }
+      },
+      "nsf": {
+        "subtitle": "NSF (rounded off value) charged by the MRA",
+        "table": {
+          "title": "Monthly NSF calculation",
+          "headers": {
+            "description": "Description",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "nsf": "NSF",
+            "nsfInsurableSalary": "NSF insurable salary"
+          }
+        },
+        "nsfInsurableSalaryExplanation": "NSF is calculated on the base salary. However, only part of the basic salary is used in the calculation, i.e. <Link>a minimum & a maximum set by the MRA</Link> (page 9)."
+      },
+      "incomeAfterTaxes": {
+        "subtitle": "Income received after tax deduction (rounded off value)",
+        "table": {
+          "title": "Income received after tax deduction",
+          "headers": {
+            "description": "Description",
+            "subAmount": "Sub amount (Rs)",
+            "amount": "Amount (Rs)"
+          },
+          "description": {
+            "totalIncome": "Total income",
+            "paye": "PAYE",
+            "csg": "CSG",
+            "nsf": "NSF",
+            "totalTaxes": "PAYE + CSG + NSF",
+            "incomeAfterTaxes": "Income received after tax deduction"
+          }
+        }
+      }
+    }
+  }
+}
