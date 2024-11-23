@@ -22,6 +22,7 @@ export default function FormSelect({
       labelPlacement="outside"
       classNames={{
         label: "text-sm z-0",
+        selectorIcon: "right-3",
       }}
       {...props}
       {...field}
