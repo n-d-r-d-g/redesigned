@@ -45,3 +45,26 @@ Whenever you need to negotiate a package, it's important to take into account ho
 5. Update `reusables` and logic according to the MRA's website ([PAYE](https://www.mra.mu/index.php/employers/paye), [CSG](https://www.mra.mu/index.php/eservices1/individual/monthly-paye-csg-nsf-return), [NSF]()).
 6. Add MRA's PDFs to `mra-pdfs/new_financial_year`.
 7. Modify the redirect to the latest financial year in `pages/index.page.tsx`.
+
+## Miscellaneous
+
+### Highlight text on MRA's website via URL
+
+Execute the following in your browser's console to get a modified URL that automatically highlight specified keywords:
+
+```js
+function getHighlightedURL(originalURL, ...keywords) {
+  const url = new URL(originalURL);
+  const searchParams = btoa(JSON.stringify(keywords));
+  url.searchParams.set("highlight", searchParams);
+
+  return url.href;
+}
+```
+
+You can generate highlight URLs with one or multiple keywords:
+
+```js
+getHighlightedURL(location.href, "guide"); // Highlights `guide` on the page
+getHighlightedURL(location.href, "guide", "tax"); // Highlights `guide` & `tax` on the page
+```
