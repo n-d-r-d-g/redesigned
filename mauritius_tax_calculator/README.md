@@ -35,3 +35,13 @@ By using this app, you can quickly cross check whether your payslip contains err
 ### Pre-negotiation
 
 Whenever you need to negotiate a package, it's important to take into account how much of it you really receive, i.e. after taxes. This way, you can make a calculated decision based on your needs.
+
+## Adding a new financial year
+
+1. Copy the previous financial year's `pages` folder and rename it to the new financial year.
+2. Copy the previous financial year's `locales` and rename them to the new financial year.
+3. Add the new financial year to `i18next-resources.d.ts`.
+4. Inside the new pages folder (`pages/new_financial_year`), **manually** replace all occurrences of the previous financial year with the new financial year.
+5. Update `reusables` and logic according to the MRA's website ([PAYE](https://www.mra.mu/index.php/employers/paye), [CSG](https://www.mra.mu/index.php/eservices1/individual/monthly-paye-csg-nsf-return), [NSF]()).
+6. Add MRA's PDFs to `mra-pdfs/new_financial_year`.
+7. Modify the redirect to the latest financial year in `pages/index.page.tsx`.
