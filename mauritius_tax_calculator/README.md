@@ -50,9 +50,9 @@ Whenever you need to negotiate a package, it's important to take into account ho
 
 ### Useful links
 
-[PAYE Guide](https://www.mra.mu/download/PAYEGuide.pdf)
-[Guide to employers on pension contributions](https://www.mra.mu/download/GuideToEmployersNPFNSF.pdf)
-[SME Guide](https://www.mra.mu/index.php/sme-corner)
+- [PAYE Guide](https://www.mra.mu/download/PAYEGuide.pdf)
+- [Guide to employers on pension contributions](https://www.mra.mu/download/GuideToEmployersNPFNSF.pdf)
+- [SME Guide](https://www.mra.mu/index.php/sme-corner)
 
 ### Highlight text on MRA's website via URL
 
