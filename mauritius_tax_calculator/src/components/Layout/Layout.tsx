@@ -20,6 +20,7 @@ import { FaGithub as FaGithubIcon } from "react-icons/fa";
 import { DEFAULT_I18N_NAMESPACE, I18N_LOCALES } from "../../../constants";
 import { ThemeSwitch } from "../ThemeSwitch/ThemeSwitch";
 import { FaHeart } from "react-icons/fa6";
+import Snowfall from "react-snowfall";
 
 function LanguageSwitch() {
   const { t: tCommon, i18n } = useTranslation(DEFAULT_I18N_NAMESPACE);
@@ -138,6 +139,7 @@ export default function Layout({ children }: PropsWithChildren) {
       </Head>
 
       <div className="flex min-h-[100svh] flex-col">
+        <Snowfall />
         <nav className="hide-on-print sticky top-0 z-10 mx-auto flex w-[120rem] max-w-full flex-row items-center justify-between border-b border-neutral-200 bg-white p-3 dark:border-neutral-700 dark:bg-neutral-950">
           <Link
             href={"/"}
