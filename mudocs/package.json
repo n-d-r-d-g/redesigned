@@ -40,7 +40,8 @@
     "typescript": "5.3.3",
     "uuid": "^9.0.0",
     "zod": "^3.21.4",
-    "zod-formik-adapter": "^1.2.0"
+    "zod-formik-adapter": "^1.2.0",
+    "react-snowfall": "^2.2.0"
   },
   "devDependencies": {
     "@tippyjs/react": "^4.2.6",
