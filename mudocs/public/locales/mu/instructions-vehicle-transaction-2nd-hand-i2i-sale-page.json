@@ -10,12 +10,12 @@
   },
   "payment": {
     "title": "<h2>Aksepte peyman pou lavant veikil</h2>",
-    "description": "<p>Si lakerer pou fer peyman an likid, dir li vinn zwenn ou labank pou depoz larzan la direkteman lor ou kont banker. Kumsa, ou pa pou bizin gayn traka fos biye uswa lezot tip frod. Tutfwa, labank kapav demand ou enn papye de vant siyne kuma prev lavant. Aster la ek ou bizin siyn bann papye de vant a sa moman la, <em>pa avan</em>.</p>",
+    "description": "<p>Si lakerer pou fer peyman an likid, dir li vinn zwenn ou labank pou depoz larzan la direkteman lor ou kont banker. Kumsa, ou pa pou bizin gayn traka fos biye uswa lezot tip frod. Tutfwa, labank kapav demand ou enn papye de vant siyne kuma prev lavant. Nouvo proprieter la ek ou bizin siyn bann papye de vant a sa moman la, <em>pa avan</em>.</p>",
     "step1": "<label>Pou ninport ki mod peyman, enn fwa ki lakerer inn pey u, <em>zis lerla</em>, siyn tu le 3 papye de vant.</label>",
     "step2": "<label>Gard enn papye de vant kuma prev lavant ek remet lot 2 la ar lakerer.</label>",
     "step3": "<label>Verifye ankor enn fwa ki tu bann detay lor bann papye de vant bon pou evit bann problem initil.</label>",
     "step4": "<label>Asir ou ki unn tir tu ou bann lefe personel depi veikil la.</label>",
-    "step5": "<label>Deside ar lakerer kisanla pou al <NLTAAbbr /> pou tir papye gaz. Nu konseye ki lakerer ek vander al ansam, me li pa tultan posib akoz enn kapav pa lib. Si aster la inn aksepte al <NLTAAbbr /> tusel, ou bizin:<br /><ul><li>verifie ki ou siynatir lor bann papye de vant koresponn ekzakteman ar seki lor ou kart idantite uswa ou paspor, </li><li>kit ou kart idantite uswa ou paspor ar aster la, parski <NLTAAbbr /> pou bizin sa ek </li><li>remet aster la enn let otorizasyon ki ou kapav zenere atraver nu <AuthorizationLetterImportantLink>zenerater dokiman</AuthorizationLetterImportantLink>.</li></ul></label>",
+    "step5": "<label>Deside ar lakerer kisanla pou al <NLTAAbbr /> pou tir papye gaz. Nu konseye ki lakerer ek vander al ansam, me li pa tultan posib akoz enn kapav pa lib. Si nouvo proprieter la inn aksepte al <NLTAAbbr /> tusel, ou bizin:<br /><ul><li>verifie ki ou siynatir lor bann papye de vant koresponn ekzakteman ar seki lor ou kart idantite uswa ou paspor, </li><li>kit ou kart idantite uswa ou paspor ar nouvo proprieter la, parski <NLTAAbbr /> pou bizin sa ek </li><li>remet nouvo proprieter la enn let otorizasyon ki ou kapav zenere atraver nu <AuthorizationLetterImportantLink>zenerater dokiman</AuthorizationLetterImportantLink>.</li></ul></label>",
     "leaveWithVehicle": "<p>Aprezan, lakerer kapav pran veikil la ale.</p>"
   },
   "administrativeStatusCertificate": {
