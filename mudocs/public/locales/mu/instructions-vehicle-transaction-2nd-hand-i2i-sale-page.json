@@ -4,45 +4,45 @@
   "description": "Ou pe lir bann instriksyon pou enn individyel (uswa plizir individyel) ki p vand so veikil segonnme ar enn lot individyel (uswa plizir individyel).",
   "preparation": {
     "title": "<h2>Preparasyon</h2>",
-    "step1": "<label>Demand lakerer pou avoy ou enn foto so kart idantite uswa so paspor pou ki ou ranpli so bann kordone dan bann papye de vant.</label>",
+    "step1": "<label>Demand nouvo proprieter pou avoy ou enn foto so kart idantite uswa so paspor pou ki ou ranpli so bann kordone dan bann papye de vant.</label>",
     "step2": "<label>Asir ou ki tou le 3 papye de vant inn byin ranpli, setadir ki pena okenn fot. Pa siyn bann papye de vant la.</label>",
-    "step3": "<label>Enn fwa ranpli, ou kapav avoy lakerer enn foto enn de bann papye de vant pou verifye ki tu so bann kordone bon. Sa verifikasyon la kritik. An ka ena kit erer, <NLTAAbbr /> pou dir ou modifye ou bann papye de vant, lerla revini plitar ek re-atann ou tur. Ou kapav servi nu <DeedOfSaleImportantLink>zenerater dokiman</DeedOfSaleImportantLink> pou zener papye de vant. Ou kapav egalman truv enn template papye de vant lor <GovtDeedOfSaleLink>websayt <NLTAAbbr /></GovtDeedOfSaleLink>.</label>"
+    "step3": "<label>Enn fwa ranpli, ou kapav avoy nouvo proprieter enn foto enn de bann papye de vant pou verifye ki tu so bann kordone bon. Sa verifikasyon la kritik. An ka ena kit erer, <NLTAAbbr /> pou dir ou modifye ou bann papye de vant, lerla revini plitar ek re-atann ou tur. Ou kapav servi nu <DeedOfSaleImportantLink>zenerater dokiman</DeedOfSaleImportantLink> pou zener papye de vant. Ou kapav egalman truv enn template papye de vant lor <GovtDeedOfSaleLink>websayt <NLTAAbbr /></GovtDeedOfSaleLink>.</label>"
   },
   "payment": {
     "title": "<h2>Aksepte peyman pou lavant veikil</h2>",
-    "description": "<p>Si lakerer pou fer peyman an likid, dir li vinn zwenn ou labank pou depoz larzan la direkteman lor ou kont banker. Kumsa, ou pa pou bizin gayn traka fos biye uswa lezot tip frod. Tutfwa, labank kapav demand ou enn papye de vant siyne kuma prev lavant. Nouvo proprieter la ek ou bizin siyn bann papye de vant a sa moman la, <em>pa avan</em>.</p>",
-    "step1": "<label>Pou ninport ki mod peyman, enn fwa ki lakerer inn pey u, <em>zis lerla</em>, siyn tu le 3 papye de vant.</label>",
-    "step2": "<label>Gard enn papye de vant kuma prev lavant ek remet lot 2 la ar lakerer.</label>",
+    "description": "<p>Si nouvo proprieter pou fer peyman an likid, dir li vinn zwenn ou labank pou depoz larzan la direkteman lor ou kont banker. Kumsa, ou pa pou bizin gayn traka fos biye uswa lezot tip frod. Tutfwa, labank kapav demand ou enn papye de vant siyne kuma prev lavant. Nouvo proprieter la ek ou bizin siyn bann papye de vant a sa moman la, <em>pa avan</em>.</p>",
+    "step1": "<label>Pou ninport ki mod peyman, enn fwa ki nouvo proprieter inn pey u, <em>zis lerla</em>, siyn tu le 3 papye de vant.</label>",
+    "step2": "<label>Gard enn papye de vant kuma prev lavant ek remet lot 2 la ar nouvo proprieter.</label>",
     "step3": "<label>Verifye ankor enn fwa ki tu bann detay lor bann papye de vant bon pou evit bann problem initil.</label>",
     "step4": "<label>Asir ou ki unn tir tu ou bann lefe personel depi veikil la.</label>",
-    "step5": "<label>Deside ar lakerer kisanla pou al <NLTAAbbr /> pou tir papye gaz. Nu konseye ki lakerer ek vander al ansam, me li pa tultan posib akoz enn kapav pa lib. Si nouvo proprieter la inn aksepte al <NLTAAbbr /> tusel, ou bizin:<br /><ul><li>verifie ki ou siynatir lor bann papye de vant koresponn ekzakteman ar seki lor ou kart idantite uswa ou paspor, </li><li>kit ou kart idantite uswa ou paspor ar nouvo proprieter la, parski <NLTAAbbr /> pou bizin sa ek </li><li>remet nouvo proprieter la enn let otorizasyon ki ou kapav zenere atraver nu <AuthorizationLetterImportantLink>zenerater dokiman</AuthorizationLetterImportantLink>.</li></ul></label>",
-    "leaveWithVehicle": "<p>Aprezan, lakerer kapav pran veikil la ale.</p>"
+    "step5": "<label>Deside ar nouvo proprieter kisanla pou al <NLTAAbbr /> pou tir papye gaz. Nu konseye ki nouvo proprieter ek vander al ansam, me li pa tultan posib akoz enn kapav pa lib. Si nouvo proprieter la inn aksepte al <NLTAAbbr /> tusel, ou bizin:<br /><ul><li>verifie ki ou siynatir lor bann papye de vant koresponn ekzakteman ar seki lor ou kart idantite uswa ou paspor, </li><li>kit ou kart idantite uswa ou paspor ar nouvo proprieter la, parski <NLTAAbbr /> pou bizin sa ek </li><li>remet nouvo proprieter la enn let otorizasyon ki ou kapav zenere atraver nu <AuthorizationLetterImportantLink>zenerater dokiman</AuthorizationLetterImportantLink>.</li></ul></label>",
+    "leaveWithVehicle": "<p>Aprezan, nouvo proprieter kapav pran veikil la ale.</p>"
   },
   "administrativeStatusCertificate": {
     "title": "<h2>Tir <AdministrativeStatusCertificate /></h2>",
     "description": "<p>Sa dokiman la sertifye ki veikil kinn vande pa asosye ar okenn kontrint ki anpes so lavant (vol, pre, lopozisyon lavant, etc.).</p>",
     "issue": "<p>U kapav akerir sa dokiman la kot <NLTAContactLink>kartye zeneral uswa bann brans <NLTAAbbr /></NLTAContactLink>.</p>",
     "vendorRequiredSituations": {
-      "label": "<p>Li konseye (pa obligatwar) ki lakerer ek ou al <NLTAAbbr /> ansam pou fer sa demars la, parski lerla ou pa pou bizin let otorizasyon ek ena bann sirkonstans, kuma nu mansyone anba, kot vander oblize al <NLTAAbbr /> pou tir papye gaz:</p>",
-      "situation1": "<li>Vander ek lakerer parante, par egzanp papa-piti vis-versa, mari-fam vis-versa, etc.</li>",
-      "situation2": "<li>Lakerer la pena kart idantite orizinal valid (<MNISIDCardLayoutLink>nuvo kart idantite</MNISIDCardLayoutLink>) uswa paspor valid.</li>",
-      "situation3": "<li>Lakerer la miner.</li>",
+      "label": "<p>Li konseye (pa obligatwar) ki nouvo proprieter ek ou al <NLTAAbbr /> ansam pou fer sa demars la, parski lerla ou pa pou bizin let otorizasyon ek ena bann sirkonstans, kuma nu mansyone anba, kot vander oblize al <NLTAAbbr /> pou tir papye gaz:</p>",
+      "situation1": "<li>Vander ek nouvo proprieter parante, par egzanp papa-piti vis-versa, mari-fam vis-versa, etc.</li>",
+      "situation2": "<li>Nouvo proprieter la pena kart idantite orizinal valid (<MNISIDCardLayoutLink>nuvo kart idantite</MNISIDCardLayoutLink>) uswa paspor valid.</li>",
+      "situation3": "<li>Nouvo proprieter la miner.</li>",
       "situation4": "<li>Vander la so non diferan ar seki lor so kart idantite uswa so paspor (vander la bizin prezant bann dokiman apropriye).</li>"
     },
     "checklist": {
       "label": "<p>Lalis pou tir papye gaz:</p>",
-      "requirement1": "<label>2 papye de vant, ranpli ek siyne par tu bann lakerer ek vander.</label>",
+      "requirement1": "<label>2 papye de vant, ranpli ek siyne par tu bann nouvo proprieter ek vander.</label>",
       "requirement2": "<label><ENSpan>Horsepower</ENSpan> orizinal (an angle apel sa <ENSpan>vehicle's registration book</ENSpan>).</label>",
       "requirement3": "<label>Vander so kart idantite orizinal uswa paspor valid (si ena plizir vander, ou pou bizin prezant zot tou zot kart idantite orizinal uswa zot paspor).</label>",
-      "requirement4": "<label>Lakerer so kart idantite orizinal uswa paspor valid (si ena plizir lakerer, ou pou bizin prezant zot tou zot kart idantite orizinal uswa zot paspor).</label>",
+      "requirement4": "<label>Nouvo proprieter so kart idantite orizinal uswa paspor valid (si ena plizir nouvo proprieter, ou pou bizin prezant zot tou zot kart idantite orizinal uswa zot paspor).</label>",
       "requirement5": "<label>Rs50 an likid.</label>"
     },
     "handBackRequirements": {
-      "label": "<p>Asir ou ki ou remet lakerer bann eleman swivan:</p>",
-      "requirement1": "<li>Lakerer la so kart idantite uswa so paspor</li>",
+      "label": "<p>Asir ou ki ou remet nouvo proprieter bann eleman swivan:</p>",
+      "requirement1": "<li>Nouvo proprieter la so kart idantite uswa so paspor</li>",
       "requirement2": "<li>Papye gaz</li>",
       "requirement3": "<li>2 papye de vant, estanpe (par deryer paz) par <NLTAAbbr /></li>"
     }
   },
-  "endingNote": "<p>Aprezan, unn fini konplet tu bann formalite neseser. Lakerer pou bizin al fer anrezistreman, lasirans ek transfer par li.</p>"
+  "endingNote": "<p>Aprezan, unn fini konplet tu bann formalite neseser. Nouvo proprieter pou bizin al fer anrezistreman, lasirans ek transfer par li.</p>"
 }

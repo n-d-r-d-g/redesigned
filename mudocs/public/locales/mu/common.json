@@ -11,7 +11,7 @@
   "thankingInAnticipation": "Mersi davans.",
   "yoursTruly": "Sinserman,",
   "vendor": "vander",
-  "purchaser": "lakerer",
+  "purchaser": "nouvo proprieter",
   "authorizer": "Otorizater",
   "authorized": "Otorize",
   "authorizationMode": "Kisannla pe otoriz kisannla?",
@@ -72,7 +72,7 @@
     },
     "purchaser": {
       "acronym": "2",
-      "meaning": "Lakerer"
+      "meaning": "Nouvo proprieter"
     }
   },
   "transactionMode": "Kisannla pe vand ar kisannla?",
@@ -144,7 +144,7 @@
   "vehiclePrice": "Pri de vant veikil (Rs)",
   "vehiclePricePlaceholder": "Ex. 500000",
   "vendorOrVendors": "Vander",
-  "purchaserOrPurchasers": "Lakerer",
+  "purchaserOrPurchasers": "Nouvo proprieter",
   "traderType": "Tip (Individyel/Konpagni)",
   "title": "Tit",
   "nationality": "Nasyonalite",
@@ -176,9 +176,9 @@
   "yes": "Wi",
   "no": "Non",
   "responsibilities": {
-    "purchaser": "Lakerer",
+    "purchaser": "Nouvo proprieter",
     "vendor": "Vander",
-    "purchaserOrDelegate": "Lakerer uswa so delege",
+    "purchaserOrDelegate": "Nouvo proprieter uswa so delege",
     "vendorOrDelegate": "Vander uswa so delege"
   },
   "transactionModels": {
@@ -188,7 +188,7 @@
     "c2c": "Konpagni a Konpagni"
   },
   "signatureByResponsibility": {
-    "purchaser": "Signatir lakerer",
+    "purchaser": "Signatir nouvo proprieter",
     "vendor": "Signatir vander",
     "director": "Signatir direkter",
     "representative": "Signatir reprezantan"
@@ -196,37 +196,37 @@
   "documentsPreparers": {
     "vendor": "Vander",
     "vendor_other": "Vander",
-    "purchaser": "Lakerer",
-    "purchaser_other": "Lakerer",
+    "purchaser": "Nouvo proprieter",
+    "purchaser_other": "Nouvo proprieter",
     "company": "Reprezantan",
     "company_other": "Direkter"
   },
   "administrativeStatusCertificateIssuers": {
     "vendor": "Vander",
     "vendor_other": "Vander",
-    "purchaser": "Lakerer",
-    "purchaser_other": "Lakerer",
+    "purchaser": "Nouvo proprieter",
+    "purchaser_other": "Nouvo proprieter",
     "company": "Reprezantan",
     "company_other": "Direkter",
     "vendorAndPurchaser": "$t(administrativeStatusCertificateIssuers.vendorAndPurchaser_{{numOfVendors}}_{{numOfPurchasers}})",
-    "vendorAndPurchaser_singleVendor_singlePurchaser": "Vander ek Lakerer",
-    "vendorAndPurchaser_singleVendor_multiplePurchasers": "Vander ek Lakerer",
-    "vendorAndPurchaser_multipleVendors_singlePurchaser": "Vander ek Lakerer",
-    "vendorAndPurchaser_multipleVendors_multiplePurchasers": "Vander ek Lakerer",
+    "vendorAndPurchaser_singleVendor_singlePurchaser": "Vander ek Nouvo proprieter",
+    "vendorAndPurchaser_singleVendor_multiplePurchasers": "Vander ek Nouvo proprieter",
+    "vendorAndPurchaser_multipleVendors_singlePurchaser": "Vander ek Nouvo proprieter",
+    "vendorAndPurchaser_multipleVendors_multiplePurchasers": "Vander ek Nouvo proprieter",
     "vendorDelegate": "Vander so delege",
     "vendorDelegate_other": "Vander so delege",
-    "purchaserDelegate": "Lakerer so delege",
-    "purchaserDelegate_other": "Lakerer so delege",
+    "purchaserDelegate": "Nouvo proprieter so delege",
+    "purchaserDelegate_other": "Nouvo proprieter so delege",
     "vendorAndCompany": "$t(administrativeStatusCertificateIssuers.vendorAndCompany_{{numOfVendors}}_{{numOfDirectors}})",
     "vendorAndCompany_singleVendor_singleDirector": "Vander ek Reprezantan",
     "vendorAndCompany_singleVendor_multipleDirectors": "Vander ek Direkter",
     "vendorAndCompany_multipleVendors_singleDirector": "Vander ek Reprezantan",
     "vendorAndCompany_multipleVendors_multipleDirectors": "Vander ek Direkter",
     "companyAndPurchaser": "$t(administrativeStatusCertificateIssuers.companyAndPurchaser_{{numOfDirectors}}_{{numOfPurchasers}})",
-    "companyAndPurchaser_singleDirector_singlePurchaser": "Reprezantan ek Lakerer",
-    "companyAndPurchaser_singleDirector_multiplePurchasers": "Reprezantan ek Lakerer",
-    "companyAndPurchaser_multipleDirectors_singlePurchaser": "Direkter ek Lakerer",
-    "companyAndPurchaser_multipleDirectors_multiplePurchasers": "Direkter ek Lakerer"
+    "companyAndPurchaser_singleDirector_singlePurchaser": "Reprezantan ek Nouvo proprieter",
+    "companyAndPurchaser_singleDirector_multiplePurchasers": "Reprezantan ek Nouvo proprieter",
+    "companyAndPurchaser_multipleDirectors_singlePurchaser": "Direkter ek Nouvo proprieter",
+    "companyAndPurchaser_multipleDirectors_multiplePurchasers": "Direkter ek Nouvo proprieter"
   },
   "paymentMethods": {
     "cash": "Likid",
