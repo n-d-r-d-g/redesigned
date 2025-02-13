@@ -13,7 +13,7 @@
       "label": "Who will prepare the above?"
     },
     "purchaserHasOriginalID": {
-      "label": "Does you have an original <ProofOfIdentity /> (Mauritians need the <MNISIDCardLayoutLink>new I.D card</MNISIDCardLayoutLink>)?",
+      "label": "Do you have an original <ProofOfIdentity /> (Mauritians need the <MNISIDCardLayoutLink>new I.D card</MNISIDCardLayoutLink>)?",
       "label_other": "Do all purchasers have an original <ProofOfIdentity /> (Mauritians need the <MNISIDCardLayoutLink>new I.D card</MNISIDCardLayoutLink>)?"
     },
     "vendorAndPurchaserAreRelated": {
