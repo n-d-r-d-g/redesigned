@@ -19,10 +19,12 @@
   },
   "deedOfSale": {
     "title": "Deed of Sale",
-    "pagePreviewPrimaryBody": "$t(deedOfSale.vendorsPronoun, {\"count\": {{vendorCount}}}), {{vendorNamesWithAddress}}, hereby certify having sold a vehicle bearing number {{vehicleRegNum}} to {{purchaserNamesWithAddress}}, for the sum of {{priceInWords}} $t(deedOfSale.rupees, {\"count\": {{price}}}) only ($t(deedOfSale.rupeesAbbr, {\"count\": {{price}}}) {{priceWithCommas}}), which we acknowledge to have received in cash.",
+    "pagePreviewPrimaryBody": "$t(deedOfSale.vendorsPronoun, {\"count\": {{vendorCount}}}), {{vendorNamesWithAddress}}, hereby certify having sold a vehicle bearing number {{vehicleRegNum}} to {{purchaserNamesWithAddress}}, for the sum of {{priceInWords}} $t(deedOfSale.rupees, {\"count\": {{price}}}) only ($t(deedOfSale.rupeesAbbr, {\"count\": {{price}}}) {{priceWithCommas}}), which $t(deedOfSale.vendorsPronounLowercase, {\"count\": {{vendorCount}}}) acknowledge to have received in cash.",
     "pagePreviewSecondaryBody": "We certify that this original is identical to the other original with which it has been duly collated.",
     "vendorsPronoun": "I",
     "vendorsPronoun_other": "We",
+    "vendorsPronounLowercase": "I",
+    "vendorsPronounLowercase_other": "we",
     "registrationMark": "Registration Mark",
     "make": "Make",
     "model": "Model",
