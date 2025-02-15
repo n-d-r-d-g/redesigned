@@ -24,6 +24,12 @@
       "@/*": ["./src/*"]
     }
   },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "NodeNext",
+      "moduleResolution": "NodeNext"
+    }
+  },
   "include": [
     "next-env.d.ts",
     "**/*.ts",

@@ -120,6 +120,8 @@ type TypedTransParams = {
     localityPlaceholder?: never;
     printingNotSupported?: never;
     saveOrPrint?: never;
+    loadDummyData?: never;
+    clearForm?: never;
     nltaFull?: never;
     roadTransportDivision?: never;
     nltaTown?: never;
@@ -372,6 +374,8 @@ type TypedTransParams = {
     "deedOfSale.pagePreviewSecondaryBody"?: never;
     "deedOfSale.vendorsPronoun": { count: number };
     "deedOfSale.vendorsPronoun_other"?: never;
+    "deedOfSale.vendorsPronounLowercase": { count: number };
+    "deedOfSale.vendorsPronounLowercase_other"?: never;
     "deedOfSale.registrationMark"?: never;
     "deedOfSale.make"?: never;
     "deedOfSale.model"?: never;
@@ -4982,6 +4986,8 @@ type TypedTransComponents = {
     localityPlaceholder?: never;
     printingNotSupported?: never;
     saveOrPrint?: never;
+    loadDummyData?: never;
+    clearForm?: never;
     nltaFull?: never;
     roadTransportDivision?: never;
     nltaTown?: never;
@@ -5134,6 +5140,8 @@ type TypedTransComponents = {
     "deedOfSale.pagePreviewSecondaryBody"?: never;
     "deedOfSale.vendorsPronoun"?: never;
     "deedOfSale.vendorsPronoun_other"?: never;
+    "deedOfSale.vendorsPronounLowercase"?: never;
+    "deedOfSale.vendorsPronounLowercase_other"?: never;
     "deedOfSale.registrationMark"?: never;
     "deedOfSale.make"?: never;
     "deedOfSale.model"?: never;
@@ -5170,7 +5178,9 @@ type TypedTransComponents = {
     "form.numOfCompany2Directors.label"?: never;
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
-    "form.isVehicleRegistrationBookValid.label"?: never;
+    "form.isVehicleRegistrationBookValid.label": {
+      VehicleRegistrationBook: JSX.Element;
+    };
     "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
@@ -6071,7 +6081,9 @@ type TypedTransComponents = {
     "form.numOfCompany2Directors.label"?: never;
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
-    "form.isVehicleRegistrationBookValid.label"?: never;
+    "form.isVehicleRegistrationBookValid.label": {
+      VehicleRegistrationBook: JSX.Element;
+    };
     "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
@@ -7089,7 +7101,9 @@ type TypedTransComponents = {
     "form.numOfPurchasers.label"?: never;
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
-    "form.isVehicleRegistrationBookValid.label"?: never;
+    "form.isVehicleRegistrationBookValid.label": {
+      VehicleRegistrationBook: JSX.Element;
+    };
     "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
@@ -8304,7 +8318,9 @@ type TypedTransComponents = {
     "form.numOfPurchasers.label"?: never;
     "form.documentsPreparer.label"?: never;
     "form.vendorHasStamp.label"?: never;
-    "form.isVehicleRegistrationBookValid.label"?: never;
+    "form.isVehicleRegistrationBookValid.label": {
+      VehicleRegistrationBook: JSX.Element;
+    };
     "form.administrativeStatusCertificateIssuer.label": {
       span?: JSX.Element;
       NLTAAbbr: JSX.Element;
