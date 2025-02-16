@@ -87,8 +87,8 @@ type TypedTransParams = {
     vehicleMakePlaceholder?: never;
     vehicleModel?: never;
     vehicleModelPlaceholder?: never;
-    vehicleRegNum?: never;
-    vehicleRegNumPlaceholder?: never;
+    vehicleRegMark?: never;
+    vehicleRegMarkPlaceholder?: never;
     vehicleEngineDisplacement?: never;
     vehicleEngineDisplacementPlaceholder?: never;
     vehicleEngineNum?: never;
@@ -120,7 +120,7 @@ type TypedTransParams = {
     localityPlaceholder?: never;
     printingNotSupported?: never;
     saveOrPrint?: never;
-    loadDummyData?: never;
+    loadExampleData?: never;
     clearForm?: never;
     nltaFull?: never;
     roadTransportDivision?: never;
@@ -266,14 +266,14 @@ type TypedTransParams = {
     "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToI2": {
       ownerCount: any;
       ownerNamesWithId: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
       purchaserNamesWithId: any;
     };
     "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToD2": {
       ownerCount: any;
       ownerNamesWithId: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
       directorNameWithId: any;
       companyName: any;
@@ -282,7 +282,7 @@ type TypedTransParams = {
     "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.i1ToR2": {
       ownerCount: any;
       ownerNamesWithId: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
       representativeNameWithId: any;
       representativeRole: any;
@@ -293,7 +293,7 @@ type TypedTransParams = {
       directorNameWithId: any;
       companyName: any;
       companyBRN: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
     };
     "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToD1Multiple": {
@@ -302,7 +302,7 @@ type TypedTransParams = {
       companyName: any;
       companyBRN: any;
       representingDirectorNameWithId: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
     };
     "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToR1": {
@@ -312,7 +312,7 @@ type TypedTransParams = {
       companyBRN: any;
       representativeRole: any;
       representativeNameWithId: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
     };
     "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToI2": {
@@ -321,7 +321,7 @@ type TypedTransParams = {
       companyName: any;
       companyBRN: any;
       purchaserNameWithId: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
     };
     "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToD2": {
@@ -332,7 +332,7 @@ type TypedTransParams = {
       purchaserCompanyDirectorNameWithId: any;
       purchaserCompanyName: any;
       purchaserCompanyBRN: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
     };
     "administrativeStatusCertificateAuthorizationLetter.pagePreviewBody.c1ToR2": {
@@ -344,7 +344,7 @@ type TypedTransParams = {
       purchaserCompanyRepresentativeRole: any;
       purchaserCompanyName: any;
       purchaserCompanyBRN: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       vehicleMake: any;
     };
     "administrativeStatusCertificateAuthorizationLetter.ownersWithId": {
@@ -365,7 +365,7 @@ type TypedTransParams = {
     "deedOfSale.pagePreviewPrimaryBody": {
       vendorCount: any;
       vendorNamesWithAddress: any;
-      vehicleRegNum: any;
+      vehicleRegMark: any;
       purchaserNamesWithAddress: any;
       priceInWords: any;
       price: any;
@@ -4953,8 +4953,8 @@ type TypedTransComponents = {
     vehicleMakePlaceholder?: never;
     vehicleModel?: never;
     vehicleModelPlaceholder?: never;
-    vehicleRegNum?: never;
-    vehicleRegNumPlaceholder?: never;
+    vehicleRegMark?: never;
+    vehicleRegMarkPlaceholder?: never;
     vehicleEngineDisplacement?: never;
     vehicleEngineDisplacementPlaceholder?: never;
     vehicleEngineNum?: never;
@@ -4986,7 +4986,7 @@ type TypedTransComponents = {
     localityPlaceholder?: never;
     printingNotSupported?: never;
     saveOrPrint?: never;
-    loadDummyData?: never;
+    loadExampleData?: never;
     clearForm?: never;
     nltaFull?: never;
     roadTransportDivision?: never;

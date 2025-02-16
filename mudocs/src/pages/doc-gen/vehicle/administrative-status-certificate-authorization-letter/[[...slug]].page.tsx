@@ -44,9 +44,9 @@ const AUTHORIZATION_MODES = [
   "c1ToR2",
 ] as const;
 
-const DUMMY_DATA = {
+const EXAMPLE_DATA = {
   date: Intl.DateTimeFormat("sv-SE").format(new Date()),
-  vehicleRegNum: "1234JN12",
+  vehicleRegMark: "1234JN12",
   vehicleMake: "TOYOTA",
   authorizationMode: "i1ToI2",
   individualAuthorizers: [
@@ -58,14 +58,6 @@ const DUMMY_DATA = {
       nationality: "mauritian" as const,
       id: "AS111111111111",
     },
-    {
-      uuid: uuidv4(),
-      traderType: "person" as const,
-      title: "mrs" as const,
-      name: "ALICE SMITH",
-      nationality: "mauritian" as const,
-      id: "AS222222222222",
-    },
   ],
   companyAuthorizers: undefined,
   authorizedIndividuals: [
@@ -73,9 +65,9 @@ const DUMMY_DATA = {
       uuid: uuidv4(),
       traderType: "person" as const,
       title: "mr" as const,
-      name: "BOB MARLEY",
+      name: "BELLA MARLEY",
       nationality: "mauritian" as const,
-      id: "BM333333333333333",
+      id: "BM222222222222222",
     },
   ],
   authorizedCompanies: undefined,
@@ -382,7 +374,7 @@ function Fields() {
       const newIndividualAuthorizers = (
         ["i1ToI2", "i1ToD2", "i1ToR2"] as Array<AuthorizationMode>
       ).includes(newAuthorizationMode)
-        ? values.individualAuthorizers ?? getDefaultIndividuals()
+        ? (values.individualAuthorizers ?? getDefaultIndividuals())
         : undefined;
 
       const newCompanyAuthorizers = (
@@ -394,31 +386,31 @@ function Fields() {
           "c1ToR2",
         ] as Array<AuthorizationMode>
       ).includes(newAuthorizationMode)
-        ? values.companyAuthorizers?.map((company: Company) => ({
+        ? (values.companyAuthorizers?.map((company: Company) => ({
             ...company,
             directors: company.directors ?? getCompanyDirectors(),
             representative:
               newAuthorizationMode === "c1ToR1"
-                ? company.representative ?? getCompanyRepresentative()
+                ? (company.representative ?? getCompanyRepresentative())
                 : undefined,
           })) ??
           getDefaultCompanies({
             withDirectors: true,
             withRepresentative: newAuthorizationMode === "c1ToR1",
-          })
+          }))
         : undefined;
 
       const newAuthorizedIndividuals = (
         ["i1ToI2", "c1ToI2"] as Array<AuthorizationMode>
       ).includes(newAuthorizationMode)
-        ? values.authorizedIndividuals ?? getDefaultIndividuals()
+        ? (values.authorizedIndividuals ?? getDefaultIndividuals())
         : undefined;
 
       const representingDirectorUUID = uuidv4();
       const newAuthorizedCompanies = (
         ["i1ToD2", "i1ToR2", "c1ToD2", "c1ToR2"] as Array<AuthorizationMode>
       ).includes(newAuthorizationMode)
-        ? values.authorizedCompanies?.map(
+        ? (values.authorizedCompanies?.map(
             (company: CompanyWithRepresentingDirector) => ({
               ...company,
               representingDirectorUUID:
@@ -431,7 +423,7 @@ function Fields() {
               representative: (
                 ["i1ToR2", "c1ToR2"] as Array<AuthorizationMode>
               ).includes(newAuthorizationMode)
-                ? company.representative ?? getCompanyRepresentative()
+                ? (company.representative ?? getCompanyRepresentative())
                 : undefined,
             }),
           ) ??
@@ -440,7 +432,7 @@ function Fields() {
             withRepresentative: (
               ["i1ToR2", "c1ToR2"] as Array<AuthorizationMode>
             ).includes(newAuthorizationMode),
-          })
+          }))
         : undefined;
 
       setValues(
@@ -474,9 +466,9 @@ function Fields() {
         aria-required="true"
       />
       <FormTextInput
-        name="vehicleRegNum"
-        label={`${tCommon("vehicleRegNum")} *`}
-        placeholder={tCommon("vehicleRegNumPlaceholder")}
+        name="vehicleRegMark"
+        label={`${tCommon("vehicleRegMark")} *`}
+        placeholder={tCommon("vehicleRegMarkPlaceholder")}
         aria-required="true"
       />
       <AuthorizationModeField onChange={handleAuthorizationModeChange} />
@@ -515,7 +507,7 @@ function Preview() {
               values.authorizedIndividuals ?? [],
               tENCommon,
             ),
-            vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+            vehicleRegMark: values.vehicleRegMark.toUpperCase(),
             vehicleMake: values.vehicleMake?.toUpperCase(),
           }}
         />
@@ -546,7 +538,7 @@ function Preview() {
             ),
             companyName: values.authorizedCompanies?.[0]?.name,
             companyBRN: values.authorizedCompanies?.[0]?.brn,
-            vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+            vehicleRegMark: values.vehicleRegMark.toUpperCase(),
             vehicleMake: values.vehicleMake?.toUpperCase(),
           }}
         />
@@ -574,7 +566,7 @@ function Preview() {
               values.authorizedCompanies?.[0]?.representative?.role,
             companyName: values.authorizedCompanies?.[0]?.name,
             companyBRN: values.authorizedCompanies?.[0]?.brn,
-            vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+            vehicleRegMark: values.vehicleRegMark.toUpperCase(),
             vehicleMake: values.vehicleMake?.toUpperCase(),
           }}
         />
@@ -597,7 +589,7 @@ function Preview() {
               ),
               companyName: values.companyAuthorizers?.[0]?.name,
               companyBRN: values.companyAuthorizers?.[0]?.brn,
-              vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+              vehicleRegMark: values.vehicleRegMark.toUpperCase(),
               vehicleMake: values.vehicleMake?.toUpperCase(),
             }}
           />
@@ -636,7 +628,7 @@ function Preview() {
               ),
               companyName: values.companyAuthorizers?.[0]?.name,
               companyBRN: values.companyAuthorizers?.[0]?.brn,
-              vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+              vehicleRegMark: values.vehicleRegMark.toUpperCase(),
               vehicleMake: values.vehicleMake?.toUpperCase(),
             }}
           />
@@ -666,7 +658,7 @@ function Preview() {
               values.companyAuthorizers?.[0]?.representative?.role,
             companyName: values.companyAuthorizers?.[0]?.name,
             companyBRN: values.companyAuthorizers?.[0]?.brn,
-            vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+            vehicleRegMark: values.vehicleRegMark.toUpperCase(),
             vehicleMake: values.vehicleMake?.toUpperCase(),
           }}
         />
@@ -691,7 +683,7 @@ function Preview() {
             ),
             companyName: values.companyAuthorizers?.[0]?.name,
             companyBRN: values.companyAuthorizers?.[0]?.brn,
-            vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+            vehicleRegMark: values.vehicleRegMark.toUpperCase(),
             vehicleMake: values.vehicleMake?.toUpperCase(),
           }}
         />
@@ -725,7 +717,7 @@ function Preview() {
             vendorCompanyBRN: values.companyAuthorizers?.[0]?.brn,
             purchaserCompanyName: values.authorizedCompanies?.[0]?.name,
             purchaserCompanyBRN: values.authorizedCompanies?.[0]?.brn,
-            vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+            vehicleRegMark: values.vehicleRegMark.toUpperCase(),
             vehicleMake: values.vehicleMake?.toUpperCase(),
           }}
         />
@@ -756,7 +748,7 @@ function Preview() {
             vendorCompanyBRN: values.companyAuthorizers?.[0]?.brn,
             purchaserCompanyName: values.authorizedCompanies?.[0]?.name,
             purchaserCompanyBRN: values.authorizedCompanies?.[0]?.brn,
-            vehicleRegNum: values.vehicleRegNum.toUpperCase(),
+            vehicleRegMark: values.vehicleRegMark.toUpperCase(),
             vehicleMake: values.vehicleMake?.toUpperCase(),
           }}
         />
@@ -773,7 +765,7 @@ function Preview() {
     values.companyAuthorizers,
     values.individualAuthorizers,
     values.vehicleMake,
-    values.vehicleRegNum,
+    values.vehicleRegMark,
   ]);
 
   const renderSignatureBlocks = useCallback(
@@ -1017,7 +1009,7 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
   const { t: tDocGenVehicle } = useTranslation("doc-gen-vehicle-page");
   const initialValues = {
     date: Intl.DateTimeFormat("sv-SE").format(new Date()), // YYYY-MM-DD
-    vehicleRegNum: "",
+    vehicleRegMark: "",
     vehicleMake: "",
     authorizationMode,
     individualAuthorizers: (
@@ -1103,7 +1095,7 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
         }),
       })
       .optional(),
-    vehicleRegNum: string({
+    vehicleRegMark: string({
       required_error: tCommon("errors.required"),
     }).trim(),
     vehicleMake: string({
@@ -1139,7 +1131,7 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
       )}
       initialValues={initialValues}
       schema={schema}
-      dummyData={DUMMY_DATA}
+      exampleData={EXAMPLE_DATA}
       Fields={Fields}
       Preview={Preview}
     />

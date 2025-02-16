@@ -42,12 +42,12 @@ import {
 
 const TRANSACTION_MODES = ["iToI", "iToC", "cToI", "cToC"] as const;
 
-const DUMMY_DATA = {
+const EXAMPLE_DATA = {
   saleDate: Intl.DateTimeFormat("sv-SE").format(new Date()),
   vehicleFirstRegDate: Intl.DateTimeFormat("sv-SE").format(
     new Date("2010-01-10"),
   ),
-  vehicleRegNum: "1234JN12",
+  vehicleRegMark: "1234JN12",
   vehicleMake: "TOYOTA",
   vehicleModel: "COROLLA",
   vehicleEngineDisplacement: "1498",
@@ -68,40 +68,16 @@ const DUMMY_DATA = {
         locality: "QUATRE BORNES",
       },
     },
-    {
-      uuid: uuidv4(),
-      traderType: "person" as const,
-      title: "mrs",
-      name: "ALICE SMITH",
-      nationality: "mauritian",
-      id: "AS222222222222",
-      address: {
-        street: "321, M.M.M Avenue",
-        locality: "QUATRE BORNES",
-      },
-    },
   ],
   companyVendors: undefined,
   individualPurchasers: [
     {
       uuid: uuidv4(),
       traderType: "person" as const,
-      title: "mr",
-      name: "BOB MARLEY",
-      nationality: "mauritian",
-      id: "B1111111111111",
-      address: {
-        street: "876, Paperort Lane, Morcellement Moor",
-        locality: "PORT LOUIS",
-      },
-    },
-    {
-      uuid: uuidv4(),
-      traderType: "person" as const,
       title: "mrs",
-      name: "BAILEY MARLEY",
+      name: "BELLA MARLEY",
       nationality: "mauritian",
-      id: "B222222222222",
+      id: "BM222222222222222",
       address: {
         street: "432, V.V Avenue",
         locality: "PORT-LOUIS",
@@ -348,25 +324,25 @@ function Fields() {
       const newIndividualVendors = (
         ["iToI", "iToC"] as Array<TransactionMode>
       ).includes(newTransactionMode)
-        ? values.individualVendors ?? getDefaultIndividuals()
+        ? (values.individualVendors ?? getDefaultIndividuals())
         : undefined;
 
       const newCompanyVendors = (
         ["cToI", "cToC"] as Array<TransactionMode>
       ).includes(newTransactionMode)
-        ? values.companyVendors ?? getDefaultCompanies()
+        ? (values.companyVendors ?? getDefaultCompanies())
         : undefined;
 
       const newIndividualPurchasers = (
         ["iToI", "cToI"] as Array<TransactionMode>
       ).includes(newTransactionMode)
-        ? values.individualPurchasers ?? getDefaultIndividuals()
+        ? (values.individualPurchasers ?? getDefaultIndividuals())
         : undefined;
 
       const newCompanyPurchasers = (
         ["iToC", "cToC"] as Array<TransactionMode>
       ).includes(newTransactionMode)
-        ? values.companyPurchasers ?? getDefaultCompanies()
+        ? (values.companyPurchasers ?? getDefaultCompanies())
         : undefined;
 
       setValues(
@@ -411,9 +387,9 @@ function Fields() {
         aria-required="true"
       />
       <FormTextInput
-        name="vehicleRegNum"
-        label={`${tCommon("vehicleRegNum")} *`}
-        placeholder={tCommon("vehicleRegNumPlaceholder")}
+        name="vehicleRegMark"
+        label={`${tCommon("vehicleRegMark")} *`}
+        placeholder={tCommon("vehicleRegMarkPlaceholder")}
         aria-required="true"
       />
       <FormTextInput
@@ -461,14 +437,14 @@ function Preview() {
       ["iToI", "cToI"] as Array<TransactionMode>
     ).includes(values.transactionMode);
     const vendorCount = isIndividualVendors
-      ? values.individualVendors?.length ?? 0
+      ? (values.individualVendors?.length ?? 0)
       : 2;
     const vendorNamesWithAddress = namesWithAddress(
       isIndividualVendors ? values.individualVendors : values.companyVendors,
       tENCommon,
       values.vendorsCommonAddress,
     );
-    const vehicleRegNum = values.vehicleRegNum.toUpperCase();
+    const vehicleRegMark = values.vehicleRegMark.toUpperCase();
     const purchaserNamesWithAddress = namesWithAddress(
       isIndividualPurchasers
         ? values.individualPurchasers
@@ -492,7 +468,7 @@ function Preview() {
         params={{
           vendorCount,
           vendorNamesWithAddress,
-          vehicleRegNum,
+          vehicleRegMark,
           purchaserNamesWithAddress,
           price,
           priceInWords,
@@ -510,7 +486,7 @@ function Preview() {
     values.purchasersCommonAddress,
     values.transactionMode,
     values.vehiclePrice,
-    values.vehicleRegNum,
+    values.vehicleRegMark,
     values.vendorsCommonAddress,
   ]);
 
@@ -619,7 +595,7 @@ function Preview() {
             <dt className="with-colon relative after:absolute after:end-[-0.75rem]">
               {tENDocGenVehicle("deedOfSale.registrationMark")}
             </dt>
-            <dd className="mt-auto break-all">{values.vehicleRegNum}</dd>
+            <dd className="mt-auto break-all">{values.vehicleRegMark}</dd>
             <dt className="with-colon relative after:absolute after:end-[-0.75rem]">
               {tENDocGenVehicle("deedOfSale.make")}
             </dt>
@@ -709,7 +685,7 @@ export default function DeedOfSale({ transactionMode }: Props) {
   const initialValues = {
     saleDate: Intl.DateTimeFormat("sv-SE").format(new Date()), // YYYY-MM-DD
     vehicleFirstRegDate: "",
-    vehicleRegNum: "",
+    vehicleRegMark: "",
     vehicleMake: "",
     vehicleModel: "",
     vehicleEngineDisplacement: "",
@@ -775,7 +751,7 @@ export default function DeedOfSale({ transactionMode }: Props) {
             : defaultError,
       }),
     }),
-    vehicleRegNum: string({
+    vehicleRegMark: string({
       required_error: tCommon("errors.required"),
     }).trim(),
     vehicleMake: string({ required_error: tCommon("errors.required") }).trim(),
@@ -831,7 +807,7 @@ export default function DeedOfSale({ transactionMode }: Props) {
       pageTitle={tDocGenVehicle("deedOfSale.title")}
       initialValues={initialValues}
       schema={schema}
-      dummyData={DUMMY_DATA}
+      exampleData={EXAMPLE_DATA}
       Fields={Fields}
       Preview={Preview}
     />

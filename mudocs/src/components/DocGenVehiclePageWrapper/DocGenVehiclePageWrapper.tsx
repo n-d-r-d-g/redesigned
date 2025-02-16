@@ -15,7 +15,7 @@ type Props<T> = {
   pageTitle: string;
   initialValues: T;
   schema: ZodType<unknown, ZodTypeDef, unknown>;
-  dummyData?: unknown;
+  exampleData?: unknown;
   Fields: () => JSX.Element;
   Preview: () => JSX.Element;
 };
@@ -24,7 +24,7 @@ export default function DocGenVehiclePageWrapper<T extends FormikValues>({
   pageTitle,
   initialValues,
   schema,
-  dummyData,
+  exampleData,
   Fields,
   Preview,
 }: Props<T>) {
@@ -66,7 +66,7 @@ export default function DocGenVehiclePageWrapper<T extends FormikValues>({
               {tCommon("requiredInfoLegend")}
             </p>
             <div className="flex flex-row flex-wrap items-center gap-2 xs:items-stretch">
-              <FormLoadData data={dummyData} />
+              <FormLoadData data={exampleData} />
               <FormClear />
             </div>
             <hr className="col-span-1 border-gray-200 lg:col-span-3 dark:border-slate-800" />

@@ -13,7 +13,7 @@ export default function FormLoadData({ data }: FormLoadDataProps) {
   const { isSubmitting, setValues } = useFormikContext();
   const isDisabled = isSubmitting;
 
-  const handleLoadDummyData = useCallback(() => {
+  const handleLoadExampleData = useCallback(() => {
     setValues(data);
   }, [data, setValues]);
 
@@ -24,9 +24,9 @@ export default function FormLoadData({ data }: FormLoadDataProps) {
       radius="sm"
       className="grow bg-gray-200/70 xs:grow-0 dark:bg-slate-800"
       isDisabled={isDisabled}
-      onPress={handleLoadDummyData}
+      onPress={handleLoadExampleData}
     >
-      {tCommon("loadDummyData")}
+      {tCommon("loadExampleData")}
     </Button>
   );
 }
