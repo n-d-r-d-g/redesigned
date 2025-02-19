@@ -63,10 +63,7 @@ const EXAMPLE_DATA = {
       name: "ALAN SMITH",
       nationality: "mauritian",
       id: "AS111111111111",
-      address: {
-        street: "321, M.M.M Avenue",
-        locality: "QUATRE BORNES",
-      },
+      address: "321 M.M.M Avenue QUATRE BORNES",
     },
   ],
   companyVendors: undefined,
@@ -78,10 +75,7 @@ const EXAMPLE_DATA = {
       name: "BELLA MARLEY",
       nationality: "mauritian",
       id: "BM222222222222222",
-      address: {
-        street: "432, V.V Avenue",
-        locality: "PORT-LOUIS",
-      },
+      address: "432 V.V Avenue PORT-LOUIS",
     },
   ],
   companyPurchasers: undefined,
@@ -97,10 +91,7 @@ const getDefaultIndividuals = () => [
     name: "",
     nationality: "mauritian" as const,
     id: "",
-    address: {
-      street: "",
-      locality: "",
-    },
+    address: "",
   },
 ];
 
@@ -110,10 +101,7 @@ const getDefaultCompanies = () => [
     name: "",
     traderType: "company" as const,
     brn: "",
-    address: {
-      street: "",
-      locality: "",
-    },
+    address: "",
     directors: [
       {
         uuid: uuidv4(),
@@ -228,8 +216,6 @@ function VendorsField() {
         containerClassName="lg:row-start-7"
         commonAddressKey="vendorsCommonAddress"
         addressKey="address"
-        streetKey="street"
-        localityKey="locality"
         showDirectors
         showAddress
       />
@@ -248,8 +234,6 @@ function VendorsField() {
         name="companyVendors"
         index={0}
         addressKey="address"
-        streetKey="street"
-        localityKey="locality"
         showDirectors
         showAddress
       />
@@ -274,8 +258,6 @@ function PurchasersField() {
         containerClassName="lg:row-start-7"
         commonAddressKey="purchasersCommonAddress"
         addressKey="address"
-        streetKey="street"
-        localityKey="locality"
         showDirectors
         showAddress
       />
@@ -294,8 +276,6 @@ function PurchasersField() {
         name="companyPurchasers"
         index={0}
         addressKey="address"
-        streetKey="street"
-        localityKey="locality"
         showDirectors
         showAddress
       />
@@ -711,10 +691,7 @@ export default function DeedOfSale({ transactionMode }: Props) {
   const baseTraderSchema = {
     uuid: string().uuid(),
     name: string({ required_error: tCommon("errors.required") }).trim(),
-    address: object({
-      street: string({ required_error: tCommon("errors.required") }).trim(),
-      locality: string({ required_error: tCommon("errors.required") }).trim(),
-    }),
+    address: string({ required_error: tCommon("errors.required") }).trim(),
   };
   const personSchema = object({
     ...baseTraderSchema,

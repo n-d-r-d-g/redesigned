@@ -45,10 +45,7 @@ type FormFieldSetField = {
 };
 
 type Address = {
-  address: {
-    street: string;
-    locality: string;
-  };
+  address: string;
 };
 
 type Trader = {

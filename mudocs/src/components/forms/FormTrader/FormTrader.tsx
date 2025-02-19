@@ -23,8 +23,6 @@ type CommonProps = { name: string; index: number };
 
 type AddressProps = {
   addressKey: string;
-  streetKey: string;
-  localityKey: string;
 };
 
 type WithAddressProps = CommonProps &
@@ -44,8 +42,7 @@ type Props = (WithAddressProps | WithoutAddressProps) & {
   directorsKey?: string;
   showRepresentingDirector?: boolean;
   showRepresentative?: boolean;
-  onStreetChange?: (e: ChangeEvent<HTMLInputElement>) => void;
-  onLocalityChange?: (e: ChangeEvent<HTMLInputElement>) => void;
+  onAddressChange?: (e: ChangeEvent<HTMLInputElement>) => void;
 };
 
 export default function FormTrader({
@@ -58,8 +55,7 @@ export default function FormTrader({
   showRepresentative = false,
   showDirectors = false,
   showRepresentingDirector = false,
-  onStreetChange,
-  onLocalityChange,
+  onAddressChange,
   ...props
 }: Props) {
   const [field, _meta, helpers] = useField(name);
@@ -149,10 +145,7 @@ export default function FormTrader({
       nationality: "mauritian" as const,
       id: "",
       ...(showAddress && {
-        [(props as AddressProps).addressKey]: {
-          [(props as AddressProps).streetKey]: "",
-          [(props as AddressProps).localityKey]: "",
-        },
+        [(props as AddressProps).addressKey]: "",
       }),
     };
 
@@ -387,48 +380,16 @@ export default function FormTrader({
   const renderAddress = useCallback(
     () =>
       showAddress && (
-        <FormFieldSet
-          name={`${name}[${index}].${(props as AddressProps).addressKey}`}
+        <FormTextInput
+          name={`${name}[${index}].address`}
           label={`${tCommon("address")} *`}
-          containerClassName={clx(
-            "w-full max-w-full",
-            isAddressDisabled && "hidden",
-          )}
-          className="mt-0.5 flex flex-row flex-wrap gap-x-2 gap-y-3"
-          disabled={isAddressDisabled}
-        >
-          <FormTextInput
-            name={`${name}[${index}].${(props as AddressProps).addressKey}.${
-              (props as AddressProps).streetKey
-            }`}
-            label={`${tCommon("street")} *`}
-            placeholder={tCommon("streetPlaceholder")}
-            aria-required="true"
-            containerClassName="grow shrink"
-            {...(onStreetChange ? { onChange: onStreetChange } : {})}
-          />
-          <FormTextInput
-            name={`${name}[${index}].${(props as AddressProps).addressKey}.${
-              (props as AddressProps).localityKey
-            }`}
-            label={`${tCommon("locality")} *`}
-            placeholder={tCommon("localityPlaceholder")}
-            aria-required="true"
-            containerClassName="grow shrink"
-            {...(onLocalityChange ? { onChange: onLocalityChange } : {})}
-          />
-        </FormFieldSet>
+          placeholder={tCommon("addressPlaceholder")}
+          aria-required="true"
+          containerClassName={clx("grow shrink", isAddressDisabled && "hidden")}
+          {...(onAddressChange ? { onChange: onAddressChange } : {})}
+        />
       ),
-    [
-      index,
-      isAddressDisabled,
-      name,
-      onLocalityChange,
-      onStreetChange,
-      props,
-      showAddress,
-      tCommon,
-    ],
+    [index, isAddressDisabled, name, onAddressChange, showAddress, tCommon],
   );
 
   const renderDirectors = useCallback(

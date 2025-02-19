@@ -11,8 +11,6 @@ import FormCheckbox from "../FormCheckbox/FormCheckbox";
 
 type AddressProps = {
   addressKey: string;
-  streetKey: string;
-  localityKey: string;
   commonAddressKey: string;
 };
 
@@ -70,10 +68,7 @@ export default function FormTraders({
             nationality: "mauritian",
             id: "",
             ...(showAddress && {
-              [(props as AddressProps).addressKey]: {
-                [(props as AddressProps).streetKey]: "",
-                [(props as AddressProps).localityKey]: "",
-              },
+              [(props as WithAddressProps).addressKey]: "",
             }),
           }
         : {
@@ -90,15 +85,12 @@ export default function FormTraders({
               role: "",
             },
             ...(showAddress && {
-              [(props as AddressProps).addressKey]: {
-                [(props as AddressProps).streetKey]: "",
-                [(props as AddressProps).localityKey]: "",
-              },
+              [(props as WithAddressProps).addressKey]: "",
             }),
           };
 
     return helpers.setValue([...field.value, newTrader], true);
-  }, [field.value, helpers, newTraderType, props, showAddress]);
+  }, [field.value, helpers, newTraderType, showAddress]);
 
   const renderCommonAddress = useCallback(
     () =>
@@ -121,8 +113,6 @@ export default function FormTraders({
       ? ({
           showAddress,
           addressKey: (props as AddressProps).addressKey,
-          streetKey: (props as AddressProps).streetKey,
-          localityKey: (props as AddressProps).localityKey,
         } as WithAddressProps)
       : ({
           showAddress,
@@ -131,22 +121,18 @@ export default function FormTraders({
     return traders.map((trader, i) => {
       const enableAddressHandler = showAddress && i === 0;
 
-      const handleSubAddressChange =
-        (subAddressKey: string) => (e: ChangeEvent<HTMLInputElement>) => {
-          helpers.setValue(
-            field.value?.map?.((trader: (Person | Company) & Address) => {
-              const typedProps = props as WithAddressProps;
+      const handleAddressChange = (e: ChangeEvent<HTMLInputElement>) => {
+        helpers.setValue(
+          field.value?.map?.((trader: (Person | Company) & Address) => {
+            const typedProps = props as WithAddressProps;
 
-              return {
-                ...trader,
-                [typedProps.addressKey]: {
-                  ...trader[typedProps.addressKey as keyof Address],
-                  [subAddressKey]: e?.currentTarget?.value,
-                },
-              };
-            }),
-          );
-        };
+            return {
+              ...trader,
+              [typedProps.addressKey]: e?.currentTarget?.value,
+            };
+          }),
+        );
+      };
 
       return (
         <FormTrader
@@ -161,16 +147,7 @@ export default function FormTraders({
           showListItemHeader={showListItemHeader}
           {...(enableAddressHandler
             ? {
-                onStreetChange: handleSubAddressChange(
-                  (props as AddressProps).streetKey,
-                ),
-              }
-            : {})}
-          {...(enableAddressHandler
-            ? {
-                onLocalityChange: handleSubAddressChange(
-                  (props as AddressProps).localityKey,
-                ),
+                onAddressChange: handleAddressChange,
               }
             : {})}
           {...formTraderInfoAddressProps}

@@ -114,10 +114,7 @@ type TypedTransParams = {
     brnPlaceholder?: never;
     role?: never;
     rolePlaceholder?: never;
-    street?: never;
-    streetPlaceholder?: never;
-    locality?: never;
-    localityPlaceholder?: never;
+    addressPlaceholder?: never;
     printingNotSupported?: never;
     saveOrPrint?: never;
     loadExampleData?: never;
@@ -4980,10 +4977,7 @@ type TypedTransComponents = {
     brnPlaceholder?: never;
     role?: never;
     rolePlaceholder?: never;
-    street?: never;
-    streetPlaceholder?: never;
-    locality?: never;
-    localityPlaceholder?: never;
+    addressPlaceholder?: never;
     printingNotSupported?: never;
     saveOrPrint?: never;
     loadExampleData?: never;

@@ -97,9 +97,7 @@ export function namesWithAddress(
   commonAddress: boolean = false,
 ) {
   const retrieveAddress = (trader: (Person | Company) & Address) =>
-    [trader?.address?.street, trader?.address?.locality?.toUpperCase()]
-      .filter(Boolean)
-      .join(", ");
+    trader?.address?.toUpperCase();
 
   const traderNamesWithoutAddress = traders.reduce((finalStr, trader, i) => {
     const isPerson = trader.traderType === "person";
