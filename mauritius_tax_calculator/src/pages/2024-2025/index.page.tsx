@@ -4,7 +4,7 @@ import FormSelect from "@/components/form/FormSelect/FormSelect";
 import ResetButton from "@/components/form/ResetButton/ResetButton";
 import { joiFormikAdapter } from "@/utils/adapters/joi-formik-adapter";
 import { noop, retrieveFinancialPeriod } from "@/utils/functions";
-import { Card, CardBody, SelectItem, Tab, Tabs } from "@nextui-org/react";
+import { Card, CardBody, SelectItem, Tab, Tabs } from "@heroui/react";
 import { Formik } from "formik";
 import Joi from "joi";
 import { GetStaticProps } from "next";
@@ -192,19 +192,19 @@ export default function FinancialYear2024To2025() {
                         label={t2024To2025("month.form.numOfDependents.label")}
                         placeholder="0"
                       >
-                        <SelectItem key="0" value="0">
+                        <SelectItem key="0" textValue="0">
                           {t2024To2025("month.form.numOfDependents.items.0")}
                         </SelectItem>
-                        <SelectItem key="1" value="1">
+                        <SelectItem key="1" textValue="1">
                           {t2024To2025("month.form.numOfDependents.items.1")}
                         </SelectItem>
-                        <SelectItem key="2" value="2">
+                        <SelectItem key="2" textValue="2">
                           {t2024To2025("month.form.numOfDependents.items.2")}
                         </SelectItem>
-                        <SelectItem key="3" value="3">
+                        <SelectItem key="3" textValue="3">
                           {t2024To2025("month.form.numOfDependents.items.3")}
                         </SelectItem>
-                        <SelectItem key="4" value="4">
+                        <SelectItem key="4" textValue="4">
                           {t2024To2025("month.form.numOfDependents.items.4")}
                         </SelectItem>
                       </FormSelect>
@@ -223,16 +223,16 @@ export default function FinancialYear2024To2025() {
                         name="age"
                         label={t2024To2025("month.form.age.label")}
                       >
-                        <SelectItem key="under18" value="under18">
+                        <SelectItem key="under18" textValue="under18">
                           {t2024To2025("month.form.age.items.under18")}
                         </SelectItem>
-                        <SelectItem key="18To64" value="18To64">
+                        <SelectItem key="18To64" textValue="18To64">
                           {t2024To2025("month.form.age.items.18To64")}
                         </SelectItem>
-                        <SelectItem key="65To69" value="65To69">
+                        <SelectItem key="65To69" textValue="65To69">
                           {t2024To2025("month.form.age.items.65To69")}
                         </SelectItem>
-                        <SelectItem key="70AndOver" value="70AndOver">
+                        <SelectItem key="70AndOver" textValue="70AndOver">
                           {t2024To2025("month.form.age.items.70AndOver")}
                         </SelectItem>
                       </FormSelect>
@@ -381,19 +381,19 @@ export default function FinancialYear2024To2025() {
                         label={t2024To2025("year.form.numOfDependents.label")}
                         placeholder="0"
                       >
-                        <SelectItem key="0" value="0">
+                        <SelectItem key="0" textValue="0">
                           {t2024To2025("year.form.numOfDependents.items.0")}
                         </SelectItem>
-                        <SelectItem key="1" value="1">
+                        <SelectItem key="1" textValue="1">
                           {t2024To2025("year.form.numOfDependents.items.1")}
                         </SelectItem>
-                        <SelectItem key="2" value="2">
+                        <SelectItem key="2" textValue="2">
                           {t2024To2025("year.form.numOfDependents.items.2")}
                         </SelectItem>
-                        <SelectItem key="3" value="3">
+                        <SelectItem key="3" textValue="3">
                           {t2024To2025("year.form.numOfDependents.items.3")}
                         </SelectItem>
-                        <SelectItem key="4" value="4">
+                        <SelectItem key="4" textValue="4">
                           {t2024To2025("year.form.numOfDependents.items.4")}
                         </SelectItem>
                       </FormSelect>
@@ -415,16 +415,16 @@ export default function FinancialYear2024To2025() {
                         name="age"
                         label={t2024To2025("year.form.age.label")}
                       >
-                        <SelectItem key="under18" value="under18">
+                        <SelectItem key="under18" textValue="under18">
                           {t2024To2025("year.form.age.items.under18")}
                         </SelectItem>
-                        <SelectItem key="18To64" value="18To64">
+                        <SelectItem key="18To64" textValue="18To64">
                           {t2024To2025("year.form.age.items.18To64")}
                         </SelectItem>
-                        <SelectItem key="65To69" value="65To69">
+                        <SelectItem key="65To69" textValue="65To69">
                           {t2024To2025("year.form.age.items.65To69")}
                         </SelectItem>
-                        <SelectItem key="70AndOver" value="70AndOver">
+                        <SelectItem key="70AndOver" textValue="70AndOver">
                           {t2024To2025("year.form.age.items.70AndOver")}
                         </SelectItem>
                       </FormSelect>

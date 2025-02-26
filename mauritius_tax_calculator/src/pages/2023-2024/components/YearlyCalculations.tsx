@@ -9,7 +9,7 @@ import {
   TableHeader,
   TableRow,
   getKeyValue,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import Decimal from "decimal.js";
 import { useFormikContext } from "formik";
 import { Trans, useTranslation } from "next-i18next";

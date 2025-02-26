@@ -1,7 +1,7 @@
 import { useCallback } from "react";
 import { useFormikContext } from "formik";
 import { useTranslation } from "next-i18next";
-import { Button, ButtonProps } from "@nextui-org/react";
+import { Button, ButtonProps } from "@heroui/react";
 import { MdOutlineRefresh as MdOutlineRefreshIcon } from "react-icons/md";
 
 export default function ResetButton({ children, ...props }: ButtonProps) {

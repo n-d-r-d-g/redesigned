@@ -1,6 +1,6 @@
 /* "use client";
 
-import { Select, SelectItem, Tooltip } from "@nextui-org/react";
+import { Select, SelectItem, Tooltip } from "@heroui/react";
 import { useTranslation } from "next-i18next";
 import { useTheme } from "next-themes";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
@@ -64,7 +64,7 @@ export function ThemeSwitch() {
 
 "use client";
 
-import { Select, SelectItem, Tooltip } from "@nextui-org/react";
+import { Select, SelectItem, Tooltip } from "@heroui/react";
 import { useTranslation } from "next-i18next";
 import { useTheme } from "next-themes";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";

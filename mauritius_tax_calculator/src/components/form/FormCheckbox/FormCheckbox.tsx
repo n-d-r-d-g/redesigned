@@ -1,5 +1,5 @@
 import { useField } from "formik";
-import { Checkbox, CheckboxProps } from "@nextui-org/react";
+import { Checkbox, CheckboxProps } from "@heroui/react";
 
 type FormCheckboxProps = CheckboxProps & {
   name: string;

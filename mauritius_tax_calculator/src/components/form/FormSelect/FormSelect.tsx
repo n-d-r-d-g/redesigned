@@ -1,4 +1,4 @@
-import { Select, SelectProps } from "@nextui-org/react";
+import { Select, SelectProps } from "@heroui/react";
 import { useField } from "formik";
 
 type FormSelectProps = Omit<SelectProps, "isInvalid" | "errorMessage"> & {

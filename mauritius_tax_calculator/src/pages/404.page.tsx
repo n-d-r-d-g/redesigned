@@ -3,7 +3,7 @@ import Link from "next/link";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import { DEFAULT_I18N_LOCALE, DEFAULT_I18N_NAMESPACE } from "../../constants";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 
 export default function Custom404() {
   const { t: t404 } = useTranslation("404");

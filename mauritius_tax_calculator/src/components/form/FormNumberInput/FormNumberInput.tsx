@@ -1,5 +1,5 @@
 import { useField } from "formik";
-import { Input, InputProps } from "@nextui-org/react";
+import { Input, InputProps } from "@heroui/react";
 import { FocusEvent, useCallback } from "react";
 
 type CurrencyContentProps = {

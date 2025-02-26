@@ -9,7 +9,7 @@ import {
   SelectItem,
   Tooltip,
   useDisclosure,
-} from "@nextui-org/react";
+} from "@heroui/react";
 import { Trans, useTranslation } from "next-i18next";
 import Head from "next/head";
 import Image from "next/image";
