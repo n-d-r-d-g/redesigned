@@ -1,13 +1,13 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
 import flowbite from "flowbite-react/tailwind";
-import { nextui } from "@nextui-org/react";
+import { heroui } from "@heroui/react";
 
 const config = {
   content: [
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
     flowbite.content(),
-    "../node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    "../node_modules/@heroui/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     screens: {
@@ -36,7 +36,7 @@ const config = {
   darkMode: "class",
   plugins: [
     flowbite.plugin(),
-    nextui({
+    heroui({
       themes: {
         light: {
           colors: {

@@ -1,4 +1,4 @@
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { useFormikContext } from "formik";
 import { useTranslation } from "next-i18next";
 import { useCallback } from "react";

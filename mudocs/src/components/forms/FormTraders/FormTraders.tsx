@@ -90,7 +90,7 @@ export default function FormTraders({
           };
 
     return helpers.setValue([...field.value, newTrader], true);
-  }, [field.value, helpers, newTraderType, showAddress]);
+  }, [field.value, helpers, newTraderType, props, showAddress]);
 
   const renderCommonAddress = useCallback(
     () =>

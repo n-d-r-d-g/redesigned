@@ -1,7 +1,7 @@
 import { useTranslation } from "next-i18next";
 import { DEFAULT_I18N_NAMESPACE } from "../../../../constants";
 import { useFormikContext } from "formik";
-import { Button } from "@nextui-org/react";
+import { Button } from "@heroui/react";
 import { useCallback, useEffect, useRef } from "react";
 
 export default function FormClear() {
