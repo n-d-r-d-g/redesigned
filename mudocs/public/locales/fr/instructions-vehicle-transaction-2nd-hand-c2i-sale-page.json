@@ -1,0 +1,465 @@
+{
+  "documentTitle": "Vente d'un véhicule d'occasion (Entreprise à Particulier)",
+  "pageTitle": "Vente d'un véhicule d'occasion - Entreprise à Particulier(s)",
+  "description": "Vous consultez les instructions pour une entreprise vendant son véhicule à un particulier (ou plusieurs particuliers). Vous êtes le représentant de l'entreprise.",
+  "companyRepresentativeNote": "<p><em>Note : Un représentant d'entreprise doit être un employé de l'entreprise.</em></p>",
+  "form": {
+    "numOfDirectors": {
+      "label": "N° de directeurs"
+    },
+    "numOfPurchasers": {
+      "label": "N° d'acheteurs"
+    },
+    "documentsPreparer": {
+      "label": "Qui préparera les documents ci-dessus ?"
+    },
+    "vendorHasStamp": {
+      "label": "Votre entreprise possède-t-elle un cachet ?"
+    },
+    "isVehicleRegistrationBookValid": {
+      "label": "Toutes les informations sur le <VehicleRegistrationBook /> sont-elles à jour ?"
+    },
+    "administrativeStatusCertificateIssuer": {
+      "label": "<span>Qui se rendra à la <NLTAAbbr /> ?</span>"
+    },
+    "paymentMethod": {
+      "label": "Mode de paiement"
+    }
+  },
+  "preparation": {
+    "title": "<h2>Préparation</h2>",
+    "commonSteps": {
+      "askPurchaserInfoPhotos_singlePurchaser": "<label>Demandez à l'acheteur :<ul><li>une photo de sa <ProofOfIdentity /></li><li>une photo de l'adresse affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "askPurchaserInfoPhotos_multiplePurchasers": "<label>Demandez à chaque acheteur :<ul><li>une photo de sa <ProofOfIdentity /></li><li>une photo de l'adresse affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "askPurchaserDeedOfSalePhotoOrPDF_singlePurchaser": "<label>Demandez à l'acheteur une photo ou un <PDFAbbr /> de l'un des <DeedsOfSale /> pour vérifier que tous les détails sont corrects. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> demandera que des modifications soient apportées aux <DeedsOfSale />, puis de revenir plus tard.</label>",
+      "askPurchaserDeedOfSalePhotoOrPDF_multiplePurchasers": "<label>Demandez aux acheteurs une photo ou un <PDFAbbr /> de l'un des <DeedsOfSale /> pour vérifier que tous les détails sont corrects. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> demandera que des modifications soient apportées aux <DeedsOfSale />, puis de revenir plus tard.</label>",
+      "askPurchaserAuthorizationLetterPhotoOrPDF_singlePurchaser": "<label>Demandez à l'acheteur une photo ou un <PDFAbbr /> de la lettre d'autorisation pour vérifier que tous les détails sont corrects. Cette vérification est également importante pour éviter des allers-retours inutiles.</label>",
+      "askPurchaserAuthorizationLetterPhotoOrPDF_multiplePurchasers": "<label>Demandez aux acheteurs une photo ou un <PDFAbbr /> de la lettre d'autorisation pour vérifier que tous les détails sont corrects. Cette vérification est également importante pour éviter des allers-retours inutiles.</label>",
+      "fillAndCheckDeedsOfSale": "<label>Vous pouvez utiliser notre <DeedOfSaleImportantLink>générateur de documents</DeedOfSaleImportantLink> pour générer le <DeedOfSale />. Alternativement, vous pouvez trouver un modèle du <DeedOfSale /> sur <GovtDeedOfSaleLink>le site web de la <NLTAAbbr /></GovtDeedOfSaleLink>. Assurez-vous que les 3 <DeedsOfSale /> sont correctement remplis, c'est-à-dire sans fautes de frappe. Ne signez aucun des <DeedsOfSale /> pour l'instant.</label>",
+      "fillAndCheckSelfAuthorizationLetter_directorRequired": "<label>Vous pouvez utiliser notre <C1ToD1AuthorizationLetterImportantLink>générateur de documents</C1ToD1AuthorizationLetterImportantLink> pour générer la lettre d'autorisation. Alternativement, vous pouvez trouver un modèle de la lettre d'autorisation sur <GovtAuthorizationLetterLink>le site web de la <NLTAAbbr /></GovtAuthorizationLetterLink>. Assurez-vous que la lettre d'autorisation est correctement remplie, c'est-à-dire sans fautes de frappe. Ne signez pas encore la lettre d'autorisation.</label>",
+      "fillAndCheckSelfAuthorizationLetter_directorNotRequired": "<label>Vous pouvez utiliser nos générateurs de documents (<C1ToD1AuthorizationLetterImportantLink>autoriser un directeur</C1ToD1AuthorizationLetterImportantLink> ou <C1ToR1AuthorizationLetterImportantLink>autoriser un représentant d'entreprise</C1ToR1AuthorizationLetterImportantLink>) pour générer la lettre d'autorisation. Alternativement, vous pouvez trouver un modèle de la lettre d'autorisation sur <GovtAuthorizationLetterLink>le site web de la <NLTAAbbr /></GovtAuthorizationLetterLink>. Assurez-vous que la lettre d'autorisation est correctement remplie, c'est-à-dire sans fautes de frappe. Ne signez pas encore la lettre d'autorisation.</label>",
+      "fillAndCheckPurchaserAuthorizationLetter": "<label>Vous pouvez utiliser notre <C1ToI2AuthorizationLetterImportantLink>générateur de documents</C1ToI2AuthorizationLetterImportantLink> pour générer la lettre d'autorisation. Alternativement, vous pouvez trouver un modèle de la lettre d'autorisation sur <GovtAuthorizationLetterLink>le site web de la <NLTAAbbr /></GovtAuthorizationLetterLink>. Assurez-vous que la lettre d'autorisation est correctement remplie, c'est-à-dire sans fautes de frappe. Ne signez pas encore la lettre d'autorisation.</label>",
+      "sendCompanyInfoPhotosToPurchaser_singleDirector_singlePurchaser_directorRequired": "<label>Envoyez les éléments suivants à l'acheteur :<ul><li>une photo de votre <ProofOfIdentity /></li><li>une photo du <BRNAbbr /> de votre entreprise sur sa Carte d'Enregistrement d'Entreprise</li><li>une photo de l'adresse de votre entreprise affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "sendCompanyInfoPhotosToPurchaser_singleDirector_singlePurchaser_directorNotRequired": "<label>Envoyez les éléments suivants à l'acheteur :<ul><li>votre rôle/fonction dans votre entreprise</li><li>une photo de la <ProofOfIdentity /> du directeur de votre entreprise</li><li>une photo du <BRNAbbr /> de votre entreprise sur sa Carte d'Enregistrement d'Entreprise</li><li>une photo de l'adresse de votre entreprise affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "sendCompanyInfoPhotosToPurchaser_singleDirector_multiplePurchasers_directorRequired": "<label>Envoyez les éléments suivants aux acheteurs :<ul><li>une photo de votre <ProofOfIdentity /></li><li>une photo du <BRNAbbr /> de votre entreprise sur sa Carte d'Enregistrement d'Entreprise</li><li>une photo de l'adresse de votre entreprise affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "sendCompanyInfoPhotosToPurchaser_singleDirector_multiplePurchasers_directorNotRequired": "<label>Envoyez les éléments suivants aux acheteurs :<ul><li>votre rôle/fonction dans votre entreprise</li><li>une photo de la <ProofOfIdentity /> du directeur de votre entreprise</li><li>une photo du <BRNAbbr /> de votre entreprise sur sa Carte d'Enregistrement d'Entreprise</li><li>une photo de l'adresse de votre entreprise affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "sendCompanyInfoPhotosToPurchaser_multipleDirectors_singlePurchaser_directorRequired": "<label>Envoyez les éléments suivants à l'acheteur :<ul><li>une photo de la <ProofOfIdentity /> de chaque directeur, y compris la vôtre</li><li>une photo du <BRNAbbr /> de votre entreprise sur sa Carte d'Enregistrement d'Entreprise</li><li>une photo de l'adresse de votre entreprise affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "sendCompanyInfoPhotosToPurchaser_multipleDirectors_singlePurchaser_directorNotRequired": "<label>Envoyez les éléments suivants à l'acheteur :<ul><li>votre rôle/fonction dans votre entreprise</li><li>une photo de la <ProofOfIdentity /> de chaque directeur</li><li>une photo du <BRNAbbr /> de votre entreprise sur sa Carte d'Enregistrement d'Entreprise</li><li>une photo de l'adresse de votre entreprise affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "sendCompanyInfoPhotosToPurchaser_multipleDirectors_multiplePurchasers_directorRequired": "<label>Envoyez les éléments suivants aux acheteurs :<ul><li>une photo de la <ProofOfIdentity /> de chaque directeur, y compris la vôtre</li><li>une photo du <BRNAbbr /> de votre entreprise sur sa Carte d'Enregistrement d'Entreprise</li><li>une photo de l'adresse de votre entreprise affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "sendCompanyInfoPhotosToPurchaser_multipleDirectors_multiplePurchasers_directorNotRequired": "<label>Envoyez les éléments suivants aux acheteurs :<ul><li>votre rôle/fonction dans votre entreprise</li><li>une photo de la <ProofOfIdentity /> de chaque directeur</li><li>une photo du <BRNAbbr /> de votre entreprise sur sa Carte d'Enregistrement d'Entreprise</li><li>une photo de l'adresse de votre entreprise affichée sur sa <ProofOfAddress /></li></ul></label>",
+      "sendVehicleRegistrationBookPhotoToPurchaser_singlePurchaser": "<label>Envoyez une photo du <VehicleRegistrationBook /> à l'acheteur.</label>",
+      "sendVehicleRegistrationBookPhotoToPurchaser_multiplePurchasers": "<label>Envoyez une photo du <VehicleRegistrationBook /> aux acheteurs.</label>",
+      "sendDeedOfSalePhotoOrPDFToPurchaser_singlePurchaser": "<label>Envoyez une photo ou un <PDFAbbr /> de l'un des <DeedsOfSale /> à l'acheteur pour vérifier que tous les détails sont corrects. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> demandera que des modifications soient apportées aux <DeedsOfSale />, puis de revenir plus tard.</label>",
+      "sendDeedOfSalePhotoOrPDFToPurchaser_multiplePurchasers": "<label>Envoyez une photo ou un <PDFAbbr /> de l'un des <DeedsOfSale /> aux acheteurs pour vérifier que tous les détails sont corrects. Cette vérification est cruciale. En cas d'erreur, la <NLTAAbbr /> demandera que des modifications soient apportées aux <DeedsOfSale />, puis de revenir plus tard.</label>",
+      "sendAuthorizationLetterPhotoOrPDFToPurchaser_singlePurchaser": "<label>Envoyez une photo ou un <PDFAbbr /> de la lettre d'autorisation à l'acheteur pour vérifier que tous les détails sont corrects. Cette vérification est également importante pour éviter des allers-retours inutiles.</label>",
+      "sendAuthorizationLetterPhotoOrPDFToPurchaser_multiplePurchasers": "<label>Envoyez une photo ou un <PDFAbbr /> de la lettre d'autorisation aux acheteurs pour vérifier que tous les détails sont corrects. Cette vérification est également importante pour éviter des allers-retours inutiles.</label>"
+    },
+    "requiredDirectorNote": "$t(preparation.requiredDirectorNote_{{numOfDirectors}})",
+    "requiredDirectorNote_singleDirector": "<p>D'après votre scénario, le directeur de votre entreprise est requis à la <NLTAAbbr /> pour émettre le <AdministrativeStatusCertificate />. <em>Par conséquent, le reste de cette page suppose que vous êtes le directeur de votre entreprise.</em></p>",
+    "requiredDirectorNote_multipleDirectors": "<p>D'après votre scénario, l'un des directeurs de votre entreprise est requis à la <NLTAAbbr /> pour émettre le <AdministrativeStatusCertificate />. <em>Par conséquent, le reste de cette page suppose que vous êtes l'un des directeurs de votre entreprise.</em></p>",
+    "step1": "<label>Combien y a-t-il de directeurs d'entreprise et d'acheteurs ?</label>",
+    "step2": "$t(preparation.step2_{{numOfPurchasers}})",
+    "step2_singlePurchaser": "<label>Décidez avec l'acheteur qui préparera les <DeedsOfSale /> et/ou la lettre d'autorisation (pour émettre le <AdministrativeStatusCertificate />).</label>",
+    "step2_multiplePurchasers": "<label>Décidez avec les acheteurs qui préparera les <DeedsOfSale /> et/ou la lettre d'autorisation (pour émettre le <AdministrativeStatusCertificate />).</label>",
+    "step3": "$t(preparation.step3_{{numOfPurchasers}})",
+    "step3_singlePurchaser": "<label>Décidez avec l'acheteur qui se rendra à la <NLTAAbbr /> pour émettre le <AdministrativeStatusCertificate />. Il est conseillé (mais pas obligatoire) que l'acheteur se rende à la <NLTAAbbr /> pour émettre ce document car vous n'avez rien à faire une fois le paiement effectué.</label>",
+    "step3_multiplePurchasers": "<label>Décidez avec les acheteurs qui se rendra à la <NLTAAbbr /> pour émettre le <AdministrativeStatusCertificate />. Il est conseillé (mais pas obligatoire) que l'un des acheteurs se rende à la <NLTAAbbr /> pour émettre ce document car vous n'avez rien à faire une fois le paiement effectué.</label>",
+    "conditionalInstructions": {
+      "issuedByCompany": {
+        "preparedByCompany": {
+          "step1": "$t(preparation.commonSteps.askPurchaserInfoPhotos_{{numOfPurchasers}})",
+          "step2": "$t(preparation.commonSteps.fillAndCheckDeedsOfSale)",
+          "step3": "$t(preparation.commonSteps.fillAndCheckSelfAuthorizationLetter_{{whetherDirectorIsRequired}})",
+          "step4": "$t(preparation.commonSteps.sendCompanyInfoPhotosToPurchaser_{{numOfDirectors}}_{{numOfPurchasers}}_{{whetherDirectorIsRequired}})",
+          "step5": "$t(preparation.commonSteps.sendVehicleRegistrationBookPhotoToPurchaser_{{numOfPurchasers}})",
+          "step6": "$t(preparation.commonSteps.sendDeedOfSalePhotoOrPDFToPurchaser_{{numOfPurchasers}})",
+          "step7": "$t(preparation.commonSteps.sendAuthorizationLetterPhotoOrPDFToPurchaser_{{numOfPurchasers}})"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(preparation.commonSteps.fillAndCheckSelfAuthorizationLetter_{{whetherDirectorIsRequired}})",
+          "step2": "$t(preparation.commonSteps.sendCompanyInfoPhotosToPurchaser_{{numOfDirectors}}_{{numOfPurchasers}}_{{whetherDirectorIsRequired}})",
+          "step3": "$t(preparation.commonSteps.sendVehicleRegistrationBookPhotoToPurchaser_{{numOfPurchasers}})",
+          "step4": "$t(preparation.commonSteps.askPurchaserInfoPhotos_{{numOfPurchasers}})",
+          "step5": "$t(preparation.commonSteps.askPurchaserDeedOfSalePhotoOrPDF_{{numOfPurchasers}})",
+          "step6": "$t(preparation.commonSteps.sendAuthorizationLetterPhotoOrPDFToPurchaser_{{numOfPurchasers}})"
+        }
+      },
+      "issuedByPurchaser": {
+        "preparedByCompany": {
+          "step1": "$t(preparation.commonSteps.askPurchaserInfoPhotos_{{numOfPurchasers}})",
+          "step2": "$t(preparation.commonSteps.fillAndCheckDeedsOfSale)",
+          "step3": "$t(preparation.commonSteps.fillAndCheckPurchaserAuthorizationLetter)",
+          "step4": "$t(preparation.commonSteps.sendCompanyInfoPhotosToPurchaser_{{numOfDirectors}}_{{numOfPurchasers}}_{{whetherDirectorIsRequired}})",
+          "step5": "$t(preparation.commonSteps.sendVehicleRegistrationBookPhotoToPurchaser_{{numOfPurchasers}})",
+          "step6": "$t(preparation.commonSteps.sendDeedOfSalePhotoOrPDFToPurchaser_{{numOfPurchasers}})",
+          "step7": "$t(preparation.commonSteps.sendAuthorizationLetterPhotoOrPDFToPurchaser_{{numOfPurchasers}})"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(preparation.commonSteps.sendCompanyInfoPhotosToPurchaser_{{numOfDirectors}}_{{numOfPurchasers}}_{{whetherDirectorIsRequired}})",
+          "step2": "$t(preparation.commonSteps.sendVehicleRegistrationBookPhotoToPurchaser_{{numOfPurchasers}})",
+          "step3": "$t(preparation.commonSteps.askPurchaserInfoPhotos_{{numOfPurchasers}})",
+          "step4": "$t(preparation.commonSteps.askPurchaserDeedOfSalePhotoOrPDF_{{numOfPurchasers}})",
+          "step5": "$t(preparation.commonSteps.askPurchaserAuthorizationLetterPhotoOrPDF_{{numOfPurchasers}})"
+        }
+      },
+      "issuedByCompanyAndPurchaser": {
+        "preparedByCompany": {
+          "step1": "$t(preparation.commonSteps.askPurchaserInfoPhotos_{{numOfPurchasers}})",
+          "step2": "$t(preparation.commonSteps.fillAndCheckDeedsOfSale)",
+          "step3": "$t(preparation.commonSteps.fillAndCheckSelfAuthorizationLetter_{{whetherDirectorIsRequired}})",
+          "step4": "$t(preparation.commonSteps.sendCompanyInfoPhotosToPurchaser_{{numOfDirectors}}_{{numOfPurchasers}}_{{whetherDirectorIsRequired}})",
+          "step5": "$t(preparation.commonSteps.sendVehicleRegistrationBookPhotoToPurchaser_{{numOfPurchasers}})",
+          "step6": "$t(preparation.commonSteps.sendDeedOfSalePhotoOrPDFToPurchaser_{{numOfPurchasers}})",
+          "step7": "$t(preparation.commonSteps.sendAuthorizationLetterPhotoOrPDFToPurchaser_{{numOfPurchasers}})"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(preparation.commonSteps.fillAndCheckSelfAuthorizationLetter_{{whetherDirectorIsRequired}})",
+          "step2": "$t(preparation.commonSteps.sendCompanyInfoPhotosToPurchaser_{{numOfDirectors}}_{{numOfPurchasers}}_{{whetherDirectorIsRequired}})",
+          "step3": "$t(preparation.commonSteps.sendVehicleRegistrationBookPhotoToPurchaser_{{numOfPurchasers}})",
+          "step4": "$t(preparation.commonSteps.askPurchaserInfoPhotos_{{numOfPurchasers}})",
+          "step5": "$t(preparation.commonSteps.askPurchaserDeedOfSalePhotoOrPDF_{{numOfPurchasers}})",
+          "step6": "$t(preparation.commonSteps.sendAuthorizationLetterPhotoOrPDFToPurchaser_{{numOfPurchasers}})"
+        }
+      }
+    },
+    "lastStep": "<label>Demandez à l'acheteur comment il paiera pour le véhicule.</label>"
+  },
+  "payment": {
+    "title": "<h2>Accepter le paiement pour la vente du véhicule</h2>",
+    "description": "$t(payment.description_{{numOfDirectors}}_{{numOfPurchasers}}_{{whetherDirectorIsRequired}})",
+    "description_singleDirector_singlePurchaser_directorRequired": "<p>L'acheteur et vous devez convenir d'un lieu de rencontre pour que le paiement puisse être effectué et les documents signés.</p>",
+    "description_singleDirector_singlePurchaser_directorNotRequired": "<p>L'acheteur, le directeur de votre entreprise et vous devez convenir d'un lieu de rencontre pour que le paiement puisse être effectué et les documents signés.</p>",
+    "description_singleDirector_multiplePurchasers_directorRequired": "<p>Les acheteurs et vous devez convenir d'un lieu de rencontre pour que le paiement puisse être effectué et les documents signés.</p>",
+    "description_singleDirector_multiplePurchasers_directorNotRequired": "<p>Les acheteurs, le directeur de votre entreprise et vous devez convenir d'un lieu de rencontre pour que le paiement puisse être effectué et les documents signés.</p>",
+    "description_multipleDirectors_singlePurchaser_directorRequired": "<p>L'acheteur, les directeurs de votre entreprise et vous devez convenir d'un lieu de rencontre pour que le paiement puisse être effectué et les documents signés.</p>",
+    "description_multipleDirectors_singlePurchaser_directorNotRequired": "<p>L'acheteur, les directeurs de votre entreprise et vous devez convenir d'un lieu de rencontre pour que le paiement puisse être effectué et les documents signés.</p>",
+    "description_multipleDirectors_multiplePurchasers_directorRequired": "<p>Les acheteurs, les directeurs de votre entreprise et vous devez convenir d'un lieu de rencontre pour que le paiement puisse être effectué et les documents signés.</p>",
+    "description_multipleDirectors_multiplePurchasers_directorNotRequired": "<p>Les acheteurs, les directeurs de votre entreprise et vous devez convenir d'un lieu de rencontre pour que le paiement puisse être effectué et les documents signés.</p>",
+    "commonSteps": {
+      "askPurchaserProofOfIdentity_singlePurchaser": "<label>Demandez à l'acheteur de s'assurer d'apporter sa <ProofOfIdentity /> originale.</label>",
+      "askPurchaserProofOfIdentity_multiplePurchasers": "<label>Demandez aux acheteurs de s'assurer d'apporter chacun leur <ProofOfIdentity /> originale.</label>",
+      "askPurchaserDeedsOfSale_singlePurchaser": "<label>Demandez à l'acheteur de s'assurer d'apporter les 3 <DeedsOfSale /> remplis.</label>",
+      "askPurchaserDeedsOfSale_multiplePurchasers": "<label>Demandez aux acheteurs de s'assurer d'apporter les 3 <DeedsOfSale /> remplis.</label>",
+      "askPurchaserAuthorizationLetter_singlePurchaser": "<label>Demandez à l'acheteur de s'assurer d'apporter la lettre d'autorisation remplie.</label>",
+      "askPurchaserAuthorizationLetter_multiplePurchasers": "<label>Demandez aux acheteurs de s'assurer d'apporter la lettre d'autorisation remplie.</label>",
+      "bringProofOfIdentity_singleDirector_directorRequired": "<label>Assurez-vous d'apporter votre <ProofOfIdentity /> originale.</label>",
+      "bringProofOfIdentity_singleDirector_directorNotRequired": "<label>Assurez-vous de demander au directeur de votre entreprise d'apporter sa <ProofOfIdentity />.</label>",
+      "bringProofOfIdentity_multipleDirectors_directorRequired": "<label>Assurez-vous que les directeurs de votre entreprise et vous apportiez chacun votre <ProofOfIdentity /> originale.</label>",
+      "bringProofOfIdentity_multipleDirectors_directorNotRequired": "<label>Assurez-vous que les directeurs de votre entreprise apportent leur <ProofOfIdentity /> originale.</label>",
+      "bringDeedsOfSale": "<label>Assurez-vous d'apporter les 3 <DeedsOfSale /> remplis.</label>",
+      "bringAuthorizationLetter": "<label>Assurez-vous d'apporter la lettre d'autorisation remplie.</label>",
+      "bringVehicleRegistrationBook": "<label>Assurez-vous d'apporter le <VehicleRegistrationBook /> original.</label>",
+      "bringStamp": "<label>Assurez-vous d'apporter le cachet de votre entreprise. Si votre entreprise n'a pas de cachet, vous devrez apporter un document original certifié mentionnant que vous êtes le directeur.</label>",
+      "verifyDeedsOfSale": "<label>Pour éviter tout tracas inutile plus tard, vérifiez à nouveau tous les détails sur les <DeedsOfSale /> car vous avez la plupart des documents en main.</label>",
+      "verifyDeedsOfSaleAndAuthorizationLetter": "<label>Pour éviter tout tracas inutile plus tard, vérifiez à nouveau tous les détails sur les <DeedsOfSale /> et la lettre d'autorisation car vous avez la plupart des documents en main.</label>",
+      "keepProofOfIdentity_singleDirector_directorRequired": "<label>Gardez votre <ProofOfIdentity /> originale.</label>",
+      "keepProofOfIdentity_singleDirector_directorNotRequired": "<label>Le directeur de votre entreprise doit garder sa <ProofOfIdentity /> originale.</label>",
+      "keepProofOfIdentity_multipleDirectors_directorRequired": "<label>Gardez l'original de la <ProofOfIdentity /> de chaque directeur de votre entreprise, y compris la vôtre</label>",
+      "keepProofOfIdentity_multipleDirectors_directorNotRequired": "<label>Gardez l'original de la <ProofOfIdentity /> de chaque directeur de votre entreprise.</label>",
+      "keepVehicleRegistrationBook": "<label>Gardez le <VehicleRegistrationBook /> original.</label>",
+      "bringFitnessCopy": "<label>Assurez-vous d'apporter la copie originale de la vignette de fitness du véhicule (nécessaire pour le prochain test de fitness).</label>",
+      "keepStamp": "<label>Gardez le cachet de votre entreprise.</label>",
+      "keep1DeedOfSale": "<label>Gardez 1 <DeedOfSale /> signé.</label>",
+      "keep2DeedsOfSale": "<label>Gardez 2 <DeedsOfSale /> signés.</label>",
+      "purchaserKeepsProofOfIdentity_singlePurchaser": "<label>L'acheteur doit garder sa <ProofOfIdentity /> originale.</label>",
+      "purchaserKeepsProofOfIdentity_multiplePurchasers": "<label>Les acheteurs doivent garder leur <ProofOfIdentity /> originale.</label>",
+      "purchaserKeepsAuthorizationLetter_singlePurchaser": "<label>L'acheteur doit garder la lettre d'autorisation signée.</label>",
+      "purchaserKeepsAuthorizationLetter_multiplePurchasers": "<label>Les acheteurs doivent garder la lettre d'autorisation signée.</label>",
+      "givePurchaserVehicleRegistrationBook_singlePurchaser": "<label>Remettez le <VehicleRegistrationBook /> original à l'acheteur.</label>",
+      "givePurchaserVehicleRegistrationBook_multiplePurchasers": "<label>Remettez le <VehicleRegistrationBook /> original aux acheteurs.</label>",
+      "givePurchaserFitnessCopy_singlePurchaser": "<label>Remettez la copie originale de la vignette de fitness du véhicule à l'acheteur.</label>",
+      "givePurchaserFitnessCopy_multiplePurchasers": "<label>Remettez la copie originale de la vignette de fitness du véhicule aux acheteurs.</label>",
+      "givePurchaser1DeedOfSale_singlePurchaser": "<label>Remettez 1 <DeedOfSale /> signé à l'acheteur.</label>",
+      "givePurchaser1DeedOfSale_multiplePurchasers": "<label>Remettez 1 <DeedOfSale /> signé aux acheteurs.</label>",
+      "givePurchaser2DeedsOfSale_singlePurchaser": "<label>Remettez 2 <DeedsOfSale /> signés à l'acheteur.</label>",
+      "givePurchaser2DeedsOfSale_multiplePurchasers": "<label>Remettez 2 <DeedsOfSale /> signés aux acheteurs.</label>",
+      "givePurchaserAuthorizationLetter_singlePurchaser": "<label>Remettez la lettre d'autorisation signée à l'acheteur.</label>",
+      "givePurchaserAuthorizationLetter_multiplePurchasers": "<label>Remettez la lettre d'autorisation signée aux acheteurs.</label>",
+      "signatureMatch": "Assurez-vous que les signatures correspondent à celles sur la <ProofOfIdentity /> de la partie respective.",
+      "fundsTransferredOrNot": "La banque vous informera ensuite si les fonds ont été transférés sur votre compte.",
+      "noWorriesAboutFraud": "De cette façon, vous n'avez pas à vous soucier de vous assurer que vous avez reçu le montant exact, ou de tout ce qui concerne les faux billets ou d'autres types de fraude.",
+      "bankAsksDeedOfSale": "La banque peut vous demander un <DeedOfSale /> signé comme preuve de vente.",
+      "cashPaymentDeedSignature": "<label>Une fois les fonds reçus sur le compte bancaire convenu, les 2 autres <DeedsOfSale /> peuvent être signés et tamponnés. $t(payment.commonSteps.signatureMatch)</label>",
+      "cashPaymentDeedAndLetterSignature": "<label>Une fois les fonds reçus sur le compte bancaire convenu, les 2 autres <DeedsOfSale /> et la lettre d'autorisation peuvent être signés et tamponnés. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedSignature": "<label>Une fois que l'acheteur vous a payé, <em>seulement alors</em>, les 3 <DeedsOfSale /> peuvent être signés et tamponnés. $t(payment.commonSteps.signatureMatch)</label>",
+      "nonCashPaymentDeedAndLetterSignature": "<label>Une fois que l'acheteur vous a payé, <em>seulement alors</em>, les 3 <DeedsOfSale /> et la lettre d'autorisation peuvent être signés et tamponnés. $t(payment.commonSteps.signatureMatch)</label>"
+    },
+    "step1": "<label>Assurez-vous d'avoir retiré tous les effets personnels du véhicule.</label>",
+    "conditionalInstructions1": {
+      "issuedByCompany": {
+        "preparedByCompany": {
+          "step1": "$t(payment.commonSteps.askPurchaserProofOfIdentity_{{numOfPurchasers}})",
+          "step2": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step3": "$t(payment.commonSteps.bringVehicleRegistrationBook)",
+          "step4": "$t(payment.commonSteps.bringFitnessCopy)",
+          "step5": "$t(payment.commonSteps.bringStamp)",
+          "step6": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step7": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.askPurchaserProofOfIdentity_{{numOfPurchasers}})",
+          "step2": "$t(payment.commonSteps.askPurchaserDeedsOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step4": "$t(payment.commonSteps.bringVehicleRegistrationBook)",
+          "step5": "$t(payment.commonSteps.bringFitnessCopy)",
+          "step6": "$t(payment.commonSteps.bringStamp)",
+          "step7": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        }
+      },
+      "issuedByPurchaser": {
+        "preparedByCompany": {
+          "step1": "$t(payment.commonSteps.askPurchaserProofOfIdentity_{{numOfPurchasers}})",
+          "step2": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step3": "$t(payment.commonSteps.bringVehicleRegistrationBook)",
+          "step4": "$t(payment.commonSteps.bringFitnessCopy)",
+          "step5": "$t(payment.commonSteps.bringStamp)",
+          "step6": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step7": "$t(payment.commonSteps.bringAuthorizationLetter)",
+          "step8": "$t(payment.commonSteps.verifyDeedsOfSaleAndAuthorizationLetter)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.askPurchaserProofOfIdentity_{{numOfPurchasers}})",
+          "step2": "$t(payment.commonSteps.askPurchaserDeedsOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.askPurchaserAuthorizationLetter_{{numOfPurchasers}})",
+          "step4": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step5": "$t(payment.commonSteps.bringVehicleRegistrationBook)",
+          "step6": "$t(payment.commonSteps.bringFitnessCopy)",
+          "step7": "$t(payment.commonSteps.bringStamp)",
+          "step8": "$t(payment.commonSteps.verifyDeedsOfSaleAndAuthorizationLetter)"
+        }
+      },
+      "issuedByCompanyAndPurchaser": {
+        "preparedByCompany": {
+          "step1": "$t(payment.commonSteps.askPurchaserProofOfIdentity_{{numOfPurchasers}})",
+          "step2": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step3": "$t(payment.commonSteps.bringVehicleRegistrationBook)",
+          "step4": "$t(payment.commonSteps.bringFitnessCopy)",
+          "step5": "$t(payment.commonSteps.bringStamp)",
+          "step6": "$t(payment.commonSteps.bringDeedsOfSale)",
+          "step7": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.askPurchaserProofOfIdentity_{{numOfPurchasers}})",
+          "step2": "$t(payment.commonSteps.askPurchaserDeedsOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.bringProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step4": "$t(payment.commonSteps.bringVehicleRegistrationBook)",
+          "step5": "$t(payment.commonSteps.bringFitnessCopy)",
+          "step6": "$t(payment.commonSteps.bringStamp)",
+          "step7": "$t(payment.commonSteps.verifyDeedsOfSale)"
+        }
+      }
+    },
+    "conditionalInstructions2": {
+      "paidInCash": {
+        "cashDeposit": "$t(payment.conditionalInstructions2.paidInCash.cashDeposit_{{numOfDirectors}}_{{numOfPurchasers}})",
+        "cashDeposit_singleDirector_singlePurchaser": "<p>Demandez à l'acheteur de vous rencontrer (en supposant que vous êtes le directeur) à la banque pour déposer l'argent directement sur le compte bancaire convenu. $t(payment.commonSteps.noWorriesAboutFraud) $t(payment.commonSteps.bankAsksDeedOfSale) L'acheteur et vous devez le signer et le tamponner au guichet, <em>pas avant cela</em>. $t(payment.commonSteps.signatureMatch) $t(payment.commonSteps.fundsTransferredOrNot)</p>",
+        "cashDeposit_singleDirector_multiplePurchasers": "<p>Demandez aux acheteurs de vous rencontrer (en supposant que vous êtes le directeur) à la banque pour déposer l'argent directement sur le compte bancaire convenu. $t(payment.commonSteps.noWorriesAboutFraud) $t(payment.commonSteps.bankAsksDeedOfSale) Tous les acheteurs et vous devez le signer et le tamponner au guichet, <em>pas avant cela</em>. $t(payment.commonSteps.signatureMatch) $t(payment.commonSteps.fundsTransferredOrNot)</p>",
+        "cashDeposit_multipleDirectors_singlePurchaser": "<p>Demandez à l'acheteur et aux autres directeurs de l'entreprise de vous rencontrer à la banque pour déposer l'argent directement sur le compte bancaire convenu. $t(payment.commonSteps.noWorriesAboutFraud) $t(payment.commonSteps.bankAsksDeedOfSale) Tous les directeurs et l'acheteur doivent le signer et le tamponner au guichet, <em>pas avant cela</em>. $t(payment.commonSteps.signatureMatch) $t(payment.commonSteps.fundsTransferredOrNot)</p>",
+        "cashDeposit_multipleDirectors_multiplePurchasers": "<p>Demandez aux acheteurs et aux autres directeurs de l'entreprise de vous rencontrer à la banque pour déposer l'argent directement sur le compte bancaire convenu. $t(payment.commonSteps.noWorriesAboutFraud) $t(payment.commonSteps.bankAsksDeedOfSale) Tous les directeurs et les acheteurs doivent le signer et le tamponner au guichet, <em>pas avant cela</em>. $t(payment.commonSteps.signatureMatch) $t(payment.commonSteps.fundsTransferredOrNot)</p>",
+        "issuedByCompany": {
+          "step1": "$t(payment.commonSteps.cashPaymentDeedSignature)"
+        },
+        "issuedByPurchaser": {
+          "step1": "$t(payment.commonSteps.cashPaymentDeedAndLetterSignature)"
+        },
+        "issuedByCompanyAndPurchaser": {
+          "step1": "$t(payment.commonSteps.cashPaymentDeedSignature)"
+        }
+      },
+      "notPaidInCash": {
+        "issuedByCompany": {
+          "step1": "$t(payment.commonSteps.nonCashPaymentDeedSignature)"
+        },
+        "issuedByPurchaser": {
+          "step1": "$t(payment.commonSteps.nonCashPaymentDeedAndLetterSignature)"
+        },
+        "issuedByCompanyAndPurchaser": {
+          "step1": "$t(payment.commonSteps.nonCashPaymentDeedSignature)"
+        }
+      }
+    },
+    "conditionalInstructions3": {
+      "issuedByCompany": {
+        "preparedByCompany": {
+          "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
+          "step2": "$t(payment.commonSteps.givePurchaser1DeedOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.givePurchaserFitnessCopy_{{numOfPurchasers}})",
+          "step4": "$t(payment.commonSteps.purchaserKeepsProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
+          "step7": "$t(payment.commonSteps.keepStamp)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
+          "step2": "$t(payment.commonSteps.givePurchaser1DeedOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.givePurchaserFitnessCopy_{{numOfPurchasers}})",
+          "step4": "$t(payment.commonSteps.purchaserKeepsProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
+          "step7": "$t(payment.commonSteps.keepStamp)"
+        }
+      },
+      "issuedByPurchaser": {
+        "preparedByCompany": {
+          "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
+          "step2": "$t(payment.commonSteps.givePurchaser2DeedsOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.givePurchaserAuthorizationLetter_{{numOfPurchasers}})",
+          "step4": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step5": "$t(payment.commonSteps.purchaserKeepsProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
+          "step7": "$t(payment.commonSteps.givePurchaserFitnessCopy_{{numOfPurchasers}})",
+          "step8": "$t(payment.commonSteps.keepStamp)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.keep1DeedOfSale)",
+          "step2": "$t(payment.commonSteps.givePurchaser2DeedsOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.purchaserKeepsAuthorizationLetter_{{numOfPurchasers}})",
+          "step4": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step5": "$t(payment.commonSteps.purchaserKeepsProofOfIdentity_{{numOfPurchasers}})",
+          "step6": "$t(payment.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
+          "step7": "$t(payment.commonSteps.givePurchaserFitnessCopy_{{numOfPurchasers}})",
+          "step8": "$t(payment.commonSteps.keepStamp)"
+        }
+      },
+      "issuedByCompanyAndPurchaser": {
+        "preparedByCompany": {
+          "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
+          "step2": "$t(payment.commonSteps.givePurchaser1DeedOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.givePurchaserFitnessCopy_{{numOfPurchasers}})",
+          "step4": "$t(payment.commonSteps.purchaserKeepsProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
+          "step7": "$t(payment.commonSteps.keepStamp)"
+        },
+        "preparedByPurchaser": {
+          "step1": "$t(payment.commonSteps.keep2DeedsOfSale)",
+          "step2": "$t(payment.commonSteps.givePurchaser1DeedOfSale_{{numOfPurchasers}})",
+          "step3": "$t(payment.commonSteps.givePurchaserFitnessCopy_{{numOfPurchasers}})",
+          "step4": "$t(payment.commonSteps.purchaserKeepsProofOfIdentity_{{numOfPurchasers}})",
+          "step5": "$t(payment.commonSteps.keepProofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+          "step6": "$t(payment.commonSteps.keepVehicleRegistrationBook)",
+          "step7": "$t(payment.commonSteps.keepStamp)"
+        }
+      }
+    },
+    "leaveWithVehicle": "$t(payment.leaveWithVehicle_{{numOfPurchasers}})",
+    "leaveWithVehicle_singlePurchaser": "<p>À ce stade, l'acheteur peut partir avec le véhicule.</p>",
+    "leaveWithVehicle__multiplePurchasers": "<p>À ce stade, les acheteurs peuvent partir avec le véhicule.</p>"
+  },
+  "administrativeStatusCertificate": {
+    "title": "<h2>Émettre un <AdministrativeStatusCertificate /></h2>",
+    "description": "<p>Le but de ce document est de certifier que le véhicule vendu n'est pas légalement lié à quoi que ce soit qui empêche sa vente, par exemple vol, prêt, opposition à la vente, etc. Ce document peut être émis au <NLTAContactLink>siège ou bureaux secondaires de la <NLTAAbbr /></NLTAContactLink>.</p>",
+    "commonSteps": {
+      "bring2DeedsOfSale": "<label>Assurez-vous d'apporter 2 <DeedsOfSale /> signés.</label>",
+      "bringAuthorizationLetter": "<label>Assurez-vous d'apporter la lettre d'autorisation signée.</label>",
+      "bringProofOfIdentity_singleDirector": "<label>Assurez-vous d'apporter votre <ProofOfIdentity /> originale.</label>",
+      "bringProofOfIdentity_multipleDirectors": "<label>Assurez-vous d'apporter l'original de la <ProofOfIdentity /> de chaque directeur, y compris la vôtre.</label>",
+      "bringVehicleRegistrationBook": "<label>Assurez-vous d'apporter le <VehicleRegistrationBook /> original.</label>",
+      "bringRs50": "<label>Assurez-vous d'apporter 50 Rs en espèces.</label>",
+      "bringDirectorProof_singleDirector_directorRequired": "<label>Assurez-vous d'apporter un document original certifié mentionnant que vous êtes le directeur de votre entreprise.</label>",
+      "bringDirectorProof_singleDirector_directorNotRequired": "<label>Assurez-vous d'apporter un document original certifié spécifiant que le directeur de votre entreprise est le directeur.</label>",
+      "bringDirectorProof_multipleDirectors_directorRequired": "<label>Assurez-vous d'apporter un document original certifié spécifiant que les directeurs de votre entreprise sont les directeurs.</label>",
+      "bringDirectorProof_multipleDirectors_directorNotRequired": "<label>Assurez-vous d'apporter un document original certifié spécifiant que les directeurs de votre entreprise sont les directeurs.</label>",
+      "askPurchaserToBringDeedOfSale_singlePurchaser": "<label>Demandez à l'acheteur de s'assurer d'apporter son <DeedOfSale /> signé.</label>",
+      "askPurchaserToBringDeedOfSale_multiplePurchasers": "<label>Demandez aux acheteurs de s'assurer d'apporter leur <DeedOfSale /> signé.</label>",
+      "askPurchaserDeedOfSale_singlePurchaser": "<label>Demandez à l'acheteur son <DeedOfSale /> signé.</label>",
+      "askPurchaserDeedOfSale_multiplePurchasers": "<label>Demandez aux acheteurs leur <DeedOfSale /> signé.</label>",
+      "givePurchaser2StampedDeedsOfSale_singlePurchaser": "<label>Assurez-vous de remettre les 2 <DeedsOfSale /> tamponnés à l'acheteur.</label>",
+      "givePurchaser2StampedDeedsOfSale_multiplePurchasers": "<label>Assurez-vous de remettre les 2 <DeedsOfSale /> tamponnés aux acheteurs.</label>",
+      "givePurchaserVehicleRegistrationBook_singlePurchaser": "<label>Assurez-vous de remettre le <VehicleRegistrationBook /> original à l'acheteur.</label>",
+      "givePurchaserVehicleRegistrationBook_multiplePurchasers": "<label>Assurez-vous de remettre le <VehicleRegistrationBook /> original aux acheteurs.</label>",
+      "givePurchaserAdministrativeStatusCertificate_singlePurchaser": "<label>Assurez-vous de remettre le <AdministrativeStatusCertificate /> à l'acheteur.</label>",
+      "givePurchaserAdministrativeStatusCertificate_multiplePurchasers": "<label>Assurez-vous de remettre le <AdministrativeStatusCertificate /> aux acheteurs.</label>",
+      "keepProofOfIdentity_singleDirector": "<label>Gardez votre <ProofOfIdentity /> originale.</label>",
+      "keepProofOfIdentity_multipleDirectors": "<label>Gardez votre <ProofOfIdentity /> originale et remettez à chaque directeur de votre entreprise la leur.</label>",
+      "keepReceipt": "<label>Gardez le reçu de paiement du <AdministrativeStatusCertificate />.</label>",
+      "keepDirectorProof_singleDirector_directorRequired": "<label>Gardez le document original certifié mentionnant que vous êtes le directeur de votre entreprise.</label>",
+      "keepDirectorProof_multipleDirectors_directorRequired": "<label>Gardez le document original certifié spécifiant que le directeur de votre entreprise est le directeur.</label>",
+      "keepDirectorProof_singleDirector_directorNotRequired": "<label>Gardez le document original certifié spécifiant que les directeurs de votre entreprise sont les directeurs.</label>",
+      "keepDirectorProof_multipleDirectors_directorNotRequired": "<label>Gardez le document original certifié spécifiant que les directeurs de votre entreprise sont les directeurs</label>",
+      "askPurchaserToBringDeedOfSaleToMeeting_singlePurchaser": "<p>Avant de rencontrer l'acheteur, demandez-lui de s'assurer d'apporter son <DeedOfSale /> signé.</p>",
+      "askPurchaserToBringDeedOfSaleToMeeting_multiplePurchasers": "<p>Avant de rencontrer les acheteurs, demandez-leur de s'assurer d'apporter leur <DeedOfSale /> signé.</p>"
+    },
+    "commonItems": {
+      "stampedDeedsOfSale": "<li>Les 2 <DeedsOfSale /> signés, tamponnés au dos.</li>",
+      "authorizationLetter": "<li>La lettre d'autorisation.</li>",
+      "proofOfIdentity_singleDirector_directorRequired": "<li>Votre <ProofOfIdentity /> originale.</li>",
+      "proofOfIdentity_singleDirector_directorNotRequired": "<li>La <ProofOfIdentity /> originale du directeur de votre entreprise et la vôtre.</li>",
+      "proofOfIdentity_multipleDirectors_directorRequired": "<li>L'original de la <ProofOfIdentity /> de chaque directeur, y compris la vôtre.</li>",
+      "proofOfIdentity_multipleDirectors_directorNotRequired": "<li>L'original de la <ProofOfIdentity /> de chaque directeur.</li>",
+      "vehicleRegistrationBook": "<li>Le <VehicleRegistrationBook /> original.</li>",
+      "administrativeStatusCertificate": "<li>Un <AdministrativeStatusCertificate />.</li>",
+      "administrativeStatusCertificateReceipt": "<li>Un reçu pour le paiement du <AdministrativeStatusCertificate />.</li>",
+      "directorProof_singleDirector_directorRequired": "<li>Le document original certifié mentionnant que vous êtes le directeur de votre entreprise.</li>",
+      "directorProof_singleDirector_directorNotRequired": "<li>Le document original certifié spécifiant que les directeurs de votre entreprise sont les directeurs.</li>",
+      "directorProof_multipleDirectors_directorRequired": "<li>Le document original certifié spécifiant que le directeur de votre entreprise est le directeur.</li>",
+      "directorProof_multipleDirectors_directorNotRequired": "<li>Le document original certifié spécifiant que les directeurs de votre entreprise sont les directeurs</li>"
+    },
+    "conditionalInstructions1": {
+      "description": "<p>Avant de vous rendre à la <NLTAAbbr />, assurez-vous des éléments suivants :</p>",
+      "issuedByCompany": {
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.bring2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.bringAuthorizationLetter)",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.bringProofOfIdentity_{{numOfDirectors}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook)",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.bringRs50)",
+        "directorProofRequirement": "$t(administrativeStatusCertificate.commonSteps.bringDirectorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
+      },
+      "issuedByCompanyAndPurchaser": {
+        "requirement1": "$t(administrativeStatusCertificate.commonSteps.bring2DeedsOfSale)",
+        "requirement2": "$t(administrativeStatusCertificate.commonSteps.bringAuthorizationLetter)",
+        "requirement3": "$t(administrativeStatusCertificate.commonSteps.bringProofOfIdentity_{{numOfDirectors}})",
+        "requirement4": "$t(administrativeStatusCertificate.commonSteps.bringVehicleRegistrationBook)",
+        "requirement5": "$t(administrativeStatusCertificate.commonSteps.bringRs50)",
+        "directorProofRequirement": "$t(administrativeStatusCertificate.commonSteps.bringDirectorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+        "requirement6": "$t(administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSale_{{numOfPurchasers}})"
+      }
+    },
+    "conditionalInstructions2": {
+      "description": "<p>L'agent de la <NLTAAbbr /> vous remettra les éléments suivants :</p>",
+      "issuedByCompany": {
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.authorizationLetter)",
+        "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)",
+        "directorProofItem": "$t(administrativeStatusCertificate.commonItems.directorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
+      },
+      "issuedByCompanyAndPurchaser": {
+        "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
+        "item2": "$t(administrativeStatusCertificate.commonItems.authorizationLetter)",
+        "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfDirectors}}_{{whetherDirectorIsRequired}})",
+        "item4": "$t(administrativeStatusCertificate.commonItems.vehicleRegistrationBook)",
+        "item5": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificate)",
+        "item6": "$t(administrativeStatusCertificate.commonItems.administrativeStatusCertificateReceipt)",
+        "directorProofItem": "$t(administrativeStatusCertificate.commonItems.directorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
+      }
+    },
+    "conditionalInstructions3": {
+      "issuedByCompany": {
+        "description": "$t(administrativeStatusCertificate.commonSteps.askPurchaserToBringDeedOfSaleToMeeting_{{numOfPurchasers}})",
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_{{numOfPurchasers}})",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_{{numOfPurchasers}})",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_{{numOfPurchasers}})",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.keepProofOfIdentity_{{numOfDirectors}})",
+        "step6": "$t(administrativeStatusCertificate.commonSteps.keepReceipt)",
+        "directorProofStep": "$t(administrativeStatusCertificate.commonSteps.keepDirectorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
+      },
+      "issuedByCompanyAndPurchaser": {
+        "step1": "$t(administrativeStatusCertificate.commonSteps.askPurchaserDeedOfSale_{{numOfPurchasers}})",
+        "step2": "$t(administrativeStatusCertificate.commonSteps.givePurchaser2StampedDeedsOfSale_{{numOfPurchasers}})",
+        "step3": "$t(administrativeStatusCertificate.commonSteps.givePurchaserVehicleRegistrationBook_{{numOfPurchasers}})",
+        "step4": "$t(administrativeStatusCertificate.commonSteps.givePurchaserAdministrativeStatusCertificate_{{numOfPurchasers}})",
+        "step5": "$t(administrativeStatusCertificate.commonSteps.keepProofOfIdentity_{{numOfDirectors}})",
+        "step6": "$t(administrativeStatusCertificate.commonSteps.keepReceipt)",
+        "directorProofStep": "$t(administrativeStatusCertificate.commonSteps.keepDirectorProof_{{numOfDirectors}}_{{whetherDirectorIsRequired}})"
+      }
+    }
+  },
+  "informInsurance": "<p>Assurez-vous d'informer la compagnie d'assurance de la vente du véhicule afin qu'elle puisse résilier son contrat d'assurance.</p>",
+  "endingNote": "$t(endingNote_{{numOfPurchasers}})",
+  "endingNote_singlePurchaser": "<p>À ce stade, vous avez terminé toutes les formalités requises. L'acheteur devra procéder à l'enregistrement, à l'assurance et au transfert de propriété.</p>",
+  "endingNote_multiplePurchasers": "<p>À ce stade, vous avez terminé toutes les formalités requises. Les acheteurs devront procéder à l'enregistrement, à l'assurance et au transfert de propriété.</p>"
+}
