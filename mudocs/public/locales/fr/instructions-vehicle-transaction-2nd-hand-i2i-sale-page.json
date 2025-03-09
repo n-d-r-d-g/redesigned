@@ -605,7 +605,7 @@
         "step7": "$t(administrativeStatusCertificate.commonSteps.keepReceipt)"
       },
       "issuedByVendorDelegate": {
-        "description1": "<p>After the <AdministrativeStatusCertificate /> is issued, make sure that your delegate hands you the following:</p>",
+        "description1": "<p>Après la délivrance du <AdministrativeStatusCertificate />, assurez-vous que votre délégué vous remet les éléments suivants:</p>",
         "item1": "$t(administrativeStatusCertificate.commonItems.stampedDeedsOfSale)",
         "item2": "$t(administrativeStatusCertificate.commonItems.purchaserProofOfIdentity_{{numOfPurchasers}})",
         "item3": "$t(administrativeStatusCertificate.commonItems.proofOfIdentity_{{numOfVendors}}_vendorNameProofNotRequired)",
