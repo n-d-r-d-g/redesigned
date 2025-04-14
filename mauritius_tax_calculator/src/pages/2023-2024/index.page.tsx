@@ -192,19 +192,44 @@ export default function FinancialYear2023To2024() {
                         label={t2023To2024("month.form.numOfDependents.label")}
                         placeholder="0"
                       >
-                        <SelectItem key="0" textValue="0">
+                        <SelectItem
+                          key="0"
+                          textValue={t2023To2024(
+                            "month.form.numOfDependents.items.0"
+                          )}
+                        >
                           {t2023To2024("month.form.numOfDependents.items.0")}
                         </SelectItem>
-                        <SelectItem key="1" textValue="1">
+                        <SelectItem
+                          key="1"
+                          textValue={t2023To2024(
+                            "month.form.numOfDependents.items.1"
+                          )}
+                        >
                           {t2023To2024("month.form.numOfDependents.items.1")}
                         </SelectItem>
-                        <SelectItem key="2" textValue="2">
+                        <SelectItem
+                          key="2"
+                          textValue={t2023To2024(
+                            "month.form.numOfDependents.items.2"
+                          )}
+                        >
                           {t2023To2024("month.form.numOfDependents.items.2")}
                         </SelectItem>
-                        <SelectItem key="3" textValue="3">
+                        <SelectItem
+                          key="3"
+                          textValue={t2023To2024(
+                            "month.form.numOfDependents.items.3"
+                          )}
+                        >
                           {t2023To2024("month.form.numOfDependents.items.3")}
                         </SelectItem>
-                        <SelectItem key="4" textValue="4">
+                        <SelectItem
+                          key="4"
+                          textValue={t2023To2024(
+                            "month.form.numOfDependents.items.4"
+                          )}
+                        >
                           {t2023To2024("month.form.numOfDependents.items.4")}
                         </SelectItem>
                       </FormSelect>
@@ -223,16 +248,32 @@ export default function FinancialYear2023To2024() {
                         name="age"
                         label={t2023To2024("month.form.age.label")}
                       >
-                        <SelectItem key="under18" textValue="under18">
+                        <SelectItem
+                          key="under18"
+                          textValue={t2023To2024(
+                            "month.form.age.items.under18"
+                          )}
+                        >
                           {t2023To2024("month.form.age.items.under18")}
                         </SelectItem>
-                        <SelectItem key="18To64" textValue="18To64">
+                        <SelectItem
+                          key="18To64"
+                          textValue={t2023To2024("month.form.age.items.18To64")}
+                        >
                           {t2023To2024("month.form.age.items.18To64")}
                         </SelectItem>
-                        <SelectItem key="65To69" textValue="65To69">
+                        <SelectItem
+                          key="65To69"
+                          textValue={t2023To2024("month.form.age.items.65To69")}
+                        >
                           {t2023To2024("month.form.age.items.65To69")}
                         </SelectItem>
-                        <SelectItem key="70AndOver" textValue="70AndOver">
+                        <SelectItem
+                          key="70AndOver"
+                          textValue={t2023To2024(
+                            "month.form.age.items.70AndOver"
+                          )}
+                        >
                           {t2023To2024("month.form.age.items.70AndOver")}
                         </SelectItem>
                       </FormSelect>
@@ -381,19 +422,44 @@ export default function FinancialYear2023To2024() {
                         label={t2023To2024("year.form.numOfDependents.label")}
                         placeholder="0"
                       >
-                        <SelectItem key="0" textValue="0">
+                        <SelectItem
+                          key="0"
+                          textValue={t2023To2024(
+                            "year.form.numOfDependents.items.0"
+                          )}
+                        >
                           {t2023To2024("year.form.numOfDependents.items.0")}
                         </SelectItem>
-                        <SelectItem key="1" textValue="1">
+                        <SelectItem
+                          key="1"
+                          textValue={t2023To2024(
+                            "year.form.numOfDependents.items.1"
+                          )}
+                        >
                           {t2023To2024("year.form.numOfDependents.items.1")}
                         </SelectItem>
-                        <SelectItem key="2" textValue="2">
+                        <SelectItem
+                          key="2"
+                          textValue={t2023To2024(
+                            "year.form.numOfDependents.items.2"
+                          )}
+                        >
                           {t2023To2024("year.form.numOfDependents.items.2")}
                         </SelectItem>
-                        <SelectItem key="3" textValue="3">
+                        <SelectItem
+                          key="3"
+                          textValue={t2023To2024(
+                            "year.form.numOfDependents.items.3"
+                          )}
+                        >
                           {t2023To2024("year.form.numOfDependents.items.3")}
                         </SelectItem>
-                        <SelectItem key="4" textValue="4">
+                        <SelectItem
+                          key="4"
+                          textValue={t2023To2024(
+                            "year.form.numOfDependents.items.4"
+                          )}
+                        >
                           {t2023To2024("year.form.numOfDependents.items.4")}
                         </SelectItem>
                       </FormSelect>
@@ -415,16 +481,30 @@ export default function FinancialYear2023To2024() {
                         name="age"
                         label={t2023To2024("year.form.age.label")}
                       >
-                        <SelectItem key="under18" textValue="under18">
+                        <SelectItem
+                          key="under18"
+                          textValue={t2023To2024("year.form.age.items.under18")}
+                        >
                           {t2023To2024("year.form.age.items.under18")}
                         </SelectItem>
-                        <SelectItem key="18To64" textValue="18To64">
+                        <SelectItem
+                          key="18To64"
+                          textValue={t2023To2024("year.form.age.items.18To64")}
+                        >
                           {t2023To2024("year.form.age.items.18To64")}
                         </SelectItem>
-                        <SelectItem key="65To69" textValue="65To69">
+                        <SelectItem
+                          key="65To69"
+                          textValue={t2023To2024("year.form.age.items.65To69")}
+                        >
                           {t2023To2024("year.form.age.items.65To69")}
                         </SelectItem>
-                        <SelectItem key="70AndOver" textValue="70AndOver">
+                        <SelectItem
+                          key="70AndOver"
+                          textValue={t2023To2024(
+                            "year.form.age.items.70AndOver"
+                          )}
+                        >
                           {t2023To2024("year.form.age.items.70AndOver")}
                         </SelectItem>
                       </FormSelect>
