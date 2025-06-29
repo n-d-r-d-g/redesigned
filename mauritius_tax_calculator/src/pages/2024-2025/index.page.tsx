@@ -19,6 +19,7 @@ import {
 import MonthlyCalculations from "./components/MonthlyCalculations";
 import YearlyCalculations from "./components/YearlyCalculations";
 import {
+  CURRENT_YEAR_NAMESPACE,
   DEFAULT_MONTHLY_INITIAL_VALUES,
   DEFAULT_YEARLY_INITIAL_VALUES,
   MAX_MONETARY_AMOUNT,
@@ -27,7 +28,7 @@ import {
 
 export default function FinancialYear2024To2025() {
   const { i18n, t: tCommon } = useTranslation("common");
-  const { t: t2024To2025 } = useTranslation("2024-2025");
+  const { t: tCurrentYear } = useTranslation(CURRENT_YEAR_NAMESPACE);
   const monthlySchema = Joi.object({
     baseSalary: Joi.number()
       .required()
@@ -148,12 +149,12 @@ export default function FinancialYear2024To2025() {
                       id="monthlyForm"
                       className="flex flex-col gap-y-5 pb-1"
                     >
-                      <p>{t2024To2025("month.description")}</p>
+                      <p>{tCurrentYear("month.description")}</p>
                       <ResetButton />
                       <FormNumberInput
                         key="monthlyBaseSalary"
                         name="baseSalary"
-                        label={t2024To2025("month.form.baseSalary.label")}
+                        label={tCurrentYear("month.form.baseSalary.label")}
                         placeholder="0"
                         currency="Rs"
                         min={0}
@@ -161,7 +162,7 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="monthlyTravelingAllowance"
                         name="travelingAllowance"
-                        label={t2024To2025(
+                        label={tCurrentYear(
                           "month.form.travelingAllowance.label"
                         )}
                         placeholder="0"
@@ -171,7 +172,9 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="monthlyPerformanceBonus"
                         name="performanceBonus"
-                        label={t2024To2025("month.form.performanceBonus.label")}
+                        label={tCurrentYear(
+                          "month.form.performanceBonus.label"
+                        )}
                         placeholder="0"
                         currency="Rs"
                         min={0}
@@ -179,7 +182,7 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="monthlyOtherTaxableIncome"
                         name="otherTaxableIncome"
-                        label={t2024To2025(
+                        label={tCurrentYear(
                           "month.form.otherTaxableIncome.label"
                         )}
                         placeholder="0"
@@ -189,54 +192,54 @@ export default function FinancialYear2024To2025() {
                       <FormSelect
                         key="monthlyNumOfDependents"
                         name="numOfDependents"
-                        label={t2024To2025("month.form.numOfDependents.label")}
+                        label={tCurrentYear("month.form.numOfDependents.label")}
                         placeholder="0"
                       >
                         <SelectItem
                           key="0"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "month.form.numOfDependents.items.0"
                           )}
                         >
-                          {t2024To2025("month.form.numOfDependents.items.0")}
+                          {tCurrentYear("month.form.numOfDependents.items.0")}
                         </SelectItem>
                         <SelectItem
                           key="1"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "month.form.numOfDependents.items.1"
                           )}
                         >
-                          {t2024To2025("month.form.numOfDependents.items.1")}
+                          {tCurrentYear("month.form.numOfDependents.items.1")}
                         </SelectItem>
                         <SelectItem
                           key="2"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "month.form.numOfDependents.items.2"
                           )}
                         >
-                          {t2024To2025("month.form.numOfDependents.items.2")}
+                          {tCurrentYear("month.form.numOfDependents.items.2")}
                         </SelectItem>
                         <SelectItem
                           key="3"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "month.form.numOfDependents.items.3"
                           )}
                         >
-                          {t2024To2025("month.form.numOfDependents.items.3")}
+                          {tCurrentYear("month.form.numOfDependents.items.3")}
                         </SelectItem>
                         <SelectItem
                           key="4"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "month.form.numOfDependents.items.4"
                           )}
                         >
-                          {t2024To2025("month.form.numOfDependents.items.4")}
+                          {tCurrentYear("month.form.numOfDependents.items.4")}
                         </SelectItem>
                       </FormSelect>
                       <FormNumberInput
                         key="monthlyOtherTaxDeductions"
                         name="otherTaxDeductions"
-                        label={t2024To2025(
+                        label={tCurrentYear(
                           "month.form.otherTaxDeductions.label"
                         )}
                         placeholder="0"
@@ -246,51 +249,55 @@ export default function FinancialYear2024To2025() {
                       <FormSelect
                         key="monthlyAge"
                         name="age"
-                        label={t2024To2025("month.form.age.label")}
+                        label={tCurrentYear("month.form.age.label")}
                       >
                         <SelectItem
                           key="under18"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "month.form.age.items.under18"
                           )}
                         >
-                          {t2024To2025("month.form.age.items.under18")}
+                          {tCurrentYear("month.form.age.items.under18")}
                         </SelectItem>
                         <SelectItem
                           key="18To64"
-                          textValue={t2024To2025("month.form.age.items.18To64")}
+                          textValue={tCurrentYear(
+                            "month.form.age.items.18To64"
+                          )}
                         >
-                          {t2024To2025("month.form.age.items.18To64")}
+                          {tCurrentYear("month.form.age.items.18To64")}
                         </SelectItem>
                         <SelectItem
                           key="65To69"
-                          textValue={t2024To2025("month.form.age.items.65To69")}
+                          textValue={tCurrentYear(
+                            "month.form.age.items.65To69"
+                          )}
                         >
-                          {t2024To2025("month.form.age.items.65To69")}
+                          {tCurrentYear("month.form.age.items.65To69")}
                         </SelectItem>
                         <SelectItem
                           key="70AndOver"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "month.form.age.items.70AndOver"
                           )}
                         >
-                          {t2024To2025("month.form.age.items.70AndOver")}
+                          {tCurrentYear("month.form.age.items.70AndOver")}
                         </SelectItem>
                       </FormSelect>
                       <FormCheckbox name="isCitizen">
-                        {t2024To2025("month.form.isCitizen.label")}
+                        {tCurrentYear("month.form.isCitizen.label")}
                       </FormCheckbox>
                       <FormCheckbox name="isResident">
-                        {t2024To2025("month.form.isResident.label")}
+                        {tCurrentYear("month.form.isResident.label")}
                       </FormCheckbox>
                       <FormCheckbox name="isPublicSector">
-                        {t2024To2025("month.form.isPublicSector.label")}
+                        {tCurrentYear("month.form.isPublicSector.label")}
                       </FormCheckbox>
                       <FormCheckbox name="isPRB">
-                        {t2024To2025("month.form.isPRB.label")}
+                        {tCurrentYear("month.form.isPRB.label")}
                       </FormCheckbox>
                       <FormCheckbox name="isInDomesticService">
-                        {t2024To2025("month.form.isInDomesticService.label")}
+                        {tCurrentYear("month.form.isInDomesticService.label")}
                       </FormCheckbox>
                     </form>
                   </CardBody>
@@ -326,7 +333,7 @@ export default function FinancialYear2024To2025() {
                       className="flex flex-col gap-y-4 pb-1"
                     >
                       <Trans
-                        t={t2024To2025}
+                        t={tCurrentYear}
                         i18nKey="year.description"
                         components={{
                           MRAExemptIncomeLink: (
@@ -349,8 +356,10 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="yearlyMonthlyBaseSalary"
                         name="monthlyBaseSalary"
-                        label={t2024To2025("year.form.monthlyBaseSalary.label")}
-                        description={t2024To2025(
+                        label={tCurrentYear(
+                          "year.form.monthlyBaseSalary.label"
+                        )}
+                        description={tCurrentYear(
                           "year.form.monthlyBaseSalary.description"
                         )}
                         placeholder="0"
@@ -360,8 +369,8 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="yearlyTotalBaseSalary"
                         name="totalBaseSalary"
-                        label={t2024To2025("year.form.totalBaseSalary.label")}
-                        description={t2024To2025(
+                        label={tCurrentYear("year.form.totalBaseSalary.label")}
+                        description={tCurrentYear(
                           "year.form.totalBaseSalary.description"
                         )}
                         placeholder="0"
@@ -371,8 +380,8 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="yearlyEoyBonus"
                         name="eoyBonus"
-                        label={t2024To2025("year.form.eoyBonus.label")}
-                        description={t2024To2025(
+                        label={tCurrentYear("year.form.eoyBonus.label")}
+                        description={tCurrentYear(
                           "year.form.eoyBonus.description"
                         )}
                         placeholder="0"
@@ -382,10 +391,10 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="yearlyTravelingAllowance"
                         name="travelingAllowance"
-                        label={t2024To2025(
+                        label={tCurrentYear(
                           "year.form.travelingAllowance.label"
                         )}
-                        description={t2024To2025(
+                        description={tCurrentYear(
                           "year.form.travelingAllowance.description"
                         )}
                         placeholder="0"
@@ -395,8 +404,8 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="yearlyPerformanceBonus"
                         name="performanceBonus"
-                        label={t2024To2025("year.form.performanceBonus.label")}
-                        description={t2024To2025(
+                        label={tCurrentYear("year.form.performanceBonus.label")}
+                        description={tCurrentYear(
                           "year.form.performanceBonus.description"
                         )}
                         placeholder="0"
@@ -406,10 +415,10 @@ export default function FinancialYear2024To2025() {
                       <FormNumberInput
                         key="yearlyOtherTaxableIncome"
                         name="otherTaxableIncome"
-                        label={t2024To2025(
+                        label={tCurrentYear(
                           "year.form.otherTaxableIncome.label"
                         )}
-                        description={t2024To2025(
+                        description={tCurrentYear(
                           "year.form.otherTaxableIncome.description"
                         )}
                         placeholder="0"
@@ -419,57 +428,57 @@ export default function FinancialYear2024To2025() {
                       <FormSelect
                         key="yearlyNumOfDependents"
                         name="numOfDependents"
-                        label={t2024To2025("year.form.numOfDependents.label")}
+                        label={tCurrentYear("year.form.numOfDependents.label")}
                         placeholder="0"
                       >
                         <SelectItem
                           key="0"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "year.form.numOfDependents.items.0"
                           )}
                         >
-                          {t2024To2025("year.form.numOfDependents.items.0")}
+                          {tCurrentYear("year.form.numOfDependents.items.0")}
                         </SelectItem>
                         <SelectItem
                           key="1"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "year.form.numOfDependents.items.1"
                           )}
                         >
-                          {t2024To2025("year.form.numOfDependents.items.1")}
+                          {tCurrentYear("year.form.numOfDependents.items.1")}
                         </SelectItem>
                         <SelectItem
                           key="2"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "year.form.numOfDependents.items.2"
                           )}
                         >
-                          {t2024To2025("year.form.numOfDependents.items.2")}
+                          {tCurrentYear("year.form.numOfDependents.items.2")}
                         </SelectItem>
                         <SelectItem
                           key="3"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "year.form.numOfDependents.items.3"
                           )}
                         >
-                          {t2024To2025("year.form.numOfDependents.items.3")}
+                          {tCurrentYear("year.form.numOfDependents.items.3")}
                         </SelectItem>
                         <SelectItem
                           key="4"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "year.form.numOfDependents.items.4"
                           )}
                         >
-                          {t2024To2025("year.form.numOfDependents.items.4")}
+                          {tCurrentYear("year.form.numOfDependents.items.4")}
                         </SelectItem>
                       </FormSelect>
                       <FormNumberInput
                         key="yearlyOtherTaxDeductions"
                         name="otherTaxDeductions"
-                        label={t2024To2025(
+                        label={tCurrentYear(
                           "year.form.otherTaxDeductions.label"
                         )}
-                        description={t2024To2025(
+                        description={tCurrentYear(
                           "year.form.otherTaxDeductions.description"
                         )}
                         placeholder="0"
@@ -479,51 +488,51 @@ export default function FinancialYear2024To2025() {
                       <FormSelect
                         key="yearlyAge"
                         name="age"
-                        label={t2024To2025("year.form.age.label")}
+                        label={tCurrentYear("year.form.age.label")}
                       >
                         <SelectItem
                           key="under18"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "month.form.age.items.under18"
                           )}
                         >
-                          {t2024To2025("year.form.age.items.under18")}
+                          {tCurrentYear("year.form.age.items.under18")}
                         </SelectItem>
                         <SelectItem
                           key="18To64"
-                          textValue={t2024To2025("year.form.age.items.18To64")}
+                          textValue={tCurrentYear("year.form.age.items.18To64")}
                         >
-                          {t2024To2025("year.form.age.items.18To64")}
+                          {tCurrentYear("year.form.age.items.18To64")}
                         </SelectItem>
                         <SelectItem
                           key="65To69"
-                          textValue={t2024To2025("year.form.age.items.65To69")}
+                          textValue={tCurrentYear("year.form.age.items.65To69")}
                         >
-                          {t2024To2025("year.form.age.items.65To69")}
+                          {tCurrentYear("year.form.age.items.65To69")}
                         </SelectItem>
                         <SelectItem
                           key="70AndOver"
-                          textValue={t2024To2025(
+                          textValue={tCurrentYear(
                             "year.form.age.items.70AndOver"
                           )}
                         >
-                          {t2024To2025("year.form.age.items.70AndOver")}
+                          {tCurrentYear("year.form.age.items.70AndOver")}
                         </SelectItem>
                       </FormSelect>
                       <FormCheckbox name="isCitizen">
-                        {t2024To2025("year.form.isCitizen.label")}
+                        {tCurrentYear("year.form.isCitizen.label")}
                       </FormCheckbox>
                       <FormCheckbox name="isResident">
-                        {t2024To2025("year.form.isResident.label")}
+                        {tCurrentYear("year.form.isResident.label")}
                       </FormCheckbox>
                       <FormCheckbox name="isPublicSector">
-                        {t2024To2025("year.form.isPublicSector.label")}
+                        {tCurrentYear("year.form.isPublicSector.label")}
                       </FormCheckbox>
                       <FormCheckbox name="isPRB">
-                        {t2024To2025("year.form.isPRB.label")}
+                        {tCurrentYear("year.form.isPRB.label")}
                       </FormCheckbox>
                       <FormCheckbox name="isInDomesticService">
-                        {t2024To2025("year.form.isInDomesticService.label")}
+                        {tCurrentYear("year.form.isInDomesticService.label")}
                       </FormCheckbox>
                     </form>
                   </CardBody>
@@ -547,7 +556,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale ?? DEFAULT_I18N_LOCALE, [
         DEFAULT_I18N_NAMESPACE,
-        "2024-2025",
+        CURRENT_YEAR_NAMESPACE,
       ])),
     },
   };

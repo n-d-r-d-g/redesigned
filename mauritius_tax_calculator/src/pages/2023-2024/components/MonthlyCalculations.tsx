@@ -26,12 +26,13 @@ import {
   NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE,
   NSF_RATE,
   MONTHLY_IET_DEPENDENT_DEDUCTIONS,
+  CURRENT_YEAR_NAMESPACE,
 } from "../reusables";
 import { MonthlyFormValues, TaxCalcRow } from "../types";
 
 export default function MonthlyCalculations() {
   const { t: tCommon } = useTranslation("common");
-  const { t: t2023To2024 } = useTranslation("2023-2024");
+  const { t: tCurrentYear } = useTranslation(CURRENT_YEAR_NAMESPACE);
   const { values, isValid } = useFormikContext<MonthlyFormValues>();
   const [baseSalary, setBaseSalary] = useState(new Decimal(0));
   const [travelingAllowance, setTravelingAllowance] = useState(new Decimal(0));
@@ -104,7 +105,7 @@ export default function MonthlyCalculations() {
                 key: String(index),
                 taxableLimit: bracket.limit
                   ? decimalToString(bracket.limit)
-                  : t2023To2024(
+                  : tCurrentYear(
                       "month.output.paye.table.taxableLimits.remainder"
                     ),
                 taxableAmount: decimalToString(taxableAmount, 2),
@@ -128,7 +129,7 @@ export default function MonthlyCalculations() {
           }),
           {
             key: "aggregations",
-            taxableLimit: t2023To2024(
+            taxableLimit: tCurrentYear(
               "month.output.paye.table.taxableLimits.taxCharged"
             ),
             taxableAmount: decimalToString(newChargeableIncome, 2),
@@ -197,7 +198,7 @@ export default function MonthlyCalculations() {
     }
   }, [
     isValid,
-    t2023To2024,
+    tCurrentYear,
     values.age,
     values.baseSalary,
     values.isCitizen,
@@ -225,7 +226,7 @@ export default function MonthlyCalculations() {
         key="chargeableIncome"
         aria-label={`Rs ${decimalToString(chargeableIncome, 2)}`}
         title={`Rs ${decimalToString(chargeableIncome, 2)}`}
-        subtitle={t2023To2024("month.output.chargeableIncome.subtitle")}
+        subtitle={tCurrentYear("month.output.chargeableIncome.subtitle")}
         classNames={{
           heading: "m-0 py-2",
           content: "pb-4",
@@ -234,22 +235,22 @@ export default function MonthlyCalculations() {
         isCompact
       >
         <Table
-          aria-label={t2023To2024("month.output.chargeableIncome.table.title")}
+          aria-label={tCurrentYear("month.output.chargeableIncome.table.title")}
           shadow="none"
         >
           <TableHeader>
             <TableColumn className="uppercase">
-              {t2023To2024(
+              {tCurrentYear(
                 "month.output.chargeableIncome.table.headers.incomeDescription"
               )}
             </TableColumn>
             <TableColumn align="end" className="uppercase">
-              {t2023To2024(
+              {tCurrentYear(
                 "month.output.chargeableIncome.table.headers.subAmount"
               )}
             </TableColumn>
             <TableColumn align="end" className="uppercase">
-              {t2023To2024(
+              {tCurrentYear(
                 "month.output.chargeableIncome.table.headers.amount"
               )}
             </TableColumn>
@@ -257,7 +258,7 @@ export default function MonthlyCalculations() {
           <TableBody>
             <TableRow key="baseSalary">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.chargeableIncome.table.incomeDescription.baseSalary"
                 )}
               </TableCell>
@@ -268,7 +269,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="travelingAllowance">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.chargeableIncome.table.incomeDescription.travelingAllowance"
                 )}
               </TableCell>
@@ -279,7 +280,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="maxNonTaxableTravelingAllowance">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.chargeableIncome.table.incomeDescription.maxNonTaxableTravelingAllowance",
                   {
                     maxAllowance: `Rs ${decimalToString(
@@ -295,7 +296,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="taxableTravelingAllowance">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.chargeableIncome.table.incomeDescription.taxableTravelingAllowance"
                 )}
               </TableCell>
@@ -308,7 +309,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="performanceBonus">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.chargeableIncome.table.incomeDescription.performanceBonus"
                 )}
               </TableCell>
@@ -319,7 +320,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="otherTaxableIncome">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.chargeableIncome.table.incomeDescription.otherTaxableIncome"
                 )}
               </TableCell>
@@ -330,7 +331,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="totalIncome">
               <TableCell className="font-bold italic">
-                {t2023To2024(
+                {tCurrentYear(
                   "year.output.chargeableIncome.table.description.totalIncome"
                 )}
               </TableCell>
@@ -341,7 +342,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="ietDeductions">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "year.output.chargeableIncome.table.description.ietDeductions"
                 )}
               </TableCell>
@@ -352,7 +353,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="otherTaxDeductions">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "year.output.chargeableIncome.table.description.otherTaxDeductions"
                 )}
               </TableCell>
@@ -363,7 +364,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="totalDeductions">
               <TableCell className="font-bold italic">
-                {t2023To2024(
+                {tCurrentYear(
                   "year.output.chargeableIncome.table.description.totalDeductions"
                 )}
               </TableCell>
@@ -377,7 +378,7 @@ export default function MonthlyCalculations() {
               className="border-t-1 border-default-500"
             >
               <TableCell className="font-bold">
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.chargeableIncome.table.incomeDescription.chargeableIncome"
                 )}
               </TableCell>
@@ -393,7 +394,7 @@ export default function MonthlyCalculations() {
         key="paye"
         aria-label={`Rs ${decimalToString(paye)}`}
         title={`Rs ${decimalToString(paye)}`}
-        subtitle={t2023To2024("month.output.paye.subtitle")}
+        subtitle={tCurrentYear("month.output.paye.subtitle")}
         classNames={{
           heading: "m-0 py-2",
           content: "pb-4",
@@ -401,17 +402,17 @@ export default function MonthlyCalculations() {
         }}
       >
         <p className="text-sm mb-1">
-          {t2023To2024("month.output.paye.calculationDescription")}
+          {tCurrentYear("month.output.paye.calculationDescription")}
         </p>
         <Trans
-          t={t2023To2024}
+          t={tCurrentYear}
           i18nKey="month.output.paye.calculationSteps"
           components={{
             ul: <ul className="text-sm leading-6" />,
           }}
         />
         <Table
-          aria-label={t2023To2024("month.output.paye.table.title")}
+          aria-label={tCurrentYear("month.output.paye.table.title")}
           shadow="none"
         >
           <TableHeader>
@@ -420,28 +421,28 @@ export default function MonthlyCalculations() {
               align="end"
               className="uppercase text-end"
             >
-              {t2023To2024("month.output.paye.table.headers.taxableLimit")}
+              {tCurrentYear("month.output.paye.table.headers.taxableLimit")}
             </TableColumn>
             <TableColumn
               key="taxableAmount"
               align="end"
               className="uppercase text-end"
             >
-              {t2023To2024("month.output.paye.table.headers.taxableAmount")}
+              {tCurrentYear("month.output.paye.table.headers.taxableAmount")}
             </TableColumn>
             <TableColumn
               key="taxRate"
               align="end"
               className="uppercase text-end"
             >
-              {t2023To2024("month.output.paye.table.headers.taxRate")}
+              {tCurrentYear("month.output.paye.table.headers.taxRate")}
             </TableColumn>
             <TableColumn
               key="taxCharged"
               align="end"
               className="uppercase text-end"
             >
-              {t2023To2024("month.output.paye.table.headers.taxCharged")}
+              {tCurrentYear("month.output.paye.table.headers.taxCharged")}
             </TableColumn>
           </TableHeader>
           <TableBody items={monthlyPAYECalcRows}>
@@ -478,7 +479,7 @@ export default function MonthlyCalculations() {
         key="csg"
         aria-label={`Rs ${decimalToString(csg)}`}
         title={`Rs ${decimalToString(csg)}`}
-        subtitle={t2023To2024("month.output.csg.subtitle")}
+        subtitle={tCurrentYear("month.output.csg.subtitle")}
         classNames={{
           heading: "m-0 py-2",
           content: "pb-4",
@@ -486,24 +487,24 @@ export default function MonthlyCalculations() {
         }}
       >
         <Table
-          aria-label={t2023To2024("month.output.csg.table.title")}
+          aria-label={tCurrentYear("month.output.csg.table.title")}
           shadow="none"
         >
           <TableHeader>
             <TableColumn className="uppercase">
-              {t2023To2024("month.output.csg.table.headers.description")}
+              {tCurrentYear("month.output.csg.table.headers.description")}
             </TableColumn>
             <TableColumn align="end" className="w-36 uppercase">
-              {t2023To2024("month.output.csg.table.headers.amount")}
+              {tCurrentYear("month.output.csg.table.headers.amount")}
             </TableColumn>
           </TableHeader>
           <TableBody>
             <TableRow key="csg">
               <TableCell>
                 <span className="font-bold">
-                  {t2023To2024("month.output.csg.table.description.csg")}
+                  {tCurrentYear("month.output.csg.table.description.csg")}
                 </span>{" "}
-                ({t2023To2024("month.form.baseSalary.label")}
+                ({tCurrentYear("month.form.baseSalary.label")}
                 {" x "}
                 {csgRate.mul(100).toNumber()}%{" = "}
                 {"Rs "}
@@ -522,7 +523,7 @@ export default function MonthlyCalculations() {
         key="nsf"
         aria-label={`Rs ${decimalToString(nsf)}`}
         title={`Rs ${decimalToString(nsf)}`}
-        subtitle={t2023To2024("month.output.nsf.subtitle")}
+        subtitle={tCurrentYear("month.output.nsf.subtitle")}
         classNames={{
           heading: "m-0 py-2",
           content: "pb-4",
@@ -530,25 +531,25 @@ export default function MonthlyCalculations() {
         }}
       >
         <Table
-          aria-label={t2023To2024("month.output.nsf.table.title")}
+          aria-label={tCurrentYear("month.output.nsf.table.title")}
           shadow="none"
         >
           <TableHeader>
             <TableColumn className="uppercase">
-              {t2023To2024("month.output.nsf.table.headers.description")}
+              {tCurrentYear("month.output.nsf.table.headers.description")}
             </TableColumn>
             <TableColumn align="end" className="w-36 uppercase">
-              {t2023To2024("month.output.nsf.table.headers.amount")}
+              {tCurrentYear("month.output.nsf.table.headers.amount")}
             </TableColumn>
           </TableHeader>
           <TableBody>
             <TableRow key="nsf">
               <TableCell>
                 <span className="font-bold">
-                  {t2023To2024("month.output.nsf.table.description.nsf")}
+                  {tCurrentYear("month.output.nsf.table.description.nsf")}
                 </span>{" "}
                 (*
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.nsf.table.description.nsfInsurableSalary"
                 )}
                 {" x "}
@@ -567,12 +568,12 @@ export default function MonthlyCalculations() {
         <p className="text-sm">
           *
           <Trans
-            ns="2023-2024"
+            ns={CURRENT_YEAR_NAMESPACE}
             i18nKey="month.output.nsf.nsfInsurableSalaryExplanation"
             components={{
               Link: (
                 <a
-                  href="https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator/mra-pdfs/2023-2024/nsf-employers-guide.pdf"
+                  href={`https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator/mra-pdfs/${CURRENT_YEAR_NAMESPACE}/nsf-employers-guide.pdf`}
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                 />
@@ -585,7 +586,7 @@ export default function MonthlyCalculations() {
         key="incomeAfterTaxes"
         aria-label={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.isNegative() ? 0 : incomeAfterTaxes))}`}
         title={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.isNegative() ? 0 : incomeAfterTaxes))}`}
-        subtitle={t2023To2024("month.output.incomeAfterTaxes.subtitle")}
+        subtitle={tCurrentYear("month.output.incomeAfterTaxes.subtitle")}
         classNames={{
           heading: "m-0",
           title: "text-3xl text-success-700 dark:text-success",
@@ -594,22 +595,22 @@ export default function MonthlyCalculations() {
         isCompact
       >
         <Table
-          aria-label={t2023To2024("month.output.incomeAfterTaxes.table.title")}
+          aria-label={tCurrentYear("month.output.incomeAfterTaxes.table.title")}
           shadow="none"
         >
           <TableHeader>
             <TableColumn className="uppercase">
-              {t2023To2024(
+              {tCurrentYear(
                 "month.output.incomeAfterTaxes.table.headers.description"
               )}
             </TableColumn>
             <TableColumn align="end" className="w-36 uppercase">
-              {t2023To2024(
+              {tCurrentYear(
                 "month.output.incomeAfterTaxes.table.headers.subAmount"
               )}
             </TableColumn>
             <TableColumn align="end" className="w-36 uppercase">
-              {t2023To2024(
+              {tCurrentYear(
                 "month.output.incomeAfterTaxes.table.headers.amount"
               )}
             </TableColumn>
@@ -617,7 +618,7 @@ export default function MonthlyCalculations() {
           <TableBody>
             <TableRow key="totalIncome">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.incomeAfterTaxes.table.description.totalIncome"
                 )}
               </TableCell>
@@ -628,7 +629,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="paye">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.incomeAfterTaxes.table.description.paye"
                 )}
               </TableCell>
@@ -639,7 +640,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="csg">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.incomeAfterTaxes.table.description.csg"
                 )}
               </TableCell>
@@ -650,7 +651,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="nsf">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.incomeAfterTaxes.table.description.nsf"
                 )}
               </TableCell>
@@ -661,7 +662,7 @@ export default function MonthlyCalculations() {
             </TableRow>
             <TableRow key="totalTaxes">
               <TableCell>
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.incomeAfterTaxes.table.description.totalTaxes"
                 )}
               </TableCell>
@@ -677,7 +678,7 @@ export default function MonthlyCalculations() {
               className="border-t-1 border-default-500"
             >
               <TableCell className="font-bold">
-                {t2023To2024(
+                {tCurrentYear(
                   "month.output.incomeAfterTaxes.table.description.incomeAfterTaxes"
                 )}
               </TableCell>
