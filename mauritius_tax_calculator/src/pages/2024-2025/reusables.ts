@@ -1,5 +1,7 @@
 import Decimal from "decimal.js";
 
+export const CURRENT_YEAR_NAMESPACE = "2024-2025";
+
 export const MIN_MONETARY_AMOUNT = 0;
 
 export const MAX_MONETARY_AMOUNT = 999_999_999_999;
