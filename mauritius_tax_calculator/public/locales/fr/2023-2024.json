@@ -80,9 +80,9 @@
       "paye": {
         "subtitle": "PAYE (chiffre arrondi) facturée par la MRA (affichée sur la fiche de paie)",
         "calculationDescription": "La PAYE est calculée comme suit. Sur chaque rangée,",
-        "calculationSteps": "<ul><li>Si le revenu imposable restant est inférieur à la limite imposable, le revenu imposable restant est utilisé comme montant imposable</li><li>dans le cas contraire, la limite imposable est utilisée comme le montant imposable et la limite imposable est soustraite du revenu imposable restant pour le prochain calcul</li></ul>",
+        "calculationSteps": "<ul><li>Si le revenu imposable restant est inférieur à la limite imposable, le revenu imposable restant est utilisé comme montant imposable</li><li>dans le cas contraire, la limite imposable est utilisée comme le montant imposable et la limite imposable est soustraite du revenu imposable restant pour le calcul de la prochaine rangée</li></ul>",
         "table": {
-          "title": "Calcul de la PAYE mensuel",
+          "title": "Calcul de la PAYE mensuelle",
           "headers": {
             "taxableLimit": "Limite imposable (Rs)",
             "taxableAmount": "Montant imposable (Rs)",
@@ -98,7 +98,7 @@
       "csg": {
         "subtitle": "CSG (chiffre arrondi) facturée par la MRA (affichée sur la fiche de paie)",
         "table": {
-          "title": "Calcul de la CSG mensuel",
+          "title": "Calcul de la CSG mensuelle",
           "headers": {
             "description": "Description",
             "amount": "Montant (Rs)"
@@ -111,7 +111,7 @@
       "nsf": {
         "subtitle": "NSF (chiffre arrondi) facturée par la MRA (affichée sur la fiche de paie)",
         "table": {
-          "title": "Calcul de la NSF mensuel",
+          "title": "Calcul de la NSF mensuelle",
           "headers": {
             "description": "Description",
             "amount": "Montant (Rs)"
@@ -239,7 +239,7 @@
       "paye": {
         "subtitle": "PAYE (Impôt sur le revenu) facturé par la MRA (chiffre arrondi)",
         "calculationDescription": "La taxe PAYE est calculée comme suit. Sur chaque rangée,",
-        "calculationSteps": "<ul><li>Si le revenu imposable restant est inférieur à la limite imposable, le revenu imposable restant est utilisé comme montant imposable</li><li>dans le cas contraire, la limite imposable est utilisée comme le montant imposable et la limite imposable est soustraite du revenu imposable restant pour le prochain calcul</li></ul>",
+        "calculationSteps": "<ul><li>Si le revenu imposable restant est inférieur à la limite imposable, le revenu imposable restant est utilisé comme montant imposable</li><li>dans le cas contraire, la limite imposable est utilisée comme le montant imposable et la limite imposable est soustraite du revenu imposable restant pour le calcul de la prochaine rangée</li></ul>",
         "table": {
           "title": "Calcul de la taxe PAYE annuel",
           "headers": {
@@ -257,7 +257,7 @@
       "csg": {
         "subtitle": "CSG (chiffre arrondi) facturée par la MRA",
         "table": {
-          "title": "Calcul de la CSG mensuel",
+          "title": "Calcul de la CSG mensuelle",
           "headers": {
             "description": "Description",
             "amount": "Montant (Rs)"

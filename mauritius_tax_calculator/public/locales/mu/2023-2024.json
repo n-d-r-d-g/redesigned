@@ -80,7 +80,7 @@
       "paye": {
         "subtitle": "PAYE (sif arondi) faktire par MRA (afise lor peyslip)",
         "calculationDescription": "Kalkil PAYE: Lor sak ranze,",
-        "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou prosin kalkil</li></ul>",
+        "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou kalkil lor prosin ranze</li></ul>",
         "table": {
           "title": "Kalkil PAYE mansyel",
           "headers": {
@@ -239,7 +239,7 @@
       "paye": {
         "subtitle": "PAYE (Innkom taks) faktire par MRA (sif arondi)",
         "calculationDescription": "Kalkil taks PAYE: Lor sak ranze,",
-        "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou prosin kalkil</li></ul>",
+        "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou kalkil lor prosin ranze</li></ul>",
         "table": {
           "title": "Kalkil taks PAYE aniel",
           "headers": {
@@ -257,7 +257,7 @@
       "csg": {
         "subtitle": "CSG (sif arondi) faktire par MRA",
         "table": {
-          "title": "Kalkil CSG mansyel",
+          "title": "Kalkil CSG anyel",
           "headers": {
             "description": "Deskripsion",
             "amount": "Montan (Rs)"
@@ -274,7 +274,7 @@
       "nsf": {
         "subtitle": "NSF (sif arondi) faktire par MRA",
         "table": {
-          "title": "Kalkil CSG mansyel",
+          "title": "Kalkil CSG anyel",
           "headers": {
             "description": "Deskripsion",
             "amount": "Montan (Rs)"

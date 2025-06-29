@@ -119,7 +119,7 @@ export default function YearlyCalculations() {
                 taxableLimit: bracket.limit
                   ? decimalToString(bracket.limit)
                   : tCurrentYear(
-                      "month.output.paye.table.taxableLimits.remainder"
+                      "year.output.paye.table.taxableLimits.remainder"
                     ),
                 taxableAmount: decimalToString(taxableAmount, 2),
                 taxRate: decimalToString(bracket.rate.mul(100)),
@@ -143,7 +143,7 @@ export default function YearlyCalculations() {
           {
             key: "aggregations",
             taxableLimit: tCurrentYear(
-              "month.output.paye.table.taxableLimits.taxCharged"
+              "year.output.paye.table.taxableLimits.taxCharged"
             ),
             taxableAmount: decimalToString(newChargeableIncome, 2),
             taxRate: null,
@@ -589,7 +589,7 @@ export default function YearlyCalculations() {
             </TableRow>
             <TableRow key="csg">
               <TableCell className="font-bold">
-                {tCurrentYear("month.output.csg.table.description.csg")}
+                {tCurrentYear("year.output.csg.table.description.csg")}
               </TableCell>
               <TableCell className="text-end font-bold border-t-1 border-b-4 border-double border-default-500">
                 {decimalToString(csg, 2)}
@@ -602,7 +602,7 @@ export default function YearlyCalculations() {
         key="nsf"
         aria-label={`Rs ${decimalToString(nsf)}`}
         title={`Rs ${decimalToString(nsf)}`}
-        subtitle={tCurrentYear("month.output.nsf.subtitle")}
+        subtitle={tCurrentYear("year.output.nsf.subtitle")}
         classNames={{
           heading: "m-0 py-2",
           content: "pb-4",
@@ -610,26 +610,26 @@ export default function YearlyCalculations() {
         }}
       >
         <Table
-          aria-label={tCurrentYear("month.output.nsf.table.title")}
+          aria-label={tCurrentYear("year.output.nsf.table.title")}
           shadow="none"
         >
           <TableHeader>
             <TableColumn className="uppercase">
-              {tCurrentYear("month.output.nsf.table.headers.description")}
+              {tCurrentYear("year.output.nsf.table.headers.description")}
             </TableColumn>
             <TableColumn align="end" className="w-36 uppercase">
-              {tCurrentYear("month.output.nsf.table.headers.amount")}
+              {tCurrentYear("year.output.nsf.table.headers.amount")}
             </TableColumn>
           </TableHeader>
           <TableBody>
             <TableRow key="nsf">
               <TableCell>
                 <span className="font-bold">
-                  {tCurrentYear("month.output.nsf.table.description.nsf")}
+                  {tCurrentYear("year.output.nsf.table.description.nsf")}
                 </span>{" "}
                 (*
                 {tCurrentYear(
-                  "month.output.nsf.table.description.nsfInsurableSalary"
+                  "year.output.nsf.table.description.nsfInsurableSalary"
                 )}
                 {" x "}
                 {nsfRate.mul(100).toNumber()}%{" = "}
@@ -648,7 +648,7 @@ export default function YearlyCalculations() {
           *
           <Trans
             ns={CURRENT_YEAR_NAMESPACE}
-            i18nKey="month.output.nsf.nsfInsurableSalaryExplanation"
+            i18nKey="year.output.nsf.nsfInsurableSalaryExplanation"
             components={{
               Link: (
                 <a
@@ -665,7 +665,7 @@ export default function YearlyCalculations() {
         key="incomeAfterTaxes"
         aria-label={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.isNegative() ? 0 : incomeAfterTaxes))}`}
         title={`Rs ${decimalToString(new Decimal(incomeAfterTaxes.isNegative() ? 0 : incomeAfterTaxes))}`}
-        subtitle={tCurrentYear("month.output.incomeAfterTaxes.subtitle")}
+        subtitle={tCurrentYear("year.output.incomeAfterTaxes.subtitle")}
         classNames={{
           heading: "m-0",
           title: "text-3xl text-success-700 dark:text-success",
@@ -674,23 +674,23 @@ export default function YearlyCalculations() {
         isCompact
       >
         <Table
-          aria-label={tCurrentYear("month.output.incomeAfterTaxes.table.title")}
+          aria-label={tCurrentYear("year.output.incomeAfterTaxes.table.title")}
           shadow="none"
         >
           <TableHeader>
             <TableColumn className="uppercase">
               {tCurrentYear(
-                "month.output.incomeAfterTaxes.table.headers.description"
+                "year.output.incomeAfterTaxes.table.headers.description"
               )}
             </TableColumn>
             <TableColumn align="end" className="w-36 uppercase">
               {tCurrentYear(
-                "month.output.incomeAfterTaxes.table.headers.subAmount"
+                "year.output.incomeAfterTaxes.table.headers.subAmount"
               )}
             </TableColumn>
             <TableColumn align="end" className="w-36 uppercase">
               {tCurrentYear(
-                "month.output.incomeAfterTaxes.table.headers.amount"
+                "year.output.incomeAfterTaxes.table.headers.amount"
               )}
             </TableColumn>
           </TableHeader>
@@ -698,7 +698,7 @@ export default function YearlyCalculations() {
             <TableRow key="totalIncome">
               <TableCell>
                 {tCurrentYear(
-                  "month.output.incomeAfterTaxes.table.description.totalIncome"
+                  "year.output.incomeAfterTaxes.table.description.totalIncome"
                 )}
               </TableCell>
               <TableCell className="text-end">{null}</TableCell>
@@ -709,7 +709,7 @@ export default function YearlyCalculations() {
             <TableRow key="paye">
               <TableCell>
                 {tCurrentYear(
-                  "month.output.incomeAfterTaxes.table.description.paye"
+                  "year.output.incomeAfterTaxes.table.description.paye"
                 )}
               </TableCell>
               <TableCell className="text-end">
@@ -720,7 +720,7 @@ export default function YearlyCalculations() {
             <TableRow key="csg">
               <TableCell>
                 {tCurrentYear(
-                  "month.output.incomeAfterTaxes.table.description.csg"
+                  "year.output.incomeAfterTaxes.table.description.csg"
                 )}
               </TableCell>
               <TableCell className="text-end">
@@ -731,7 +731,7 @@ export default function YearlyCalculations() {
             <TableRow key="nsf">
               <TableCell>
                 {tCurrentYear(
-                  "month.output.incomeAfterTaxes.table.description.nsf"
+                  "year.output.incomeAfterTaxes.table.description.nsf"
                 )}
               </TableCell>
               <TableCell className="text-end">
@@ -742,7 +742,7 @@ export default function YearlyCalculations() {
             <TableRow key="totalTaxes">
               <TableCell>
                 {tCurrentYear(
-                  "month.output.incomeAfterTaxes.table.description.totalTaxes"
+                  "year.output.incomeAfterTaxes.table.description.totalTaxes"
                 )}
               </TableCell>
               <TableCell className="text-end border-t-1 border-default-500">
@@ -758,7 +758,7 @@ export default function YearlyCalculations() {
             >
               <TableCell className="font-bold">
                 {tCurrentYear(
-                  "month.output.incomeAfterTaxes.table.description.incomeAfterTaxes"
+                  "year.output.incomeAfterTaxes.table.description.incomeAfterTaxes"
                 )}
               </TableCell>
               <TableCell className="text-end">{null}</TableCell>
