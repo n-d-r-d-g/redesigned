@@ -19,7 +19,9 @@ import {
 import MonthlyCalculations from "./components/MonthlyCalculations";
 import YearlyCalculations from "./components/YearlyCalculations";
 import {
-  CURRENT_YEAR_NAMESPACE,
+  CURRENT_FINANCIAL_YEAR_END,
+  CURRENT_FINANCIAL_YEAR_NAMESPACE,
+  CURRENT_FINANCIAL_YEAR_START,
   DEFAULT_MONTHLY_INITIAL_VALUES,
   DEFAULT_YEARLY_INITIAL_VALUES,
   MAX_MONETARY_AMOUNT,
@@ -28,7 +30,7 @@ import {
 
 export default function FinancialYear2025To2026() {
   const { i18n, t: tCommon } = useTranslation("common");
-  const { t: tCurrentYear } = useTranslation(CURRENT_YEAR_NAMESPACE);
+  const { t: tCurrentYear } = useTranslation(CURRENT_FINANCIAL_YEAR_NAMESPACE);
   const monthlySchema = Joi.object({
     baseSalary: Joi.number()
       .required()
@@ -107,7 +109,12 @@ export default function FinancialYear2025To2026() {
   });
 
   const financialPeriod = useMemo(
-    () => retrieveFinancialPeriod(i18n.language, 2025, 2026),
+    () =>
+      retrieveFinancialPeriod(
+        i18n.language,
+        CURRENT_FINANCIAL_YEAR_START,
+        CURRENT_FINANCIAL_YEAR_END
+      ),
     [i18n.language]
   );
 
@@ -556,7 +563,7 @@ export const getStaticProps: GetStaticProps = async ({ locale }) => {
     props: {
       ...(await serverSideTranslations(locale ?? DEFAULT_I18N_LOCALE, [
         DEFAULT_I18N_NAMESPACE,
-        CURRENT_YEAR_NAMESPACE,
+        CURRENT_FINANCIAL_YEAR_NAMESPACE,
       ])),
     },
   };

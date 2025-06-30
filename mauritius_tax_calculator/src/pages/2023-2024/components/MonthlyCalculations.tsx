@@ -26,13 +26,13 @@ import {
   NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE,
   NSF_RATE,
   MONTHLY_IET_DEPENDENT_DEDUCTIONS,
-  CURRENT_YEAR_NAMESPACE,
+  CURRENT_FINANCIAL_YEAR_NAMESPACE,
 } from "../reusables";
 import { MonthlyFormValues, TaxCalcRow } from "../types";
 
 export default function MonthlyCalculations() {
   const { t: tCommon } = useTranslation("common");
-  const { t: tCurrentYear } = useTranslation(CURRENT_YEAR_NAMESPACE);
+  const { t: tCurrentYear } = useTranslation(CURRENT_FINANCIAL_YEAR_NAMESPACE);
   const { values, isValid } = useFormikContext<MonthlyFormValues>();
   const [baseSalary, setBaseSalary] = useState(new Decimal(0));
   const [travelingAllowance, setTravelingAllowance] = useState(new Decimal(0));
@@ -568,12 +568,12 @@ export default function MonthlyCalculations() {
         <p className="text-sm">
           *
           <Trans
-            ns={CURRENT_YEAR_NAMESPACE}
+            ns={CURRENT_FINANCIAL_YEAR_NAMESPACE}
             i18nKey="month.output.nsf.nsfInsurableSalaryExplanation"
             components={{
               Link: (
                 <a
-                  href={`https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator/mra-pdfs/${CURRENT_YEAR_NAMESPACE}/nsf-employers-guide.pdf`}
+                  href={`https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator/mra-pdfs/${CURRENT_FINANCIAL_YEAR_NAMESPACE}/nsf-employers-guide.pdf`}
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                 />
