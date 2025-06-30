@@ -21,7 +21,7 @@ import {
   CSG_MAX_YEARLY_DOMESTIC_LIMIT,
   CSG_MONTHLY_BASE_SALARY_LIMIT,
   CSG_YEARLY_BASE_SALARY_LIMIT,
-  CURRENT_YEAR_NAMESPACE,
+  CURRENT_FINANCIAL_YEAR_NAMESPACE,
   INITIAL_YEARLY_TAXABLE_BRACKETS,
   MRA_YEARLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
   NSF_MAX_YEARLY_INSURABLE_BASIC_WAGE,
@@ -34,7 +34,7 @@ import { TaxCalcRow, YearlyFormValues } from "../types";
 
 export default function YearlyCalculations() {
   const { t: tCommon } = useTranslation("common");
-  const { t: tCurrentYear } = useTranslation(CURRENT_YEAR_NAMESPACE);
+  const { t: tCurrentYear } = useTranslation(CURRENT_FINANCIAL_YEAR_NAMESPACE);
   const { values, isValid } = useFormikContext<YearlyFormValues>();
   const [monthlyBaseSalary, setMonthlyBaseSalary] = useState(new Decimal(0));
   const [totalBaseSalary, setTotalBaseSalary] = useState(new Decimal(0));
@@ -647,12 +647,12 @@ export default function YearlyCalculations() {
         <p className="text-sm">
           *
           <Trans
-            ns={CURRENT_YEAR_NAMESPACE}
+            ns={CURRENT_FINANCIAL_YEAR_NAMESPACE}
             i18nKey="year.output.nsf.nsfInsurableSalaryExplanation"
             components={{
               Link: (
                 <a
-                  href={`https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator/mra-pdfs/${CURRENT_YEAR_NAMESPACE}/nsf-employers-guide.pdf`}
+                  href={`https://github.com/n-d-r-d-g/redesigned/tree/main/mauritius_tax_calculator/mra-pdfs/${CURRENT_FINANCIAL_YEAR_NAMESPACE}/nsf-employers-guide.pdf`}
                   target="_blank"
                   rel="noreferrer noopener nofollow"
                 />
