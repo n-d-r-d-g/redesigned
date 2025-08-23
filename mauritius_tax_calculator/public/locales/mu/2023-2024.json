@@ -56,7 +56,7 @@
       "chargeableIncome": {
         "subtitle": "Reveni taksab (montan ki servi pou kalkil ou taks PAYE)",
         "table": {
-          "title": "Kalkil reveni taksab mansyel",
+          "title": "Kalkil mansiel reveni taksab",
           "headers": {
             "incomeDescription": "Deskripsion reveni",
             "subAmount": "Sou-montan (Rs)",
@@ -82,7 +82,7 @@
         "calculationDescription": "Kalkil PAYE: Lor sak ranze,",
         "calculationSteps": "<ul><li>Si reveni taksab restan pli tigit ki limit taksab, reveni taksab restan servi kouma montan taksab</li><li>sinon, limit taksab servi kouma montan taksab ek nou retir limit taksab depi dan reveni taksab restan pou kalkil lor prosin ranze</li></ul>",
         "table": {
-          "title": "Kalkil PAYE mansyel",
+          "title": "Kalkil mansiel PAYE",
           "headers": {
             "taxableLimit": "Limit taksab (Rs)",
             "taxableAmount": "Montan taksab (Rs)",
@@ -98,7 +98,7 @@
       "csg": {
         "subtitle": "CSG (sif arondi) faktire par MRA (afise lor peyslip)",
         "table": {
-          "title": "Kalkil CSG mansyel",
+          "title": "Kalkil mansiel CSG",
           "headers": {
             "description": "Deskripsion",
             "amount": "Montan (Rs)"
@@ -111,7 +111,7 @@
       "nsf": {
         "subtitle": "NSF (sif arondi) faktire par MRA (afise lor peyslip)",
         "table": {
-          "title": "Kalkil CSG mansyel",
+          "title": "Kalkil mansiel NSF",
           "headers": {
             "description": "Deskripsion",
             "amount": "Montan (Rs)"
@@ -126,7 +126,7 @@
       "incomeAfterTaxes": {
         "subtitle": "Reveni apre dediksion taks (sif arondi)",
         "table": {
-          "title": "Revenu apre dediksion taks",
+          "title": "Reveni apre dediksion taks",
           "headers": {
             "description": "Deskripsion",
             "subAmount": "Sou-montan (Rs)",
@@ -138,7 +138,7 @@
             "csg": "CSG",
             "nsf": "NSF",
             "totalTaxes": "PAYE + CSG + NSF",
-            "incomeAfterTaxes": "Revenu apre dediksion taks"
+            "incomeAfterTaxes": "Reveni apre dediksion taks"
           }
         }
       }
@@ -148,8 +148,8 @@
     "description": "<p>Pu tou depans ki ou finn fer an parti ou swa an totalite dan lane fiskal, ranpli valer ki ou finn paye, pa ou anplwayer. Vizit sit web MRA (<MRAExemptIncomeLink>reveni non taksab</MRAExemptIncomeLink> ek <MRADeductionsLink>soulazman, dediksion & alokasion</MRADeductionsLink>) pou plis informasion.</p>",
     "form": {
       "monthlyBaseSalary": {
-        "label": "Saler debaz mansyel (pou 1 mwa)",
-        "description": "Saler debaz mansyel pou enn mwa travay konplet."
+        "label": "Saler debaz mansiel (pou 1 mwa)",
+        "description": "Saler debaz mansiel pou enn mwa travay konplet."
       },
       "totalBaseSalary": {
         "label": "Saler debaz total (12 mwa)",
@@ -257,7 +257,7 @@
       "csg": {
         "subtitle": "CSG (sif arondi) faktire par MRA",
         "table": {
-          "title": "Kalkil CSG anyel",
+          "title": "Kalkil aniel CSG",
           "headers": {
             "description": "Deskripsion",
             "amount": "Montan (Rs)"
@@ -265,7 +265,7 @@
           "description": {
             "totalBaseSalary": "Saler debaz total",
             "totalBaseSalaryCSG": "CSG pou saler debaz total",
-            "monthlyBaseSalary": "Saler debaz mansyel",
+            "monthlyBaseSalary": "Saler debaz mansiel",
             "eoyBonusCSG": "CSG pou bonis EOY",
             "csg": "CSG"
           }
@@ -274,7 +274,7 @@
       "nsf": {
         "subtitle": "NSF (sif arondi) faktire par MRA",
         "table": {
-          "title": "Kalkil CSG anyel",
+          "title": "Kalkil aniel NSF",
           "headers": {
             "description": "Deskripsion",
             "amount": "Montan (Rs)"
@@ -289,7 +289,7 @@
       "incomeAfterTaxes": {
         "subtitle": "Reveni apre dediksion taks (sif arondi)",
         "table": {
-          "title": "Revenu apre dediksion taks",
+          "title": "Reveni apre dediksion taks",
           "headers": {
             "description": "Deskripsion",
             "subAmount": "Sou-montan (Rs)",
@@ -301,7 +301,7 @@
             "csg": "CSG",
             "nsf": "NSF",
             "totalTaxes": "PAYE + CSG + NSF",
-            "incomeAfterTaxes": "Revenu apre dediksion taks"
+            "incomeAfterTaxes": "Reveni apre dediksion taks"
           }
         }
       }
