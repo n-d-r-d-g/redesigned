@@ -136,7 +136,7 @@
             "chargeableIncome": "Chargeable income"
           }
         },
-        "fscChargeableIncomeExplanation": "Fair Share Contribution is only applicable if it's over Rs {{maxFSCNonTaxableLimit}}."
+        "fscChargeableIncomeExplanation": "Fair Share Contribution is only applicable if it's above Rs {{maxFSCNonTaxableLimit}}."
       },
       "incomeAfterTaxes": {
         "subtitle": "Income received after tax deduction (rounded off value)",
@@ -315,7 +315,7 @@
             "chargeableIncome": "Chargeable income"
           }
         },
-        "fscChargeableIncomeExplanation": "Fair Share Contribution is only applicable if it's over Rs {{maxFSCNonTaxableLimit}}."
+        "fscChargeableIncomeExplanation": "Fair Share Contribution is only applicable if it's above Rs {{maxFSCNonTaxableLimit}}."
       },
       "incomeAfterTaxes": {
         "subtitle": "Income received after tax deduction (rounded off value)",
