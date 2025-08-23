@@ -1,6 +1,6 @@
 # Mauritius Tax Calculator
 
-This is an unofficial alternative to the [MRA's current tax calculator](https://eservices.mra.mu/taxcalculator/viewCalculate). Click [here](https://mauritius-tax-calculator.netlify.app) if you wish to check out the website.
+This is an unofficial alternative to the [MRA's current tax calculator](https://eservices.mra.mu/taxcalculator/viewCalculate). Click [here](https://taxmu.netlify.app) if you wish to check out the website.
 
 ## Motivation
 
