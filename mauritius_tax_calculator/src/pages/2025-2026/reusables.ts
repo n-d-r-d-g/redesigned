@@ -98,8 +98,12 @@ export const DEFAULT_YEARLY_INITIAL_VALUES = {
   isInDomesticService: false,
 } as const;
 
-export const FSC_MAX_MONTHLY_NON_TAXABLE_LIMIT = new Decimal(1_000_000);
 export const FSC_MAX_YEARLY_NON_TAXABLE_LIMIT = new Decimal(12_000_000);
+export const FSC_MAX_MONTHLY_NON_TAXABLE_LIMIT = new Decimal(
+  FSC_MAX_YEARLY_NON_TAXABLE_LIMIT
+)
+  .dividedBy(13)
+  .round();
 export const FSC_RATE = new Decimal(0.15);
 export const CSG_MONTHLY_BASE_SALARY_LIMIT = new Decimal(50_000);
 export const CSG_MAX_MONTHLY_DOMESTIC_LIMIT = new Decimal(3_000);
@@ -111,11 +115,11 @@ export const CSG_DECREASED_RATE = new Decimal(0.015);
 export const CSG_INCREASED_RATE = new Decimal(0.03);
 
 export const NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE =
-  new Decimal(2_490);
+  new Decimal(2_795);
 export const NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE = new Decimal(
-  3_920
+  4_400
 );
-export const NSF_MAX_MONTHLY_INSURABLE_BASIC_WAGE = new Decimal(25_475);
+export const NSF_MAX_MONTHLY_INSURABLE_BASIC_WAGE = new Decimal(28_570);
 export const NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE =
   NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE.mul(12);
 export const NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE =
