@@ -1,6 +1,6 @@
 # MUDOCS
 
-This is an unofficial project that aims to make public processes in Mauritius smoother and easier to understand. Click [here](https://mu-docs.netlify.app) if you wish to check out the website.
+This is an unofficial project that aims to make public processes in Mauritius smoother and easier to understand. Click [here](https://docsmu.netlify.app) if you wish to check out the website.
 
 ## Motivation
 
