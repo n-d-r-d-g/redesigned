@@ -73,7 +73,7 @@ export const DEFAULT_MONTHLY_INITIAL_VALUES = {
   otherTaxableIncome: 0,
   numOfDependents: "0",
   otherTaxDeductions: 0,
-  age: "29To64",
+  age: "18To64",
   isCitizen: true,
   isResident: true,
   isPublicSector: false,
@@ -90,7 +90,7 @@ export const DEFAULT_YEARLY_INITIAL_VALUES = {
   otherTaxableIncome: 0,
   numOfDependents: "0",
   otherTaxDeductions: 0,
-  age: "29To64",
+  age: "18To64",
   isCitizen: true,
   isResident: true,
   isPublicSector: false,
@@ -98,14 +98,6 @@ export const DEFAULT_YEARLY_INITIAL_VALUES = {
   isInDomesticService: false,
 } as const;
 
-export const PAYE_MAX_YEARLY_NON_TAXABLE_LIMIT_18_TO_28_YEARS = new Decimal(
-  1_000_000
-);
-export const PAYE_MAX_MONTHLY_NON_TAXABLE_LIMIT_18_TO_28_YEARS = new Decimal(
-  PAYE_MAX_YEARLY_NON_TAXABLE_LIMIT_18_TO_28_YEARS
-)
-  .dividedBy(13)
-  .round();
 export const FSC_MAX_YEARLY_NON_TAXABLE_LIMIT = new Decimal(12_000_000);
 export const FSC_MAX_MONTHLY_NON_TAXABLE_LIMIT = new Decimal(
   FSC_MAX_YEARLY_NON_TAXABLE_LIMIT

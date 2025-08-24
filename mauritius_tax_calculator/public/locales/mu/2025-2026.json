@@ -31,8 +31,7 @@
         "label": "Laz",
         "items": {
           "under18": "Anba 18 an",
-          "18To28": "18 a 28 an",
-          "29To64": "29 a 64 an",
+          "18To64": "18 a 64 an",
           "65To69": "65 a 69 an",
           "70AndOver": "Lao 70 an"
         }
@@ -205,8 +204,7 @@
         "label": "Laz",
         "items": {
           "under18": "Anba 18 an",
-          "18To28": "18 a 28 an",
-          "29To64": "29 a 64 an",
+          "18To64": "18 a 64 an",
           "65To69": "65 a 69 an",
           "70AndOver": "Lao 70 an"
         }
