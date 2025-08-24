@@ -31,7 +31,8 @@
         "label": "Age group",
         "items": {
           "under18": "Under 18",
-          "18To64": "18 to 64",
+          "18To28": "18 to 28",
+          "29To64": "29 to 64",
           "65To69": "65 to 69",
           "70AndOver": "Over 70"
         }
@@ -205,7 +206,8 @@
         "label": "Age group",
         "items": {
           "under18": "Under 18",
-          "18To64": "18 to 64",
+          "18To28": "18 to 28",
+          "29To64": "29 to 64",
           "65To69": "65 to 69",
           "70AndOver": "Over 70"
         }

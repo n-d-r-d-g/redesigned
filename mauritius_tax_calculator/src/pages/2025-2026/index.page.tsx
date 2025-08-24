@@ -267,12 +267,20 @@ export default function FinancialYear2025To2026() {
                           {tCurrentYear("month.form.age.items.under18")}
                         </SelectItem>
                         <SelectItem
-                          key="18To64"
+                          key="18To28"
                           textValue={tCurrentYear(
-                            "month.form.age.items.18To64"
+                            "month.form.age.items.18To28"
                           )}
                         >
-                          {tCurrentYear("month.form.age.items.18To64")}
+                          {tCurrentYear("month.form.age.items.18To28")}
+                        </SelectItem>
+                        <SelectItem
+                          key="29To64"
+                          textValue={tCurrentYear(
+                            "month.form.age.items.29To64"
+                          )}
+                        >
+                          {tCurrentYear("month.form.age.items.29To64")}
                         </SelectItem>
                         <SelectItem
                           key="65To69"
@@ -506,10 +514,16 @@ export default function FinancialYear2025To2026() {
                           {tCurrentYear("year.form.age.items.under18")}
                         </SelectItem>
                         <SelectItem
-                          key="18To64"
-                          textValue={tCurrentYear("year.form.age.items.18To64")}
+                          key="18To28"
+                          textValue={tCurrentYear("year.form.age.items.18To28")}
                         >
-                          {tCurrentYear("year.form.age.items.18To64")}
+                          {tCurrentYear("year.form.age.items.18To28")}
+                        </SelectItem>
+                        <SelectItem
+                          key="29To64"
+                          textValue={tCurrentYear("year.form.age.items.29To64")}
+                        >
+                          {tCurrentYear("year.form.age.items.29To64")}
                         </SelectItem>
                         <SelectItem
                           key="65To69"

@@ -5,7 +5,7 @@ export interface MonthlyFormValues {
   otherTaxableIncome: number;
   numOfDependents: "0" | "1" | "2" | "3" | "4";
   otherTaxDeductions: number;
-  age: "under18" | "18To64" | "65To69" | "70AndOver";
+  age: "under18" | "18To28" | "29To64" | "65To69" | "70AndOver";
   isCitizen: boolean;
   isResident: boolean;
   isPublicSector: boolean;
@@ -22,7 +22,7 @@ export interface YearlyFormValues {
   otherTaxableIncome: number;
   numOfDependents: "0" | "1" | "2" | "3" | "4";
   otherTaxDeductions: number;
-  age: "under18" | "18To64" | "65To69" | "70AndOver";
+  age: "under18" | "18To28" | "29To64" | "65To69" | "70AndOver";
   isCitizen: boolean;
   isResident: boolean;
   isPublicSector: boolean;

@@ -30,6 +30,7 @@ import {
   NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE,
   NSF_MIN_YEARLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE,
   NSF_RATE,
+  PAYE_MAX_YEARLY_NON_TAXABLE_LIMIT_18_TO_28_YEARS,
   YEARLY_IET_DEPENDENT_DEDUCTIONS,
 } from "../reusables";
 import { TaxCalcRow, YearlyFormValues } from "../types";
@@ -157,6 +158,11 @@ export default function YearlyCalculations() {
             taxCharged: decimalToString(newPAYE, 2),
           },
         ];
+        const isExemptFromPAYE =
+          values.age === "18To28" &&
+          newChargeableIncome.lessThanOrEqualTo(
+            PAYE_MAX_YEARLY_NON_TAXABLE_LIMIT_18_TO_28_YEARS
+          );
         const isExemptFromCSG =
           (!values.isCitizen && !values.isResident) ||
           (values.isPublicSector && !values.isPRB);
@@ -190,6 +196,10 @@ export default function YearlyCalculations() {
         const newFSCChargeableIncome = isExemptFromFSC
           ? new Decimal(0)
           : newChargeableIncome;
+
+        if (isExemptFromPAYE) {
+          newPAYE = new Decimal(0);
+        }
 
         if (!isExemptFromCSGOnTotalBaseSalary) {
           newTotalBaseSalaryCSGRate = newTotalBaseSalary.lessThanOrEqualTo(

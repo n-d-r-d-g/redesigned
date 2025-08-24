@@ -29,6 +29,7 @@ import {
   CURRENT_FINANCIAL_YEAR_NAMESPACE,
   FSC_MAX_MONTHLY_NON_TAXABLE_LIMIT,
   FSC_RATE,
+  PAYE_MAX_MONTHLY_NON_TAXABLE_LIMIT_18_TO_28_YEARS,
 } from "../reusables";
 import { MonthlyFormValues, TaxCalcRow } from "../types";
 
@@ -144,6 +145,11 @@ export default function MonthlyCalculations() {
             taxCharged: decimalToString(newPAYE, 2),
           },
         ];
+        const isExemptFromPAYE =
+          values.age === "18To28" &&
+          newChargeableIncome.lessThanOrEqualTo(
+            PAYE_MAX_MONTHLY_NON_TAXABLE_LIMIT_18_TO_28_YEARS
+          );
         const isExemptFromCSG =
           (!values.isCitizen && !values.isResident) ||
           (values.isInDomesticService &&
@@ -170,6 +176,10 @@ export default function MonthlyCalculations() {
         const newFSCChargeableIncome = isExemptFromFSC
           ? new Decimal(0)
           : newChargeableIncome;
+
+        if (isExemptFromPAYE) {
+          newPAYE = new Decimal(0);
+        }
 
         if (!isExemptFromCSG) {
           newCSGRate = newBaseSalary.lessThanOrEqualTo(
