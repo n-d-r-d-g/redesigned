@@ -1,7 +1,5 @@
 import FormCheckbox from "@/components/form/FormCheckbox/FormCheckbox";
-import FormNumberInput from "@/components/form/FormNumberInput/FormNumberInput";
 import FormSelect from "@/components/form/FormSelect/FormSelect";
-import ResetButton from "@/components/form/ResetButton/ResetButton";
 import { joiFormikAdapter } from "@/utils/adapters/joi-formik-adapter";
 import { noop, retrieveFinancialPeriod } from "@/utils/functions";
 import {
@@ -15,16 +13,14 @@ import {
 import { Formik } from "formik";
 import Joi from "joi";
 import { GetStaticProps } from "next";
-import { Trans, useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import Link from "next/link";
 import { useMemo } from "react";
+import { MonthGraph } from "./components/MonthGraph";
 import {
   DEFAULT_I18N_LOCALE,
   DEFAULT_I18N_NAMESPACE,
-} from "../../../constants";
-import MonthlyCalculations from "./components/MonthlyCalculations";
-import YearlyCalculations from "./components/YearlyCalculations";
+} from "../../../../constants";
 import {
   CURRENT_FINANCIAL_YEAR_END,
   CURRENT_FINANCIAL_YEAR_NAMESPACE,
@@ -33,10 +29,11 @@ import {
   DEFAULT_YEARLY_INITIAL_VALUES,
   MAX_MONETARY_AMOUNT,
   MIN_MONETARY_AMOUNT,
-} from "./reusables";
+} from "../reusables";
+import { YearGraph } from "./components/YearGraph";
 import { StyledBreadcrumbs } from "@/components/StyledBreadcrumbs/StyledBreadcrumbs";
 
-export default function FinancialYear2024To2025() {
+export default function FinancialYear2025To2026Graph() {
   const { i18n, t: tCommon } = useTranslation("common");
   const { t: tCurrentYear } = useTranslation(CURRENT_FINANCIAL_YEAR_NAMESPACE);
   const monthlySchema = Joi.object({
@@ -131,25 +128,24 @@ export default function FinancialYear2024To2025() {
       <StyledBreadcrumbs>
         <BreadcrumbItem
           href={`/${CURRENT_FINANCIAL_YEAR_START}-${CURRENT_FINANCIAL_YEAR_END}`}
-          isCurrent
         >
           {tCommon("breadcrumbs.calculator")} ({CURRENT_FINANCIAL_YEAR_START}-
           {CURRENT_FINANCIAL_YEAR_END})
         </BreadcrumbItem>
         <BreadcrumbItem
           href={`/${CURRENT_FINANCIAL_YEAR_START}-${CURRENT_FINANCIAL_YEAR_END}/graph`}
-          isCurrent={false}
+          isCurrent
         >
           {tCommon("breadcrumbs.graph")} ({CURRENT_FINANCIAL_YEAR_START}-
           {CURRENT_FINANCIAL_YEAR_END})
         </BreadcrumbItem>
       </StyledBreadcrumbs>
-      <h1>{tCommon("websiteTitle")}</h1>
+      <h1>{tCommon("graph.pageTitle")}</h1>
       <p className="text-center text-lg font-bold one-col-text mb-4">
         {financialPeriod.start} - {financialPeriod.end}
       </p>
       <p className="text-center one-col-text">
-        {tCommon("websiteDescription")}
+        {tCommon("graph.pageDescription")}
       </p>
       <div className="w-[80rem] max-w-full flex flex-col items-center pb-24 mx-auto">
         <Tabs
@@ -161,7 +157,7 @@ export default function FinancialYear2024To2025() {
           <Tab
             key="month"
             title={tCommon("calculationPeriods.month")}
-            className="w-full flex flex-col lg:flex-row lg:items-start gap-x-3 gap-y-5"
+            className="w-full flex flex-col lg:flex-row lg:items-stretch gap-x-3 gap-y-5"
           >
             <Formik
               initialValues={DEFAULT_MONTHLY_INITIAL_VALUES}
@@ -180,46 +176,6 @@ export default function FinancialYear2024To2025() {
                       id="monthlyForm"
                       className="flex flex-col gap-y-5 pb-1"
                     >
-                      <p>{tCurrentYear("month.description")}</p>
-                      <ResetButton />
-                      <FormNumberInput
-                        key="monthlyBaseSalary"
-                        name="baseSalary"
-                        label={tCurrentYear("month.form.baseSalary.label")}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="monthlyTravelingAllowance"
-                        name="travelingAllowance"
-                        label={tCurrentYear(
-                          "month.form.travelingAllowance.label"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="monthlyPerformanceBonus"
-                        name="performanceBonus"
-                        label={tCurrentYear(
-                          "month.form.performanceBonus.label"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="monthlyOtherTaxableIncome"
-                        name="otherTaxableIncome"
-                        label={tCurrentYear(
-                          "month.form.otherTaxableIncome.label"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
                       <FormSelect
                         key="monthlyNumOfDependents"
                         name="numOfDependents"
@@ -267,16 +223,6 @@ export default function FinancialYear2024To2025() {
                           {tCurrentYear("month.form.numOfDependents.items.4")}
                         </SelectItem>
                       </FormSelect>
-                      <FormNumberInput
-                        key="monthlyOtherTaxDeductions"
-                        name="otherTaxDeductions"
-                        label={tCurrentYear(
-                          "month.form.otherTaxDeductions.label"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
                       <FormSelect
                         key="monthlyAge"
                         name="age"
@@ -335,7 +281,7 @@ export default function FinancialYear2024To2025() {
                 </Card>
                 <Card radius="sm" className="lg:grow">
                   <CardBody>
-                    <MonthlyCalculations />
+                    <MonthGraph />
                   </CardBody>
                 </Card>
               </>
@@ -363,99 +309,6 @@ export default function FinancialYear2024To2025() {
                       id="yearlyForm"
                       className="flex flex-col gap-y-5 pb-1"
                     >
-                      <Trans
-                        t={tCurrentYear}
-                        i18nKey="year.description"
-                        components={{
-                          MRAExemptIncomeLink: (
-                            <Link
-                              href="https://www.mra.mu/index.php/individuals/exempt-income"
-                              target="_blank"
-                              rel="noreferrer noopener nofollow"
-                            />
-                          ),
-                          MRADeductionsLink: (
-                            <Link
-                              href="https://www.mra.mu/index.php/individuals/reliefs-deductions-allowances"
-                              target="_blank"
-                              rel="noreferrer noopener nofollow"
-                            />
-                          ),
-                        }}
-                      />
-                      <ResetButton />
-                      <FormNumberInput
-                        key="yearlyMonthlyBaseSalary"
-                        name="monthlyBaseSalary"
-                        label={tCurrentYear(
-                          "year.form.monthlyBaseSalary.label"
-                        )}
-                        description={tCurrentYear(
-                          "year.form.monthlyBaseSalary.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="yearlyTotalBaseSalary"
-                        name="totalBaseSalary"
-                        label={tCurrentYear("year.form.totalBaseSalary.label")}
-                        description={tCurrentYear(
-                          "year.form.totalBaseSalary.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="yearlyEoyBonus"
-                        name="eoyBonus"
-                        label={tCurrentYear("year.form.eoyBonus.label")}
-                        description={tCurrentYear(
-                          "year.form.eoyBonus.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="yearlyTravelingAllowance"
-                        name="travelingAllowance"
-                        label={tCurrentYear(
-                          "year.form.travelingAllowance.label"
-                        )}
-                        description={tCurrentYear(
-                          "year.form.travelingAllowance.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="yearlyPerformanceBonus"
-                        name="performanceBonus"
-                        label={tCurrentYear("year.form.performanceBonus.label")}
-                        description={tCurrentYear(
-                          "year.form.performanceBonus.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
-                      <FormNumberInput
-                        key="yearlyOtherTaxableIncome"
-                        name="otherTaxableIncome"
-                        label={tCurrentYear(
-                          "year.form.otherTaxableIncome.label"
-                        )}
-                        description={tCurrentYear(
-                          "year.form.otherTaxableIncome.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
                       <FormSelect
                         key="yearlyNumOfDependents"
                         name="numOfDependents"
@@ -503,19 +356,6 @@ export default function FinancialYear2024To2025() {
                           {tCurrentYear("year.form.numOfDependents.items.4")}
                         </SelectItem>
                       </FormSelect>
-                      <FormNumberInput
-                        key="yearlyOtherTaxDeductions"
-                        name="otherTaxDeductions"
-                        label={tCurrentYear(
-                          "year.form.otherTaxDeductions.label"
-                        )}
-                        description={tCurrentYear(
-                          "year.form.otherTaxDeductions.description"
-                        )}
-                        placeholder="0"
-                        currency="Rs"
-                        min={0}
-                      />
                       <FormSelect
                         key="yearlyAge"
                         name="age"
@@ -570,7 +410,7 @@ export default function FinancialYear2024To2025() {
                 </Card>
                 <Card radius="sm" className="lg:grow">
                   <CardBody>
-                    <YearlyCalculations />
+                    <YearGraph />
                   </CardBody>
                 </Card>
               </>
