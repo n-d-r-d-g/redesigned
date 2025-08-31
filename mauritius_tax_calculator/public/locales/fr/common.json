@@ -1,7 +1,7 @@
 {
   "websiteTitle": "Calculateur d'impôt à l'île Maurice",
   "websiteDescription": "Cette application est un outil non officiel qui vise à rendre les impôts que la MRA facture aux employés à l'île Maurice plus facile à calculer et à comprendre.",
-  "websiteBuiltBy": "<span>Conçu avec <HeartIcon /> par <GitHub>n-d-r-d-g</GitHub></span>",
+  "websiteBuiltBy": "<span>Conçu avec <HeartIcon /> par <GitHubLink>n-d-r-d-g</GitHubLink></span>",
   "websiteBuiltByTitle": "amour, sueur & larmes",
   "gitHubLink": "Lien GitHub",
   "reload": "Recharger",
