@@ -15,22 +15,12 @@ import { useFormikContext } from "formik";
 import { Trans, useTranslation } from "next-i18next";
 import { useEffect, useState } from "react";
 import {
-  CSG_MONTHLY_BASE_SALARY_LIMIT,
-  CSG_DECREASED_RATE,
-  CSG_INCREASED_RATE,
-  CSG_MAX_MONTHLY_DOMESTIC_LIMIT,
-  INITIAL_MONTHLY_TAXABLE_BRACKETS,
   MRA_MONTHLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
-  NSF_MAX_MONTHLY_INSURABLE_BASIC_WAGE,
-  NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE,
-  NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE,
-  NSF_RATE,
-  MONTHLY_IET_DEPENDENT_DEDUCTIONS,
   CURRENT_FINANCIAL_YEAR_NAMESPACE,
   FSC_MAX_MONTHLY_NON_TAXABLE_LIMIT,
-  FSC_RATE,
 } from "../reusables";
 import { MonthlyFormValues, TaxCalcRow } from "../types";
+import { retrieveMonthlyValues } from "../graph/components/reusables";
 
 export default function MonthlyCalculations() {
   const { t: tCommon } = useTranslation("common");
@@ -70,122 +60,31 @@ export default function MonthlyCalculations() {
   useEffect(() => {
     if (isValid) {
       try {
-        const newBaseSalary = new Decimal(values.baseSalary);
-        const newTravelingAllowance = new Decimal(values.travelingAllowance);
-        const baseSalaryTimes25Percent = newBaseSalary.dividedBy(4);
-        const newMaxNonTaxableTravelingAllowance = Decimal.min(
-          MRA_MONTHLY_MAX_NON_TAXABLE_TRAVELING_ALLOWANCE,
-          baseSalaryTimes25Percent
-        );
-        const newTaxableTravelingAllowance =
-          newTravelingAllowance.lessThanOrEqualTo(
-            newMaxNonTaxableTravelingAllowance
-          )
-            ? new Decimal(0)
-            : newTravelingAllowance.sub(newMaxNonTaxableTravelingAllowance);
-        const newPerformanceBonus = new Decimal(values.performanceBonus);
-        const newOtherTaxableIncome = new Decimal(values.otherTaxableIncome);
-        let newChargeableIncome = newBaseSalary
-          .add(newTaxableTravelingAllowance)
-          .add(newPerformanceBonus)
-          .add(newOtherTaxableIncome);
-        let newTotalIncome = newBaseSalary
-          .add(newTravelingAllowance)
-          .add(newPerformanceBonus)
-          .add(newOtherTaxableIncome);
-        const newIETDeductions =
-          MONTHLY_IET_DEPENDENT_DEDUCTIONS[values.numOfDependents];
-        const newOtherTaxDeductions = new Decimal(values.otherTaxDeductions);
-        const newTotalDeductions = newIETDeductions.add(newOtherTaxDeductions);
-        newChargeableIncome = newChargeableIncome.sub(newTotalDeductions);
-        let remainder = newChargeableIncome;
-        let newPAYE = new Decimal(0);
-        const newMonthlyPAYECalcRows = [
-          ...INITIAL_MONTHLY_TAXABLE_BRACKETS.map((bracket, index) => {
-            if (!bracket.limit || remainder.lessThan(bracket.limit)) {
-              const taxableAmount = remainder;
-              const taxCharged = taxableAmount.mul(bracket.rate);
-              newPAYE = newPAYE.add(taxCharged);
-              remainder = remainder.sub(remainder);
-
-              return {
-                key: String(index),
-                taxableLimit: bracket.limit
-                  ? decimalToString(bracket.limit)
-                  : tCurrentYear(
-                      "month.output.paye.table.taxableLimits.remainder"
-                    ),
-                taxableAmount: decimalToString(taxableAmount, 2),
-                taxRate: decimalToString(bracket.rate.mul(100)),
-                taxCharged: decimalToString(taxCharged, 2),
-              };
-            }
-
-            const taxableAmount = bracket.limit;
-            const taxCharged = taxableAmount.mul(bracket.rate);
-            newPAYE = newPAYE.add(taxCharged);
-            remainder = remainder.sub(bracket.limit);
-
-            return {
-              key: String(index),
-              taxableLimit: decimalToString(bracket.limit),
-              taxableAmount: decimalToString(taxableAmount, 2),
-              taxRate: decimalToString(bracket.rate.mul(100)),
-              taxCharged: decimalToString(taxCharged, 2),
-            };
-          }),
-          {
-            key: "aggregations",
-            taxableLimit: tCurrentYear(
-              "month.output.paye.table.taxableLimits.taxCharged"
-            ),
-            taxableAmount: decimalToString(newChargeableIncome, 2),
-            taxRate: null,
-            taxCharged: decimalToString(newPAYE, 2),
-          },
-        ];
-        const isExemptFromCSG =
-          (!values.isCitizen && !values.isResident) ||
-          (values.isInDomesticService &&
-            newBaseSalary.lessThan(CSG_MAX_MONTHLY_DOMESTIC_LIMIT)) ||
-          (values.isPublicSector && !values.isPRB);
-        let newCSGRate = new Decimal(0);
-        const isExemptFromNSF = ["under18", "70AndOver"].includes(values.age);
-        const newNSFRate = isExemptFromNSF ? new Decimal(0) : NSF_RATE;
-        const minNSFInsurableSalary = values.isInDomesticService
-          ? NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_HOUSEHOLD_EMPLOYEE
-          : NSF_MIN_MONTHLY_INSURABLE_BASIC_WAGE_NORMAL_EMPLOYEE;
-        const maxNSFInsurableSalary = NSF_MAX_MONTHLY_INSURABLE_BASIC_WAGE;
-        const newNSFInsurableSalary = new Decimal(
-          newBaseSalary.lessThan(minNSFInsurableSalary)
-            ? 0
-            : newBaseSalary.greaterThan(maxNSFInsurableSalary)
-              ? maxNSFInsurableSalary
-              : newBaseSalary
-        );
-        const isExemptFromFSC = newChargeableIncome.lessThanOrEqualTo(
-          FSC_MAX_MONTHLY_NON_TAXABLE_LIMIT
-        );
-        const newFSCRate = FSC_RATE;
-        const newFSCChargeableIncome = isExemptFromFSC
-          ? new Decimal(0)
-          : newChargeableIncome;
-
-        if (!isExemptFromCSG) {
-          newCSGRate = newBaseSalary.lessThanOrEqualTo(
-            CSG_MONTHLY_BASE_SALARY_LIMIT
-          )
-            ? CSG_DECREASED_RATE
-            : CSG_INCREASED_RATE;
-        }
-
-        const newCSG = newBaseSalary.mul(newCSGRate);
-        const newNSF = isExemptFromNSF
-          ? new Decimal(0)
-          : newNSFInsurableSalary.mul(newNSFRate);
-        const newFSC = newFSCChargeableIncome.mul(newFSCRate);
-        const newTotalTaxes = newPAYE.add(newCSG).add(newNSF).add(newFSC);
-        const newIncomeAfterTaxes = newTotalIncome.sub(newTotalTaxes);
+        const {
+          newBaseSalary,
+          newTravelingAllowance,
+          newMaxNonTaxableTravelingAllowance,
+          newTaxableTravelingAllowance,
+          newPerformanceBonus,
+          newOtherTaxableIncome,
+          newTotalIncome,
+          newIETDeductions,
+          newOtherTaxDeductions,
+          newTotalDeductions,
+          newChargeableIncome,
+          newPAYE,
+          newCSGRate,
+          newCSG,
+          newNSFRate,
+          newNSFInsurableSalary,
+          newNSF,
+          newFSCRate,
+          newFSCChargeableIncome,
+          newFSC,
+          newTotalTaxes,
+          newMonthlyPAYECalcRows,
+          newIncomeAfterTaxes,
+        } = retrieveMonthlyValues({ values, tCurrentYear });
 
         setBaseSalary(newBaseSalary);
         setTravelingAllowance(newTravelingAllowance);

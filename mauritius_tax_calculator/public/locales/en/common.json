@@ -28,6 +28,16 @@
     "month": "One month",
     "year": "Whole year"
   },
+  "graph": {
+    "pageTitle": "Mauritius Tax Graph",
+    "pageDescription": "The graph below displays how taxes and income after taxes vary based on chargeable income (on the X-axis).",
+    "chargeableIncome": "Chargeable Income",
+    "csg": "CSG",
+    "fsc": "Fair Share Contribution",
+    "nsf": "NSF",
+    "paye": "PAYE",
+    "incomeAfterTaxes": "After taxes"
+  },
   "errors": {
     "required": "Error: Please fill in this field.",
     "stringMin_one": "Error: Please enter at least {{count}} character.",

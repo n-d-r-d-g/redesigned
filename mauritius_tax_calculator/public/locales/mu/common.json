@@ -28,6 +28,16 @@
     "month": "Enn mwa",
     "year": "Lane antie"
   },
+  "graph": {
+    "pageTitle": "Graf Tax Moris",
+    "pageDescription": "Sa graf anba-la ilistre kouma taks ek reveni apre taks varie an fonksion reveni taksab (lor lax orizontal).",
+    "chargeableIncome": "Reveni taksab",
+    "csg": "CSG",
+    "fsc": "Fair Share Contribution",
+    "nsf": "NSF",
+    "paye": "PAYE",
+    "incomeAfterTaxes": "Apre taks"
+  },
   "errors": {
     "required": "Erer: Ou bizin ranpli sa informasyon la.",
     "stringMin_one": "Erer: Ou bizin met omwin enn karakter.",
