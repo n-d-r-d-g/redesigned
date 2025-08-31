@@ -337,7 +337,7 @@ export default function FinancialYear2024To2025() {
                   <CardBody>
                     <form
                       id="yearlyForm"
-                      className="flex flex-col gap-y-4 pb-1"
+                      className="flex flex-col gap-y-5 pb-1"
                     >
                       <Trans
                         t={tCurrentYear}
