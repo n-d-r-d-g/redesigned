@@ -28,6 +28,16 @@
     "month": "Un mois",
     "year": "L'année entière"
   },
+  "graph": {
+    "pageTitle": "Graphique d'impôt à l'île Maurice",
+    "pageDescription": "Le graphique ci-dessous illustre comment les impôts et les revenus après impôts varient en fonction du revenu imposable (sur l'axe horizontal).",
+    "chargeableIncome": "Revenu imposable",
+    "csg": "CSG",
+    "fsc": "Fair Share Contribution",
+    "nsf": "NSF",
+    "paye": "PAYE",
+    "incomeAfterTaxes": "Après impôts"
+  },
   "errors": {
     "required": "Erreur: Veuillez renseigner ce champ.",
     "stringMin_one": "Erreur: Veuillez saisir au moins un caractère.",
