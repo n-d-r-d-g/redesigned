@@ -130,24 +130,7 @@ export default function YearlyCalculations() {
         // There are scenarios where isValid hasn't changed to false yet but the values containing errors are being used for calculations
       }
     }
-  }, [
-    isValid,
-    tCurrentYear,
-    values.age,
-    values.eoyBonus,
-    values.isCitizen,
-    values.isInDomesticService,
-    values.isPRB,
-    values.isPublicSector,
-    values.isResident,
-    values.monthlyBaseSalary,
-    values.numOfDependents,
-    values.otherTaxDeductions,
-    values.otherTaxableIncome,
-    values.performanceBonus,
-    values.totalBaseSalary,
-    values.travelingAllowance,
-  ]);
+  }, [isValid, tCurrentYear, values]);
 
   if (!isValid)
     return (

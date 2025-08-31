@@ -20,7 +20,7 @@ import {
 } from "./reusables";
 import { CURRENT_FINANCIAL_YEAR_NAMESPACE } from "../../reusables";
 
-export const MonthGraph = memo(() => {
+const MonthGraph = memo(() => {
   const { values, isValid } = useFormikContext<MonthlyFormValues>();
   const { t: tCurrentYear } = useTranslation(CURRENT_FINANCIAL_YEAR_NAMESPACE);
   const { t: tCommon } = useTranslation("common");
@@ -52,7 +52,7 @@ export const MonthGraph = memo(() => {
     }
 
     return data;
-  }, [values, isValid, tCurrentYear]);
+  }, [values, isValid, tCurrentYear, tCommon]);
 
   if (!isValid) return null;
 
@@ -124,3 +124,7 @@ export const MonthGraph = memo(() => {
     </ResponsiveContainer>
   );
 });
+
+MonthGraph.displayName = "MonthGraph";
+
+export { MonthGraph };
