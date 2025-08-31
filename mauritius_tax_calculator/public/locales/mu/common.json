@@ -38,6 +38,10 @@
     "paye": "PAYE",
     "incomeAfterTaxes": "Apre taks"
   },
+  "breadcrumbs": {
+    "calculator": "Kalkilater",
+    "graph": "Graf"
+  },
   "errors": {
     "required": "Erer: Ou bizin ranpli sa informasyon la.",
     "stringMin_one": "Erer: Ou bizin met omwin enn karakter.",

@@ -38,6 +38,10 @@
     "paye": "PAYE",
     "incomeAfterTaxes": "Après impôts"
   },
+  "breadcrumbs": {
+    "calculator": "Calculatrice",
+    "graph": "Graphique"
+  },
   "errors": {
     "required": "Erreur: Veuillez renseigner ce champ.",
     "stringMin_one": "Erreur: Veuillez saisir au moins un caractère.",
