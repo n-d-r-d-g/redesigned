@@ -2,7 +2,14 @@ import FormCheckbox from "@/components/form/FormCheckbox/FormCheckbox";
 import FormSelect from "@/components/form/FormSelect/FormSelect";
 import { joiFormikAdapter } from "@/utils/adapters/joi-formik-adapter";
 import { noop, retrieveFinancialPeriod } from "@/utils/functions";
-import { Card, CardBody, SelectItem, Tab, Tabs } from "@heroui/react";
+import {
+  BreadcrumbItem,
+  Card,
+  CardBody,
+  SelectItem,
+  Tab,
+  Tabs,
+} from "@heroui/react";
 import { Formik } from "formik";
 import Joi from "joi";
 import { GetStaticProps } from "next";
@@ -24,6 +31,7 @@ import {
   MIN_MONETARY_AMOUNT,
 } from "../reusables";
 import { YearGraph } from "./components/YearGraph";
+import { StyledBreadcrumbs } from "@/components/StyledBreadcrumbs/StyledBreadcrumbs";
 
 export default function FinancialYear2025To2026Graph() {
   const { i18n, t: tCommon } = useTranslation("common");
@@ -117,6 +125,21 @@ export default function FinancialYear2025To2026Graph() {
 
   return (
     <>
+      <StyledBreadcrumbs>
+        <BreadcrumbItem
+          href={`/${CURRENT_FINANCIAL_YEAR_START}-${CURRENT_FINANCIAL_YEAR_END}`}
+        >
+          {tCommon("breadcrumbs.calculator")} ({CURRENT_FINANCIAL_YEAR_START}-
+          {CURRENT_FINANCIAL_YEAR_END})
+        </BreadcrumbItem>
+        <BreadcrumbItem
+          href={`/${CURRENT_FINANCIAL_YEAR_START}-${CURRENT_FINANCIAL_YEAR_END}/graph`}
+          isCurrent
+        >
+          {tCommon("breadcrumbs.graph")} ({CURRENT_FINANCIAL_YEAR_START}-
+          {CURRENT_FINANCIAL_YEAR_END})
+        </BreadcrumbItem>
+      </StyledBreadcrumbs>
       <h1>{tCommon("graph.pageTitle")}</h1>
       <p className="text-center text-lg font-bold one-col-text mb-4">
         {financialPeriod.start} - {financialPeriod.end}
