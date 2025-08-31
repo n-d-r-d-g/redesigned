@@ -113,22 +113,7 @@ export default function MonthlyCalculations() {
         // There are scenarios where isValid hasn't changed to false yet but the values containing errors are being used for calculations
       }
     }
-  }, [
-    isValid,
-    tCurrentYear,
-    values.age,
-    values.baseSalary,
-    values.isCitizen,
-    values.isInDomesticService,
-    values.isPRB,
-    values.isPublicSector,
-    values.isResident,
-    values.numOfDependents,
-    values.otherTaxDeductions,
-    values.otherTaxableIncome,
-    values.performanceBonus,
-    values.travelingAllowance,
-  ]);
+  }, [isValid, tCurrentYear, values]);
 
   if (!isValid)
     return (
