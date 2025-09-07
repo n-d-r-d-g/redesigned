@@ -12,7 +12,7 @@ export const getServerSideProps: GetServerSideProps = async ({ locale }) => {
   return {
     redirect: {
       destination: retrieveLocalePath(
-        `/${CURRENT_FINANCIAL_YEAR_NAMESPACE}`,
+        `/${CURRENT_FINANCIAL_YEAR_NAMESPACE}/calculator`,
         (locale as undefined | I18nLocale) ?? DEFAULT_I18N_LOCALE
       ),
       statusCode: 301,

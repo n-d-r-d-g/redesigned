@@ -40,7 +40,8 @@
   },
   "breadcrumbs": {
     "calculator": "Calculatrice",
-    "graph": "Graphique"
+    "graph": "Graphique",
+    "home": "Accueil"
   },
   "errors": {
     "required": "Erreur: Veuillez renseigner ce champ.",

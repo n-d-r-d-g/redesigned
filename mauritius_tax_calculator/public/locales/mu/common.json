@@ -40,7 +40,8 @@
   },
   "breadcrumbs": {
     "calculator": "Kalkilater",
-    "graph": "Graf"
+    "graph": "Graf",
+    "home": "Akey"
   },
   "errors": {
     "required": "Erer: Ou bizin ranpli sa informasyon la.",

@@ -126,6 +126,9 @@ export default function FinancialYear2025To2026Graph() {
   return (
     <>
       <StyledBreadcrumbs>
+        <BreadcrumbItem href="/home">
+          {tCommon("breadcrumbs.home")}
+        </BreadcrumbItem>
         <BreadcrumbItem
           href={`/${CURRENT_FINANCIAL_YEAR_START}-${CURRENT_FINANCIAL_YEAR_END}`}
         >
