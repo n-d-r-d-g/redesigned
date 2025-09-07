@@ -40,7 +40,8 @@
   },
   "breadcrumbs": {
     "calculator": "Calculator",
-    "graph": "Graph"
+    "graph": "Graph",
+    "home": "Home"
   },
   "errors": {
     "required": "Error: Please fill in this field.",

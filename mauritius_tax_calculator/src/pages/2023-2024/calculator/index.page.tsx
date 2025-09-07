@@ -22,9 +22,9 @@ import { useMemo } from "react";
 import {
   DEFAULT_I18N_LOCALE,
   DEFAULT_I18N_NAMESPACE,
-} from "../../../constants";
-import MonthlyCalculations from "./components/MonthlyCalculations";
-import YearlyCalculations from "./components/YearlyCalculations";
+} from "../../../../constants";
+import MonthlyCalculations from "../components/MonthlyCalculations";
+import YearlyCalculations from "../components/YearlyCalculations";
 import {
   CURRENT_FINANCIAL_YEAR_END,
   CURRENT_FINANCIAL_YEAR_START,
@@ -33,10 +33,10 @@ import {
   DEFAULT_YEARLY_INITIAL_VALUES,
   MAX_MONETARY_AMOUNT,
   MIN_MONETARY_AMOUNT,
-} from "./reusables";
+} from "../reusables";
 import { StyledBreadcrumbs } from "@/components/StyledBreadcrumbs/StyledBreadcrumbs";
 
-export default function FinancialYear2023To2024() {
+export default function FinancialYear2023To2024Calculator() {
   const { i18n, t: tCommon } = useTranslation("common");
   const { t: tCurrentYear } = useTranslation(CURRENT_FINANCIAL_YEAR_NAMESPACE);
   const monthlySchema = Joi.object({
@@ -129,6 +129,9 @@ export default function FinancialYear2023To2024() {
   return (
     <>
       <StyledBreadcrumbs>
+        <BreadcrumbItem href="/home">
+          {tCommon("breadcrumbs.home")}
+        </BreadcrumbItem>
         <BreadcrumbItem
           href={`/${CURRENT_FINANCIAL_YEAR_START}-${CURRENT_FINANCIAL_YEAR_END}`}
           isCurrent
