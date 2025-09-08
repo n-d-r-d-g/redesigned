@@ -10,7 +10,11 @@ import { Pages } from "./components/Pages";
 import { Route } from "./types";
 import { useTranslation } from "next-i18next";
 
-export default function HomePage({ routes }: { routes: Route[] }) {
+interface HomePageProps {
+  routes: Route[];
+}
+
+export default function HomePage({ routes }: HomePageProps) {
   const { t: tCommon } = useTranslation("common");
 
   return (
