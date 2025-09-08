@@ -8,7 +8,10 @@ export function Pages({ routes }: { routes: Route[] }) {
   return (
     <ul>
       {routes.map((route) => (
-        <li key={`${route.label}-${route.slug}`}>
+        <li
+          key={`${route.label}-${route.slug}`}
+          className="last-of-type:mb-[1em]"
+        >
           {route.slug ? (
             <Link href={`/${route.slug}`}>
               {tCommon(
@@ -16,7 +19,9 @@ export function Pages({ routes }: { routes: Route[] }) {
               )}
             </Link>
           ) : (
-            route.label
+            <span className="text-zinc-700 dark:text-zinc-200">
+              {route.label}
+            </span>
           )}
 
           {route.children && <Pages routes={route.children} />}

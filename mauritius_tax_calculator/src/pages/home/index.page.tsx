@@ -8,12 +8,23 @@ import {
 } from "../../../constants";
 import { Pages } from "./components/Pages";
 import { Route } from "./types";
+import { useTranslation } from "next-i18next";
 
 export default function HomePage({ routes }: { routes: Route[] }) {
+  const { t: tCommon } = useTranslation("common");
+
   return (
-    <div className="flex flex-col items-center">
-      <Pages routes={routes} />
-    </div>
+    <>
+      <h1 className="mb-4">{tCommon("websiteTitle")}</h1>
+
+      <p className="text-center one-col-text mb-8">
+        {tCommon("websiteDescription")}
+      </p>
+
+      <div className="w-[80rem] max-w-full flex flex-col items-center pb-24 mx-auto">
+        <Pages routes={routes} />
+      </div>
+    </>
   );
 }
 
