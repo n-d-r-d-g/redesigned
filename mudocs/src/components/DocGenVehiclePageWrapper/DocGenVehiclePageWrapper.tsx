@@ -33,7 +33,8 @@ export default function DocGenVehiclePageWrapper<T extends FormikValues>({
 
   const handleSubmit = useCallback(
     (_: T, { setSubmitting }: FormikHelpers<T>) => {
-      const isPrintingSupported = typeof window && "print" in window;
+      const isPrintingSupported =
+        typeof window !== "undefined" && "print" in window;
 
       if (isPrintingSupported) {
         window.print();
