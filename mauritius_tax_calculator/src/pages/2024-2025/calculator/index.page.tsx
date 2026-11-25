@@ -133,7 +133,7 @@ export default function FinancialYear2024To2025Calculator() {
           {tCommon("breadcrumbs.home")}
         </BreadcrumbItem>
         <BreadcrumbItem
-          href={`/${CURRENT_FINANCIAL_YEAR_START}-${CURRENT_FINANCIAL_YEAR_END}`}
+          href={`/${CURRENT_FINANCIAL_YEAR_START}-${CURRENT_FINANCIAL_YEAR_END}/calculator`}
           isCurrent
         >
           {tCommon("breadcrumbs.calculator")} ({CURRENT_FINANCIAL_YEAR_START}-
