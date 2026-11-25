@@ -39,8 +39,8 @@ export default function TechnicalTerm({
 }: Props) {
   const { t: tCommon } = useTranslation(DEFAULT_I18N_NAMESPACE);
   const [isTooltipVisible, setIsTooltipVisible] = useState(false);
-  const titleKey = `technicalTerms.${name}.title` as const;
-  const label = tCommon(`technicalTerms.${name}.label`, { count });
+  const titleKey = `${technicalTermPrefix}${name}.title` as const;
+  const label = tCommon(`${technicalTermPrefix}${name}.label`, { count });
   const spanClassName = clx(
     "inline cursor-help rounded underline decoration-dotted decoration-2 underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:decoration-gray-400 dark:focus-visible:ring-blue-500 focus-visible:dark:ring-offset-slate-900",
     className,
