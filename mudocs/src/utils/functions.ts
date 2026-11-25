@@ -1,5 +1,5 @@
 import { NextRouter } from "next/router";
-import { TFunction } from "next-i18next";
+import { TFunction } from "next-i18next/pages";
 import { Address, Person, Company, PersonTitle } from "@/types";
 
 export function generateDocumentTitle(...strParts: Array<string>) {
@@ -20,6 +20,20 @@ export function clx(...classes: Array<undefined | string | number | boolean>) {
   const concatClasses = classes.filter(Boolean).join(" ");
 
   return concatClasses;
+}
+
+/** Zod error map: shows `message` when the value is missing (Zod 3's `required_error`) */
+export function requiredError(message: string) {
+  return (issue: { input?: unknown }) =>
+    issue.input === undefined ? message : undefined;
+}
+
+/** Zod error map: shows `message` when a coerced date is invalid, e.g. an empty input (Zod 3's `invalid_date`) */
+export function invalidDateError(message: string) {
+  return (issue: { code?: string; expected?: string }) =>
+    issue.code === "invalid_type" && issue.expected === "date"
+      ? message
+      : undefined;
 }
 
 /** E.g. for different values of type:
@@ -60,9 +74,11 @@ export function formattedDate(
 export function nameWithTitle(
   title: PersonTitle | "",
   name: string,
-  t?: TFunction,
-) {
-  return `${t && title ? t(`titles.${title}`) : title} ${name.toUpperCase()}`;
+  t: TFunction,
+): string;
+export function nameWithTitle(translatedTitle: string, name: string): string;
+export function nameWithTitle(title: string, name: string, t?: TFunction) {
+  return `${t && title ? t(`titles.${title as PersonTitle}`) : title} ${name.toUpperCase()}`;
 }
 
 export function namesWithId(traders: Array<Person | Company>, t: TFunction) {

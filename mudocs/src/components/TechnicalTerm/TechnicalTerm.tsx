@@ -5,7 +5,7 @@ import {
   MouseEvent,
   useState,
 } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import Tippy from "@tippyjs/react";
 import { clx } from "@/utils/functions";
 import TypedTrans from "../TypedTrans/TypedTrans";

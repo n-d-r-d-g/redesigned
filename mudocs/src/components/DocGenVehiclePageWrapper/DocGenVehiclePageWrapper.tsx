@@ -1,10 +1,10 @@
 import FormSaveOrPrint from "@/components/forms/FormSaveOrPrint/FormSaveOrPrint";
 import { generateDocumentTitle } from "@/utils/functions";
 import { Form, Formik, FormikHelpers, FormikValues } from "formik";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import Head from "next/head";
 import { useCallback } from "react";
-import { ZodType, ZodTypeDef } from "zod";
+import { ZodType } from "zod";
 import { toFormikValidationSchema } from "zod-formik-adapter";
 import { DEFAULT_I18N_NAMESPACE } from "../../../constants";
 import FormClear from "../forms/FormClear/FormClear";
@@ -14,7 +14,7 @@ import Styles from "./Styles";
 type Props<T> = {
   pageTitle: string;
   initialValues: T;
-  schema: ZodType<unknown, ZodTypeDef, unknown>;
+  schema: ZodType<unknown, unknown>;
   exampleData?: unknown;
   Fields: () => JSX.Element;
   Preview: () => JSX.Element;

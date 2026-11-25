@@ -1,7 +1,7 @@
 /* "use client";
 
 import { Select, SelectItem, Tooltip } from "@heroui/react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { useTheme } from "next-themes";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import { APP_THEMES, DEFAULT_I18N_NAMESPACE } from "../../../constants";
@@ -65,7 +65,7 @@ export function ThemeSwitch() {
 "use client";
 
 import { Select, SelectItem, Tooltip } from "@heroui/react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { useTheme } from "next-themes";
 import { ChangeEvent, useCallback, useEffect, useState } from "react";
 import {

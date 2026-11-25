@@ -1,7 +1,7 @@
 import { ChangeEvent, useCallback } from "react";
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import {
   TypeOf,
   enum as _enum,
@@ -14,7 +14,7 @@ import {
 } from "zod";
 import { FormikValues, useFormikContext } from "formik";
 import { v4 as uuidv4 } from "uuid";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import PageWrapper from "../../../../components/DocGenVehiclePageWrapper/DocGenVehiclePageWrapper";
 import FormDatePicker from "@/components/forms/FormDatePicker/FormDatePicker";
 import FormTextInput from "@/components/forms/FormTextInput/FormTextInput";
@@ -30,7 +30,9 @@ import TypedTrans from "@/components/TypedTrans/TypedTrans";
 import {
   amountToWords,
   formattedDate,
+  invalidDateError,
   namesWithAddress,
+  requiredError,
   silentlyUpdateURL,
 } from "@/utils/functions";
 import { Company, Person } from "@/types";
@@ -304,25 +306,25 @@ function Fields() {
       const newIndividualVendors = (
         ["iToI", "iToC"] as Array<TransactionMode>
       ).includes(newTransactionMode)
-        ? (values.individualVendors ?? getDefaultIndividuals())
+        ? values.individualVendors ?? getDefaultIndividuals()
         : undefined;
 
       const newCompanyVendors = (
         ["cToI", "cToC"] as Array<TransactionMode>
       ).includes(newTransactionMode)
-        ? (values.companyVendors ?? getDefaultCompanies())
+        ? values.companyVendors ?? getDefaultCompanies()
         : undefined;
 
       const newIndividualPurchasers = (
         ["iToI", "cToI"] as Array<TransactionMode>
       ).includes(newTransactionMode)
-        ? (values.individualPurchasers ?? getDefaultIndividuals())
+        ? values.individualPurchasers ?? getDefaultIndividuals()
         : undefined;
 
       const newCompanyPurchasers = (
         ["iToC", "cToC"] as Array<TransactionMode>
       ).includes(newTransactionMode)
-        ? (values.companyPurchasers ?? getDefaultCompanies())
+        ? values.companyPurchasers ?? getDefaultCompanies()
         : undefined;
 
       setValues(
@@ -417,7 +419,7 @@ function Preview() {
       ["iToI", "cToI"] as Array<TransactionMode>
     ).includes(values.transactionMode);
     const vendorCount = isIndividualVendors
-      ? (values.individualVendors?.length ?? 0)
+      ? values.individualVendors?.length ?? 0
       : 2;
     const vendorNamesWithAddress = namesWithAddress(
       isIndividualVendors ? values.individualVendors : values.companyVendors,
@@ -690,60 +692,56 @@ export default function DeedOfSale({ transactionMode }: Props) {
   };
   const baseTraderSchema = {
     uuid: string().uuid(),
-    name: string({ required_error: tCommon("errors.required") }).trim(),
-    address: string({ required_error: tCommon("errors.required") }).trim(),
+    name: string({ error: requiredError(tCommon("errors.required")) }).trim(),
+    address: string({
+      error: requiredError(tCommon("errors.required")),
+    }).trim(),
   };
   const personSchema = object({
     ...baseTraderSchema,
     traderType: literal("person"),
-    title: string({ required_error: tCommon("errors.required") })
+    title: string({ error: requiredError(tCommon("errors.required")) })
       .trim()
       .regex(/mr|mrs|miss/gm),
-    nationality: string({ required_error: tCommon("errors.required") })
+    nationality: string({ error: requiredError(tCommon("errors.required")) })
       .trim()
       .regex(/mauritian|nonMauritian/gm),
-    id: string({ required_error: tCommon("errors.required") }).trim(),
+    id: string({ error: requiredError(tCommon("errors.required")) }).trim(),
   });
   const companySchema = object({
     ...baseTraderSchema,
     traderType: literal("company"),
-    brn: string({ required_error: tCommon("errors.required") }).trim(),
+    brn: string({ error: requiredError(tCommon("errors.required")) }).trim(),
   });
   const schema = object({
     saleDate: z.coerce
       .date({
-        errorMap: (issue, { defaultError }) => ({
-          message:
-            issue.code === "invalid_date"
-              ? tCommon("errors.required")
-              : defaultError,
-        }),
+        error: invalidDateError(tCommon("errors.required")),
       })
       .optional(),
     vehicleFirstRegDate: z.coerce.date({
-      errorMap: (issue, { defaultError }) => ({
-        message:
-          issue.code === "invalid_date"
-            ? tCommon("errors.required")
-            : defaultError,
-      }),
+      error: invalidDateError(tCommon("errors.required")),
     }),
     vehicleRegMark: string({
-      required_error: tCommon("errors.required"),
+      error: requiredError(tCommon("errors.required")),
     }).trim(),
-    vehicleMake: string({ required_error: tCommon("errors.required") }).trim(),
-    vehicleModel: string({ required_error: tCommon("errors.required") }).trim(),
+    vehicleMake: string({
+      error: requiredError(tCommon("errors.required")),
+    }).trim(),
+    vehicleModel: string({
+      error: requiredError(tCommon("errors.required")),
+    }).trim(),
     vehicleEngineDisplacement: string({
-      required_error: tCommon("errors.required"),
+      error: requiredError(tCommon("errors.required")),
     }).trim(),
     vehicleEngineNum: string({
-      required_error: tCommon("errors.required"),
+      error: requiredError(tCommon("errors.required")),
     }).trim(),
     vehicleChassisNum: string({
-      required_error: tCommon("errors.required"),
+      error: requiredError(tCommon("errors.required")),
     }).trim(),
     vehiclePrice: number({
-      required_error: tCommon("errors.required"),
+      error: requiredError(tCommon("errors.required")),
     })
       .gte(1, tCommon("errors.numberGTE", { count: 1 }))
       .lte(

@@ -5,7 +5,7 @@ import {
   useCallback,
   useState,
 } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { useField } from "formik";
 import { v4 as uuidv4 } from "uuid";
 import Tippy from "@tippyjs/react";

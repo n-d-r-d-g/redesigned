@@ -1,9 +1,9 @@
 import { GetStaticProps } from "next";
 import Link from "next/link";
 import Head from "next/head";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { Formik, useFormikContext } from "formik";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { noop } from "lodash";
 import Abbr from "@/components/Abbr/Abbr";
 import TechnicalTerm from "@/components/TechnicalTerm/TechnicalTerm";

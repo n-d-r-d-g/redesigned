@@ -12,7 +12,7 @@ import {
 } from "@heroui/react";
 import Decimal from "decimal.js";
 import { useFormikContext } from "formik";
-import { Trans, useTranslation } from "next-i18next";
+import { Trans, useTranslation } from "next-i18next/pages";
 import { useEffect, useState } from "react";
 import {
   CURRENT_FINANCIAL_YEAR_NAMESPACE,

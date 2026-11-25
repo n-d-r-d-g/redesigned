@@ -10,7 +10,7 @@ import {
   Tooltip,
   useDisclosure,
 } from "@heroui/react";
-import { Trans, useTranslation } from "next-i18next";
+import { Trans, useTranslation } from "next-i18next/pages";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";

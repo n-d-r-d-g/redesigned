@@ -15,8 +15,8 @@ import {
 import { Formik } from "formik";
 import Joi from "joi";
 import { GetStaticProps } from "next";
-import { Trans, useTranslation } from "next-i18next";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { Trans, useTranslation } from "next-i18next/pages";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import Link from "next/link";
 import { useMemo } from "react";
 import {

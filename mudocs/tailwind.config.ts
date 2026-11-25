@@ -1,6 +1,6 @@
 import type { Config } from "tailwindcss";
 import defaultTheme from "tailwindcss/defaultTheme";
-import flowbite from "flowbite-react/tailwind";
+import * as flowbite from "flowbite-react/tailwind";
 import { heroui } from "@heroui/react";
 
 const config = {

@@ -1,6 +1,6 @@
 import { useCallback } from "react";
 import { useFormikContext } from "formik";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { Button, ButtonProps } from "@heroui/react";
 import { MdOutlineRefresh as MdOutlineRefreshIcon } from "react-icons/md";
 

@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { appWithTranslation } from "next-i18next";
+import { appWithTranslation } from "next-i18next/pages";
 import { ThemeProvider } from "next-themes";
 import { useRouter } from "next/router";
 import { HeroUIProvider } from "@heroui/react";

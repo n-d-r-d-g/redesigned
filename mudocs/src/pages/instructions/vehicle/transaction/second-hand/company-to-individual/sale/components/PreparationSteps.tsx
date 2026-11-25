@@ -1,6 +1,6 @@
 import { ChangeEvent, useCallback } from "react";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { useFormikContext } from "formik";
 import FormSelect from "@/components/forms/FormSelect/FormSelect";
 import Abbr from "@/components/Abbr/Abbr";

@@ -1,5 +1,5 @@
 import { useCallback } from "react";
-import { TFunction, useTranslation } from "next-i18next";
+import { TFunction, useTranslation } from "next-i18next/pages";
 import { formattedDate, nameWithTitle } from "@/utils/functions";
 import { Nationality, PersonTitle } from "@/types";
 import { DEFAULT_I18N_NAMESPACE } from "../../../constants";

@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { AppProps } from "next/app";
 import { dir } from "i18next";
-import { appWithTranslation, useTranslation } from "next-i18next";
+import { appWithTranslation, useTranslation } from "next-i18next/pages";
 import { ThemeProvider } from "next-themes";
 import { HeroUIProvider } from "@heroui/react";
 import nextI18NextConfig from "../../next-i18next.config";

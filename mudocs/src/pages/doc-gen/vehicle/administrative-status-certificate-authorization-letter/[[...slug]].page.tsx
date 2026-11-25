@@ -1,10 +1,10 @@
 import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
-import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { TypeOf, enum as _enum, literal, object, string, z } from "zod";
 import { FormikValues, useFormikContext } from "formik";
 import { v4 as uuidv4 } from "uuid";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import PageWrapper from "@/components/DocGenVehiclePageWrapper/DocGenVehiclePageWrapper";
 import FormDatePicker from "@/components/forms/FormDatePicker/FormDatePicker";
 import FormTextInput from "@/components/forms/FormTextInput/FormTextInput";
@@ -15,7 +15,9 @@ import SignatureBlock, {
 } from "@/components/SignatureBlock/SignatureBlock";
 import {
   formattedDate,
+  invalidDateError,
   namesWithId,
+  requiredError,
   silentlyUpdateURL,
 } from "@/utils/functions";
 import { Company, Person } from "@/types";
@@ -374,7 +376,7 @@ function Fields() {
       const newIndividualAuthorizers = (
         ["i1ToI2", "i1ToD2", "i1ToR2"] as Array<AuthorizationMode>
       ).includes(newAuthorizationMode)
-        ? (values.individualAuthorizers ?? getDefaultIndividuals())
+        ? values.individualAuthorizers ?? getDefaultIndividuals()
         : undefined;
 
       const newCompanyAuthorizers = (
@@ -386,31 +388,31 @@ function Fields() {
           "c1ToR2",
         ] as Array<AuthorizationMode>
       ).includes(newAuthorizationMode)
-        ? (values.companyAuthorizers?.map((company: Company) => ({
+        ? values.companyAuthorizers?.map((company: Company) => ({
             ...company,
             directors: company.directors ?? getCompanyDirectors(),
             representative:
               newAuthorizationMode === "c1ToR1"
-                ? (company.representative ?? getCompanyRepresentative())
+                ? company.representative ?? getCompanyRepresentative()
                 : undefined,
           })) ??
           getDefaultCompanies({
             withDirectors: true,
             withRepresentative: newAuthorizationMode === "c1ToR1",
-          }))
+          })
         : undefined;
 
       const newAuthorizedIndividuals = (
         ["i1ToI2", "c1ToI2"] as Array<AuthorizationMode>
       ).includes(newAuthorizationMode)
-        ? (values.authorizedIndividuals ?? getDefaultIndividuals())
+        ? values.authorizedIndividuals ?? getDefaultIndividuals()
         : undefined;
 
       const representingDirectorUUID = uuidv4();
       const newAuthorizedCompanies = (
         ["i1ToD2", "i1ToR2", "c1ToD2", "c1ToR2"] as Array<AuthorizationMode>
       ).includes(newAuthorizationMode)
-        ? (values.authorizedCompanies?.map(
+        ? values.authorizedCompanies?.map(
             (company: CompanyWithRepresentingDirector) => ({
               ...company,
               representingDirectorUUID:
@@ -423,7 +425,7 @@ function Fields() {
               representative: (
                 ["i1ToR2", "c1ToR2"] as Array<AuthorizationMode>
               ).includes(newAuthorizationMode)
-                ? (company.representative ?? getCompanyRepresentative())
+                ? company.representative ?? getCompanyRepresentative()
                 : undefined,
             }),
           ) ??
@@ -432,7 +434,7 @@ function Fields() {
             withRepresentative: (
               ["i1ToR2", "c1ToR2"] as Array<AuthorizationMode>
             ).includes(newAuthorizationMode),
-          }))
+          })
         : undefined;
 
       setValues(
@@ -1050,26 +1052,26 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
 
   const baseTraderSchema = {
     uuid: string().uuid(),
-    name: string({ required_error: tCommon("errors.required") }).trim(),
+    name: string({ error: requiredError(tCommon("errors.required")) }).trim(),
   };
   const personSchema = object({
     ...baseTraderSchema,
     traderType: literal("person"),
     title: _enum(["mr", "mrs", "miss"]),
     nationality: _enum(["mauritian", "nonMauritian"]),
-    id: string({ required_error: tCommon("errors.required") }).trim(),
+    id: string({ error: requiredError(tCommon("errors.required")) }).trim(),
   });
   const companySchema = object({
     ...baseTraderSchema,
     traderType: literal("company"),
-    brn: string({ required_error: tCommon("errors.required") }).trim(),
+    brn: string({ error: requiredError(tCommon("errors.required")) }).trim(),
     representingDirectorUUID: string().optional(),
     directors: object({
       uuid: string().uuid(),
       title: _enum(["mr", "mrs", "miss"]),
-      name: string({ required_error: tCommon("errors.required") }).trim(),
+      name: string({ error: requiredError(tCommon("errors.required")) }).trim(),
       nationality: _enum(["mauritian", "nonMauritian"]),
-      id: string({ required_error: tCommon("errors.required") }).trim(),
+      id: string({ error: requiredError(tCommon("errors.required")) }).trim(),
     })
       .array()
       .min(1, tCommon("errors.arrayMin", { count: 1 }))
@@ -1077,29 +1079,24 @@ export default function AdministrativeStatusCertificateificateificateificateAuth
     representative: object({
       uuid: string().uuid(),
       title: _enum(["mr", "mrs", "miss"]),
-      name: string({ required_error: tCommon("errors.required") }).trim(),
+      name: string({ error: requiredError(tCommon("errors.required")) }).trim(),
       nationality: _enum(["mauritian", "nonMauritian"]),
-      id: string({ required_error: tCommon("errors.required") }).trim(),
-      role: string({ required_error: tCommon("errors.required") }).trim(),
+      id: string({ error: requiredError(tCommon("errors.required")) }).trim(),
+      role: string({ error: requiredError(tCommon("errors.required")) }).trim(),
     }).optional(),
   });
 
   const schema = object({
     date: z.coerce
       .date({
-        errorMap: (issue, { defaultError }) => ({
-          message:
-            issue.code === "invalid_date"
-              ? tCommon("errors.required")
-              : defaultError,
-        }),
+        error: invalidDateError(tCommon("errors.required")),
       })
       .optional(),
     vehicleRegMark: string({
-      required_error: tCommon("errors.required"),
+      error: requiredError(tCommon("errors.required")),
     }).trim(),
     vehicleMake: string({
-      required_error: tCommon("errors.required"),
+      error: requiredError(tCommon("errors.required")),
     }).trim(),
     authorizationMode: _enum(AUTHORIZATION_MODES),
     individualAuthorizers: personSchema

@@ -1,6 +1,6 @@
 import { Button } from "@heroui/react";
 import { useFormikContext } from "formik";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { useCallback } from "react";
 import { DEFAULT_I18N_NAMESPACE } from "../../../../constants";
 

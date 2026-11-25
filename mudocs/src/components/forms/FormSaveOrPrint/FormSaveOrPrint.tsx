@@ -1,4 +1,4 @@
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { DEFAULT_I18N_NAMESPACE } from "../../../../constants";
 import { useFormikContext } from "formik";
 

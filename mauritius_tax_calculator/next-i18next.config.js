@@ -6,7 +6,7 @@ const i18n = {
   locales: ["en", "fr", "mu"],
 };
 
-/** @type import("next-i18next").UserConfig */
+/** @type import("next-i18next/pages").UserConfig */
 const next18nextConfig = {
   i18n,
   // fallbackLng: 'en',

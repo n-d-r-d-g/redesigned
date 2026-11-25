@@ -1,6 +1,6 @@
 import { PropsWithChildren, useCallback } from "react";
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import Checkbox from "@/components/Checkbox/Checkbox";
 import TechnicalTerm from "@/components/TechnicalTerm/TechnicalTerm";
 import TypedTrans from "@/components/TypedTrans/TypedTrans";

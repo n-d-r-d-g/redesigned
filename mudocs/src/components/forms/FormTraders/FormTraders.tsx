@@ -1,5 +1,5 @@
 import { ChangeEvent, useCallback } from "react";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { ItemInterface, ReactSortable } from "react-sortablejs";
 import { useField } from "formik";
 import { v4 as uuidv4 } from "uuid";

@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { PickAs } from "@/types";
 import { TFunction } from "i18next";
-import { Trans } from "next-i18next";
+import { Trans } from "next-i18next/pages";
 import { TransChild } from "react-i18next/TransWithoutContext";
 
 /**

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+import { useTranslation } from "next-i18next/pages";
 import { Route } from "../types";
 
 export function Pages({ routes }: { routes: Route[] }) {
