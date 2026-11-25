@@ -53,8 +53,23 @@ export default function FormTraders({
   );
 
   const setList = useCallback(
-    (sortedTraders: Array<ItemInterface>) => helpers.setValue(sortedTraders),
-    [helpers],
+    (sortedTraders: Array<ItemInterface>) => {
+      const currentTraders = (field.value ?? []) as Array<ItemInterface>;
+      const isOrderUnchanged =
+        sortedTraders.length === currentTraders.length &&
+        sortedTraders.every(
+          (trader, i) => trader.uuid === currentTraders[i]?.uuid,
+        );
+
+      // ReactSortable calls setList when it mounts (e.g. after loading example data
+      // switches the authorization mode) with the list it was given. Writing it back
+      // makes Formik validate its last rendered (stale) values, and that result can
+      // overwrite the errors of the newer values, so only write actual reorders.
+      if (isOrderUnchanged) return;
+
+      return helpers.setValue(sortedTraders);
+    },
+    [field.value, helpers],
   );
 
   const addTrader = useCallback(() => {
